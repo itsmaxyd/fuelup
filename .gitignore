@@ -47,9 +47,12 @@ app.*.map.json
 /android/local.properties
 /android/gradle/wrapper/gradle-wrapper.jar
 
+# Keystore
+*.jks
+/android/key.properties
+
 # Plan file
 *.plan.md
 
 # API Configuration (contains sensitive keys)
 lib/config/api_config.dart
-

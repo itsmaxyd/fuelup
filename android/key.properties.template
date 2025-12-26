@@ -1,15 +1,10 @@
-# Signing Configuration for Fillup App
-# IMPORTANT: This file should NOT be committed to version control!
-# Create your own keystore and fill in the values below.
+# Signing Configuration for Fuelup App
+# 1. Copy this file to 'key.properties' in the same directory (android/key.properties)
+# 2. Ensure 'key.properties' is in your .gitignore (already configured)
+# 3. Generate your keystore using the keytool command provided in the instructions
+# 4. Update the passwords below to match what you set during generation
 
-# Path to your keystore file (relative to android directory or absolute path)
-storeFile=path/to/your/keystore.jks
-
-# Keystore password
-storePassword=your_keystore_password
-
-# Key alias name
-keyAlias=fillup_key
-
-# Key password
-keyPassword=your_key_password
+storePassword=CHANGE_ME
+keyPassword=CHANGE_ME
+keyAlias=upload
+storeFile=upload-keystore.jks
