@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuelUp - Smart Fuel Tracking App</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="FuelUp is a smart fuel tracking app that helps you monitor your vehicle's fuel efficiency, track expenses, and save money on gas. Available for Android.">
+    <meta name="keywords" content="fuel tracking, fuel efficiency, gas tracker, vehicle expenses, fuel app, android app">
+    <meta name="author" content="FuelUp Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/fuelup/">
+    <meta property="og:title" content="FuelUp - Smart Fuel Tracking App">
+    <meta property="og:description" content="Track your vehicle's fuel efficiency, monitor expenses, and save money with FuelUp's intelligent fuel tracking system.">
+    <meta property="og:image" content="images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourusername.github.io/fuelup/">
+    <meta property="twitter:title" content="FuelUp - Smart Fuel Tracking App">
+    <meta property="twitter:description" content="Track your vehicle's fuel efficiency, monitor expenses, and save money with FuelUp's intelligent fuel tracking system.">
+    <meta property="twitter:image" content="images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2358a6ff'%3E%3Cpath d='M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z'/%3E%3C/svg%3E" alt="FuelUp Logo" class="logo">
+                <span class="brand-text">FuelUp</span>
+            </div>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#overview" role="menuitem">Overview</a></li>
+                <li role="none"><a href="#features" role="menuitem">Features</a></li>
+                <li role="none"><a href="#gallery" role="menuitem">Gallery</a></li>
+                <li role="none"><a href="#usage" role="menuitem">Usage Guide</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                <li role="none"><a href="privacy-policy.html" role="menuitem">Privacy Policy</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">
+                        <span class="gradient-text">FuelUp</span>
+                        <span class="hero-subtitle">Smart Fuel Tracking Made Simple</span>
+                    </h1>
+                    <p class="hero-description">
+                        Take control of your vehicle's fuel efficiency with intelligent tracking, 
+                        expense monitoring, and data-driven insights to save money and the environment.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#gallery" class="btn btn-primary" aria-describedby="download-desc">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+                            </svg>
+                            Download App
+                        </a>
+                        <a href="#features" class="btn btn-secondary">
+                            Learn More
+                        </a>
+                    </div>
+                    <p id="download-desc" class="sr-only">Download the FuelUp Android app from Google Play Store</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="mockup-content">
+                                <div class="mockup-header">
+                                    <div class="mockup-time">9:41</div>
+                                    <div class="mockup-battery">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4zM11 20v-5.5H9L13 7v5.5h2L11 20z"/>
+                                        </svg>
+                                        <span>95%</span>
+                                    </div>
+                                </div>
+                                <div class="mockup-app">
+                                    <div class="mockup-stats">
+                                        <div class="stat-card">
+                                            <span class="stat-value">24.5</span>
+                                            <span class="stat-label">MPG</span>
+                                        </div>
+                                        <div class="stat-card">
+                                            <span class="stat-value">$1,245</span>
+                                            <span class="stat-label">Saved</span>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-chart">
+                                        <div class="chart-bars">
+                                            <div class="bar" style="height: 60%"></div>
+                                            <div class="bar" style="height: 80%"></div>
+                                            <div class="bar" style="height: 45%"></div>
+                                            <div class="bar" style="height: 90%"></div>
+                                            <div class="bar" style="height: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="overview" aria-labelledby="overview-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="overview-title" class="section-title">Why Choose FuelUp?</h2>
+                    <p class="section-description">
+                        FuelUp revolutionizes how you track and manage your vehicle's fuel consumption. 
+                        Our intelligent system provides actionable insights to help you drive smarter and save more.
+                    </p>
+                </header>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/>
+                            </svg>
+                        </div>
+                        <h3>Real-time Tracking</h3>
+                        <p>Monitor your fuel consumption in real-time with automatic data synchronization and instant insights.</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3>Smart Analytics</h3>
+                        <p>Get detailed reports and analytics to understand your driving patterns and optimize fuel efficiency.</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                            </svg>
+                        </div>
+                        <h3>Secure & Private</h3>
+                        <p>Your data is encrypted and stored locally with optional cloud backup. Complete privacy guaranteed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features" aria-labelledby="features-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="features-title" class="section-title">Powerful Features</h2>
+                    <p class="section-description">
+                        Everything you need to track, analyze, and optimize your vehicle's fuel consumption.
+                    </p>
+                </header>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                            </svg>
+                        </div>
+                        <h3>Detailed Reports</h3>
+                        <p>Generate comprehensive reports showing fuel costs, efficiency trends, and driving patterns over time.</p>
+                        <ul class="feature-list">
+                            <li>Monthly and yearly summaries</li>
+                            <li>Cost per mile calculations</li>
+                            <li>Efficiency comparisons</li>
+                            <li>Export to CSV/PDF</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+                            </svg>
+                        </div>
+                        <h3>Multi-Vehicle Support</h3>
+                        <p>Track multiple vehicles from a single app, perfect for families or businesses with a fleet.</p>
+                        <ul class="feature-list">
+                            <li>Unlimited vehicle profiles</li>
+                            <li>Individual tracking per vehicle</li>
+                            <li>Maintenance reminders</li>
+                            <li>Insurance and registration reminders</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                            </svg>
+                        </div>
+                        <h3>Automatic Reminders</h3>
+                        <p>Never forget to fill up or service your vehicle with smart, customizable notifications.</p>
+                        <ul class="feature-list">
+                            <li>Low fuel alerts</li>
+                            <li>Maintenance scheduling</li>
+                            <li>Insurance renewal warnings</li>
+                            <li>Custom reminder intervals</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Data Visualization</h3>
+                        <p>Beautiful charts and graphs make it easy to understand your fuel consumption patterns.</p>
+                        <ul class="feature-list">
+                            <li>Interactive charts</li>
+                            <li>Efficiency trends</li>
+                            <li>Cost breakdowns</li>
+                            <li>Comparative analysis</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+                            </svg>
+                        </div>
+                        <h3>Cloud Backup</h3>
+                        <p>Your data is automatically backed up to the cloud, ensuring you never lose your valuable information.</p>
+                        <ul class="feature-list">
+                            <li>Automatic synchronization</li>
+                            <li>Cross-device access</li>
+                            <li>Data encryption</li>
+                            <li>Easy restoration</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3>Offline Support</h3>
+                        <p>Work seamlessly even without internet connection. All data syncs automatically when back online.</p>
+                        <ul class="feature-list">
+                            <li>Full offline functionality</li>
+                            <li>Smart synchronization</li>
+                            <li>Conflict resolution</li>
+                            <li>Bandwidth optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="gallery-title" class="section-title">App Screenshots</h2>
+                    <p class="section-description">
+                        See FuelUp in action with these screenshots from the actual app interface.
+                    </p>
+                </header>
+                <div class="gallery-grid">
+                    <figure class="gallery-item">
+                        <div class="gallery-image">
+                            <svg viewBox="0 0 300 600" class="screenshot-mockup">
+                                <rect width="300" height="600" rx="20" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
+                                <rect x="20" y="40" width="260" height="40" rx="10" fill="#161b22"/>
+                                <circle cx="150" cy="60" r="3" fill="#58a6ff"/>
+                                <text x="150" y="70" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="12">9:41</text>
+                                <rect x="20" y="100" width="260" height="80" rx="10" fill="#161b22"/>
+                                <text x="40" y="125" fill="#58a6ff" font-size="14">Current MPG</text>
+                                <text x="40" y="145" fill="#c9d1d9" font-size="24" font-weight="bold">24.5</text>
+                                <text x="40" y="165" fill="#8b949e" font-size="12">Good efficiency</text>
+                                <rect x="20" y="200" width="260" height="120" rx="10" fill="#161b22"/>
+                                <text x="40" y="225" fill="#58a6ff" font-size="14">Recent Fill-ups</text>
+                                <rect x="40" y="240" width="220" height="1" fill="#30363d"/>
+                                <rect x="40" y="250" width="220" height="1" fill="#30363d"/>
+                                <rect x="40" y="270" width="220" height="1" fill="#30363d"/>
+                                <rect x="40" y="290" width="180" height="1" fill="#30363d"/>
+                                <rect x="40" y="310" width="220" height="1" fill="#30363d"/>
+                            </svg>
+                        </div>
+                        <figcaption class="gallery-caption">Dashboard showing real-time fuel efficiency and recent fill-ups</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-image">
+                            <svg viewBox="0 0 300 600" class="screenshot-mockup">
+                                <rect width="300" height="600" rx="20" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
+                                <rect x="20" y="40" width="260" height="40" rx="10" fill="#161b22"/>
+                                <circle cx="150" cy="60" r="3" fill="#58a6ff"/>
+                                <text x="150" y="70" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="12">9:41</text>
+                                <text x="40" y="125" fill="#58a6ff" font-size="16">Fuel Entry</text>
+                                <rect x="20" y="150" width="260" height="60" rx="10" fill="#161b22"/>
+                                <text x="40" y="175" fill="#c9d1d9" font-size="14">Gallons: 12.5</text>
+                                <rect x="20" y="230" width="260" height="60" rx="10" fill="#161b22"/>
+                                <text x="40" y="255" fill="#c9d1d9" font-size="14">Price per Gallon: $3.45</text>
+                                <rect x="20" y="310" width="260" height="60" rx="10" fill="#161b22"/>
+                                <text x="40" y="335" fill="#c9d1d9" font-size="14">Total Cost: $43.13</text>
+                                <rect x="40" y="400" width="220" height="40" rx="20" fill="#58a6ff"/>
+                                <text x="150" y="425" text-anchor="middle" fill="#0d1117" font-size="14" font-weight="bold">Save Entry</text>
+                            </svg>
+                        </div>
+                        <figcaption class="gallery-caption">Easy-to-use fuel entry form with automatic calculations</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-image">
+                            <svg viewBox="0 0 300 600" class="screenshot-mockup">
+                                <rect width="300" height="600" rx="20" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
+                                <rect x="20" y="40" width="260" height="40" rx="10" fill="#161b22"/>
+                                <circle cx="150" cy="60" r="3" fill="#58a6ff"/>
+                                <text x="150" y="70" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="12">9:41</text>
+                                <text x="40" y="125" fill="#58a6ff" font-size="16">Reports</text>
+                                <rect x="20" y="150" width="260" height="200" rx="10" fill="#161b22"/>
+                                <text x="40" y="175" fill="#c9d1d9" font-size="14">This Month</text>
+                                <rect x="40" y="190" width="180" height="4" fill="#58a6ff" rx="2"/>
+                                <rect x="40" y="210" width="160" height="4" fill="#30363d" rx="2"/>
+                                <rect x="40" y="230" width="190" height="4" fill="#30363d" rx="2"/>
+                                <rect x="40" y="250" width="120" height="4" fill="#30363d" rx="2"/>
+                                <rect x="40" y="270" width="170" height="4" fill="#30363d" rx="2"/>
+                                <text x="40" y="380" fill="#c9d1d9" font-size="14">Total Spent: $156.78</text>
+                                <text x="40" y="400" fill="#c9d1d9" font-size="14">Avg MPG: 23.2</text>
+                            </svg>
+                        </div>
+                        <figcaption class="gallery-caption">Comprehensive reports with detailed analytics and insights</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <div class="gallery-image">
+                            <svg viewBox="0 0 300 600" class="screenshot-mockup">
+                                <rect width="300" height="600" rx="20" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
+                                <rect x="20" y="40" width="260" height="40" rx="10" fill="#161b22"/>
+                                <circle cx="150" cy="60" r="3" fill="#58a6ff"/>
+                                <text x="150" y="70" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="12">9:41</text>
+                                <text x="40" y="125" fill="#58a6ff" font-size="16">Settings</text>
+                                <rect x="20" y="150" width="260" height="60" rx="10" fill="#161b22"/>
+                                <text x="40" y="175" fill="#c9d1d9" font-size="14">Units</text>
+                                <text x="220" y="175" fill="#8b949e" font-size="12">MPG</text>
+                                <rect x="20" y="230" width="260" height="60" rx="10" fill="#161b22"/>
+                                <text x="40" y="255" fill="#c9d1d9" font-size="14">Currency</text>
+                                <text x="220" y="255" fill="#8b949e" font-size="12">USD</text>
+                                <rect x="20" y="310" width="260" height="60" rx="10" fill="#161b22"/>
+                                <text x="40" y="335" fill="#c9d1d9" font-size="14">Cloud Backup</text>
+                                <circle cx="240" cy="340" r="10" fill="#58a6ff"/>
+                                <rect x="20" y="390" width="260" height="60" rx="10" fill="#161b22"/>
+                                <text x="40" y="415" fill="#c9d1d9" font-size="14">Privacy Policy</text>
+                            </svg>
+                        </div>
+                        <figcaption class="gallery-caption">Customizable settings for units, preferences, and data management</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Guide Section -->
+        <section id="usage" class="usage-guide" aria-labelledby="usage-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="usage-title" class="section-title">How to Use FuelUp</h2>
+                    <p class="section-description">
+                        Get started with FuelUp in just a few simple steps. Our intuitive interface makes fuel tracking effortless.
+                    </p>
+                </header>
+                <div class="usage-steps">
+                    <div class="step">
+                        <div class="step-number" aria-label="Step 1">1</div>
+                        <div class="step-content">
+                            <h3>Download & Install</h3>
+                            <p>Download FuelUp from the Google Play Store and install it on your Android device. The app is free and lightweight.</p>
+                            <div class="step-actions">
+                                <a href="https://play.google.com/store/apps/details?id=com.fillup.fillup" class="btn btn-outline" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                                    </svg>
+                                    Get it on Google Play
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number" aria-label="Step 2">2</div>
+                        <div class="step-content">
+                            <h3>Add Your Vehicle</h3>
+                            <p>Create a profile for your vehicle with basic information like make, model, year, and current odometer reading.</p>
+                            <ul class="step-list">
+                                <li>Vehicle details and specifications</li>
+                                <li>Initial odometer reading</li>
+                                <li>Fuel tank capacity</li>
+                                <li>Preferred units (MPG/L100km)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number" aria-label="Step 3">3</div>
+                        <div class="step-content">
+                            <h3>Record Fill-ups</h3>
+                            <p>Every time you fill up, simply enter the gallons, price per gallon, and current odometer reading. FuelUp does the rest!</p>
+                            <ul class="step-list">
+                                <li>Quick fill-up entry</li>
+                                <li>Automatic MPG calculation</li>
+                                <li>Cost tracking and analysis</li>
+                                <li>Receipt photo support</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number" aria-label="Step 4">4</div>
+                        <div class="step-content">
+                            <h3>Monitor & Analyze</h3>
+                            <p>View detailed reports, track efficiency trends, and get insights to help you drive more efficiently and save money.</p>
+                            <ul class="step-list">
+                                <li>Real-time efficiency monitoring</li>
+                                <li>Historical data analysis</li>
+                                <li>Cost per mile calculations</li>
+                                <li>Efficiency improvement tips</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="usage-tips">
+                    <h3>Pro Tips for Better Tracking</h3>
+                    <div class="tips-grid">
+                        <div class="tip">
+                            <div class="tip-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <p>Always fill up at the same gas station for more consistent pricing data.</p>
+                        </div>
+                        <div class="tip">
+                            <div class="tip-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <p>Record fill-ups immediately after filling up for the most accurate data.</p>
+                        </div>
+                        <div class="tip">
+                            <div class="tip-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <p>Enable cloud backup to sync your data across multiple devices.</p>
+                        </div>
+                        <div class="tip">
+                            <div class="tip-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <p>Use the maintenance reminders to stay on top of vehicle service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2358a6ff'%3E%3Cpath d='M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z'/%3E%3C/svg%3E" alt="FuelUp Logo" class="footer-logo">
+                        <span class="footer-brand-text">FuelUp</span>
+                    </div>
+                    <p class="footer-description">
+                        Smart fuel tracking made simple. Take control of your vehicle's efficiency and save money on gas.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername/fuelup" class="social-link" aria-label="GitHub Repository" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:support@fuelup.app" class="social-link" aria-label="Email Support" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#gallery">Screenshots</a></li>
+                        <li><a href="#usage">Usage Guide</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/yourusername/fuelup/issues" target="_blank" rel="noopener">Report Issues</a></li>
+                        <li><a href="https://github.com/yourusername/fuelup/discussions" target="_blank" rel="noopener">Discussions</a></li>
+                        <li><a href="mailto:support@fuelup.app">Contact Support</a></li>
+                        <li><a href="https://github.com/yourusername/fuelup/wiki" target="_blank" rel="noopener">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#license">Open Source License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FuelUp. All rights reserved. | Made with ❤️ for efficient driving</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('active');
+            });
+
+            // Smooth scrolling for anchor links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            const animatedElements = document.querySelectorAll('.overview-card, .feature-card, .gallery-item, .step');
+            animatedElements.forEach(el => observer.observe(el));
+
+            // Accessibility: Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Keyboard navigation support
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
