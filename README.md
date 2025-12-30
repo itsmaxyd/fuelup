@@ -1,116 +1,130 @@
 # Fillup - Fuel Tracking App
 
-A minimalistic and simple fuel tracking app for Android (expandable to iOS) that helps you monitor fuel expenses and vehicle efficiency.
+![Fillup Logo](https://img.shields.io/badge/Fillup-Fuel%20Tracker-blue?style=for-the-badge&logo=flutter)
 
-## Features
+A simple and intuitive fuel tracking app designed to help you monitor your fuel expenses and vehicle efficiency. Whether you're a daily commuter or a road trip enthusiast, Fillup makes it easy to keep track of your fuel spending and optimize your vehicle's performance.
 
-- 📊 **Track Fuel Expenses**: Monitor your fuel spending over time
-- ⛽ **Fuel Efficiency Tracking**: Calculate and track km/l efficiency
-- 🚗 **Multiple Vehicles**: Manage multiple vehicles with different fuel types
-- 📸 **Odometer Scanning**: Scan odometer readings using AI-powered OCR
-- 📈 **Visual Reports**: Beautiful charts showing expenses and efficiency trends
-- 💰 **Current Fuel Prices**: Auto-fetch current fuel prices by city
-- 💾 **Local Storage**: All data stored locally on your device
+## ✨ Key Features
 
-## Tech Stack
+### 📊 Fuel Expense Tracking
+- Log every fuel purchase with ease
+- Track your spending over time
+- Monitor fuel costs for multiple vehicles
 
-- **Framework**: Flutter (Dart)
-- **Database**: SQLite (sqflite)
-- **State Management**: Provider
-- **Charts**: fl_chart
-- **OCR**: OpenAI GPT-4o-mini Vision API
-- **Web Scraping**: HTML parser for fuel prices
+### ⛽ Fuel Efficiency Tracking
+- Calculate your vehicle's km/l efficiency
+- Track efficiency trends over time
+- Identify patterns and optimize your driving habits
 
-## Getting Started
+### 🚗 Multiple Vehicle Support
+- Manage multiple vehicles in one app
+- Support for different fuel types (Petrol, Diesel, CNG)
+- Customize vehicle details and preferences
+
+### 📈 Visual Reports
+- Beautiful charts showing your fuel expenses
+- Efficiency trends over time
+- Summary statistics for quick insights
+
+### 💰 Current Fuel Prices
+- Auto-fetch current fuel prices by city
+- Stay updated with the latest fuel rates
+- Plan your fuel purchases smartly
+
+### 💾 Local Storage
+- All data stored locally on your device
+- No cloud storage or online accounts required
+- Your data stays private and secure
+
+## 🚀 Getting Started
 
 ### Prerequisites
-
-- Flutter SDK (3.0.0 or higher)
-- Android Studio / VS Code with Flutter extensions
-- Android SDK for Android development
-- Xcode for iOS development (macOS only)
+- Flutter SDK (3.0.0 or later)
+- Android Studio or VS Code with Flutter extensions
+- Android device or emulator
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/itsmaxyd/fuelup.git
-cd fuelup
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/fillup.git
+   cd fillup
+   ```
 
-2. Install dependencies:
-```bash
-flutter pub get
-```
+2. **Install dependencies**
+   ```bash
+   flutter pub get
+   ```
 
-3. **Configure OpenAI API Key** (Required for odometer scanning):
-   - Copy `lib/config/api_config.dart.example` to `lib/config/api_config.dart`
-   - Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
-   - Replace `YOUR_OPENAI_API_KEY_HERE` with your actual API key
-   
-   Alternatively, you can directly edit `lib/services/encryption_service.dart` and replace the `_hardcodedApiKey` constant with your key.
+3. **Run the app**
+   ```bash
+   flutter run
+   ```
 
-4. Run the app:
-```bash
-flutter run
-```
+## 📱 Usage
 
-## Usage
+1. **Setup**: Add your vehicle details and current odometer reading
+2. **Log Fuel Purchases**: Enter fuel amount and cost after each fill-up
+3. **View Reports**: Check your spending and efficiency trends
+4. **Optimize**: Use insights to improve your fuel efficiency
 
-### Initial Setup
-1. Enter your vehicle name
-2. Select fuel type (Petrol/Diesel/CNG)
-3. Choose your city
-4. Enter current odometer reading
+## 🛡️ Privacy and Security
 
-### Adding Fuel Entries
-- **Manual Entry**: Enter fuel amount in rupees or liters
-- **Scan Odometer**: Capture odometer image for AI-powered reading
+- **No Tracking**: Fillup does not collect any personal data or usage information
+- **Local Storage**: All your data is stored locally on your device
+- **Open Source**: The app is fully open-source and transparent
+- **Secure Networking**: HTTPS enforced for all network requests
 
-### View Reports
-- Monthly expense charts
-- Fuel efficiency trends
-- Summary statistics
+## 🏗️ Architecture
 
-## Project Structure
+Fillup is built with Flutter and follows clean architecture principles:
 
-```
-lib/
-├── main.dart
-├── models/
-│   ├── vehicle.dart
-│   ├── fuel_entry.dart
-│   └── fuel_price.dart
-├── services/
-│   ├── database_service.dart
-│   ├── api_service.dart
-│   ├── fuel_price_service.dart
-│   └── encryption_service.dart
-├── providers/
-│   ├── vehicle_provider.dart
-│   └── fuel_entry_provider.dart
-├── screens/
-│   ├── setup_screen.dart
-│   ├── home_screen.dart
-│   ├── manual_entry_screen.dart
-│   ├── scan_odometer_screen.dart
-│   ├── reports_screen.dart
-│   └── settings_screen.dart
-└── widgets/
-    ├── vehicle_card.dart
-    ├── fuel_entry_card.dart
-    └── chart_widgets.dart
-```
+- **State Management**: Provider pattern for reactive UI updates
+- **Database**: SQLite with sqflite for local data persistence
+- **Networking**: HTTP client for fuel price fetching
+- **Charts**: FL Chart for beautiful data visualization
 
-## Contributing
+## 📦 Dependencies
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+All dependencies are open-source and use permissive licenses:
 
-## License
+- `provider`: State management
+- `sqflite`: SQLite database
+- `http`: Networking
+- `fl_chart`: Data visualization
+- `intl`: Internationalization
+- `path_provider`: File system access
+- `csv`: Data export
+- `share_plus`: Data sharing
 
-This project is licensed under the MIT License.
+## 🤝 Contributing
 
-## Author
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-[itsmaxyd](https://github.com/itsmaxyd)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
+## 📄 License
+
+Fillup is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+## 🙏 Acknowledgments
+
+- Flutter team for the amazing framework
+- Open source community for the wonderful packages
+- F-Droid for promoting free software on mobile
+
+## 📞 Support
+
+For issues, feature requests, or contributions, please:
+
+- Open an issue on GitHub
+- Check the [documentation](docs/) for more details
+- Join our community discussions
+
+---
+
+**Made with ❤️ using Flutter**
