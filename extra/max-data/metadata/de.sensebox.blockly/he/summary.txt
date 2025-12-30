@@ -1,1 +1,0 @@
-תכנות חזותי של senseBox:MCU דרך Blockly (בלוקלי)

@@ -1,1 +1,0 @@
-Quando qualcuno chiama, mostra chiamate recenti e SMS da/per il chiamante

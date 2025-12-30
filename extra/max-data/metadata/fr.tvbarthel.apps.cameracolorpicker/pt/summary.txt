@@ -1,1 +1,0 @@
-Capture cores usando a câmara em tempo real

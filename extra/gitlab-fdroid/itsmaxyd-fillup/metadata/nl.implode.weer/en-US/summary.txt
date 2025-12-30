@@ -1,1 +1,0 @@
-Add widget to home screen with weather 5 to 7 day weather forecast

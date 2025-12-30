@@ -1,1 +1,0 @@
-Gere códigos OATH com YubiKey NEO sob NFC

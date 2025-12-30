@@ -1,1 +1,0 @@
-Používá se s µg GmsCore k zajištění Google Cloud Messaging (GCM) a dalších

@@ -1,1 +1,0 @@
-Barada için iki aşamalı kimlik doğrulama istemcisi

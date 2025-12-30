@@ -1,1 +1,0 @@
-paginador basat en SMS

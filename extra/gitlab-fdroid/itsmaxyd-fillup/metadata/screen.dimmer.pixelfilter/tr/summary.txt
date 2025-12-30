@@ -1,1 +1,0 @@
-AMOLED ekranlar için pikselleri devre dışı bırakan ekran karartıcı

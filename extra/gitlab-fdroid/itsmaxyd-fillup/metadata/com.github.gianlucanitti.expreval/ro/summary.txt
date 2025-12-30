@@ -1,1 +1,0 @@
-Calculator de expresii matematice cu suport pentru variabile și funcții

@@ -1,1 +1,0 @@
-Terminal intermitente al recibir una llamada, SMS o notificación de aplicación

@@ -1,1 +1,0 @@
-Vynutit maximální počet neúspěšných pokusů o odemknutí

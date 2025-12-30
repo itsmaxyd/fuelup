@@ -1,1 +1,0 @@
-Publicar periòdicament un tema MQTT

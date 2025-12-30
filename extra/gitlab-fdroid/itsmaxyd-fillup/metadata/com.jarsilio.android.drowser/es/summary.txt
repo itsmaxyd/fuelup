@@ -1,1 +1,0 @@
-Sencillo finalizador de procesos en segundo plano

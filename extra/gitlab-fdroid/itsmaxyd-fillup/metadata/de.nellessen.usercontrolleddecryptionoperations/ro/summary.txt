@@ -1,1 +1,0 @@
-Emulează un card inteligent și permite să controlați operațiunile de decriptare

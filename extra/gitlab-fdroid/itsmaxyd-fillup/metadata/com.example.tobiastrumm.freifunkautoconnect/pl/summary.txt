@@ -1,1 +1,0 @@
-Dodawanie wielu identyfikatorów SSID Freifunk do urządzenia

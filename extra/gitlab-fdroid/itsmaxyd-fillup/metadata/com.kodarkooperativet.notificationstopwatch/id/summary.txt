@@ -1,1 +1,0 @@
-Stopwatch terintegrasi ke dalam bilah notifikasi

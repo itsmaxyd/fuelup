@@ -1,1 +1,0 @@
-Configura i controller Bluetooth

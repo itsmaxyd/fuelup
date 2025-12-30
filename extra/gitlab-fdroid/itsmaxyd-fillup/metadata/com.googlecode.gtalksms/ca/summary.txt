@@ -1,1 +1,0 @@
-Controla el teu telèfon a travès de XMPP

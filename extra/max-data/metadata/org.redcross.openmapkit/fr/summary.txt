@@ -1,1 +1,0 @@
-Parcourez les fonctionnalités d'OSM pour créer et modifier des balises OSM

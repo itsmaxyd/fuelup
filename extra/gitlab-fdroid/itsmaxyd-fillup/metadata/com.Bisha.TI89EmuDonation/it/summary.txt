@@ -1,1 +1,0 @@
-Emulatore di calcolatrice con supporto TI84

@@ -1,1 +1,0 @@
-Mostra les línies de contorn a OSMAnd

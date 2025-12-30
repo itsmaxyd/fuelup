@@ -1,1 +1,0 @@
-Lägg SMS till enhetens SMS databas.

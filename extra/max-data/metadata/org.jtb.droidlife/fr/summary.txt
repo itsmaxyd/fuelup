@@ -1,1 +1,0 @@
-Jeu de la Vie de Conway

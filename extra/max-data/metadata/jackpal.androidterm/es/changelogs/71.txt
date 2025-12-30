@@ -1,3 +1,0 @@
-V1.0.70 permite ocultar la barra de acción de Material Design
-Mejora el pegado de texto.
-Arregla el soporte UTF-8.

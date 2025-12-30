@@ -1,1 +1,0 @@
-Blokus bordspel: een open-source Android uitvoering van het populaire spel.

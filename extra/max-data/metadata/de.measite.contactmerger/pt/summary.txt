@@ -1,1 +1,0 @@
-Indexar e fundir contactos com Lucene

@@ -1,1 +1,0 @@
-KeePass-compatible password safe

@@ -1,1 +1,0 @@
-Mostra o tempo da métrica atual num widget no ecrã inicial

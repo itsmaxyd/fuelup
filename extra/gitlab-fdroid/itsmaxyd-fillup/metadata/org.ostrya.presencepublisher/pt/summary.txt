@@ -1,1 +1,0 @@
-Publicar regularmente para um tópico no MQTTT

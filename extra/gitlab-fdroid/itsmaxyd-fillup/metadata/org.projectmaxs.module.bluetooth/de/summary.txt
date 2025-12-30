@@ -1,1 +1,0 @@
-Abfrage des Bluetooth-Adapterstatus über MAXS

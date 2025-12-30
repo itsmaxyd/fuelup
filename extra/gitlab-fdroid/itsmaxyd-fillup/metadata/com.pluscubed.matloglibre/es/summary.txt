@@ -1,1 +1,0 @@
-Lector logcat con Material Design basado en Catlog

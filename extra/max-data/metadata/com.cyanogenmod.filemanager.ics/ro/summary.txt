@@ -1,1 +1,0 @@
-CyanogenMod manager de fișiere backport

@@ -1,1 +1,0 @@
-Automount USB external storage

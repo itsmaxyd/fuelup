@@ -1,1 +1,0 @@
-Asjade meelespidamiseks loo csv-failidest küsimuskaardid

@@ -1,1 +1,0 @@
-http://mvnrepository.com/artifact/com.github.rtyley/roboguice-sherlock

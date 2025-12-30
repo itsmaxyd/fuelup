@@ -1,1 +1,0 @@
-TTL Editor vam omogoča, da na silo TTL odhodnih paketov na določeno vrednost.

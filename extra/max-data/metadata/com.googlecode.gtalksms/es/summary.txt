@@ -1,1 +1,0 @@
-Controla tu teléfono via XMPP

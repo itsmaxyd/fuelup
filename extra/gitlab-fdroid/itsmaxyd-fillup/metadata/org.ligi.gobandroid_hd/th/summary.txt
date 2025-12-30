@@ -1,1 +1,0 @@
-gobandroid เป็นโกแบ๋นซอฟต์แวร์ฟรีสำหรับ Android ที่จะเล่นไป (aka IGO baduk Weiqi)

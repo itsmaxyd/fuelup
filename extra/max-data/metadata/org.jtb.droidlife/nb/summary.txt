@@ -1,1 +1,0 @@
-Conways Game of Life

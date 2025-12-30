@@ -1,9 +1,0 @@
-Version 1.0.0 (2025-12-26)
-
-- Initial release
-- Fuel expense tracking
-- Fuel efficiency tracking
-- Multiple vehicle support
-- Visual reports
-- Current fuel prices
-- Local storage

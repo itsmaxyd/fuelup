@@ -1,1 +1,0 @@
-Rejestruje wszelkie działania na plikach w pamięci zewnętrznej

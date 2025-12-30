@@ -1,1 +1,0 @@
-Versione non ufficiale di Taskwarrior - strumento gestione dei compiti console

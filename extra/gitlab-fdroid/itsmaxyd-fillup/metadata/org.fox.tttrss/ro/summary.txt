@@ -1,1 +1,0 @@
-Client pentru conectarea la TinyTinyRSS

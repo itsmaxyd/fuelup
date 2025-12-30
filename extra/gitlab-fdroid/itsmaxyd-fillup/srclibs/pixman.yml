@@ -1,5 +1,0 @@
-Repo: https://gitlab.freedesktop.org/pixman/pixman.git
-RepoType: git
-
-Prepare: |
-   ./autogen.sh

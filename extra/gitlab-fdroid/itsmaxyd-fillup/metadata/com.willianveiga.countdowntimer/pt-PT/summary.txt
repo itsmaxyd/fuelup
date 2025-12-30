@@ -1,1 +1,0 @@
-Configurar um temporizador de contagem decrescente

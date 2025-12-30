@@ -1,1 +1,0 @@
-Open Broadcaster Software (Açık Kaynak Yayıncı Yazılımı) için uzaktan kumanda.

@@ -1,1 +1,0 @@
-Komunikator dla zabezpieczonych rozmów i grup (szyfrowany od końca do końca)

@@ -1,1 +1,0 @@
-Yksinkertainen metronomi sovelluksensa tap tempo toiminnallisuus, ja ennalta järjestelmä.

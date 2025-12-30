@@ -1,1 +1,0 @@
-Validează biletele generate de pretix

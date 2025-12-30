@@ -1,1 +1,0 @@
-Daha hızlı ve özlü bir GitHub istemci uygulaması

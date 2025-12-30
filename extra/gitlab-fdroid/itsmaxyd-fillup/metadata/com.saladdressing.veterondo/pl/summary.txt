@@ -1,1 +1,0 @@
-Generator kolorów na podstawie informacji pogodowych

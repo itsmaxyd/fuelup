@@ -1,1 +1,0 @@
-Korece öğrenenler için Korece fiil çekimlerini gösterir.

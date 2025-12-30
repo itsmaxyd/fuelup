@@ -1,1 +1,0 @@
-Mapa per veure els nodes de Freifunk en un OpenStreetMap

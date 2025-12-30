@@ -1,1 +1,0 @@
-Obtén la geolocalització des d'OpenWLANMap

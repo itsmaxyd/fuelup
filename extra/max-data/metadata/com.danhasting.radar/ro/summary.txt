@@ -1,1 +1,0 @@
-O aplicație care oferă imagini radar doppler în timp real și personalizabile

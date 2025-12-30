@@ -1,1 +1,0 @@
-Configuració separada per a cada aplicació

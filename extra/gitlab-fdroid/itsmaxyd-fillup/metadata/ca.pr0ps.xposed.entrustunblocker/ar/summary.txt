@@ -1,1 +1,0 @@
-وحدة Xposed للسماح للأجهزة المتجذرة باستخدام تطبيق IdentityGuard الخاص ب Entrust

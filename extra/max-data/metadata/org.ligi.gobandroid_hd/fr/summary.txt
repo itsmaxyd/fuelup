@@ -1,1 +1,0 @@
-Gobandroid HD est un goban opensource pour jouer au go/baduk/weiqi sur Android

@@ -1,1 +1,0 @@
-Lock Phone using proximity sensor

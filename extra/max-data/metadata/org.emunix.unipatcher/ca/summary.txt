@@ -1,1 +1,0 @@
-Utilitat per aplicar pedaços a ROM

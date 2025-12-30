@@ -1,1 +1,0 @@
-Musikspieler, welcher als Launcher läuft

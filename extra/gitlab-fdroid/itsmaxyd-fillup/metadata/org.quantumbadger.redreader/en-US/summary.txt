@@ -1,1 +1,0 @@
-Client for reddit.com

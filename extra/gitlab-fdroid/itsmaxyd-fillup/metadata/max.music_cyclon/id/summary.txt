@@ -1,1 +1,0 @@
-Aplikasi untuk mensinkronisasi musik via jaringan menggunakan server web Beets

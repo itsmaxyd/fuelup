@@ -1,1 +1,0 @@
-Visualizza i log del dispositivo (logcat) a colori, direttamente dal telefono.

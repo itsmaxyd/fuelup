@@ -1,1 +1,0 @@
-Prosta aplikacja kart flash z plików CSV jako wejście

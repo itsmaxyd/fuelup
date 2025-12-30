@@ -1,1 +1,0 @@
-Kağıda özel bir labirent çizin ve ivme ölçeri kullanarak aygıtınızda oynayın

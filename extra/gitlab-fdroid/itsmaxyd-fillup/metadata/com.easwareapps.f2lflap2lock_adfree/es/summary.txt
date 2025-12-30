@@ -1,1 +1,0 @@
-Bloquear teléfono mediante sensor de proximidad

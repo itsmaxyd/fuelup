@@ -1,1 +1,0 @@
-Bruk Termux i et flytende terminalvindu

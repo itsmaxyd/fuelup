@@ -1,1 +1,0 @@
-A media-viewer that functions ontop of your lockscreen

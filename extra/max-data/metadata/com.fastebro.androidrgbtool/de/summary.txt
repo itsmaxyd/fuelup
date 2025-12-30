@@ -1,1 +1,0 @@
-RGB- und Hexadezimalwerte einer Farbe abrufen

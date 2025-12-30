@@ -1,1 +1,0 @@
-Outil de debug de la connexion Bluetooth

@@ -1,1 +1,0 @@
-Spiller av lyd fra mikrofonen rett ut igjen til høyttaleren

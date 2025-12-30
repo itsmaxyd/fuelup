@@ -1,1 +1,0 @@
-Şifreli DNS istemcisi

@@ -1,1 +1,0 @@
-Sett Wi-Fi-tilstand avhengig av mobilmaster i nærheten

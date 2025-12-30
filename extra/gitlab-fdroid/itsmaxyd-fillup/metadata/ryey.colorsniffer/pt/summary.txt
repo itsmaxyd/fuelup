@@ -1,1 +1,0 @@
-Geração de esquema de cores baseado no ícone da app

@@ -1,1 +1,0 @@
-Et enkelt program som spør brukeren om å identifisere japanske tegn

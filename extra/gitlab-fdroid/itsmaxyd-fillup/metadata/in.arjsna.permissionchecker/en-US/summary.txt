@@ -1,1 +1,0 @@
-Check requested permission details of all installed applications

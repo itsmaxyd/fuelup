@@ -1,1 +1,0 @@
-Termux kabuğunuzda OpenKeychain'i kullanılabilir yapın

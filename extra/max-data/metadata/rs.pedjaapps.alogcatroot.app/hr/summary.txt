@@ -1,1 +1,0 @@
-Pogledaj bojama kodirane log-zapise Android uređaja (logcat) izravno s telefona.

@@ -1,1 +1,0 @@
-Mrugnij terminalem podczas odbierania połączeń, SMS lub powiadomień aplikacji

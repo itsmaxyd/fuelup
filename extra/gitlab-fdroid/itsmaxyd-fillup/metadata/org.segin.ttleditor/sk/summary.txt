@@ -1,1 +1,0 @@
-TTL Editor umožňuje vynútiť TTL odchádzajúcich paketov na určitú hodnotu.

@@ -1,1 +1,0 @@
-Adiciona mensagens SMS ao banco de dados de SMS do dispositivo

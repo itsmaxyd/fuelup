@@ -1,1 +1,0 @@
-Serviço para enviar mensagens NMEA para um servidor GPSd

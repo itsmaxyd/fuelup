@@ -1,1 +1,0 @@
-Cliente de reddit.com simples

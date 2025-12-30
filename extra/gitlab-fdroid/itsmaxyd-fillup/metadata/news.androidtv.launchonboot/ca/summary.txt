@@ -1,1 +1,0 @@
-Inicia una aplicació quan el dispositiu arrenca

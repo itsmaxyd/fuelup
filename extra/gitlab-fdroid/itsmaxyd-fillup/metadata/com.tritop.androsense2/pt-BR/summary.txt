@@ -1,1 +1,0 @@
-Monitore os dados do sensor

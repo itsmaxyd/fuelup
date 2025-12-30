@@ -1,1 +1,0 @@
-O aplicație de autentificare cu doi factori

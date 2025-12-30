@@ -1,1 +1,0 @@
-Ein schneller und kompakter GitHub-Client

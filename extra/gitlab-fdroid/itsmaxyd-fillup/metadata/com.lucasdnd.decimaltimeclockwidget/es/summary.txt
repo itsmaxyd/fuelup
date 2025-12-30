@@ -1,1 +1,0 @@
-Muestra un reloj decimal como widget

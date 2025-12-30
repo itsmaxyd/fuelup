@@ -1,1 +1,0 @@
-Um aplicativo simples para testar o usuário em identificar caracteres japoneses

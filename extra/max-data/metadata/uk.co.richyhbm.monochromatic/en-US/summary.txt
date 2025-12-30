@@ -1,1 +1,0 @@
-Enable the built-in black and white mode

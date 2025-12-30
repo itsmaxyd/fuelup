@@ -1,1 +1,0 @@
-Ferramenta de entrada de dados para o formato de contabilidade de texto simples

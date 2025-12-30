@@ -1,1 +1,0 @@
-Cruthaigh agus cuir in eagar shaders GLSL

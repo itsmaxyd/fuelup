@@ -1,1 +1,0 @@
-Lag symboler og tekst på LED-navneskilt med Blåtann

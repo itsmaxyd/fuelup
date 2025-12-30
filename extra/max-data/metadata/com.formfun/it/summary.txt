@@ -1,1 +1,0 @@
-Disegna un labirinto su carta e giocalo sul tuo smartphone con l'accelerometro

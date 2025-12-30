@@ -1,1 +1,0 @@
-Zeigt die aktuelle Uhrzeit metrisch in einem Widget auf dem Startbildschirm

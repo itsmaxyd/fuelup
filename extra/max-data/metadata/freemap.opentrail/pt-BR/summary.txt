@@ -1,1 +1,0 @@
-Aplicativo para caminhadas pela Inglaterra e País de Gales baseado em OSM

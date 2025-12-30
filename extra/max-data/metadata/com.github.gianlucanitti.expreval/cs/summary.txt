@@ -1,1 +1,0 @@
-Kalkulačka matematických výrazů s podporou proměnných a funkcí

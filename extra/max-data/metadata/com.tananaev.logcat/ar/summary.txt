@@ -1,1 +1,0 @@
-Android Logcat بدون صلاحيات الجذر

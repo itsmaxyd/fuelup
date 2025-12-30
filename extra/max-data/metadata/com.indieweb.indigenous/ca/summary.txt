@@ -1,1 +1,0 @@
-Client de IndieWeb Micropub i Microsub

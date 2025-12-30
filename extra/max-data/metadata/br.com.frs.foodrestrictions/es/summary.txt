@@ -1,1 +1,0 @@
-Pedir comida con restricciones en varios idiomas

@@ -1,1 +1,0 @@
-Monitore sistemas de compilação e compilações individuais

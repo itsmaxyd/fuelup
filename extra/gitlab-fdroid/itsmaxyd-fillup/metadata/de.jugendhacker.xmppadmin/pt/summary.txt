@@ -1,1 +1,0 @@
-O auxiliar móvel para administradores de servidor XMPP

@@ -1,1 +1,0 @@
-Blokish es una implementación de código abierto del juego de mesa Blokus

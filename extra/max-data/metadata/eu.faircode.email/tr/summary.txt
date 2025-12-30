@@ -1,1 +1,0 @@
-Tam özellikli e-posta istemcisi.Sade, sezgisel kullanıcı arayüzü. Gizlilik dostu

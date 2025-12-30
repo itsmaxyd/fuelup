@@ -1,1 +1,0 @@
-Gestor de diabetes, registra su glucemia y dosis de insulina, exporta datos

@@ -1,1 +1,0 @@
-Información sobre la batería en la barra de estado

@@ -1,1 +1,0 @@
-Dart-Anzeigetafel/-Punktezähler für Dart-Wettkämpfe

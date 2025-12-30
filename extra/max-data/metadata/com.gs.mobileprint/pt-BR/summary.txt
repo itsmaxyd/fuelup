@@ -1,1 +1,0 @@
-Impressão móvel por meio de um servidor

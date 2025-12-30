@@ -1,1 +1,0 @@
-Client de autentificare cu doi factori pentru Barada

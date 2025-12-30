@@ -1,1 +1,0 @@
-Amdroid je klient pro systém streamování médií Ampache

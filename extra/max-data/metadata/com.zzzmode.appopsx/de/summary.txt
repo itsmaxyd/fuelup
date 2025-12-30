@@ -1,1 +1,0 @@
-Oberfläche für AppOpsService (Berechtigungen)

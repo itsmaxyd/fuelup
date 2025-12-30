@@ -1,1 +1,0 @@
-bluetoothを介してGPSに接続

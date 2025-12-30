@@ -1,1 +1,0 @@
-Export kontaktů do souboru

@@ -1,1 +1,0 @@
-Messenger ptr. chat-uri și grupuri securizate (criptate de la un capăt la altul)

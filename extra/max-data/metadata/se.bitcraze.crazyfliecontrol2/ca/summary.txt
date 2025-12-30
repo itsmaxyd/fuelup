@@ -1,1 +1,0 @@
-Controleu el vostre quadricòpter Crazyflie des del mòbil

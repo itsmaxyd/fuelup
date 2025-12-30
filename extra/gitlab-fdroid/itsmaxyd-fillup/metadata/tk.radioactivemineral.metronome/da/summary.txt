@@ -1,1 +1,0 @@
-En simpel metronom app med tap tempo funktionalitet, og en forudindstillet system.

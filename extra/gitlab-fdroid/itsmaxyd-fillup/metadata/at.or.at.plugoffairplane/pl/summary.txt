@@ -1,1 +1,0 @@
-Służy do wyłączania trybu samolotowego, gdy urządzenie jest podłączone przez USB

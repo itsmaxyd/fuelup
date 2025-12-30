@@ -1,1 +1,0 @@
-KenKen tabanlı Sudoku tarzı oyun

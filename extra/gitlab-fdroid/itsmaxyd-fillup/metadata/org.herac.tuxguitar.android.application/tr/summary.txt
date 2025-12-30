@@ -1,1 +1,0 @@
-TuxGuitar, çok kanallı bir tab düzenleyici ve oynatıcıdır

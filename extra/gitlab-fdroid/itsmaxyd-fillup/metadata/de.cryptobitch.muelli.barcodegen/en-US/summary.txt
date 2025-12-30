@@ -1,1 +1,0 @@
-Generates barcodes with the zbar library

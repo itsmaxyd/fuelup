@@ -1,1 +1,0 @@
-Spouštění skriptů na serveru

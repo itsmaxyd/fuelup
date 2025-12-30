@@ -1,1 +1,0 @@
-Linphone is een open source internet SIP telefoon of Voice Over IP-telefoon (VoIP).

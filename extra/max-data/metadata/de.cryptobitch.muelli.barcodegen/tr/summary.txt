@@ -1,1 +1,0 @@
-zbar kütüphanesi ile barkodlar oluşturur

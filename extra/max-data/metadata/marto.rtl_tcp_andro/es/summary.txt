@@ -1,1 +1,0 @@
-Conductor DEG para dongles USB basados RTL2832U

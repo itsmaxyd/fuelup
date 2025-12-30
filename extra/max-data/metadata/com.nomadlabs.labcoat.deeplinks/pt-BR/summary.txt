@@ -1,1 +1,0 @@
-Abra links para instâncias de GitLab auto-hospedadas no LabCoat

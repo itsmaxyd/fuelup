@@ -1,1 +1,0 @@
-Amdroid er en klient for mediastrømmingssystemet Ampache

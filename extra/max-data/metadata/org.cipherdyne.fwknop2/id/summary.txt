@@ -1,1 +1,0 @@
-Klien untuk mengirimkan paket SPA ke server fwknopd

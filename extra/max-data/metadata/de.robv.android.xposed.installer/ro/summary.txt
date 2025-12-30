@@ -1,1 +1,0 @@
-Programul de instalare a cadrului Xposed

@@ -1,1 +1,0 @@
-Afegeix múltiples SSID de Freifunk al dispositiu

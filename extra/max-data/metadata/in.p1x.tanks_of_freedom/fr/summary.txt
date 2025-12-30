@@ -1,1 +1,0 @@
-Jeu de stratégie par tour en Pixel Art isométrique (indépendant)

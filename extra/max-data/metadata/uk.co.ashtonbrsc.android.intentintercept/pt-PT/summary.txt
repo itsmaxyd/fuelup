@@ -1,1 +1,0 @@
-Tenta interceptar Intenções a fim de examinar o seu conteúdo

@@ -1,1 +1,0 @@
-Erzeugt Klingeltöne aus Zeichenketten, entweder als Morsezeichen oder gesprochen

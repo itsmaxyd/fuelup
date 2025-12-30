@@ -1,1 +1,0 @@
-Anzeige der Hardware-Architektur mittels HWLOC und LSTOPO

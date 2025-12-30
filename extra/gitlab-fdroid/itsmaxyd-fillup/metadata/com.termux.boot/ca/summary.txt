@@ -1,1 +1,0 @@
-Complement pel Termux per executar programes en arrencar

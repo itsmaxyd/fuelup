@@ -1,1 +1,0 @@
-rtl-sdr के rtl_tcp का पोर्ट

@@ -1,1 +1,0 @@
-Kilidi açmak için yapılabilecek hata sayısını sınırla

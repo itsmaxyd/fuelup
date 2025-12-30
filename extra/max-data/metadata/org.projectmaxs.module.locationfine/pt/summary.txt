@@ -1,1 +1,0 @@
-Obter a localização do aparelho (por exemplo, GPS) via MAXS

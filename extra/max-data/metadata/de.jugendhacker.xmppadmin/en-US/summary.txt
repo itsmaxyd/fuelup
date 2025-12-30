@@ -1,1 +1,0 @@
-The mobile helper for XMPP server admins

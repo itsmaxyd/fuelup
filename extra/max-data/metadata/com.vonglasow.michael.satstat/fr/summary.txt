@@ -1,1 +1,0 @@
-GPS, état des capteurs et du réseau

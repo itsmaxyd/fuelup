@@ -1,3 +1,0 @@
-v1.0.70 Material Design-eko ekintza-barra ezkutatzea baimentzen du.
-Testua itsatea hobetu da.
-UTF-8 euskarria konpondu da.

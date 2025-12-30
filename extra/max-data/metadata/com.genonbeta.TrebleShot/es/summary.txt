@@ -1,1 +1,0 @@
-Enviar y recibir ficheros mediante conexiones disponibles

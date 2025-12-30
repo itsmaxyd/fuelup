@@ -1,5 +1,0 @@
-RepoType: git
-Repo: https://github.com/floooh/sokol-tools.git
-
-Prepare: |
-  git submodule update --init --recursive

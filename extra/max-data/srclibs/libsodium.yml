@@ -1,5 +1,0 @@
-RepoType: git
-Repo: https://github.com/jedisct1/libsodium
-
-Prepare: |
-  ./autogen.sh

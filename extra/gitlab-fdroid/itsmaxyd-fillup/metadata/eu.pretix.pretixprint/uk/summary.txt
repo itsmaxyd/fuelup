@@ -1,1 +1,0 @@
-Драйвер друку для pretixPOS і pretixSCAN

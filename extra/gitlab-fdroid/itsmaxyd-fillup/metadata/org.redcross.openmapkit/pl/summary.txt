@@ -1,1 +1,0 @@
-Przeglądanie funkcji OpenStreetMap w celu tworzenia i edytowania znaczników OSM

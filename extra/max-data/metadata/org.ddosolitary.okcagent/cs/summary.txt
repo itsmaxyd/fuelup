@@ -1,1 +1,0 @@
-Zpřístupnění OpenKeychain v prostředí Termux shell

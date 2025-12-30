@@ -1,1 +1,0 @@
-Genera un patrón de bloqueo aleatorio

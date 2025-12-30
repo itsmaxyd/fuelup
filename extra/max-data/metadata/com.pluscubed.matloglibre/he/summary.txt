@@ -1,1 +1,0 @@
-מציג Logcat בעיצוב Material שמבוסס על CatLog

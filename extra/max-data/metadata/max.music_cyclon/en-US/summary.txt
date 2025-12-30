@@ -1,1 +1,0 @@
-App to synchronize music over network by using the beets web server

@@ -1,1 +1,0 @@
-الاتصال بجهاز Sensirion Smart Gadget الخاص بك عبر BLE

@@ -1,1 +1,0 @@
-Definir servidor de pesquisa DNS

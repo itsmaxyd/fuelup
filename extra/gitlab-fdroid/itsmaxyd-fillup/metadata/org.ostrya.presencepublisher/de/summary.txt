@@ -1,1 +1,0 @@
-Wiederkehrende PUBLISH-Nachrichten zu einem MQTT-Topic

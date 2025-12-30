@@ -1,1 +1,0 @@
-Criptografar texto por rotação

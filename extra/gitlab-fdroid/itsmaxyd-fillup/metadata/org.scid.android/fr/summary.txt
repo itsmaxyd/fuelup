@@ -1,1 +1,0 @@
-Visionneuse pour les fichiers de base de données d'échecs SCID

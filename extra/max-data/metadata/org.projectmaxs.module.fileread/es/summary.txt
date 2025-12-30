@@ -1,1 +1,0 @@
-Explorar los archivos de dispositivos y enviar archivos a través de MAXS

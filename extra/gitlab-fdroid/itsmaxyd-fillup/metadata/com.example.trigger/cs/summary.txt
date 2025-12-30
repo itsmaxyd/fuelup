@@ -1,1 +1,0 @@
-Otevírejte dveře přes Wi-Fi pomocí HTTPS/SSH.

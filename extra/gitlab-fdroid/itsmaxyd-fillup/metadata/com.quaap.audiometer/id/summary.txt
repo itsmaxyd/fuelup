@@ -1,1 +1,0 @@
-Pengukur audio gaya VU yang sederhana

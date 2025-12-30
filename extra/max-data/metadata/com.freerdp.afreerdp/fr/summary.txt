@@ -1,1 +1,0 @@
-FreeRDP est un client libre de protocole de bureau à distance

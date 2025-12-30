@@ -1,1 +1,0 @@
-Um programa de backup muito simples

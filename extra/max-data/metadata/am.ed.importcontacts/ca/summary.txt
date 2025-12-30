@@ -1,1 +1,0 @@
-Restaura els contactes des d'un fitxer

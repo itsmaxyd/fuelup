@@ -1,1 +1,0 @@
-Hitung dan bandingkan hash checksum

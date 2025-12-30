@@ -1,1 +1,0 @@
-Obtenir des informations sur les produits à partir des codes-barres

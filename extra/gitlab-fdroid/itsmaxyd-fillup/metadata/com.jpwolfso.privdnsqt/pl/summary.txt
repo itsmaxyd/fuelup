@@ -1,1 +1,0 @@
-Szybkie przełączanie i konfigurowanie prywatnego DNS na Android 9.0+

@@ -1,1 +1,0 @@
-Sudoku-like game based on KenKen

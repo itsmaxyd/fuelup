@@ -1,1 +1,0 @@
-Activa les accions quan succeeixen determinats esdeveniments

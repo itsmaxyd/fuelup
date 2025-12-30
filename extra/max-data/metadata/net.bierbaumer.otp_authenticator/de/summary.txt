@@ -1,1 +1,0 @@
-App zur Zwei-Faktor-Authentifizierung

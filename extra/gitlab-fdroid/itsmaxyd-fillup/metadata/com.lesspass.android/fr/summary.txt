@@ -1,1 +1,0 @@
-Générer des mots de passe de compte uniques d’après un mot de passe maître

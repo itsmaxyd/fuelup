@@ -1,1 +1,0 @@
-Listar aplicaciones por categorías de permisos

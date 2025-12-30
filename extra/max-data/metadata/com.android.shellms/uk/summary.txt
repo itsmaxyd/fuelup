@@ -1,1 +1,0 @@
-Надішліть SMS через Android SDK

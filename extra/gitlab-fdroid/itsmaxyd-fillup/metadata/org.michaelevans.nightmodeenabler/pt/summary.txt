@@ -1,1 +1,0 @@
-Ativar o NightMode no Android7 e acima

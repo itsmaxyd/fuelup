@@ -1,1 +1,0 @@
-Strumieniowe przesyłanie ekranu za pośrednictwem protokołu HTTP

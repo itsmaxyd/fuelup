@@ -1,1 +1,0 @@
-Cliente de autenticación de dos factores para Barada

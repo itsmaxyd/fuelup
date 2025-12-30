@@ -1,1 +1,0 @@
-一个适用于 CyanogenMod 的简单类 AOSP 主题

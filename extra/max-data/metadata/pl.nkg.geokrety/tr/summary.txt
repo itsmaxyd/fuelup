@@ -1,1 +1,0 @@
-Bu program GeoKrety'nin hareketini kaydetmek için kullanılır.

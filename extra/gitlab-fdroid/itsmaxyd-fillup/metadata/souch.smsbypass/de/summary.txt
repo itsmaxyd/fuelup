@@ -1,1 +1,0 @@
-SMS filtern und diese in einer Pseudo-App anzeigen

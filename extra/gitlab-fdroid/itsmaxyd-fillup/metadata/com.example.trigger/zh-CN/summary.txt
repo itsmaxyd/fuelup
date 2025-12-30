@@ -1,1 +1,0 @@
-使用 Wi-Fi 和 HTTPS/SSH 开门。

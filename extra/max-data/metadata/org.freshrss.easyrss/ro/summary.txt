@@ -1,1 +1,0 @@
-Cititor RSS compatibil cu Google Reader API

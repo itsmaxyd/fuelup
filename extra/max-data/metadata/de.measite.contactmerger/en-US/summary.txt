@@ -1,1 +1,0 @@
-Index and merge contacts with Lucene

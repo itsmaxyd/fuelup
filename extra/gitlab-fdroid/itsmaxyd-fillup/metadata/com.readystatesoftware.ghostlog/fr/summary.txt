@@ -1,1 +1,0 @@
-Afficher logcat dans une superposition

@@ -1,1 +1,0 @@
-Definir o modo do SELinux no arranque

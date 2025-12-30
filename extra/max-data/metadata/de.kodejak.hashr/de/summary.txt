@@ -1,1 +1,0 @@
-Prüfsummen-Hashes errechnen und vergleichen

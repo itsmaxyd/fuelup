@@ -1,1 +1,0 @@
-Jabber (XMPP) client with multi-account support, clean interface

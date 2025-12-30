@@ -1,1 +1,0 @@
-Kapasitif düğme ışıklarını Always On AMOLED üzerinden kontrol edin

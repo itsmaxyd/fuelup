@@ -1,1 +1,0 @@
-Conéctese a su gadget inteligente Sensirion a través de BLE

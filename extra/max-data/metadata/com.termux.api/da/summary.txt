@@ -1,1 +1,0 @@
-Tilgå Android-funktioner fra Termux

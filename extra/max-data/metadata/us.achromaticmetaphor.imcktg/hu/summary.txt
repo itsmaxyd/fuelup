@@ -1,1 +1,0 @@
-Csengőhangokat állít elő karakterláncokból, Morse-kódként vagy felolvasásként

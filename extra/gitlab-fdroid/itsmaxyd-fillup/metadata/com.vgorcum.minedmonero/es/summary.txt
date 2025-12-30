@@ -1,1 +1,0 @@
-App complementaria para los mineros de monero en los "pools" compatibles

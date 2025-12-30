@@ -1,1 +1,0 @@
-Minimalistic app to remember your friend's birthdays and anniversaries

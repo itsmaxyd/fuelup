@@ -1,1 +1,0 @@
-Gamepad hackável para Linux

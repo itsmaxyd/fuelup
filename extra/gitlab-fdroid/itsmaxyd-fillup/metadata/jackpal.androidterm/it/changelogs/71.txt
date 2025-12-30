@@ -1,3 +1,0 @@
-v1.0.70 Consente di nascondere la Material Design Action Bar.
-Migliora incolla testo.
-Corregge supporto UTF-8.

@@ -1,1 +1,0 @@
-Плагин Tasker для запуска скриптов Termux из Tasker

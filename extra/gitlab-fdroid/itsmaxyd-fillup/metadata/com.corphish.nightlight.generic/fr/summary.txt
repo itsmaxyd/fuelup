@@ -1,1 +1,0 @@
-Une application pour ajuster l'intensité de la lumière bleue, utilisant KCAL

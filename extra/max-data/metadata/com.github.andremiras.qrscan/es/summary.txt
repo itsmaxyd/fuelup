@@ -1,1 +1,0 @@
-Aplicación multiplataforma de escáner de códigos QR y de barras

@@ -1,1 +1,0 @@
-Dwuskładnikowy klient uwierzytelniania dla Barada

@@ -1,1 +1,0 @@
-Звуковий набирач з тонами DTMF, bluebox та redbox

@@ -1,1 +1,0 @@
-Takvimi bir CalDAV sunucusu ile eşzamanlama

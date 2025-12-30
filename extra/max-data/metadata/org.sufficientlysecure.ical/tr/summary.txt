@@ -1,1 +1,0 @@
-Ics dosyaları kullanarak takvimlerinizi içe aktarma, dışa aktarma ve yedekleme

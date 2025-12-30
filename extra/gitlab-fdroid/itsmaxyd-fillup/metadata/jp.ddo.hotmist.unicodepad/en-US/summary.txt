@@ -1,1 +1,0 @@
-Input every character in Unicode

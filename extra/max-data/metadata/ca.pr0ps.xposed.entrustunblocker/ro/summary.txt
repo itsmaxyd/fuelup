@@ -1,1 +1,0 @@
-Modul Xposed lasă dispozitivele root să utilizeze app Entrust's IdentityGuard

@@ -1,1 +1,0 @@
-Qt ile yazılmış uygulamalar için gerekli

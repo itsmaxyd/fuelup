@@ -1,1 +1,0 @@
-Udostępnij OpenKeychain w swojej powłoce Termux

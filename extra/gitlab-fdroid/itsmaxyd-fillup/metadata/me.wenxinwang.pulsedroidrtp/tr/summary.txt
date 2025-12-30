@@ -1,1 +1,0 @@
-PulseAudio'nun RTP yayınları için Ses çalar

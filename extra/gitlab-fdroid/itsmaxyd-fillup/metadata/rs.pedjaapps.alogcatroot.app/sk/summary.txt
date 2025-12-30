@@ -1,1 +1,0 @@
-Zobraziť farebne odlíšené, Android zariadenia (logcat) guľatiny priamo z vášho telefónu.

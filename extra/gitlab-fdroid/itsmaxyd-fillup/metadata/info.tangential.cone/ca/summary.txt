@@ -1,1 +1,0 @@
-Eina d'entrada de dades pel format de comptabilitat amb text pla

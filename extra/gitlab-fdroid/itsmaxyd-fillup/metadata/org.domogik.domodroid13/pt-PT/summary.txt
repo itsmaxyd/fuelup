@@ -1,1 +1,0 @@
-Interface a um servidor de automação residencial Domogik

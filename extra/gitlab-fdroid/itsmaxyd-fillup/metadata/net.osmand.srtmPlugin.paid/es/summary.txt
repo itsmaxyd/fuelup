@@ -1,1 +1,0 @@
-Mostrar las líneas de contorno en OSMAnd

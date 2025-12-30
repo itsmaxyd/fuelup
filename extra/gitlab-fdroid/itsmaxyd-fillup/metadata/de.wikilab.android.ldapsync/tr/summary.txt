@@ -1,1 +1,0 @@
-Kişilerinizi LDAP ile eşzamanlayın

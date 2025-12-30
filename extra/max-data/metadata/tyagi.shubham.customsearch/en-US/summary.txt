@@ -1,1 +1,0 @@
-A Simple Query Search on Google using Dorking

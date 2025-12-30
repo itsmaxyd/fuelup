@@ -1,1 +1,0 @@
-Ini adalah pemutar ringan untuk bookmark Nextcloud.

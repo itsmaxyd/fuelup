@@ -1,1 +1,0 @@
-Genera codis de barres amb la biblioteca zbar

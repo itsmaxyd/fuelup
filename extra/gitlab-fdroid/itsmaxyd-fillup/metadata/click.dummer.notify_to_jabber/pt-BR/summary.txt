@@ -1,1 +1,0 @@
-Envie notificações de texto para uma conta Jabber ou seu servidor Gotify

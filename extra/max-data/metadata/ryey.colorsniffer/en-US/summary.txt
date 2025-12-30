@@ -1,1 +1,0 @@
-Color scheme generation based on app icon

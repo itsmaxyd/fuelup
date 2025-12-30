@@ -1,1 +1,0 @@
-Mostra el nivell de bateria i el mode de xarxa en un servidor web

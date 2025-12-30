@@ -1,1 +1,0 @@
-Execute e gerencie um nó IPFS no seu dispositivo

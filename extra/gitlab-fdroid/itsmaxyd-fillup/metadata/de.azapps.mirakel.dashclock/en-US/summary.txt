@@ -1,1 +1,0 @@
-Dashclock extension for Mirakel

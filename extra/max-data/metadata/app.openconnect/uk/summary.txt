@@ -1,1 +1,0 @@
-Клієнт SSL VPN для Cisco AnyConnect

@@ -1,1 +1,0 @@
-OTM projesinden haritalar için çevrimiçi istemci, GPX ile konumunuzu gösterin

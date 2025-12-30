@@ -1,1 +1,0 @@
-Carte pour visualiser les nœuds Freifunk sur un OpenStreetMap

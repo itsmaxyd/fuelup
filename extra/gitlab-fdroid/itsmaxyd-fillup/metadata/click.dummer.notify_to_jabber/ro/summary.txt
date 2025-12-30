@@ -1,1 +1,0 @@
-Trimite aproape toate notificările text la contul Jabber sau la serverul Gotify

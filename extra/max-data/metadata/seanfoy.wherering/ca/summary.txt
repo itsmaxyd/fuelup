@@ -1,1 +1,0 @@
-Configura el telèfon per canviar entre vibrar, anell o silenci d'acord amb GPS

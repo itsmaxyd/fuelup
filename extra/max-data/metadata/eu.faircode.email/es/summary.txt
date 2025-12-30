@@ -1,1 +1,0 @@
-Cliente de e-mail completo con interfaz intuitivo y que considera la privacidad

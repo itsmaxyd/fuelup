@@ -1,1 +1,0 @@
-Contrôlez tous vos appareils dans votre instance Home Assistant

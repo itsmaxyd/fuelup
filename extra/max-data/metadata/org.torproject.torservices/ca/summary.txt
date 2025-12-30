@@ -1,1 +1,0 @@
-Aplicació senzilla, ràpida i petita de Tor (llançament de la prova primerenca)

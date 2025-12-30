@@ -1,1 +1,0 @@
-Logcat in einem Overlay anzeigen

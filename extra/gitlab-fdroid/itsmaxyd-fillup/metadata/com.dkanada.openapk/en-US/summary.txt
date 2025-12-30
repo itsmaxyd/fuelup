@@ -1,1 +1,0 @@
-A material design app manager forked from ML Manager

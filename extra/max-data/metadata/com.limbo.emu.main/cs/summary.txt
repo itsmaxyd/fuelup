@@ -1,1 +1,0 @@
-Emulátor založený na QEMU

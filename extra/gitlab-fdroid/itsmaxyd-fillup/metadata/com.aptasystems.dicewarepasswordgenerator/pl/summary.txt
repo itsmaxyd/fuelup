@@ -1,1 +1,0 @@
-Generowanie haseł do diceware

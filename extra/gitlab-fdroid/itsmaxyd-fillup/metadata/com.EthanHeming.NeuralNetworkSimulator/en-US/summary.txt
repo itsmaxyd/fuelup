@@ -1,1 +1,0 @@
-Educational tool to learn about computational neuroscience and electrophysology

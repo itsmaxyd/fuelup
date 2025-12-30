@@ -1,1 +1,0 @@
-Võimalda failide jagamist igast rakendusest (nagu WeChat)

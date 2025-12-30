@@ -1,1 +1,0 @@
-Accediu a les funcions d'Android des del Termux

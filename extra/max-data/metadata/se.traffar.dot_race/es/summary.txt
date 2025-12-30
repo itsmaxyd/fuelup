@@ -1,1 +1,0 @@
-Juego para 1 o 2. Controla una nave con tacto y obtén las estrellas del oponente

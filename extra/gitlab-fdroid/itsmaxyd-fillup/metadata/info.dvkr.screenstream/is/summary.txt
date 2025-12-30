@@ -1,1 +1,0 @@
-Streyming á skjánum í gegnum HTTP

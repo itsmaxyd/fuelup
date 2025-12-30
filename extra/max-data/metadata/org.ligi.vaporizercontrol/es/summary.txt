@@ -1,1 +1,0 @@
-Controla los vaporizadores a través de BLE

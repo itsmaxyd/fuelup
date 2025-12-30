@@ -1,1 +1,0 @@
-Mapp baserad musikspelare. Visar och följer mapphierarkin.

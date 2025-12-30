@@ -1,1 +1,0 @@
-Termux-Ergänzung, um Programme beim Boot zu starten

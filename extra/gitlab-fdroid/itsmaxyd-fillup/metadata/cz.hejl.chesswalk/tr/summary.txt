@@ -1,1 +1,0 @@
-Satranç oyunu ve FICS istemcisi

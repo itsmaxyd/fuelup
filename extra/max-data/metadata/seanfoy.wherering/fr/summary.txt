@@ -1,1 +1,0 @@
-Changer entre le mode silencieux vibration et sonnerie en fonction du GPS

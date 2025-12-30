@@ -1,1 +1,0 @@
-Mostra la topologia del vostre maquinari amb la biblioteca hwloc i l'eina lstopo

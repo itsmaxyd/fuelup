@@ -1,1 +1,0 @@
-Disponibilize OpenKeychain em seu shell do Termux

@@ -1,1 +1,0 @@
-Amdroid é um cliente para o sistema de streaming de mídia Ampache

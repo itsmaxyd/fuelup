@@ -1,1 +1,0 @@
-Messagerie pour les tchats et les groupes sécurisés (chiffré de bout en bout)

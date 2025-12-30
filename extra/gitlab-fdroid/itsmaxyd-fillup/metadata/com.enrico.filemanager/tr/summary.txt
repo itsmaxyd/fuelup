@@ -1,1 +1,0 @@
-Depolama ayarlarını doğrudan uygulama çekmecesinden başlatın

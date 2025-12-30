@@ -1,1 +1,0 @@
-Connecta a les impressores de xarxa CUPS/IPP

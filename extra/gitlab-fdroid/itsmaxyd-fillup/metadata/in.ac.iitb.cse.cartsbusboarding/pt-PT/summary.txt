@@ -1,1 +1,0 @@
-Detetar evento de embarque num bus

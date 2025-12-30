@@ -1,1 +1,0 @@
-Obre portes per Wi-Fi amb HTTPS/SSH.

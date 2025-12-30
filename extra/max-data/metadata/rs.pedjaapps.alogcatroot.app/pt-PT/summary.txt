@@ -1,1 +1,0 @@
-Código de cores, aparelho Android (logcat) regista diretamente do seu telefone.

@@ -1,1 +1,0 @@
-Przechwytywanie kolorów za pomocą aparatu w czasie rzeczywistym

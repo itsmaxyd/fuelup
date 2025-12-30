@@ -1,1 +1,0 @@
-rtl-sdr-ҙың rtl_tcp порты

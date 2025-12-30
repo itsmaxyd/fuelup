@@ -1,1 +1,0 @@
-Publiser regelmessig til et MQTT-tema

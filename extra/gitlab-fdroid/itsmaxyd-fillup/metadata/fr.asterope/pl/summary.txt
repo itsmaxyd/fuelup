@@ -1,1 +1,0 @@
-Oblicz dystans, prędkość chwilową i średnią

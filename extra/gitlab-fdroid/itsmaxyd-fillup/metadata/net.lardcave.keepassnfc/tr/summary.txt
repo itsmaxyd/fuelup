@@ -1,1 +1,0 @@
-Etiketleri içeren veritabanının kilidini açar

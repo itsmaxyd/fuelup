@@ -1,1 +1,0 @@
-Personnalisez votre terminal Termux

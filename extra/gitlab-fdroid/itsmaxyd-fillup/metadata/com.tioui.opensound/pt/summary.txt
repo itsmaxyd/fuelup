@@ -1,1 +1,0 @@
-Um módulo para abrir facilmente qualquer ficheiro de som, de qualquer aplicação.

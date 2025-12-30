@@ -1,1 +1,0 @@
-Control capacitive button lights via Always On AMOLED

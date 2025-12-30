@@ -1,1 +1,0 @@
-Alterar o estado do adaptador Wi-Fi do aparelho via MAXS

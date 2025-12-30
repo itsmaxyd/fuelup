@@ -1,1 +1,0 @@
-Un sencillo medidor de audio tipo VU

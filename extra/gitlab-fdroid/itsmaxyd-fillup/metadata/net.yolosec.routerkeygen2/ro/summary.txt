@@ -1,1 +1,0 @@
-Generarea cheilor WPA/WEP implicite

@@ -1,1 +1,0 @@
-Mostra il Wi-Fi connesso nell'area di notifica

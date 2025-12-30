@@ -1,1 +1,0 @@
-IP-Routen für die WLAN-Schnittstelle ändern

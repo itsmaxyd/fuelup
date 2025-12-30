@@ -1,1 +1,0 @@
-Lanceur de dés pour jeux de rôles (RPG)

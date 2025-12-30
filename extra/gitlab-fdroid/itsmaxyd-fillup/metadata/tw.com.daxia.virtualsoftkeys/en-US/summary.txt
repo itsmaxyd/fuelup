@@ -1,1 +1,0 @@
-A simple, safe and easy softKeys (navigation bar)

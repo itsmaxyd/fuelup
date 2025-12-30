@@ -1,1 +1,0 @@
-Lettore podcast con interfaccia leggera

@@ -1,1 +1,0 @@
-Lector de documentos en formatos DjVu o PDF

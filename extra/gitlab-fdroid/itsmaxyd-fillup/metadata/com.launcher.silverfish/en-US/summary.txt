@@ -1,1 +1,0 @@
-A launcher with focus on a simple UI

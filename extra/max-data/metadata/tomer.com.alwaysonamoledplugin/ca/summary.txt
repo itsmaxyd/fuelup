@@ -1,1 +1,0 @@
-Controla les llums dels botons capacitius mitjançant Always On AMOLED

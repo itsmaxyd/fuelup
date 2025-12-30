@@ -1,1 +1,0 @@
-Minimalistisk biletvisar med GIF-støtte

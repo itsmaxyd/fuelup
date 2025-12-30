@@ -1,1 +1,0 @@
-Hent RGB og HEX-verdier for en farge

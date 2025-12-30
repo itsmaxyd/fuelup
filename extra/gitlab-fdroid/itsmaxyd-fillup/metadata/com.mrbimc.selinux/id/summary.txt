@@ -1,1 +1,0 @@
-Aktifkan mode SELinux saat boot

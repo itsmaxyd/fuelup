@@ -1,1 +1,0 @@
-Necessària per a les aplicacions escrites en Qt

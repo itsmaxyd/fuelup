@@ -1,1 +1,0 @@
-Bad Pixel - ứng dụng để kiểm tra màn hình về sự tồn tại của «pixels Bad».

@@ -1,1 +1,0 @@
-Messenger für gesicherte Chats und Gruppen (End-zu-End-verschlüsselt)

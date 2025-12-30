@@ -1,1 +1,0 @@
-Visualizzatore di immagini minimalista con supporto alle GIF

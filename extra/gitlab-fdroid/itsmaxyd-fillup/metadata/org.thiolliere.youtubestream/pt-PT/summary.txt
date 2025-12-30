@@ -1,1 +1,0 @@
-Obtenha um stream da YouTube e abra-o com uma aplicação local

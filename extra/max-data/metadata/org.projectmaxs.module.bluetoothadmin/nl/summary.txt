@@ -1,1 +1,0 @@
-Controle bluetooth adapter van het apparaat via MAXS.

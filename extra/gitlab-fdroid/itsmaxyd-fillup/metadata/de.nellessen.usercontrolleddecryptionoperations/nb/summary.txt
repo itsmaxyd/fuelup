@@ -1,1 +1,0 @@
-Emulerer et smartkort og lar deg kontrollere dekryperingsoperasjonene

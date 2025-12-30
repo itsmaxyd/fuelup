@@ -1,1 +1,0 @@
-O scanner/gerador de códigos QR que se preocupa com a sua privacidade

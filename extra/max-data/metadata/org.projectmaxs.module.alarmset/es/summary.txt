@@ -1,1 +1,0 @@
-Establecer la alarma y el temporizador del dispositivos a través MAXS

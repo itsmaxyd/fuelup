@@ -1,1 +1,0 @@
-Mostra la temperatura actual

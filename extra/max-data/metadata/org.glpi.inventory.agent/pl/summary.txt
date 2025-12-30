@@ -1,1 +1,0 @@
-Agent inwentaryzacji GLPI dla Androida

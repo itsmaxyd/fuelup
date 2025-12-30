@@ -1,1 +1,0 @@
-Bir ana bilgisayarın kapalı olup olmadığını kontrol edin

@@ -1,1 +1,0 @@
-Controleu el VLC amb el telèfon

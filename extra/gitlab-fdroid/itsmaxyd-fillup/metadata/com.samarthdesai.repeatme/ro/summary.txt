@@ -1,1 +1,0 @@
-Programați memento-uri personalizate, bazate pe intervale

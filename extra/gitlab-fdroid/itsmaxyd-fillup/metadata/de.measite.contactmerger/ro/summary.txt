@@ -1,1 +1,0 @@
-Indexarea și îmbinarea contactelor cu Lucene

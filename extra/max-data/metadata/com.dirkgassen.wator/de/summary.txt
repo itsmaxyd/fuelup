@@ -1,1 +1,0 @@
-Einfacher Simulator zur Bevölkerungsentwicklung

@@ -1,1 +1,0 @@
-TermuxのシェルでOpenKeychainを利用可能に

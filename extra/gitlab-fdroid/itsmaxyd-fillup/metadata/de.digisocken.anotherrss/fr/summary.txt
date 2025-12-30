@@ -1,1 +1,0 @@
-lecteur pour plusieurs flux RSS en un seule liste consultable

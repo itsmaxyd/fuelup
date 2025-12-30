@@ -1,1 +1,0 @@
-Kendalikan semua perangkat Anda di instance Home Assistant Anda

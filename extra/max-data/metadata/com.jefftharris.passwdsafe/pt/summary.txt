@@ -1,1 +1,0 @@
-Programa portabilizado do gestor de palavras-passe PasswordSafe

@@ -1,1 +1,0 @@
-Viewer for remote image galleries

@@ -1,1 +1,0 @@
-Tradycyjna gra roguelike z grafiką pikselową i prostym interfejsem

@@ -1,1 +1,0 @@
-Navraag die status van die Bluetooth via MaXS.

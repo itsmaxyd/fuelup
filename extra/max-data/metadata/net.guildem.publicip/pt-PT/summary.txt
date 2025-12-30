@@ -1,1 +1,0 @@
-App e Widget permitindo ao utilizador encontrar o seu endereço IP público atual

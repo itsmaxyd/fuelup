@@ -1,1 +1,0 @@
-Controle luzes de botões capacitivos através de AMOLED Sempre Ligado

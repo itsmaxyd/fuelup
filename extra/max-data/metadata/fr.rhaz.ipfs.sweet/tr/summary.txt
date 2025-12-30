@@ -1,1 +1,0 @@
-IPFS düğümünü cihazınızda çalıştırın ve yönetin

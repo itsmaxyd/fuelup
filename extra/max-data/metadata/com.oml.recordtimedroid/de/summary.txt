@@ -1,1 +1,0 @@
-Datum und Uhrzeit aufzeichnen, um Zeiten für Aufgaben zu pflegen

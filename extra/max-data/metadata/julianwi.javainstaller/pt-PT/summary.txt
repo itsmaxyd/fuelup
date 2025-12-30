@@ -1,1 +1,0 @@
-Instale um runtime de Java completo

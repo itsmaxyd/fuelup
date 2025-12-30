@@ -1,1 +1,0 @@
-Uses root to disable Airplane Mode when the device is plugged in via USB

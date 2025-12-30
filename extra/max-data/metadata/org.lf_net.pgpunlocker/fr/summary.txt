@@ -1,1 +1,0 @@
-Envoyer des requêtes vérifiées par PGP

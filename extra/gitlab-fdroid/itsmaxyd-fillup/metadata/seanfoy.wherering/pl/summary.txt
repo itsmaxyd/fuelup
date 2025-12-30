@@ -1,1 +1,0 @@
-Ustaw przełączanie się między wibracją, dzwonkiem lub wyciszeniem zgodnie z GPS

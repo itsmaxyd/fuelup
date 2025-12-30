@@ -1,1 +1,0 @@
-An application featuring customizable, real-time doppler radar images

@@ -1,1 +1,0 @@
-Czytnik RSS zgodny z interfejsem API Google Reader

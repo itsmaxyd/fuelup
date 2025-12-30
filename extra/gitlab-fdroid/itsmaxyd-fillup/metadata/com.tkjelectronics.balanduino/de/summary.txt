@@ -1,1 +1,0 @@
-Steuerung für einen Roboter

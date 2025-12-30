@@ -1,1 +1,0 @@
-Cihaz USB'den bağlandığında Uçak modunu devre dışı bırakmak için root kullanır

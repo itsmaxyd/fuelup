@@ -1,1 +1,0 @@
-Aplicación de compressión de imágenes PNG con notable reducción de tamaños

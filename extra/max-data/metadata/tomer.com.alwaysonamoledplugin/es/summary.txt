@@ -1,1 +1,0 @@
-Control de luces de botones capacitivos mediante Always On AMOLED

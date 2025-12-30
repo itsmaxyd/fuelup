@@ -1,1 +1,0 @@
-Portabilização do gerenciador de senhas PasswordSafe

@@ -1,1 +1,0 @@
-Um visualizador de mídia que funciona no topo da sua tela de bloqueio

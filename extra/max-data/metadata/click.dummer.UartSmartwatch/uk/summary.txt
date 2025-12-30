@@ -1,1 +1,0 @@
-Застосунок Bluetooth для UART-Smartwatch

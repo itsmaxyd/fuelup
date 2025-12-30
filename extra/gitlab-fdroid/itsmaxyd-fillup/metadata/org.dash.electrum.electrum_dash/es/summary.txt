@@ -1,1 +1,0 @@
-Monedero Electrum Light para Dash

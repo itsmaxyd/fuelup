@@ -1,1 +1,0 @@
-Zarządzanie parametrami jądra

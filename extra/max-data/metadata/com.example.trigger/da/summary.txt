@@ -1,1 +1,0 @@
-Åbn døre via Wi-Fi ved hjælp af HTTPS/SSH.

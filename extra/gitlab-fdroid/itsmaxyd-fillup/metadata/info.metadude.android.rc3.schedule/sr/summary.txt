@@ -1,1 +1,0 @@
-Апликација за програм конференције JahresEndVeranstaltungen (JEV).

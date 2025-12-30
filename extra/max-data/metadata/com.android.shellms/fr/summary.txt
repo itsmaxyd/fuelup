@@ -1,1 +1,0 @@
-Envoyer des SMS via le SDK d'Android

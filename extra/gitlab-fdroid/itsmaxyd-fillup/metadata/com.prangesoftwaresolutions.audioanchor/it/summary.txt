@@ -1,1 +1,0 @@
-Lettore audio che traccia il processo di ascolto dei vostri audiolibri e podcast

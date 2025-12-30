@@ -1,1 +1,0 @@
-Bir MQTT konusuna düzenli olarak yayınlayın

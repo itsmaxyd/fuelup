@@ -1,1 +1,0 @@
-Emulator de terminal simplu

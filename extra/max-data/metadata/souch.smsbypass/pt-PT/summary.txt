@@ -1,1 +1,0 @@
-Filtrar SMS e mostrá-los numa app falsa

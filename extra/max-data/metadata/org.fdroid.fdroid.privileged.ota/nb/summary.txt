@@ -1,1 +1,0 @@
-Tjenester brukt av F-droid for trygg installasjon og oppdatering av programmer

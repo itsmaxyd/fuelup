@@ -1,1 +1,0 @@
-10 başarısız oturum açma işleminden sonra kapatma

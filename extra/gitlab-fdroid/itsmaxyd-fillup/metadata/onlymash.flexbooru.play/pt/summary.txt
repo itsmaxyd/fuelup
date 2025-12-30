@@ -1,1 +1,0 @@
-Um cliente booru, com suporte Danbooru, Moebooru, Gelbooru, Shimmie

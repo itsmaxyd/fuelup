@@ -1,1 +1,0 @@
-Di aprire file HTML/immagine tramite file manager con il browser

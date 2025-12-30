@@ -1,1 +1,0 @@
-Leitor RSS compatível com a API do Leitor do Google

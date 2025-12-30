@@ -1,1 +1,0 @@
-إرسال رسائل SMS عبر Android SDK

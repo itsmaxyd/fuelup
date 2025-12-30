@@ -1,1 +1,0 @@
-Plugin TTS îmbunătățit pentru FBReader

@@ -1,1 +1,0 @@
-Définir le fond d'écran en fonction du niveau de batterie

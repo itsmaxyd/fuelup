@@ -1,1 +1,0 @@
-Instalátor frameworku Xposed

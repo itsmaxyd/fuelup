@@ -1,1 +1,0 @@
-Generuje vyzvánění z řetězců, buď jako Morseovu abecedu nebo jako mluvený text

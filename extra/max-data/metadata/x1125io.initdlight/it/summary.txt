@@ -1,1 +1,0 @@
-Aggiunge il mancante supporto a init.d

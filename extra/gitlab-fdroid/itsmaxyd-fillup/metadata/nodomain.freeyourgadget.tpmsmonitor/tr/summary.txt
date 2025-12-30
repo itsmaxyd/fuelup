@@ -1,1 +1,0 @@
-Bluetooth lastik basıncı izleme algılayıcılarını yönetme

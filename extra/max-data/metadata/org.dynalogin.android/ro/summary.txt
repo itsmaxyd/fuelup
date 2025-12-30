@@ -1,1 +1,0 @@
-Autentificare HOTP cu doi factori

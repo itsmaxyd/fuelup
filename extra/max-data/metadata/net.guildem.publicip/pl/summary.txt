@@ -1,1 +1,0 @@
-Aplikacja i widżet pozwalający znaleźć aktualny publiczny adres IP

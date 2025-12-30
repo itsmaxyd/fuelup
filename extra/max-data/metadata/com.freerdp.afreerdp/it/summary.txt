@@ -1,1 +1,0 @@
-FreeRDP è un client gratuito per il protocollo di desktop remoto

@@ -1,1 +1,0 @@
-Ein Booru-Client, Unterstützung für Danbooru, Moebooru, Gelbooru, Shimmie

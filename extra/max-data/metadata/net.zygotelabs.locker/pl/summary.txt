@@ -1,1 +1,0 @@
-Wymuszanie maksymalnych nieudanych prób odblokowania

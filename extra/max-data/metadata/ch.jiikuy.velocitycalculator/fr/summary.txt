@@ -1,1 +1,0 @@
-Calculer la vitesse d'un objet dans une vidéo

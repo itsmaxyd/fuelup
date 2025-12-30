@@ -1,1 +1,0 @@
-Videodaki bir nesnenin hızını hesaplama

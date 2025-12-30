@@ -1,1 +1,0 @@
-Emulates a smart card and lets you control the decryption operations

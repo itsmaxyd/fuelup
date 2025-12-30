@@ -1,1 +1,0 @@
-Matador simples de aplicativo em segundo plano

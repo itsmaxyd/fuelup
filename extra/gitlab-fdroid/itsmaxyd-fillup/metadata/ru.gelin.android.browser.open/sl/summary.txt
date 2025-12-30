@@ -1,1 +1,0 @@
-Omogoča, da odprete datoteko HTML ali slike iz filemanager v brskalniku

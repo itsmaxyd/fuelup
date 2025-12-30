@@ -1,1 +1,0 @@
-Mobile/cell and WLAN/Wi-Fi based network provider for UnifiedNlp and microG

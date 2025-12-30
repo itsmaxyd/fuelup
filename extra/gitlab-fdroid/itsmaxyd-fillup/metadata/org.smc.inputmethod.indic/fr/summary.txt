@@ -1,1 +1,0 @@
-Clavier AOSP avec prise en charge de l’Indic

@@ -1,1 +1,0 @@
-Plugin de Editor de Tags para Vanilla Music Player

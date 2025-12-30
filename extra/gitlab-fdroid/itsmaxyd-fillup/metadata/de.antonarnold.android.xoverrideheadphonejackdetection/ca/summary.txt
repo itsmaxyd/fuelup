@@ -1,1 +1,0 @@
-Sobreescriu manualment la detecció del connector d'auriculars

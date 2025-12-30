@@ -1,1 +1,0 @@
-Otrzymuj zaszyfrowane wiadomości, gdy Briar jest offline

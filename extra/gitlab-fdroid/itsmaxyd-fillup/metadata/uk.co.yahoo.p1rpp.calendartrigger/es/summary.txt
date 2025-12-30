@@ -1,1 +1,0 @@
-Disparar acciones en función de eventos de calendario

@@ -1,1 +1,0 @@
-FreeRDP és un client lliure del protocol d'escriptori remot

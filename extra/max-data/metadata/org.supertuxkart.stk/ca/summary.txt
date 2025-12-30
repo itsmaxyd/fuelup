@@ -1,1 +1,0 @@
-Un corredor d'arcade 3D amb una varietat de personatges, pistes i modes.

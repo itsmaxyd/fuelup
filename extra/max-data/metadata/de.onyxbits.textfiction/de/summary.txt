@@ -1,1 +1,0 @@
-Interaktiver Interpreter für fiktive Textabenteuer

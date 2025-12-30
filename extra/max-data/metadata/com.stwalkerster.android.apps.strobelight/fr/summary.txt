@@ -1,1 +1,0 @@
-Une application simple de lumière stroboscopique

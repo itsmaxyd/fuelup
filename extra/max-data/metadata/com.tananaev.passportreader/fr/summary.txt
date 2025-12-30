@@ -1,1 +1,0 @@
-utiliser la puce NFC pour communiquer avec un passeport électronique

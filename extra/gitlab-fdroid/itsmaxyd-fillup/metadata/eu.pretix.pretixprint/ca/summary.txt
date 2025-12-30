@@ -1,1 +1,0 @@
-controlador d'impressió per a pretixPOS i pretixSCAN

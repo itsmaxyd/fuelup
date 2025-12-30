@@ -1,1 +1,0 @@
-Folder berdasarkan pemutar musik. Menunjukkan dan mengikuti hirarki folder.

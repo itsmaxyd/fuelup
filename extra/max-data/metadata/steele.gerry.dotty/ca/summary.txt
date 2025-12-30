@@ -1,1 +1,0 @@
-Aplicació de demostració multitacte de codi obert i depurador.

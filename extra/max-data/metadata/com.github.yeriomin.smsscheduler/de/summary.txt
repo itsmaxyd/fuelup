@@ -1,1 +1,0 @@
-Ermöglicht, eine SMS zu planen und sie zu einer bestimmten Zeit zu versenden

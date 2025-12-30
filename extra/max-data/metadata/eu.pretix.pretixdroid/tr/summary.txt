@@ -1,1 +1,0 @@
-Pretix tarafından oluşturulan biletleri doğrular

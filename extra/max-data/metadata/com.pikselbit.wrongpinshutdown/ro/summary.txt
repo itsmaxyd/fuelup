@@ -1,1 +1,0 @@
-Oprire după 10 conectări nereușite

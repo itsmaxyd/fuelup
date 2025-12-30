@@ -1,1 +1,0 @@
-Auf CatLog basierender Logcat-Leser im Material Design

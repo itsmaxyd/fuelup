@@ -1,1 +1,0 @@
-Otwieraj linki do instancji GitLab hostowanych na własnym serwerze w LabCoat

@@ -1,1 +1,0 @@
-Generate default WPA/WEP keys

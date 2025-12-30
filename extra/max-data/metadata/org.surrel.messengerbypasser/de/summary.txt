@@ -1,1 +1,0 @@
-Leitet „OpenFB Messenger“-Intents zum Web-Chat um

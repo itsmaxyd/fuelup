@@ -1,1 +1,0 @@
-Calcola distanza, velocità media e istantanea

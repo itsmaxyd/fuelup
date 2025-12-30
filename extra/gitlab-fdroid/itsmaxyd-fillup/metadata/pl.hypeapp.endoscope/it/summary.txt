@@ -1,1 +1,0 @@
-Streaming di video in diretta tra dispositivi android tramite Wi-Fi

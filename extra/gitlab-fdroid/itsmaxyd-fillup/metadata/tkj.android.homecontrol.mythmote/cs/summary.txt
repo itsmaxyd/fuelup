@@ -1,1 +1,0 @@
-Ovládání MythTV frontend rozhraní.

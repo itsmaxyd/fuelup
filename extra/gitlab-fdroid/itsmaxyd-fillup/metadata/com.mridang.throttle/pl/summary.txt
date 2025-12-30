@@ -1,1 +1,0 @@
-Pokazuje użycie procesora na pasku stanu

@@ -1,1 +1,0 @@
-Blokus hội đồng quản trị trò chơi: một mã nguồn mở Android thực hiện của trò chơi phổ biến.

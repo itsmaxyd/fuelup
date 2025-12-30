@@ -1,1 +1,0 @@
-Set DNS lookup server

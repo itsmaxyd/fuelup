@@ -1,1 +1,0 @@
-Veure un codi de colors, dispositiu Android (Logcat) registra des del telèfon.

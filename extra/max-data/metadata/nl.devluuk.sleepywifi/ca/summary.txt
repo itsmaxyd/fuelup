@@ -1,1 +1,0 @@
-Desactiva el Wi-Fi quan el mòbil és en mode de son

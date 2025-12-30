@@ -1,1 +1,0 @@
-Puerto del gestor de contraseñas PasswordSafe

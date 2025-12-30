@@ -1,1 +1,0 @@
-Aplikasi demonstrasi multi-sentuh sumber terbuka dan debugger.

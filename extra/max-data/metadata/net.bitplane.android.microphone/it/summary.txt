@@ -1,1 +1,0 @@
-Trasmette audio dal microfono direttamente all'altoparlante

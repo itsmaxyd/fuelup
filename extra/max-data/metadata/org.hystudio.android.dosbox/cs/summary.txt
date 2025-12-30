@@ -1,1 +1,0 @@
-Port emulátoru DOSBox x86

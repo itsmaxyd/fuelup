@@ -1,1 +1,0 @@
-A simple and discrete daily reading application

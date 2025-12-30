@@ -1,1 +1,0 @@
-En QEMU-basert emulator

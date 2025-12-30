@@ -1,1 +1,0 @@
-Permet utilitzar init.d

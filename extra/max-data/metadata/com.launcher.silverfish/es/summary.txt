@@ -1,1 +1,0 @@
-Un iniciador orientado a una interfaz de usuario simple

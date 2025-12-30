@@ -1,1 +1,0 @@
-Herramienta para el sistema de archivos interplanetario (IPFS)

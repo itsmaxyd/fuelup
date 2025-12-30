@@ -1,1 +1,0 @@
-Metrodroid może odczytać niektóre informacje kart NFC publicznego transportu

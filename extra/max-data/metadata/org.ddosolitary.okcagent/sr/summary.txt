@@ -1,1 +1,0 @@
-Омогући OpenKeychain у Termux шкољци.

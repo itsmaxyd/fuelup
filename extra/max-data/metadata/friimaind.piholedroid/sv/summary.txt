@@ -1,1 +1,0 @@
-Inofficiell klient som ansluter till din Pi-hole och visar  diagram och statistik

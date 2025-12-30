@@ -1,1 +1,0 @@
-TTL redaktorius leidžia jums priversti išeinančius paketus TTL į konkrečią vertę.

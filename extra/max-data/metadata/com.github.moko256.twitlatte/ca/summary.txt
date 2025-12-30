@@ -1,1 +1,0 @@
-Client de Twitter, Mastodont i Pleroma

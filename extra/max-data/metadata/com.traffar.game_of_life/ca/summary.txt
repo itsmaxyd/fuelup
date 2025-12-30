@@ -1,1 +1,0 @@
-Simulació de Game of Life de Conway

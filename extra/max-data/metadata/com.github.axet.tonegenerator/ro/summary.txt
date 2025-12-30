@@ -1,1 +1,0 @@
-Aplicație de previzualizare a clasei ToneGenerator, open-source

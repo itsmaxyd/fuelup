@@ -1,1 +1,0 @@
-Baca RSS dari LeMonde.fr dan tampilkan artikel di dalam aplikasi

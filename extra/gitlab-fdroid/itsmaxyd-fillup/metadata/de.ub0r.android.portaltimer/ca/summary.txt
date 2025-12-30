@@ -1,1 +1,0 @@
-Temporitzador per als portals d'Ingress

@@ -1,1 +1,0 @@
-Terima pesan terenkripsi saat Briar sedang offline

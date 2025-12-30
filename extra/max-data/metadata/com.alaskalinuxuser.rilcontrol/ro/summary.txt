@@ -1,1 +1,0 @@
-Controlați procesul RIL-daemon

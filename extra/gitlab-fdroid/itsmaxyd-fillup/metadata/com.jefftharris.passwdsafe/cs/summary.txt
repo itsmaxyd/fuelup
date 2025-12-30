@@ -1,1 +1,0 @@
-Port správce hesel PasswordSafe

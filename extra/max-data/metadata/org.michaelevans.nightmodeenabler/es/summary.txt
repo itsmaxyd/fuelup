@@ -1,1 +1,0 @@
-Activa el modo oscuro en Android 7+

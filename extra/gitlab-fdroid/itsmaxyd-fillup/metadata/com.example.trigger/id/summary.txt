@@ -1,1 +1,0 @@
-Buka pintu melalui Wi-Fi menggunakan HTTPS/SSH.

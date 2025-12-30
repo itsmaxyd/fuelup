@@ -1,1 +1,0 @@
-Open Broadcaster Software(OBS)向けリモコン。

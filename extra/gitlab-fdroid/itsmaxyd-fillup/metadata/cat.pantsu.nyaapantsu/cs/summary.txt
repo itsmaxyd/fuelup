@@ -1,1 +1,0 @@
-Aplikační rozhraní komunikující s NyaaPantsu

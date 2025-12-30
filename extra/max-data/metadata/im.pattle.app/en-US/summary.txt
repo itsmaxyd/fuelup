@@ -1,1 +1,0 @@
-An ethical and easy to use chat app using Matrix

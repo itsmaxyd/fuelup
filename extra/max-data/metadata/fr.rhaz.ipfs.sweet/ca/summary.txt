@@ -1,1 +1,0 @@
-Executa i gestiona un node IPFS des del teu dispositiu

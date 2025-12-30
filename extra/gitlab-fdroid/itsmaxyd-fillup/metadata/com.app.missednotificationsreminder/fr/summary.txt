@@ -1,1 +1,0 @@
-Alarme sonore périodique pour les notifications manquées

@@ -1,1 +1,0 @@
-Génération de jeux de couleurs basée sur l'icône de l'application

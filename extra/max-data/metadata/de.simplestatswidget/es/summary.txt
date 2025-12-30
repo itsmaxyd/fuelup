@@ -1,1 +1,0 @@
-Muestra estadísticas simples sobre llamadas telefónicas y sms

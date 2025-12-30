@@ -1,1 +1,0 @@
-Aplikace pro náhled třídy ToneGenerator, open-source

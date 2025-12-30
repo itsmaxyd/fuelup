@@ -1,3 +1,0 @@
-v1.0.70 Leyfir felun Material Design Action stikunnar
-Bætir límingu texta.
-Lagar stuðning við UTF-8.

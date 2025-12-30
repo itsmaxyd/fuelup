@@ -1,1 +1,0 @@
-SQlite (küçük veritabanı) ön yüzü

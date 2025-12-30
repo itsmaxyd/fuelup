@@ -1,1 +1,0 @@
-Use root para desativar o Modo Avião quando o dispositivo for conectado por USB

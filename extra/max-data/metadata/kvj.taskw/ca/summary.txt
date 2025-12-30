@@ -1,1 +1,0 @@
-Versió no oficial de Taskwarrior - eina de gestió de tasques de la consola

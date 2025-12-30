@@ -1,1 +1,0 @@
-Menampilkan topologi perangkat keras Anda menggunakan pustaka hwloc &alat lstopo

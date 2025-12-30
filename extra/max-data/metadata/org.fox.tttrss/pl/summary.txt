@@ -1,1 +1,0 @@
-Klient do połączenia z TinyTinyRSS

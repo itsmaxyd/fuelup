@@ -1,1 +1,0 @@
-Aplicació de vista prèvia de la classe ToneGenerator, de codi obert

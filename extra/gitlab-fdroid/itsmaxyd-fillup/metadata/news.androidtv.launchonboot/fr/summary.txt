@@ -1,1 +1,0 @@
-Lance une application au démarrage de l'appareil

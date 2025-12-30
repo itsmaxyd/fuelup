@@ -1,1 +1,0 @@
-Musiksynchronisierung übers Netzwerk mit beets

@@ -1,1 +1,0 @@
-App para paseos en Inglaterra y Gales basado en OpenStreetMap

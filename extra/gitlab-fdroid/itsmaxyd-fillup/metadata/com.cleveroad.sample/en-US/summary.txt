@@ -1,1 +1,0 @@
-Play music from a widget

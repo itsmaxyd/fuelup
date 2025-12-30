@@ -1,1 +1,0 @@
-Gebruikt met µg GmsCore om Google Cloud Messaging, en meer aan te zetten

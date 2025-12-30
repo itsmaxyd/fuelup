@@ -1,1 +1,0 @@
-Widget che visualizza le immagini

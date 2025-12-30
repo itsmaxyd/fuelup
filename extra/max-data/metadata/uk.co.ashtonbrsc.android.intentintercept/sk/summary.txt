@@ -1,1 +1,0 @@
-Táto aplikácia sa pokúša zachytiť zámery s cieľom posúdiť ich obsah.

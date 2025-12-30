@@ -1,1 +1,0 @@
-控制你的 Home Assistant 实例中的所有设备

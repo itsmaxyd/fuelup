@@ -1,1 +1,0 @@
-SCID op de weg is een viewer voor Scid schaken databasebestanden.

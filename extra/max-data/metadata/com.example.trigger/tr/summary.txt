@@ -1,1 +1,0 @@
-HTTPS/SSH kullanarak kapıları Wi-Fi üzerinden açın.

@@ -1,1 +1,0 @@
-Widget para visualización de precio al cambio de la moneda digital Decred

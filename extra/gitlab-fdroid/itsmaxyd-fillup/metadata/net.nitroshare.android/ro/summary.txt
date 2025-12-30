@@ -1,1 +1,0 @@
-Transfer de fișiere în rețea între platforme

@@ -1,1 +1,0 @@
-Dette program bruges til at registrere GeoKrety's bevægelse.

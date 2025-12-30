@@ -1,1 +1,0 @@
-Director pe bază de player muzical. Arată și urmează ierarhia dosar.

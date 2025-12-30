@@ -1,1 +1,0 @@
-Materialistický hudební přehrávač, který streamuje hudbu z YouTube

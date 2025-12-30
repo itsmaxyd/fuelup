@@ -1,1 +1,0 @@
-Agent d'inventari d'Android GLPI

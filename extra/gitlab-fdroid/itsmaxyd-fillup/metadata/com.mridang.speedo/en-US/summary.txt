@@ -1,1 +1,0 @@
-Show network speed in the status bar

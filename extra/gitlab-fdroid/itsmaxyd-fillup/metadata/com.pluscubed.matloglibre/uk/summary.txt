@@ -1,1 +1,0 @@
-Читач logcat базований на CatLog з Material Design

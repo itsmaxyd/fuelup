@@ -1,1 +1,0 @@
-MDM-system (Mobile Device Management) til Android (mobil agent - launcher)

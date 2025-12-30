@@ -1,1 +1,0 @@
-Outra implementação do popular jogo Vinte-e-um

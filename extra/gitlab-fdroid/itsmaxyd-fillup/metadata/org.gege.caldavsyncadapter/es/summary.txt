@@ -1,1 +1,0 @@
-Sincronizar calendario con un servidor CalDAV

@@ -1,1 +1,0 @@
-Establiu el fons de pantalla en base al nivell de la bateria

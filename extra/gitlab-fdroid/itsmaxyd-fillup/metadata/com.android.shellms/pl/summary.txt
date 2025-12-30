@@ -1,1 +1,0 @@
-Wysyłanie wiadomości SMS za pośrednictwem zestawu SDK systemu Android

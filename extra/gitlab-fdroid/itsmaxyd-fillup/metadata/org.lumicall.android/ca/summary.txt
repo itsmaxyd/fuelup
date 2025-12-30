@@ -1,1 +1,0 @@
-Telèfon virtual de veu per internet xifrat usant estàndards oberts (SIP)

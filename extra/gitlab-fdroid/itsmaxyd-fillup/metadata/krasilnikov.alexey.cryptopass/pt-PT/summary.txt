@@ -1,1 +1,0 @@
-Palavras-passe fortes para vários sites usando uma única chave secreta

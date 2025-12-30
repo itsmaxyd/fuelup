@@ -1,1 +1,0 @@
-Client pentru a trimite pachete SPA către un server fwknopd

@@ -1,1 +1,0 @@
-Vaporitzadors de control via BLE

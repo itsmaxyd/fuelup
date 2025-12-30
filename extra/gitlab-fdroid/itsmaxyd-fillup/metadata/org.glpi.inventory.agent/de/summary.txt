@@ -1,1 +1,0 @@
-GLPI Android Inventory Agent

@@ -1,1 +1,0 @@
-Mandelbrot i Julia fraktal gledatelja, s ciljem da pokažu svoju vezu.

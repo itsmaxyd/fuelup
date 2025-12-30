@@ -1,1 +1,0 @@
-Einfache Karteikarten-App mit CSV-Dateien als Eingabe

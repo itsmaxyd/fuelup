@@ -1,1 +1,0 @@
-Schachspiel und FICS-Client

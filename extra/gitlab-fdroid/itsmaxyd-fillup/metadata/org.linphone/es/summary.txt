@@ -1,1 +1,0 @@
-Linphone es un teléfono SIP (de voz por internet sobre IP)

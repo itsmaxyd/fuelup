@@ -1,1 +1,0 @@
-Użyj Termux w pływającym oknie terminala

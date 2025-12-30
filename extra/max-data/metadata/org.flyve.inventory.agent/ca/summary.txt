@@ -1,1 +1,0 @@
-Aquesta aplicació és l'agent d'inventaris d'Android

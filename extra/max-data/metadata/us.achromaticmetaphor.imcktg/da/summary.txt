@@ -1,1 +1,0 @@
-Genererer ringetoner fra strenge, enten som morsekode eller talt tekst

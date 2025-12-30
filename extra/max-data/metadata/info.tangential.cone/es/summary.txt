@@ -1,1 +1,0 @@
-Herramienta de entrada de datos para libro contable en formato texto plano

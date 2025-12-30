@@ -1,1 +1,0 @@
-Een eenvoudige, open source 'To-Do' applicatie, met de nadruk op minimalisme.

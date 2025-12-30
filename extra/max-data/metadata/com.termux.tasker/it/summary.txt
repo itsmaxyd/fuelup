@@ -1,1 +1,0 @@
-Plug-in di Tasker per eseguire script di Termux da Tasker

@@ -1,1 +1,0 @@
-Recevoir des messages chiffrés quand Briar est hors ligne

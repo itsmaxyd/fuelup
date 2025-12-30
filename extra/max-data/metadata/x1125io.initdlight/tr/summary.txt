@@ -1,1 +1,0 @@
-Eksik init.d desteği ekle

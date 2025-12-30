@@ -1,1 +1,0 @@
-Juste une simple boussole, sans fonctions inutiles.

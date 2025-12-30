@@ -1,1 +1,0 @@
-Live video streaming between android devices over Wi-Fi

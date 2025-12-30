@@ -1,1 +1,0 @@
-Enviar SMS a través de la web

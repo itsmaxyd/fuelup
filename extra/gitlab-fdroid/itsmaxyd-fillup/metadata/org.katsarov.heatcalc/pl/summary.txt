@@ -1,1 +1,0 @@
-Kalkulator do obliczenia wymaganego radiatora dla urządzenia elektronicznego

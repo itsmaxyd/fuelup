@@ -1,1 +1,0 @@
-Vizuální programování senseBox:MCU pomocí Blockly

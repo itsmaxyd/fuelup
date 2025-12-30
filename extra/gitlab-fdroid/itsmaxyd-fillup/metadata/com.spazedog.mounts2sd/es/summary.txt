@@ -1,1 +1,0 @@
-Asignar almacenamiento de dispositivo a sdcard

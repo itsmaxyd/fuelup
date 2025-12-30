@@ -1,1 +1,0 @@
-Messagerie sécurisée pour Matrix avec une expérience instantanée traditionnelle

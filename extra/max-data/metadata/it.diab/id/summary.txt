@@ -1,1 +1,0 @@
-Manajer diabetes cerdas, catat kadar gula darah dan dosis insulin. Bisa diekspor

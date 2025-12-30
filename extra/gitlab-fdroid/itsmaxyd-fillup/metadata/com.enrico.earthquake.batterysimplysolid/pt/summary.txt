@@ -1,1 +1,0 @@
-Defina o padrão de fundo com base no nível da bateria

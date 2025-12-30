@@ -1,1 +1,0 @@
-Implementação de JamesDSP em todo o sistema para aparelhos não root

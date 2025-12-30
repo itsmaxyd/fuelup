@@ -1,1 +1,0 @@
-Onlineklient för kartor från OTM-projekt, import av GPX och visar ens plats

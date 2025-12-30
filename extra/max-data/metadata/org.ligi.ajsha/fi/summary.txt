@@ -1,1 +1,0 @@
-Tämän App voit nopeasti eval joitakin Android Java-koodia

@@ -1,1 +1,0 @@
-Saisie sur le clavier virtuel Android via ADB

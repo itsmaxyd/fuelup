@@ -1,1 +1,0 @@
-Cámara ASCII. Reemplaza píxeles por texto

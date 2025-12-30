@@ -1,1 +1,0 @@
-Sincronizar las cuentas sólo en redes específicas

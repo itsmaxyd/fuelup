@@ -1,1 +1,0 @@
-Przesyła dźwięk z mikrofonu bezpośrednio z głośnika

@@ -1,1 +1,0 @@
-Necessário para aplicativos escritos em Qt

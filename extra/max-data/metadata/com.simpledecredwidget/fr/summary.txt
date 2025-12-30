@@ -1,1 +1,0 @@
-Widget pour afficher le taux de change Decred

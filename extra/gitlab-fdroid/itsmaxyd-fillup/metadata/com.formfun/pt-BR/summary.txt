@@ -1,1 +1,0 @@
-Desenhe um labirinto no papel e resolva-o em seu dispositivo com o acelerômetro

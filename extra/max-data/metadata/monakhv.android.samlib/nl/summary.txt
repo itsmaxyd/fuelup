@@ -1,1 +1,0 @@
-Controleert automatisch op updates op de site van samizdat.

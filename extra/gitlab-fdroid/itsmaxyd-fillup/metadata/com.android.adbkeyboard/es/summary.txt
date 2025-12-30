@@ -1,1 +1,0 @@
-Entrada de teclado virtual Android a través de ADB

@@ -1,1 +1,0 @@
-Control remoto del calentador a través de SMS

@@ -1,1 +1,0 @@
-OpenStreetMap上のFreifunk Nodesを見るための地図

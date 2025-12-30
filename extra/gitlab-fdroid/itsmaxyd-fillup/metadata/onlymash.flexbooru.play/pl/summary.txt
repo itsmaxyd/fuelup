@@ -1,1 +1,0 @@
-Klient booru obsługujący Danbooru, Moebooru, Gelbooru, Shimmie

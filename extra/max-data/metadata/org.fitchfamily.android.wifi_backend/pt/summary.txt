@@ -1,1 +1,0 @@
-Fornecedor de localização UnifiedNlp (base de dados Wi-Fi local)

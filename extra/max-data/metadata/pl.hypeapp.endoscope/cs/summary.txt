@@ -1,1 +1,0 @@
-Živé streamování videa mezi zařázeními Android přes Wi-Fi

@@ -1,1 +1,0 @@
-Calcola i profili di pressione longitudinale monodimensionale in tubi sottovuoto

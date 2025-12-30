@@ -1,1 +1,0 @@
-Liens vers des instances GitLab auto-hébergées dans LabCoat

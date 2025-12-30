@@ -1,1 +1,0 @@
-RSS читач компатибилан са Google Reader API

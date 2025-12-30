@@ -1,1 +1,0 @@
-Emula una tarjeta inteligente y permite controlar las operaciones de descifrado

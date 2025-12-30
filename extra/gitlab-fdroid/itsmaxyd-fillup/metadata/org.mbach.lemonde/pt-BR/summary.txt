@@ -1,1 +1,0 @@
-Lê o feed RSS do site LeMonde.fr e busca artigos dentro do aplicativo

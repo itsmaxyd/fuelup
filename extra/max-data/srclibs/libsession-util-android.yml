@@ -1,5 +1,0 @@
-RepoType: git
-Repo: https://github.com/session-foundation/libsession-util-android
-
-Subdir: library
-Prepare: git submodule update --init --recursive

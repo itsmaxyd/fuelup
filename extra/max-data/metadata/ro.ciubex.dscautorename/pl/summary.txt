@@ -1,1 +1,0 @@
-Zmieniaj nazwy zdjęć na podstawie daty

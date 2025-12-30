@@ -1,1 +1,0 @@
-Minimalistyczna przeglądarka zdjęć z obsługą GIF

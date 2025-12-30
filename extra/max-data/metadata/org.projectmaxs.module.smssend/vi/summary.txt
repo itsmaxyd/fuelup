@@ -1,1 +1,0 @@
-Gửi tin nhắn SMS thông qua MAXS.

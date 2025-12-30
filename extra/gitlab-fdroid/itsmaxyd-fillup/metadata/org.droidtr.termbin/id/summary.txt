@@ -1,1 +1,0 @@
-Pastebin baris perintah berbasis Netcat

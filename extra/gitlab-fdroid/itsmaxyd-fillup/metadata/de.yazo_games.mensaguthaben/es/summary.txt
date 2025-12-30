@@ -1,1 +1,0 @@
-Comprueba el balance de tarjetas mensa NFC

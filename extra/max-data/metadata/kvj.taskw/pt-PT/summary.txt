@@ -1,1 +1,0 @@
-Versão não oficial do Taskwarrior - ferramenta de gestão de tarefas de console

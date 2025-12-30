@@ -1,1 +1,0 @@
-Installer Debian ved siden av systemet ditt

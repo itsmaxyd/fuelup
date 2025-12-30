@@ -1,1 +1,0 @@
-Backport do gerenciador de arquivos CyanogenMod

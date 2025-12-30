@@ -1,1 +1,0 @@
-Google Cloud Messaging ve dahasını etkinleştirmek için gmsCore ile kullanılır

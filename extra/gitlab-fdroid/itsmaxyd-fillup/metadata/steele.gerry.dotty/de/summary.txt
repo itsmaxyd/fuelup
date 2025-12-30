@@ -1,1 +1,0 @@
-Eine quelloffene Multi-Touch-Demonstrationsanwendung und ein Debugger.

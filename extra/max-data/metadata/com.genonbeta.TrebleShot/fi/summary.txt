@@ -1,1 +1,0 @@
-Lähetä ja vastaanota tiedostoja käytettävissä olevien yhteyksien kautta

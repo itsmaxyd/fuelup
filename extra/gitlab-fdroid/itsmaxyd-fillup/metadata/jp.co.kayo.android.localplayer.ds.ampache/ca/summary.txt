@@ -1,1 +1,0 @@
-Connector d'ampache per al Just Player

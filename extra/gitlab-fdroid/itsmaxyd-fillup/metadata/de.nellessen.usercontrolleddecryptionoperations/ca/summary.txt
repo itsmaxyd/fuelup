@@ -1,1 +1,0 @@
-Emula una targeta intel·ligent i permet controlar les operacions de desxifrat

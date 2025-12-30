@@ -1,1 +1,0 @@
-Kalendorių importas, eksportas ir atsarg. versijų kūrimas naudojant ICS failus

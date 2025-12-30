@@ -1,1 +1,0 @@
-Cara mudah untuk paket aplikasi Android untuk berjalan di runtime Archon pada Chrome.

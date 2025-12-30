@@ -1,1 +1,0 @@
-Furnizor de locație UnifiedNlp (bază de date Wi-Fi locală)

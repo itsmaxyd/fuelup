@@ -1,1 +1,0 @@
-מיועד לשימוש עם µg GmsCore כדי לאפשר Cloud Messaging (GCM) ועוד

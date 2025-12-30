@@ -1,1 +1,0 @@
-Ein einfaches Audiometer im VU-Meter-Stil

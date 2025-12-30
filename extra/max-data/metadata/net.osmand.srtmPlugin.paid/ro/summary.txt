@@ -1,1 +1,0 @@
-Afișarea liniilor de contur în OSMAnd

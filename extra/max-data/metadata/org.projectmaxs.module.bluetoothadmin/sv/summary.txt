@@ -1,1 +1,0 @@
-Kontrollera enhetens Bluetooth-adapter via MAXS

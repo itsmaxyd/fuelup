@@ -1,1 +1,0 @@
-Interpretador da linguagem de programação Brainfuck

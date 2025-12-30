@@ -1,1 +1,0 @@
-Um substituto da barra de status baseado em sobreposição

@@ -1,1 +1,0 @@
-Dienst, um NMEA-Nachrichten an einen GPSd-Server weiterzuleiten

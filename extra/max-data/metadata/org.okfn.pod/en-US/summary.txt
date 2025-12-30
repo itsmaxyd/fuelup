@@ -1,1 +1,0 @@
-Get product info from barcodes

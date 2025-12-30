@@ -1,1 +1,0 @@
-Simulazione del Gioco della Vita di Conway

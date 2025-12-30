@@ -1,1 +1,0 @@
-Çağrı, SMS veya uygulama bildirimi alırken terminali yanıp söner

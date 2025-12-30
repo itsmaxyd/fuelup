@@ -1,1 +1,0 @@
-Gör kort med csv-filer som inmatning för att memorera saker

@@ -1,1 +1,0 @@
-Automatikusan ellenőrzi a frissítéseket az oldalon a szamizdat.

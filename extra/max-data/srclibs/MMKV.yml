@@ -1,5 +1,0 @@
-RepoType: git
-Repo: https://github.com/Tencent/MMKV
-
-Prepare: |
-  rm -rf POSIX Win32 iOS

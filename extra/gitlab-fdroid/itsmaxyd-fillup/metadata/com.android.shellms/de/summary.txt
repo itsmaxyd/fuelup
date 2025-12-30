@@ -1,1 +1,0 @@
-SMS über Android-SDK senden

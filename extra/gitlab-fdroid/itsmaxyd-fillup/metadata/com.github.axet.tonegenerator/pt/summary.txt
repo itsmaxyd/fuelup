@@ -1,1 +1,0 @@
-App de visualização de classe ToneGenerator, de código aberto

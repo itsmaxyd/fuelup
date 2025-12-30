@@ -1,1 +1,0 @@
-Gestionnaire d'apps Material Design dérivé de ML Manager

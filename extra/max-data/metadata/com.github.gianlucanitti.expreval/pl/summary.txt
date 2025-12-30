@@ -1,1 +1,0 @@
-Kalkulator wyrażeń matematycznych z obsługą zmiennych i funkcji

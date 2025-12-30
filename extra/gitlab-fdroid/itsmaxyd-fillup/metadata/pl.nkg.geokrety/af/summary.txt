@@ -1,1 +1,0 @@
-Hierdie program is gebruik om die beweging van GeoKrety se aan te teken.

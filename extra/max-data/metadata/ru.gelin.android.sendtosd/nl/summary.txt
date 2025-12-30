@@ -1,1 +1,0 @@
-Kopieert alle bestanden vanuit elke applicatie via menu "Share" om een bestandssysteem.

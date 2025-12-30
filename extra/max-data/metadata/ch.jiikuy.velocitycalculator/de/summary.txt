@@ -1,1 +1,0 @@
-Geschwindigkeit eines Objekts in einem Video berechnen

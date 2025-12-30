@@ -1,1 +1,0 @@
-Activa o desactiva el LED de la càmera

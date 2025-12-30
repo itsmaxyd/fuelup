@@ -1,1 +1,0 @@
-Deschideți ușile prin Wi-Fi folosind HTTPS/SSH.

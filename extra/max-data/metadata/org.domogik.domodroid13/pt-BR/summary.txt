@@ -1,1 +1,0 @@
-Interface com o sistema Domogik de automação residencial

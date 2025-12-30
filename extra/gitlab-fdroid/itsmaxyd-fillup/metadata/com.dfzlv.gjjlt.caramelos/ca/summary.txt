@@ -1,1 +1,0 @@
-Joc casual fet amb Libgdx

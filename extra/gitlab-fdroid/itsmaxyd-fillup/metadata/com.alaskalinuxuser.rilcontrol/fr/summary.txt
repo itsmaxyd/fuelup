@@ -1,1 +1,0 @@
-Contrôlez le processus du démon RIL

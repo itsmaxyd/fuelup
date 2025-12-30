@@ -1,1 +1,0 @@
-Interface de contrôle du frontal de Mythtv.

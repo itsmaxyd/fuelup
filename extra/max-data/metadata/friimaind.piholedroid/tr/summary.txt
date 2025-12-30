@@ -1,1 +1,0 @@
-Tablo ve istatistikleri göstermek için Pi-hole'e bağlanan resmi olmayan istemci

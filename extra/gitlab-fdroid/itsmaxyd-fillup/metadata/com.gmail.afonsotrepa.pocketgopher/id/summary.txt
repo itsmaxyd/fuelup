@@ -1,1 +1,0 @@
-Sebuah klien Gopher yang cepat, elegan, dan modern

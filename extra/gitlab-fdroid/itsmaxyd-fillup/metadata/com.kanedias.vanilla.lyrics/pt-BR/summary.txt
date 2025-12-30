@@ -1,1 +1,0 @@
-Plugin busca de letras do Vanilla Music player

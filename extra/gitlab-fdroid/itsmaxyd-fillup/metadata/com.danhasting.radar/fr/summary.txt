@@ -1,1 +1,0 @@
-Application aux caractéristiques paramétrables d'images radar doppler temps réel

@@ -1,1 +1,0 @@
-Reader for e-paper subscribers of german daily newspaper "taz, die tageszeitung"

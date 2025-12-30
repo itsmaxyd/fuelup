@@ -1,1 +1,0 @@
-Visor de Passbook (pkpass). Utilizable sin conexión. Soporta QR , AZTEC y PDF417

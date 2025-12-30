@@ -1,1 +1,0 @@
-Mostra les coordenades GPS actuals

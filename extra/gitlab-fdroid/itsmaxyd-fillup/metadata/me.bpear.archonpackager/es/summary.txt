@@ -1,1 +1,0 @@
-Empaqueta aplicaciones instaladas para Chrome

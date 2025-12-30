@@ -1,1 +1,0 @@
-Klien Jabber (XMPP) dengan dukungan multi-akun dan antarmuka yang bersih

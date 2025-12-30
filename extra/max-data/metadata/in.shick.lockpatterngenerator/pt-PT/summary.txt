@@ -1,1 +1,0 @@
-Gerar um modelo de bloqueio aleatório

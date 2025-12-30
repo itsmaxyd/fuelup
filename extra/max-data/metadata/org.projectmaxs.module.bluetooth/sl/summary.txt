@@ -1,1 +1,0 @@
-Poizveduje o statusu adapter bluetooth prek Maxs.

@@ -1,1 +1,0 @@
-1 tai 2 pelaajan peli. Ohjaa avaruusalusta kosketuksella ja voita kaikki tähdet avautumasta

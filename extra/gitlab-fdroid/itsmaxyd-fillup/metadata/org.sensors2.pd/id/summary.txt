@@ -1,1 +1,0 @@
-Gunakan data sensor dalam patch Puredata

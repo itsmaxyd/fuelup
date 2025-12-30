@@ -1,1 +1,0 @@
-Wi-Fi를 통해 HTTPS/SSH로 문 열기.

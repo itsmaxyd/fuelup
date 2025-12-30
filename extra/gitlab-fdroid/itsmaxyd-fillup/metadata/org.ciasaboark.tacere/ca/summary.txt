@@ -1,1 +1,0 @@
-Silencia el telèfon als esdeveniments del calendari

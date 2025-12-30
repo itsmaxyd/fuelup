@@ -1,1 +1,0 @@
-Ava uksed Wi-Fi võrgus HTTPS/SSH abil.

@@ -1,1 +1,0 @@
-Adăugați suportul init.d lipsă

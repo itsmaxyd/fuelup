@@ -1,1 +1,0 @@
-通過ADB的Android虛擬鍵盤輸入

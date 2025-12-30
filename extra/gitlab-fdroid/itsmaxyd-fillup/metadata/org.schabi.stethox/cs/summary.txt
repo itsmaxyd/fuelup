@@ -1,1 +1,0 @@
-Modul Xposed, který přidává Stetho do každé aplikace

@@ -1,1 +1,0 @@
-Wi-Fi etkinleştirildiğinde ve bağlantısı kesildiğinde bildir

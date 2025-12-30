@@ -1,1 +1,0 @@
-Estableix el servidor de cerca DNS

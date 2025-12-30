@@ -1,1 +1,0 @@
-Chat locally over Bluetooth

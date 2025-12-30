@@ -1,1 +1,0 @@
-Open links to self-hosted GitLab instances in LabCoat

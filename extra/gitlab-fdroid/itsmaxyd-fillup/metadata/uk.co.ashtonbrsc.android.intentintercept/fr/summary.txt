@@ -1,1 +1,0 @@
-Interception des intentions afin d'examiner leur contenu

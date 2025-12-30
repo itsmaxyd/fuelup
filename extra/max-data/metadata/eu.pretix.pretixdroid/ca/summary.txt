@@ -1,1 +1,0 @@
-Valida els tiquets generats per pretix

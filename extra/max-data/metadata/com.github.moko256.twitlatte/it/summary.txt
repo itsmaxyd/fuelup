@@ -1,1 +1,0 @@
-Client di Twitter, Mastodon e Pleroma

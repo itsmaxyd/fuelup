@@ -1,1 +1,0 @@
-Otra app simple de KeePass en modo solo-lectura

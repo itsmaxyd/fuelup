@@ -1,1 +1,0 @@
-Permite abrir o arquivo HTML ou imagem em um Gerenciador de Arquivo ou Navegador

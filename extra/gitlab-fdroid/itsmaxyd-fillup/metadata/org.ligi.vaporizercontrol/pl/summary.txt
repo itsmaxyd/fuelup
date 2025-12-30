@@ -1,1 +1,0 @@
-Sterowanie waporyzatorami za pośrednictwem BLE

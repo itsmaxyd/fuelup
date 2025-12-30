@@ -1,3 +1,0 @@
-v1.0.70 Cho phép ẩn Thanh hành động Thiết kế Material
-Cải thiện việc dán văn bản.
-Sửa việc hỗ trợ UTF-8.

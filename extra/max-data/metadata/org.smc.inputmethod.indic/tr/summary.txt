@@ -1,1 +1,0 @@
-Hint dili desteğine sahip AOSP (Android Açık Kaynak Projesi) Klavyesi

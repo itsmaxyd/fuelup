@@ -1,1 +1,0 @@
-Módulo Xposed que adiciona o Stetho a cada app

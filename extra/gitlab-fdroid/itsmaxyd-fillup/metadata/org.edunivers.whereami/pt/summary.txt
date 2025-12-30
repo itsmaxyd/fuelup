@@ -1,1 +1,0 @@
-Mostrar a posição GPS no mapa

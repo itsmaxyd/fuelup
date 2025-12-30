@@ -1,1 +1,0 @@
-Ejecuta scripts en un servidor

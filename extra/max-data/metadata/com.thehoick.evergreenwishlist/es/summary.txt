@@ -1,1 +1,0 @@
-Buscar libros en listas de deseos de Amazon en biblioteca local

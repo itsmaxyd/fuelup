@@ -1,3 +1,0 @@
-v1.0.70 Sta verbergen van Material-Design-actie-balk toe. 
-Tekst plakken verbeterd.
-UTF-8 ondersteuning gerepareerd.

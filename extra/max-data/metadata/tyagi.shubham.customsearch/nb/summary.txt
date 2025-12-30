@@ -1,1 +1,0 @@
-Enkel søkespørring på Google ved bruk av Dorking

@@ -1,1 +1,0 @@
-Copie la OTP de YubiKey NEO desde NFC al portapapeles

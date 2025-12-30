@@ -1,1 +1,0 @@
-Netzwerkgeschwindigkeit in der Statusleiste einblenden

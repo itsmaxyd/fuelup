@@ -1,1 +1,0 @@
-Enumera los permisos de las aplicaciones

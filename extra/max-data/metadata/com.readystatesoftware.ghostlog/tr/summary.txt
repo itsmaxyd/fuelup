@@ -1,1 +1,0 @@
-Logcat'i bir yer paylaşımında gösterir

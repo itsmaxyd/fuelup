@@ -1,1 +1,0 @@
-Version non officielle de Taskwarrior - console de gestion des tâches

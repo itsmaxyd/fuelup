@@ -1,1 +1,0 @@
-TuxGuitar é um editor e reprodutor de tablaturas multi-faixas

@@ -1,1 +1,0 @@
-Kopiowanie znaków Unicode

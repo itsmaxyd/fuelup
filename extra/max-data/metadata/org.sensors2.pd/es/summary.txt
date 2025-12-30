@@ -1,1 +1,0 @@
-Usar datos de sensores en parches Puredata

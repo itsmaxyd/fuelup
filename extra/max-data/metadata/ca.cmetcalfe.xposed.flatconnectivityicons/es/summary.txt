@@ -1,1 +1,0 @@
-Módulo Xposed que proporciona iconos de conectividad planos

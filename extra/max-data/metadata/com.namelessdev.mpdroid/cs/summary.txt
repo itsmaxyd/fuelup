@@ -1,1 +1,0 @@
-Klient MPD (Music Player Daemon)

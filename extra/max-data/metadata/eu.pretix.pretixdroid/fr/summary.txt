@@ -1,1 +1,0 @@
-Valide les tickets générés par pretix

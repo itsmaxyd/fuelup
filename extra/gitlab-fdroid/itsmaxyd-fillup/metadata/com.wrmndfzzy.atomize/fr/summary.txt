@@ -1,1 +1,0 @@
-Compression d'image PNG avec entre autres réduction de taille

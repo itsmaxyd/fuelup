@@ -1,1 +1,0 @@
-Mostra la velocità della rete nella barra di stato

@@ -1,1 +1,0 @@
-用於在 OpenStreetMap 上查看 Freifunk 節點的地圖

@@ -1,1 +1,0 @@
-Reimplementación de SafeNet MobilePass

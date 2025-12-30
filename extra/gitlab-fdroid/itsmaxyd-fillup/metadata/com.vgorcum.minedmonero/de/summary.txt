@@ -1,1 +1,0 @@
-Companion-App für Monero-Miner auf unterstützten Pools

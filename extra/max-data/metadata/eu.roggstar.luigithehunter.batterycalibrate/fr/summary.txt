@@ -1,1 +1,0 @@
-Retire les anciennes config batterie pour résoudre les problèmes logiciel

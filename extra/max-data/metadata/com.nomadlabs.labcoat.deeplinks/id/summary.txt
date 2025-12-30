@@ -1,1 +1,0 @@
-Buka tautan ke instance GitLab yang dihosting sendiri di LabCoat

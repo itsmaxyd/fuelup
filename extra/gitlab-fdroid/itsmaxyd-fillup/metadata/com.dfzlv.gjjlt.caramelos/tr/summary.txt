@@ -1,1 +1,0 @@
-Libgdx ile yapılmış bir oyun

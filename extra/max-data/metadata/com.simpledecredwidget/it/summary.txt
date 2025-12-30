@@ -1,1 +1,0 @@
-Un widget per controllare il tasso di cambio di Decred

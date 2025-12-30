@@ -1,1 +1,0 @@
-Kart for visning av Freifunk-noder i et OpenStreetMap-kart

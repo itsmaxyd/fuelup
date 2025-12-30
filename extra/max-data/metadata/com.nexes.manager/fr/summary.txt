@@ -1,1 +1,0 @@
-Un simple navigateur et gestionnaire de fichiers

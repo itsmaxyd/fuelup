@@ -1,1 +1,0 @@
-Deschideți link-uri către instanțe GitLab auto-hublicate în LabCoat

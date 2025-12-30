@@ -1,1 +1,0 @@
-Afegeix valors des d'una llista

@@ -1,1 +1,0 @@
-Controle o processo de RIL-daemon

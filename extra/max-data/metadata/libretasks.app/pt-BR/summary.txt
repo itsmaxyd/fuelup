@@ -1,1 +1,0 @@
-Acione ações quando certos eventos acontecem

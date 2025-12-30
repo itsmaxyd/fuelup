@@ -1,1 +1,0 @@
-Sencilla "calculadora" para la regla de tres

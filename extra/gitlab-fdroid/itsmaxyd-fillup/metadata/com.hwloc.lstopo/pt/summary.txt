@@ -1,1 +1,0 @@
-Mostra a topologia do seu hardware com a biblioteca hwloc e a ferramenta lstopo

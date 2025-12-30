@@ -1,1 +1,0 @@
-Calcula l'oferta òptima a partir de tres pizzes rodones

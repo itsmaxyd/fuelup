@@ -1,1 +1,0 @@
-En 3D-arkadracer med en mängd olika karaktärer, banor och lägen att spela.

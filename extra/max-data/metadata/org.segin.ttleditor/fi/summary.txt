@@ -1,1 +1,0 @@
-Muuta verkkopakettien TTL:ää

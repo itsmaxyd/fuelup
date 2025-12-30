@@ -1,1 +1,0 @@
-Membuat kode batang menggunakan perpustakaan zbar

@@ -1,1 +1,0 @@
-Fermeture après 10 connexions infructueuses

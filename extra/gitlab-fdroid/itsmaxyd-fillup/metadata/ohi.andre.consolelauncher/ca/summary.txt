@@ -1,1 +1,0 @@
-Llançador basat en el terminal

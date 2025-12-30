@@ -1,1 +1,0 @@
-rtl-sdr rtl_tcp īstenojums

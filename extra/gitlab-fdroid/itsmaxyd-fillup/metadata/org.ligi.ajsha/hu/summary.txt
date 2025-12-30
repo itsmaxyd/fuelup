@@ -1,1 +1,0 @@
-Ezzel app segítségével gyorsan eval néhány Android Java kód

@@ -1,1 +1,0 @@
-Gobandroid HD un programma opensource di Go per Android go, igo, baduk, weiqi

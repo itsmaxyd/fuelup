@@ -1,1 +1,0 @@
-Controle su quadricóptero Crazyflie desde su dispositivo móvil

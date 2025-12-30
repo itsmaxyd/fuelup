@@ -1,1 +1,0 @@
-Regularnie publikuj na temat MQTT

@@ -1,1 +1,0 @@
-Exibir e monitorar o targetSDK de apps instaladas

@@ -1,1 +1,0 @@
-Es sólo una pequeña brújula simple, sin características que no sean necesarios.

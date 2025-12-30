@@ -1,1 +1,0 @@
-Un gestore di app per il material design, derivato da ML Manager

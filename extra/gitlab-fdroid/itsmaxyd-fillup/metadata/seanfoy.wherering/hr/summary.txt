@@ -1,1 +1,0 @@
-Mijenjaj stanje telefona između vibriranja, zvona ili bezvučno.prema GPS-u

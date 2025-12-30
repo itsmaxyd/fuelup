@@ -1,1 +1,0 @@
-Envoyer le flux audio du micro vers le haut-parleur ou le jack audio

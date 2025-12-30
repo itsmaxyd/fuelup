@@ -1,1 +1,0 @@
-Lector RSS compatible amb l'API de Google Reader

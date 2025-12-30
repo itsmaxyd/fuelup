@@ -1,1 +1,0 @@
-Afficher et interagir avec les dépôts Git

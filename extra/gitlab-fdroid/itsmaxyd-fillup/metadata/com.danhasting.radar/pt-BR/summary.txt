@@ -1,1 +1,0 @@
-Um aplicativo que apresenta imagens de radar Doppler personalizáveis

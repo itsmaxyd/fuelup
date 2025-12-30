@@ -1,1 +1,0 @@
-Клиент booru, поддерживающий Danbooru, Moebooru, Gelbooru и Shimmie

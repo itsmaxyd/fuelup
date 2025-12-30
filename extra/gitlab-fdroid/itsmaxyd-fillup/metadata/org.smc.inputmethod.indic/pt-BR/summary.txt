@@ -1,1 +1,0 @@
-Teclado AOSP com suporte a idiomas índicos

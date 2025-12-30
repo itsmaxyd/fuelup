@@ -1,1 +1,0 @@
-Silence phone on calendar events

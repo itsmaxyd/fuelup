@@ -1,1 +1,0 @@
-Client Pi-hole non officiel pour afficher des graphiques et statistiques

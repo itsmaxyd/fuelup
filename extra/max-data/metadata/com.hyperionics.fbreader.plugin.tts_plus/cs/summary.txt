@@ -1,1 +1,0 @@
-Vylepšený plugin TTS pro FBReader

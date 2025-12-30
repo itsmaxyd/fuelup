@@ -1,1 +1,0 @@
-Tasker-Plugin zum Ausführen von Termux-Skripten aus Tasker heraus

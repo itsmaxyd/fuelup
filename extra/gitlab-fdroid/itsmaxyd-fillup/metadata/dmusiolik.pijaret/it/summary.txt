@@ -1,1 +1,0 @@
-Crittografa il testo mediante rotazione

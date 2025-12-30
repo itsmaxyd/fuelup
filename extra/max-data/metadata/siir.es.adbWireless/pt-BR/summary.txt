@@ -1,1 +1,0 @@
-ADB via sem fio

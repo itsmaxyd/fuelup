@@ -1,1 +1,0 @@
-Lors d'un appel, Flashback affiche les appels récents avec cet interlocuteur

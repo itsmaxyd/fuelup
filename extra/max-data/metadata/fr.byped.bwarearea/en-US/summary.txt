@@ -1,1 +1,0 @@
-An offline GPS based POI alerter with overlay

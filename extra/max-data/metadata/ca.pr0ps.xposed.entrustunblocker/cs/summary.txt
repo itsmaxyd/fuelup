@@ -1,1 +1,0 @@
-Modul Xposed, který umožňuje rootnutým zařízením použít Entrust's IdentityGuard

@@ -1,1 +1,0 @@
-Selvitä värin RGB ja HEX -arvot

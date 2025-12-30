@@ -1,1 +1,0 @@
-Autista SDR per i dongle USB basati RTL2832U

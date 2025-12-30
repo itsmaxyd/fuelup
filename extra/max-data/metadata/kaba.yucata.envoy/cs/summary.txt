@@ -1,1 +1,0 @@
-Zobrazení počtu her na Yucata, které čekají na uživatele, aby provedl tah

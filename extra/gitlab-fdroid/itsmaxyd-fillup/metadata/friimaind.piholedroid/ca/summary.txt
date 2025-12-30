@@ -1,1 +1,0 @@
-Client no oficial per connectar al teu Pi-hole i mostrar gràfics i estadístiques

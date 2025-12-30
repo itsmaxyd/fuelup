@@ -1,1 +1,0 @@
-Complemento ao Termux para programas serem executados na inicialização

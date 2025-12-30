@@ -1,1 +1,0 @@
-Generate unique passwords for your accounts based on a master password

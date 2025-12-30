@@ -1,1 +1,0 @@
-Utilizați Termux într-o fereastră de terminal plutitoare

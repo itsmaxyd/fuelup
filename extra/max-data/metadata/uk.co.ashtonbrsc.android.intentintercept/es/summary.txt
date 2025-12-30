@@ -1,1 +1,0 @@
-Intenta interceptar Intents para examinar sus contenidos

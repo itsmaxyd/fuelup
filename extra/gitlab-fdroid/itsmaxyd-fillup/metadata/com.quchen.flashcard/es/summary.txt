@@ -1,1 +1,0 @@
-Crea flashcards usando archivos csv para memorizar cosas

@@ -1,1 +1,0 @@
-Un simulador simple de dinámica poblacional

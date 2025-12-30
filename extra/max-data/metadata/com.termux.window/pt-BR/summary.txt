@@ -1,1 +1,0 @@
-Use o Termux em uma janela de terminal flutuante

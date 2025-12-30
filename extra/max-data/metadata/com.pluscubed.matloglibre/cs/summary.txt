@@ -1,1 +1,0 @@
-Čtečka logcat v designu Material Design založená na CatLogu

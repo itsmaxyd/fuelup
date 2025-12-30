@@ -1,1 +1,0 @@
-PNG image compression with notably file size shrinking

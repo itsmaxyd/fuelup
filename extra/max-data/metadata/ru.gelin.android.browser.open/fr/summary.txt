@@ -1,1 +1,0 @@
-Ouvre les HTML et images d'un gestionnaire de fichiers dans un navigateur

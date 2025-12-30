@@ -1,1 +1,0 @@
-Client Jabber (XMPP) cu suport multi-account, interfață curată

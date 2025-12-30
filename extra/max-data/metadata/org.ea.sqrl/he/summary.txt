@@ -1,1 +1,0 @@
-מימוש של SQRL (Secure Quick Reliable Login - כניסה מהימנה מהירה בטוחה)

@@ -1,1 +1,0 @@
-Skatīt krāsu kodēta, Android ierīce (logcat) apaļkokus tieši no tālruņa.

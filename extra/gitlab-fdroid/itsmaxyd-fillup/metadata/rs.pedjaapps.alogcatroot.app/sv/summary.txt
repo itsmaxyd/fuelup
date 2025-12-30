@@ -1,1 +1,0 @@
-Visa färgkodade, Android-enhet (logcat) loggar direkt från telefonen.

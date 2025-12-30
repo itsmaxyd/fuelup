@@ -1,1 +1,0 @@
-Ogólnosystemowa implementacja JamesDSP dla urządzeń niezrootowanych

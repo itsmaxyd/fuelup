@@ -1,1 +1,0 @@
-Avvia un'applicazione quando il dispositivo si accende

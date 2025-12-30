@@ -1,1 +1,0 @@
-Tampilkan tingkat baterai dan mode jaringan pada server web

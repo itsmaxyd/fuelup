@@ -1,1 +1,0 @@
-Повежи се са Sensirion Smart Gadget преко BLE

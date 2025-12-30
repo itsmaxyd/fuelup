@@ -1,1 +1,0 @@
-Ohjaa höyrystimiä BLE:n kautta

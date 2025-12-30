@@ -1,1 +1,0 @@
-Un GPS hors ligne qui alerte des points intéressants proches, avec overlay

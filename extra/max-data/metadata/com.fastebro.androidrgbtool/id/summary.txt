@@ -1,1 +1,0 @@
-Mendapatkan nilai RGB dan HEX dari sebuah warna

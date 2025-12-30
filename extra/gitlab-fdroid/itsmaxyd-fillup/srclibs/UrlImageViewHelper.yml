@@ -1,5 +1,0 @@
-RepoType: git
-Repo: https://github.com/koush/UrlImageViewHelper
-Subdir: UrlImageViewHelper
-Prepare: |
-  android update lib-project -p ./

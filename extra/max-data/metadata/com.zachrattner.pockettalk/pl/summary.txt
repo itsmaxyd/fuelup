@@ -1,1 +1,0 @@
-Czytanie wiadomości tekstowych w kodzie Morse'a lub na głos

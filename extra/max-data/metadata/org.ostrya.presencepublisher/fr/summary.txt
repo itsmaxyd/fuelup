@@ -1,1 +1,0 @@
-Publie régulièrement vers un sujet MQTT

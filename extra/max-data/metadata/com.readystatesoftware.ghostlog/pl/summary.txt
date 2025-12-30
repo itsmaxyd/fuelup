@@ -1,1 +1,0 @@
-Wyświetla bufor logcat urządzenia w oknie nakładki systemowej

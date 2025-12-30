@@ -1,1 +1,0 @@
-Set Wi-Fi state depending on nearby cell towers

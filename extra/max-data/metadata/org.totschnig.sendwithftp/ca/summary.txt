@@ -1,1 +1,0 @@
-Carregueu fitxers via FTP

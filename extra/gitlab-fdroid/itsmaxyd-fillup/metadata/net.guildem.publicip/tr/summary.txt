@@ -1,1 +1,0 @@
-Kullanıcının mevcut IP adresini bulmasını sağlayan Uygulama ve Görsel Bileşen

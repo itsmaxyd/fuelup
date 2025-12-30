@@ -1,1 +1,0 @@
-Zpracování snímků DNG do formátu JPEG

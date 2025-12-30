@@ -1,1 +1,0 @@
-Um aplicativo cliente do GitHub, mais rápido e conciso

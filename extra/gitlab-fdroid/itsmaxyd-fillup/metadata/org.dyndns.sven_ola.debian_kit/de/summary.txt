@@ -1,1 +1,0 @@
-Debian parallel zum System installieren

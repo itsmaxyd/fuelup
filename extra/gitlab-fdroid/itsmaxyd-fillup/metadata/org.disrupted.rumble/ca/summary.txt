@@ -1,1 +1,0 @@
-Aplicació sense connexió de microblogs per a comunitats

@@ -1,1 +1,0 @@
-Jogo casual feito com Libgdx

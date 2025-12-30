@@ -1,1 +1,0 @@
-Open deuren via Wifi door het gebruik van HTTPS/SSH.

@@ -1,1 +1,0 @@
-Richtung, Höhe und Luftdruck anzeigen

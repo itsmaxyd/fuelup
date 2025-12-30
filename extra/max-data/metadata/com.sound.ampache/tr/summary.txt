@@ -1,1 +1,0 @@
-Amdroid, Ampache medya akış sistemi için bir istemcidir

@@ -1,1 +1,0 @@
-Redu intensitate ecran, dezactivând pixeli individuali, pt. ecrane AMOLED

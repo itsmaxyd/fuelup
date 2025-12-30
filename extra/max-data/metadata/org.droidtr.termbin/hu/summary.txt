@@ -1,1 +1,0 @@
-Netcat-alapú parancssoros pastebin

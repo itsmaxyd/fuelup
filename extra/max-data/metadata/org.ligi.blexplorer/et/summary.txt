@@ -1,1 +1,0 @@
-App uurida Bluetooth Low Energy (BLE) Devices - vaata väärtusi ja UUIDS

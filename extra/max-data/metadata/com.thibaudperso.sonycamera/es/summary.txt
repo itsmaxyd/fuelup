@@ -1,1 +1,0 @@
-Controla una cámara Sony a través de Wi-Fi

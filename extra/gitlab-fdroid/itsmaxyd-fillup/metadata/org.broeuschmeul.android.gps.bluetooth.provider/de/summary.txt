@@ -1,1 +1,0 @@
-GPS-Sensor über Bluetooth verbinden

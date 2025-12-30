@@ -1,1 +1,0 @@
-Obtenir un flux YouTube et l’ouvrir avec une appli locale

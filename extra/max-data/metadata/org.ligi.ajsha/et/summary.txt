@@ -1,1 +1,0 @@
-Selle App saate kiiresti eval mõned Android Java koodi

@@ -1,1 +1,0 @@
-Spouštění akcí při výskytu určitých událostí

@@ -1,1 +1,0 @@
-Leitor de música baseado em pastas. Mostra e segue hierarquia de pastas.

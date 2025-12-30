@@ -1,1 +1,0 @@
-Módulo simple que abre fácilmente cualquier sonido, desde cualquier aplicación.

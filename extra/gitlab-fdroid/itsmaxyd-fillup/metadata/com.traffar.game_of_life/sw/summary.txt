@@ -1,1 +1,0 @@
-Uigaji wa Conway's Game of Life

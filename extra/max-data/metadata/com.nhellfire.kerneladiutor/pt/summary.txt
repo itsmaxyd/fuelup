@@ -1,1 +1,0 @@
-Gerir os parâmetros do kernel

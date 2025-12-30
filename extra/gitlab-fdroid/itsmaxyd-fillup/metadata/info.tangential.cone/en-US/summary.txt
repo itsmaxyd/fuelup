@@ -1,1 +1,0 @@
-Data entry tool for the plain text accounting ledger format

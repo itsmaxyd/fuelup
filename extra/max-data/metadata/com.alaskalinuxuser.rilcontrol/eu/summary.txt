@@ -1,1 +1,0 @@
-Kontrolatu RIL-daemon prozesua

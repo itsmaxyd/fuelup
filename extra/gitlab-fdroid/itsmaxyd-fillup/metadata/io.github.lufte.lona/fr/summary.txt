@@ -1,1 +1,0 @@
-jeu du serpent en HTML5

@@ -1,1 +1,0 @@
-En basit, en hızlı, en küçük Tor vekil uygulaması (erken test sürümü)
