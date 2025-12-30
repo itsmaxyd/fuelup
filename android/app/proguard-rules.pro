@@ -47,6 +47,3 @@
     public static *** i(...);
 }
 
-# Google Play Core (required by Flutter)
--dontwarn com.google.android.play.core.**
--keep class com.google.android.play.core.** { *; }

@@ -90,6 +90,7 @@ android {
     }
 
     // Build reproducibility
+
     packaging {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
@@ -102,3 +103,8 @@ flutter {
 }
 
 dependencies {}
+
+configurations.all {
+    exclude group: "com.google.android.play", module: "core"
+    exclude group: "com.google.android.play", module: "core-common"
+}

@@ -1,20 +1,14 @@
 Categories:
   - Money
-  - Finance Manager
-
 License: GPL-3.0-or-later
-
-AutoName: FillUp
-
 AuthorName: Max Demon
 AuthorEmail: maxdemon@outlook.com
-
 WebSite: https://itsmaxyd.github.io/fuelup/
 SourceCode: https://github.com/itsmaxyd/fuelup
 IssueTracker: https://github.com/itsmaxyd/fuelup/issues
 Donate: https://buymeacoffee.com/maxdemon
 
-Name: FillUp
+AutoName: Fillup
 Summary: Fuel expense and mileage tracking app
 Description: |
   FillUp is a simple, privacy-respecting fuel expense tracking application.
@@ -24,32 +18,26 @@ Description: |
 RepoType: git
 Repo: https://github.com/itsmaxyd/fuelup.git
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-
-CurrentVersion: 1.0.1
-CurrentVersionCode: 2
-
 Builds:
   - versionName: 1.0.1
     versionCode: 2
     commit: v1.0.1
-
     submodules: true
-    subdir: .
-
     sudo:
       - apt-get update
       - apt-get install -y unzip xz-utils git openjdk-17-jdk libglu1-mesa
-
     prebuild:
       - export FLUTTER_HOME=$PWD/flutter
       - export PATH="$FLUTTER_HOME/bin:$PATH"
       - flutter config --no-analytics
       - flutter doctor
       - flutter pub get
-
     build:
       - flutter build apk --release --no-tree-shake-icons
-
     output: build/app/outputs/flutter-apk/app-release.apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.0.1
+CurrentVersionCode: 2
