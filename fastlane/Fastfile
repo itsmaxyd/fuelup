@@ -1,0 +1,31 @@
+# This file contains the fastlane.tools configuration
+# More documentation at https://docs.fastlane.tools
+
+default_platform(:android)
+
+platform :android do
+  desc "Upload metadata to Google Play Store"
+  lane :upload_metadata do
+    supply(
+      package_name: "com.fillup.fillup",
+      metadata_path: "./fastlane/metadata/android"
+    )
+  end
+
+  desc "Build and upload APK to Google Play (beta track)"
+  lane :beta do
+    # Build the APK
+    gradle(
+      task: "assemble",
+      build_type: "Release",
+      project_dir: "./android"
+    )
+    
+    # Upload to beta track
+    supply(
+      package_name: "com.fillup.fillup",
+      track: "beta",
+      apk: "./android/app/build/outputs/apk/release/app-release.apk"
+    )
+  end
+end
