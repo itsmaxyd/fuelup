@@ -84,47 +84,13 @@ Fillup is built with Flutter and follows clean architecture principles:
 - **Networking**: HTTP client for fuel price fetching
 - **Charts**: FL Chart for beautiful data visualization
 
-## 📦 Dependencies
 
-All dependencies are open-source and use permissive licenses:
 
-- `provider`: State management
-- `sqflite`: SQLite database
-- `http`: Networking
-- `fl_chart`: Data visualization
-- `intl`: Internationalization
-- `path_provider`: File system access
-- `csv`: Data export
-- `share_plus`: Data sharing
 
-## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-Fillup is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
-
-## 🙏 Acknowledgments
-
-- Flutter team for the amazing framework
-- Open source community for the wonderful packages
-- F-Droid for promoting free software on mobile
-
-## 📞 Support
-
-For issues, feature requests, or contributions, please:
-
-- Open an issue on GitHub
-- Check the [documentation](docs/) for more details
-- Join our community discussions
 
 ---
 
 **Made with ❤️ using Flutter**
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/maxdemon)
