@@ -1,0 +1,204 @@
+Categories:
+  - Navigation
+License: GPL-3.0-or-later
+WebSite: http://nextgis.ru/en/nextgis-mobile
+SourceCode: https://github.com/nextgis/android_gisapp
+IssueTracker: https://github.com/nextgis/android_gisapp/issues
+
+AutoName: NextGIS Mobile
+Description: |-
+  NextGIS Mobile allows to:
+
+  * show multi-layer map (layers can come from online and offline sources);
+  * change visibility and layers order;
+  * navigate the map (panning, zoom in, zoom out);
+  * collect data in the field;
+  * edit vector data (both geometries and attributes) online and offline;
+  * record tracks;
+  * show coordinates, speed, elevation etc.
+
+RepoType: git
+Repo: https://github.com/nextgis/android_gisapp
+
+Builds:
+  - versionName: '2.3'
+    versionCode: 13
+    commit: 3ceca6fbf27dd10f030c1910eb225b3f29c30afa
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i "s/\(buildscript {\)/\1\n System.properties['com.android.build.gradle.overrideVersionCheck']
+      = 'true'/" ../build.gradle
+
+  - versionName: '2.4'
+    versionCode: 16
+    commit: v2.4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i "s/\(buildscript {\)/\1\n System.properties['com.android.build.gradle.overrideVersionCheck']
+      = 'true'/" ../build.gradle
+
+  - versionName: 2.8.0
+    versionCode: 134
+    commit: 2c0abaae645a9bbd1a25f6bf825247548b4d1752
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    srclibs:
+      - nextgis-easypicker@4946e995390fac70d510272a51aff618418d05f5
+    prebuild:
+      - mv $$nextgis-easypicker$$/easypicker ../easypicker
+      - sed -i -e '/android {/a namespace "com.keenfin.easypicker"' ../easypicker/build.gradle
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/gms/d' -e '/getTracker() {/,/^    }/d' -e '/getTracker/d' -e '/setExceptionHandler()
+        {/,/^    }/d' -e '/setExceptionHandler/d' -e '/GoogleAnalytics/d' -e '/mTracker/d'
+        -e '/sendEvent/,/^    }/s/^        .*//' -e '/sendScreen/,/^    }/s/^        .*//'
+        src/main/java/com/nextgis/mobile/MainApplication.java
+    scanignore:
+      - app/src/main/res/raw/mapnik.zip
+
+  - versionName: 2.9.1
+    versionCode: 138
+    commit: 842c0d5de576d4ac162fcaa80fa8b63d658bd579
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/gms/d' -e '/getTracker() {/,/^    }/d' -e '/getTracker/d' -e '/setExceptionHandler()
+        {/,/^    }/d' -e '/setExceptionHandler/d' -e '/GoogleAnalytics/d' -e '/mTracker/d'
+        -e '/sendEvent/,/^    }/s/^        .*//' -e '/sendScreen/,/^    }/s/^        .*//'
+        src/main/java/com/nextgis/mobile/MainApplication.java
+    scanignore:
+      - app/src/main/res/raw/mapnik.zip
+
+  - versionName: 2.9.3
+    versionCode: 141
+    commit: bc3a38666669cf74c6e75601b9b360b469010dba
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/gms/d' -e '/getTracker() {/,/^    }/d' -e '/getTracker/d' -e '/setExceptionHandler()
+        {/,/^    }/d' -e '/setExceptionHandler/d' -e '/GoogleAnalytics/d' -e '/mTracker/d'
+        -e '/sendEvent/,/^    }/s/^        .*//' -e '/sendScreen/,/^    }/s/^        .*//'
+        src/main/java/com/nextgis/mobile/MainApplication.java
+      - echo -e "\norg.gradle.jvmargs=-Xmx4g" >> ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/mapnik.zip
+
+  - versionName: 2.11.0
+    versionCode: 143
+    commit: 758d56a46adfc937a2bdfc15bc6a370c2c459f08
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/gms/d' -e '/getTracker() {/,/^    }/d' -e '/getTracker/d' -e '/setExceptionHandler()
+        {/,/^    }/d' -e '/setExceptionHandler/d' -e '/GoogleAnalytics/d' -e '/mTracker/d'
+        -e '/sendEvent/,/^    }/s/^        .*//' -e '/sendScreen/,/^    }/s/^        .*//'
+        src/main/java/com/nextgis/mobile/MainApplication.java
+      - echo -e "\norg.gradle.jvmargs=-Xmx4g" >> ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/mapnik.zip
+
+  - versionName: 2.12.0
+    versionCode: 144
+    commit: 8add771ddf63ee916796d3d12e57466a6fbfe24b
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/gms/d' -e '/getTracker() {/,/^    }/d' -e '/getTracker/d' -e '/setExceptionHandler()
+        {/,/^    }/d' -e '/setExceptionHandler/d' -e '/GoogleAnalytics/d' -e '/mTracker/d'
+        -e '/sendEvent/,/^    }/s/^        .*//' -e '/sendScreen/,/^    }/s/^        .*//'
+        src/main/java/com/nextgis/mobile/MainApplication.java
+      - echo -e "\norg.gradle.jvmargs=-Xmx4g" >> ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/mapnik.zip
+
+  - versionName: 2.12.1
+    versionCode: 146
+    commit: 56891264eb3aaf435b5d030988ec2ee932388b8d
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/gms/d' -e '/getTracker() {/,/^    }/d' -e '/getTracker/d' -e '/setExceptionHandler()
+        {/,/^    }/d' -e '/setExceptionHandler/d' -e '/GoogleAnalytics/d' -e '/mTracker/d'
+        -e '/sendEvent/,/^    }/s/^        .*//' -e '/sendScreen/,/^    }/s/^        .*//'
+        src/main/java/com/nextgis/mobile/MainApplication.java
+      - echo -e "\norg.gradle.jvmargs=-Xmx4g" >> ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/mapnik.zip
+
+  - versionName: 2.12.3
+    versionCode: 149
+    commit: ee0183cdf2d8da9b2e1daf3d3d780d9de1c15191
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/gms/d' -e '/getTracker() {/,/^    }/d' -e '/getTracker/d' -e '/setExceptionHandler()
+        {/,/^    }/d' -e '/setExceptionHandler/d' -e '/GoogleAnalytics/d' -e '/mTracker/d'
+        -e '/sendEvent/,/^    }/s/^        .*//' -e '/sendScreen/,/^    }/s/^        .*//'
+        src/main/java/com/nextgis/mobile/MainApplication.java
+      - echo -e "\norg.gradle.jvmargs=-Xmx4g" >> ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/mapnik.zip
+
+  - versionName: 2.13.0
+    versionCode: 150
+    commit: 6e2bb8b60ca0140aad18dc8be8ba8c17b9a36c36
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/gms/d' -e '/getTracker() {/,/^    }/d' -e '/getTracker/d' -e '/setExceptionHandler()
+        {/,/^    }/d' -e '/setExceptionHandler/d' -e '/GoogleAnalytics/d' -e '/mTracker/d'
+        -e '/sendEvent/,/^    }/s/^        .*//' -e '/sendScreen/,/^    }/s/^        .*//'
+        src/main/java/com/nextgis/mobile/MainApplication.java
+      - sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+      - sed -i -e 's/8.12.2/8.11.1/' ../build.gradle
+    scanignore:
+      - app/src/main/res/raw/mapnik.zip
+
+  - versionName: 2.13.1
+    versionCode: 151
+    commit: 866deafbfc15bbaa2e5addcb102bd1f83a524a8e
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/gms/d' -e '/getTracker() {/,/^    }/d' -e '/getTracker/d' -e '/setExceptionHandler()
+        {/,/^    }/d' -e '/setExceptionHandler/d' -e '/GoogleAnalytics/d' -e '/mTracker/d'
+        -e '/sendEvent/,/^    }/s/^        .*//' -e '/sendScreen/,/^    }/s/^        .*//'
+        src/main/java/com/nextgis/mobile/MainApplication.java
+      - sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+    scanignore:
+      - app/src/main/res/raw/mapnik.zip
+
+AutoUpdateMode: None
+UpdateCheckMode: RepoManifest
+CurrentVersion: 2.13.1
+CurrentVersionCode: 151

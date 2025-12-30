@@ -1,0 +1,926 @@
+Categories:
+  - Sports & Health
+  - Time
+License: MIT
+AuthorName: NaoX
+AuthorEmail: contact@naox.io
+WebSite: https://naox.io
+SourceCode: https://github.com/naoxio/inbreeze
+IssueTracker: https://github.com/naoxio/inbreeze/issues
+Translation: https://toolate.othing.xyz/projects/inner-breeze/
+Changelog: https://raw.githubusercontent.com/naoxio/inbreeze/HEAD/CHANGELOG.md
+Donate: https://coindrop.to/naox
+Liberapay: NaoX
+
+AutoName: Inner Breeze
+
+RepoType: git
+Repo: https://github.com/naoxio/inbreeze.git
+Binaries: https://github.com/naoxio/inbreeze/releases/download/%v/InnerBreeze.apk
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: 907921e90741a504797ee8c7cfc98cf98063826b
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.0.3
+    versionCode: 4
+    commit: e60d03ff97ff2e160a02bd55fb03d490363e8eff
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.0.4
+    versionCode: 5
+    commit: a3f1b71457d5f1cd0a8ef5cce64c613ca5763277
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.0.8
+    versionCode: 9
+    commit: 646dbbe7152f5aa93ba418d965dbd5caf89172b6
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.0.10
+    versionCode: 11
+    commit: 58f38896dadf145b3365427df1447f2ecbcacfdc
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.0.11
+    versionCode: 12
+    commit: c0bb97f790ee804464801eaf700ee59ed702fa95
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.0.12
+    versionCode: 13
+    commit: 4cbd3af02e30a82d55d9a803d9bb2c6e14e26588
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.1.2
+    versionCode: 16
+    commit: b1060c1ecd5fd5c6bb286f44cfafd2be694f8870
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.1.4
+    versionCode: 18
+    commit: 60422977eaf3f975501fef40f558a65e8adff617
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.2.1
+    versionCode: 20
+    commit: ffc9a5377cb4dedf8931043df700af73d0ec6cb3
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.2.2
+    versionCode: 21
+    commit: 1dd838ec58f684581b90eda345935ed219310e24
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.2.6
+    versionCode: 25
+    commit: 52e25735fdc0bc7552fc392ab885b95a3fc8a813
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inner_breeze/releases/download/%v/InnerBreeze.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.2.7
+    versionCode: 26
+    commit: 08e78267bf03231e9269240ffed402336d4c8d1b
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inner_breeze/releases/download/%v/InnerBreeze.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.2.8
+    versionCode: 27
+    commit: 618fa567129d239cc5b2e632be96c6d8701de03b
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inner_breeze/releases/download/%v/InnerBreeze.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.3.0
+    versionCode: 28
+    commit: c6adf23cfe76b97d591e99e0f411deddb3fc4395
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inner_breeze/releases/download/%v/InnerBreeze.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.3.1
+    versionCode: 29
+    commit: 7d46bbc8035163099235b77393ed05ce2bb75a54
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inner_breeze/releases/download/%v/InnerBreeze.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.3.3
+    versionCode: 31
+    commit: 20f092cd5ee663e3b9e63aa70feea10e965a90d6
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inner_breeze/releases/download/%v/InnerBreeze.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/runner/work/inner_breeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inner_breeze
+      - cd ..
+      - mv io.naox.inbe $repo/inner_breeze
+      - pushd $repo/inner_breeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/inner_breeze io.naox.inbe
+
+  - versionName: 1.3.4
+    versionCode: 32
+    commit: 23f03af7e9ccaff8fb4254c9b2e469e69aaec90e
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inbreeze/releases/download/%v/InnerBreeze.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - linux
+      - web
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2 | cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/inbreeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inbreeze
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+
+  - versionName: 1.3.6
+    versionCode: 34
+    commit: 3334ca9029be39ce95130e9bd70f8092bb09f5b1
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inbreeze/releases/download/%v/InnerBreeze.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - linux
+      - web
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2 | cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/inbreeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inbreeze
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+
+  - versionName: 1.3.8
+    versionCode: 36
+    commit: d77dc9fac2b291e18f739cf199f570770149e9ad
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inbreeze/releases/download/%v/InnerBreeze.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - linux
+      - web
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2 | cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/inbreeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inbreeze
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+
+  - versionName: 1.3.9
+    versionCode: 37
+    commit: f3e11436e08d9cfbbd6955f912758b3a385d6000
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inbreeze/releases/download/%v/InnerBreeze.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - linux
+      - web
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2 | cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/inbreeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inbreeze
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+
+  - versionName: 1.4.0
+    versionCode: 38
+    commit: cbe0b09789c76fe62bafbbbcac3ac5df1f99bcfd
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    binary: https://github.com/naoxio/inbreeze/releases/download/%v/InnerBreeze.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - linux
+      - web
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2 | cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/inbreeze
+      - mkdir -p $repo
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/inbreeze
+      - cd ..
+      - mv io.naox.inbe $repo/inbreeze
+      - pushd $repo/inbreeze
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+      - popd
+      - mv $repo/inbreeze io.naox.inbe
+
+AllowedAPKSigningKeys: e46142735e771143667aed150d5467a4e553165e45e0d4acfc21933e31b9e050
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.4.0
+CurrentVersionCode: 38

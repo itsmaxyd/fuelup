@@ -1,0 +1,1 @@
+Örökölt GPS-eszköz a Subsurface alkalmazáshoz. Használja az új alkalmazást!

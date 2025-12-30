@@ -1,0 +1,131 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Accesses APIs of Genius, OpenWeatherMap and DuckDuckGo
+Categories:
+  - Internet
+  - System
+License: GPL-3.0-only
+AuthorName: Stypox
+AuthorEmail: stypox@pm.me
+SourceCode: https://github.com/Stypox/dicio-android
+IssueTracker: https://github.com/Stypox/dicio-android/issues
+Translation: https://hosted.weblate.org/projects/dicio-android/
+Changelog: https://github.com/Stypox/dicio-android/releases
+
+AutoName: Dicio
+
+RepoType: git
+Repo: https://github.com/Stypox/dicio-android
+
+Builds:
+  - versionName: '0.8'
+    versionCode: 8
+    commit: a5598e98e7e707c553b8a7decf60378516acf8dc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.9'
+    versionCode: 9
+    commit: 617dad43368ba39b902d807b5e4e73d01651f76e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.10'
+    versionCode: 10
+    commit: 7d30e9853fd9fe3a96906e7efeb7cf773690a039
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.0'
+    versionCode: 11
+    commit: c9f8a4d652b7c5981a99ccc10c02f03d5f7b9c3a
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - checkouts/
+      - sentences-compiler-plugin/build/
+
+  - versionName: '1.1'
+    versionCode: 12
+    commit: b70d5d2cd15ce58237e9432280215d2270d54242
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - checkouts/
+      - sentences-compiler-plugin/build/
+
+  - versionName: '2.0'
+    versionCode: 13
+    commit: ed2ab74bcc522a5a3a8a8e150ef3f004cebbaf2d
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - checkouts/
+      - sentences-compiler-plugin/build/
+
+  - versionName: '3.1'
+    versionCode: 15
+    commit: 01b986c099d3130bba81978fd8fbc1ba84dc4f23
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    prebuild: gradle clean
+    scandelete:
+      - checkouts/
+      - sentences-compiler-plugin/build/
+    build: gradle assembleRelease || gradle assembleRelease
+
+  - versionName: '3.2'
+    versionCode: 16
+    commit: 54ff452ca42f3e9657360a3401ad43177d9c6989
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    prebuild: gradle clean
+    scandelete:
+      - checkouts/
+      - sentences-compiler-plugin/build/
+    build: gradle assembleRelease || gradle assembleRelease
+
+  - versionName: '4.0'
+    versionCode: 17
+    commit: 2429aa4b2596a9b122e51895e949155199046c6b
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|"gradle/|"../gradle/|' ../settings.gradle.kts
+      - sed -i -e 's/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+    scandelete:
+      - checkouts
+      - unicode-cldr-plugin
+      - sentences-compiler-plugin/build/
+    build: gradle assembleRelease || true
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags .*[0-9]$
+CurrentVersion: '4.0'
+CurrentVersionCode: 17

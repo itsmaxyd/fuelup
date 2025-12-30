@@ -1,0 +1,143 @@
+Categories:
+  - Sports & Health
+License: GPL-3.0-only
+AuthorName: Zoff
+SourceCode: https://github.com/zoff99/UnderEat
+IssueTracker: https://github.com/zoff99/UnderEat/issues
+
+AutoName: Under Eat
+
+RepoType: git
+Repo: https://github.com/zoff99/UnderEat
+
+Builds:
+  - versionName: 1.0.4
+    versionCode: 10004
+    commit: b1ae99a2e948157b6f028c62804a64e67afbaaa1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 10005
+    commit: 4403a4281fa5922eb032451dff468b37db7373e0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.7
+    versionCode: 10007
+    commit: a0772206c5c97bd888bb4b21dae4d2f558780baa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.8
+    versionCode: 10008
+    commit: cc10d83da2cfe40223f3900042e5daae90cd063c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.11
+    versionCode: 10011
+    commit: edc8a4537297fa49ede1f839ec74288c9e468688
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.12
+    versionCode: 10012
+    commit: 1eabbe9f6673528973cb623903b48c24810aafec
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.13
+    versionCode: 10013
+    commit: c7aa9a1b1fc95ca96f8c0dd4471fb15893047e54
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.14
+    versionCode: 10014
+    commit: 26cafa12c0a71dd0b7f8b1e2fbbc05095e0ac7a1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.15
+    versionCode: 10015
+    commit: be60fecdd9d236a0cf9efbb67e5dc3e101d42d23
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.16
+    versionCode: 10016
+    commit: f8146350e57f0ee073a7e1b5856db8462f898599
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.18
+    versionCode: 10018
+    commit: 0059bad369a63dc8cfd0594d700688accb78e17c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.19
+    versionCode: 10019
+    commit: 24fab94e284bf54ed4f5e997ec86b5ca77387f30
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.20
+    versionCode: 10020
+    commit: 218e542a10de09380da6bc3a89bf4b9ff3bde96f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.21
+    versionCode: 10021
+    commit: 05ca41e39ca1c99f286c2c8e01a3fbc0050e5191
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.22
+    versionCode: 10022
+    commit: 655254590ff471fb4928efefd3523949bfe7204b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.23
+    versionCode: 10023
+    commit: 5045c8e688f3f02666828ac82d1d8a69a236df64
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.24
+    versionCode: 10024
+    commit: a34d48b4798995d1dd9bccb77fdffee90f7462a8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.25
+    versionCode: 10025
+    commit: 6a27dee8ed1a6459f71ec021fe077628a130014e
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[0-9].*
+CurrentVersion: 1.0.25
+CurrentVersionCode: 10025

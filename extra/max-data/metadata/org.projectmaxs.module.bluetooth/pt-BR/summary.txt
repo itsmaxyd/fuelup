@@ -1,0 +1,1 @@
+Consulte o estado do adaptador Bluetooth por meio de MAXS

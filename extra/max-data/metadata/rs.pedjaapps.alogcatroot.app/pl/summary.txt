@@ -1,0 +1,1 @@
+Przeglądaj logi Android (logcat) oznaczone kolorami bezpośrednio z telefonu.

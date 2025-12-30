@@ -1,0 +1,375 @@
+Categories:
+  - Connectivity
+  - System
+License: AGPL-3.0-only
+AuthorName: UnifiedPush, S1m
+WebSite: https://unifiedpush.org/
+SourceCode: https://codeberg.org/NextPush/nextpush-android
+IssueTracker: https://codeberg.org/NextPush/nextpush-android/issues
+Changelog: https://codeberg.org/NextPush/nextpush-android/releases
+
+Name: NextPush
+AutoName: NextPush
+
+RepoType: git
+Repo: https://codeberg.org/NextPush/nextpush-android.git
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 6
+    commit: 1.0.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 7
+    commit: 02bb2c03180a5b0fd338556982814ccb1b1aaa78
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 8
+    commit: d6384c5d82aa55e4ed7c5598e852a9c1a6ff36e9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 9
+    commit: d6ef8adea5406f15373fabefb93f4189e29d7ab2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 10
+    commit: aa025da6b8c9712862cbfb046d2eb0a0a037260f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 11
+    commit: 667c6e989fdea2d6bcc456476ea6f47bb5015583
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 12
+    commit: 04e7d175f674a6db293e55bd97c689d29149183f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.2
+    versionCode: 13
+    commit: 1a5a5f6d58d0350f2f15f43fb23bbfcb9efab79a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.3
+    versionCode: 14
+    commit: 079c64716481590d10654946334748adf362771e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 15
+    commit: 08ac9e38bf7eb5c03fc2762f4f68d6265a667386
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 17
+    commit: 45c41e8e2aed6177920e6a785e4623b638278ea8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 18
+    commit: 76521cac7ff374a13aa1bd401cc8cec16beeeec6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 19
+    commit: 6ce18dfc03ce7bb3434cf2a265a84d376c0591f7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 20
+    commit: fd8bc838ffe415c11d0623f04d9644770c9ffe70
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 22
+    commit: 389aa33fbb3e145a0e225b706fc694e3ad5a4c4c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 23
+    commit: 120c44d203d44aa452c98eb2582039987cced8dd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 24
+    commit: ffe7878fc3a6916358990fea33eb7e82508bc6ff
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 25
+    commit: e15a6608ab924f227df7bd01d4bec97dcfea449b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 26
+    commit: e2c98f0e81ffff1b69e96b2751490d4a4085ede8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 27
+    commit: 08aca7b5bdbf67bca0284c7445a7d0d85db8fa1c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 28
+    commit: 48ad5f5edf0f34631906f32af3693fd86f860e46
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 29
+    commit: 6170f630d113f13a79225df698c3aa980a5d48fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 30
+    commit: 2582e4a7db91e4845d96915e39a32863eca058be
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@a926818e513c641cf5c0d58fb8498f1913da7a21
+    prebuild: sed -i -e 's/codeberg.org.*"/maven.google.com"/' ../settings.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+  - versionName: 2.0.1
+    versionCode: 31
+    commit: 80dd1f7cc3777f0a5e31b852900c6f74b6e753ad
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@a926818e513c641cf5c0d58fb8498f1913da7a21
+    prebuild: sed -i -e 's/codeberg.org.*"/maven.google.com"/' ../settings.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+  - versionName: 2.1.1
+    versionCode: 33
+    commit: cd576e083eec63449eb148e9cad60d32616831be
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@a926818e513c641cf5c0d58fb8498f1913da7a21
+    prebuild: sed -i -e 's/codeberg.org.*"/maven.google.com"/' ../settings.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+  - versionName: 2.1.3
+    versionCode: 35
+    commit: c03763a4f98532def33c44cb11885c4cffc1ac49
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@a926818e513c641cf5c0d58fb8498f1913da7a21
+    prebuild: sed -i -e 's/codeberg.org.*"/maven.google.com"/' ../settings.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+  - versionName: 2.1.4
+    versionCode: 36
+    commit: df638bf92e27e1f13ee294104a9505b1453bff3a
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@a926818e513c641cf5c0d58fb8498f1913da7a21
+    prebuild: sed -i -e 's/codeberg.org.*"/maven.google.com"/' ../settings.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+  - versionName: 2.1.5
+    versionCode: 37
+    commit: d703094e33bc6b721030e393c55406e170676026
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@a926818e513c641cf5c0d58fb8498f1913da7a21
+    prebuild: sed -i -e 's/codeberg.org.*"/maven.google.com"/' ../settings.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+  - versionName: 2.1.6
+    versionCode: 38
+    commit: ac8d79bf16cd7684b796ac21bb8a305fa1c1bc3c
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@a926818e513c641cf5c0d58fb8498f1913da7a21
+    prebuild: sed -i -e 's/codeberg.org.*"/maven.google.com"/' ../settings.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+  - versionName: 2.2.0
+    versionCode: 39
+    commit: 519b95ed2675056570c1b9f39dec32d13325dd95
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@a926818e513c641cf5c0d58fb8498f1913da7a21
+    prebuild: sed -i -e 's/codeberg.org.*"/maven.google.com"/' ../settings.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+  - versionName: 2.3.3
+    versionCode: 43
+    commit: 31fda413e0d781aa932ce9e035f3d86bd1891a62
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@32092418b1a782cd1b5fbc4dfc6311a7ef3a0924
+    prebuild:
+      - sed -i -e 's/codeberg.org.*"/maven.google.com"/' -e '/repositories {/a mavenLocal()'
+        ../settings.gradle.kts
+      - sed -i -e 's/8.13.0/8.11.1/' ../gradle/libs.versions.toml ../buildSrc/build.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+  - versionName: 2.3.4
+    versionCode: 44
+    commit: 7af19c60f88746877210db40e7c6e1c4b9bacb5e
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - p1gp1g-okhttp@32092418b1a782cd1b5fbc4dfc6311a7ef3a0924
+    prebuild:
+      - sed -i -e 's/codeberg.org.*"/maven.google.com"/' -e '/repositories {/a mavenLocal()'
+        ../settings.gradle.kts
+      - sed -i -e 's/8.13.0/8.11.1/' ../gradle/libs.versions.toml ../buildSrc/build.gradle.kts
+    build:
+      - cd $$p1gp1g-okhttp$$/okhttp-sse
+      - gradle publishToMavenLocal
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[\d.]+$
+CurrentVersion: 2.3.4
+CurrentVersionCode: 44

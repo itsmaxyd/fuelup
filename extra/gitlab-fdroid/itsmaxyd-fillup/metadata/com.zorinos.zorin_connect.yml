@@ -1,0 +1,120 @@
+Categories:
+  - File Transfer
+  - System
+License: GPL-2.0-only
+WebSite: https://zorinos.com
+SourceCode: https://github.com/ZorinOS/zorin-connect-android
+IssueTracker: https://github.com/ZorinOS/zorin-connect-android/issues
+
+AutoName: Zorin Connect
+Description: |-
+  Zorin Connect provides several features to integrate your phone and your computer:
+
+  * Sync your phone notifications with your computer
+  * Browse photos from your phone
+  * Reply to SMS messages
+  * Share files and links between devices
+  * Use your phone as a remote control for your computer
+
+  The app seamlessly connects your computer and your mobile device over your local network, securely with RSA encryption.
+
+  Please note you will need to have Zorin OS 15 installed and have enabled Zorin Connect on your computer for this app to work.
+
+RepoType: git
+Repo: https://github.com/ZorinOS/zorin-connect-android
+
+Builds:
+  - versionName: 1.12.6
+    versionCode: 11260
+    commit: 1.12.6
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.12.7
+    versionCode: 11270
+    commit: 1.12.7
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.13.5
+    versionCode: 11350
+    commit: 1.13.5
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.14.2
+    versionCode: 11422
+    commit: 1.14.2
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.17.0
+    versionCode: 11700
+    commit: '1.17'
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.19.1
+    versionCode: 11910
+    commit: 1a87018f253fad66a52a6a6a73e65c83683fad0b
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.22.3
+    versionCode: 12203
+    commit: 6a3ed3247a4a74d95da1d887008c28e68633f992
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.23.2
+    versionCode: 12302
+    commit: 1f90df45f8b4166dbf5643d8b87762e44862a2a2
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.32.9
+    versionCode: 13209
+    commit: 4328e151150c1aef0e82d9dc4f14e932639ae888
+    gradle:
+      - yes
+
+  - versionName: 1.32.11
+    versionCode: 13211
+    commit: 444a3619211485a18c7517c161a03793c25fc10d
+    gradle:
+      - yes
+
+  - versionName: 1.33.1
+    versionCode: 13301
+    commit: e896801fd53ae505b5aa83c568c1dc9f0f32d1cd
+    gradle:
+      - yes
+
+  - versionName: 1.33.2
+    versionCode: 13302
+    commit: 3c57d15ac4ff68a61a4cbb7fdb9dfbabcac066df
+    gradle:
+      - yes
+
+  - versionName: 1.33.4
+    versionCode: 13304
+    commit: de6dc413684d7a1fed81700a1b7c0423cf3697cb
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.33.4
+CurrentVersionCode: 13304

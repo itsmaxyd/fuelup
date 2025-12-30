@@ -1,0 +1,146 @@
+Categories:
+  - Finance Manager
+  - Money
+License: GPL-3.0-only
+SourceCode: https://github.com/AndreAle94/moneywallet
+IssueTracker: https://github.com/AndreAle94/moneywallet/issues
+Changelog: https://github.com/AndreAle94/moneywallet/releases
+Donate: https://www.paypal.me/andreale94
+Bitcoin: 1J3APoaFT2jcqRzpb8bEt2rwUn3mDpWE5U
+Litecoin: LZW1AUMWN4BdUvSu8fujEYVLgqWH2HsLZs
+
+AutoName: MoneyWallet
+Description: |-
+  MoneyWallet is an advanced expense manager that allows you to track your
+  expenses and plan budgets. You can organize your data using custom
+  categories, events, places and people tags. The user interface is in
+  material design, clear, simple and extremely customizable. It fits on all
+  devices. It's simply your best expense manager.
+
+RepoType: git
+Repo: https://github.com/AndreAle94/moneywallet
+
+Builds:
+  - versionName: 4.0.2-floss
+    versionCode: 55
+    commit: v4.0.2.1
+    subdir: app
+    gradle:
+      - floss
+
+  - versionName: 4.0.3.6
+    versionCode: 62
+    commit: v4.0.3.6
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.4
+    versionCode: 63
+    commit: v4.0.4
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.4.1
+    versionCode: 64
+    commit: v4.0.4.1
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5
+    versionCode: 65
+    commit: v4.0.5
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.1
+    versionCode: 66
+    commit: v4.0.5.1
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.2
+    versionCode: 67
+    commit: v4.0.5.2
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.3
+    versionCode: 68
+    commit: v4.0.5.3
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.4
+    versionCode: 69
+    commit: v4.0.5.4
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.5
+    versionCode: 70
+    commit: v4.0.5.5
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.6
+    versionCode: 71
+    commit: v4.0.5.6
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.7
+    versionCode: 72
+    commit: v4.0.5.7
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.8
+    versionCode: 73
+    commit: v4.0.5.8
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.9
+    versionCode: 74
+    commit: v4.0.5.9
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+  - versionName: 4.0.5.10
+    versionCode: 75
+    commit: 071be04b63359f061138ae57af15a4d0d04d3627
+    subdir: app
+    gradle:
+      - floss
+      - osm
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 4.0.5.10
+CurrentVersionCode: 75

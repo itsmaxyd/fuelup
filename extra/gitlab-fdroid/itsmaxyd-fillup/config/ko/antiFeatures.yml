@@ -1,0 +1,32 @@
+Ads:
+  description: 이 앱에는 광고를 포함합니다
+  name: 광고
+DisabledAlgorithm:
+  description: 이 앱은 약한 보안 서명이 있습니다
+  name: 안전하지 않은 알고리즘으로 서명됨
+KnownVuln:
+  description: 이 앱은 알려진 보안 취약점을 포함합니다
+  name: 알려진 취약점
+NoSourceSince:
+  name: 소스 코드는 더 이상 사용 가능하지 않으며, 업데이트 가능성은 없습니다.
+NonFreeAdd:
+  description: 이 앱은 자유롭지 않은 부가 기능을 권장하고 있습니다
+  name: 비자유 애드온
+NonFreeAssets:
+  description: 이 앱은 자유롭지 않은 에셋을 포함합니다
+  name: 비자유 에셋
+NonFreeDep:
+  description: 이 앱은 다른 자유롭지 않은 앱에 의존합니다
+  name: 비자유 의존사항
+NonFreeNet:
+  description: 이 앱은 자유롭지 않은 네트워크 서비스를 권장하고 있습니다
+  name: 비자유 네트워크 서비스
+Tracking:
+  description: 이 앱은 당신의 활동을 추적하여 보고합니다
+  name: 추적
+NSFW:
+  description: 이 앱은 공개된 장소에서 표시할 수 없는 콘텐츠를 포함하고 있습니다
+  name: NSFW
+TetheredNet:
+  description: 이 앱은 네트워크의 특정 인스턴스에 완전히 의존합니다
+  name: 테더링(핫스팟) 네트워크 서비스

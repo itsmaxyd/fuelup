@@ -1,0 +1,126 @@
+Categories:
+  - Games
+License: Apache-2.0
+AuthorName: msx80
+SourceCode: https://github.com/msx80/DoorsOfDoomOmicron
+IssueTracker: https://github.com/msx80/DoorsOfDoomOmicron/issues/
+Donate: https://www.paypal.com/paypalme/msx80
+
+AutoName: DoorsOfDoom
+
+RepoType: git
+Repo: https://github.com/msx80/DoorsOfDoomOmicron.git
+
+Builds:
+  - versionName: 0.0.4
+    versionCode: 1
+    commit: v0.0.4
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y maven
+      - apt-get install -y -t sid openjdk-8-jdk-headless
+      - update-java-alternatives --set java-1.8.0-openjdk-amd64
+    output: android-mvn/target/DoorsOfDoom.apk
+    prebuild: sdkmanager "build-tools;33.0.2" "platforms;android-26"
+    build:
+      - mvn -f doorsofdoom/pom.xml clean install
+      - mvn -f android-mvn/pom.xml clean install android:apk
+
+  - versionName: 0.0.5
+    versionCode: 2
+    commit: v0.0.5
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y maven
+      - apt-get install -y -t sid openjdk-8-jdk-headless
+      - update-java-alternatives --set java-1.8.0-openjdk-amd64
+    output: android-mvn/target/doorsofdoom.apk
+    prebuild: sdkmanager "build-tools;33.0.2" "platforms;android-26"
+    build:
+      - mvn -f doorsofdoom/pom.xml clean install
+      - mvn -f android-mvn/pom.xml -Dcartridge.artifactId=doorsofdoom -Dcartridge.groupId=com.github.msx80.omicron
+        -Dcartridge.version=$$VERSION$$ clean install android:apk
+
+  - versionName: 0.0.6
+    versionCode: 3
+    commit: 9f146694e6b404d52c652b358d46209bac99cc83
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y maven
+      - apt-get install -y -t sid openjdk-8-jdk-headless
+      - update-java-alternatives --set java-1.8.0-openjdk-amd64
+    output: android-mvn/target/doorsofdoom.apk
+    prebuild: sdkmanager "build-tools;33.0.2" "platforms;android-26"
+    build:
+      - mvn -f doorsofdoom/pom.xml clean install
+      - mvn -f android-mvn/pom.xml -Dcartridge.artifactId=doorsofdoom -Dcartridge.groupId=com.github.msx80.omicron
+        -Dcartridge.version=$$VERSION$$ clean install android:apk
+
+  - versionName: 0.0.7
+    versionCode: 7
+    commit: 44b070a05c2c96b5508391e1aa82055350085cea
+    subdir: Omicron/wrappers/android-wrapper/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager "build-tools;33.0.2" "platforms;android-26" "platforms;android-34"
+      - echo -e "\ncartridge.version=$$VERSION$$" >> ../gradle.properties
+      - cd ../../../..
+      - mvn -f doorsofdoom/pom.xml install
+    gradleprops:
+      - cartridge.artifactId=doorsofdoom
+      - cartridge.groupId=com.github.msx80.omicron
+      - omicron.version=0.0.12
+
+  - versionName: 0.0.8
+    versionCode: 8
+    commit: 7b2d7b54e6c732e3de1d66193b92aa22714eb9c5
+    subdir: Omicron/wrappers/android-wrapper/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager "build-tools;33.0.2" "platforms;android-26" "platforms;android-34"
+      - echo -e "\ncartridge.version=$$VERSION$$" >> ../gradle.properties
+      - cd ../../../..
+      - mvn -f doorsofdoom/pom.xml install
+    gradleprops:
+      - cartridge.artifactId=doorsofdoom
+      - cartridge.groupId=com.github.msx80.omicron
+      - omicron.version=0.0.12
+
+  - versionName: 0.0.9
+    versionCode: 9
+    commit: e00b3ada609ddd3486ae024478c08810031a157c
+    subdir: Omicron/wrappers/android-wrapper/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager "build-tools;33.0.2" "platforms;android-26" "platforms;android-34"
+      - echo -e "\ncartridge.version=$$VERSION$$" >> ../gradle.properties
+      - cd ../../../..
+      - mvn -f doorsofdoom/pom.xml install
+    gradleprops:
+      - cartridge.artifactId=doorsofdoom
+      - cartridge.groupId=com.github.msx80.omicron
+      - omicron.version=0.0.12
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: doorsofdoom/pom.xml|<version>\d+\.\d+\.(\d+)<\/version>||([\d.]+)
+CurrentVersion: 0.0.9
+CurrentVersionCode: 9

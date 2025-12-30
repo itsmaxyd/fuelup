@@ -1,0 +1,642 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Hacker News website, which is not libre.
+Categories:
+  - Forum
+  - Internet
+  - News
+  - Reading
+  - Writing
+License: MIT
+AuthorName: Mosc
+SourceCode: https://github.com/Mosc/Glider
+IssueTracker: https://github.com/Mosc/Glider/issues
+
+AutoName: Glider
+
+RepoType: git
+Repo: https://github.com/Mosc/Glider.git
+
+Builds:
+  - versionName: 1.6.2
+    versionCode: 22
+    commit: v1.6.2
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.2.0-10.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.7.0
+    versionCode: 23
+    commit: v1.7.0
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.2.0-10.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.7.1
+    versionCode: 24
+    commit: dcd44e045462fe019e48d56f6c812d0167845cc0
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.3.0-24.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.8.0
+    versionCode: 25
+    commit: 5caa09847ba1f34dc298fe0aa181f9518e33b6c2
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.3.0-24.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.9.0
+    versionCode: 26
+    commit: b25762175ac4c5b670fe1b61a81998913a7e5bcd
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.0-5.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.9.1
+    versionCode: 27
+    commit: 86acf16a9fdc13a19dc61188328ce2f2c06ecaec
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.0-5.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.9.2
+    versionCode: 28
+    commit: 3c887e4e79c699a3cb56a5bb10cd1d7464aec4a1
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.0-5.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.10.0
+    versionCode: 29
+    commit: 0f4773362574f373dd1368bc7d12b346d6173046
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.0-5.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.11.0
+    versionCode: 30
+    commit: 96f46ae49f63056464306c9e0c73e2e007ed191c
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.7.0-3.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --no-tree-shake-icons
+
+  - versionName: 1.12.0
+    versionCode: 31
+    commit: 0e9d667f80e0e705b30027b9d7ebe67931665e95
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.7.0-3.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --no-tree-shake-icons
+
+  - versionName: 1.13.0
+    versionCode: 32
+    commit: 09985680195348344d0b604264d2a53b98c64679
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.7.0-3.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --no-tree-shake-icons
+
+  - versionName: 1.14.0
+    versionCode: 33
+    commit: 71fb17e01bc28be2809af1580f7c76e87aaad527
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.11.0-0.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --no-tree-shake-icons
+
+  - versionName: 1.15.0
+    versionCode: 34
+    commit: b879ff5569274deab145c739535869011758217a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.11.0-0.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.16.1
+    versionCode: 36
+    commit: 2d95cb644ffbb0704ab1c330bef8c59c34043255
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.11.0-0.1.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.17.0
+    versionCode: 37
+    commit: 7da437dd37c153259655e3a43bc11c372df4aa89
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.0-0.0.pre
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.17.1
+    versionCode: 38
+    commit: cf6c86943bfb76e26711b5bd5390cb5bb6fa9418
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.18.1
+    versionCode: 40
+    commit: 0f8ca580429dbe9f42c2d17f4834a7cc33e8b250
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.4
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.0.0
+    versionCode: 41
+    commit: 6a509c93b69f87dcddb6f4caa3598fe738ab62ef
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - macos
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2|cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.1.0
+    versionCode: 42
+    commit: 82e5cba45890e1d867d2979c8361bae5d3dddcf3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - macos
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2|cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.2.0
+    versionCode: 43
+    commit: 68878ce665a06ba4cd97a0b0e1244de5b420add0
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - macos
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2|cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.3.0
+    versionCode: 44
+    commit: 33d537fd9cc4c253c44ef7ed648b8d48a6653281
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - macos
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2|cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.4.0
+    versionCode: 45
+    commit: 771467706cc8ed892d1feaf7600743890a7eda85
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - macos
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2|cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.5.0
+    versionCode: 46
+    commit: 1cc208463dad2b207d50479c1cbb65a477b808fa
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - macos
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2|cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.6.0
+    versionCode: 47
+    commit: b668481a43ad016e6db065aaec621ba5d4e1c0b6
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - macos
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2|cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.7.0
+    versionCode: 48
+    commit: 06784335c28dda81e6948ca1cc0fe87abe5e8996
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - macos
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2|cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.8.0
+    versionCode: 49
+    commit: 27902b733269787883c64b29f0b86fd38303a14a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - .github
+      - .vscode
+      - ios
+      - macos
+    prebuild:
+      - export version=$(grep flutter .fvmrc | cut -d ":" -f2|cut -d "\"" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v.*$
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 2.8.0
+CurrentVersionCode: 49

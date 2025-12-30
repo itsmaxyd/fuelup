@@ -1,0 +1,1 @@
+Hasilkan nada dering dari teks, bisa berbentuk kode Morse maupun suara

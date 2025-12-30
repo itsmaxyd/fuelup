@@ -1,0 +1,38 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-only
+WebSite: https://code.google.com/archive/p/androsens2/
+SourceCode: https://code.google.com/archive/p/androsens2/source
+Bitcoin: 1Dj4Xkz5KtsarmioEKuuZCBVjahr14dih4
+
+AutoName: Androsens 2
+Description: Fetch information from various kinds of sensors in your device.
+
+Builds:
+  - versionName: '1.92'
+    versionCode: 12
+    commit: fa13b5057ec919bbb2
+    srclibs:
+      - AChartEngine@r567
+    rm:
+      - libs/achart*
+    prebuild: echo 'source.dir=src;$$AChartEngine$$/src' >> project.properties
+
+  - versionName: '1.93'
+    versionCode: 13
+    commit: d89a451bbd54
+    srclibs:
+      - AChartEngine@r567
+    rm:
+      - libs/*
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild: echo 'source.dir=src;$$AChartEngine$$/src' >> project.properties
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.93'
+CurrentVersionCode: 13
+
+NoSourceSince: '1.93'

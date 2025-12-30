@@ -1,0 +1,77 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Internet
+  - System
+License: GPL-3.0-only
+AuthorName: Stypox
+AuthorEmail: stypox@pm.me
+SourceCode: https://github.com/Stypox/dicio-android
+IssueTracker: https://github.com/Stypox/dicio-android/issues
+Translation: https://hosted.weblate.org/projects/dicio-android/
+Changelog: https://github.com/Stypox/dicio-android/releases
+
+AutoName: Dicio
+
+RepoType: git
+Repo: https://github.com/Stypox/dicio-android
+
+Builds:
+  - versionName: '0.3'
+    versionCode: 3
+    commit: v0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.4'
+    versionCode: 4
+    commit: 264be05dfd2c67632f9dace53109a0ef77e84b65
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.5'
+    versionCode: 5
+    commit: f8ea970800eea279d5c40dd4501d2293a4b0645a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.6'
+    versionCode: 6
+    commit: b700ee5a9eebd24595ddead22f344514fc97393f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.7'
+    versionCode: 7
+    commit: 495261c742d6aaa981fa8089440e9306220ce715
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.8'
+    versionCode: 8
+    commit: c6a49e7d39f57bd57cf27566168a1878f2bb6fae
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: Placeholder
+    versionCode: 9
+    commit: 7912b4e73a0e3e9f4492abfb958c3c549436f59a
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: Placeholder
+CurrentVersionCode: 9

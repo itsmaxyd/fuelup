@@ -1,0 +1,108 @@
+Categories:
+  - System
+License: AGPL-3.0-only
+AuthorName: David Berdik
+AuthorEmail: berdikd@duq.edu
+SourceCode: https://github.com/DavidBerdik/Let-Me-Downgrade
+IssueTracker: https://github.com/DavidBerdik/Let-Me-Downgrade/issues
+
+AutoName: Let Me Downgrade
+
+RequiresRoot: true
+
+RepoType: git
+Repo: https://github.com/DavidBerdik/Let-Me-Downgrade.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: b78d7b9a14384d004fdbb058ad180b7ea48f8869
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.0
+    versionCode: 3
+    commit: 64b213f4b82b56d8759c2b288b86b278d708ccb1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 4
+    commit: c503f3cff105308148a4a18b05eeb5838a3a0a50
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 5
+    commit: 5b41dbba73bc8263a213d39098b67a183d32add1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 8
+    commit: f3e745cc837179f8d7a83efc5c5b17d583aa8801
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y -t sid openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/maven.pkg.github.com/d' ../libxposed/api/api/build.gradle.kts
+      ../libxposed/service/service/build.gradle.kts ../libxposed/service/interface/build.gradle.kts
+    build:
+      - pushd ../libxposed/api
+      - gradle publishToMavenLocal
+      - popd
+      - pushd ../libxposed/service
+      - gradle publishToMavenLocal
+      - popd
+
+  - versionName: 1.0.6
+    versionCode: 9
+    commit: 560217b061c26dd59d07be2641a192eacc7c7c88
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y -t sid openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/maven.pkg.github.com/d' ../libxposed/api/api/build.gradle.kts
+      ../libxposed/service/service/build.gradle.kts ../libxposed/service/interface/build.gradle.kts
+    build:
+      - pushd ../libxposed/api
+      - gradle publishToMavenLocal
+      - popd
+      - pushd ../libxposed/service
+      - gradle publishToMavenLocal
+      - popd
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.6
+CurrentVersionCode: 9

@@ -1,0 +1,34 @@
+Categories:
+  - Connectivity
+License: Apache-2.0
+AuthorName: Nicholas FitzRoy-Dale
+AuthorEmail: nicholas.github@fitzroydale.org
+AuthorWebSite: https://wzdd.lardcave.net/
+WebSite: https://code.lardcave.net/entries/2013/04/01/215058
+SourceCode: https://github.com/nfd/KeePassNFC
+IssueTracker: https://github.com/nfd/KeePassNFC/issues
+
+AutoName: KeePass NFC
+Description: |-
+  For use with https://f-droid.org/packages/com.android.keepass.
+
+  <i>KeePass NFC</i> lets you use a rewritable NFC tag to unlock your
+  KeePassDroid database. It includes the functionality to write the NFC tag
+  as well as to unlock KeePassDroid when reading the tag.
+
+RepoType: git
+Repo: https://github.com/nfd/KeePassNFC.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 661a6f7
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: v1.1
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.1'
+CurrentVersionCode: 2

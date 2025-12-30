@@ -1,0 +1,80 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: The app uses APIs from non-free services such as Spotify and Last.fm.
+Categories:
+  - Local Media Player
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Christians Martínez A.
+AuthorEmail: mardous.contact@gmail.com
+SourceCode: https://github.com/mardous/BoomingMusic
+IssueTracker: https://github.com/mardous/BoomingMusic/issues
+Translation: https://crowdin.com/project/booming-music
+Changelog: https://github.com/mardous/BoomingMusic/releases
+
+AutoName: Booming Music
+
+RepoType: git
+Repo: https://github.com/mardous/BoomingMusic.git
+Binaries: https://github.com/mardous/BoomingMusic/releases/download/v%v/BoomingMusic-%v-fdroid-release.apk
+
+Builds:
+  - versionName: 1.0.2
+    versionCode: 1020300
+    commit: 00e40e3ad571b74d9db910825366d6032d2ff17a
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' -e '/crashlytics/d' {.,..}/build.gradle.kts
+
+  - versionName: 1.0.3
+    versionCode: 1030300
+    commit: 323dce4cfc2da462963ec984834ee062aedaeb08
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' -e '/crashlytics/d' {.,..}/build.gradle.kts
+
+  - versionName: 1.0.4
+    versionCode: 1040300
+    commit: 8f5663fb031543c9eed6d782993b27cf8bb4c404
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' -e '/crashlytics/d' {.,..}/build.gradle.kts
+
+  - versionName: 1.1.0
+    versionCode: 1100300
+    commit: 72e19e9060a37fcfad5a183d7f6108520b720036
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' -e '/crashlytics/d' {.,..}/build.gradle.kts
+
+AllowedAPKSigningKeys: 971e4ea01b40120df023d00e72111325dcd802def7a1e5e5dbdd192f3c60d7d7
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]+$
+UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)||v(.*)
+CurrentVersion: 1.1.0
+CurrentVersionCode: 1100300

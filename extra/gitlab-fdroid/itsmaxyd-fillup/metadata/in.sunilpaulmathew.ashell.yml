@@ -1,0 +1,195 @@
+AntiFeatures:
+  NonFreeDep:
+    en-US: Depends on Shizuku for functionality
+Categories:
+  - System
+License: GPL-3.0-or-later
+AuthorName: sunilpaulmathew
+AuthorEmail: smartpack.org@gmail.com
+AuthorWebSite: https://smartpack.github.io/
+SourceCode: https://gitlab.com/sunilpaulmathew/ashell
+IssueTracker: https://gitlab.com/sunilpaulmathew/ashell/-/issues
+Changelog: https://gitlab.com/sunilpaulmathew/ashell/-/releases
+Donate: https://smartpack.github.io/donation/
+Liberapay: sunilpaulmathew
+
+AutoName: aShell
+
+RepoType: git
+Repo: https://gitlab.com/sunilpaulmathew/ashell.git
+
+Builds:
+  - versionName: v0.6
+    versionCode: 6
+    commit: v0.6
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/136cc7b1da6b68e59954732445bbc2d2/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.7
+    versionCode: 7
+    commit: 31e681a2c3f53f2eb3c8492149db54dd9e67f975
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/3a7e5df225aad4450bc37f36b4fdf81e/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.8
+    versionCode: 8
+    commit: 9981e33a037974ee39b1e4bd14defa2fb6e1d3c5
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/3e46fc1b0dd24514b85d9e8effd11478/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.9
+    versionCode: 9
+    commit: 1a4f900a274be5a9a515e8fda10c19bc3c964e3b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/4ad976d21f99ed6e9bc59c733a9cd95f/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.10
+    versionCode: 10
+    commit: 2049c9ed7f76bf8be2e8742550c03bdf18968fe7
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/9224c87f19fc8be22ad8b1238b5be93a/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.11
+    versionCode: 11
+    commit: 18fa1cefe27d753bd1ff88535865514a46992d26
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/f1e80c3ef187c0cadd630b266aa79279/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.12
+    versionCode: 12
+    commit: ff78038e5550c426ea715f020d43fe4ca850ca2f
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/09e6467a8af6744d95432d7e87546793/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.14
+    versionCode: 14
+    commit: bb8f2a1cf7c7c879a90246f1a4df071a0c47ab24
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/a47b484f8399e47d45c4cbc8ce7449a5/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.15
+    versionCode: 15
+    commit: 87f81f5ec958e3da6346d1d3a2008b00c210055b
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/66d613ade9f1f969cf1da8de6f2ecdcb/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.16
+    versionCode: 16
+    commit: c628704d0ccd2ffed93d17e91084b401574c388d
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    binary: https://gitlab.com/-/project/41295637/uploads/9e56707cba8737a5387d2587b7708d92/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@c08142d2cd256e7c0f3b7eebf1fad21ee307f9c3
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines build/outputs/apk/release/*.apk
+        'META-INF/services/*'
+
+  - versionName: v0.17
+    versionCode: 17
+    commit: bb46ce553418ba5cf8f2c1d8c0094e4b46aa9d17
+    subdir: app
+    gradle:
+      - yes
+    binary: https://gitlab.com/-/project/41295637/uploads/6a12f6df856c875eaa8896606036a225/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: v0.23
+    versionCode: 23
+    commit: 203baf383c4a696c8dcf332b8da7b8ccfc2c5c7b
+    subdir: app
+    gradle:
+      - yes
+    binary: https://gitlab.com/-/project/41295637/uploads/6ae8f118c85920cf5cef4bb71242592f/app-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+AllowedAPKSigningKeys: b427a24788ce5c44243284a64ff629c5bb72ac309356a1f1ee7d2413339fe424
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v0.23
+CurrentVersionCode: 23

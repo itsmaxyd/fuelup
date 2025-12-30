@@ -1,0 +1,59 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: glmark2
+SourceCode: https://github.com/glmark2/glmark2
+IssueTracker: https://github.com/glmark2/glmark2/issues
+
+AutoName: GLMark2
+
+RepoType: git
+Repo: https://github.com/glmark2/glmark2
+
+Builds:
+  - versionName: '2020.04'
+    versionCode: 1
+    commit: '2020.04'
+    subdir: android
+    output: glmark2.apk
+    prebuild: sed -i -e 's#android-16/android.jar#android-26/android.jar#' -e '/jarsigner/d'
+      build.sh
+    build:
+      - export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+      - ./build.sh
+    ndk: r18b
+
+  - versionName: '2023.01'
+    versionCode: 2
+    commit: 42e3d8fe3aa88743ef90348138f643f7b04a9237
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    output: glmark2.apk
+    prebuild:
+      - sdkmanager "platforms;android-26" "build-tools;35.0.0"
+      - sed -i -e 's/versionCode=.*/versionCode="$$VERCODE$$"/' -e '/targetSdkVersion/s/23/26/'
+        AndroidManifest.xml
+      - sed -i -e '/APP_BUILD_SCRIPT/a APP_CPPFLAGS += -fexceptions' jni/Application.mk
+    build:
+      - export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+      - $$NDK$$/build/ndk-build -j$(nproc)
+      - mkdir -p bin/lib obj
+      - cp -r libs/* bin/lib
+      - cp -r ../data bin/assets
+      - ANDROID_JAR=$ANDROID_SDK/platforms/android-26/android.jar
+      - BUILD_TOOLS=$ANDROID_SDK/build-tools/35.0.0
+      - $BUILD_TOOLS/aapt package -f -m -S res -J src -M AndroidManifest.xml -I $ANDROID_JAR
+      - javac -d ./obj -source 17 -target 17 -classpath $JAVA_HOME/jre/lib/rt.jar
+        -classpath $ANDROID_JAR:obj -sourcepath src src/org/linaro/glmark2/*.java
+      - $BUILD_TOOLS/d8 --output bin obj/org/linaro/glmark2/*.class
+      - $BUILD_TOOLS/aapt package -f -M AndroidManifest.xml -S res -I $ANDROID_JAR
+        -F glmark2-unaligned.apk bin
+      - $BUILD_TOOLS/zipalign -f 4 glmark2-unaligned.apk glmark2.apk
+    ndk: r23c
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '2023.01'
+CurrentVersionCode: 2

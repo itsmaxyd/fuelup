@@ -1,0 +1,2885 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: May use map data and API from non-free online services.
+Categories:
+  - Money
+License: MIT
+AuthorName: AgoraDesk
+AuthorEmail: support@agoradesk.freshdesk.com
+WebSite: https://agoradesk.com
+SourceCode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss
+IssueTracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues
+Changelog: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases
+
+AutoName: AgoraDesk
+
+RepoType: git
+Repo: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss.git
+
+Builds:
+  - versionName: 1.0.37
+    versionCode: 611
+    commit: 7a01b9b18b58be6e0cc11770187164acc4c60a52
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.37
+    versionCode: 612
+    commit: 7a01b9b18b58be6e0cc11770187164acc4c60a52
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.37
+    versionCode: 613
+    commit: 7a01b9b18b58be6e0cc11770187164acc4c60a52
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.40
+    versionCode: 641
+    commit: 95462a10ed663a1b49391c411d50246fa9d7c9a2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.40
+    versionCode: 642
+    commit: 95462a10ed663a1b49391c411d50246fa9d7c9a2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.40
+    versionCode: 643
+    commit: 95462a10ed663a1b49391c411d50246fa9d7c9a2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.41
+    versionCode: 651
+    commit: 82cb3f23ec7cc1e7c887532bb3725fd6de521c96
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.41
+    versionCode: 652
+    commit: 82cb3f23ec7cc1e7c887532bb3725fd6de521c96
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.41
+    versionCode: 653
+    commit: 82cb3f23ec7cc1e7c887532bb3725fd6de521c96
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.43
+    versionCode: 671
+    commit: c56803f860bf7da0b732c8e81b40b01c15d4328e
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.43
+    versionCode: 672
+    commit: c56803f860bf7da0b732c8e81b40b01c15d4328e
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.43
+    versionCode: 673
+    commit: c56803f860bf7da0b732c8e81b40b01c15d4328e
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.46
+    versionCode: 691
+    commit: 4ba0800b484df1e4fbd4345987932b11fa07f71f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.46
+    versionCode: 692
+    commit: 4ba0800b484df1e4fbd4345987932b11fa07f71f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.46
+    versionCode: 693
+    commit: 4ba0800b484df1e4fbd4345987932b11fa07f71f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.48
+    versionCode: 711
+    commit: 71e9936081ea041f0e29aa9f3500f2d740a68eb6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.48
+    versionCode: 712
+    commit: 71e9936081ea041f0e29aa9f3500f2d740a68eb6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.48
+    versionCode: 713
+    commit: 71e9936081ea041f0e29aa9f3500f2d740a68eb6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.49
+    versionCode: 721
+    commit: 9087d4b65daa38a3075f7cfcc85af393d43fa088
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.49
+    versionCode: 722
+    commit: 9087d4b65daa38a3075f7cfcc85af393d43fa088
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.49
+    versionCode: 723
+    commit: 9087d4b65daa38a3075f7cfcc85af393d43fa088
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.50
+    versionCode: 731
+    commit: e4cac23d1c56f065f1346219977d78ce8b71f6f6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.50
+    versionCode: 732
+    commit: e4cac23d1c56f065f1346219977d78ce8b71f6f6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.50
+    versionCode: 733
+    commit: e4cac23d1c56f065f1346219977d78ce8b71f6f6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.51
+    versionCode: 741
+    commit: 1b795e8fd301c818b78590a72c398e516b0f226a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.51
+    versionCode: 742
+    commit: 1b795e8fd301c818b78590a72c398e516b0f226a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.51
+    versionCode: 743
+    commit: 1b795e8fd301c818b78590a72c398e516b0f226a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.61
+    versionCode: 841
+    commit: ca7b87c22f655622f22e18fb448cdd58f6e86a40
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.61
+    versionCode: 842
+    commit: ca7b87c22f655622f22e18fb448cdd58f6e86a40
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.61
+    versionCode: 843
+    commit: ca7b87c22f655622f22e18fb448cdd58f6e86a40
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.63
+    versionCode: 861
+    commit: 9a8dc1b1ea78ee833fe75b29d5b1460a50ee1644
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.63
+    versionCode: 862
+    commit: 9a8dc1b1ea78ee833fe75b29d5b1460a50ee1644
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.63
+    versionCode: 863
+    commit: 9a8dc1b1ea78ee833fe75b29d5b1460a50ee1644
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.64
+    versionCode: 871
+    commit: 0f10a42db155e3bb15351f474668df12284074ba
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.64
+    versionCode: 872
+    commit: 0f10a42db155e3bb15351f474668df12284074ba
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.64
+    versionCode: 873
+    commit: 0f10a42db155e3bb15351f474668df12284074ba
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.65
+    versionCode: 881
+    commit: b162083b4c3ecfdd2a677ea270f77b79d927975e
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.65
+    versionCode: 882
+    commit: b162083b4c3ecfdd2a677ea270f77b79d927975e
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.65
+    versionCode: 883
+    commit: b162083b4c3ecfdd2a677ea270f77b79d927975e
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.66
+    versionCode: 891
+    commit: f55fc9e45217470ce3d1b02309e4b225eea7f425
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.66
+    versionCode: 892
+    commit: f55fc9e45217470ce3d1b02309e4b225eea7f425
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.66
+    versionCode: 893
+    commit: f55fc9e45217470ce3d1b02309e4b225eea7f425
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.67
+    versionCode: 901
+    commit: 80917e0c1146e384a5bf2a9b7b8bb03e08965ec2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.67
+    versionCode: 902
+    commit: 80917e0c1146e384a5bf2a9b7b8bb03e08965ec2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.67
+    versionCode: 903
+    commit: 80917e0c1146e384a5bf2a9b7b8bb03e08965ec2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.68
+    versionCode: 911
+    commit: 10de1159eec8659de1935bda03bf28ce90777bc2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.68
+    versionCode: 912
+    commit: 10de1159eec8659de1935bda03bf28ce90777bc2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.68
+    versionCode: 913
+    commit: 10de1159eec8659de1935bda03bf28ce90777bc2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.69
+    versionCode: 921
+    commit: 8fa97153e01c018ac0a5e27fd28e631271637e34
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.69
+    versionCode: 922
+    commit: 8fa97153e01c018ac0a5e27fd28e631271637e34
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.69
+    versionCode: 923
+    commit: 8fa97153e01c018ac0a5e27fd28e631271637e34
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.71
+    versionCode: 941
+    commit: 62ced2acd21307d726742b1177c5857ac19b2990
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.71
+    versionCode: 942
+    commit: 62ced2acd21307d726742b1177c5857ac19b2990
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.71
+    versionCode: 943
+    commit: 62ced2acd21307d726742b1177c5857ac19b2990
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.0
+    versionCode: 951
+    commit: b2874cc7fec7494d5ff011528f1494fb68f0e0b3
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.0
+    versionCode: 952
+    commit: b2874cc7fec7494d5ff011528f1494fb68f0e0b3
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.0
+    versionCode: 953
+    commit: b2874cc7fec7494d5ff011528f1494fb68f0e0b3
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.1
+    versionCode: 961
+    commit: de4f02a0a0f015575f73ab17e3a397c8361105e7
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.1
+    versionCode: 962
+    commit: de4f02a0a0f015575f73ab17e3a397c8361105e7
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.1
+    versionCode: 963
+    commit: de4f02a0a0f015575f73ab17e3a397c8361105e7
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+    build:
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.3
+    versionCode: 991
+    commit: a0b8850c75690761aabd778416dc4058f50f213a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.3
+    versionCode: 992
+    commit: a0b8850c75690761aabd778416dc4058f50f213a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.3
+    versionCode: 993
+    commit: a0b8850c75690761aabd778416dc4058f50f213a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.4
+    versionCode: 1001
+    commit: 5a85cd1e43f7f2bab3d0600717f0cf98089ec8c5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.4
+    versionCode: 1002
+    commit: 5a85cd1e43f7f2bab3d0600717f0cf98089ec8c5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.4
+    versionCode: 1003
+    commit: 5a85cd1e43f7f2bab3d0600717f0cf98089ec8c5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.5
+    versionCode: 1011
+    commit: f31042e65c6782aba957f08d63e28c261a3ea69c
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.5
+    versionCode: 1012
+    commit: f31042e65c6782aba957f08d63e28c261a3ea69c
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.5
+    versionCode: 1013
+    commit: f31042e65c6782aba957f08d63e28c261a3ea69c
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.6
+    versionCode: 1021
+    commit: 129df5895fbf9a891e6cb261f8620bc46b84351d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.6
+    versionCode: 1022
+    commit: 129df5895fbf9a891e6cb261f8620bc46b84351d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.6
+    versionCode: 1023
+    commit: 129df5895fbf9a891e6cb261f8620bc46b84351d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.7
+    versionCode: 1031
+    commit: 38b2f90323685971bb3618138af233b0a8ac1a85
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.7
+    versionCode: 1032
+    commit: 38b2f90323685971bb3618138af233b0a8ac1a85
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.7
+    versionCode: 1033
+    commit: 38b2f90323685971bb3618138af233b0a8ac1a85
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.8
+    versionCode: 1041
+    commit: 17dfcef4c45f78c62f421558ea729b1d93f088bb
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.8
+    versionCode: 1042
+    commit: 17dfcef4c45f78c62f421558ea729b1d93f088bb
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.8
+    versionCode: 1043
+    commit: 17dfcef4c45f78c62f421558ea729b1d93f088bb
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.9
+    versionCode: 1051
+    commit: b4531dc2f66b3bce99a1456e4f5a938a4864a50a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.9
+    versionCode: 1052
+    commit: b4531dc2f66b3bce99a1456e4f5a938a4864a50a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.9
+    versionCode: 1053
+    commit: b4531dc2f66b3bce99a1456e4f5a938a4864a50a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.10
+    versionCode: 1061
+    commit: 4ae05df952f57e717f7571a7cd015abdc8798ce6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.10
+    versionCode: 1062
+    commit: 4ae05df952f57e717f7571a7cd015abdc8798ce6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.10
+    versionCode: 1063
+    commit: 4ae05df952f57e717f7571a7cd015abdc8798ce6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.11
+    versionCode: 1071
+    commit: e70be7e12e525f30cbf51d381e8f7c805a7ec225
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.11
+    versionCode: 1072
+    commit: e70be7e12e525f30cbf51d381e8f7c805a7ec225
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.11
+    versionCode: 1073
+    commit: e70be7e12e525f30cbf51d381e8f7c805a7ec225
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.12
+    versionCode: 1081
+    commit: d26128abf2ec4bd2999449a2c17f8c3a64d3dc8b
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.12
+    versionCode: 1082
+    commit: d26128abf2ec4bd2999449a2c17f8c3a64d3dc8b
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.12
+    versionCode: 1083
+    commit: d26128abf2ec4bd2999449a2c17f8c3a64d3dc8b
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.13
+    versionCode: 1091
+    commit: a1c49bd23c51f2821a9a1eabad6ae774285199b5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.13
+    versionCode: 1092
+    commit: a1c49bd23c51f2821a9a1eabad6ae774285199b5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.13
+    versionCode: 1093
+    commit: a1c49bd23c51f2821a9a1eabad6ae774285199b5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.14
+    versionCode: 1101
+    commit: 1bdc67c49ed9ba0f8b5ed1429cb38f564fe29383
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.14
+    versionCode: 1102
+    commit: 1bdc67c49ed9ba0f8b5ed1429cb38f564fe29383
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.14
+    versionCode: 1103
+    commit: 1bdc67c49ed9ba0f8b5ed1429cb38f564fe29383
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.15
+    versionCode: 1111
+    commit: 9a406292b606cd99d7848f366bdce646001b371d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.15
+    versionCode: 1112
+    commit: 9a406292b606cd99d7848f366bdce646001b371d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.15
+    versionCode: 1113
+    commit: 9a406292b606cd99d7848f366bdce646001b371d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.16
+    versionCode: 1121
+    commit: a200365901678e15375c3de501d482950f1b835d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.16
+    versionCode: 1122
+    commit: a200365901678e15375c3de501d482950f1b835d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.16
+    versionCode: 1123
+    commit: a200365901678e15375c3de501d482950f1b835d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.17
+    versionCode: 1131
+    commit: e9e4292ffb9645ab1ddc963eb36f9130e960fb8f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.17
+    versionCode: 1132
+    commit: e9e4292ffb9645ab1ddc963eb36f9130e960fb8f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.17
+    versionCode: 1133
+    commit: e9e4292ffb9645ab1ddc963eb36f9130e960fb8f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.18
+    versionCode: 1141
+    commit: bbaa494991a2c18bd4988ce1c22a21d0676b10cc
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.18
+    versionCode: 1142
+    commit: bbaa494991a2c18bd4988ce1c22a21d0676b10cc
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.18
+    versionCode: 1143
+    commit: bbaa494991a2c18bd4988ce1c22a21d0676b10cc
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.20
+    versionCode: 1161
+    commit: 1dc1ed50088e6f9c9ee459bba8b0297d4d0013e5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.20
+    versionCode: 1162
+    commit: 1dc1ed50088e6f9c9ee459bba8b0297d4d0013e5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.20
+    versionCode: 1163
+    commit: 1dc1ed50088e6f9c9ee459bba8b0297d4d0013e5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.21
+    versionCode: 1181
+    commit: 9d2cd950a0663b41c416616e902abce4dd6952e2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.21
+    versionCode: 1182
+    commit: 9d2cd950a0663b41c416616e902abce4dd6952e2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.21
+    versionCode: 1183
+    commit: 9d2cd950a0663b41c416616e902abce4dd6952e2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.22
+    versionCode: 1191
+    commit: b62f697cb0dcef9ad99760dcb8e73b851ef33e44
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.22
+    versionCode: 1192
+    commit: b62f697cb0dcef9ad99760dcb8e73b851ef33e44
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.22
+    versionCode: 1193
+    commit: b62f697cb0dcef9ad99760dcb8e73b851ef33e44
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.24
+    versionCode: 1211
+    commit: 7696942d17365384bda366ea4860f681dc1c7e46
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.24
+    versionCode: 1212
+    commit: 7696942d17365384bda366ea4860f681dc1c7e46
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.24
+    versionCode: 1213
+    commit: 7696942d17365384bda366ea4860f681dc1c7e46
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.25
+    versionCode: 1221
+    commit: 82a742c56c2e92462e2937b5d5006c03f2221807
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.25
+    versionCode: 1222
+    commit: 82a742c56c2e92462e2937b5d5006c03f2221807
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.25
+    versionCode: 1223
+    commit: 82a742c56c2e92462e2937b5d5006c03f2221807
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.26
+    versionCode: 1231
+    commit: fba54f3fa08f9a6b84f4af01e34eb53316369dfa
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.26
+    versionCode: 1232
+    commit: fba54f3fa08f9a6b84f4af01e34eb53316369dfa
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.26
+    versionCode: 1233
+    commit: fba54f3fa08f9a6b84f4af01e34eb53316369dfa
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.29
+    versionCode: 1261
+    commit: 8970f1863b468191e481eebe11097d1ec8875f14
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.29
+    versionCode: 1262
+    commit: 8970f1863b468191e481eebe11097d1ec8875f14
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.29
+    versionCode: 1263
+    commit: 8970f1863b468191e481eebe11097d1ec8875f14
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.31
+    versionCode: 1291
+    commit: d66c0958f94b0771f8ffe8542a50fbc3c99fcd25
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.31
+    versionCode: 1292
+    commit: d66c0958f94b0771f8ffe8542a50fbc3c99fcd25
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.31
+    versionCode: 1293
+    commit: d66c0958f94b0771f8ffe8542a50fbc3c99fcd25
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.32
+    versionCode: 1301
+    commit: ff9310cab5c4d8fe99a41e0615d109a7bf94e9bd
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.32
+    versionCode: 1302
+    commit: ff9310cab5c4d8fe99a41e0615d109a7bf94e9bd
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.32
+    versionCode: 1303
+    commit: ff9310cab5c4d8fe99a41e0615d109a7bf94e9bd
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.34
+    versionCode: 1341
+    commit: 8b9879a4fe201e8bafb0c4b7b88044b35b636105
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.34
+    versionCode: 1342
+    commit: 8b9879a4fe201e8bafb0c4b7b88044b35b636105
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.34
+    versionCode: 1343
+    commit: 8b9879a4fe201e8bafb0c4b7b88044b35b636105
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.35
+    versionCode: 1351
+    commit: bbf18b9f593dfef60ac30808316bc58326470c27
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.35
+    versionCode: 1352
+    commit: bbf18b9f593dfef60ac30808316bc58326470c27
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.35
+    versionCode: 1353
+    commit: bbf18b9f593dfef60ac30808316bc58326470c27
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.38
+    versionCode: 1381
+    commit: 093fa172385a28b68eff61697687da36bb00a935
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.38
+    versionCode: 1382
+    commit: 093fa172385a28b68eff61697687da36bb00a935
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.38
+    versionCode: 1383
+    commit: 093fa172385a28b68eff61697687da36bb00a935
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.39
+    versionCode: 1391
+    commit: d4a98d7cbbca13e51f8131ca716a1cc8aec2fda0
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.39
+    versionCode: 1392
+    commit: d4a98d7cbbca13e51f8131ca716a1cc8aec2fda0
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.39
+    versionCode: 1393
+    commit: d4a98d7cbbca13e51f8131ca716a1cc8aec2fda0
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-agoradesk-release.apk
+    prebuild:
+      - sed -i -e '/ndk {/,/^        }/d' android/app/build.gradle
+      - sed -i -e 's/download.flutter.io/maven.google.com/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter packages pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - submodules/flutter/bin/flutter build apk --flavor agoradesk --dart-define=app.flavor=agoradesk
+        --dart-define=app.includeFcm=false --split-per-abi --target-platform="android-arm64"
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+VercodeOperation:
+  - '%c * 10 + 1'
+  - '%c * 10 + 2'
+  - '%c * 10 + 3'
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.1.39
+CurrentVersionCode: 1393

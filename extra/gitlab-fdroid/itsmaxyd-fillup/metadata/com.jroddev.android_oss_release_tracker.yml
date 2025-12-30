@@ -1,0 +1,35 @@
+Categories:
+  - System
+License: MIT
+AuthorName: jroddev
+SourceCode: https://github.com/jroddev/android-oss-release-tracker
+IssueTracker: https://github.com/jroddev/android-oss-release-tracker/issues
+Changelog: https://github.com/jroddev/android-oss-release-tracker/releases
+
+AutoName: OSS Tracker
+
+RepoType: git
+Repo: https://github.com/jroddev/android-oss-release-tracker
+Binaries: https://github.com/jroddev/android-oss-release-tracker/releases/download/%v/android-oss-release-tracker-release-v%v.apk
+
+Builds:
+  - versionName: 0.1.5
+    versionCode: 6
+    commit: 0.1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.7
+    versionCode: 8
+    commit: 52c0633a68f4d89dd6df2d4c0bbfbf9ff269d828
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: c28ca231c60a85a68c4065a4467a1c20d87dd571646900d89fa91219e261dd73
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.1.7
+CurrentVersionCode: 8

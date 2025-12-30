@@ -1,0 +1,191 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: App is tethered to the RSSHub service.
+Categories:
+  - News
+  - Reading
+License: MIT
+AuthorName: LeetaoGoooo
+AuthorEmail: leetao@email.cn
+SourceCode: https://github.com/LeetaoGoooo/RSSAid
+IssueTracker: https://github.com/LeetaoGoooo/RSSAid/issues
+Changelog: https://github.com/LeetaoGoooo/RSSAid/releases
+Donate: https://afdian.net/@leetao
+
+AutoName: rssaid
+
+RepoType: git
+Repo: https://github.com/LeetaoGoooo/RSSAid
+
+Builds:
+  - versionName: 1.6.4
+    versionCode: 3
+    commit: 0a204d516445043ca6d403e480147c748a07c688
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.0.1
+    rm:
+      - ios
+      - macos
+      - web
+      - screenshots
+    prebuild: sed -i -e '/^    _fetchRules();/d' lib/main.dart
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor=fdroid
+
+  - versionName: 1.6.5
+    versionCode: 4
+    commit: 99d69846963d8a1acdb17c1040ef8ba4577394cb
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - ios
+      - macos
+      - web
+      - screenshots
+    prebuild: sed -i -e '/^    _fetchRules();/d' lib/main.dart
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor=fdroid
+
+  - versionName: 2.0.3
+    versionCode: 7
+    commit: eb6d0bc257e86fcd6d74e81da61fbeb99a0bee89
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.22.2
+    rm:
+      - ios
+      - macos
+      - web
+      - screenshots
+    prebuild:
+      - sed -i -e '/^    _fetchRules();/d' lib/main.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor=fdroid
+
+  - versionName: 3.0.0
+    versionCode: 8
+    commit: 13612e6678a813da454e7cf5fadeadaa65b687c4
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.22.2
+    rm:
+      - ios
+      - macos
+      - web
+      - screenshots
+    prebuild:
+      - sed -i -e '/^    _fetchRules();/d' lib/main.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor=fdroid
+
+  - versionName: 3.0.1
+    versionCode: 11
+    commit: d9c5badd33e6b1dea38b5c74848a5b515ce4d3a5
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.22.2
+    rm:
+      - ios
+      - macos
+      - web
+      - screenshots
+    prebuild:
+      - sed -i -e '/^    _fetchRules();/d' lib/main.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor=fdroid
+
+  - versionName: 3.0.2
+    versionCode: 12
+    commit: 1d38a8bbe42ed22932dbb311757d1e8d6c8e1f27
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.22.2
+    rm:
+      - ios
+      - macos
+      - web
+      - screenshots
+    prebuild:
+      - sed -i -e '/^    _fetchRules();/d' lib/main.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor=fdroid
+
+  - versionName: 3.0.3
+    versionCode: 13
+    commit: 6204d05bfa829d320e62a782d85f9e1ea4793ced
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.22.2
+    rm:
+      - macos
+      - web
+      - screenshots
+    prebuild:
+      - sed -i -e '/^    _fetchRules();/d' lib/main.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor=fdroid
+
+  - versionName: 3.0.4
+    versionCode: 14
+    commit: 588de309c9278ebd73f59558570d2aa399cb8099
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.22.2
+    rm:
+      - macos
+      - web
+      - screenshots
+    prebuild:
+      - sed -i -e '/^    _fetchRules();/d' lib/main.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor=fdroid
+
+MaintainerNotes: RSSHub itself is MIT licensed (https://github.com/DIYgod/RSSHub).
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 3.0.4
+CurrentVersionCode: 14

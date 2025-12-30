@@ -1,0 +1,752 @@
+Categories:
+  - Connectivity
+  - Internet
+  - Messaging
+  - Security
+License: GPL-3.0-or-later
+WebSite: https://briarproject.org/
+SourceCode: https://code.briarproject.org/briar/briar
+IssueTracker: https://code.briarproject.org/briar/briar/issues
+Translation: https://www.transifex.com/otf/briar/
+Changelog: https://code.briarproject.org/briar/briar/wikis/changelog
+Liberapay: Briar
+Bitcoin: 1NZCKkUCtJV2U2Y9hDb9uq8S7ksFCFGR6K
+
+AutoName: Briar
+Description: |-
+  Briar is a messaging app designed for activists, journalists, and anyone else who needs a safe, easy and robust way to communicate.
+
+  Unlike traditional messaging apps, Briar doesn't rely on a central server - messages are synchronized directly between the users' devices.
+
+  If the Internet's down, Briar can sync via Bluetooth or Wi-Fi, keeping the information flowing in a crisis. If the Internet's up, Briar can sync via the Tor network, protecting users and their relationships from surveillance.
+
+  You can link Briar with a device running Briar Mailbox (even on Android: https://f-droid.org/packages/org.briarproject.mailbox/) to receive encrypted messages from your contacts while Briar is offline.
+
+RepoType: git
+Repo: https://code.briarproject.org/briar/briar.git
+Binaries: https://briarproject.org/apk/briar-%v.apk
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 10001
+    commit: release-1.0.1
+    subdir: briar-android
+    sudo:
+      - sed -i s@"en_GB:en"@"en_GB.UTF-8"@ /etc/default/locale
+      - export LANGUAGE="en_GB.UTF-8"
+    gradle:
+      - yes
+    rm:
+      - bramble-j2se
+
+  - versionName: 1.1.5
+    versionCode: 10105
+    commit: release-1.1.5
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y disorderfs
+    init:
+      - cd ../..
+      - mv org.briarproject.briar.android org.briarproject.briar.android.build
+      - mkdir org.briarproject.briar.android
+      - disorderfs --sort-dirents=yes --reverse-dirents=no org.briarproject.briar.android.build
+        org.briarproject.briar.android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+
+  - versionName: 1.1.6
+    versionCode: 10106
+    commit: release-1.1.6
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y disorderfs
+    init:
+      - cd ../..
+      - mv org.briarproject.briar.android org.briarproject.briar.android.build
+      - mkdir org.briarproject.briar.android
+      - disorderfs --sort-dirents=yes --reverse-dirents=no org.briarproject.briar.android.build
+        org.briarproject.briar.android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+
+  - versionName: 1.2.5
+    versionCode: 10205
+    commit: release-1.2.5
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+
+  - versionName: 1.2.7
+    versionCode: 10207
+    commit: release-1.2.7
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+
+  - versionName: 1.2.10
+    versionCode: 10210
+    commit: release-1.2.10
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild: sed -i -e '/witness/d' ../*/build.gradle
+
+  - versionName: 1.2.16
+    versionCode: 10216
+    commit: release-1.2.16
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.2.18
+    versionCode: 10218
+    commit: release-1.2.18
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.2.20
+    versionCode: 10220
+    commit: release-1.2.20
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.3.4
+    versionCode: 10304
+    commit: release-1.3.4
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.3.5
+    versionCode: 10305
+    commit: 00407539d32147995ffb184ff77ab7c9c53c9920
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.3.6
+    versionCode: 10306
+    commit: 445ef0818cb80a4b7e4c1f4370293b0f869c2ece
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.3.8
+    versionCode: 10308
+    commit: 807677532c084a83c9e5943fa550fc7a906dc1df
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.1
+    versionCode: 10401
+    commit: 6517f3f2d0435af3d3dc8468557e1a969ff16494
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.3
+    versionCode: 10403
+    commit: e032e0ccd5c42a2d9410997c9ccc359d4ee88eb3
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.4
+    versionCode: 10404
+    commit: 36670a8bf6bf056cfe8b749f982f9a4c05b05023
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.5
+    versionCode: 10405
+    commit: 4df523aaf8fc1961388e7b3580be2612dd1d074d
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.6
+    versionCode: 10406
+    commit: d5e17c8201ee9f4a4fa1a5cd5fed99ef142630bf
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.7
+    versionCode: 10407
+    commit: 7536f16c6136ebd5700a0f0ad49441050cf60096
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.8
+    versionCode: 10408
+    commit: 6e61827fe6fd3bad25cbb0c7235b1ab80cc31968
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.9
+    versionCode: 10409
+    commit: 592daf9c20be96db6bc82bac1822d2b5ebf0e12c
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.10
+    versionCode: 10410
+    commit: a5563ead28ea0368463c74a2b0f74938f8dbeca6
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.11
+    versionCode: 10411
+    commit: 2aa39e43ef427ecf47a3e9e7a3e82884a354e56a
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.12
+    versionCode: 10412
+    commit: 559138c5b673d43660e5931c353ead440e5d28a0
+    subdir: briar-android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.15
+    versionCode: 10415
+    commit: 87df641b5df212504a1f598f60e3f9da3e7148df
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.17
+    versionCode: 10417
+    commit: c855967d56c53d2c5e0ba5d28b6357d521c90e61
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.18
+    versionCode: 10418
+    commit: 47971517cdb52f6714ae90f3e3f285b939aec386
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.19
+    versionCode: 10419
+    commit: 4a4147b5634158964bb0577e91cfaf79c97f602c
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.20
+    versionCode: 10420
+    commit: 6b20b036982430c8069790382a159c66a27f22b0
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.22
+    versionCode: 10422
+    commit: f02bbebf6c9eb0f45ebaeccaff85d585435c0c61
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.4.23
+    versionCode: 10423
+    commit: 070165f60884b7bd954132f12cf6273ab88be166
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.1
+    versionCode: 10501
+    commit: 624f11a61fb07e7dd8be7910ef253dcc264fbb60
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.3
+    versionCode: 10503
+    commit: 1f1a97f62dba937eae980e4beeb065d17a5df3ac
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.4
+    versionCode: 10504
+    commit: 7d761710e66c7e1ac1a156159d365cdf4dd1b1e0
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.6
+    versionCode: 10506
+    commit: b68d24dca5c17fd9beb2bf4e90f151dfeb14ef99
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.7
+    versionCode: 10507
+    commit: 6ae601e39588b47f157799c2e5a813786b56c3d8
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.8
+    versionCode: 10508
+    commit: 1752bca2ae0a7e94aa6dbef25fc793cbbe00fb36
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.9
+    versionCode: 10509
+    commit: f16875c6025701498ef8a1a988be8dd86dba7c38
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.10
+    versionCode: 10510
+    commit: fe6ce2fe6728ba7506ed535ad1b74109f2c57ae8
+    subdir: briar-android
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.11
+    versionCode: 10511
+    commit: 8a8c6256a5fa71701dd81f740adbd4125d16c049
+    subdir: briar-android
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.12
+    versionCode: 10512
+    commit: 2af1e5c421f75068f30b1bb5b0f789b0623120a9
+    subdir: briar-android
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.13
+    versionCode: 10513
+    commit: 6e4052fa877b07d969db10533885a7eb13285f8f
+    subdir: briar-android
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.14
+    versionCode: 10514
+    commit: 1a603d52da68ab2e23891929089f0ee6e4721c6b
+    subdir: briar-android
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+  - versionName: 1.5.15
+    versionCode: 10515
+    commit: d3261a3f9ae122a6d8479c6915243e30c875d2c2
+    subdir: briar-android
+    gradle:
+      - official
+    rm:
+      - bramble-java
+      - briar-headless
+      - libs/gradle-witness.jar
+    prebuild:
+      - sed -i -e '/witness/d' ../*/build.gradle
+      - sed -i -e "/buildToolsVersion/apackagingOptions { doNotStrip '**/*.so' }"
+        build.gradle ../bramble-android/build.gradle
+
+AllowedAPKSigningKeys: 501ddf14a6ecf904fb20285c56a565cb987a867f91572ee33c2d43771cca4e37
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^release-
+CurrentVersion: 1.5.15
+CurrentVersionCode: 10515

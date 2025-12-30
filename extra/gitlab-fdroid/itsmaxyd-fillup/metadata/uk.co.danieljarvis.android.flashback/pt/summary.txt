@@ -1,0 +1,1 @@
+Quando alguém liga, mostra chamadas recentes e SMSs de/para a pessoa que ligou

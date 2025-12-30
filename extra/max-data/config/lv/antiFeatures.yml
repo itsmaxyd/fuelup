@@ -1,0 +1,33 @@
+Ads:
+  description: Lietotne satur reklāmu
+  name: Reklāmas
+DisabledAlgorithm:
+  description: Šai lietotnei ir vājš drošības paraksts
+  name: Parakstīta ar nedrošu algoritmu
+KnownVuln:
+  description: Šī lietotne satur zināmu drošības ievainojamību
+  name: Zināma ievainojamība
+NSFW:
+  description: Šajā lietotnē ir saturs, ko nevajadzētu visur publiskot vai rādīt
+  name: Nepiedienīgs saturs
+NoSourceSince:
+  name: Nav avota kopš
+  description: Pirmkods vairs nav pieejams, atjauninājumi nav iespējami
+NonFreeAdd:
+  description: Šī lietotne veicina nebrīvus papildinājumus
+  name: Nebrīvi papildinājumi
+NonFreeAssets:
+  description: Šī lietotne satur nebrīvus līdzekļus
+  name: Nebrīvi līdzekļi
+NonFreeDep:
+  description: Šī lietotne ir atkarīga no citām nebrīvām lietotnēm
+  name: Nebrīvas atkarības
+NonFreeNet:
+  description: Šī lietotne veicina vai ir pilnīgi atkarīga no tīkla pakalpojuma, kas izmanto nebrīvo programmatūru
+  name: Nebrīvi tīkla pakalpojumi
+Tracking:
+  description: Šī lietotne izseko darbības un ziņo par tām
+  name: Izsekošana
+TetheredNet:
+  name: Piesaistīti tīkla pakalpojumi
+  description: Šī lietotne ir pilnībā atkarīga no noteikta veida tīkla pakalpojuma

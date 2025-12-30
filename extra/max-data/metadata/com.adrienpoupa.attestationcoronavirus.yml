@@ -1,0 +1,51 @@
+Categories:
+  - Phone & SMS
+License: GPL-3.0-only
+AuthorName: Adrien Poupa
+AuthorEmail: adrien@poupa.fr
+WebSite: https://adrien.poupa.fr
+SourceCode: https://github.com/AdrienPoupa/AttestationCoronavirus
+IssueTracker: https://github.com/AdrienPoupa/AttestationCoronavirus/issues
+
+AutoName: Attestation Coronavirus
+Description: |-
+  This application moved to
+  https://f-droid.org/packages/com.poupa.attestationdeplacement
+
+RepoType: git
+Repo: https://github.com/AdrienPoupa/AttestationCoronavirus
+
+Builds:
+  - versionName: 0.0.3
+    versionCode: 3
+    commit: 0.0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.4
+    versionCode: 4
+    commit: 0.0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 6
+    commit: 1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 8
+    commit: 1.1.0
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.1.0
+CurrentVersionCode: 8

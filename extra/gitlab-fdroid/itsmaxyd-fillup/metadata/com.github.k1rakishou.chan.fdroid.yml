@@ -1,0 +1,569 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Image boards connected to are not libre.
+Categories:
+  - Internet
+License: GPL-3.0-only
+WebSite: https://github.com/K1rakishou/Kuroba-Experimental
+SourceCode: https://github.com/K1rakishou/Kuroba-Experimental
+IssueTracker: https://github.com/K1rakishou/Kuroba-Experimental/issues
+
+AutoName: Kuroba Experimental
+
+RepoType: git
+Repo: https://github.com/K1rakishou/Kuroba-Experimental.git
+
+Builds:
+  - versionName: v0.4.7
+    versionCode: 407
+    commit: v0.4.7-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.5.7
+    versionCode: 507
+    commit: v0.5.7-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.6.3
+    versionCode: 603
+    commit: v0.6.3-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.6.4
+    versionCode: 604
+    commit: v0.6.4-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.6.5
+    versionCode: 605
+    commit: v0.6.5-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.7.4
+    versionCode: 704
+    commit: v0.7.4-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.7.5
+    versionCode: 705
+    commit: v0.7.5-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.7.6
+    versionCode: 706
+    commit: v0.7.6-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.8.2
+    versionCode: 802
+    commit: v0.8.2-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.8.4
+    versionCode: 804
+    commit: v0.8.4-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.8.5
+    versionCode: 805
+    commit: v0.8.5-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.8.7
+    versionCode: 807
+    commit: v0.8.7-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.8.8
+    versionCode: 808
+    commit: v0.8.8-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.8.9
+    versionCode: 809
+    commit: v0.8.9-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.9.3
+    versionCode: 903
+    commit: v0.9.3-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.9.4
+    versionCode: 904
+    commit: v0.9.4-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.9.5
+    versionCode: 905
+    commit: v0.9.5-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.9.6
+    versionCode: 906
+    commit: v0.9.6-release
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.10.3
+    versionCode: 1003
+    commit: da106fc0dd4cf40e4f648dc8d159e0153f13e78e
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.10.4
+    versionCode: 1004
+    commit: cbc5fe1c8a34386575b51d2313768ce3a76abfe8
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.10.5
+    versionCode: 1005
+    commit: 15f38eae82f68bb4d96b81ca2b72f962f491b045
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.10.6
+    versionCode: 1006
+    commit: 0461c551ee17583385759589222812963e155b58
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.10.7
+    versionCode: 1007
+    commit: b71c7a4bbac6ba02f43677d5b4bc6739d3273e84
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.10.8
+    versionCode: 1008
+    commit: b1104601edeb448dcdb76e51e3662b5643baf100
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.11.2
+    versionCode: 1102
+    commit: 6f2075aef534a837f3e72c7f60cf3d6396e10697
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.11.3
+    versionCode: 1103
+    commit: 13073f3fae121fe51e5acd43de299af7dd7f2a70
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v0.11.5
+    versionCode: 1105
+    commit: 0ecad57f07d27a7ef3abcfde6db12584575f2f7a
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v0.12.6
+    versionCode: 1206
+    commit: 6626354aa01d1cf5d22c135ac4753394431502b9
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v0.12.8
+    versionCode: 1208
+    commit: 4b952d67a6fc57ac9ebaff7258246e4aa4d5aed8
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.0.3
+    versionCode: 10003
+    commit: 7bfb48f46a5c376b6921f1841bc69df0b53ed330
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.0.4
+    versionCode: 10004
+    commit: d7a87d4912f0c7bd2c03413f28fe724818290157
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.1.2
+    versionCode: 10102
+    commit: bc43467144f770368b72d8674521dfd3ef21ed93
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.1.3
+    versionCode: 10103
+    commit: 7c644b11883f5c056dee70401c941633ee6f1640
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.1.4
+    versionCode: 10104
+    commit: e9e1c19943ec045a5334a261b993b54f209eb2f0
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.1.5
+    versionCode: 10105
+    commit: 3c6f499f9daae350a1b0555ef7dacc14d8b0aee4
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.1.6
+    versionCode: 10106
+    commit: 273d60e3cd8a229ff974266b84228af28c93108c
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.2.2
+    versionCode: 10202
+    commit: c85aa5eef8a6f288fd9c2a2ef7345ba3c942e2be
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.2.3
+    versionCode: 10203
+    commit: 5d1268c8f4d65e6d2557c90c684ea2255553494a
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.2.4
+    versionCode: 10204
+    commit: 841914091e9ac02263629f826dac4aa3851d2d9c
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.4
+    versionCode: 10304
+    commit: e3f048645f1a2435fabc1c260d3c01eb013e74a0
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.6
+    versionCode: 10306
+    commit: d7a03ba38ddde2564482208bb2b2c366b290aac1
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.7
+    versionCode: 10307
+    commit: 76512d547eea3a4d00bd1b889348ea72f28cd599
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.8
+    versionCode: 10308
+    commit: b9e2dc5f81765fee035c74810f7025b3a3a1264c
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.9
+    versionCode: 10309
+    commit: 4830c8d3dd04fdf804586e6125b88ab5e6b504fd
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.10
+    versionCode: 10310
+    commit: ca374cedb9635cf00891b9a87cb5e0648259af5c
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.13
+    versionCode: 10313
+    commit: e02b858d0b006f29429d4539a7506230bd44b44b
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.14
+    versionCode: 10314
+    commit: c34e37a064bda481b534c586e6fbc58b38bc7714
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.15
+    versionCode: 10315
+    commit: 902ee874eabbad9f9ab6565397977f87df0fb353
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.18
+    versionCode: 10318
+    commit: e608382965bcc934e74e6eb6728c16c4f683628d
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.21
+    versionCode: 10321
+    commit: bcd1338e42182557bef17de67bf46fe446d46466
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.22
+    versionCode: 10322
+    commit: b35102ed9438920b6641663b3a0b6aeab0d956a4
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.23
+    versionCode: 10323
+    commit: 7a4023d2c4df05cb0af0a992c64de1f689e4b8d3
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.25
+    versionCode: 10325
+    commit: d232f3960452da76a53eaa47b57965da1f8014e9
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.26
+    versionCode: 10326
+    commit: d4b092fd07a563ee54e9e381140ca0e3a1dd650c
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.27
+    versionCode: 10327
+    commit: 4f950407b61581ed3ebd90eff64dc195b9cea10c
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.28
+    versionCode: 10328
+    commit: fb43f896ffc08b8441208c6700463a6bc787c891
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.29
+    versionCode: 10329
+    commit: 1cf77299e2d23bdb50a65c70ab03e1a1f7e8b7b9
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.30
+    versionCode: 10330
+    commit: 856595f09bd7e17ed580343bdafda39c64f97a22
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.31
+    versionCode: 10331
+    commit: cff300a722a2dd6b6313c3d79eb537c7fd8bccb6
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.33
+    versionCode: 10333
+    commit: 11f9cde1de7d10d7dd62f5a469dba81805c10ee7
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: v1.3.33
+CurrentVersionCode: 10333

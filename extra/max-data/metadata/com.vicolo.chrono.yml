@@ -1,0 +1,1589 @@
+Categories:
+  - Time
+License: GPL-3.0-or-later
+AuthorName: Vicolo
+AuthorEmail: ahsansarwar.as45@gmail.com
+SourceCode: https://github.com/vicolo-dev/chrono
+IssueTracker: https://github.com/vicolo-dev/chrono/issues
+Changelog: https://github.com/vicolo-dev/chrono/releases
+
+AutoName: Chrono
+
+RepoType: git
+Repo: https://github.com/vicolo-dev/chrono.git
+
+Builds:
+  - versionName: 0.3.4
+    versionCode: 111
+    commit: 5620438ad33952e4a5c6142ec5c8969080049afc
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.3.4
+    versionCode: 112
+    commit: 5620438ad33952e4a5c6142ec5c8969080049afc
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.3.4
+    versionCode: 113
+    commit: 5620438ad33952e4a5c6142ec5c8969080049afc
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.0-beta2
+    versionCode: 131
+    commit: a0c3a2bb88f32e2fb62b4ac8f61218f66ce99b70
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.0-beta2
+    versionCode: 132
+    commit: a0c3a2bb88f32e2fb62b4ac8f61218f66ce99b70
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.0-beta2
+    versionCode: 133
+    commit: a0c3a2bb88f32e2fb62b4ac8f61218f66ce99b70
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.0
+    versionCode: 161
+    commit: 3277f9ef2b1ef222dd632396044e708f09090f2b
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.0
+    versionCode: 162
+    commit: 3277f9ef2b1ef222dd632396044e708f09090f2b
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.0
+    versionCode: 163
+    commit: 3277f9ef2b1ef222dd632396044e708f09090f2b
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.1
+    versionCode: 171
+    commit: 5591222c04f04ff075ab4d9f95a88f604cfed464
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.1
+    versionCode: 172
+    commit: 5591222c04f04ff075ab4d9f95a88f604cfed464
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.1
+    versionCode: 173
+    commit: 5591222c04f04ff075ab4d9f95a88f604cfed464
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.2
+    versionCode: 181
+    commit: d6f36af21acdcdd50ead8602811518b0a5a2d51b
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.2
+    versionCode: 182
+    commit: d6f36af21acdcdd50ead8602811518b0a5a2d51b
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.2
+    versionCode: 183
+    commit: d6f36af21acdcdd50ead8602811518b0a5a2d51b
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.3
+    versionCode: 191
+    commit: 978ec95d93cd7ed05f67bc63ffd565d6610b4d91
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.3
+    versionCode: 192
+    commit: 978ec95d93cd7ed05f67bc63ffd565d6610b4d91
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.4.3
+    versionCode: 193
+    commit: 978ec95d93cd7ed05f67bc63ffd565d6610b4d91
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0-beta1
+    versionCode: 201
+    commit: f1cd8d0bfbe04eae76494dd5dff6bee504de4918
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0-beta1
+    versionCode: 202
+    commit: f1cd8d0bfbe04eae76494dd5dff6bee504de4918
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0-beta1
+    versionCode: 203
+    commit: f1cd8d0bfbe04eae76494dd5dff6bee504de4918
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0-beta2
+    versionCode: 211
+    commit: 139eedd85e6f4a03177c54e1cdb1624497be0c11
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0-beta2
+    versionCode: 212
+    commit: 139eedd85e6f4a03177c54e1cdb1624497be0c11
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0-beta2
+    versionCode: 213
+    commit: 139eedd85e6f4a03177c54e1cdb1624497be0c11
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0-beta3
+    versionCode: 221
+    commit: 862d15b43880b2a0716f121f5bbbbb0ef1e37dec
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0-beta3
+    versionCode: 222
+    commit: 862d15b43880b2a0716f121f5bbbbb0ef1e37dec
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0-beta3
+    versionCode: 223
+    commit: 862d15b43880b2a0716f121f5bbbbb0ef1e37dec
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0
+    versionCode: 231
+    commit: a1298ed3d9a25a4021061dc257cff8a49e8eca02
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0
+    versionCode: 232
+    commit: a1298ed3d9a25a4021061dc257cff8a49e8eca02
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.0
+    versionCode: 233
+    commit: a1298ed3d9a25a4021061dc257cff8a49e8eca02
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.1
+    versionCode: 241
+    commit: 49626d3a450642406fa2d93c6943417972a79abd
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.1
+    versionCode: 242
+    commit: 49626d3a450642406fa2d93c6943417972a79abd
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.5.1
+    versionCode: 243
+    commit: 49626d3a450642406fa2d93c6943417972a79abd
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.6.0-beta1
+    versionCode: 261
+    commit: 662c329d1e968fd2ac9348a6835116700c2b0ee3
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+      - transistor-background-fetch@44fa41067fa12a2417dd404b5fac567fb68013d3
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - sed -i -e 's/maven {.*}/mavenLocal()/' android/build.gradle
+      - sed -i -e '/maven {/,/^        }/cmavenLocal()' .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.6.0-beta1
+    versionCode: 262
+    commit: 662c329d1e968fd2ac9348a6835116700c2b0ee3
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+      - transistor-background-fetch@44fa41067fa12a2417dd404b5fac567fb68013d3
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - sed -i -e 's/maven {.*}/mavenLocal()/' android/build.gradle
+      - sed -i -e '/maven {/,/^        }/cmavenLocal()' .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.6.0-beta1
+    versionCode: 263
+    commit: 662c329d1e968fd2ac9348a6835116700c2b0ee3
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+      - transistor-background-fetch@44fa41067fa12a2417dd404b5fac567fb68013d3
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - sed -i -e 's/maven {.*}/mavenLocal()/' android/build.gradle
+      - sed -i -e '/maven {/,/^        }/cmavenLocal()' .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.6.0
+    versionCode: 281
+    commit: 69fdb1bedf829eed0f09cf57914c87e548655e73
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-armeabi-v7a.apk
+    srclibs:
+      - flutter@stable
+      - transistor-background-fetch@44fa41067fa12a2417dd404b5fac567fb68013d3
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - sed -i -e 's/maven {.*}/mavenLocal()/' android/build.gradle
+      - sed -i -e '/maven {/,/^        }/cmavenLocal()' .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.6.0
+    versionCode: 282
+    commit: 69fdb1bedf829eed0f09cf57914c87e548655e73
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-arm64-v8a.apk
+    srclibs:
+      - flutter@stable
+      - transistor-background-fetch@44fa41067fa12a2417dd404b5fac567fb68013d3
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - sed -i -e 's/maven {.*}/mavenLocal()/' android/build.gradle
+      - sed -i -e '/maven {/,/^        }/cmavenLocal()' .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+  - versionName: 0.6.0
+    versionCode: 283
+    commit: 69fdb1bedf829eed0f09cf57914c87e548655e73
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    binary: https://github.com/vicolo-dev/chrono/releases/download/v%v/chrono-v%v-x86_64.apk
+    srclibs:
+      - flutter@stable
+      - transistor-background-fetch@44fa41067fa12a2417dd404b5fac567fb68013d3
+    prebuild:
+      - version=$(sed -n -E 's/.*flutter-version:\ "(.*)"/\1/p' .github/workflows/android-release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export repo=/home/runner/work/chrono
+      - mkdir -p $repo
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - sed -i -e 's/maven {.*}/mavenLocal()/' android/build.gradle
+      - sed -i -e '/maven {/,/^        }/cmavenLocal()' .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/chrono
+      - cd ..
+      - mv com.vicolo.chrono $repo/chrono
+      - pushd $repo/chrono
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+      - popd
+      - mv $repo/chrono com.vicolo.chrono
+      - cd com.vicolo.chrono
+
+AllowedAPKSigningKeys: 67ee2965dffd6b509ed274a3c18d39f0e5d55ebba4a95dfc1e34879f437e7581
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ((?!alpha).)*$
+VercodeOperation:
+  - 10 * %c + 1
+  - 10 * %c + 2
+  - 10 * %c + 3
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 0.6.0
+CurrentVersionCode: 283

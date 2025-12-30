@@ -1,0 +1,53 @@
+Categories:
+  - Development
+  - Internet
+License: LGPL-3.0-only
+AuthorName: csicar
+SourceCode: https://github.com/csicar/Ning
+IssueTracker: https://github.com/csicar/Ning/issues
+
+AutoName: Ning
+
+RepoType: git
+Repo: https://github.com/csicar/Ning
+
+Builds:
+  - versionName: '1.2'
+    versionCode: 12
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.3
+    versionCode: 123
+    commit: v1.2.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.4
+    versionCode: 124
+    commit: v1.2.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 200
+    commit: v2.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 201
+    commit: fd313c301c5e7ea4e296dd896530e23c6362e2ac
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.0.1
+CurrentVersionCode: 201

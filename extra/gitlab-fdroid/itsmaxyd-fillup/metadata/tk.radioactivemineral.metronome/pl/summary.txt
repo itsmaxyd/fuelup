@@ -1,0 +1,1 @@
+Prosta aplikacja metronom z funkcją tap tempo i przywracania ustawień wstępnych

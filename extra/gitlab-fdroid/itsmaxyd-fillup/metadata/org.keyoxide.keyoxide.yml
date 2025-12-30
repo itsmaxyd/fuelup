@@ -1,0 +1,556 @@
+Categories:
+  - Security
+License: AGPL-3.0-or-later
+AuthorName: Berker Sen
+AuthorEmail: keyoxide@fastmail.com
+AuthorWebSite: http://berkersen.com
+WebSite: https://keyoxide.org
+SourceCode: https://codeberg.org/Berker/keyoxide-flutter
+IssueTracker: https://codeberg.org/Berker/keyoxide-flutter/issues
+Translation: https://translate.codeberg.org/projects/keyoxide
+Changelog: https://codeberg.org/Berker/keyoxide-flutter/src/branch/master/CHANGELOG.md
+Liberapay: Keyoxide
+
+AutoName: Keyoxide
+
+RepoType: git
+Repo: https://codeberg.org/Berker/keyoxide-flutter.git
+
+Builds:
+  - versionName: 1.0.4
+    versionCode: 104
+    commit: 1.0.4
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.3
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.1.0
+    versionCode: 110
+    commit: 9130a8fdbb673263fcce42fb0694516aa1ba103c
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.3
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.2.0
+    versionCode: 120
+    commit: 87b3f285b8b0f0963ff023117bba696a39c2911a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.2.2
+    versionCode: 122
+    commit: 79bf9d46cdcd2b0e273fe02a3e35d7e007895219
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.7
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.3.0
+    versionCode: 130
+    commit: e60ea08a81e84d0d029e40b64baaee6a4a591f93
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/packages/flutter_tools/gradle/flutter.gradle
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk
+
+  - versionName: 1.3.1
+    versionCode: 131
+    commit: 364b8562915ed0c8426d3a45cf2ce4965849c9f5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/packages/flutter_tools/gradle/flutter.gradle
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 1.3.2
+    versionCode: 132
+    commit: 5ac3ce94b106f92f33edff0b287a898eef2668cf
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/packages/flutter_tools/gradle/flutter.gradle
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 1.3.3
+    versionCode: 133
+    commit: 9ad6ab6741973b55c9381e1ee709c900cb724866
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/packages/flutter_tools/gradle/flutter.gradle
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 1.4.1
+    versionCode: 141
+    commit: aad05566f3af3da4d0e181175e7978b48125e0bb
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/packages/flutter_tools/gradle/flutter.gradle
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 1.4.2
+    versionCode: 142
+    commit: 4d10b3ceaf25b9587ff160825a72a99e60efad5d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/packages/flutter_tools/gradle/flutter.gradle
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production --dart-define=WEBLATE_TOKEN=wlp_FcppafiXcq66VOtW4WOasUS6qFhNFNwAyRe6
+        -t lib/app/flavors/main_production.dart
+
+  - versionName: 1.4.3
+    versionCode: 143
+    commit: 19faab3fc06f5c87af2eb610f257422f32a61202
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/packages/flutter_tools/gradle/flutter.gradle
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production --dart-define=WEBLATE_TOKEN=wlp_FcppafiXcq66VOtW4WOasUS6qFhNFNwAyRe6
+        -t lib/app/flavors/main_production.dart
+
+  - versionName: 1.5.0
+    versionCode: 150
+    commit: b0dcbefc71d99e5d85d46bf951feefa0a4f32d3c
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/packages/flutter_tools/gradle/flutter.gradle
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production --dart-define=WEBLATE_TOKEN=wlp_FcppafiXcq66VOtW4WOasUS6qFhNFNwAyRe6
+        -t lib/app/flavors/main_production.dart
+
+  - versionName: 1.5.1
+    versionCode: 151
+    commit: 84b518a33f23a5d8da54d9604d1abc10c30ac54c
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/packages/flutter_tools/gradle/flutter.gradle
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production --dart-define=WEBLATE_TOKEN=wlp_FcppafiXcq66VOtW4WOasUS6qFhNFNwAyRe6
+        -t lib/app/flavors/main_production.dart
+
+  - versionName: 1.6.0
+    versionCode: 160
+    commit: 5a998b61b738948d94b3d94c0c03f46bb2452001
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production --dart-define=WEBLATE_TOKEN=wlp_FcppafiXcq66VOtW4WOasUS6qFhNFNwAyRe6
+        -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.0.0
+    versionCode: 200
+    commit: 21e61ba6bc89f5d0bd1f2af9b2f393c5fbb93ac7
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.0.1
+    versionCode: 202
+    commit: 3540bd5add64154ed920fc4adcf93f80fc9b378a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.0.2
+    versionCode: 203
+    commit: b5383485e3d774bb4b711b3135d98cd3ed51986d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.0.3
+    versionCode: 204
+    commit: f6ecabea169c0e680c61da0c847bf3a181ff0924
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.1.0
+    versionCode: 206
+    commit: 47ab3dad95c218381c1f587b4627fdb138939cb7
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.1.1
+    versionCode: 207
+    commit: a3bfaea73e435fd2d42fc12e118bc91e459fcd28
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.2.1
+    versionCode: 211
+    commit: 838f0ffa2c7f5d7e94f9f6254b50fd7b67365458
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.3.0
+    versionCode: 212
+    commit: d79ee74e6b7daf4547d7edee23ecefb8a8d63e3e
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.3.1
+    versionCode: 213
+    commit: 895e4c22eda6293fbf5b78b7a9f9999c0771dd25
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.4.0
+    versionCode: 214
+    commit: f39df6122ebbe4137e7a87e4e149c80e40f24978
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.4.2
+    versionCode: 216
+    commit: 9a4e7d9d18cb134bda838c4a855fa1520a023ba2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+  - versionName: 2.4.3
+    versionCode: 219
+    commit: ff61a05eee00104737480cd92e60dc281ee8c2d1
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter build apk --flavor production -t lib/app/flavors/main_production.dart
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 2.4.3
+CurrentVersionCode: 219

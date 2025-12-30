@@ -1,0 +1,3 @@
+v1.0.70 Permite esconder a barra de ação Design Material;
+Melhorias ao colar texto;
+Correção no suporte a UTF-8.

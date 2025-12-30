@@ -1,0 +1,86 @@
+Categories:
+  - Sports & Health
+  - Time
+  - Workout
+License: MIT
+AuthorName: Matthew Nienow
+AuthorEmail: matt@randombits.dev
+AuthorWebSite: https://randombits.dev
+SourceCode: https://github.com/randombits-dev/interval-timer
+IssueTracker: https://github.com/randombits-dev/interval-timer/issues
+Changelog: https://github.com/randombits-dev/interval-timer/releases
+
+AutoName: Interval Timer
+
+RepoType: git
+Repo: https://github.com/randombits-dev/interval-timer.git
+Binaries: https://github.com/randombits-dev/interval-timer/releases/download/v%v/IntervalTimer-%v.apk
+
+Builds:
+  - versionName: 1.0.5
+    versionCode: 5
+    commit: v1.0.5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.7
+    versionCode: 7
+    commit: 5d38f3c5b3f7e2b3e7ec83481d595710f0ab33f4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.8
+    versionCode: 8
+    commit: 9916da8a47a00165fc2425ae6d5b197b1aa7e058
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 10
+    commit: 6f484bfa2c4705d5b6d99dd32c66e899cd87d768
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 11
+    commit: 19c7374268bd97af248557c241a06af083ad3b72
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 13
+    commit: 73bd689aa20e688a67e1bff1bcb3d3542b294b28
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 14
+    commit: b7cf63bd42f8248ce3d7524510499b7e53a9f529
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 046e269cfdb4816b4ef3d554a63de6be063e40228b524c04397d3b04315eaccd
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.2.0
+CurrentVersionCode: 14

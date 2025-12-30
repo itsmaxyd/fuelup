@@ -1,0 +1,33 @@
+Ads:
+  description: This app contains advertising
+  name: Ads
+DisabledAlgorithm:
+  description: This app has a weak security signature
+  name: Signed Using An Unsafe Algorithm
+KnownVuln:
+  description: This app contains a known security vulnerability
+  name: Known Vulnerability
+NSFW:
+  description: This app contains content that should not be publicised or visible everywhere
+  name: NSFW
+NoSourceSince:
+  name: No Source Since
+  description: The source code is no longer available, no updates possible
+NonFreeAdd:
+  description: This app promotes non-free add-ons
+  name: Non-Free Addons
+NonFreeAssets:
+  description: This app contains non-free assets
+  name: Non-Free Assets
+NonFreeDep:
+  description: This app depends on other non-free apps
+  name: Non-Free Dependencies
+NonFreeNet:
+  description: This app promotes or depends entirely on a non-free network service
+  name: Non-Free Network Services
+Tracking:
+  description: This app tracks and reports your activity
+  name: Tracking
+TetheredNet:
+  description: This app depends entirely on a certain instance of a network service
+  name: Tethered Network Services

@@ -1,0 +1,43 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Rely on non-free Minecraft skin services.
+Categories:
+  - Games
+License: Apache-2.0
+AuthorName: zatrit
+SourceCode: https://github.com/zatrit/skinview
+
+AutoName: SkinBread
+
+RepoType: git
+Repo: https://github.com/zatrit/skinview
+Binaries: https://github.com/zatrit/skinview/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: '1.3'
+    versionCode: 4
+    commit: v1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 5
+    commit: v1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 6
+    commit: 27b9ed78c77063ce72678528178dc42ad624e657
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 2748d5aa83f0761d7639471b08c6e5863c2389da7d9f8fa9abe16b57a676a133
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.5'
+CurrentVersionCode: 6

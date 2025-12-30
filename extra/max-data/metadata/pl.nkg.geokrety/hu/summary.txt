@@ -1,0 +1,1 @@
+A program a GeoKretyk mozgásának rögzítéséhez használt.

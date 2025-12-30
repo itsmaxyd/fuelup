@@ -1,0 +1,39 @@
+Categories:
+  - Games
+License: GPL-3.0-or-later
+AuthorName: 20kdc
+SourceCode: https://gitlab.com/20kdc/offline-puzzle-solver
+IssueTracker: https://gitlab.com/20kdc/offline-puzzle-solver/-/issues
+
+AutoName: Offline Puzzle Solver
+
+RepoType: git
+Repo: https://gitlab.com/20kdc/offline-puzzle-solver.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 2
+    commit: 49d9c3f4f28071b8ee406f487e6f00ee2b8eb0cf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.0'
+    versionCode: 4
+    commit: 06320725744f782eac6bfc2fcd504a01e5a801b7
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '4.0'
+CurrentVersionCode: 4

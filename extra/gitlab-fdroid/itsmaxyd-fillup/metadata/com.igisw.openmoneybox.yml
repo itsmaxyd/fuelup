@@ -1,0 +1,418 @@
+Categories:
+  - Finance Manager
+  - Money
+License: GPL-3.0-only
+AuthorName: Igor Calì
+AuthorEmail: igorcali@disroot.org
+WebSite: http://igisw-bilancio.sourceforge.net/
+SourceCode: https://gitlab.com/igi0/openmoneybox
+IssueTracker: https://gitlab.com/igi0/openmoneybox/issues
+Changelog: https://sourceforge.net/p/igisw-bilancio/wiki/OMB_Changelog/
+Donate: https://www.paypal.com/paypalme/igCali
+Liberapay: igi
+
+AutoName: OpenMoneyBox
+
+RepoType: git
+Repo: https://gitlab.com/igi0/openmoneybox.git
+
+Builds:
+  - versionName: 3.1.2.5
+    versionCode: 17
+    commit: '4'
+    subdir: android/API24
+    gradle:
+      - yes
+
+  - versionName: 3.2.1.1
+    versionCode: 18
+    commit: v3.2.1.1
+    subdir: android/API24
+    gradle:
+      - yes
+
+  - versionName: 3.2.1.2
+    versionCode: 19
+    commit: v3.2.1.2
+    subdir: android/API24
+    gradle:
+      - yes
+
+  - versionName: 3.2.1.3
+    versionCode: 20
+    commit: v3.2.1.3
+    subdir: android/API24
+    gradle:
+      - yes
+
+  - versionName: 3.2.2.2
+    versionCode: 21
+    commit: v3.2.2.2
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.2.2.3
+    versionCode: 22
+    commit: v3.2.2.3
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.2.2.4
+    versionCode: 23
+    commit: v3.2.2.4
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.2.2.6
+    versionCode: 24
+    commit: v3.2.2.6
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.2.2.7
+    versionCode: 25
+    commit: v3.2.2.7
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.2.2.8
+    versionCode: 26
+    commit: v3.2.2.8
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.2.2.10
+    versionCode: 27
+    commit: v3.2.2.10
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.3.1.1
+    versionCode: 28
+    commit: v3.3.1.1
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.3.1.2
+    versionCode: 29
+    commit: v3.3.1.2
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.3.1.3
+    versionCode: 30
+    commit: v3.3.1.3
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.3.1.4
+    versionCode: 31
+    commit: v3.3.1.4
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.3.1.6
+    versionCode: 32
+    commit: v3.3.1.6
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.3.1.7
+    versionCode: 33
+    commit: v3.3.1.7
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.1
+    versionCode: 34
+    commit: v3.4.1.1
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.2
+    versionCode: 35
+    commit: v3.4.1.2
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.3
+    versionCode: 36
+    commit: v3.4.1.3
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.4
+    versionCode: 37
+    commit: v3.4.1.4
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.5
+    versionCode: 38
+    commit: v3.4.1.5
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.6
+    versionCode: 39
+    commit: v3.4.1.6
+    subdir: android/API26
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.7
+    versionCode: 40
+    commit: v3.4.1.7
+    subdir: android/API29
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.8
+    versionCode: 41
+    commit: v3.4.1.8
+    subdir: android/API29
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.9
+    versionCode: 42
+    commit: v3.4.1.9
+    subdir: android/API29
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.10
+    versionCode: 43
+    commit: v3.4.1.10
+    subdir: android/API29
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.11
+    versionCode: 44
+    commit: aceb63a17cf555c0ec77e042a814293446be4ba4
+    subdir: android/API29
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.13
+    versionCode: 45
+    commit: c07d8ee3608b8f75a0ab59ed0ae7065b0d60ae64
+    subdir: android/API29
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.14
+    versionCode: 46
+    commit: d248fdcd90ac8b49715193ebac946a2dcd26132c
+    subdir: android/API29
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.15
+    versionCode: 47
+    commit: 9e38e5b840488c4b6b38a43bf30203b54be216cb
+    subdir: android/API30
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.16
+    versionCode: 48
+    commit: 9c7368f1d0ab74b763bfc266a294ac8d90afead1
+    subdir: android/API30
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.17
+    versionCode: 49
+    commit: d195caa415a5fdd95b0eb6a46019bd0051d40f0a
+    subdir: android/API30
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.1.18
+    versionCode: 50
+    commit: 579a493a15665fd99bb78d5d5d1f831ae8e3e652
+    subdir: android/API30
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.1
+    versionCode: 51
+    commit: c4b4b1cb4d931a0d844c400882e80b53e6dbecf8
+    subdir: android/API30
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.2
+    versionCode: 52
+    commit: 0386058042af86ffdde649f697ce3ed9d65e8a34
+    subdir: android/API30
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.3
+    versionCode: 53
+    commit: bac4fceefef2f78029e970dc78c46cf98aa6be78
+    subdir: android/API30
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.4
+    versionCode: 54
+    commit: acc79f51cebd330febd18eabe194cbc03f6cdf36
+    subdir: android/API30
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.5
+    versionCode: 55
+    commit: 395d9c10c09c32e292d6d1b564cd3468d43a869c
+    subdir: android/API33
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.6
+    versionCode: 56
+    commit: f123f604f8412fb085bb99b08b8f4bdfd0b0e984
+    subdir: android/API33
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.7
+    versionCode: 57
+    commit: 5497643705388a69fb1f186c2612ae7575fa9d4e
+    subdir: android/API33
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.8
+    versionCode: 58
+    commit: c48d2f63b7aa6d6219bf0a2ad6771cfba9d1f2f0
+    subdir: android/API33
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.9
+    versionCode: 59
+    commit: 66c961705d9036e8a7c448c76ee2d91717a3d471
+    subdir: android/API33
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2.10
+    versionCode: 60
+    commit: 1180b701add1d23adb46c8044ab0f484386a33c8
+    subdir: android/API33
+    gradle:
+      - yes
+
+  - versionName: 3.5.1.1
+    versionCode: 61
+    commit: 156d99c1702335b20a76935c227437828e68a80e
+    subdir: android/API33
+    gradle:
+      - yes
+
+  - versionName: 3.5.1.2
+    versionCode: 62
+    commit: 6e61a9136f6038c3bccf14fd9d85bf14a201bacb
+    subdir: android/API33
+    gradle:
+      - yes
+
+  - versionName: 3.5.1.3
+    versionCode: 63
+    commit: 9c86fbaa9c3fb8e3d68365c1676c9a050f34c49e
+    subdir: android/API33
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 3.5.1.4
+    versionCode: 64
+    commit: ef760d7198b2aa6bc14c4a19007293b7d0333925
+    subdir: android/API33
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.13.0/8.11.1/' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: android/API33/main/AndroidManifest.xml|versionCode="(\d+)"|.|versionName="(.+)"
+CurrentVersion: 3.5.1.4
+CurrentVersionCode: 64

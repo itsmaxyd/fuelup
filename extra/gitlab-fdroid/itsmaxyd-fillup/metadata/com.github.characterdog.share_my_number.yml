@@ -1,0 +1,63 @@
+Categories:
+  - Connectivity
+  - Phone & SMS
+License: GPL-3.0-or-later
+AuthorName: CharacterDog
+SourceCode: https://github.com/characterdog/share-my-number
+IssueTracker: https://github.com/characterdog/share-my-number/issues
+Translation: https://crowdin.com/project/share-my-number
+
+AutoName: Share my number
+Description: |-
+  <b>NOTE:</b> App is no longer maintained.
+
+  This app displays a business card and a QR code. Other people can add your number to their contact app by scanning the QR code.
+
+  It's possible to configure three independent profiles: private, company and other. The profile names are just suggestions. Feel free to change them in the settings.
+
+  You can share the following information:
+  * Name
+  * Phone number
+  * E-mail
+  * Address
+  * Company
+  * Title
+  * Website
+
+  Why use this app:
+  * Material Design
+  * No ads or tracking
+  * Fully open source: https://github.com/characterdog/share-my-number
+
+  Help translating this app: https://crowdin.com/project/share-my-number
+
+RepoType: git
+Repo: https://github.com/characterdog/share-my-number.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: '1.0'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 2
+    commit: '1.2'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 3
+    commit: '1.3'
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.3'
+CurrentVersionCode: 3

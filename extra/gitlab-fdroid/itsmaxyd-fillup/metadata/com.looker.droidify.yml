@@ -1,0 +1,317 @@
+Categories:
+  - App Store & Updater
+  - System
+License: GPL-3.0-or-later
+AuthorName: Iamlooker
+AuthorEmail: mohit2002ss@gmail.com
+WebSite: https://droidify.eu.org/
+SourceCode: https://github.com/Droid-ify/client
+IssueTracker: https://github.com/Droid-ify/client/issues
+Translation: https://hosted.weblate.org/engage/droidify/
+Changelog: https://github.com/Droid-ify/client/releases
+
+AutoName: Droid-ify
+
+RepoType: git
+Repo: https://github.com/Droid-ify/client.git
+
+Builds:
+  - versionName: 0.3.1
+    versionCode: 31
+    commit: v0.3.1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.3.2
+    versionCode: 32
+    commit: 6be7b2cb74247c9e4f7dfe999e331c860d19ad7b
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.3.3
+    versionCode: 33
+    commit: 081a959e092ac10b0023642cf0e876215cad5007
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.3.5
+    versionCode: 35
+    commit: 3296feecbef4c64a5fd4324e732290900acd044d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.0
+    versionCode: 40
+    commit: e106b4ca0016f719d05c84b74d0deb1a935f5100
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.1
+    versionCode: 41
+    commit: bbbce2a4aa17249316ce06f82aa8fa7dccba2a34
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.2
+    versionCode: 42
+    commit: 5677c66064172f11b24c8fcc4a9c2f76f60e6494
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.3
+    versionCode: 43
+    commit: 8c7d1d65d98a2636a4890c03a55765fdca6aad55
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.5
+    versionCode: 45
+    commit: fc0f37eaf4d88f4ae302b6fb2993d8a27a84c144
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.6
+    versionCode: 46
+    commit: bd92e8e713d6209b89dc0ae1e7e6dd1edb3b34c6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.7
+    versionCode: 47
+    commit: 2d77a7de98d70b66e753bcf0ca6cd195f7dca03b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.9
+    versionCode: 49
+    commit: d3b981739b2be55730c6c97d0b69bb130cc9df26
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.5.1
+    versionCode: 51
+    commit: aef23a137a21e45db71ade9a841f4f5b9858195f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.2
+    versionCode: 52
+    commit: ceea5d1f836e04fe4f4943faba813fb645899f7e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.5
+    versionCode: 55
+    commit: d560a9e81970f85f4718364690a45617a05b2eb3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.6
+    versionCode: 56
+    commit: 28f4f0555acd88a871152d09664fce5551686d0b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.7
+    versionCode: 57
+    commit: ad677a604fd6b05ad5b4c0ca55790843fe7dde78
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.8.1
+    versionCode: 581
+    commit: ccc3359735b44076b428cfefcf658906554733a0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.5.8.3
+    versionCode: 583
+    commit: 41ca539bb4aed019939645a51dcd16283a8f888a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.5.9 Patch 1
+    versionCode: 591
+    commit: b6498daf45e4c3bf5231563c2a12ade9e4fbd5bd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.5.9 Patch 2
+    versionCode: 592
+    commit: 9b2895ff55cf46e78fd56d2a152b231c57dd5234
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.5.9 Patch 4
+    versionCode: 594
+    commit: e8b2bf731d083dc5a165145c80e09d47ad388da8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.5.9 Patch 5
+    versionCode: 595
+    commit: 97506623f6a9b5a92134097cebcbc6e5a6d0ef27
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.6.1
+    versionCode: 610
+    commit: 2d792c812438e2388b794de5804f20a0b88a6284
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.6.2
+    versionCode: 620
+    commit: 2036789ce2b9c54737cde2c186028d000a5d02aa
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.6.3
+    versionCode: 630
+    commit: 550e09f189f1f289d79e0c01b5428c4595518ed3
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.6.4
+    versionCode: 640
+    commit: 71104e9ddbb124ca3dac7825904970a27d5a2e45
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+      - sync/fdroid/src/androidTest/assets
+
+  - versionName: 0.6.5
+    versionCode: 650
+    commit: cd8d638aa6a303049d49d20d219c0c626d5106e7
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/src/androidTest
+
+  - versionName: 0.6.6
+    versionCode: 660
+    commit: 53ca19f3978453d241a6b9655c0008d8ecebdb69
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/9.0.0-rc-1/8.14.3/' ../gradle/wrapper/gradle-wrapper.properties
+      - sed -i -e '/image-viewer/s/v1.0.1/d11578fe3f/' ../gradle/libs.versions.toml
+    scandelete:
+      - app/src/androidTest
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)|.|latestVersionName\s=\s"(.*)"
+CurrentVersion: 0.6.6
+CurrentVersionCode: 660

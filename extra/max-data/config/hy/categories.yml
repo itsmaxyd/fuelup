@@ -1,0 +1,34 @@
+Connectivity:
+  name: Կապ
+Development:
+  name: Ծրագրավորում
+Games:
+  name: Խաղեր
+Graphics:
+  name: Գրաֆիկա
+Internet:
+  name: Ցանց
+Money:
+  name: Փող
+Multimedia:
+  name: Մուլտիմեդիա
+Navigation:
+  name: Կողմնորոշում
+Phone & SMS:
+  name: Հեռախոս և կարճ հաղորդագրություն
+Reading:
+  name: Ընթերցում
+Science & Education:
+  name: Կրթություն և գիտություն
+Security:
+  name: Անվտանգություն
+Sports & Health:
+  name: Սպորտ և առողջություն
+System:
+  name: Համակարգ
+Theming:
+  name: Ոճ
+Time:
+  name: Ժամանակ
+Writing:
+  name: Տեքստ

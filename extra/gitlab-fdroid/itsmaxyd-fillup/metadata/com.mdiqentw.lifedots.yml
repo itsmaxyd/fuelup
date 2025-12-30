@@ -1,0 +1,60 @@
+Categories:
+  - Time
+  - Writing
+License: GPL-3.0-only
+AuthorName: Xilin Jia
+SourceCode: https://github.com/XilinJia/Life-Dots
+IssueTracker: https://github.com/XilinJia/Life-Dots/issues
+Translation: https://crowdin.com/translate/life-dots
+Liberapay: XilinJia
+
+AutoName: Life Dots
+
+RepoType: git
+Repo: https://github.com/XilinJia/Life-Dots
+
+Builds:
+  - versionName: 2.1.0
+    versionCode: 151
+    commit: a0c54a77335cca7c4d6af66e7d906c0208859955
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2.2.0
+    versionCode: 153
+    commit: bd559cc46cb488080d9b2561d757ad007f8ad82d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2.2.1
+    versionCode: 154
+    commit: 99b830a7ebbffa3d1665e90fc18bf5a16d14ad76
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2.2.2
+    versionCode: 155
+    commit: c93d53be8f0ff5bbfd69e5a1d3c37a50dbb44852
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.2.2
+CurrentVersionCode: 155

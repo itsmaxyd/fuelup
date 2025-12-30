@@ -1,0 +1,85 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: The domain for the main community site is hardcoded into the app.
+Categories:
+  - Games
+License: BSD-3-Clause
+WebSite: https://principia-web.se/
+SourceCode: https://github.com/Bithack/principia
+IssueTracker: https://github.com/Bithack/principia/issues
+Changelog: https://principia-web.se/wiki/Changelog
+Liberapay: rollerozxa
+
+AutoName: Principia
+
+RepoType: git
+Repo: https://github.com/Bithack/principia.git
+
+Builds:
+  - versionName: 2024.02.29
+    versionCode: 35
+    commit: f6af58b19571fc0e1067470b2be525c6527182a6
+    subdir: build-android/principia
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc-multilib gettext make wget xz-utils
+    gradle:
+      - yes
+    srclibs:
+      - principia-android-deps@3a526799a5c04c49446e46d4a3279563a91a0f91
+    prebuild: sed -i -e '/preBuild.dependsOn getDeps/d' build.gradle
+    scandelete:
+      - testmaps/
+    build:
+      - pushd $$principia-android-deps$$
+      - ./build.sh --all armeabi-v7a
+      - ./build.sh --all arm64-v8a
+      - ./build.sh --all x86_64
+      - popd
+      - mv $$principia-android-deps$$/deps ../
+    ndk: r23c
+
+  - versionName: 2024.07.12-fdroid
+    versionCode: 38
+    commit: 93da889308bd55939cabc4f1a398f0e49d31c792
+    subdir: build-android/principia
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc-multilib gettext make wget xz-utils
+    gradle:
+      - yes
+    prebuild: sed -i -e '/preBuild.dependsOn getDeps/d' build.gradle
+    scandelete:
+      - testmaps/
+    build:
+      - cd deps-src
+      - ./build.sh --all armeabi-v7a
+      - ./build.sh --all arm64-v8a
+      - ./build.sh --all x86_64
+      - mv deps ../..
+    ndk: r26c
+
+  - versionName: 2025.04.05
+    versionCode: 39
+    commit: f71e177c43b8dbbe917a5ec43b367140aa5d746c
+    subdir: android/principia
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc-multilib gettext make wget xz-utils
+    gradle:
+      - yes
+    prebuild: sed -i -e '/preBuild.dependsOn getDeps/d' build.gradle
+    build:
+      - cd deps-src
+      - ./build.sh --all armeabi-v7a
+      - ./build.sh --all arm64-v8a
+      - ./build.sh --all x86_64
+      - mv deps ../..
+    ndk: 27.2.12479018
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2025.04.05
+CurrentVersionCode: 39

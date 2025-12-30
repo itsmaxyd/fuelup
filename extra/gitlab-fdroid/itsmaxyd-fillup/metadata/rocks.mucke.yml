@@ -1,0 +1,506 @@
+Categories:
+  - Local Media Player
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Moritz Weber
+SourceCode: https://github.com/moritz-weber/mucke
+IssueTracker: https://github.com/moritz-weber/mucke/issues
+
+AutoName: mucke
+
+RepoType: git
+Repo: https://github.com/moritz-weber/mucke
+
+Builds:
+  - versionName: 1.1.0
+    versionCode: 61
+    commit: 9384248bfec7eebc5b615b83d9a153016e7c6c36
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+
+  - versionName: 1.1.0
+    versionCode: 62
+    commit: 9384248bfec7eebc5b615b83d9a153016e7c6c36
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+
+  - versionName: 1.1.0
+    versionCode: 63
+    commit: 9384248bfec7eebc5b615b83d9a153016e7c6c36
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+
+  - versionName: 1.2.0
+    versionCode: 71
+    commit: b15ec33ab4a22b3fb665c8c788d6994922f509eb
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+
+  - versionName: 1.2.0
+    versionCode: 72
+    commit: b15ec33ab4a22b3fb665c8c788d6994922f509eb
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+
+  - versionName: 1.2.0
+    versionCode: 73
+    commit: b15ec33ab4a22b3fb665c8c788d6994922f509eb
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+
+  - versionName: 1.3.0
+    versionCode: 81
+    commit: 11f09440c486e841b9063384be2025c03a460247
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+
+  - versionName: 1.3.0
+    versionCode: 82
+    commit: 11f09440c486e841b9063384be2025c03a460247
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+
+  - versionName: 1.3.0
+    versionCode: 83
+    commit: 11f09440c486e841b9063384be2025c03a460247
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+
+  - versionName: 1.3.1
+    versionCode: 91
+    commit: 73144f5ad1b8e2b6b6fad965e03239ea2cb886dd
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+
+  - versionName: 1.3.1
+    versionCode: 92
+    commit: 73144f5ad1b8e2b6b6fad965e03239ea2cb886dd
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+
+  - versionName: 1.3.1
+    versionCode: 93
+    commit: 73144f5ad1b8e2b6b6fad965e03239ea2cb886dd
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+
+  - versionName: 1.4.0
+    versionCode: 101
+    commit: b6ddba1baa0f62160d9794ca40b913fe2f7ec962
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+
+  - versionName: 1.4.0
+    versionCode: 102
+    commit: b6ddba1baa0f62160d9794ca40b913fe2f7ec962
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+
+  - versionName: 1.4.0
+    versionCode: 103
+    commit: b6ddba1baa0f62160d9794ca40b913fe2f7ec962
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+
+  - versionName: 1.5.0
+    versionCode: 111
+    commit: 684ba6a2a425445ed9156ce7e506d4d4e3ed6a82
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+
+  - versionName: 1.5.0
+    versionCode: 112
+    commit: 684ba6a2a425445ed9156ce7e506d4d4e3ed6a82
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+
+  - versionName: 1.5.0
+    versionCode: 113
+    commit: 684ba6a2a425445ed9156ce7e506d4d4e3ed6a82
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+
+  - versionName: 1.5.1
+    versionCode: 121
+    commit: b1a9f3c8f6cd5880fa8deb8359c6ff16e8a510a4
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+        --flavor prod
+
+  - versionName: 1.5.1
+    versionCode: 122
+    commit: b1a9f3c8f6cd5880fa8deb8359c6ff16e8a510a4
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+        --flavor prod
+
+  - versionName: 1.5.1
+    versionCode: 123
+    commit: b1a9f3c8f6cd5880fa8deb8359c6ff16e8a510a4
+    subdir: src
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    rm:
+      - src/test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - src/.flutter/packages/flutter_tools/gradle/flutter.gradle
+      - src/.flutter/bin/cache
+    scandelete:
+      - src/.flutter
+      - src/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --flavor prod
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - '%c * 10 + 1'
+  - '%c * 10 + 2'
+  - '%c * 10 + 3'
+UpdateCheckData: src/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.5.1
+CurrentVersionCode: 123

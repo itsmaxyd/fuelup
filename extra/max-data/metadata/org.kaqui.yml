@@ -1,0 +1,467 @@
+Categories:
+  - Science & Education
+  - Translation & Dictionary
+License: GPL-3.0-or-later
+AuthorName: Philippe Daouadi
+AuthorEmail: blastrock@free.fr
+SourceCode: https://github.com/blastrock/kakugo
+IssueTracker: https://github.com/blastrock/kakugo/issues
+Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=MACMBD35R2BB6&currency_code=EUR
+Bitcoin: 12bnT7epKmf9ztkAeuM8dHCcoc76r9rgVX
+
+AutoName: Kakugo
+Description: |-
+  Kakugo is an application that helps learning Japanese. It includes multiple
+  tests to memorize hiragana, katakana, and kanji and adapts to the user's
+  learning pace.
+
+  One of the biggest difficulty with learning Japanese is memorizing kanji
+  and vocabulary. While learning them by just reading and writing them
+  everyday may work, the more kanji you know, the harder it gets and the more
+  time it takes to revise them all. Proper tools can help you memorize these
+  huge amounts of knowledge to more quickly become a fluent Japanese speaker.
+
+  Kakugo is one of these tools. It helps learning and revising kanji and
+  vocabulary in an efficient manner. It uses Spaced Repetition in a unique
+  way that adapts to the user's pace. If you only have time to revise 30
+  kanji every day, or if you can revise as much as 100 kanji every day,
+  Kakugo will adapt and test you on the right kanji at the right time for you
+  to memorize them. There is no "kanji of the day" list to revise, you can
+  start and finish a session whenever you feel like it.
+
+  Kakugo also features a wide variety of tests to help you find the best ways
+  that will help you learn Japanese.
+
+  <b>Features include</b>
+
+  * Hiragana, Katakana quizzes
+  * Kanji quizzes by reading and meaning
+  * Kanji test by part composition
+  * Kanji writing test
+  * Vocabulary quizzes by reading and meaning
+  * Unique spaced repetition formula that adapts to your own learning pace
+  * Unlimited quiz sessions that allow you to take a quiz at any time, for however long you want, useful to efficiently spend commuting time
+  * Show similar-looking kanji in answers to teach you the differences
+  * Kanji and vocabulary sorted by JLPT level
+  * Clicking on kanji opens <a href="https://play.google.com/store/apps/details?id=sk.baka.aedict3">aedict3</a> (a non-free Japanese dictionary) or <a href="https://jisho.org">jisho.org</a>
+  * Optimized tablet support
+  * Open source
+  * No ads
+  * No internet access required
+  * Supported languages: English, French
+  * More to come
+
+  <b>Credits</b>
+
+  * The kanji quizzes are based on <a href="http://www.edrdg.org/kanjidic/kanjidic.html">kanjidic</a>.
+  * The vocabulary quizzes are based on <a href="http://www.edrdg.org/jmdict/j_jmdict.html">JMdict</a>.
+  * The kanji similarity database comes from https://minerva-access.unimelb.edu.au/handle/11343/35336 and http://lars.yencken.org/datasets/phd/
+  * The kanji composition and drawing database comes from <a href="https://kanjivg.tagaini.net/">KanjiVG</a>.
+
+RepoType: git
+Repo: https://github.com/blastrock/kaqui.git
+
+Builds:
+  - versionName: '1.12'
+    versionCode: 27
+    commit: '1.12'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.13.1
+    versionCode: 29
+    commit: 1.13.1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.14'
+    versionCode: 30
+    commit: '1.14'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.15'
+    versionCode: 31
+    commit: '1.15'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.15.3
+    versionCode: 34
+    commit: 1.15.3
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.16.1
+    versionCode: 36
+    commit: 1.16.1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.18'
+    versionCode: 38
+    commit: '1.18'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.19'
+    versionCode: 39
+    commit: '1.19'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.20'
+    versionCode: 40
+    commit: '1.20'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.21.2
+    versionCode: 43
+    commit: 1.21.2
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.21.3
+    versionCode: 44
+    commit: 1.21.3
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.21.4
+    versionCode: 45
+    commit: 1.21.4
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.22'
+    versionCode: 46
+    commit: '1.22'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.23'
+    versionCode: 49
+    commit: '1.23'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.24'
+    versionCode: 52
+    commit: '1.24'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.25'
+    versionCode: 53
+    commit: '1.25'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.26'
+    versionCode: 54
+    commit: '1.26'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.26.1
+    versionCode: 55
+    commit: 1.26.1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.27'
+    versionCode: 56
+    commit: '1.27'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.27.1
+    versionCode: 57
+    commit: 1.27.1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.28'
+    versionCode: 58
+    commit: '1.28'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.29'
+    versionCode: 61
+    commit: 1.29.1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: '1.30'
+    versionCode: 62
+    commit: '1.30'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.30.1
+    versionCode: 63
+    commit: 1.30.1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.31.0
+    versionCode: 64
+    commit: '1.31'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.32.0
+    versionCode: 65
+    commit: '1.32'
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.33.0
+    versionCode: 67
+    commit: 1.33.0
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.33.1
+    versionCode: 68
+    commit: 1.33.1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.34.0
+    versionCode: 70
+    commit: 1.34.0
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.34.2
+    versionCode: 72
+    commit: 1.34.2
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.35.0
+    versionCode: 74
+    commit: 1.35.0
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.36.1
+    versionCode: 77
+    commit: 5059590f934fdf6b50e5e6ab315b5f1488231502
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.36.2
+    versionCode: 78
+    commit: db420b2a29ead963c4c023c9d568b15100fb98da
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.36.4
+    versionCode: 81
+    commit: a705fa4737b77424bff04b84658448067e7d9839
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.36.5
+    versionCode: 82
+    commit: fa1ff06480c1c1d0782d0196d0db93f2b194af51
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.37.1
+    versionCode: 84
+    commit: 3d2c4f7f4b83ae9af201a5ef53592f3c63a4283f
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.38.0
+    versionCode: 86
+    commit: e7c6eebf2f37328417e91e6360822ffa89e0f81f
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.39.0
+    versionCode: 89
+    commit: 26ab0394a2f9f5b8d38d0f56ed2848029c1c1e10
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.39.1
+    versionCode: 90
+    commit: ac777654f2a066ddab04d0575651eace61b9ec3f
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.39.2
+    versionCode: 91
+    commit: e32d2b3a94f748d27f80972a256e4c18fec36455
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.39.3
+    versionCode: 92
+    commit: 863bedd1bdcc3c228318f4cfbc94b533b8008275
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.39.4
+    versionCode: 93
+    commit: 6a2183cfb2c6fae1adc0fca1e89c524c9e5ac4b4
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+  - versionName: 1.39.5
+    versionCode: 94
+    commit: c8405cbcbf44b7e02bc3bfe7301f7e5c9920dc0e
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/dict
+
+MaintainerNotes: |-
+  The scanignore'd file contains the dictionaries to be imported when the app
+  first runs. It is a gzipped sqlite3 database.
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.39.5
+CurrentVersionCode: 94

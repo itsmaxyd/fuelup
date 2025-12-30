@@ -1,0 +1,261 @@
+Categories:
+  - Navigation
+License: GPL-3.0-only
+AuthorName: Philipp Bobek
+AuthorEmail: philipp.bobek@mailbox.org
+SourceCode: https://github.com/Kr0oked/Compass
+IssueTracker: https://github.com/Kr0oked/Compass/issues
+Changelog: https://github.com/Kr0oked/Compass/releases
+
+AutoName: Compass
+
+RepoType: git
+Repo: https://github.com/Kr0oked/Compass.git
+
+Builds:
+  - versionName: '1.2'
+    versionCode: 3
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 4
+    commit: v1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 5
+    commit: v1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 6
+    commit: 13cbda3b681899886883eb8668a93beb9f67d8ce
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 7
+    commit: 205ef6e18d1b1757d795bd36fd9eb33e2a3b8236
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 8
+    commit: 093006e581f12ed9564484ea2a11b96223a661a6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 9
+    commit: cdf5778c5f906b802dcfd45e7ad42388b7074fca
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.9'
+    versionCode: 10
+    commit: 5c517e3c4e29987598968f8ceaf31dbffff851e2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 11
+    commit: 661ca8c69b19a7b552754eda96049c70b2da7496
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 12
+    commit: 045a544ee8a87e45ff76d6df97aba9e678f3684a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.1
+    versionCode: 13
+    commit: ebce0fdf6542aa6a80070987aee66f7ef9619c3e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.2
+    versionCode: 14
+    commit: 0d751ea287fef5d461ee472fd5df410a1a812be3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.3
+    versionCode: 15
+    commit: 8ee7d8c145afe04d2059bad09ad806a461f44006
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.4
+    versionCode: 16
+    commit: 8774e63002c53a2295a487565b308df061b580cc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.12.0
+    versionCode: 17
+    commit: 246101b00e400073d5e2198eec2ce43281806b7a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.13.0
+    versionCode: 18
+    commit: 4adfdb26b6ed7a3e566f92abc3999e7262761c65
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.13.1
+    versionCode: 19
+    commit: d2135ac354c6f78dd4d97b5f83e94493388c5f55
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.14.0
+    versionCode: 20
+    commit: 0b9f0bbe6137179129c9eba99497289bf54a4c17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.1
+    versionCode: 21
+    commit: d02a72e709dcd749c14606a01e00f475bc97cde6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.2
+    versionCode: 22
+    commit: e1ddaf3439f0ab2a81c67e75634a1bd62d133b0b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.3
+    versionCode: 23
+    commit: 7bf1736ef2282d1c461d859be3009f9e4ad35fba
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.4
+    versionCode: 24
+    commit: a22c53d558fe9f439ae04dd9232c1e57a7e0f151
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.5
+    versionCode: 25
+    commit: 7754d683ed27ea3d6cb2da3c41b020a9d21fba08
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.6
+    versionCode: 26
+    commit: eb3281491d53eee4b22f676ac78b6504c08e6b8f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.8
+    versionCode: 28
+    commit: 0ff5ad2dac57bf850abf725d163fa6ace457fee9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.9
+    versionCode: 29
+    commit: 2933d019736954d497ec4741ec6f424c02ecd34e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.10
+    versionCode: 30
+    commit: 29ca2a8a635456c24d0b3dda35b85292d57629ff
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/agp/s/8.12.0/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 1.14.11
+    versionCode: 31
+    commit: 0d2185d511f571303e5c5c1def0833eb43794eb0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/agp/s/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.14.11
+CurrentVersionCode: 31

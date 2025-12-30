@@ -1,0 +1,33 @@
+Categories:
+  - Keyboard & IME
+  - System
+  - Writing
+License: GPL-3.0-only
+WebSite: https://sinha.la
+SourceCode: https://codeberg.org/sinhala/sithakuru
+IssueTracker: https://codeberg.org/sinhala/sithakuru/issues
+
+AutoName: Sithakuru
+
+RepoType: git
+Repo: https://codeberg.org/sinhala/sithakuru.git
+Binaries: https://codeberg.org/sinhala/sithakuru/releases/download/%v/Sithakuru_%v.apk
+
+Builds:
+  - versionName: 1.2.0
+    versionCode: 12
+    commit: 1.2.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - sithakuru
+
+AllowedAPKSigningKeys: 25b1defa980d51b5eac0ae2cb9cd9aaa6c71e485519e1eca81e5dbe167690863
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.2.0
+CurrentVersionCode: 12

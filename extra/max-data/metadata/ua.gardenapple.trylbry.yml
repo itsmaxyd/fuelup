@@ -1,0 +1,43 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App is tethered to api.lbry.com (you cannot choose your own server), and
+      depends on Youtube for some tasks.
+Categories:
+  - Multimedia
+  - Online Media Player
+License: GPL-3.0-only
+AuthorName: gardenapple
+AuthorEmail: gardenapple@posteo.net
+SourceCode: https://gitlab.com/gardenappl/try-lbry
+IssueTracker: https://gitlab.com/gardenappl/try-lbry/issues
+
+AutoName: Try LBRY
+
+RepoType: git
+Repo: https://gitlab.com/gardenappl/try-lbry.git
+
+Builds:
+  - versionName: 1.0.4
+    versionCode: 4
+    commit: v1.0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 7
+    commit: 8205d397ea7fa95b4a77a084efad96181654977b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+MaintainerNotes: for AF see https://gitlab.com/fdroid/fdroiddata/-/merge_requests/8096#note_482157081
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.2
+CurrentVersionCode: 7

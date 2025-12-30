@@ -1,0 +1,1 @@
+Apri porte tramite Wi-Fi usando HTTPS/SSH.

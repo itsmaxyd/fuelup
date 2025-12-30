@@ -1,0 +1,162 @@
+Categories:
+  - Development
+License: MIT
+WebSite: https://nix-on-droid.unboiled.info
+SourceCode: https://github.com/nix-community/nix-on-droid
+IssueTracker: https://github.com/nix-community/nix-on-droid/issues
+
+Name: Nix-on-Droid
+AutoName: Nix
+Description: |-
+  Nix-on-Droid brings Nix package manager of NixOS fame
+  to your mobile device.
+  If you're not after its advanced features,
+  you might still be interested in tapping into nixpkgs,
+  a vast collection of precompiled software.
+
+  At first start the app will download Nix repackaged for Android,
+  leaving you with a barebones system afterwards.
+  If you are an experienced Nix user, you know what to do next.
+  If you are in doubt, follow the on-screen instructions,
+  to install more of the familiar Linux software
+  and declaratively manage your environment.
+
+  NOTE: this software is alpha-quality.
+  Users that value
+  stability and Android integration over
+  features and package selection
+  might better be served with Termux as of now.
+
+  Nix-on-Droid uses a fork of Termux application as a terminal emulator.
+
+RepoType: git
+Repo: https://github.com/nix-community/nix-on-droid-app
+
+Builds:
+  - versionName: 0.66_v0.2.2_nix
+    versionCode: 66022
+    commit: v0.66_v0.2.2_nix
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.66_v0.2.4_nix
+    versionCode: 66024
+    commit: v0.66_v0.2.4_nix
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.66_v0.2.5_nix
+    versionCode: 66025
+    commit: v0.66_v0.2.5_nix
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.66_v0.2.6_nix
+    versionCode: 66026
+    commit: 937d480888ed8b43a2789ce8d16b05d1c6848b76
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21
+
+  - versionName: 0.66_v0.2.7_nix
+    versionCode: 66027
+    commit: 0a4ae68233d43067f27c9777523474853d490159
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21
+
+  - versionName: 0.66_v0.2.8_nix
+    versionCode: 66028
+    commit: 47cc72bbf1e35b39fabbe532addeb2230e779f87
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21
+
+  - versionName: 0.118.0_v0.3.1_nix
+    versionCode: 188031
+    commit: f55587fc9eed7d8a0515f05f0b40a8b0c72c7c66
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - yes
+    ndk: r22b
+
+  - versionName: 0.118.0_v0.3.2_nix
+    versionCode: 188032
+    commit: 65adc08590dbeef017f48e1b06be8c559a2dfc17
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - yes
+    ndk: r22b
+
+  - versionName: 0.118.0_v0.3.3_nix
+    versionCode: 188033
+    commit: 658edb643701665879f114aa50c853f3d8af662f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - yes
+    ndk: r22b
+
+  - versionName: 0.118.0_v0.3.4_nix
+    versionCode: 188034
+    commit: 6155a8b30108b7a37c020cea28506a4938ebfc4d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - yes
+    ndk: r22b
+
+  - versionName: 0.118.0_v0.3.5_nix
+    versionCode: 188035
+    commit: d45be890ecadf026295f6a09635356edb9796080
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - yes
+    ndk: r22b
+
+  - versionName: 0.118.0_v0.3.6_nix
+    versionCode: 188036
+    commit: b682785a29f5064a79c603235f850f883256916e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - yes
+    ndk: r22b
+
+  - versionName: 0.118.0_v0.3.7_nix
+    versionCode: 188037
+    commit: 14dc0df6c4d46939a1ceb4ac55040c9562500caf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - yes
+    ndk: r22b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckName: com.termux
+CurrentVersion: 0.118.0_v0.3.7_nix
+CurrentVersionCode: 188037

@@ -1,0 +1,33 @@
+Ads:
+  description: Dette programmet inneholder reklame
+  name: Reklame
+DisabledAlgorithm:
+  description: Dette programmet har en svak sikkerhetssignatur
+  name: Signert med en utrygg algoritme
+KnownVuln:
+  description: Dette programmet inneholder en kjent sikkerhetsfeil
+  name: Kjent sårbarhet
+NSFW:
+  description: Programmet inneholder innhold ledelsen i F-Droid synes bør sensureres
+  name: NSFW
+NoSourceSince:
+  name: Ingen kildekode siden
+  description: Kildekoden er ikke lenger tilgjengelig. Ingen flere oppdateringer er mulig
+NonFreeAdd:
+  description: Dette programmet promoterer ufrie utvidelser
+  name: Ufrie tillegg
+NonFreeAssets:
+  description: Dette programmet inneholder ufrie gjenstander
+  name: Ufrie gjenstander
+NonFreeDep:
+  description: Dette programmet avhenger av andre ufrie applikasjoner
+  name: Ufrie avhengigheter
+NonFreeNet:
+  description: Dette programmet promoterer ufrie nettverkstjenester
+  name: Ufrie nettverkstjenester
+Tracking:
+  description: Dette programmet sporer og rapporterer din aktivitet
+  name: Sporing
+TetheredNet:
+  description: Denne appen er fullstendig avhengig av en spesifikk instans av en nettverkstjeneste
+  name: Fastbundete nettverkstjenester

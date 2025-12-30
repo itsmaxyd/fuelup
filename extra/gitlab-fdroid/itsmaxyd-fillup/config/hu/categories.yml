@@ -1,0 +1,88 @@
+Connectivity:
+  name: Kapcsolódás
+Development:
+  name: Fejlesztés
+Games:
+  name: Játékok
+Graphics:
+  name: Grafika
+Internet:
+  name: Internet
+Money:
+  name: Pénzügyek
+Multimedia:
+  name: Multimédia
+Navigation:
+  name: Navigáció
+Phone & SMS:
+  name: Telefon és SMS
+Reading:
+  name: Olvasás
+Science & Education:
+  name: Tudomány és oktatás
+Security:
+  name: Biztonság
+Sports & Health:
+  name: Sport és egészség
+System:
+  name: Rendszer
+Theming:
+  name: Stílus
+Time:
+  name: Idő
+Writing:
+  name: Írás
+DNS & Hosts:
+  name: DNS és kiszolgálók
+Email:
+  name: E-mail
+Messaging:
+  name: Üzenetküldés
+Password & 2FA:
+  name: Jelszavak és 2FA
+Social Network:
+  name: Közösségi hálózat
+VPN & Proxy:
+  name: VPN és proxy
+File Transfer:
+  name: Fájlátvitel
+File Encryption & Vault:
+  name: Fájltitkosítás és széfek
+Bookmark:
+  name: Könyvjelző
+Browser:
+  name: Böngésző
+Calculator:
+  name: Számológép
+Ebook Reader:
+  name: E-könyv olvasó
+Gallery:
+  name: Galéria
+Icon Pack:
+  name: Ikoncsomag
+News:
+  name: Hírek
+Note:
+  name: Jegyzet
+Online Media Player:
+  name: Online médialejátszó
+Recipe Manager:
+  name: Receptkezelő
+Shopping List:
+  name: Bevásárlólista
+Text Editor:
+  name: Szövegszerkesztő
+Wallet:
+  name: Pénztárca
+Wallpaper:
+  name: Hátterkép
+Weather:
+  name: Időjárás
+AI Chat:
+  name: AI Chat
+App Manager:
+  name: Alkalmazáskezelő
+App Store & Updater:
+  name: App Store és frissítő
+Religion:
+  name: Vallás

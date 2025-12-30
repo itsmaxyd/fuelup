@@ -1,0 +1,1656 @@
+Categories:
+  - Keyboard & IME
+  - System
+  - Writing
+License: GPL-2.0-or-later
+AuthorName: Hui-Hong You
+AuthorEmail: hiroshiyui@gmail.com
+AuthorWebSite: https://ghostsinthelab.org/
+SourceCode: https://github.com/hiroshiyui/GuilelessBopomofo
+IssueTracker: https://github.com/hiroshiyui/GuilelessBopomofo/issues
+Changelog: https://github.com/hiroshiyui/GuilelessBopomofo/releases
+
+AutoName: Guileless Bopomofo
+
+RepoType: git
+Repo: https://github.com/hiroshiyui/GuilelessBopomofo.git
+
+Builds:
+  - versionName: 1.1.4
+    versionCode: 16
+    commit: 1.1.4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21d
+
+  - versionName: 1.1.6
+    versionCode: 18
+    commit: 1.1.6
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21d
+
+  - versionName: 1.2.4
+    versionCode: 23
+    commit: 1.2.4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21d
+
+  - versionName: 1.2.5
+    versionCode: 24
+    commit: 1.2.5
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21d
+
+  - versionName: 1.2.7
+    versionCode: 26
+    commit: 1.2.7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21d
+
+  - versionName: 1.2.8
+    versionCode: 27
+    commit: 1.2.8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21d
+
+  - versionName: 1.2.10
+    versionCode: 29
+    commit: 1.2.10
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21d
+
+  - versionName: 1.2.11
+    versionCode: 30
+    commit: 1.2.11
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21d
+
+  - versionName: 1.2.12
+    versionCode: 31
+    commit: 1.2.12
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21d
+
+  - versionName: 1.2.13
+    versionCode: 32
+    commit: 1.2.13
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/21.3.6528147/21.4.7075529/' build.gradle
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21e
+
+  - versionName: 1.2.15
+    versionCode: 34
+    commit: 1.2.15
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/21.3.6528147/21.4.7075529/' build.gradle
+    scandelete:
+      - app/libs/libchewing/src/tools
+    ndk: r21e
+
+  - versionName: 1.2.19
+    versionCode: 38
+    commit: 1.2.19
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 1.2.21
+    versionCode: 40
+    commit: 1.2.21
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 1.3.1
+    versionCode: 44
+    commit: 1.3.1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+    ndk: r22b
+
+  - versionName: 1.3.2
+    versionCode: 45
+    commit: 1.3.2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+    ndk: r22b
+
+  - versionName: 1.3.3
+    versionCode: 46
+    commit: 1.3.3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+    ndk: r22b
+
+  - versionName: 1.3.4
+    versionCode: 47
+    commit: 1.3.4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+    ndk: r22b
+
+  - versionName: 1.3.5
+    versionCode: 48
+    commit: 1.3.5
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+    ndk: r22b
+
+  - versionName: 1.3.6
+    versionCode: 49
+    commit: 4bb7adffd2558798a73fcb576318b15d1624aa26
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+    ndk: r22b
+
+  - versionName: 1.4.1
+    versionCode: 51
+    commit: 1.4.1
+    subdir: app
+    submodules: true
+    sudo:
+      - /opt/android-sdk/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r22b
+
+  - versionName: 1.4.3
+    versionCode: 53
+    commit: 48497fc57ccf91f9ea101ad826e465fea446e778
+    subdir: app
+    submodules: true
+    sudo:
+      - /opt/android-sdk/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r22b
+
+  - versionName: 1.5.1
+    versionCode: 55
+    commit: 4b7c1c12fc988228a9aac7f4551a5af65336fa83
+    subdir: app
+    submodules: true
+    sudo:
+      - /opt/android-sdk/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r22b
+
+  - versionName: 1.6.0
+    versionCode: 56
+    commit: b3e348f12c17a7c9e19f6fefa1b0f18b22522cda
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'cmake;3.18.1' > /dev/null
+    ndk: r23b
+
+  - versionName: 1.7.1
+    versionCode: 58
+    commit: c539dec3b091a31821999bf59426a82eca7235d3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'cmake;3.18.1' > /dev/null
+    ndk: r22b
+
+  - versionName: 1.7.3
+    versionCode: 60
+    commit: c2f8aef35eeea67e893d1dbfc7c9e96d0c1c9bfa
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'cmake;3.18.1' > /dev/null
+    ndk: r22b
+
+  - versionName: 1.8.0
+    versionCode: 61
+    commit: a4ad7dd376731518d9d1d10ac19923866db910f6
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'cmake;3.18.1' > /dev/null
+    ndk: r22b
+
+  - versionName: 1.8.2
+    versionCode: 63
+    commit: 57baa2c0b2765d2d029ba0c4c90f76c79ef8a7d7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.8.3
+    versionCode: 64
+    commit: 218976e72c1bc84d07b97a2145baee5775e34b45
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.8.4
+    versionCode: 65
+    commit: 828dbc0432fc609cd623879c50fc00b81fb217d2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.8.5
+    versionCode: 66
+    commit: eda6c35bcde5da864b654753d636331d6926415a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.8.7
+    versionCode: 68
+    commit: 501d816ff9f3e2b96011fcd88c3fea27263b3b91
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.8.8
+    versionCode: 69
+    commit: 3cf7804d0f2e56986a998eaab15bb6b9a78f5072
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.0
+    versionCode: 70
+    commit: b22c85b09a94aef06d2156218ecf61597690c6cb
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.1
+    versionCode: 71
+    commit: 2bf3a818b771052a2e6675c326b137ec9c332948
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.2
+    versionCode: 72
+    commit: fa34089a231f2cdb07bc2489de24b12d0e7116f0
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.3
+    versionCode: 73
+    commit: 9c7167fdc7dc674c2a3dff43ba055b6eab8043f5
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.4
+    versionCode: 74
+    commit: d7bb80170d460246b082971de4f8981cd2b4990f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.5
+    versionCode: 75
+    commit: 8beaabeb98c188db3bdd34fa1507fcd383618588
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.6
+    versionCode: 76
+    commit: 0bafee451274a6634ad5824dc8eda9192ad1d7bb
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.9
+    versionCode: 79
+    commit: c065d21a84fafcfc54e9d8f2307694edc3bde019
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.10
+    versionCode: 80
+    commit: c6febb453199b880cfb8c5a9359826d64aa6a276
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.15
+    versionCode: 85
+    commit: a494a95f11361feec5a5d256fb5f193c8ff1e43c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.16
+    versionCode: 86
+    commit: 65f5a856ede03b11f6ffabc468e51630e929f105
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.17
+    versionCode: 87
+    commit: 060ac0007cc3ceaa633795647311fe6f1242183f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.18
+    versionCode: 88
+    commit: 9dc5b9fede0ab8866d3a25552ed69e4b80abc401
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.19
+    versionCode: 89
+    commit: b857f2c01e0dd4f76751aa18dda000fb3e5f33b8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.20
+    versionCode: 90
+    commit: 3589341bea85a86ff84aca461d44d307aa738bdf
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.21
+    versionCode: 91
+    commit: 3397cab48576e6cf2b90c85e7b66348d8b280ad2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.22
+    versionCode: 92
+    commit: 6649aff33feed1616635b7bd7754e266411839a8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.23
+    versionCode: 93
+    commit: 58842a3549cf0bac7dc79ec7e2efe358a396d4bd
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.25
+    versionCode: 95
+    commit: c8724d31bd72297df92a86abaa2cd25c9add59c3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.29
+    versionCode: 99
+    commit: 3835e7966de95b278e892056f3c05db12d95d2ce
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23b
+
+  - versionName: 1.9.33
+    versionCode: 103
+    commit: 9271ec832d84054068be85592abb4d17116b4206
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23c
+
+  - versionName: 1.9.34
+    versionCode: 104
+    commit: 8eb66ce1d747e60a841d358ff045ee4b5d7942d5
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23c
+
+  - versionName: 1.9.35
+    versionCode: 105
+    commit: 6bb59b859045332e3f41d43f3b717d3168024152
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23c
+
+  - versionName: 1.9.36
+    versionCode: 106
+    commit: 4b9cb797c76249daa0775dc566d8c61543f3a18b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23c
+
+  - versionName: 1.9.37
+    versionCode: 107
+    commit: 0971315c08c9d78371f2d9077a4b947b08e3661f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23c
+
+  - versionName: 1.9.41
+    versionCode: 111
+    commit: 7890efeca7cac70d443e7934e9c3a6d506b902b8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r23c
+
+  - versionName: 1.9.42
+    versionCode: 112
+    commit: 4c80d53e3e17191c2b43e9e818f2e617a5ace30b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 23.2.8568313
+
+  - versionName: 1.9.43
+    versionCode: 113
+    commit: d009303b1aaa4a96cea9184e42d21efd05117423
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 23.2.8568313
+
+  - versionName: 1.9.44
+    versionCode: 114
+    commit: 49ce4cdfc514790ed89a5c3a70054d8946e2032d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 23.2.8568313
+
+  - versionName: 1.9.45
+    versionCode: 115
+    commit: 023e6cf926a1370913b11840fca037bee4677ca4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 23.2.8568313
+
+  - versionName: 1.9.46
+    versionCode: 116
+    commit: b7fe449768cf74be6993148c6e74626e47711d91
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 23.2.8568313
+
+  - versionName: 1.9.47
+    versionCode: 117
+    commit: c5121241fbeafd69dc53e2444e491af137855589
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    ndk: 23.2.8568313
+
+  - versionName: 1.9.48
+    versionCode: 118
+    commit: 2118a55d2caab3b53b1e3d7f826effd568e41906
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    ndk: 23.2.8568313
+
+  - versionName: 1.9.51
+    versionCode: 121
+    commit: 9ed03844c8dc2b625ace5582de1a3dac945a5090
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - libchewingAndroidAppModule@0.8.2
+    rm:
+      - app/libs/*.aar
+    build:
+      - pushd $$libchewingAndroidAppModule$$
+      - gradle bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.0.0
+    versionCode: 122
+    commit: 3fc46a98f0a950fa1085bbc3f93439094c1daed6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.8.4
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.0.2
+    versionCode: 124
+    commit: f8f85da5de61327840a361ce9c6c2d9281b871a9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.8.4
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.0.3
+    versionCode: 125
+    commit: 7d22879f5c43f8d8e512267053afffaf1502b55e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.8.4
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.1.1
+    versionCode: 126
+    commit: 172ef892e5cfa63f69c442fb3a63a4be03954894
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.9.1.1
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.1.2
+    versionCode: 127
+    commit: 5ffc36f15dc10ad672d44a586b6edf5be76e3fd7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.9.1.1
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.1.4
+    versionCode: 129
+    commit: d8fb49fd7c189e2f9474ec8d5e673a3df4400730
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.9.1.1
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.2.0
+    versionCode: 130
+    commit: ee7c89e002352cfe067ebc5b75b6b7d1fccbc62e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.9.1.1
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.2.2
+    versionCode: 132
+    commit: 185dc4022729adadabcce2c48ca08c99b3b9b627
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.9.1.1
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.2.3
+    versionCode: 133
+    commit: 6e02147c2114ddcee7b85c05dc1aa555548f7a64
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.9.1.1
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.2.5
+    versionCode: 141
+    commit: be6f02fb7326a2675e776b093d68eb702a67cfb8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.9.1.1
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.2.7
+    versionCode: 143
+    commit: 5573f215184c418163e048e2da74d7f66c7f2c86
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.9.1.1
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.2.16
+    versionCode: 152
+    commit: 6e6c9fc8cef73f8acc64af835f259256ce534127
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.9.1.8
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.86.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 28.1.13356709
+
+  - versionName: 3.0.0
+    versionCode: 154
+    commit: be8c9a479e8d867db2e41e0c279d59d5587b6caf
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.86.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.0.1
+    versionCode: 155
+    commit: dfe648eca5e3da40162377cf63aa4e4f34f4386f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.86.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.0.2
+    versionCode: 156
+    commit: 4efcd13b6c9658d3155d5cd2dd2b0462a50da3f4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.86.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.3.1
+    versionCode: 165
+    commit: 10af037b1c7125220292a090632395096f75b041
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.86.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.4.0
+    versionCode: 170
+    commit: 5f3f66839e77d843154d5060476fb29ccba5fd64
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.86.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.4.1
+    versionCode: 171
+    commit: c19f74178bd463a2f12d2ac7bf88bca957ef41a1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.86.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.4.5
+    versionCode: 175
+    commit: e5c999d6c3b90c5bc4f0f22f2400c353722a0cf9
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.86.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.5.1
+    versionCode: 177
+    commit: 5282989bc0e9414fe87f6346600a196002392cf3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.5.4
+    versionCode: 180
+    commit: 16cd24408c318db7301f8bc1b6b5b4906810fba7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.5.6
+    versionCode: 182
+    commit: ae110f27053e69e4d62dc7062a2c53425d203c89
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.6.0
+    versionCode: 184
+    commit: f38fc07c16c66fdc4788c066e675e5326244a493
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.6.1
+    versionCode: 185
+    commit: 5869979b7fde03393032e442309213dfabe027fd
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.6.2
+    versionCode: 186
+    commit: 7d719db442da757df63ebf0795754883529e4cb3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.6.3
+    versionCode: 187
+    commit: 73ca7a915c1f10db3fa02120bc7391923d58f0ac
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.6.4
+    versionCode: 188
+    commit: afb7b829159de7dde5b0afa0afcd14288aac9e78
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.6.5
+    versionCode: 189
+    commit: abdc096a1045e3f32834d4ddea911eb44389a155
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.6.7
+    versionCode: 191
+    commit: e02fc48139de4534bd7cb401fc4643269f28044d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.6.8
+    versionCode: 192
+    commit: cac415ac41ab3e53421ac9193c4d59954f855e53
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+  - versionName: 3.6.9
+    versionCode: 193
+    commit: 348bf9fffbfeb698f6d9dd3551de64e1637b1574
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build
+      - apt-get install -y cmake -t bookworm-backports
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+    ndk: 28.1.13356709
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.6.9
+CurrentVersionCode: 193

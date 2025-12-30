@@ -1,0 +1,1 @@
+Emula um cartão inteligente e permite que controle descriptografia

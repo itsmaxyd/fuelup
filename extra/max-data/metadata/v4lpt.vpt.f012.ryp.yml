@@ -1,0 +1,38 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Valentin
+SourceCode: https://github.com/v4lpt/RYP
+IssueTracker: https://github.com/v4lpt/RYP/issues
+
+AutoName: VPT#012-RYP - Rate Your Pics
+
+RepoType: git
+Repo: https://github.com/v4lpt/RYP
+
+Builds:
+  - versionName: 1.0.2
+    versionCode: 102
+    commit: b6c8e92a9677ba215948a52e760d1a0e9379f370
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 103
+    commit: 427d16cfe0d579efe471e02cc9bbeb2042501f01
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 104
+    commit: 007ef40b4f570a89d8a0e223afd6f793d6fe01f9
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.4
+CurrentVersionCode: 104

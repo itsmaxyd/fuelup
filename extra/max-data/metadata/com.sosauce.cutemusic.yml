@@ -1,0 +1,216 @@
+Categories:
+  - Local Media Player
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: sosauce
+AuthorEmail: sosauce_dev@protonmail.com
+AuthorWebSite: https://sosauce.github.io
+SourceCode: https://github.com/sosauce/CuteMusic
+IssueTracker: https://github.com/sosauce/CuteMusic/issues
+Changelog: https://github.com/sosauce/CuteMusic/releases
+
+AutoName: CuteMusic
+
+RepoType: git
+Repo: https://github.com/sosauce/CuteMusic.git
+Binaries: https://github.com/sosauce/CuteMusic/releases/download/v%v/CM_%v.apk
+
+Builds:
+  - versionName: 2.4.1
+    versionCode: 23
+    commit: b048b642e7d9ece15a5142b1852984aaeca17972
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.1
+    versionCode: 25
+    commit: d2b78edbdd337ca3e444535a770f6eb6d53e2135
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/sosauce/CuteMusic/releases/download/v$$VERSION$$/CM_$$VERSION$$.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.6.0
+    versionCode: 26
+    commit: f3a65dda1d934e1eae2afcb2ca68e24dfbe3f2ef
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/sosauce/CuteMusic/releases/download/v$$VERSION$$/CM_$$VERSION$$.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.7.0
+    versionCode: 27
+    commit: 3221809a7c7ed95056bd8aa8f815a7fc10bdd258
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/sosauce/CuteMusic/releases/download/v$$VERSION$$/CM_$$VERSION$$.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.7.1
+    versionCode: 28
+    commit: 04d1d055276cdb03bee8dc5080af83adddd77222
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/sosauce/CuteMusic/releases/download/v$$VERSION$$/CM_$$VERSION$$.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.7.2
+    versionCode: 29
+    commit: 24a4a9e414b260dc518853063422ada811b4060f
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/sosauce/CuteMusic/releases/download/v$$VERSION$$/CM_$$VERSION$$.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.8.0
+    versionCode: 30
+    commit: 46fe3b4bd8cdffaeaa1ef26144ed592bc1e562e1
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/sosauce/CuteMusic/releases/download/v$$VERSION$$/CM_$$VERSION$$.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.8.1
+    versionCode: 31
+    commit: 649ebcc7adbd51c04018418f162bb5cd82c9276e
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/sosauce/CuteMusic/releases/download/v$$VERSION$$/CM_$$VERSION$$.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.8.2
+    versionCode: 32
+    commit: dee3d78e553c2b72225c4ecabca5da7e06276bc4
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/sosauce/CuteMusic/releases/download/v$$VERSION$$/CM_$$VERSION$$.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.8.3
+    versionCode: 33
+    commit: fcaeec1a91cd6d1fd5fa7a771c4d6f4f55956577
+    subdir: app
+    output: build/outputs/apk/release/*.apk
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/sosauce/CuteMusic/releases/download/v$$VERSION$$/CM_$$VERSION$$.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 3.1.0
+    versionCode: 40000
+    commit: ac5a4aa589c3b1b8bf3495e5c949e5ff0390148a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.2
+    versionCode: 40001
+    commit: 1310267eaa6b1dbc5fcb36f952be2b49e2e361e0
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/sosauce/CuteMusic/releases/download/%v/CM_%v.apk
+
+  - versionName: 3.1.4
+    versionCode: 40003
+    commit: 3a06ebfde8a9302449fc1d244210c5a237b998d7
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/sosauce/CuteMusic/releases/download/v%v/CM_%v.apk
+
+AllowedAPKSigningKeys: 7ad65abb70c3b33d0d301affcef8f1c5c22bcada53f770ffbe66df8d33058335
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.1.4
+CurrentVersionCode: 40003

@@ -1,0 +1,44 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Bandcamp itself is not libre.
+Categories:
+  - Internet
+  - Multimedia
+License: GPL-3.0-or-later
+AuthorName: Fynn Godau
+AuthorEmail: fynngodau@mailbox.org
+SourceCode: https://notabug.org/fynngodau/bandcampDirect
+IssueTracker: https://notabug.org/fynngodau/bandcampDirect/issues
+
+AutoName: campfire
+
+RepoType: git
+Repo: https://notabug.org/fynngodau/bandcampDirect.git
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 1
+    commit: release-0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.2'
+    versionCode: 2
+    commit: release-0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.3'
+    versionCode: 3
+    commit: 4ce2fc0414ea8131785a0d7b0094dbb6b8c46764
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions { checkReleaseBuilds false }' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '0.3'
+CurrentVersionCode: 3

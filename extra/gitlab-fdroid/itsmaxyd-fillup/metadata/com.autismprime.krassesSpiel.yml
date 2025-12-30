@@ -1,0 +1,82 @@
+Categories:
+  - Games
+License: AFL-1.1
+SourceCode: https://github.com/Gh05t-1337/krassesSpiel
+IssueTracker: https://github.com/Gh05t-1337/krassesSpiel/issues
+
+AutoName: krassesSpiel
+
+RepoType: git
+Repo: https://github.com/Gh05t-1337/krassesSpiel
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 30ea8fc43f945b6233812eeaafbc35f10409c976
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: 48e19b638966ae99fb5d9dca05b80121ad1294e9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 3
+    commit: 614d0c0318d1931bd51730c071d977d0a1f80ba3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 4
+    commit: 2f57686c9990a3e9dce600950b61b6b87fd54619
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 5
+    commit: 8fea04e07d987ad1b38a56b7e12da97a63e408f4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.4
+    versionCode: 6
+    commit: 21c71f551589b10e076f1a368e964b67b72d9a85
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.4
+CurrentVersionCode: 6

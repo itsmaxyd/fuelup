@@ -1,0 +1,324 @@
+Categories:
+  - Internet
+License: AGPL-3.0-or-later
+AuthorName: Laurent Tréguier
+AuthorEmail: laurent.treguier.developer@gmail.com
+WebSite: https://fyreplace.app
+SourceCode: https://github.com/fyreplace/fyreplace-client-android
+IssueTracker: https://github.com/fyreplace/fyreplace-client-android/issues
+Changelog: https://github.com/fyreplace/fyreplace-client-android/releases
+
+RepoType: git
+Repo: https://github.com/fyreplace/fyreplace-client-android
+
+Builds:
+  - versionName: 0.4.4
+    versionCode: 4004
+    commit: v0.4.4
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - libre
+
+  - versionName: 0.4.6
+    versionCode: 4006
+    commit: v0.4.6
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - libre
+
+  - versionName: 0.4.7
+    versionCode: 4007
+    commit: v0.4.7
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - libre
+
+  - versionName: 0.5.0
+    versionCode: 5000
+    commit: v0.5.0
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.5.2
+    versionCode: 5002
+    commit: v0.5.2
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.5.3
+    versionCode: 5003
+    commit: v0.5.3
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.5.5
+    versionCode: 5005
+    commit: v0.5.5
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.6.2
+    versionCode: 6002
+    commit: v0.6.2
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.6.3
+    versionCode: 6003
+    commit: v0.6.3
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.6.4
+    versionCode: 6004
+    commit: v0.6.4
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.6.5
+    versionCode: 6005
+    commit: v0.6.5
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.6.6
+    versionCode: 6006
+    commit: v0.6.6
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.6.7
+    versionCode: 6007
+    commit: v0.6.7
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.6.8
+    versionCode: 6008
+    commit: v0.6.8
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.6.9
+    versionCode: 6009
+    commit: v0.6.9
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.6.10
+    versionCode: 6010
+    commit: v0.6.10
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.7.1
+    versionCode: 7001
+    commit: v0.7.1
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.7.3
+    versionCode: 7003
+    commit: v0.7.3
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.7.4
+    versionCode: 7004
+    commit: v0.7.4
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.7.5
+    versionCode: 7005
+    commit: v0.7.5
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.7.6
+    versionCode: 7006
+    commit: v0.7.6
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.7.7
+    versionCode: 7007
+    commit: v0.7.7
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.7.8
+    versionCode: 7008
+    commit: v0.7.8
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.0
+    versionCode: 8000
+    commit: v0.8.0
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.2
+    versionCode: 8002
+    commit: v0.8.2
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.3
+    versionCode: 8003
+    commit: v0.8.3
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.6
+    versionCode: 8006
+    commit: v0.8.6
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.7
+    versionCode: 8007
+    commit: v0.8.7
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.8
+    versionCode: 8008
+    commit: v0.8.8
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.9
+    versionCode: 8009
+    commit: v0.8.9
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.10
+    versionCode: 8010
+    commit: v0.8.10
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.12
+    versionCode: 8012
+    commit: v0.8.12
+    subdir: app
+    init: sed -i='' 's/gradle-.*-all/gradle-5.6.4-all/' ../gradle/wrapper/gradle-wrapper.properties
+    gradle:
+      - yes
+
+  - versionName: 0.8.13
+    versionCode: 8013
+    commit: v0.8.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.14
+    versionCode: 8014
+    commit: v0.8.14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.15
+    versionCode: 8015
+    commit: v0.8.15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.16
+    versionCode: 8016
+    commit: v0.8.16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.17
+    versionCode: 8017
+    commit: v0.8.17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.0
+    versionCode: 9000
+    commit: v0.9.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.1
+    versionCode: 9001
+    commit: v0.9.1
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.9.1
+CurrentVersionCode: 9001

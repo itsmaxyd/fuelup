@@ -1,0 +1,53 @@
+Categories:
+  - Games
+License: MIT
+AuthorName: Paul Raffer
+AuthorEmail: blackjack.i1ii1@aleeas.com
+AuthorWebSite: https://paulraffer.github.io
+WebSite: https://paulraffer.github.io/Blackjack
+SourceCode: https://gitlab.com/RafferGames/Blackjack/android
+IssueTracker: https://gitlab.com/RafferGames/Blackjack/android/issues
+Bitcoin: bc1q7a92kr26m5sp6u49cru8652vt5x8s0sfqekpl0
+
+AutoName: Blackjack
+
+RepoType: git
+Repo: https://gitlab.com/RafferGames/Blackjack/android.git
+
+Builds:
+  - versionName: 0.17.1
+    versionCode: 2
+    commit: v0.17.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.21.0
+    versionCode: 3
+    commit: bb9d81f79c2a3f230dc147cd47abed485ab777c2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.29.1
+    versionCode: 4
+    commit: 7f30f9bad6d9f6bece1bc976c661c74e7507963d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.29.1
+CurrentVersionCode: 4

@@ -1,0 +1,24 @@
+Categories:
+  - Security
+  - System
+License: GPL-3.0-or-later
+SourceCode: https://bitbucket.org/oF2pks/neolinker
+IssueTracker: https://bitbucket.org/oF2pks/neolinker/issues?status=new&status=open
+
+AutoName: NeoLinker
+
+RepoType: git
+Repo: https://bitbucket.org/oF2pks/neolinker/src/master/
+
+Builds:
+  - versionName: 2.2-7
+    versionCode: 7
+    commit: v2.2-7
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.2-7
+CurrentVersionCode: 7

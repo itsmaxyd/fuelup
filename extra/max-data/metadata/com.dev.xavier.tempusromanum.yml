@@ -1,0 +1,237 @@
+Categories:
+  - Time
+License: Apache-2.0
+SourceCode: https://github.com/xavierfreyburger/tempus-romanum
+IssueTracker: https://github.com/xavierfreyburger/tempus-romanum/issues
+Changelog: https://github.com/xavierfreyburger/tempus-romanum/releases
+Donate: https://www.paypal.me/XavierFreyburger
+
+AutoName: Tempus Romanum
+
+RepoType: git
+Repo: https://github.com/xavierfreyburger/tempus-romanum
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 20
+    commit: v2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 21
+    commit: v2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 211
+    commit: v2.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 220
+    commit: v2.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 221
+    commit: v2.2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.3
+    versionCode: 223
+    commit: v2.2.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.4
+    versionCode: 224
+    commit: v2.2.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.0
+    versionCode: 230
+    commit: v2.3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.1
+    versionCode: 231
+    commit: f574e9765461aac638688a629313c6d99858a090
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.2
+    versionCode: 232
+    commit: 00ff7ca28255df5e3fa1c5776c2c301b51aaf132
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.3
+    versionCode: 233
+    commit: bd7257bc7cdd5d8a35ef583fb9142fe941ec7967
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.4
+    versionCode: 234
+    commit: 543ed6b8dd9eff72d1e05adeaae5c23c86ec720a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.5
+    versionCode: 235
+    commit: a29b9c939f6f4376fbe7ec48480ea353d7933b45
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 240
+    commit: c4f0a2e24efaed6157aa3994bf413f40ed739ccd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.1
+    versionCode: 241
+    commit: 299234290ab8dbf025936b5e9a85756c76281241
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.2
+    versionCode: 242
+    commit: 5b0e0b754c149d38b7bfa1b78ee4e5667f1aaac8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.3
+    versionCode: 243
+    commit: 90034b5d70df83dffc5bf6462f3a0d57d6f870e0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.4
+    versionCode: 244
+    commit: b58059be2ab27000bc454d4694be4d024ce3f69d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.5
+    versionCode: 245
+    commit: 0514e9563dc6396f3cad85073fb1522f06acdf90
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.4.6
+    versionCode: 246
+    commit: 5fa73f26b8c4213c7a00602644f895a53b8691a3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.5.0
+    versionCode: 250
+    commit: fd05cbf8ec7097757da5c7507dd39153578f8017
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.1
+    versionCode: 251
+    commit: dce181e1a1ddc1b5dcd9a881a7334024ca3c994d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.6.0
+    versionCode: 260
+    commit: c0618bcceb05a9ca1c96f18962fa7977cd513155
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.6.1
+    versionCode: 261
+    commit: 98e4838f144bdaaa5d0d818c26b8e9ca89df403c
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.6.1
+CurrentVersionCode: 261

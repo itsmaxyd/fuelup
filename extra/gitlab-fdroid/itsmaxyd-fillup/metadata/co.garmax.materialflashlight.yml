@@ -1,0 +1,64 @@
+Categories:
+  - System
+License: Apache-2.0
+AuthorName: garmax
+AuthorEmail: garmax1dev@gmail.com
+SourceCode: https://github.com/garmax1/material-flashlight
+IssueTracker: https://github.com/garmax1/material-flashlight/issues
+Changelog: https://github.com/garmax1/material-flashlight/releases
+
+AutoName: Material Flashlight
+Description: |-
+  <b>Flashlight features:</b>
+
+  * On\Off
+  * Strobe with interval
+  * Music strobe
+  * SOS mode
+  * Screen/Camera LED modules
+  * Widgets
+  * Quick Settings Toggle (Android 7 and above)
+
+  <b>Permissions:</b>
+
+  * Camera and flashlight - for using camera LED
+  * Audio Recording - for music strobe feature to analyze noise around
+  * Write system settings - for setting max brightness volume in screen module
+
+RepoType: git
+Repo: https://github.com/garmax1/material-flashlight.git
+
+Builds:
+  - versionName: '2.5'
+    versionCode: 27
+    commit: v2.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 29
+    commit: v2.7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 30
+    commit: 31a9c5b53172fcdc11a0a1ebce580ca0565b588b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '2.8'
+CurrentVersionCode: 30

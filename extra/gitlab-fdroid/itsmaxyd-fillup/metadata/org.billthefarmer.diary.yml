@@ -1,0 +1,699 @@
+Categories:
+  - Note
+  - Writing
+License: GPL-3.0-only
+AuthorName: Bill Farmer
+AuthorWebSite: https://billthefarmer.github.io/
+WebSite: https://billthefarmer.github.io/diary
+SourceCode: https://github.com/billthefarmer/diary
+IssueTracker: https://github.com/billthefarmer/diary/issues
+Changelog: https://github.com/billthefarmer/diary/releases
+
+AutoName: Diary
+
+RepoType: git
+Repo: https://github.com/billthefarmer/diary.git
+
+Builds:
+  - versionName: '1.01'
+    versionCode: 101
+    commit: v1.01
+    gradle:
+      - yes
+
+  - versionName: '1.02'
+    versionCode: 102
+    commit: v1.02
+    gradle:
+      - yes
+
+  - versionName: '1.03'
+    versionCode: 103
+    commit: v1.03
+    gradle:
+      - yes
+
+  - versionName: '1.04'
+    versionCode: 104
+    commit: v1.04
+    gradle:
+      - yes
+
+  - versionName: '1.05'
+    versionCode: 105
+    commit: v1.05
+    gradle:
+      - yes
+
+  - versionName: '1.06'
+    versionCode: 106
+    commit: v1.06
+    gradle:
+      - yes
+
+  - versionName: '1.07'
+    versionCode: 107
+    commit: v1.07
+    gradle:
+      - yes
+
+  - versionName: '1.08'
+    versionCode: 108
+    commit: v1.08
+    gradle:
+      - yes
+
+  - versionName: '1.09'
+    versionCode: 109
+    commit: v1.09
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 110
+    commit: v1.10
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 111
+    commit: v1.11
+    gradle:
+      - yes
+
+  - versionName: '1.12'
+    versionCode: 112
+    commit: v1.12
+    gradle:
+      - yes
+
+  - versionName: '1.13'
+    versionCode: 113
+    commit: v1.13
+    gradle:
+      - yes
+
+  - versionName: '1.14'
+    versionCode: 114
+    commit: v1.14
+    gradle:
+      - yes
+
+  - versionName: '1.15'
+    versionCode: 115
+    commit: v1.15
+    gradle:
+      - yes
+
+  - versionName: '1.16'
+    versionCode: 116
+    commit: v1.16
+    gradle:
+      - yes
+
+  - versionName: '1.17'
+    versionCode: 117
+    commit: v1.17
+    gradle:
+      - yes
+
+  - versionName: '1.18'
+    versionCode: 118
+    commit: v1.18
+    gradle:
+      - yes
+
+  - versionName: '1.19'
+    versionCode: 119
+    commit: v1.19
+    gradle:
+      - yes
+
+  - versionName: '1.20'
+    versionCode: 120
+    commit: v1.20
+    gradle:
+      - yes
+
+  - versionName: '1.21'
+    versionCode: 121
+    commit: v1.21
+    gradle:
+      - yes
+
+  - versionName: '1.22'
+    versionCode: 122
+    commit: v1.22
+    gradle:
+      - yes
+
+  - versionName: '1.23'
+    versionCode: 123
+    commit: v1.23
+    gradle:
+      - yes
+
+  - versionName: '1.24'
+    versionCode: 124
+    commit: v1.24
+    gradle:
+      - yes
+
+  - versionName: '1.25'
+    versionCode: 125
+    commit: v1.25
+    gradle:
+      - yes
+
+  - versionName: '1.26'
+    versionCode: 126
+    commit: v1.26
+    gradle:
+      - yes
+
+  - versionName: '1.27'
+    versionCode: 127
+    commit: v1.27
+    gradle:
+      - yes
+
+  - versionName: '1.28'
+    versionCode: 128
+    commit: v1.28
+    gradle:
+      - yes
+
+  - versionName: '1.29'
+    versionCode: 129
+    commit: v1.29
+    gradle:
+      - yes
+
+  - versionName: '1.30'
+    versionCode: 130
+    commit: v1.30
+    gradle:
+      - yes
+
+  - versionName: '1.31'
+    versionCode: 131
+    commit: v1.31
+    gradle:
+      - yes
+
+  - versionName: '1.32'
+    versionCode: 132
+    commit: v1.32
+    gradle:
+      - yes
+
+  - versionName: '1.33'
+    versionCode: 133
+    commit: v1.33
+    gradle:
+      - yes
+
+  - versionName: '1.34'
+    versionCode: 134
+    commit: v1.34
+    gradle:
+      - yes
+
+  - versionName: '1.35'
+    versionCode: 135
+    commit: v1.35
+    gradle:
+      - yes
+
+  - versionName: '1.36'
+    versionCode: 136
+    commit: v1.36
+    gradle:
+      - yes
+
+  - versionName: '1.37'
+    versionCode: 137
+    commit: v1.37
+    gradle:
+      - yes
+
+  - versionName: '1.38'
+    versionCode: 138
+    commit: v1.38
+    gradle:
+      - yes
+
+  - versionName: '1.39'
+    versionCode: 139
+    commit: v1.39
+    gradle:
+      - yes
+
+  - versionName: '1.40'
+    versionCode: 140
+    commit: v1.40
+    gradle:
+      - yes
+
+  - versionName: '1.41'
+    versionCode: 141
+    commit: v1.41
+    gradle:
+      - yes
+
+  - versionName: '1.42'
+    versionCode: 142
+    commit: v1.42
+    gradle:
+      - yes
+
+  - versionName: '1.43'
+    versionCode: 143
+    commit: v1.43
+    gradle:
+      - yes
+
+  - versionName: '1.44'
+    versionCode: 144
+    commit: v1.44
+    gradle:
+      - yes
+
+  - versionName: '1.45'
+    versionCode: 145
+    commit: v1.45
+    gradle:
+      - yes
+
+  - versionName: '1.46'
+    versionCode: 146
+    commit: v1.46
+    gradle:
+      - yes
+
+  - versionName: '1.47'
+    versionCode: 147
+    commit: v1.47
+    gradle:
+      - yes
+
+  - versionName: '1.48'
+    versionCode: 148
+    commit: v1.48
+    gradle:
+      - yes
+
+  - versionName: '1.49'
+    versionCode: 149
+    commit: v1.49
+    gradle:
+      - yes
+
+  - versionName: '1.50'
+    versionCode: 150
+    commit: v1.50
+    gradle:
+      - yes
+
+  - versionName: '1.51'
+    versionCode: 151
+    commit: v1.51
+    gradle:
+      - yes
+
+  - versionName: '1.52'
+    versionCode: 152
+    commit: v1.52
+    gradle:
+      - yes
+
+  - versionName: '1.53'
+    versionCode: 153
+    commit: v1.53
+    gradle:
+      - yes
+
+  - versionName: '1.54'
+    versionCode: 154
+    commit: v1.54
+    gradle:
+      - yes
+
+  - versionName: '1.55'
+    versionCode: 155
+    commit: v1.55
+    gradle:
+      - yes
+
+  - versionName: '1.56'
+    versionCode: 156
+    commit: v1.56
+    gradle:
+      - yes
+
+  - versionName: '1.57'
+    versionCode: 157
+    commit: v1.57
+    gradle:
+      - yes
+
+  - versionName: '1.58'
+    versionCode: 158
+    commit: v1.58
+    gradle:
+      - yes
+
+  - versionName: '1.59'
+    versionCode: 159
+    commit: v1.59
+    gradle:
+      - yes
+
+  - versionName: '1.60'
+    versionCode: 160
+    commit: v1.60
+    gradle:
+      - yes
+
+  - versionName: '1.61'
+    versionCode: 161
+    commit: v1.61
+    gradle:
+      - yes
+
+  - versionName: '1.62'
+    versionCode: 162
+    commit: v1.62
+    gradle:
+      - yes
+
+  - versionName: '1.63'
+    versionCode: 163
+    commit: v1.63
+    gradle:
+      - yes
+
+  - versionName: '1.64'
+    versionCode: 164
+    commit: v1.64
+    gradle:
+      - yes
+
+  - versionName: '1.65'
+    versionCode: 165
+    commit: v1.65
+    gradle:
+      - yes
+
+  - versionName: '1.66'
+    versionCode: 166
+    commit: v1.66
+    gradle:
+      - yes
+
+  - versionName: '1.67'
+    versionCode: 167
+    commit: v1.67
+    gradle:
+      - yes
+
+  - versionName: '1.68'
+    versionCode: 168
+    commit: v1.68
+    gradle:
+      - yes
+
+  - versionName: '1.69'
+    versionCode: 169
+    commit: v1.69
+    gradle:
+      - yes
+
+  - versionName: '1.70'
+    versionCode: 170
+    commit: v1.70
+    gradle:
+      - yes
+
+  - versionName: '1.71'
+    versionCode: 171
+    commit: v1.71
+    gradle:
+      - yes
+
+  - versionName: '1.72'
+    versionCode: 172
+    commit: v1.72
+    gradle:
+      - yes
+
+  - versionName: '1.73'
+    versionCode: 173
+    commit: v1.73
+    gradle:
+      - yes
+
+  - versionName: '1.74'
+    versionCode: 174
+    commit: v1.74
+    gradle:
+      - yes
+
+  - versionName: '1.75'
+    versionCode: 175
+    commit: v1.75
+    gradle:
+      - yes
+
+  - versionName: '1.76'
+    versionCode: 176
+    commit: v1.76
+    gradle:
+      - yes
+
+  - versionName: '1.77'
+    versionCode: 177
+    commit: v1.77
+    gradle:
+      - yes
+
+  - versionName: '1.78'
+    versionCode: 178
+    commit: v1.78
+    gradle:
+      - yes
+
+  - versionName: '1.79'
+    versionCode: 179
+    commit: 8177ddf336a6ad80e3452eb01aff38b3144c7d9a
+    gradle:
+      - yes
+
+  - versionName: '1.80'
+    versionCode: 180
+    commit: v1.80
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.81'
+    versionCode: 181
+    commit: ded797934b4bc8bc57b47d3edbc5869ea87a0aba
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.82'
+    versionCode: 182
+    commit: 116e81dd1ca21dd085baa8152dd0c0cc2fba5971
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.83'
+    versionCode: 183
+    commit: 9cb564550fe8da6402490f50121c8238dacd707b
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.84'
+    versionCode: 184
+    commit: cff5eaa6f3bbb51b01637ee032eb9be2e92ef7e3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.85'
+    versionCode: 185
+    commit: f133b6063a3914397de48809f9f933fb172b7458
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.86'
+    versionCode: 186
+    commit: 86fd130ddfa0efae679befb41bd5b10417e2ea28
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.87'
+    versionCode: 187
+    commit: 9c4ab227e9b9bba52a4b9fd9aec2e36d98c59f53
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.88'
+    versionCode: 188
+    commit: 9f47d849f423eb0213f4627e20d08882ff4b0697
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.89'
+    versionCode: 189
+    commit: a10d1b1b33687bac639201138d13d5bab5232d9d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.90'
+    versionCode: 190
+    commit: 314dc6f5994176576495bcb16d8b7b1d81678210
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.91'
+    versionCode: 191
+    commit: f6a3faa39dc5526023335d513c4da8ddc2096665
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.92'
+    versionCode: 192
+    commit: 2cb5437babc229b99a8c8f0d91ed65ae462d005a
+    gradle:
+      - yes
+
+  - versionName: '1.93'
+    versionCode: 193
+    commit: 743d36a89801aebe6bd6a55bb682f93f0a501102
+    gradle:
+      - yes
+
+  - versionName: '1.94'
+    versionCode: 194
+    commit: f9db463db767fd1779f57b72f2838ebaa1f78a0d
+    gradle:
+      - yes
+
+  - versionName: '1.95'
+    versionCode: 195
+    commit: a58759ccbe1fad843b492684f9b3a4537ab61b99
+    gradle:
+      - yes
+
+  - versionName: '1.96'
+    versionCode: 196
+    commit: 7d173353532eea6860344551ea59bb93eb2ce7e8
+    gradle:
+      - yes
+
+  - versionName: '1.97'
+    versionCode: 197
+    commit: 33f87b03863c306520550c3b6c2406cfbf0cb853
+    gradle:
+      - yes
+
+  - versionName: '1.98'
+    versionCode: 198
+    commit: f56016227e75c6b29c113c6280aaf44796583dd9
+    gradle:
+      - yes
+
+  - versionName: '1.99'
+    versionCode: 199
+    commit: fa4dd5c541b7b65068cf117404eaa54189e95fe8
+    gradle:
+      - yes
+
+  - versionName: '1.100'
+    versionCode: 1100
+    commit: e21c15fca1b68f662ec77096694f0bf3e7c4bc2d
+    gradle:
+      - yes
+
+  - versionName: '1.101'
+    versionCode: 1101
+    commit: d7bc5545949863411c1b8d4c32e5db27980a0f98
+    gradle:
+      - yes
+
+  - versionName: '1.102'
+    versionCode: 1102
+    commit: 2d2b52095c94e3b324c832bbdc99fa41cc1914ea
+    gradle:
+      - yes
+
+  - versionName: '1.103'
+    versionCode: 1103
+    commit: 68522e0e0ee763e97c8e23a4481e17813f599def
+    gradle:
+      - yes
+
+  - versionName: '1.104'
+    versionCode: 1104
+    commit: c94a8810aa77985a6a780e9372d318966b88e1a4
+    gradle:
+      - yes
+
+  - versionName: '1.105'
+    versionCode: 1105
+    commit: 07bb05c3b7a8ea90db5efdc8f574b9f334402a71
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.105'
+CurrentVersionCode: 1105

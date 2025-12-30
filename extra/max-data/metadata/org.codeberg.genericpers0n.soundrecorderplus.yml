@@ -1,0 +1,52 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Avery King
+SourceCode: https://codeberg.org/generic-pers0n/SoundRecorderPlus
+IssueTracker: https://codeberg.org/generic-pers0n/SoundRecorderPlus/issues
+Changelog: https://codeberg.org/generic-pers0n/SoundRecorderPlus/releases
+
+AutoName: Sound Recorder Plus
+
+RepoType: git
+Repo: https://codeberg.org/generic-pers0n/SoundRecorderPlus
+Binaries: https://codeberg.org/generic-pers0n/SoundRecorderPlus/releases/download/v%v/sound-recorder-plus-v%v.apk
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 100
+    commit: v1.0.0
+    subdir: app
+    sudo:
+      - apt update
+      - apt install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 110
+    commit: 45ff50d803b14c985ca5c1fce50d3b78d45f4ec0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 111
+    commit: 3164c8cbae730b085e2fd43979f06994d1f26010
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://codeberg.org/generic-pers0n/SoundRecorderPlus/releases/download/v1.1.1-fixed/sound-recorder-plus-v1.1.1.apk
+
+AllowedAPKSigningKeys: 778c18d981c416ae58fe4896c96b7a6f8580c8d241110f0b5909160ea08d9e66
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.1
+CurrentVersionCode: 111

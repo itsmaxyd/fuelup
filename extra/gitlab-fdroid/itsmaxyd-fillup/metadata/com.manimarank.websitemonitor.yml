@@ -1,0 +1,100 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App connects to icons.duckduckgo.com.
+Categories:
+  - Internet
+License: GPL-3.0-only
+AuthorName: Manimaran
+SourceCode: https://gitlab.com/manimaran/website-monitor
+IssueTracker: https://gitlab.com/manimaran/website-monitor/issues
+
+AutoName: Website Monitor
+
+RepoType: git
+Repo: https://gitlab.com/manimaran/website-monitor.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 2
+    commit: v1.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 3
+    commit: d29a1b7029a2d7536d922d5b53631361e66af25a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 5
+    commit: 561f102bf157f57b58fe5fff7603c632a08be9ee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 6
+    commit: 7114804cf8765534192997f10eecf2c19b4ed41c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 7
+    commit: 7be5b4daaed22e991245fdf6f506c19fbba6b893
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 8
+    commit: c543f0f4712d9aa3d4f7dd3ed7a51131cf0e5432
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.0
+    versionCode: 9
+    commit: 8801ef1ec2dd8df102945da8e43babd0477b39fe
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 5.0.0
+    versionCode: 11
+    commit: af7bdfc3001285b5ba1f090c8020b330fee7e099
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle/libs.versions.toml|versionCode = "(\d+)"|.|versionName = "(.*)"
+CurrentVersion: 5.0.0
+CurrentVersionCode: 11

@@ -1,0 +1,397 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: David Weis
+AuthorEmail: hi@davidweis.eu
+AuthorWebSite: https://davidweis.eu
+SourceCode: https://github.com/elastic-rock/KeepScreenOn
+IssueTracker: https://github.com/elastic-rock/KeepScreenOn/issues
+Donate: https://github.com/sponsors/elastic-rock
+
+AutoName: Keep Screen On
+
+RepoType: git
+Repo: https://github.com/elastic-rock/KeepScreenOn.git
+Binaries: https://github.com/elastic-rock/KeepScreenOn/releases/download/v%v/com.elasticrock.keepscreenon_v%v.apk
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: v1.0.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 2
+    commit: 95e2f9846abf8a196eef1995ca38da98d60493ad
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 3
+    commit: 81da9f5ec1b4bdd6f9bfe3c75bed26fd9aa4f2ae
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 5
+    commit: bffdaa691e91cb41ec56ea0fffd41d12ef2c8c51
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 6
+    commit: 87b189f30218660f72070aaeb818943fa8eabe9c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 7
+    commit: 91d061e87704664e474a5e67d5a7846f2c24530d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 8
+    commit: 237daaf5b27ab65ea80ac85e644e5e39fa84fa69
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.9.2
+    versionCode: 12
+    commit: 249539ea3748b0bfc124f0e5eb87dbbad6587e5f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.10.0
+    versionCode: 13
+    commit: e547d87e7de17ae3c5ea3b4da28f31961ac3622b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.0
+    versionCode: 14
+    commit: cd91f6e49ab56c41d65832a7f9fc1159dd3e621d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.12.0
+    versionCode: 15
+    commit: 6e849b90ac179c19290beb07fd94b6012e2d2eab
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.12.1
+    versionCode: 16
+    commit: 2241c2dc7c7eb7119058167957732c5ac9c8099a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.13.1
+    versionCode: 18
+    commit: 8987d9b45e1f049583f547e5f525823b884dd63b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.14.0
+    versionCode: 19
+    commit: 3c999174b92e2c177ba0a4eae27085900a8866fc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.15.0
+    versionCode: 20
+    commit: df628211c7dca20b8256c57e0cfac8087ba6d510
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.16.0
+    versionCode: 21
+    commit: 67888fd091cd6d8c995ec09c03bbaa1035970a6e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.16.1
+    versionCode: 22
+    commit: 455bfb883c068f040d7275e7e8f4ba545c94ef56
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.16.2
+    versionCode: 23
+    commit: f4e6cf726d88021d91c0d44229b4cdcd51b86293
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.17.0
+    versionCode: 24
+    commit: f0e1707f39815a9bbc360d134cef817920da27ee
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.17.1
+    versionCode: 25
+    commit: 1b713b27d4a1bac1846219b18a388e993a9d1c32
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 1.18.1
+    versionCode: 27
+    commit: a769647b75c59910d308b98759aee7e70408c152
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.6
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
+
+  - versionName: 1.18.2
+    versionCode: 28
+    commit: b0b26ac16c084d32f6c1f9b9f2061267692a976d
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.6
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
+
+  - versionName: 1.20.3
+    versionCode: 34
+    commit: 1ea1ffe99e740496af27af06aa61511af542e068
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.6
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'res/7Y' 'res/Hz'
+
+  - versionName: 1.20.4
+    versionCode: 35
+    commit: f8970831ed6dec14eae7c4fbb69653f65501d6e6
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.6
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'res/7Y' 'res/Hz'
+
+  - versionName: 1.21.0
+    versionCode: 36
+    commit: f74ab07f50fddb9ab2b66beb6df4384ca083db86
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    prebuild: git reset --soft 9bb2745457ed1e26af5ff918dd8e87c5649c1140
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'res/7Y' 'res/Hz' 'META-INF/services/*'
+
+  - versionName: 1.21.1
+    versionCode: 37
+    commit: c8bdffb93c8c02919e0da2dca60e16d2ca1e242a
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'res/7Y' 'res/Hz' 'META-INF/services/*'
+
+  - versionName: 1.24.0
+    versionCode: 48
+    commit: 771a61885233595bb7c8a33bc3b857bc3833ecd4
+    subdir: app
+    gradle:
+      - general
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'res/7Y' 'res/Hz' 'META-INF/services/*'
+
+  - versionName: 1.25.0
+    versionCode: 49
+    commit: 422f3c8e9ed93afbb9a58b665dd7d79641986642
+    subdir: app
+    gradle:
+      - general
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'res/7Y' 'res/Hz' 'META-INF/services/*'
+
+  - versionName: 1.25.1
+    versionCode: 50
+    commit: e285cfbb0fc58ae9d93a7783d584f1e656c12744
+    subdir: app
+    gradle:
+      - general
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'res/7Y' 'res/Hz' 'META-INF/services/*'
+
+  - versionName: 1.26.3
+    versionCode: 55
+    commit: d7fcb09d3641dc764a95879023ca27670e1f6d6b
+    subdir: app
+    gradle:
+      - general
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'res/7Y' 'res/Hz' 'META-INF/services/*'
+
+  - versionName: 1.27.0
+    versionCode: 56
+    commit: 48e752f97fcdd7f60a0114f974adb4ec35a6e11a
+    subdir: app
+    gradle:
+      - general
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'res/7Y' 'res/Hz' 'META-INF/services/*'
+
+AllowedAPKSigningKeys: bb9503be1486028133b33eabce9732100e9a331065e32fa2a033a93498bae6d6
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.27.0
+CurrentVersionCode: 56

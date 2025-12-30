@@ -1,0 +1,226 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+WebSite: http://www.yaacc.de
+SourceCode: https://github.com/tobexyz/yaacc-code
+IssueTracker: https://github.com/tobexyz/yaacc-code/issues
+Changelog: https://github.com/tobexyz/yaacc-code/releases
+
+AutoName: YAACC
+
+RepoType: git
+Repo: https://github.com/tobexyz/yaacc-code.git
+
+Builds:
+  - versionName: 2.0.0
+    versionCode: 20
+    commit: 2.0.0
+    gradle:
+      - yes
+    output: yaacc/build/outputs/apk/release/yaacc-release-unsigned.apk
+    preassemble:
+      - build
+
+  - versionName: 2.0.1
+    versionCode: 21
+    commit: 2.0.1
+    gradle:
+      - yes
+    output: yaacc/build/outputs/apk/release/yaacc-release-unsigned.apk
+    preassemble:
+      - build
+
+  - versionName: 2.0.2
+    versionCode: 22
+    commit: 2.0.2
+    gradle:
+      - yes
+    output: yaacc/build/outputs/apk/release/yaacc-release-unsigned.apk
+    preassemble:
+      - build
+
+  - versionName: 2.1.0
+    versionCode: 23
+    commit: 2.1.0
+    gradle:
+      - yes
+    output: yaacc/build/outputs/apk/release/yaacc-release-unsigned.apk
+    preassemble:
+      - build
+
+  - versionName: 2.1.1
+    versionCode: 24
+    commit: 2.1.1
+    gradle:
+      - yes
+    output: yaacc/build/outputs/apk/release/yaacc-release-unsigned.apk
+    preassemble:
+      - build
+
+  - versionName: 2.2.0
+    versionCode: 25
+    commit: 2.2.0
+    gradle:
+      - yes
+    output: yaacc/build/outputs/apk/release/yaacc-release-unsigned.apk
+    preassemble:
+      - build
+
+  - versionName: 2.3.0
+    versionCode: 26
+    commit: 2.3.0
+    gradle:
+      - yes
+    output: yaacc/build/outputs/apk/release/yaacc-release-unsigned.apk
+    preassemble:
+      - build
+
+  - versionName: 2.3.1
+    versionCode: 27
+    commit: a1ed73188aa2413a42a77807a548af8b976daab4
+    subdir: yaacc
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    rm:
+      - test/libs
+    preassemble:
+      - :clingbuild:build
+
+  - versionName: 2.3.2
+    versionCode: 28
+    commit: 874ece8306f232c71a079e345d8c91c7e1b0e517
+    subdir: yaacc
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    preassemble:
+      - :clingbuild:build
+
+  - versionName: 3.0.0
+    versionCode: 30000
+    commit: bd884abcfc16b488cf6781043cca902e3e1e8b24
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 3.1.0
+    versionCode: 30100
+    commit: 901a3128807d9e705fbb387ed5ddb751c3f2b623
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 3.2.0
+    versionCode: 30200
+    commit: 11c22d76ccd54cf7a9dfeab4052c201739ff37c3
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 3.3.0
+    versionCode: 30300
+    commit: f6a0b48e72b6c8e39ac28c0d4fa1cccde475bfd4
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 4.0.0
+    versionCode: 40000
+    commit: c2d55df6c898026bd9a5dff578efb9a987d191ce
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 4.0.1
+    versionCode: 40001
+    commit: 554156114732f127ad5f9110d61c11865815f1b2
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 4.0.2
+    versionCode: 40002
+    commit: 883759f098b19c4c7b6e47cb9daf57389d4e949a
+    subdir: yaacc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.0.3
+    versionCode: 40003
+    commit: 12422aeadf5d44f8ce5258f2ec595a216ff9bee2
+    subdir: yaacc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.1.0
+    versionCode: 40100
+    commit: 693eff65f3cf9c7865c5e5b61cdf416f00a28a62
+    subdir: yaacc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.2.0
+    versionCode: 40200
+    commit: a12175a90671350ce7879a37a88174638d7122fc
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 4.3.0
+    versionCode: 40300
+    commit: 040bf19f2d2e92a27ed8dd883fe0d4d519f1d90d
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 4.3.1
+    versionCode: 40301
+    commit: 1b49b39c445e620a35aef08f986bf51a5b5d7e06
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 4.3.2
+    versionCode: 40302
+    commit: e1bed1a7fde250f850a6a10be5b741a982fb8d1c
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 4.4.0
+    versionCode: 40400
+    commit: 07973d6f00d7c84c18fe64d1433279d871f87a71
+    subdir: yaacc
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.13.0/8.11.1/' build.gradle
+
+  - versionName: 4.4.1
+    versionCode: 40401
+    commit: b453625a16a1718d8973971861688ef226d6b20d
+    subdir: yaacc
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.13.0/8.11.1/' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 4.4.1
+CurrentVersionCode: 40401

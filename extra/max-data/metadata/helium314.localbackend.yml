@@ -1,0 +1,179 @@
+Categories:
+  - Navigation
+  - System
+License: GPL-3.0-or-later
+AuthorEmail: helium314@disroot.org
+SourceCode: https://github.com/Helium314/Local-NLP-Backend
+IssueTracker: https://github.com/Helium314/Local-NLP-Backend/issues
+Changelog: https://github.com/Helium314/Local-NLP-Backend/blob/HEAD/CHANGELOG.md
+
+AutoName: Local NLP Backend
+
+RepoType: git
+Repo: https://github.com/Helium314/Local-NLP-Backend.git
+
+Builds:
+  - versionName: 1.2.0-beta
+    versionCode: 23
+    commit: a51792b87632f9c84deb230af4c6e46fc2d3b42f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.0-beta.2
+    versionCode: 24
+    commit: ac46c78385dfacfc873d930363acbbd4dd475eec
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.0-beta.3
+    versionCode: 25
+    commit: c4191a001e0480861d9aa56ae097cb83bc29b430
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.0-beta.4
+    versionCode: 26
+    commit: f4e329400d015cffbf3a67550c1e44986ba25efc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 28
+    commit: 0777d667d3da5cd9d519459c180a41a74bd69eff
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.2-beta.1
+    versionCode: 29
+    commit: 6ea9634a90ed6b0e876e033fd1f76ff8585ca041
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 30
+    commit: 6055a2b91ef4b6b69723ac5fede997f0c1473cbc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.3
+    versionCode: 31
+    commit: 95f08c1665527c4639aac4434ea7ce92458c8296
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.4
+    versionCode: 32
+    commit: 22f4bc68831ed7547554654138a1fbaa7be5a634
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.5
+    versionCode: 33
+    commit: ace303c1a2ac8f05f287629b41236c3f6b659c77
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.6
+    versionCode: 34
+    commit: 0765b3657d61718aca6fdb1a9e29ebcce5c35c20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.7
+    versionCode: 35
+    commit: 509e0c4e4441943bdb9f6e712083a589be5a6223
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.8
+    versionCode: 36
+    commit: b0a1791b983a686f7d7f5b73be897e52c5f611ea
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.9
+    versionCode: 37
+    commit: a67ea85110f50cd6a37840086b9e358fc349d57b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.10
+    versionCode: 38
+    commit: 264244b20e206ee437348c3810c44845088a8f39
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.11
+    versionCode: 39
+    commit: 939e43c11043274313ca5f7056e8c69f76224be0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.12
+    versionCode: 40
+    commit: 773c25c34a4725dfd8c54d8fd9bffc377f902c42
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.13
+    versionCode: 41
+    commit: 8220db0a05e13928a4c08d6e8e81bb0fe13780ff
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.14
+    versionCode: 42
+    commit: d834076955b936887ece07ba05dbf9d582363072
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.15
+    versionCode: 43
+    commit: f05204722bca26b7f110ae7e5c200293da77d4bb
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.2.15
+CurrentVersionCode: 43

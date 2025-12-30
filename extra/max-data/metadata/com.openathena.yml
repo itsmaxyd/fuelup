@@ -1,0 +1,256 @@
+Categories:
+  - Navigation
+  - Science & Education
+License: AGPL-3.0-only
+AuthorName: Matthew Krupczak
+AuthorWebSite: https://theta.limited
+SourceCode: https://github.com/Theta-Limited/OpenAthenaAndroid
+Changelog: https://github.com/Theta-Limited/OpenAthenaAndroid/releases
+
+AutoName: OpenAthena™ for Android
+
+RepoType: git
+Repo: https://github.com/Theta-Limited/OpenAthenaAndroid.git
+Binaries: https://github.com/Theta-Limited/OpenAthenaAndroid/releases/download/v%v/OpenAthena_for_Android_v%v.apk
+
+Builds:
+  - versionName: 0.19.3
+    versionCode: 28
+    commit: v0.19.3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.19.4
+    versionCode: 29
+    commit: 965db37d26fb6035d01e9cf361cf31815f0ed581
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.19.5
+    versionCode: 30
+    commit: 056032ebefeb91805eb4803d7b881f6a4c8eac9d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.19.6
+    versionCode: 31
+    commit: e672695d23c6db3bd66b6a24594a3f13c11038fb
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.19.8
+    versionCode: 33
+    commit: 69e8260db4179badb7ebd763c95628c9eae91cc1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.19.9
+    versionCode: 34
+    commit: 09a2cfcfbc43d3457e784a463947ebf627bd2ccb
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.20.0
+    versionCode: 35
+    commit: e6dc82c20ada5bc8993b5eeb0e3599595ad5cfda
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.20.2
+    versionCode: 37
+    commit: 22e50bcb931298499cc69be7022af7b9161934b3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.20.3
+    versionCode: 38
+    commit: 8cef83a2367593da2dd41d0050d4cade438aea8f
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.20.4
+    versionCode: 39
+    commit: 893d34ca33e2ec69cd5511974d8332946fe5b829
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.21.0
+    versionCode: 41
+    commit: cc734d48f3524466e6eead2e4bd78cc610fbf3ec
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.21.2
+    versionCode: 43
+    commit: 17edef7234894ed4a9342032aded1498e87183f5
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.21.3
+    versionCode: 44
+    commit: 5058cbabecd943abe37c4c0b9eebc93d7717fdcd
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.22.0
+    versionCode: 45
+    commit: 0a1f9290d828cb53cb2a1b6c4ef9a947314189a0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.23.0
+    versionCode: 46
+    commit: d5f537e1691193d6e031c4d5b57415ea499d6e66
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.24.0
+    versionCode: 48
+    commit: bc1ec0a60ce44209a2b60dab5089ebfa0e34def3
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+  - versionName: 0.25.0
+    versionCode: 50
+    commit: fad595973043d93f7e964e5f55ed398639b9b856
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/resources/EGM96complete.dat.gz
+      - app/src/main/assets/EGM96complete.bin
+
+AllowedAPKSigningKeys: 4faa6dab09f9d15ac204ea8b8c056ccaf8c52993007cd643001a3d3497c7944b
+
+MaintainerNotes: |-
+  The scanignore'd binary files of hash:
+  ace58e67f0bbda6c382c503aeb3558ce330bd637871af22a9a147a10a5f360a3
+  contain the offset values for the EGM96 Geoid model of the Earth,
+  necessary for vertical datum conversion. They are sourced from:
+  https://github.com/matthiaszimmermann/EGM96/
+  They do not contain any code or trigger any dynamic behavior
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+CurrentVersion: 0.25.0
+CurrentVersionCode: 50

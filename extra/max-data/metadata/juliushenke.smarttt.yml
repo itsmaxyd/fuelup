@@ -1,0 +1,53 @@
+Categories:
+  - Time
+License: GPL-3.0-only
+SourceCode: https://github.com/JuliusHenke/Timetable-App
+IssueTracker: https://github.com/JuliusHenke/Timetable-App/issues
+
+Name: Timetable
+AutoName: Timetable      //Single words ------------------------------------------------------------------
+Description: |-
+  <i>Smart Timetable</i> is a simple app for school and university time tables.
+
+  The "Smart Timetable" is designed to be quick to set up and use. You can
+  save information like the room of your subject or your teacher.
+
+  The app also makes it possible to have an fitted timetable for even and odd
+  weeks. This means you can save 2 timetables which rotate every week.
+
+RepoType: git
+Repo: https://github.com/JuliusHenke/Timetable-App
+
+Builds:
+  - versionName: '2.3'
+    versionCode: 17
+    commit: '2.3'
+    subdir: app/
+    gradle:
+      - yes
+
+  - versionName: 2.4.2
+    versionCode: 20
+    commit: 2.4.2
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: echo "android.useAndroidX=true" > ../gradle.properties
+
+  - versionName: 2.4.3
+    versionCode: 21
+    commit: 07b1a8c2826ceed09d02b68868c1947e0cf9f2a7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: echo "android.useAndroidX=true" > ../gradle.properties
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2.4.3
+CurrentVersionCode: 21

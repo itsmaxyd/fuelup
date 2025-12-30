@@ -1,0 +1,1 @@
+Visualitzador lleuger per a marcadors Nextcloud

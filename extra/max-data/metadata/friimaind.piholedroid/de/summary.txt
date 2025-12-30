@@ -1,0 +1,1 @@
+Verbindung zu einem Pi-hole, um Grafiken und Statistiken anzuzeigen

@@ -1,0 +1,118 @@
+Connectivity:
+  name: الاتصال
+Development:
+  name: التطوير
+Games:
+  name: الألعاب
+Graphics:
+  name: الرسومات
+Internet:
+  name: الإنترنت
+Money:
+  name: المالية
+Multimedia:
+  name: الوسائط المتعددة
+Navigation:
+  name: التصفح
+Phone & SMS:
+  name: الهاتف و الرسائل القصيرة
+Reading:
+  name: القراءة
+Science & Education:
+  name: العلوم و التعليم
+Security:
+  name: الأمان
+Sports & Health:
+  name: الرياضة و الصحة
+System:
+  name: النظام
+Theming:
+  name: السمات
+Time:
+  name: الوقت
+Writing:
+  name: الكتابة
+Email:
+  name: البريد الإلكتروني
+VPN & Proxy:
+  name: وسيط وVPN
+DNS & Hosts:
+  name: DNS والمضيفون
+File Encryption & Vault:
+  name: تعمية الملفات والخزنة
+File Transfer:
+  name: نقل الملفات
+Messaging:
+  name: مراسلة
+Password & 2FA:
+  name: كلمات السر والاستيثاق الثنائي
+Social Network:
+  name: شبكة اجتماعية
+App Store & Updater:
+  name: متجر التطبيقات والمُحدِّث
+Browser:
+  name: المتصفح
+Keyboard & IME:
+  name: لوحة المفاتيح وIME
+Local Media Player:
+  name: مشغل الوسائط المحلي
+Online Media Player:
+  name: مشغل الوسائط عبر الإنترنت
+Podcast:
+  name: بودكاست
+Weather:
+  name: الطقس
+News:
+  name: أخبار
+Cloud Storage & File Sync:
+  name: التخزين السحابي ومزامنة الملفات
+Calendar & Agenda:
+  name: التقويم والأجندة
+Voice & Video Chat:
+  name: المحادثة الصوتية والمرئية
+Wallet:
+  name: المحفظة
+Bookmark:
+  name: علامة
+Calculator:
+  name: حاسبة
+Draw:
+  name: رسم
+Ebook Reader:
+  name: قارئ الكتب الإلكترونية
+Finance Manager:
+  name: مدير مالي
+Gallery:
+  name: معرض
+Icon Pack:
+  name: حزمة الأيقونات
+Launcher:
+  name: مُطلِق
+Note:
+  name: ملاحظة
+Recipe Manager:
+  name: مدير الوصفات
+Text Editor:
+  name: محرِّر نصوص
+Translation & Dictionary:
+  name: ترجمة وقواميس
+Unit Convertor:
+  name: محول الوحدات
+Wallpaper:
+  name: خلفية الشاشة
+Workout:
+  name: تمرين
+Pass Wallet:
+  name: محفظة المرور
+Public Transport:
+  name: خريطة ومواعيد النقل العام
+Shopping List:
+  name: قائمة التسوق
+Task:
+  name: مهمة
+Forum:
+  name: المنتدى
+Habit Tracker:
+  name: متتبع العادات
+Location Tracker & Sharer:
+  name: متتبع ومشارك الموقع

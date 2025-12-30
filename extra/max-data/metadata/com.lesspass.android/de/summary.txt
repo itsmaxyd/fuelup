@@ -1,0 +1,1 @@
+Auf einem Master-Passwort basierende Einmalpasswörter für Konten erzeugen

@@ -1,0 +1,301 @@
+Categories:
+  - News
+  - Reading
+License: GPL-3.0-only
+AuthorName: Ashinch
+AuthorEmail: Ashinch@outlook.it
+AuthorWebSite: https://www.ashinch.com/
+SourceCode: https://github.com/Ashinch/ReadYou
+IssueTracker: https://github.com/Ashinch/ReadYou/issues
+Changelog: https://github.com/Ashinch/ReadYou/releases
+
+AutoName: Read You
+
+RepoType: git
+Repo: https://github.com/Ashinch/ReadYou.git
+
+Builds:
+  - versionName: 0.8.1
+    versionCode: 12
+    commit: 056f641b139f0b894c317d6523fdf1a795374eda
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.8.3
+    versionCode: 13
+    commit: 7a47329902c08933058f3ccaef0178a8b08cb16e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.9.0
+    versionCode: 14
+    commit: 850a2317ef78799acf95d537fb6e0a7d08ce3847
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.9.1
+    versionCode: 15
+    commit: db8fb339ebea4f39338154c2310b5e64eefc2cc6
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.9.5
+    versionCode: 16
+    commit: 03082d183050b5590acc38e40a8f6efc06ec8a27
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.9.6
+    versionCode: 17
+    commit: 826e56bc2b0680a323f6c623d29c589f1761c781
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.9.7
+    versionCode: 18
+    commit: 61bf5fb751ce1f7af2a6c10a457c445fdd717fd9
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.9.8
+    versionCode: 19
+    commit: 84156d2754b54361695cfd28c9655e31753915f7
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/8.0-rc-1-bin/8.0-bin/' ../gradle/wrapper/gradle-wrapper.properties
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.9.10
+    versionCode: 21
+    commit: 5d1bdfb5f37f26886ba44c5b7539fec1d696f5a4
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/8.0-rc-1-bin/8.0-bin/' ../gradle/wrapper/gradle-wrapper.properties
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.9.11
+    versionCode: 22
+    commit: 27f700dbba107ab3ec4315e91b60161b9853d898
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.9.12
+    versionCode: 23
+    commit: 6176a780cc1f5cd17afaeaad990f755d9f333726
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to images.unsplash.com and besticon-demo.herokuapp.com
+
+  - versionName: 0.10.1
+    versionCode: 25
+    commit: 688eabd8f12d2cde09b9c58b4a1eacd8fdbb37c8
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.11.0
+    versionCode: 26
+    commit: ea0c6272157d9e633a0c56d0f6da7a08878fb675
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.11.1
+    versionCode: 27
+    commit: 99eca4b1093c3a46077dfc32f42afb2e1a3f922f
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.12.1
+    versionCode: 29
+    commit: eeb2aad50b0f4cad238d188fe7b90771e7e78642
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.12.2
+    versionCode: 30
+    commit: cf440ef11126657c2f88673639623dad2476b2c2
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.13.1
+    versionCode: 32
+    commit: 15b8ba20dae165abdf559aa89812cb3414fba240
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.14.1
+    versionCode: 34
+    commit: 0f6b2c4e5421c17db34f4b304a55176546d92b45
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.14.2
+    versionCode: 35
+    commit: d8a6ef419ab7ebeb2fbde0a20c703834d4369e41
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.14.3
+    versionCode: 36
+    commit: e100727adf2d007dc301171768079cb6d10fcdfd
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.14.4
+    versionCode: 37
+    commit: 947dd6557af37b2f4dddf6ea49a3740196557b9c
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.14.5
+    versionCode: 38
+    commit: 27d21abc42d77d55afece080d61eaac470a8c27e
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.15.0
+    versionCode: 41
+    commit: 8c3c54bc2f378c41cdceed909f4945c02b613f72
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/signingConfigs.getByName/d' build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.15.1
+    versionCode: 42
+    commit: 3a119175a4eb9cfe52322366bb9584859341b191
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/signingConfigs.getByName/d' build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.15.2
+    versionCode: 43
+    commit: 9589ed84dd6926add35128f737c4dba4917329f4
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/signingConfigs.getByName/d' build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+  - versionName: 0.15.3
+    versionCode: 44
+    commit: c9b52e73c6759efd9dc7bed9f9a8887658073150
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/signingConfigs.getByName/d' build.gradle.kts
+      - sed -i -e 's/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to besticon-demo.herokuapp.com
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[\d.]+$
+CurrentVersion: 0.15.3
+CurrentVersionCode: 44

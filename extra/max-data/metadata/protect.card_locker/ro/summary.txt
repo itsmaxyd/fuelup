@@ -1,0 +1,1 @@
+Gestionează cardurile de fidelitate/de magazin bazate pe coduri de bare

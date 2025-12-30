@@ -1,0 +1,150 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-only
+AuthorName: Umer Farooq
+SourceCode: https://github.com/UmerCodez/SensorSpot
+IssueTracker: https://github.com/UmerCodez/SensorSpot/issues
+Changelog: https://github.com/UmerCodez/SensorSpot/releases
+
+AutoName: Sensor Spot
+
+RepoType: git
+Repo: https://github.com/UmerCodez/SensorSpot.git
+
+Builds:
+  - versionName: 1.4.0
+    versionCode: 9
+    commit: 48a666f43416e7cdb9f3e29754ade3cc67f95b18
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 12
+    commit: 78f05113af9d44bb99a5fa5bceea90beaf3556ee
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 13
+    commit: bbb6ced5781b30103c938f34efe6a5cd4b855fc7
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 14
+    commit: ec418fd4206be286d300953b97d0b3db29c688a1
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 15
+    commit: 6d65decd57c3ee19566af96e155fe44b64deb87a
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 16
+    commit: de3e5b1a0946d5bb78f1791fa0c9f4660dd1a47c
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.5
+    versionCode: 17
+    commit: 86a10ceeebefd3dd69a2a87c2450209c76d7532b
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 18
+    commit: e10f6c6296519fd51f4b5bc716f68f110103bcaa
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 19
+    commit: 61cd23da2c7bd477aa78d5032652fa280245acfd
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 20
+    commit: 080d700bfa1acf005daf20cd5d874e080bcef6d1
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 21
+    commit: 10c2e685b0d2b956e7e6ac9d090be92f5c2f7b79
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.9.0
+CurrentVersionCode: 21

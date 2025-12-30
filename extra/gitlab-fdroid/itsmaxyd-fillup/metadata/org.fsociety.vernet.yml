@@ -1,0 +1,558 @@
+Categories:
+  - Connectivity
+  - Internet
+  - Network Analyzer
+  - Security
+License: Apache-2.0
+AuthorName: Elliot Alderson
+AuthorEmail: fs0c19ty@protonmail.com
+AuthorWebSite: https://op3nsoc13ty.blogspot.com/
+SourceCode: https://github.com/osociety/vernet
+IssueTracker: https://github.com/osociety/vernet/issues
+Changelog: https://github.com/osociety/vernet/releases
+
+AutoName: Vernet
+
+RepoType: git
+Repo: https://github.com/osociety/vernet.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 5
+    commit: v1.0.0+5
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - .vscode
+      - ios
+      - test
+      - web
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.0
+    versionCode: 7
+    commit: 8d32ba02452eba6c0adf763edaa670984f815ed3
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - .vscode
+      - ios
+      - test
+      - web
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.0
+    versionCode: 8
+    commit: cb7ac19806659498d25018f3c215fa33a7a41d51
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - .vscode
+      - ios
+      - test
+      - web
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.0
+    versionCode: 9
+    commit: 86a4d7d28d4954332240f479d96e4912f25ef713
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - .vscode
+      - ios
+      - test
+      - web
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.1
+    versionCode: 10
+    commit: 769d7b212e82682bdb9302e0de0058eb56c6c747
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - .vscode
+      - ios
+      - test
+      - web
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.1
+    versionCode: 11
+    commit: cb6fb0448aa526754ba2bc7bba269550c9da4f22
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.1
+    versionCode: 12
+    commit: 52444026671195c26f90da138025bb4a105e1d96
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.1
+    versionCode: 13
+    commit: 272810fad534f66a2a2e48c539c37a7f580ad03a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.1
+    versionCode: 16
+    commit: 13b0620855a46f0e249b797b250d34ffd172cb25
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.13.5
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.2
+    versionCode: 17
+    commit: f53eaa5879c08d8fc2670509bc9641772a1ab6d4
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.16.8
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.4
+    versionCode: 19
+    commit: 992df16609cf1bcf98f839e48795b28b790e86bf
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.16.8
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.5
+    versionCode: 20
+    commit: c5fdf8792e32cad9132a2eab7c2eae6ec37cd8e5
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.16.8
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.5
+    versionCode: 22
+    commit: 9ae5a53b5d0f6a58fc09790fb7850ea9be7d036e
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.16.8
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.6
+    versionCode: 24
+    commit: c9efceaeda5d4d6982d9f4cea6e5afe5f593ab24
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.19.5
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.8
+    versionCode: 26
+    commit: e4a23c857c7e81eb19bd6a750e9fc20ab18523ef
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.19.5
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/inAppReview/d' pubspec.yaml lib/pages/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.9
+    versionCode: 27
+    commit: 0b1657935e22464d115b7a892d104ae3e95ab3c8
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.24.4
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/inAppReview/d' pubspec.yaml lib/pages/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.0.9
+    versionCode: 28
+    commit: bed4af49f30a1f0da3b5ef3e5ae88a658262cd34
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.24.4
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/inAppReview/d' pubspec.yaml lib/pages/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.1.0
+    versionCode: 32
+    commit: 8db98e8ae84876df824a1353881f8ff0248f427c
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.24.4
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/inAppReview/d' pubspec.yaml lib/pages/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.1.0
+    versionCode: 33
+    commit: facb66bc3a405bfb9554f8f04eb35407f5752a9e
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.24.4
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/inAppReview/d' pubspec.yaml lib/pages/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.2.1
+    versionCode: 37
+    commit: 6548740a666e49f1694acade60b39f2911065ac5
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.29.0
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/inAppReview/d' pubspec.yaml lib/pages/settings_page.dart
+      - rm $$flutter$$/engine/src/.gn
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.3.0
+    versionCode: 38
+    commit: f1bbb3b7d1bb63c9efad13d05e5631a22bb29ebd
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.35.1
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - sed -i -e 's/8.12.0/8.11.1/' android/settings.gradle
+      - sed -i -e '/in_app_review/d' -e '/inAppReview/d' pubspec.yaml lib/pages/settings_page.dart
+      - rm $$flutter$$/engine/src/.gn
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.3.1
+    versionCode: 39
+    commit: 0073e369f6627305d0a81be4febf19a93ed87de8
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.35.1
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - sed -i -e 's/8.12.0/8.11.1/' android/settings.gradle
+      - sed -i -e '/in_app_review/d' -e '/inAppReview/d' pubspec.yaml lib/pages/settings_page.dart
+      - rm $$flutter$$/engine/src/.gn
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.3.2
+    versionCode: 40
+    commit: f4f96e9e492b5b9f7fb3243702b608f1f840f508
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.35.1
+    rm:
+      - .vscode
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+    prebuild:
+      - sed -i -e 's/8.12.0/8.11.1/' android/settings.gradle
+      - sed -i -e '/in_app_review/d' -e '/inAppReview/d' pubspec.yaml lib/pages/settings_page.dart
+      - rm $$flutter$$/engine/src/.gn
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{network_info_plus,package_info_plus}-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.3.2
+CurrentVersionCode: 40

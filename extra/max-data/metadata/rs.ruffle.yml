@@ -1,0 +1,2138 @@
+Categories:
+  - Games
+License: MIT
+AuthorName: Ruffle contributors
+AuthorEmail: ruffle@ruffle.rs
+WebSite: https://ruffle.rs/
+SourceCode: https://github.com/ruffle-rs/ruffle-android
+IssueTracker: https://github.com/ruffle-rs/ruffle-android/issues
+Changelog: https://github.com/ruffle-rs/ruffle-android/releases
+OpenCollective: ruffle
+
+AutoName: Ruffle
+
+RepoType: git
+Repo: https://github.com/ruffle-rs/ruffle-android
+
+Builds:
+  - versionName: '0.250620'
+    versionCode: 2506201
+    commit: 16e592070dd09fadb2385679da4d2b28615a40e1
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250620'
+    versionCode: 2506202
+    commit: 16e592070dd09fadb2385679da4d2b28615a40e1
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t arm64-v8a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250620'
+    versionCode: 2506203
+    commit: 16e592070dd09fadb2385679da4d2b28615a40e1
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250620'
+    versionCode: 2506204
+    commit: 16e592070dd09fadb2385679da4d2b28615a40e1
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86_64 --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250630'
+    versionCode: 2506301
+    commit: 5f072a80fe41516390e938ec7686cd8e600eeb96
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250630'
+    versionCode: 2506302
+    commit: 5f072a80fe41516390e938ec7686cd8e600eeb96
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t arm64-v8a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250630'
+    versionCode: 2506303
+    commit: 5f072a80fe41516390e938ec7686cd8e600eeb96
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250630'
+    versionCode: 2506304
+    commit: 5f072a80fe41516390e938ec7686cd8e600eeb96
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86_64 --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250707'
+    versionCode: 2507071
+    commit: ce0438b7945fda57293a086628a20e30f3774473
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250707'
+    versionCode: 2507072
+    commit: ce0438b7945fda57293a086628a20e30f3774473
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t arm64-v8a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250707'
+    versionCode: 2507073
+    commit: ce0438b7945fda57293a086628a20e30f3774473
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250707'
+    versionCode: 2507074
+    commit: ce0438b7945fda57293a086628a20e30f3774473
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86_64 --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250714'
+    versionCode: 2507141
+    commit: 3c318a9a702a7d4707797f69cf9b067cb2a6ba99
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250714'
+    versionCode: 2507142
+    commit: 3c318a9a702a7d4707797f69cf9b067cb2a6ba99
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t arm64-v8a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250714'
+    versionCode: 2507143
+    commit: 3c318a9a702a7d4707797f69cf9b067cb2a6ba99
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250714'
+    versionCode: 2507144
+    commit: 3c318a9a702a7d4707797f69cf9b067cb2a6ba99
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86_64 --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250721'
+    versionCode: 2507211
+    commit: edafbd1ff7a3222486f7156f7804f8702fcc6ae1
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250721'
+    versionCode: 2507212
+    commit: edafbd1ff7a3222486f7156f7804f8702fcc6ae1
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t arm64-v8a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250721'
+    versionCode: 2507213
+    commit: edafbd1ff7a3222486f7156f7804f8702fcc6ae1
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250721'
+    versionCode: 2507214
+    commit: edafbd1ff7a3222486f7156f7804f8702fcc6ae1
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86_64 --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250728'
+    versionCode: 2507281
+    commit: bc094d0675c21f1027edbf53b7ac1dfa054e5f0b
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250728'
+    versionCode: 2507282
+    commit: bc094d0675c21f1027edbf53b7ac1dfa054e5f0b
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t arm64-v8a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250728'
+    versionCode: 2507283
+    commit: bc094d0675c21f1027edbf53b7ac1dfa054e5f0b
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250728'
+    versionCode: 2507284
+    commit: bc094d0675c21f1027edbf53b7ac1dfa054e5f0b
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --bindgen -t x86_64 --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250817'
+    versionCode: 2508171
+    commit: 75a00a3011630c2fa5ec30e6de07f3ef33492804
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250817'
+    versionCode: 2508172
+    commit: 75a00a3011630c2fa5ec30e6de07f3ef33492804
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250817'
+    versionCode: 2508173
+    commit: 75a00a3011630c2fa5ec30e6de07f3ef33492804
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250817'
+    versionCode: 2508174
+    commit: 75a00a3011630c2fa5ec30e6de07f3ef33492804
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250826'
+    versionCode: 2508261
+    commit: eb539206fced89ac2e2fd94fab4d1a5213e36a79
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250826'
+    versionCode: 2508262
+    commit: eb539206fced89ac2e2fd94fab4d1a5213e36a79
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250826'
+    versionCode: 2508263
+    commit: eb539206fced89ac2e2fd94fab4d1a5213e36a79
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250826'
+    versionCode: 2508264
+    commit: eb539206fced89ac2e2fd94fab4d1a5213e36a79
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250909'
+    versionCode: 2509091
+    commit: 960af5f9240ae2b056d1e12b544d4eb9d94de1a0
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250909'
+    versionCode: 2509092
+    commit: 960af5f9240ae2b056d1e12b544d4eb9d94de1a0
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250909'
+    versionCode: 2509093
+    commit: 960af5f9240ae2b056d1e12b544d4eb9d94de1a0
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250909'
+    versionCode: 2509094
+    commit: 960af5f9240ae2b056d1e12b544d4eb9d94de1a0
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250915'
+    versionCode: 2509151
+    commit: 0f3468bd344eeecc22c756a633ac9eaf5b9839a2
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250915'
+    versionCode: 2509152
+    commit: 0f3468bd344eeecc22c756a633ac9eaf5b9839a2
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250915'
+    versionCode: 2509153
+    commit: 0f3468bd344eeecc22c756a633ac9eaf5b9839a2
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250915'
+    versionCode: 2509154
+    commit: 0f3468bd344eeecc22c756a633ac9eaf5b9839a2
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.250930'
+    versionCode: 2509301
+    commit: 1814b0227acd0ecf2ca0e651c686b14459747cf4
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.250930'
+    versionCode: 2509302
+    commit: 1814b0227acd0ecf2ca0e651c686b14459747cf4
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.250930'
+    versionCode: 2509303
+    commit: 1814b0227acd0ecf2ca0e651c686b14459747cf4
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.250930'
+    versionCode: 2509304
+    commit: 1814b0227acd0ecf2ca0e651c686b14459747cf4
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.251006'
+    versionCode: 2510061
+    commit: fc6bebef41c473bea50d5b835017f0efeed928a3
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.251006'
+    versionCode: 2510062
+    commit: fc6bebef41c473bea50d5b835017f0efeed928a3
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.251006'
+    versionCode: 2510063
+    commit: fc6bebef41c473bea50d5b835017f0efeed928a3
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.251006'
+    versionCode: 2510064
+    commit: fc6bebef41c473bea50d5b835017f0efeed928a3
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.251013'
+    versionCode: 2510131
+    commit: 109bbc473721895208f8ff4b58c78d1ce7bdc78f
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.251013'
+    versionCode: 2510132
+    commit: 109bbc473721895208f8ff4b58c78d1ce7bdc78f
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.251013'
+    versionCode: 2510133
+    commit: 109bbc473721895208f8ff4b58c78d1ce7bdc78f
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.251013'
+    versionCode: 2510134
+    commit: 109bbc473721895208f8ff4b58c78d1ce7bdc78f
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.251020'
+    versionCode: 2510201
+    commit: 2e45f8da7afec7a242fe1ee5d1e288378b892c3b
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.251020'
+    versionCode: 2510202
+    commit: 2e45f8da7afec7a242fe1ee5d1e288378b892c3b
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.251020'
+    versionCode: 2510203
+    commit: 2e45f8da7afec7a242fe1ee5d1e288378b892c3b
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.251020'
+    versionCode: 2510204
+    commit: 2e45f8da7afec7a242fe1ee5d1e288378b892c3b
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.251027'
+    versionCode: 2510271
+    commit: 00bc54c02de0c1561e6392d10e7cc5ddb7c3e3d5
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.251027'
+    versionCode: 2510272
+    commit: 00bc54c02de0c1561e6392d10e7cc5ddb7c3e3d5
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.251027'
+    versionCode: 2510273
+    commit: 00bc54c02de0c1561e6392d10e7cc5ddb7c3e3d5
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.251027'
+    versionCode: 2510274
+    commit: 00bc54c02de0c1561e6392d10e7cc5ddb7c3e3d5
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.251103'
+    versionCode: 2511031
+    commit: 037795a51f0e37d0a2ab81e4cac22e10ac05e33c
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.251103'
+    versionCode: 2511032
+    commit: 037795a51f0e37d0a2ab81e4cac22e10ac05e33c
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.251103'
+    versionCode: 2511033
+    commit: 037795a51f0e37d0a2ab81e4cac22e10ac05e33c
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.251103'
+    versionCode: 2511034
+    commit: 037795a51f0e37d0a2ab81e4cac22e10ac05e33c
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: '0.251110'
+    versionCode: 2511101
+    commit: 1e9bd1c2a2ef779429bb840e2cac5cdc072172dc
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target armv7-linux-androideabi
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target armeabi-v7a --platform 26 -o app/src/main/jniLibs build
+        --release --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: '0.251110'
+    versionCode: 2511102
+    commit: 1e9bd1c2a2ef779429bb840e2cac5cdc072172dc
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-arm64-v8a-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target aarch64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target arm64-v8a --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: '0.251110'
+    versionCode: 2511103
+    commit: 1e9bd1c2a2ef779429bb840e2cac5cdc072172dc
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target i686-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+  - versionName: '0.251110'
+    versionCode: 2511104
+    commit: 1e9bd1c2a2ef779429bb840e2cac5cdc072172dc
+    subdir: app
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get update
+      - apt-get install -y libclang-dev
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/ruffle-rs/ruffle-android/releases/download/%v/app-x86_64-release.apk
+    srclibs:
+      - rustup@1.28.2
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - export RUST_VERSION=$(sed -n -E 's/channel = "(.*)"/\1/p' ../rust-toolchain.toml)
+      - export CARGO_NDK_VERSION=$(sed -E -n 's/.*CARGO_NDK_VERSION.*"(.*)".*/\1/p'
+        ../.github/workflows/build.yml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $RUST_VERSION --target x86_64-linux-android
+      - source $CARGO_HOME/env
+      - cargo install cargo-ndk@$CARGO_NDK_VERSION --locked
+      - pushd ../
+      - cargo ndk --target x86_64 --platform 26 -o app/src/main/jniLibs build --release
+        --features jpegxr
+      - popd
+      - export GITHUB_ACTIONS=1
+      - gradle assembleRelease
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+AllowedAPKSigningKeys: 294d74ce86d1f72038f9c4530dd2776b547f47272ca761805f996b088c626fc6
+
+MaintainerNotes: The ndk version is also pinned at .github/workflows/build.yml.
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - 10 * %c + 1
+  - 10 * %c + 2
+  - 10 * %c + 3
+  - 10 * %c + 4
+CurrentVersion: '0.251110'
+CurrentVersionCode: 2511104

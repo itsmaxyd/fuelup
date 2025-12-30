@@ -1,0 +1,28 @@
+Categories:
+  - Launcher
+  - System
+License: GPL-2.0-only
+SourceCode: https://github.com/rsteube/t4-launcher
+
+AutoName: T4 Launcher
+
+RepoType: git
+Repo: https://github.com/rsteube/t4-launcher.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: '1.0'
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 4
+    commit: 4a96925cbca7571105095471256dd8eb2372c0ab
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.4'
+CurrentVersionCode: 4

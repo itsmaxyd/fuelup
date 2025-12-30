@@ -1,0 +1,227 @@
+Categories:
+  - Calendar & Agenda
+  - Task
+  - Time
+License: Apache-2.0
+SourceCode: https://github.com/andstatus/todoagenda
+IssueTracker: https://github.com/andstatus/todoagenda/issues
+Changelog: https://github.com/andstatus/todoagenda/blob/HEAD/README.md#changelog
+
+AutoName: Todo Agenda
+Description: |-
+  Todo Agenda is home screen widgets for your Android device.
+  It displays a list of calendar events and tasks
+  so that you can easily have a glimpse at your due, current and upcoming appointments.
+
+  Features:
+
+  * No advertising. Free and Open Source.
+  * Displays all events from your calendars and task lists. Optionally shows past events.
+  * Automatically updates when you add/delete/modify an event. Or you may update the list instantly.
+  * Select only the calendars you want to see in the widget.
+  * Create several widgets, if you need. Each widget will have its own settings, including layouts, colors, filters and selected calendars.
+  * Customize background colors and transparency of different widget parts, text's black and white shading.
+  * Scroll through the list of events. Use "Go to Today" button to return to today instantly.
+  * Customize the text size of the widget.
+  * Fully resizable widget with alternative layouts.
+  * Indicators for alerts and recurring events.
+  * Lock time zone when travelling to different time zones.
+  * Turn off Widget or Day headers, event icons, Days from today, etc. and see only what you need.
+  * Android 7.0+ supported. Supports Android tablets.
+  For the older devices please use <a href="https://f-droid.org/packages/com.plusonelabs.calendar/">Todo Agenda for Android 4 - 7.0</a> app.
+
+RepoType: git
+Repo: https://github.com/andstatus/todoagenda.git
+
+Builds:
+  - versionName: 3.1.7-560
+    versionCode: 560
+    commit: 3.1.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.9-565
+    versionCode: 565
+    commit: 3.1.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.0
+    versionCode: 681
+    commit: 4.1.0-release
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.1
+    versionCode: 682
+    commit: 4.1.1-release
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.2
+    versionCode: 685
+    commit: 4.2.2-release
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.3
+    versionCode: 686
+    commit: 4.2.3-release
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.1
+    versionCode: 689
+    commit: 4.3.1-release
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.2
+    versionCode: 690
+    commit: 4.3.2-release
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.0
+    versionCode: 691
+    commit: 4.4.0-release
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.5.3
+    versionCode: 695
+    commit: 6d5264a2d915969f9fd0b685f795ff5c2894468f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 4.5.4
+    versionCode: 696
+    commit: 6ec5eba71ecf4cac7237aa4f0b12174f9c87bbaf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 4.5.5
+    versionCode: 697
+    commit: 88da1512bbde1f59245ec7b9f16913f69150eb27
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 4.5.6
+    versionCode: 698
+    commit: 9be0a485a4347ef82a052cc61815f89ae5bf1e80
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 4.7.3
+    versionCode: 703
+    commit: 5a5d160a26c6aa7b81656b1d2bf46b1b5a217b64
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.8.0
+    versionCode: 704
+    commit: 2c83fae82a62b74e0db84cef697657a401173c4e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.9.0
+    versionCode: 705
+    commit: c41d57a66427fd054b4d930abd79260c8dc1554f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.10.2
+    versionCode: 708
+    commit: 53d8ec25aa8ca3745d80fec15dd3371b27bac55c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.11.1
+    versionCode: 710
+    commit: 0f0eaea6fe75740739002766db014b96cf41b299
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.12.1
+    versionCode: 712
+    commit: 88e0c212be845ea4a2546a5329fe8b810a11215f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.12.2
+    versionCode: 713
+    commit: 153b9603e3ac7620b1700b0b30b27ec090321463
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.13.1
+    versionCode: 715
+    commit: e7b03f8177f6e6b8f1c349da2841829083b4ea03
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.13.3
+    versionCode: 717
+    commit: 95859e75ea7d5c07861a62b10a70c49e813e580b
+    subdir: app
+    gradle:
+      - yes
+
+MaintainerNotes: |-
+  Since v.4.1 upstream reverted to static versionName and versionCode,
+  at least till F-Droid starts supporting this,
+  see https://gitlab.com/fdroid/fdroidserver/-/issues/420#note_299995680
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[0-9.]+-release$
+CurrentVersion: 4.13.3
+CurrentVersionCode: 717

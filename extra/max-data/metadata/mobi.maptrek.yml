@@ -1,0 +1,275 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Tethered to trekarta.info for maps downloads
+Categories:
+  - Location Tracker & Sharer
+  - Navigation
+License: GPL-3.0-or-later
+AuthorName: Andrey Novikov
+AuthorWebSite: https://andreynovikov.info/
+SourceCode: https://github.com/andreynovikov/trekarta
+IssueTracker: https://github.com/andreynovikov/trekarta/issues
+Translation: https://explore.transifex.com/andreynovkov/trekarta/
+Changelog: https://github.com/andreynovikov/trekarta/releases
+
+AutoName: Trekarta
+Description: |-
+  <b>Trekarta</b> is designed for hiking, geocaching, off-roading, cycling, boating and all other outdoor activities. It uses offline maps so you do not need to have internet connection. You can easily import places and tracks from GPX and KML data formats or create places in application and share them to others. It lets you write the track of your journey, even in background, so you will never get lost and be able later see where you've been.
+
+  <b>Offline maps</b>
+  Trekarta uses OpenStreetMap based vector maps that are lightweight, offline and are constantly enhanced by contributors. Maps contain detailed topological data with elevation contours. Some map elements can be filtered out for cleaner look. Trekarta has built-in hillshades support. You can add custom maps in sqlite or mbtiles format to cover your area of interest. Custom maps will be shaded as well. Such maps can be created by yourself with SAS.Planet application from mostly any online source or converted with MapTiler and other applications from other map formats.
+
+  <b>Hiking</b>
+  Special hiking activity mode emphasises paths and tracks on map. It visualizes path difficulty and visibility and displays hiking routes. It also displays special OSMC symbols that help you identify desired route.
+
+  <b>Cycling</b>
+  Cycling activity mode reveals bicycle infrastructure. It shows cycling routes and visualizes mountain biking track difficulty and visibility.
+
+  <b>Skiing and skating</b>
+  Skiing activity mode displays clean winter map with mostly all skiing activities: downhill, nordic, hiking and touring. As a bonus freestyle snow-boarding, skating and sleighing areas are displayed.
+
+  <b>Off-road</b>
+  Unpaved, dirt, winter and ice roads are specially visualized. 4wd only roads have specific marking. Fords are displayed on all roads, even primary.
+
+  <b>Places</b>
+  Places can be easily imported from GPX and KML files or can be created within application. You can navigate to places and share them with others.
+
+  <b>Tracks</b>
+  Trekarta is designed to record tracks of your journey. Simply press a button when you start and press it once more when you finish. You can quit the application if you do not need to look at the map, the track will be recorded in the background.
+
+  <b>Plugins</b>
+  Trekarta functionality can be extended by plugins. Currently the following plugins are available:
+  * Location sharing
+  * Dropbox sync
+
+  <b>More info</b>
+  More information can be found at:
+  <a href="https://github.com/andreynovikov/trekarta/">https://github.com/andreynovikov/trekarta/</a>
+
+  Questions can be asked at:
+  <a href="https://github.com/andreynovikov/trekarta/discussions">https://github.com/andreynovikov/trekarta/discussions</a>
+
+RepoType: git
+Repo: https://github.com/andreynovikov/trekarta.git
+
+Builds:
+  - versionName: '2019.01'
+    versionCode: 67
+    commit: '2019.01'
+    subdir: app/
+    gradle:
+      - full
+      - world
+    ndk: r18b
+
+  - versionName: '2019.07'
+    versionCode: 68
+    commit: '2019.07'
+    subdir: app/
+    gradle:
+      - full
+      - world
+    ndk: r18b
+
+  - versionName: '2019.09'
+    versionCode: 71
+    commit: '2019.09'
+    subdir: app/
+    gradle:
+      - full
+      - world
+    ndk: r18b
+
+  - versionName: '2019.09'
+    versionCode: 72
+    commit: 2019.09fix1
+    subdir: app/
+    gradle:
+      - full
+      - world
+    ndk: r18b
+
+  - versionName: '2019.10'
+    versionCode: 74
+    commit: '2019.10'
+    subdir: app/
+    gradle:
+      - full
+      - world
+    ndk: r18b
+
+  - versionName: '2019.11'
+    versionCode: 75
+    commit: '2019.11'
+    subdir: app/
+    gradle:
+      - full
+      - world
+    ndk: r18b
+
+  - versionName: '2020.04'
+    versionCode: 77
+    commit: '2020.04'
+    subdir: app/
+    gradle:
+      - full
+      - world
+    ndk: r21
+
+  - versionName: '2020.09'
+    versionCode: 78
+    commit: '2020.09'
+    subdir: app/
+    gradle:
+      - full
+      - world
+    ndk: r21d
+
+  - versionName: '2021.03'
+    versionCode: 79
+    commit: '2021.03'
+    subdir: app/
+    gradle:
+      - full
+      - world
+    prebuild: sed -i -e 's/21.3.6528147/21.4.7075529/' build.gradle
+    ndk: r21e
+
+  - versionName: '2021.04'
+    versionCode: 80
+    commit: '2021.04'
+    subdir: app/
+    gradle:
+      - full
+      - world
+    prebuild: sed -i -e 's/21.3.6528147/21.4.7075529/' build.gradle
+    ndk: r21e
+
+  - versionName: '2022.04'
+    versionCode: 83
+    commit: 972734c5e5fd41bf51173eaf00dc5fc538e040cf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+      - world
+    prebuild: sed -i -e 's/21.3.6528147/21.4.7075529/' build.gradle
+    ndk: r21e
+
+  - versionName: '2022.05'
+    versionCode: 84
+    commit: 06d169753bf14fc7fc14187eda79679c2501d171
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+      - world
+    prebuild: sed -i -e 's/21.3.6528147/21.4.7075529/' build.gradle
+    ndk: r21e
+
+  - versionName: '2023.11'
+    versionCode: 86
+    commit: 2637ac15c3d45f84aa6057b1dfdf5a92c50f0607
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testOptions {/,/^    }/d' build.gradle
+    ndk: 25.1.8937393
+
+  - versionName: '2023.12'
+    versionCode: 88
+    commit: 63f203deb7bad506f191ccd4877c6b85b5842ba8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testOptions {/,/^    }/d' build.gradle
+    ndk: 25.1.8937393
+
+  - versionName: '2024.01'
+    versionCode: 89
+    commit: 751c9204d2dec6d0f7dad4fbbf9feea2c40512d3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testOptions {/,/^    }/d' build.gradle
+    ndk: 26.1.10909125
+
+  - versionName: '2024.02'
+    versionCode: 95
+    commit: 9b8e68eda2be3dbbeb4b4d810fe40134aba25156
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testOptions {/,/^    }/d' build.gradle
+    ndk: 26.1.10909125
+
+  - versionName: 2024.02.28
+    versionCode: 102
+    commit: 91c80dd6aee05d435023a82388d341c7fc91d9d1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testOptions {/,/^    }/d' build.gradle
+    ndk: 26.1.10909125
+
+  - versionName: 2024.03.07
+    versionCode: 105
+    commit: b65de3bd803aaf4d91e97edcbcbe1924b423bd01
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testOptions {/,/^    }/d' build.gradle
+    ndk: 26.1.10909125
+
+  - versionName: 2024.03.13
+    versionCode: 106
+    commit: 797e83c4891875544af6ad3093f5a5dfd2b85b62
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testOptions {/,/^    }/d' build.gradle
+    ndk: 26.1.10909125
+
+  - versionName: 2024.03.22
+    versionCode: 107
+    commit: 16e536a330d4dfa95853596777ae3a58b5155109
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testOptions {/,/^    }/d' build.gradle
+    ndk: 26.1.10909125
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2024.03.22
+CurrentVersionCode: 107

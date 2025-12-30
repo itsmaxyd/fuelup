@@ -1,0 +1,26 @@
+Ads:
+  description: Aplikazio honek iragarkiak ditu
+  name: Iragarkiak
+DisabledAlgorithm:
+  description: Aplikazio honek segurtasun sinadura ahula du
+  name: Segurua ez den algoritmo batez sinatua
+KnownVuln:
+  description: Aplikazio honek segurtasun arazo ezagun bat du
+  name: Ahultasun ezaguna
+NoSourceSince:
+  name: Iturburu kodea ez dago jada eskuragarri, ezin izango da eguneratu.
+NonFreeAdd:
+  description: Aplikazio honen libreak ez diren gehigarriak bultzatzen ditu
+  name: Libreak ez diren gehigarriak
+NonFreeAssets:
+  description: Aplikazio honek baliabide ez libreak ditu
+  name: Libreak ez diren aktiboak
+NonFreeDep:
+  description: Aplikazio hau beste aplikazio ez libreen menpekoa da
+  name: Libreak ez diren menpekotasunak
+NonFreeNet:
+  description: Aplikazio honek sare zerbitzu ez libreak sustatzen ditu
+  name: Libreak ez diren sareko zerbitzuak
+Tracking:
+  description: Aplikazio honek zure jardueraren jarraipena egiten du eta berri ematen du
+  name: Arrastoaren jarraipena

@@ -1,0 +1,63 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: Dominik
+AuthorWebSite: https://domi04151309.github.io/
+WebSite: https://domi04151309.github.io/Android/Powerapp
+SourceCode: https://github.com/Domi04151309/PowerApp
+IssueTracker: https://github.com/Domi04151309/PowerApp/issues
+
+AutoName: Power App
+
+RequiresRoot: true
+
+RepoType: git
+Repo: https://github.com/Domi04151309/PowerApp
+
+Builds:
+  - versionName: 1.8.3
+    versionCode: 183
+    commit: 1.8.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.4
+    versionCode: 184
+    commit: 1.8.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.5
+    versionCode: 185
+    commit: 1.8.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.6
+    versionCode: 186
+    commit: 1.8.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.7
+    versionCode: 187
+    commit: 1.8.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 190
+    commit: 1.9.0
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.9.0
+CurrentVersionCode: 190

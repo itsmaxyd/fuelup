@@ -1,0 +1,39 @@
+Categories:
+  - System
+License: GPL-3.0-or-later
+AuthorName: Yahya Tinani
+SourceCode: https://github.com/yahyatinani/flashy-alarm
+IssueTracker: https://github.com/yahyatinani/flashy-alarm/issues
+Donate: https://github.com/sponsors/yahyatinani
+Liberapay: yahya-tinani
+
+AutoName: Flashy Alarm
+
+RepoType: git
+Repo: https://github.com/yahyatinani/flashy-alarm
+
+Builds:
+  - versionName: 0.0.1
+    versionCode: 1
+    commit: v0.0.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.0
+    versionCode: 10000
+    commit: 8bea830d67559e28719d588e300e0b8fd0b5b5fd
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfigs {/,+7d' -e '/SIGNING_KEY_BASE64/,+1d' -e
+      '/signingConfig =/d'  ../buildSrc/src/main/kotlin/recompose.android-app-conventions.gradle.kts
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 10000

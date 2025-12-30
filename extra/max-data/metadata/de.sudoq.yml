@@ -1,0 +1,202 @@
+Categories:
+  - Games
+License: GPL-3.0-or-later
+SourceCode: https://github.com/timo-a/SudoQ
+IssueTracker: https://github.com/timo-a/SudoQ/issues
+
+AutoName: SudoQ
+
+RepoType: git
+Repo: https://github.com/timo-a/SudoQ
+
+Builds:
+  - versionName: 1.0.5
+    versionCode: 7
+    commit: v1.0.5
+    subdir: sudoq-app
+    srclibs:
+      - ActionBarSherlock@4.4.0
+    prebuild:
+      - cp -r ../sudoq-model/src/de src/
+      - mkdir assets
+      - cp -r ../sudokus assets/
+
+  - versionName: 1.0.6
+    versionCode: 10
+    commit: v1.0.6
+    subdir: sudoq-app
+    srclibs:
+      - ActionBarSherlock@4.4.0
+    prebuild:
+      - cp -r ../sudoq-model/src/de src/
+      - mkdir assets
+      - cp -r ../sudokus assets/
+
+  - versionName: 1.0.7
+    versionCode: 11
+    commit: v1.0.7
+    subdir: sudoq-app
+    srclibs:
+      - ActionBarSherlock@4.4.0
+    prebuild:
+      - mkdir assets
+      - cp -r ../sudokus assets/
+      - sed -i -e 's;source="1.6" target="1.6";source="1.7" target="1.7";' ../sudoq-model/build.xml
+      - sed -i -e 's;../app/libs/;../sudoq-app/libs/;' ../sudoq-model/build.xml
+
+  - versionName: 1.1.0
+    versionCode: 22
+    commit: v1.1.0
+    subdir: sudoq-app/sudoqapp
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqapp/libs
+      - sudoq-app/sudoqmodel/libs
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 1.1.0c
+    versionCode: 26
+    commit: v1.1.0c
+    subdir: sudoq-app/sudoqapp
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqapp/libs
+      - sudoq-app/sudoqmodel/libs
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 1.1.1
+    versionCode: 27
+    commit: v1.1.1
+    subdir: sudoq-app/sudoqapp
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqmodel/libs
+      - utilities
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 1.2.0
+    versionCode: 28
+    commit: v1.2.0-SNAPSHOT
+    subdir: sudoq-app/sudoqapp
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqmodel/libs
+      - utilities
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 1.2.0
+    versionCode: 29
+    commit: 25773e63659c2430443e79b61abbd490b6f6e1f1
+    subdir: sudoq-app/sudoqapp
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqmodel/libs
+      - utilities
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 1.2.0
+    versionCode: 31
+    commit: 236126aee75117b4b827ee2af9d97b61a843729a
+    subdir: sudoq-app/sudoqapp
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqmodel/libs
+      - utilities
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 2.0.0
+    versionCode: 33
+    commit: ee2c662c831d44f9b30e22da841f78c1e3d60623
+    subdir: sudoq-app/sudoqapp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqmodel/libs
+      - utilities
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 2.0.4
+    versionCode: 38
+    commit: 8ba577aab4a67e9fe31089cd16716697f0204296
+    subdir: sudoq-app/sudoqapp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqmodel/libs
+      - utilities
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 2.0.5
+    versionCode: 39
+    commit: ab2297f6304763e232fb858c056457bda3e775ad
+    subdir: sudoq-app/sudoqapp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqmodel/libs
+      - utilities
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 2.0.6
+    versionCode: 40
+    commit: ab3386bed7f4cef33c28d7e65f5381bc34248694
+    subdir: sudoq-app/sudoqapp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqmodel/libs
+      - utilities
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+  - versionName: 2.0.7
+    versionCode: 41
+    commit: d004a2e5f62c4d9979211e81b2f54c619b265d6d
+    subdir: sudoq-app/sudoqapp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - sudoq-app/sudoqmodel/libs
+      - utilities
+    scanignore:
+      - sudoq-app/sudoqapp/src/main/res/raw/gestures
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.0.7
+CurrentVersionCode: 41

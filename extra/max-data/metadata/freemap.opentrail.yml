@@ -1,0 +1,75 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Rely on OpenStreetMap
+Categories:
+  - Navigation
+License: GPL-2.0-only
+AuthorName: Nick Whitelegg
+AuthorEmail: nickw4426@gmail.com
+WebSite: http://www.free-map.org.uk/common/opentrail.html
+SourceCode: https://gitlab.com/nickw1/opentrail
+IssueTracker: https://gitlab.com/nickw1/opentrail/issues
+Changelog: https://gitlab.com/nickw1/opentrail/tags
+
+AutoName: OpenTrail
+Description: |-
+  OpenStreetMap-based Android app for UK walkers and other countryside users,
+  highlighting rights of way and showing contours from OS OpenData. Allows
+  both online and offline use. In addition to navigation, walkers may share
+  and download footpath issues (blockages, directions etc) and walking
+  routes.
+
+  Antifeatures:
+  * NonFreeNet: The map data is OpenStreetMap-derived but it is downloaded
+  from the Freemap server. OpenTrail does not currently send any personal
+  information (such as your Google login) to the Freemap server. All data sent
+  is completely anonymous. Location tracking (GPS) is used to find your
+  location and to download nearby points of interest from the server. Server
+  requests (to find all points of interest close to a given GPS location) are
+  logged using standard server (Apache) logging; however they are not
+  associated with a username or name.
+
+RepoType: git
+Repo: https://gitlab.com/nickw1/opentrail.git
+
+Builds:
+  - versionName: '0.4'
+    versionCode: 4
+    commit: 0.4-fdroid
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - andromaps@ec817a0b869ad41d0dc661bcca0b8595dc719003
+      - freemaplib@20170509
+      - freemaplibProj@20131013
+      - JCoord@328e75a8d44d9f6a13205994d3b9d3fd50f68867
+      - javaproj@b2167fa5aa64dce82867f7d96ac1462a4212c9df
+    prebuild: echo -e "\nproject(':andromaps').projectDir = new File('./app/$$andromaps$$/app/')"
+      >> ../settings.gradle
+    build:
+      - pushd $$freemaplib$$
+      - mvn install
+      - popd
+      - pushd $$JCoord$$
+      - mvn install -DskipTests
+      - popd
+      - pushd $$javaproj$$
+      - mvn install -DskipTests
+      - popd
+      - pushd $$freemaplibProj$$
+      - mvn install
+
+  - versionName: 0.6.0
+    versionCode: 11
+    commit: 497d9d177e7a2fc11d26cde57a9af233cdd2ffc5
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.6.0
+CurrentVersionCode: 11

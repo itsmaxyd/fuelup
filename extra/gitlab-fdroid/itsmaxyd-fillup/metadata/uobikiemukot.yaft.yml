@@ -1,0 +1,34 @@
+Categories:
+  - Development
+License: MIT
+SourceCode: https://github.com/uobikiemukot/yaft-android
+IssueTracker: https://github.com/uobikiemukot/yaft-android/issues
+
+AutoName: yaft
+Description: |-
+  Simple terminal emulator for minimalists. It is based on yaft -- yet another
+  framebuffer terminal.
+
+  Features:
+
+  * almost compatible with vt102 and linux console
+  * UTF-8 support
+  * 256 color support
+
+RepoType: git
+Repo: https://github.com/uobikiemukot/yaft-android
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 4
+    commit: cb456e1b87118b261c70bb2354ca34849a2b8ee4
+    target: android-17
+    buildjni:
+      - yes
+    ndk: r12b
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.0'
+CurrentVersionCode: 4

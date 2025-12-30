@@ -1,0 +1,130 @@
+Categories:
+  - Science & Education
+License: WTFPL
+AuthorName: c-base
+AuthorWebSite: https://c-base.org/
+SourceCode: https://github.com/c-base/c-beam-droid
+IssueTracker: https://github.com/c-base/c-beam-droid/issues
+Changelog: https://github.com/c-base/c-beam-droid/releases
+
+AutoName: c-beam
+Description: |-
+  c-base on-board computer interface - control the c-base from your pocket!
+
+  NOTE: This app is only usable from within the c-base-crew wifi. If you don't
+  know what this means, don't download c-beam.
+
+  If you're still with us, here's a feature set for your informational pleasure:
+
+  * login / logout
+  * c-mission (task assignment)
+  * mind control
+  * world domination
+  * information retrieval
+  * current events
+  * c-portal
+  * artefacts
+  * local maps
+  * control
+  * c-leuse
+  * c_out
+  * and the rest of the space station
+
+RepoType: git
+Repo: https://github.com/c-base/c-beam-droid
+
+Builds:
+  - versionName: 1.5.2
+    versionCode: 25
+    commit: 1.5.2
+    gradle:
+      - noGCM
+    prebuild:
+      - rm libs/gcm.jar
+      - sed -i -e '/google-services/d'  -e '/withFirebaseCompile/d' build.gradle
+
+  - versionName: 1.5.3
+    versionCode: 26
+    commit: 1.5.3
+    gradle:
+      - noGCM
+    prebuild:
+      - rm libs/gcm.jar
+      - sed -i -e '/google-services/d'  -e '/withFirebaseCompile/d' build.gradle
+
+  - versionName: 1.6.1
+    versionCode: 28
+    commit: 1.6.1
+    subdir: app
+    gradle:
+      - noGCM
+    prebuild:
+      - sed -i -e '/com.google.gms/d' ../build.gradle build.gradle
+      - sed -i -e '/withGCMImplementation/d' build.gradle
+
+  - versionName: 1.6.2
+    versionCode: 29
+    commit: 1.6.2
+    subdir: app
+    gradle:
+      - noGCM
+    prebuild:
+      - sed -i -e '/com.google.gms/d' ../build.gradle build.gradle
+      - sed -i -e '/withGCMImplementation/d' build.gradle
+
+  - versionName: 1.6.4
+    versionCode: 31
+    commit: 76727898347125b6591945d632647b195f283ff0
+    subdir: app
+    gradle:
+      - noGCM
+    prebuild:
+      - sed -i -e '/com.google.gms/d' ../build.gradle build.gradle
+      - sed -i -e '/withGCMImplementation/d' build.gradle
+    scandelete:
+      - libs
+
+  - versionName: 1.6.5
+    versionCode: 34
+    commit: 14d22b3a8054c12052a28d84190d1af4ae4701cc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - noGCM
+    prebuild:
+      - sed -i -e '/com.google.gms/d' ../build.gradle build.gradle
+      - sed -i -e '/withGCMImplementation/d' build.gradle
+    scandelete:
+      - libs
+
+  - versionName: 1.7.0
+    versionCode: 35
+    commit: 5afec9e79baf9cf65de46626bc2a8d4a948954ac
+    subdir: app
+    gradle:
+      - noGCM
+    prebuild:
+      - sed -i -e '/com.google.gms/d' ../build.gradle build.gradle
+      - sed -i -e '/withGCMImplementation/d' build.gradle
+    scandelete:
+      - libs
+
+  - versionName: 1.7.1
+    versionCode: 36
+    commit: 9a1f56c86b200e663aa190db6009cea31bc65e22
+    subdir: app
+    gradle:
+      - noGCM
+    prebuild:
+      - sed -i -e '/com.google.gms/d' ../build.gradle build.gradle
+      - sed -i -e '/withGCMImplementation/d' build.gradle
+    scandelete:
+      - libs
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.7.1
+CurrentVersionCode: 36

@@ -1,0 +1,45 @@
+Categories:
+  - Sports & Health
+License: GPL-3.0-only
+AuthorName: Nathaniel Motus
+SourceCode: https://github.com/NathanielMotus/Cavevin
+IssueTracker: https://github.com/NathanielMotus/Cavevin/issues
+
+AutoName: Wine cellar
+
+RepoType: git
+Repo: https://github.com/NathanielMotus/Cavevin
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 4
+    commit: v1.3
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.3'
+CurrentVersionCode: 4

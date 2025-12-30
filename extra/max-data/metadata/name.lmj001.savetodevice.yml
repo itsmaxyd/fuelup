@@ -1,0 +1,49 @@
+Categories:
+  - System
+License: Apache-2.0
+AuthorName: lmj0011
+AuthorEmail: holdupapp@protonmail.com
+SourceCode: https://github.com/lmj0011/save-on-device
+IssueTracker: https://github.com/lmj0011/save-on-device/issues
+
+Name: Save on Device
+AutoName: Save
+
+RepoType: git
+Repo: https://github.com/lmj0011/save-on-device.git
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 1
+    commit: 1258127b56cad7d4bc438fa5a7237e1a18fd3d05
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.2.1
+    versionCode: 3
+    commit: 823e318d07017cc112d2d904ef5b069da0149028
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.0
+    versionCode: 5
+    commit: 27bb0ed62dbc36f383e291559fd67818c2c44032
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/build.gradle|versionCode\s(\d+)||v([\d.]+)
+CurrentVersion: 0.4.0
+CurrentVersionCode: 5

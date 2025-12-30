@@ -1,0 +1,73 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Need to connect to apps.sieber.systems to verify unlock code.
+Categories:
+  - Graphics
+  - Theming
+License: GPL-3.0-or-later
+AuthorName: Georg Sieber
+AuthorWebSite: https://georg-sieber.de/
+SourceCode: https://github.com/schorschii/FsClock-Android
+IssueTracker: https://github.com/schorschii/FsClock-Android/issues
+Donate: https://github.com/sponsors/schorschii
+Liberapay: schorschii
+
+AutoName: Clock
+
+RepoType: git
+Repo: https://github.com/schorschii/FsClock-Android
+Binaries: https://github.com/schorschii/FsClock-Android/releases/download/v%v/fsclock.apk
+
+Builds:
+  - versionName: 1.9.2
+    versionCode: 29
+    commit: v1.9.2
+    subdir: app
+    gradle:
+      - standalone
+
+  - versionName: 1.10.0
+    versionCode: 30
+    commit: ac6cc5f754cc7ca83018514ac435cf0cd93346cd
+    subdir: app
+    gradle:
+      - standalone
+
+  - versionName: 1.11.0
+    versionCode: 31
+    commit: de54ca0d4dd14a9d18f13e1f504b5a0f4eada744
+    subdir: app
+    gradle:
+      - standalone
+
+  - versionName: 1.12.1
+    versionCode: 33
+    commit: 3fd13a21941b1869f2f0f440a67d2da60b6bbcaf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - standalone
+
+  - versionName: 1.12.2
+    versionCode: 34
+    commit: 0880e9bf68b5d0e16884cdf5d5768ea20fa7b4a0
+    subdir: app
+    gradle:
+      - standalone
+
+  - versionName: 1.13.1
+    versionCode: 36
+    commit: be19811ef9f9076147eebbc980556d1cfa587fae
+    subdir: app
+    gradle:
+      - standalone
+
+AllowedAPKSigningKeys: 4d8a9f12fa7692154a3953e5b5b402b60ad252e63a136cbff2390541c48d843f
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.13.1
+CurrentVersionCode: 36

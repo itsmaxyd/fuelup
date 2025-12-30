@@ -1,0 +1,1 @@
+Naptárak importálása, exportálása és biztonsági mentése ics fájlok használatával

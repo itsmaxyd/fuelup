@@ -1,0 +1,419 @@
+Categories:
+  - Launcher
+  - Navigation
+  - System
+  - Theming
+License: GPL-3.0-only
+AuthorName: MLM Games
+AuthorEmail: mlm.gamestudio@gmail.com
+AuthorWebSite: https://ragebreaker.itch.io/
+WebSite: https://github.com/mlm-games/CLauncher
+SourceCode: https://github.com/mlm-games/CLauncher
+IssueTracker: https://github.com/mlm-games/CLauncher/issues
+Changelog: https://github.com/mlm-games/CLauncher/blob/HEAD/CHANGELOG.md
+Donate: https://ragebreaker.itch.io/
+Liberapay: mlm-games
+
+AutoName: Clauncher
+
+RepoType: git
+Repo: https://github.com/mlm-games/CLauncher.git
+
+Builds:
+  - versionName: v5.0.1
+    versionCode: 267
+    commit: 3b4f6f2e777754eee1a1d9ba9807bc36f2e55d74
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.0.1
+    versionCode: 268
+    commit: 3b4f6f2e777754eee1a1d9ba9807bc36f2e55d74
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.0.1
+    versionCode: 269
+    commit: 3b4f6f2e777754eee1a1d9ba9807bc36f2e55d74
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.0.1
+    versionCode: 270
+    commit: 3b4f6f2e777754eee1a1d9ba9807bc36f2e55d74
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+
+  - versionName: v5.0.2
+    versionCode: 277
+    commit: 7dffdea6ef88597b5c41ba890f567bb034758c7f
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.0.2
+    versionCode: 278
+    commit: 7dffdea6ef88597b5c41ba890f567bb034758c7f
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.0.2
+    versionCode: 279
+    commit: 7dffdea6ef88597b5c41ba890f567bb034758c7f
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.0.2
+    versionCode: 280
+    commit: 7dffdea6ef88597b5c41ba890f567bb034758c7f
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+
+  - versionName: v5.1.1
+    versionCode: 287
+    commit: cb754840ab103c8c5f675f04b825a3c6a8ffefba
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.1
+    versionCode: 288
+    commit: cb754840ab103c8c5f675f04b825a3c6a8ffefba
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.1
+    versionCode: 289
+    commit: cb754840ab103c8c5f675f04b825a3c6a8ffefba
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.1
+    versionCode: 290
+    commit: cb754840ab103c8c5f675f04b825a3c6a8ffefba
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+
+  - versionName: v5.1.2
+    versionCode: 297
+    commit: 5fa52fd79164a3dd5b02eacfd6a9e4763a03ef77
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.2
+    versionCode: 298
+    commit: 5fa52fd79164a3dd5b02eacfd6a9e4763a03ef77
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.2
+    versionCode: 299
+    commit: 5fa52fd79164a3dd5b02eacfd6a9e4763a03ef77
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.2
+    versionCode: 300
+    commit: 5fa52fd79164a3dd5b02eacfd6a9e4763a03ef77
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+
+  - versionName: v5.1.3
+    versionCode: 307
+    commit: fb19a22b3603e41223954cd81dbfe5ddf37da5c8
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.3
+    versionCode: 308
+    commit: fb19a22b3603e41223954cd81dbfe5ddf37da5c8
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.3
+    versionCode: 309
+    commit: fb19a22b3603e41223954cd81dbfe5ddf37da5c8
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.3
+    versionCode: 310
+    commit: fb19a22b3603e41223954cd81dbfe5ddf37da5c8
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+
+  - versionName: v5.1.4
+    versionCode: 317
+    commit: fa92e5b4eaacdf32013874eb8e38e05e1051dfc4
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.4
+    versionCode: 318
+    commit: fa92e5b4eaacdf32013874eb8e38e05e1051dfc4
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.4
+    versionCode: 319
+    commit: fa92e5b4eaacdf32013874eb8e38e05e1051dfc4
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+
+  - versionName: v5.1.4
+    versionCode: 320
+    commit: fa92e5b4eaacdf32013874eb8e38e05e1051dfc4
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+
+  - versionName: v5.2.2
+    versionCode: 337
+    commit: 715b5da724fe57516d92761b62b646d7aa0d3822
+    subdir: app
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=x86
+
+  - versionName: v5.2.2
+    versionCode: 338
+    commit: 715b5da724fe57516d92761b62b646d7aa0d3822
+    subdir: app
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=x86_64
+
+  - versionName: v5.2.2
+    versionCode: 339
+    commit: 715b5da724fe57516d92761b62b646d7aa0d3822
+    subdir: app
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=armeabi-v7a
+
+  - versionName: v5.2.2
+    versionCode: 340
+    commit: 715b5da724fe57516d92761b62b646d7aa0d3822
+    subdir: app
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+    build: gradle assembleRelease -PtargetAbi=arm64-v8a
+
+  - versionName: v5.2.4
+    versionCode: 357
+    commit: c86a0a019eed41c40951684c2645ecce0a0ad05b
+    subdir: app
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=x86
+
+  - versionName: v5.2.4
+    versionCode: 358
+    commit: c86a0a019eed41c40951684c2645ecce0a0ad05b
+    subdir: app
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=x86_64
+
+  - versionName: v5.2.4
+    versionCode: 359
+    commit: c86a0a019eed41c40951684c2645ecce0a0ad05b
+    subdir: app
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=armeabi-v7a
+
+  - versionName: v5.2.4
+    versionCode: 360
+    commit: c86a0a019eed41c40951684c2645ecce0a0ad05b
+    subdir: app
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+    build: gradle assembleRelease -PtargetAbi=arm64-v8a
+
+  - versionName: v5.2.5
+    versionCode: 367
+    commit: 04028f770a1c27dc81d5e0ab345d6fc0f660b86e
+    subdir: app
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=x86
+
+  - versionName: v5.2.5
+    versionCode: 368
+    commit: 04028f770a1c27dc81d5e0ab345d6fc0f660b86e
+    subdir: app
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=x86_64
+
+  - versionName: v5.2.5
+    versionCode: 369
+    commit: 04028f770a1c27dc81d5e0ab345d6fc0f660b86e
+    subdir: app
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=armeabi-v7a
+
+  - versionName: v5.2.5
+    versionCode: 370
+    commit: 04028f770a1c27dc81d5e0ab345d6fc0f660b86e
+    subdir: app
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+    build: gradle assembleRelease -PtargetAbi=arm64-v8a
+
+  - versionName: v5.2.6
+    versionCode: 377
+    commit: eab691788a934612c57a98cb7bc231416b40f1cf
+    subdir: app
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=x86
+
+  - versionName: v5.2.6
+    versionCode: 378
+    commit: eab691788a934612c57a98cb7bc231416b40f1cf
+    subdir: app
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-x86_64.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=x86_64
+
+  - versionName: v5.2.6
+    versionCode: 379
+    commit: eab691788a934612c57a98cb7bc231416b40f1cf
+    subdir: app
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-armeabi-v7a.apk
+    prebuild: sed -i "s/versionCode [0-9]*/versionCode $$VERCODE$$/" build.gradle
+    build: gradle assembleRelease -PtargetAbi=armeabi-v7a
+
+  - versionName: v5.2.6
+    versionCode: 380
+    commit: eab691788a934612c57a98cb7bc231416b40f1cf
+    subdir: app
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v-arm64-v8a.apk
+    build: gradle assembleRelease -PtargetAbi=arm64-v8a
+
+  - versionName: v5.2.10
+    versionCode: 420
+    commit: 359dd0c4945b1b9f3a25cfcdfb2aa57b35a55738
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release-unsigned.apk
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v.apk
+
+  - versionName: v5.2.11
+    versionCode: 430
+    commit: 19da82a089936885dd9d065662148c01c669b2b1
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/mlm-games/CLauncher/releases/download/%v/clauncher-%v.apk
+
+AllowedAPKSigningKeys: 4aed2f691df64a7b0fea25a6b8c80183c6dc520e049dac0178defa1d6472228f
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v5.2.11
+CurrentVersionCode: 430

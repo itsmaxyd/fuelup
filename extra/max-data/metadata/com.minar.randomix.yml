@@ -1,0 +1,137 @@
+Categories:
+  - Games
+License: MIT
+AuthorName: minar
+AuthorEmail: minar.tastic@gmail.com
+AuthorWebSite: https://minar.ml/
+SourceCode: https://github.com/m-i-n-a-r/randomix
+IssueTracker: https://github.com/m-i-n-a-r/randomix/issues
+
+AutoName: Randomix
+
+RepoType: git
+Repo: https://github.com/m-i-n-a-r/randomix.git
+
+Builds:
+  - versionName: '1.10'
+    versionCode: 26
+    commit: v1.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 27
+    commit: v1.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.12'
+    versionCode: 28
+    commit: v1.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.13'
+    versionCode: 29
+    commit: v1.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.14'
+    versionCode: 30
+    commit: v1.14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.15'
+    versionCode: 31
+    commit: v1.15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.16'
+    versionCode: 32
+    commit: v1.16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.17'
+    versionCode: 33
+    commit: de68e529c57d521ab4710c4c864b50061a5b4aa0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 35
+    commit: 08f7dc67e57a2091a9664186cbb2e9e69069522b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 36
+    commit: fecbb67c1a2d7deea6dac61807555efa0cebd2e9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 37
+    commit: 5b8f0ad4ad3e40edf990780dfb3bcda3aa363920
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 38
+    commit: 7d6c5816867e816a3d6e10911647d2a925324cd9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 39
+    commit: 77b4823d18a9a5c5f13d9cd4ef3e7ea761fb2f52
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 40
+    commit: 757e8d0845c637ad2372c26c266683a3085152ad
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '2.5'
+CurrentVersionCode: 40

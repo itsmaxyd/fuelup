@@ -1,0 +1,931 @@
+Categories:
+  - Local Media Player
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Alexander Capehart
+WebSite: https://github.com/OxygenCobalt/Auxio
+SourceCode: https://github.com/OxygenCobalt/Auxio
+IssueTracker: https://github.com/OxygenCobalt/Auxio/issues
+Translation: https://hosted.weblate.org/engage/auxio/
+Changelog: https://github.com/OxygenCobalt/Auxio/releases
+
+AutoName: Auxio
+
+RepoType: git
+Repo: https://github.com/OxygenCobalt/Auxio.git
+
+Builds:
+  - versionName: 1.4.0
+    versionCode: 6
+    commit: v1.4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 7
+    commit: cd0167405eeba492470632c508ab9150b0e068a1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 8
+    commit: ad2c02936adfcef2132674994b16ef0314134247
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 10
+    commit: 2ff2cd8cf4be940c31eb2b9140de319760d8acda
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 11
+    commit: 44c53d96f3dd7b316050e6c7a4062b1d50206a07
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer-OxygenCobalt@0b6f927d831db3025072051ac2e04d544da3983a
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer-OxygenCobalt$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer-OxygenCobalt$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - ./gradlew :library-extractor:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer-OxygenCobalt$$/library/extractor/buildout/outputs/aar/*.aar
+        libs/
+      - cp $$ExoPlayer-OxygenCobalt$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 2.2.1
+    versionCode: 13
+    commit: ddc64284556525084e298b62796f44bb6f917db2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer-OxygenCobalt@0b6f927d831db3025072051ac2e04d544da3983a
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer-OxygenCobalt$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer-OxygenCobalt$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - ./gradlew :library-extractor:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer-OxygenCobalt$$/library/extractor/buildout/outputs/aar/*.aar
+        libs/
+      - cp $$ExoPlayer-OxygenCobalt$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 2.2.2
+    versionCode: 14
+    commit: 82247775ac72e78269f7a8d8d70d69d50190b6c3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer@r2.17.0
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - ./gradlew :library-extractor:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer$$/library/extractor/buildout/outputs/aar/*.aar libs/
+      - cp $$ExoPlayer$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 2.3.0
+    versionCode: 15
+    commit: 852630ab38323b6a8d7dc2eedd89e5e4ec389d75
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer@r2.17.1
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 2.3.1
+    versionCode: 16
+    commit: b0ec6faa33c2b6c72f14754d247ae6697534472
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer@r2.17.1
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 2.4.0
+    versionCode: 17
+    commit: f187900d0c856fc80dd8b0bf880e2983413d68ba
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer@r2.17.1
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 2.5.0
+    versionCode: 18
+    commit: 634fcb4273a269e3f120b307114118e8677e9b32
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer@r2.18.0
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 2.6.1
+    versionCode: 20
+    commit: b104dd151de123d07ce848de856fe62414820eb0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer@r2.18.1
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 2.6.3
+    versionCode: 22
+    commit: c9422b7f9d554cf429422af5f8496689d2deba41
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer@r2.18.1
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 2.6.4
+    versionCode: 23
+    commit: 6b1f3e4567ca46dec08978673c2f9a7f2b54907f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file make
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer@r2.18.1
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 3.0.0
+    versionCode: 24
+    commit: b7bc0a6206ae634cdd44f4b7c4cc5bb0d5c7264d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file make
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer-OxygenCobalt@2df65af646357c4f3acd4c32afe18a43493ba911
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer-OxygenCobalt$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer-OxygenCobalt$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - ./gradlew :library-extractor:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer-OxygenCobalt$$/library/extractor/buildout/outputs/aar/*.aar
+        libs/
+      - cp $$ExoPlayer-OxygenCobalt$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 3.0.1
+    versionCode: 25
+    commit: 3e33510139a6fc86c7a31093c37c92d87f85db47
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file make
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer-OxygenCobalt@beff514d50cb149753f9124d7d54ba17762407b3
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer-OxygenCobalt$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer-OxygenCobalt$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - ./gradlew :library-extractor:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer-OxygenCobalt$$/library/extractor/buildout/outputs/aar/*.aar
+        libs/
+      - cp $$ExoPlayer-OxygenCobalt$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 3.0.2
+    versionCode: 26
+    commit: 691eed344e3a136e53319d9198e8b9422601ef1f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file make
+    gradle:
+      - yes
+    srclibs:
+      - ExoPlayer-OxygenCobalt@beff514d50cb149753f9124d7d54ba17762407b3
+      - FLAC@1.3.2
+    build:
+      - export FLAC_EXT_PATH="$$ExoPlayer-OxygenCobalt$$/extensions/flac/src/main"
+      - pushd "${FLAC_EXT_PATH}/jni"
+      - cp -r $$FLAC$$ ./flac
+      - $$NDK$$/ndk-build APP_ABI=all -j4
+      - cd "$$ExoPlayer-OxygenCobalt$$"
+      - ./gradlew :extension-flac:bundleReleaseAar
+      - ./gradlew :library-extractor:bundleReleaseAar
+      - popd
+      - mkdir libs
+      - cp $$ExoPlayer-OxygenCobalt$$/library/extractor/buildout/outputs/aar/*.aar
+        libs/
+      - cp $$ExoPlayer-OxygenCobalt$$/extensions/flac/buildout/outputs/aar/*.aar libs/
+    ndk: r21e
+
+  - versionName: 3.0.3
+    versionCode: 27
+    commit: 811447126c256fe12018d6d69b4b2003a6486953
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../ExoPlayer/publish.gradle
+    scandelete:
+      - ExoPlayer/docs
+      - ExoPlayer/testdata
+      - ExoPlayer/extensions/cast
+      - ExoPlayer/extensions/cronet
+      - ExoPlayer/extensions/ffmpeg/src/main/jni/ffmpeg/tests/
+    ndk: r23c
+
+  - versionName: 3.0.4
+    versionCode: 28
+    commit: 5b4697410b14ee61edafb20a41c282d7c84a0a9e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../ExoPlayer/publish.gradle
+    scandelete:
+      - ExoPlayer/docs
+      - ExoPlayer/testdata
+      - ExoPlayer/extensions/cast
+      - ExoPlayer/extensions/cronet
+      - ExoPlayer/extensions/ffmpeg/src/main/jni/ffmpeg/tests/
+    ndk: r23c
+
+  - versionName: 3.0.5
+    versionCode: 29
+    commit: 78d9f9f613552bc1055c0c816b5cb2cf3332e28a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../ExoPlayer/publish.gradle
+    scandelete:
+      - ExoPlayer/docs
+      - ExoPlayer/testdata
+      - ExoPlayer/extensions/cast
+      - ExoPlayer/extensions/cronet
+      - ExoPlayer/extensions/ffmpeg/src/main/jni/ffmpeg/tests/
+    ndk: r23c
+
+  - versionName: 3.1.0
+    versionCode: 30
+    commit: 9739e017f5e7486dcc547c563657d619a66f6eed
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 23.2.8568313
+
+  - versionName: 3.1.1
+    versionCode: 31
+    commit: 6031fb2890851ea34687472d245a78aa7ac0c9c3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 23.2.8568313
+
+  - versionName: 3.1.2
+    versionCode: 32
+    commit: 81b030bfec05433982f5f5cc0123da4d8158c6be
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 23.2.8568313
+
+  - versionName: 3.1.3
+    versionCode: 33
+    commit: e7d391b0509e3bbc2397fcfc76ea4e8ad561aa9d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 23.2.8568313
+
+  - versionName: 3.1.4
+    versionCode: 34
+    commit: c348f1e4c6bd8baceabc03785defea1c1f030234
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 23.2.8568313
+
+  - versionName: 3.2.0
+    versionCode: 35
+    commit: 5cd46193d569cbcdab8ea29d3cd3ae4ecfa9e328
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 23.2.8568313
+
+  - versionName: 3.2.1
+    versionCode: 36
+    commit: d5017f8d381418177ccf19fedb7c2eece4521f70
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 23.2.8568313
+
+  - versionName: 3.3.0
+    versionCode: 37
+    commit: 4e2e6f66b6a4d1089065428ed2def7d0097a9517
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 25.2.9519653
+
+  - versionName: 3.3.1
+    versionCode: 38
+    commit: 7be1d265ec91e64d156331168a1f938771042f40
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 25.2.9519653
+
+  - versionName: 3.3.3
+    versionCode: 40
+    commit: 0ea6ea6725ee4f1b94d84a37ebe9dcac34e0d5eb
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y file make ninja-build cmake openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|url =.*|url = "https://jitpack.io"|' ../media/publish.gradle
+    scandelete:
+      - media/libraries/test_data/src/test/assets
+      - media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/tests
+      - media/libraries/datasource_cronet/build.gradle
+      - media/libraries/cast
+    ndk: 25.2.9519653
+
+  - versionName: 3.4.0
+    versionCode: 41
+    commit: 5517a650489dc7fc59491589671e325114696e44
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
+  - versionName: 3.4.1
+    versionCode: 42
+    commit: ddc321893df052de88636c866947004274b476c1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
+  - versionName: 3.4.2
+    versionCode: 43
+    commit: c872f7890c123639975268c85b030850af79d8ca
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
+  - versionName: 3.4.3
+    versionCode: 44
+    commit: 9f66a05f2d855911dcacd718af90d883c0289214
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
+  - versionName: 3.5.0
+    versionCode: 46
+    commit: 8beb2ef4af8cd1ca7cfe277193ec7f0ae455725d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
+  - versionName: 3.5.2
+    versionCode: 48
+    commit: 4a57d850379bbb2a62d6baff4f1897537845beea
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
+  - versionName: 3.5.3
+    versionCode: 49
+    commit: 99c11bd27f2beff92b95641e2831c1d1959b6728
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 26.3.11579264
+
+  - versionName: 3.6.2
+    versionCode: 52
+    commit: 03be2ef0284fa25b461606af7e8108e4ae8ef38b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 26.3.11579264
+
+  - versionName: 3.6.3
+    versionCode: 53
+    commit: bfeae6a5a956f324e50b305ac7afc4791ba7d21e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 26.3.11579264
+
+  - versionName: 4.0.2
+    versionCode: 61
+    commit: 971c0e3a250105365b9f76a31fa814e6072e4477
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+      - musikr/src/main/cpp/taglib/tests/data/
+    ndk: r27c
+
+  - versionName: 4.0.4
+    versionCode: 63
+    commit: 2b51b836afecef853dfbcc7c56a986e7b4875e9e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+      - musikr/src/main/cpp/taglib/tests/data/
+    ndk: r27c
+
+  - versionName: 4.0.5
+    versionCode: 64
+    commit: 5f303b1be1d36908fe982270bd6748f796dabb7f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+      - musikr/src/main/cpp/taglib/tests/data/
+    ndk: r27c
+
+  - versionName: 4.0.6
+    versionCode: 65
+    commit: 9bab13f06135c6895b8fb42c43eb2f556df38b1f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+      - musikr/src/main/cpp/taglib/tests/data/
+    ndk: r27c
+
+  - versionName: 4.0.8
+    versionCode: 67
+    commit: bcb3a30f75fa5e0922b57256199503553e76fff6
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+      - musikr/src/main/cpp/taglib/tests/data/
+    ndk: r27c
+
+  - versionName: 4.0.9
+    versionCode: 68
+    commit: 254c8a4fab3c61c7b374dfa28414814160fdadf7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+      - musikr/src/main/cpp/taglib/tests/data/
+    ndk: r28c
+
+  - versionName: 4.0.10
+    versionCode: 69
+    commit: c1dc7333be8f680b7a31cac24cb01b545739a160
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+      - musikr/src/main/cpp/taglib/tests/data/
+    ndk: r28c
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+CurrentVersion: 4.0.10
+CurrentVersionCode: 69

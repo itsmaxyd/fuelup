@@ -1,0 +1,1 @@
+Caja fuerte con contraseña compatible con KeePass

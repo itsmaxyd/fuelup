@@ -1,0 +1,48 @@
+Categories:
+  - Time
+License: GPL-3.0-only
+SourceCode: https://gitlab.com/Oscar65/RecordTimeDroid
+IssueTracker: https://gitlab.com/Oscar65/RecordTimeDroid/issues
+
+AutoName: Record Time Droid
+Description: |-
+  <i>RecordTimeDroid</i> records time and shows elapsed time between previously
+  recorded lines. It is useful to people who want to measure times for
+  different tasks. It also is good for people who want to record date and time
+  to store later.
+
+RepoType: git
+Repo: https://gitlab.com/Oscar65/RecordTimeDroid.git
+
+Builds:
+  - versionName: '2.0'
+    versionCode: 22
+    commit: v2.0
+    subdir: recordtimedroid
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 23
+    commit: 2f9e2e3714dbbd94bbf83835e54739a41ddfcacb
+    subdir: recordtimedroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/mvnrepository/d' ../build.gradle
+
+  - versionName: '3.00'
+    versionCode: 25
+    commit: 97ffcc22433daa41f9631ea893907e05ace6303f
+    subdir: recordtimedroid
+    gradle:
+      - yes
+    prebuild: sed -i -e '/mvnrepository/d' ../build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '3.00'
+CurrentVersionCode: 25

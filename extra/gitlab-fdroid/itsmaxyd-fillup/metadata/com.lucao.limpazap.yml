@@ -1,0 +1,78 @@
+AntiFeatures:
+  NonFreeDep:
+    en-US: Requires WhatsApp to be installed on the device.
+Categories:
+  - System
+License: MIT
+AuthorName: Lucas Eduardo
+AuthorEmail: lucas59356@gmail.com
+SourceCode: https://github.com/lucasew/limpazap
+IssueTracker: https://github.com/lucasew/limpazap/issues
+
+AutoName: limpazap
+
+RepoType: git
+Repo: https://github.com/lucasew/limpazap
+
+Builds:
+  - versionName: 2.2.3
+    versionCode: 11
+    commit: v2.2.3
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@1.22.5
+    prebuild: echo "flutter.sdk=$$flutter$$" >> ../local.properties
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 3.0.1
+    versionCode: 13
+    commit: v3.0.1
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@1.22.5
+    prebuild: echo "flutter.sdk=$$flutter$$" >> ../local.properties
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 4.0.1
+    versionCode: 15
+    commit: 11cba8ad7713450d05551b25527c5df53c0087f6
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.32.5
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 4.1.0
+    versionCode: 17
+    commit: 63523156e5662aa6963257735a70917886c4fb9c
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.32.5
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v.*$
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 4.1.0
+CurrentVersionCode: 17

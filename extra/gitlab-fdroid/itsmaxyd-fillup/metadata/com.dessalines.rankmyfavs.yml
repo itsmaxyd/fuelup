@@ -1,0 +1,372 @@
+Categories:
+  - Writing
+License: AGPL-3.0-only
+SourceCode: https://github.com/dessalines/rank-my-favs
+IssueTracker: https://github.com/dessalines/rank-my-favs/issues
+Changelog: https://github.com/dessalines/rank-my-favs/blob/HEAD/RELEASES.md
+Donate: https://www.patreon.com/dessalines
+
+AutoName: Rank My Favs
+
+RepoType: git
+Repo: https://github.com/dessalines/rank-my-favs.git
+Binaries: https://github.com/dessalines/rank-my-favs/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 0.0.4
+    versionCode: 4
+    commit: 288bbd56a4c848b5a6b71d391f71ef8dc720300a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.5
+    versionCode: 5
+    commit: ab55c85b773dc85bb636aefb4c1b9fbeb1eb1f86
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.6
+    versionCode: 6
+    commit: 31b53289b4ae2d341f2c5dc505eab3ba1f8cfc75
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.2
+    versionCode: 11
+    commit: 7aeb205b4e80b943e97768884ebf5ec49abf5fd5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.0
+    versionCode: 12
+    commit: c4baa66de119e93bea78400ceaddef0f763687cf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.1
+    versionCode: 13
+    commit: 69d0db9fdfa8ba2792a7d85adb228bd0915e3b51
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.2
+    versionCode: 14
+    commit: b17ea97a008a077aa6981aac0582454dba116661
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.3
+    versionCode: 15
+    commit: 29ab9d5500b64f438b5c963407e44553a5c830e3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.0
+    versionCode: 18
+    commit: 3a3c5ce59c9a875b4de3458c9ac479d0813528c3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.1
+    versionCode: 19
+    commit: 2e91f3e1dd72497f9d5e7a873e4c3f8cc6683dfd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.2
+    versionCode: 20
+    commit: c59ccf5dfd29eee48f5eba47ee3b954a20fa00a7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.4
+    versionCode: 22
+    commit: 61c84f026994d3f97314b349c4a343092abefd22
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.1
+    versionCode: 24
+    commit: 4a423f99005241b49f9ea713aa4a7f584f6d37b8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.2
+    versionCode: 25
+    commit: d878d90ddcdcded299946aee1556ed9d1cfa1d10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.3
+    versionCode: 26
+    commit: c316bdd1647cf173ce46ca50bbb64f47160766a8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.6
+    versionCode: 29
+    commit: 730eb5803f566d99f58de0d5649fd0adbcf98f22
+    subdir: app
+    sudo:
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    output: build/outputs/apk/release/*.apk
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 0.6.7
+    versionCode: 30
+    commit: 5caec74fbca92056cb369a90b6b6f13fadc5555e
+    subdir: app
+    sudo:
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    output: build/outputs/apk/release/*.apk
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 0.6.9
+    versionCode: 32
+    commit: 119d528f64e813f0956ec9b4aaad64832c1755a3
+    subdir: app
+    sudo:
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    output: build/outputs/apk/release/*.apk
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleRelease; mkdir local; pushd local;
+        unzip -q ../build/outputs/apk/release/*.apk; export localhash=$(sha256sum
+        assets/dexopt/baseline.prof|cut -d " " -f1); [[ $localhash == $upstreamhash
+        ]] && break ; popd; rm -fr local; done
+
+  - versionName: 0.6.10
+    versionCode: 33
+    commit: a025dad7a3f00e0884e84debb3a6ac6a6bbb48b9
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.6.11
+    versionCode: 34
+    commit: ae0f9c0a513ad229f195987b435a19dab4230899
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.6.12
+    versionCode: 35
+    commit: 85e4f18745822b3aa89dd2e40556ea3f31b1dee8
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.6.13
+    versionCode: 36
+    commit: 73fff70dbc01429e286c9351dc0f5ba3349ac6c8
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.6.14
+    versionCode: 37
+    commit: 783f973c1dec91f913a905ece5a5afee53498e54
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.6.15
+    versionCode: 38
+    commit: 03773ddb13ab027896333cc42cf450aa908b4907
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.6.16
+    versionCode: 39
+    commit: a6d96e0a64119827ed28f0c75a14e6e11d931019
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.6.17
+    versionCode: 40
+    commit: 0105ea4ac875c2acd1af198e0a306d1f3c477f54
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.6.18
+    versionCode: 41
+    commit: 6e8574d047285790eeb50ccc75e422f8a3ce63ee
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -L -o upstream.apk https://github.com/dessalines/rank-my-favs/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+AllowedAPKSigningKeys: ea7195cfce638ae6b1a8002ddc0d4863366095ea5b8d95c1cd5e25db0fe2e7c3
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.6.18
+CurrentVersionCode: 41

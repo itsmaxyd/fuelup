@@ -1,0 +1,57 @@
+Categories:
+  - Development
+  - Writing
+License: GPL-3.0-or-later
+AuthorName: Michael Pöhn
+AuthorEmail: michael.poehn@fsfe.org
+WebSite: https://codeberg.org/uniqx/LibreIpsum
+SourceCode: https://codeberg.org/uniqx/LibreIpsum
+IssueTracker: https://codeberg.org/uniqx/LibreIpsum/issues
+Translation: https://translate.codeberg.org/translate/libreipsum
+Liberapay: uniqx
+
+AutoName: Libre Ipsum
+
+RepoType: git
+Repo: https://codeberg.org/uniqx/LibreIpsum.git
+
+Builds:
+  - versionName: 0.1.0
+    versionCode: 100
+    commit: v0.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.1
+    versionCode: 101
+    commit: v0.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.2
+    versionCode: 102
+    commit: v0.1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.3
+    versionCode: 103
+    commit: v0.1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.4
+    versionCode: 104
+    commit: v0.1.4
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.1.4
+CurrentVersionCode: 104

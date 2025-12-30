@@ -1,0 +1,1 @@
+Deny access to set apps by pattern locks, prevent abuse, protect your privacy

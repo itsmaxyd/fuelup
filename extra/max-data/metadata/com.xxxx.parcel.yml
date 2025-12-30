@@ -1,0 +1,43 @@
+Categories:
+  - Password & 2FA
+  - Phone & SMS
+License: MIT
+AuthorName: shareven
+SourceCode: https://github.com/shareven/parcel
+IssueTracker: https://github.com/shareven/parcel/issues
+Changelog: https://github.com/shareven/parcel/releases
+
+AutoName: 取件码
+
+RepoType: git
+Repo: https://github.com/shareven/parcel
+Binaries: https://github.com/shareven/parcel/releases/download/v%v/parcel-v%v.apk
+
+Builds:
+  - versionName: 1.0.39
+    versionCode: 39
+    commit: c4868422061282ae8384d106edace14e91016b0c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.40
+    versionCode: 40
+    commit: 1bc0472a88282ef813cd15511f43b7cd2742def8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.42
+    versionCode: 42
+    commit: 9a46bad19845b04374ce62cb403af5e225c54447
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: ed59aac29980639967bc8caf258fdc743187c07d0bd5f063e0be1bf8a7f40db5
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.42
+CurrentVersionCode: 42

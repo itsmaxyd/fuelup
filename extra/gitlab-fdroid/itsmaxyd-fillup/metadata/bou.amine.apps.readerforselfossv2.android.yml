@@ -1,0 +1,907 @@
+Categories:
+  - Internet
+  - News
+  - Reading
+License: GPL-3.0-only
+SourceCode: https://gitea.amine-bouabdallaoui.fr/Louvorg/ReaderForSelfoss-multiplatform
+IssueTracker: https://gitea.amine-bouabdallaoui.fr/Louvorg/ReaderForSelfoss-multiplatform/issues
+Translation: https://crowdin.com/project/readerforselfoss
+Changelog: https://gitea.amine-bouabdallaoui.fr/Louvorg/ReaderForSelfoss-multiplatform/src/branch/master/CHANGELOG.md
+Donate: https://www.buymeacoffee.com/aminecmi
+
+AutoName: Reader for Selfoss
+
+RepoType: git
+Repo: https://gitea.amine-bouabdallaoui.fr/Louvorg/ReaderForSelfoss-multiplatform.git
+
+Builds:
+  - versionName: 122092503-github
+    versionCode: 122092503
+    commit: v122092503
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122092561-github
+    versionCode: 122092561
+    commit: v122092561
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122092572-github
+    versionCode: 122092572
+    commit: v122092572
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122092691-github
+    versionCode: 122092691
+    commit: v122092691
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122092701-github
+    versionCode: 122092701
+    commit: v122092701
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122102881-github
+    versionCode: 122102881
+    commit: v122102881
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122113101-github
+    versionCode: 122113101
+    commit: v122113101
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122113131-github
+    versionCode: 122113131
+    commit: v122113131
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122113161-github
+    versionCode: 122113161
+    commit: v122113161
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122113181-github
+    versionCode: 122113181
+    commit: cfcf030bf83e6a8ce946aa5b09f6d4f3f125f0d0
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123351-github
+    versionCode: 122123351
+    commit: v122123351
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123371-github
+    versionCode: 122123371
+    commit: v122123371
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123381-github
+    versionCode: 122123381
+    commit: v122123381
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123391-github
+    versionCode: 122123391
+    commit: v122123391
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123421-github
+    versionCode: 122123421
+    commit: v122123421
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123431-github
+    versionCode: 122123431
+    commit: v122123431
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123461-github
+    versionCode: 122123461
+    commit: v122123461
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123483-github
+    versionCode: 122123483
+    commit: v122123483
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123522-github
+    versionCode: 122123522
+    commit: v122123522
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123532-github
+    versionCode: 122123532
+    commit: v122123532
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123571-github
+    versionCode: 122123571
+    commit: v122123571
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123631-github
+    versionCode: 122123631
+    commit: v122123631
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 122123641-github
+    versionCode: 122123641
+    commit: v122123641
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123010041-github
+    versionCode: 123010041
+    commit: v123010041
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123010241-github
+    versionCode: 123010241
+    commit: v123010241
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123010261-github
+    versionCode: 123010261
+    commit: v123010261
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123010281-github
+    versionCode: 123010281
+    commit: v123010281
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123010301-github
+    versionCode: 123010301
+    commit: v123010301
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123020491-github
+    versionCode: 123020491
+    commit: v123020491
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123020511-github
+    versionCode: 123020511
+    commit: v123020511
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123020523-github
+    versionCode: 123020523
+    commit: v123020523
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123020572-github
+    versionCode: 123020572
+    commit: v123020572
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123030621-github
+    versionCode: 123030621
+    commit: v123030621
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123030681-github
+    versionCode: 123030681
+    commit: v123030681
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123030751-github
+    versionCode: 123030751
+    commit: v123030751
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123030851-github
+    versionCode: 123030851
+    commit: v123030851
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123041021-github
+    versionCode: 123041021
+    commit: v123041021
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123051211-github
+    versionCode: 123051211
+    commit: v123051211
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123051301-github
+    versionCode: 123051301
+    commit: v123051301
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123051321-github
+    versionCode: 123051321
+    commit: v123051321
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123051331-github
+    versionCode: 123051331
+    commit: v123051331
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123051471-github
+    versionCode: 123051471
+    commit: v123051471
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123061651-github
+    versionCode: 123061651
+    commit: v123061651
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123061811-github
+    versionCode: 123061811
+    commit: v123061811
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123102852-github
+    versionCode: 123102852
+    commit: v123102852
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - githubConfig
+    prebuild: sed -i -e '/amine-louveau/d' -e '/buildCache {/,+8d' -e '/IMPORTANT/d'
+      -e '/\/\/\ SqlDelight/d' -e 's!// !!g' ../build.gradle.kts ../settings.gradle.kts
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123102961-github
+    versionCode: 123102961
+    commit: v123102961
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 123113311-github
+    versionCode: 123113311
+    commit: v123113311
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124010032-github
+    versionCode: 124010032
+    commit: v124010032
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124010191-github
+    versionCode: 124010191
+    commit: v124010191
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124010301-github
+    versionCode: 124010301
+    commit: v124010301
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124020451-github
+    versionCode: 124020451
+    commit: v124020451
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124030731-github
+    versionCode: 124030731
+    commit: v124030731
+    subdir: androidApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124041081-github
+    versionCode: 124041081
+    commit: v124041081
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124113301-github
+    versionCode: 124113301
+    commit: v124113301
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124113311-github
+    versionCode: 124113311
+    commit: v124113311
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124123421-github
+    versionCode: 124123421
+    commit: v124123421
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124123641-github
+    versionCode: 124123641
+    commit: v124123641
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 124123651-github
+    versionCode: 124123651
+    commit: v124123651
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125010031-github
+    versionCode: 125010031
+    commit: v125010031
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125010131-github
+    versionCode: 125010131
+    commit: v125010131
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125010201-github
+    versionCode: 125010201
+    commit: v125010201
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125010241-github
+    versionCode: 125010241
+    commit: v125010241
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125010291-github
+    versionCode: 125010291
+    commit: v125010291
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125020411-github
+    versionCode: 125020411
+    commit: v125020411
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125020471-github
+    versionCode: 125020471
+    commit: v125020471
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125020581-github
+    versionCode: 125020581
+    commit: v125020581
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125030681-github
+    versionCode: 125030681
+    commit: v125030681
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125030711-github
+    versionCode: 125030711
+    commit: v125030711
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125030901-github
+    versionCode: 125030901
+    commit: v125030901
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125040991-github
+    versionCode: 125040991
+    commit: v125040991
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+  - versionName: 125051211-github
+    versionCode: 125051211
+    commit: v125051211
+    subdir: androidApp
+    gradle:
+      - githubConfig
+    gradleprops:
+      - appLoginUrl="URL"
+      - appLoginUsername="LOGIN"
+      - appLoginPassword="PASS"
+
+MaintainerNotes: |
+  Version code and name are dynamically generated from the Git tag.
+  The Gradle properties are added to avoid a Gradle error but they are only used in test builds.
+
+AutoUpdateMode: Version v%c
+UpdateCheckMode: HTTP
+UpdateCheckData: https://amine-bouabdallaoui.fr/version.txt|versionCode=(\d+)|.|versionName=(.*)
+CurrentVersion: 125051211-github
+CurrentVersionCode: 125051211

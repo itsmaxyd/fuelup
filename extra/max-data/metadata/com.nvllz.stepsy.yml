@@ -1,0 +1,66 @@
+Categories:
+  - Sports & Health
+License: GPL-3.0-only
+AuthorName: nvllz
+SourceCode: https://github.com/nvllz/stepsy
+IssueTracker: https://github.com/nvllz/stepsy/issues
+Changelog: https://github.com/nvllz/stepsy/releases
+
+AutoName: Stepsy
+
+RepoType: git
+Repo: https://github.com/nvllz/stepsy
+Binaries: https://github.com/nvllz/stepsy/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 1.5.4
+    versionCode: 13
+    commit: 5b8f762244cd6bcab759f32fb7c67a8e762f38f2
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.5.6
+    versionCode: 15
+    commit: 6c3dc15e07470f20bb28d31293b4e3af16111bfb
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    prebuild: git reset --soft aa8eb5d551923b89bdce28921f873081941236d3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.5.7
+    versionCode: 16
+    commit: a2da491e59323294d6c4bd724dabf4fd0ff42897
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.5.8
+    versionCode: 17
+    commit: 8144bba855743b19823df39bd1aa4b28411ba68a
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+AllowedAPKSigningKeys: 91e4cd099c31aeaf1bc5ed4029467eb7181d5a7dd893fd98832713ce3be58816
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.5.8
+CurrentVersionCode: 17

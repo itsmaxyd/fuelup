@@ -1,0 +1,263 @@
+Categories:
+  - Multimedia
+  - Writing
+License: GPL-3.0-only
+AuthorName: Peter Rudenko
+AuthorEmail: peter.rudenko@gmail.com
+WebSite: https://helio.fm
+SourceCode: https://github.com/helio-fm/helio-sequencer
+IssueTracker: https://github.com/helio-fm/helio-sequencer/issues
+Translation: https://helio.fm/translations
+Changelog: https://github.com/helio-fm/helio-sequencer/blob/develop/CHANGELOG.md
+Donate: https://github.com/helio-fm/helio-sequencer#support-the-project
+OpenCollective: helio-workstation
+
+AutoName: Helio
+Description: |-
+  Helio is a libre music sequencer aimed at hobbyist composers,
+  game developers, and indie artists.
+
+  Follow the documentation to get started: <a href="https://docs.helio.fm">https://docs.helio.fm</a>
+
+RepoType: git
+Repo: https://github.com/helio-fm/helio-sequencer.git
+
+Builds:
+  - versionName: '3.4'
+    versionCode: 34
+    commit: '3.4'
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    prebuild: sed -i 's/21\.3\.6528147/22.0.7026061/g' build.gradle
+    scandelete:
+      - .
+    ndk: r22
+    antifeatures:
+      NonFreeNet:
+        en-US: App connects to api.helio.fm
+
+  - versionName: '3.5'
+    versionCode: 35
+    commit: '3.5'
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    prebuild: sed -i 's/21\.3\.6528147/22.1.7171670/g' build.gradle
+    scandelete:
+      - .
+    ndk: r22b
+    antifeatures:
+      NonFreeNet:
+        en-US: App connects to api.helio.fm
+
+  - versionName: '3.6'
+    versionCode: 36
+    commit: '3.6'
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    prebuild: sed -i 's/21\.3\.6528147/22.1.7171670/g' build.gradle
+    scandelete:
+      - .
+    ndk: r22b
+
+  - versionName: '3.7'
+    versionCode: 37
+    commit: 1cc2fbe9d19fac452c7e0bf78505e92ed7d7331d
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    prebuild: sed -i 's/21\.3\.6528147/22.1.7171670/g' build.gradle
+    scandelete:
+      - .
+    ndk: r22b
+
+  - versionName: '3.8'
+    versionCode: 38
+    commit: 531c1f70dfb37f307a8bdd89b54aa2d4d9d945f0
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    prebuild: sed -i 's/21\.3\.6528147/22.1.7171670/g' build.gradle
+    scandelete:
+      - .
+    ndk: r22b
+
+  - versionName: '3.9'
+    versionCode: 39
+    commit: a7d717f20144ffbfb938f20b227634edf9666279
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    prebuild: sed -i 's/21\.3\.6528147/22.1.7171670/g' build.gradle
+    scandelete:
+      - .
+    ndk: r22b
+
+  - versionName: '3.10'
+    versionCode: 310
+    commit: fefc3fd2ed8312fd8529e8f56e5df9572e14a400
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    prebuild: sed -i 's/21\.3\.6528147/22.1.7171670/g' build.gradle
+    scandelete:
+      - .
+    ndk: r22b
+
+  - versionName: '3.11'
+    versionCode: 311
+    commit: 7ad23042cbdd9247519f612ec333bd9f4d9c927c
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    prebuild: sed -i 's/21\.3\.6528147/22.1.7171670/g' build.gradle
+    scandelete:
+      - .
+    ndk: r22b
+
+  - versionName: '3.12'
+    versionCode: 312
+    commit: 61f7db380f083b424418d65f4e26addc1370ddea
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    prebuild: sed -i 's/21\.3\.6528147/22.1.7171670/g' build.gradle
+    scandelete:
+      - .
+    ndk: r22b
+
+  - versionName: '3.13'
+    versionCode: 313
+    commit: d53c705d74ed7c83ab124fdb532b05a4462ba348
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    rm:
+      - Projects/Deployment
+      - Projects/LinuxMakefile
+      - Projects/VisualStudio2017
+      - Projects/VisualStudio2019
+      - Projects/iOS
+      - Projects/macOS
+    prebuild:
+      - sed -i -e 's/6.1.1/7.3.3/' ../gradle/wrapper/gradle-wrapper.properties
+      - sed -i -e 's/4.0.0/7.2.0/' ../build.gradle
+      - sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+    scandelete:
+      - ThirdParty/JUCE
+    ndk: 21.3.6528147
+
+  - versionName: '3.14'
+    versionCode: 314
+    commit: 85d078e6623e555514c6fed6b38001bbaf5e8fce
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    rm:
+      - Projects/Deployment
+      - Projects/LinuxMakefile
+      - Projects/VisualStudio2017
+      - Projects/VisualStudio2019
+      - Projects/iOS
+      - Projects/macOS
+    prebuild:
+      - sed -i -e 's/6.1.1/7.3.3/' ../gradle/wrapper/gradle-wrapper.properties
+      - sed -i -e 's/4.0.0/7.2.0/' ../build.gradle
+      - sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+    scandelete:
+      - ThirdParty/JUCE
+    ndk: 21.3.6528147
+
+  - versionName: '3.15'
+    versionCode: 315
+    commit: 536775c6a9efbf088ab7a9707e5bb1cd4853fa81
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    rm:
+      - Projects/Deployment
+      - Projects/LinuxMakefile
+      - Projects/VisualStudio2017
+      - Projects/VisualStudio2019
+      - Projects/iOS
+      - Projects/macOS
+    prebuild:
+      - sed -i -e 's/6.1.1/7.3.3/' ../gradle/wrapper/gradle-wrapper.properties
+      - sed -i -e 's/4.0.0/7.2.0/' ../build.gradle
+      - sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+    scandelete:
+      - ThirdParty/JUCE
+    ndk: 21.3.6528147
+
+  - versionName: '3.16'
+    versionCode: 316
+    commit: 7c9aef1b879028b9a88efdc39ccf6b18c97f1181
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    rm:
+      - Projects/Deployment
+      - Projects/LinuxMakefile
+      - Projects/VisualStudio2017
+      - Projects/VisualStudio2019
+      - Projects/iOS
+      - Projects/macOS
+    prebuild:
+      - sed -i -e 's/6.1.1/7.3.3/' ../gradle/wrapper/gradle-wrapper.properties
+      - sed -i -e 's/4.0.0/7.2.0/' ../build.gradle
+      - sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+    scandelete:
+      - ThirdParty/JUCE
+    ndk: 21.3.6528147
+
+  - versionName: '3.17'
+    versionCode: 317
+    commit: 644c541633756b1d4c3bc64b448bb853893f07dc
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - release_
+    rm:
+      - Projects/Deployment
+      - Projects/LinuxMakefile
+      - Projects/VisualStudio2017
+      - Projects/VisualStudio2019
+      - Projects/iOS
+      - Projects/macOS
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - ThirdParty/JUCE
+    ndk: r28c
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '3.17'
+CurrentVersionCode: 317

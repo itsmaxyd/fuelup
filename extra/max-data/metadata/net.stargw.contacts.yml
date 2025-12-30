@@ -1,0 +1,39 @@
+Categories:
+  - System
+License: Apache-2.0
+AuthorName: StarGW
+AuthorEmail: android-apps@stargw.net
+WebSite: https://www.stargw.net/android/
+SourceCode: https://github.com/StarGW-net/contacts
+IssueTracker: https://github.com/StarGW-net/contacts/issues
+Donate: https://www.stargw.net/money/?android
+
+AutoName: Contacts
+
+RepoType: git
+Repo: https://github.com/StarGW-net/contacts.git
+Binaries: https://www.stargw.net/android/apks/net.stargw.contacts-release-v%v.apk
+
+Builds:
+  - versionName: '3'
+    versionCode: 3
+    commit: 1318bc25e6ce0f6e444929eca20b3bc77a068f4d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions {abortOnError false}' build.gradle
+
+  - versionName: '4'
+    versionCode: 4
+    commit: e2bfbbddecb5de064a5a09f2af1f220c97a139dd
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions {abortOnError false}' build.gradle
+
+AllowedAPKSigningKeys: 0506d8a76c40c47815395ddb9deaff30d6290d123de508290e482d993f376131
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '4'
+CurrentVersionCode: 4

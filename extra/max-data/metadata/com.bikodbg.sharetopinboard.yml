@@ -1,0 +1,63 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: The Pinboard service itself is not libre.
+Categories:
+  - Internet
+License: Apache-2.0
+AuthorName: Michael Bikovitsky
+AuthorEmail: biko@bikodbg.com
+AuthorWebSite: https://bikodbg.com/
+WebSite: https://github.com/mbikovitsky/ShareToPinboard
+SourceCode: https://github.com/mbikovitsky/ShareToPinboard
+IssueTracker: https://github.com/mbikovitsky/ShareToPinboard/issues
+
+AutoName: Share to Pinboard
+
+RepoType: git
+Repo: https://github.com/mbikovitsky/ShareToPinboard.git
+
+Builds:
+  - versionName: '1.2'
+    versionCode: 3
+    commit: v1.2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 4
+    commit: e8cc69e5d7fd5ef6d68876e3bc0a8ef95455100d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 5
+    commit: 0de64ad157408c5ef4eea785e934eb2109b92a31
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.3
+    versionCode: 7
+    commit: ac8142bc1d8e112965ee2dfc3bb32ac6f7b055ba
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.3.3
+CurrentVersionCode: 7

@@ -1,0 +1,33 @@
+Ads:
+  description: Selles rakenduses on reklaame
+  name: Reklaamid
+DisabledAlgorithm:
+  description: Sellel rakendusel on nõrk turvallkiri
+  name: Allkirjastamisel on kasutatud ebaturvalist algoritmi
+KnownVuln:
+  description: Sellel rakendusel on tuntud turvanõrkus
+  name: Tuntud turvanõrkus
+NSFW:
+  description: Selles rakenduses on sisu, mida ei tohiks kõikjal avaldada ega peaks olema kõikjalt vaadatav
+  name: NSFW
+NoSourceSince:
+  name: Lähtekood pole saadaval alates
+  description: Lähtekood ei ole enam saadaval, uuendused ei ole enam võimalikud
+NonFreeAdd:
+  description: See rakendus edendab mitte-vabu laiendusi
+  name: Mitte-vabad laiendused
+NonFreeAssets:
+  description: Selles rakenduses on mitte-vabu komponente
+  name: Mitte-vabad vara
+NonFreeDep:
+  description: See rakendus sõltub teistest mitte-vabadest rakendustest
+  name: Mitte-vabad Sõltuvused
+NonFreeNet:
+  description: See rakendus eelistab mitte-vabu võrguteenuseid või sõltub nendest
+  name: Mitte-vabad võrguteenuseid
+Tracking:
+  description: See rakendus jälgib ja raporteerib su aktiivsusest
+  name: Jälgimine
+TetheredNet:
+  description: See rakendus sõltub täielikult ühest kindlast võrguteenusest
+  name: Lõastatud võrguteenused

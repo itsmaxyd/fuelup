@@ -1,0 +1,249 @@
+Categories:
+  - Games
+License: MIT
+AuthorName: Chris Boyle
+AuthorEmail: puzzles@chris.boyle.name
+AuthorWebSite: https://chris.boyle.name/
+WebSite: https://chris.boyle.name/projects/android-puzzles
+SourceCode: https://github.com/chrisboyle/sgtpuzzles
+IssueTracker: https://github.com/chrisboyle/sgtpuzzles/issues
+Changelog: https://github.com/chrisboyle/sgtpuzzles/releases
+
+AutoName: Puzzles
+Description: |-
+  A port of Simon Tatham's Portable Puzzle Collection, a collection of 40
+  single-player logic games.
+
+  Various control options for small screens: on-screen arrow keys (can be enabled
+  in Settings), pinch to zoom, and a button to swap press/long-press.
+
+  Contains the following 40 games: Black Box, Bridges, Cube, Dominosa, Fifteen,
+  Filling, Flip, Flood, Galaxies, Guess, Inertia, Keen, Light Up, Loopy, Magnets,
+  Map, Mines (Minesweeper), Mosaic, Net, Netslide, Palisade, Pattern, Pearl, Pegs
+  (Solitaire), Range, Rectangles, Same Game, Signpost, Singles, Sixteen, Slant,
+  Solo (Sudoku), Tents, Towers, Tracks, Twiddle, Undead, Unequal, Unruly, Untangle
+
+RepoType: git
+Repo: https://github.com/chrisboyle/sgtpuzzles.git
+
+Builds:
+  - versionName: '9561.1'
+    versionCode: 72
+    commit: '9561.1'
+    init:
+      - sed -i 's/android-8/android-15/g' build.properties
+      - rm -f build.xml
+    prebuild:
+      - echo -e 'APP_ABI=armeabi x86\nAPP_CFLAGS += -Wno-error=format-security' >
+        jni/Application.mk
+      - sed -i '261 i \\t\tpaint.setStyle(Paint.Style.FILL);' src/name/boyle/chris/sgtpuzzles/GameView.java
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 2014-11-09-1643-4a8edc6
+    versionCode: 97
+    commit: 2014-11-09-1643-4a8edc6
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+
+  - versionName: 2015-08-17-1251-dd9e24a
+    versionCode: 109
+    commit: 2015-08-17-1251-dd9e24a
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+
+  - versionName: 2015-09-10-2219-eda5a86
+    versionCode: 110
+    commit: 2015-09-10-2219-eda5a86
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+
+  - versionName: 2016-01-13-0847-1d9d6cb
+    versionCode: 113
+    commit: 2016-01-13-0847-1d9d6cb
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+
+  - versionName: 2016-12-25-0849-0b34887
+    versionCode: 115
+    commit: 2016-12-25-0849-0b34887
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+    build:
+      - gradle assembleRelease
+      - gradle buildGameGenerationExecutableRelease
+
+  - versionName: 2018-10-27-1350-f281644b
+    versionCode: 117
+    commit: 2018-10-27-1350-f281644b
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+    ndk: r18b
+
+  - versionName: 2019-03-26-0844-68363231
+    versionCode: 120
+    commit: 2019-03-26-0844-68363231
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+    ndk: r18b
+
+  - versionName: 2022-04-29-0852-c43a34fb-fdroid
+    versionCode: 127
+    commit: 2022-04-29-0852-c43a34fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    forceversion: true
+    prebuild: sed -i '/versionNameSuffix.*idForSimon/d' build.gradle
+    ndk: r24
+
+  - versionName: 2022-04-30-1100-c43a34fb-fdroid
+    versionCode: 128
+    commit: 2022-04-30-1100-c43a34fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    forceversion: true
+    prebuild: sed -i '/versionNameSuffix.*idForSimon/d' build.gradle
+    ndk: r24
+
+  - versionName: 2022-05-21-1809-c43a34fb-fdroid
+    versionCode: 133
+    commit: 75f3b5783f24af2bd1fc9db351989c66a003a962
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    forceversion: true
+    prebuild: sed -i '/versionNameSuffix.*idForSimon/d' build.gradle
+    ndk: r24
+
+  - versionName: 2023-01-15-2303-5782e29d-fdroid
+    versionCode: 135
+    commit: 2023-01-15-2303-5782e29d
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+    prebuild: sed -i '/versionNameSuffix.*idForSimon/d' build.gradle
+    ndk: r25
+
+  - versionName: 2023-01-17-2309-80f64cfc-fdroid
+    versionCode: 136
+    commit: d28f7106045bf7bc899b4a5af26a03802505065c
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+    prebuild: sed -i '/versionNameSuffix.*idForSimon/d' build.gradle
+    ndk: r25
+
+  - versionName: 2023-01-18-2324-aaa36328-fdroid
+    versionCode: 137
+    commit: ae899db4d21cc609f2023da8e9a5aba0cf8af654
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+    prebuild: sed -i '/versionNameSuffix.*idForSimon/d' build.gradle
+    ndk: r25
+
+  - versionName: 2023-02-10-1537-bd5c0a37-fdroid
+    versionCode: 138
+    commit: c7338dc9f1e41c4317734e79368d95962dc3b9dc
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+    prebuild: sed -i '/versionNameSuffix.*idForSimon/d' build.gradle
+    ndk: r25
+
+  - versionName: 2023-11-15-2237-96d65e85-fdroid
+    versionCode: 142
+    commit: 348db0bd767734449e4e6c358720e5dc112b7d2f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - sed -i '/{idForSimon()}/d' build.gradle.kts
+      - sed -i '/versionName = timestamp/s/timestamp.*$/"$$VERSION$$"/' build.gradle.kts
+    ndk: r25
+
+  - versionName: 2024-03-10-2312-80aac310-fdroid
+    versionCode: 144
+    commit: 53763fa67bac6e78b0863372997851e8911c6d4c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - sed -i '/{idForSimon()}/d' build.gradle.kts
+      - sed -i '/versionName = timestamp/s/timestamp.*$/"$$VERSION$$"/' build.gradle.kts
+    ndk: 25.1.8937393
+
+  - versionName: 2024-03-29-2245-fd304c53-fdroid
+    versionCode: 146
+    commit: 7363eb73913486ce167771be414ff468a412e4c3
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i '/{idForSimon()}/d' build.gradle.kts
+      - sed -i '/versionName = timestamp/s/timestamp.*$/"$$VERSION$$"/' build.gradle.kts
+    ndk: 25.1.8937393
+
+  - versionName: 2025-09-12-1919-23762278-fdroid
+    versionCode: 149
+    commit: 8ec4ab867446837514ea35b17cf8f8ee1ed2d9b2
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i '/{idForSimon()}/d' build.gradle.kts
+      - sed -i '/versionName = timestamp/s/timestamp.*$/"$$VERSION$$"/' build.gradle.kts
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle.kts ../buildSrc/build.gradle.kts
+      - sed -i -e 's/29.0.13846066/28.2.13676358/' build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+    ndk: r28c
+
+MaintainerNotes: '* Check not only installation, but actual games to ensure correct
+  JNI build.'
+
+AutoUpdateMode: Version +-fdroid %v
+UpdateCheckMode: Tags
+UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)||
+CurrentVersion: 2025-09-12-1919-23762278
+CurrentVersionCode: 149

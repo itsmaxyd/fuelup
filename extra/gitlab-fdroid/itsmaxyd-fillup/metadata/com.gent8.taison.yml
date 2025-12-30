@@ -1,0 +1,56 @@
+Categories:
+  - Ebook Reader
+  - Reading
+License: Apache-2.0
+SourceCode: https://github.com/Gent8/Taison
+IssueTracker: https://github.com/Gent8/Taison/issues
+Changelog: https://github.com/Gent8/Taison/releases
+
+RepoType: git
+Repo: https://github.com/Gent8/Taison.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 100
+    commit: c76753dc649cb55f98e4e1972109e7b4f44ce21d
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e "/firebase/d" -e '/google.services/d' {..,.,../telemetry}/build.gradle.kts
+      - sed -i -e '/isEnable/d' build.gradle.kts
+
+  - versionName: v1.0.1
+    versionCode: 101
+    commit: 09f526af5e4965846178dd3168d9dabf4a7a4829
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e "/firebase/d" -e '/google.services/d' {..,.,../telemetry}/build.gradle.kts
+      - sed -i -e '/isEnable/d' build.gradle.kts
+
+  - versionName: 1.1.0
+    versionCode: 110
+    commit: c7b2e0f4cb0d6a9070af66a9c486fa1049dc005f
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e "/firebase/d" -e '/google.services/d' {..,.,../telemetry}/build.gradle.kts
+      - sed -i -e '/isEnable/d' build.gradle.kts
+
+  - versionName: 1.2.0
+    versionCode: 120
+    commit: 8929063ceb377772d71f4c45d65c313939fbc3d1
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e "/firebase/d" -e '/google.services/d' {..,.,../telemetry}/build.gradle.kts
+      - sed -i -e '/isEnable/d' build.gradle.kts
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.2.0
+CurrentVersionCode: 120

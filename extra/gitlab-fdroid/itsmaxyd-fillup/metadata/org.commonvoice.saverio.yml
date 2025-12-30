@@ -1,0 +1,320 @@
+Categories:
+  - Science & Education
+License: GPL-3.0-only
+AuthorName: Saverio Morelli
+AuthorWebSite: https://saveriomorelli.com/
+SourceCode: https://github.com/Sav22999/common-voice-android
+IssueTracker: https://github.com/Sav22999/common-voice-android/issues
+Translation: https://crowdin.com/project/common-voice-android
+Changelog: https://github.com/Sav22999/common-voice-android/releases
+Donate: https://ko-fi.com/R5R31UQ8G
+
+AutoName: CV Project
+
+RepoType: git
+Repo: https://github.com/Sav22999/common-voice-android
+
+Builds:
+  - versionName: 0.2.2b
+    versionCode: 73
+    commit: 0.2.2b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.8b
+    versionCode: 81
+    commit: 0.2.8b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.9b
+    versionCode: 82
+    commit: 0.2.9b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.10b
+    versionCode: 83
+    commit: 0.2.10b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.11b
+    versionCode: 85
+    commit: 0.2.11b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0b
+    versionCode: 88
+    commit: 1.0b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1b
+    versionCode: 90
+    commit: 1.1b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 93
+    commit: 1.2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 94
+    commit: 1.2.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 98
+    commit: 1.3.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 102
+    commit: 1.4.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 103
+    commit: 1.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 106
+    commit: 1.4.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 113
+    commit: '2.0'
+    subdir: app
+    gradle:
+      - FD-GH
+    output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
+
+  - versionName: 2.0.1
+    versionCode: 114
+    commit: 2.0.1
+    subdir: app
+    gradle:
+      - FD-GH
+    output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
+
+  - versionName: 2.0.2
+    versionCode: 116
+    commit: 2.0.2
+    subdir: app
+    gradle:
+      - FD-GH
+    output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
+
+  - versionName: 2.0.3
+    versionCode: 117
+    commit: 2.0.3
+    subdir: app
+    gradle:
+      - FD-GH
+    output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
+
+  - versionName: 2.0.4
+    versionCode: 118
+    commit: 2.0.4
+    subdir: app
+    gradle:
+      - FD-GH
+    output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
+
+  - versionName: '2.1'
+    versionCode: 119
+    commit: '2.1'
+    subdir: app
+    gradle:
+      - FD-GH
+    output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
+
+  - versionName: 2.2.2
+    versionCode: 131
+    commit: 2.2.2-131
+    subdir: app
+    gradle:
+      - FD-GH
+    output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
+
+  - versionName: '2.3'
+    versionCode: 133
+    commit: '2.3'
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.1
+    versionCode: 135
+    commit: 2.3.1
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.3
+    versionCode: 137
+    commit: 2.3.3
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.4
+    versionCode: 139
+    commit: 2.3.4
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.4.3
+    versionCode: 142
+    commit: 2.3.4.3
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.5
+    versionCode: 144
+    commit: '2.35'
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.6
+    versionCode: 146
+    commit: 2.3.6
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.6.1
+    versionCode: 147
+    commit: 2.3.6.1
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.6.5
+    versionCode: 151
+    commit: 2.3.6.5
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.7
+    versionCode: 154
+    commit: 2.3.7
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.3.8
+    versionCode: 161
+    commit: 2.3.8
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: '2.4'
+    versionCode: 173
+    commit: 7da5f827c8c88e9fbb635be58cf3dbdb11572663
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.4.0.1
+    versionCode: 174
+    commit: 97b77bccbdd4e9030cc33e5a0e294f2846a33f90
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.4.0.2
+    versionCode: 175
+    commit: 5bf8d6274fa0a93001463875981eb86b2cbb923b
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.4.0.3
+    versionCode: 177
+    commit: 87bb46cc8e3389a364c5bca5ba035c5c7979aa3c
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.4.0.4
+    versionCode: 178
+    commit: bd966c9c05f59fcad36f075235e55bb7e09692db
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.4.0.5
+    versionCode: 179
+    commit: 41e772379bc85cec2236016b7dee1e80ec3e582b
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.5.0.1
+    versionCode: 182
+    commit: 4ca0a635c83c67c33ec8433c9e41c71ab3980029
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+  - versionName: 2.5.1
+    versionCode: 183
+    commit: f21ce9b8a86e095a8e2400ad6b0fe3713014cdc8
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.5.1
+CurrentVersionCode: 183

@@ -1,0 +1,1595 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Twitch servers.
+Categories:
+  - Internet
+  - Messaging
+License: MIT
+AuthorName: Felix Schmid
+AuthorEmail: dankchat@flxrs.com
+SourceCode: https://github.com/flex3r/DankChat
+IssueTracker: https://github.com/flex3r/DankChat/issues
+
+AutoName: DankChat
+Description: Chat in multiple channels at once, regardless if the streamers are live
+  or offline, with FrankerFaceZ and BTTV emote support built-in!
+
+RepoType: git
+Repo: https://github.com/flex3r/DankChat.git
+
+Builds:
+  - versionName: 0.8.0
+    versionCode: 60
+    commit: v0.8.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.1
+    versionCode: 61
+    commit: v0.8.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.1
+    versionCode: 63
+    commit: v0.9.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.4
+    versionCode: 66
+    commit: v0.9.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.7
+    versionCode: 69
+    commit: v0.9.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 72
+    commit: v1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 74
+    commit: v1.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 75
+    commit: v1.1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.4
+    versionCode: 77
+    commit: v1.1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.5
+    versionCode: 78
+    commit: v1.1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 79
+    commit: v1.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 80
+    commit: v1.3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 81
+    commit: v1.3.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 82
+    commit: v1.4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 84
+    commit: v1.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 86
+    commit: v1.4.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.5
+    versionCode: 87
+    commit: v1.4.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 89
+    commit: v1.5.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 91
+    commit: v1.5.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 95
+    commit: v1.6.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.9
+    versionCode: 101
+    commit: v1.6.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 108
+    commit: v1.7.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 109
+    commit: v1.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.5
+    versionCode: 113
+    commit: v1.7.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.6
+    versionCode: 114
+    commit: v1.7.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.2
+    versionCode: 138
+    commit: v1.9.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.4
+    versionCode: 140
+    commit: v1.9.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.5
+    versionCode: 141
+    commit: v1.9.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.6
+    versionCode: 142
+    commit: v1.9.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.10
+    versionCode: 145
+    commit: v1.9.10
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 1.9.11
+    versionCode: 146
+    commit: v1.9.11
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 1.9.12
+    versionCode: 147
+    commit: v1.9.12
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 1.9.13
+    versionCode: 148
+    commit: v1.9.13
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.0.7
+    versionCode: 161
+    commit: v2.0.7
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.1.0
+    versionCode: 162
+    commit: v2.1.0
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.2.1
+    versionCode: 164
+    commit: v2.2.1
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.2.2
+    versionCode: 165
+    commit: v2.2.2
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.2.4
+    versionCode: 167
+    commit: v2.2.4
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.2.5
+    versionCode: 168
+    commit: v2.2.5
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.3.1
+    versionCode: 170
+    commit: v2.3.1
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.3.2
+    versionCode: 171
+    commit: v2.3.2
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.3.3
+    versionCode: 172
+    commit: v2.3.3
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.3.4
+    versionCode: 173
+    commit: v2.3.4
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.4.0
+    versionCode: 174
+    commit: v2.4.0
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.4.1
+    versionCode: 175
+    commit: v2.4.1
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.5.1
+    versionCode: 177
+    commit: v2.5.1
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.5.2
+    versionCode: 178
+    commit: v2.5.2
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.5.3
+    versionCode: 179
+    commit: v2.5.3
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 2.6.2
+    versionCode: 182
+    commit: v2.6.2
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.2
+    versionCode: 185
+    commit: 65ec9a85a5c1e9f7484f4593c3c4751f076aa29e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.4
+    versionCode: 187
+    commit: v2.7.4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.5
+    versionCode: 188
+    commit: v2.7.5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.6
+    versionCode: 189
+    commit: v2.7.6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.9
+    versionCode: 192
+    commit: v2.7.9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.10
+    versionCode: 193
+    commit: v2.7.10
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.12
+    versionCode: 195
+    commit: 4122f5c3e7eaf175d65e16a94637771abd304501
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.14
+    versionCode: 197
+    commit: 02c0d86b73e80dd548ec95ebeb00bfb6f9667e9a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.15
+    versionCode: 198
+    commit: c7d83334147f7b07ac9ba13c93e2316b2434028f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.7.16
+    versionCode: 199
+    commit: 11c01f1f991c29a52bf9bde461f1b81333a0f5ba
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.8.0
+    versionCode: 200
+    commit: 2664ec8da6a7bbe30fc130fb291dbffd3a44db19
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.8.1
+    versionCode: 201
+    commit: 6ff653d8489693837b642692511f7f4501086dfc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.8.2
+    versionCode: 202
+    commit: 32dded0317802fbc5064e40ccb4da5339f1a0741
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.8.3
+    versionCode: 203
+    commit: 7265551533c53991eade5ea95bb7abb39354930e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.8.4
+    versionCode: 204
+    commit: dc7eacb22088d3d538db933bee2ee76d4da6117e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.8.5
+    versionCode: 205
+    commit: 3678f444c293289fa3818a5caf9333b676f32f89
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.8.6
+    versionCode: 206
+    commit: 4c3eaf2b785817f9f59f0a55ebfee8801a7f3ca6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.8.8
+    versionCode: 208
+    commit: 75215660fd681470edb97e557bbc0244b02b87bc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.9.0
+    versionCode: 209
+    commit: 36e32b805c20933972b0fa2a4ebfc88e6fe8181f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.9.1
+    versionCode: 210
+    commit: 20fc205c807cfdf312c0c08569974ea47c46a302
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.9.2
+    versionCode: 211
+    commit: 1610f7b97cda18b3638a2c40567949a88183be6f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.9.3
+    versionCode: 212
+    commit: 1498585c52ad5a7b0eb431474708f42f5e265548
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.9.4
+    versionCode: 213
+    commit: b1b17807d22ff7da8a2dca94b4aefe814452a7b9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.9.5
+    versionCode: 214
+    commit: c2321ca7520c8a4ba9aadce94fdd3ffe58075733
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.10.1
+    versionCode: 216
+    commit: 32f830b44b918a3a6ba073d87f6ac17cc260eb79
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.10.2
+    versionCode: 217
+    commit: 496229a7d45be026a4a8992f8df8caf8482e6b1a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.10.3
+    versionCode: 218
+    commit: 38b983218faa558a95b866410b405876f06773f2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.10.4
+    versionCode: 219
+    commit: 7bfe0850006770bd85cdea577b682017e291f061
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 2.10.5
+    versionCode: 220
+    commit: e895c6ff999672ad203875f6a4aa033d9c8bb3bf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.0.0
+    versionCode: 221
+    commit: b302b2c123d267ee9ef6d26c7508249986d61acb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.0.1
+    versionCode: 222
+    commit: 3abbbcd9c9fb632540c90956c077bbb585a5506b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.0.2
+    versionCode: 223
+    commit: 2084b79e4c54ffd60ce9155bf3f8aa65bb9b0955
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.0.4
+    versionCode: 225
+    commit: dd255b431a71b85d0243c8701e792940974728ee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.0.5
+    versionCode: 226
+    commit: 0ca6fae51971031c3aee0c5202eed3ee69ff9dd8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.0.6
+    versionCode: 227
+    commit: d8b083de24f73fae3d58076eeb0721df1fca183d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.0.7
+    versionCode: 228
+    commit: 7ac7f55e31285ca54983951d6cdc628b6ed175d9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.0.8
+    versionCode: 229
+    commit: b1356d33cb4f917f3d1a5445b5218b8818da6c24
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.0.11
+    versionCode: 232
+    commit: ebcaf77a692236e60eccffb099e86bbd32034582
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.0.12
+    versionCode: 233
+    commit: 0a53e6bf044a6b981fe62399030f6b809e95dc30
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.0.16
+    versionCode: 237
+    commit: d758e7a2e69c2946b3f2ea86a404a84b9566dbcd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.0.17
+    versionCode: 238
+    commit: 88c51f3a5b7a1ef87d3b7b1f067bb5de7d06122c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.0.18
+    versionCode: 239
+    commit: 77a9a65b50d3f7e6568d0d9a17ca7f8dee8ccb87
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.0
+    versionCode: 240
+    commit: ebeeee52b1f4a78ecda4a2209286c5e29ae5bd94
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.1
+    versionCode: 241
+    commit: 193620969c18ebe38823ab88185e623c49626945
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.2
+    versionCode: 242
+    commit: 4b3b1faf3cf857df9d9c0809c2f508955488d8a0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.4
+    versionCode: 244
+    commit: f4a2011137a753cb5d4dc24edce3f67b1eb8fc79
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.5
+    versionCode: 245
+    commit: ac965a63f349449cbec460f0cd35decccaab65e3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.6
+    versionCode: 246
+    commit: 67db19d201c455b79cc83b88d00315af47f06aa8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.7
+    versionCode: 247
+    commit: 9cdc43b6f8e622d3c2988ad415bc7c8e4f136b42
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.8
+    versionCode: 248
+    commit: b740afdd1696d27af524077f5fef614eab19f9b0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.10
+    versionCode: 250
+    commit: 5fa0b67aafb8a5f88d06254aaca2c19972a17f1a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.11
+    versionCode: 251
+    commit: 952c0d8075cc5739dfce20b159bb915b0a515356
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.12
+    versionCode: 252
+    commit: 8414288351003e14656ba7c3b1ae411a18254eba
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.1.13
+    versionCode: 253
+    commit: 59d8c690b07606f881ad2ddf5c533573d9d9dcd5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.2.0
+    versionCode: 254
+    commit: 88ac1881bb67ba56bae9fbf73f5dcad0e6fb17ef
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.2.1
+    versionCode: 255
+    commit: b49aab900c0e224fb6a2a8f63187c3d2643630f8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.2.2
+    versionCode: 256
+    commit: 4a72fc28bdc2cb2f6b8bae39d96e5d68350865cb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.2.3
+    versionCode: 257
+    commit: 66630c7c20538e37599657e442dd46bb4cbad5e2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.2.4
+    versionCode: 258
+    commit: b77af1763cc3f1f70dc2d87cd100cb6edd479841
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/maven.localazy.com/d' ../build.gradle
+      - sed -i -e '/com.localazy:gradle/d' ../build.gradle
+    ndk: r21e
+
+  - versionName: 3.3.0
+    versionCode: 259
+    commit: 4d75c8fbd192f7753d65efc1b288986dbed3021f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.3.1
+    versionCode: 260
+    commit: 51571955dae64f59ca2aa677a7aca30d51bc98db
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.3.2
+    versionCode: 261
+    commit: aec002dec6ff133a53dc1eb3ec97a9097c072458
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.3.3
+    versionCode: 262
+    commit: 364b47aea5daea55a09ff042797e08b98612f759
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.3.5
+    versionCode: 264
+    commit: 52d77f506c626206aa3f7cd0c80ee42879af5183
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.3.6
+    versionCode: 265
+    commit: f3112328e56af5bf1f5ab3bc92edab790b6a619e
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.3.7
+    versionCode: 266
+    commit: 6b9e4bdbfa5d58c1a77a44404531da94c7c7fddd
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.3.8
+    versionCode: 267
+    commit: ffc79578c4b79bd9746bf12f65f16cad51b74e82
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.3.9
+    versionCode: 268
+    commit: 860648e7d6329f3086ccacf14f15746caa53566e
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.4.8
+    versionCode: 30408
+    commit: f6ecfae1ec8bad9a152ad0ffff650c055f394130
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.4.9
+    versionCode: 30409
+    commit: b449466fd05584a3a59c6ec4d43027616a12c149
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.4.10
+    versionCode: 30410
+    commit: 0d134c84c4bd990a49dd59be15516a6cc9d77976
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.4.11
+    versionCode: 30411
+    commit: a93a07ca2b742c7c5dd43b584307952451716c94
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.4.12
+    versionCode: 30412
+    commit: 86fe240acabe7362c2314132b10f5d723c413f81
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.4.13
+    versionCode: 30413
+    commit: e0116c22c040fceb4a1f1fe323055c4d38557479
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.5.15
+    versionCode: 30515
+    commit: 1697711c7894149621bec78863cdb0be408d332f
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.5.17
+    versionCode: 30517
+    commit: ef5f459770ccec1c09b561be305a0d06017acd92
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.5.21
+    versionCode: 30521
+    commit: 6e974485005f26b46276dd5e239970a967f92248
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.5.22
+    versionCode: 30522
+    commit: 6c2539ccc616fd87a2d61187f77a6b836eb21d67
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.5.23
+    versionCode: 30523
+    commit: 142221b2f03a8f995b0bdb653cd4b13d0de10187
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.6.26
+    versionCode: 30626
+    commit: 05e91931ff55478fb397a03725b8d505c146dfea
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.6.27
+    versionCode: 30627
+    commit: 9ae11b1d1ae16226fa64367296f348acdb70764f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.6.28
+    versionCode: 30628
+    commit: ef1f7af06d0b29f8287bf66dde3c7e1dbf2bb8d8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.6.29
+    versionCode: 30629
+    commit: 3a5059452d2a01272c08fabdbd75055ea743e5e1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.6.30
+    versionCode: 30630
+    commit: 6f4fbc73ff3def40d48833b03868bd095e2e52c9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.7.1
+    versionCode: 30701
+    commit: e5ef13cec74822a51934c8ba09660895f7067aac
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.7.3
+    versionCode: 30703
+    commit: d113af5b07fa2aec0d5915f0cb91573b37293a7e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.8.7
+    versionCode: 30807
+    commit: 190c3e25dac92c797c5e9d2e52c2864e0d66e616
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.9.7
+    versionCode: 30907
+    commit: ad89ba8f7810db9882b82935ed8d2e361ac9be52
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.9.9
+    versionCode: 30909
+    commit: f03fb12c1856d5c2a9571e7680b904c3d5af9468
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.9.10
+    versionCode: 30910
+    commit: d642a55c2b3b479bdcd8812aaa9574a56854361b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.9.12
+    versionCode: 30912
+    commit: 9b03e5ebd04bf3cf1bd835d6b142662e58636375
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.9.13
+    versionCode: 30913
+    commit: 11d3dad20560b8ed88c6b8d0c6d364627f43ad35
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.9.14
+    versionCode: 30914
+    commit: 49d86a05f3bba655881e6e93360f216316cee7c9
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.10.0
+    versionCode: 31000
+    commit: 9c904762bf104eb3241ced17b3ae7b3a82c9e53c
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.10.1
+    versionCode: 31001
+    commit: 587d9b6609e363b52475eb7b7dcdded7703a2bac
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.10.2
+    versionCode: 31002
+    commit: 80ea6160b60dc47e1c14c418d991c4f6f39091c0
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.10.4
+    versionCode: 31004
+    commit: 6ec4d3f8066fb80d3ee21eeb2931aba2163aee4b
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.10.6
+    versionCode: 31006
+    commit: 9faccb32fbd00fbceebf25675c2d34ce23f3bd2d
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.11.4
+    versionCode: 31104
+    commit: 9da3e5db67325464cdac53ef4b8f66cec170e735
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.11.5
+    versionCode: 31105
+    commit: 4d4043de56492cf84e984e6248d97c7ac565bc30
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.11.6
+    versionCode: 31106
+    commit: 6accd48da365a3c2220cfa8c0e10f557129c5cac
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.11.7
+    versionCode: 31107
+    commit: a42ddbe5c41442927e2188540377e8f48564a189
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.11.8
+    versionCode: 31108
+    commit: 6637d283ba1a179179b9f935392e5b9fb90c294d
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+
+  - versionName: 3.11.9
+    versionCode: 31109
+    commit: 8ec5d65668f7a74fd4af26189ccfd1634f4ddcab
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/androidGradlePlugin/s/8.12.0/8.11.1/' ../gradle/libs.versions.toml
+    ndk: r21e
+
+  - versionName: 3.11.10
+    versionCode: 31110
+    commit: f216aab5de85d69a99bbc75b533b761296f9f19f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/androidGradlePlugin/s/8.12.2/8.11.1/' ../gradle/libs.versions.toml
+    ndk: r21e
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v
+CurrentVersion: 3.11.10
+CurrentVersionCode: 31110

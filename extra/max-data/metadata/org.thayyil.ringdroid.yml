@@ -1,0 +1,63 @@
+Categories:
+  - Multimedia
+License: Apache-2.0
+AuthorName: althafvly
+AuthorEmail: me@althafvly.com
+SourceCode: https://github.com/althafvly/ringdroid
+IssueTracker: https://github.com/althafvly/ringdroid/issues
+
+AutoName: Ringdroid
+
+RepoType: git
+Repo: https://github.com/althafvly/ringdroid
+
+Builds:
+  - versionName: 2.7.6
+    versionCode: 20706
+    commit: cbf046f14d6ec797efa0fa050df7a9a3f58370e1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.7.7
+    versionCode: 20707
+    commit: 0a6a783353df458e9baf85ad56df4e25e09a8028
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.7.8
+    versionCode: 20708
+    commit: d9fe0b8d2df5bb4880b0b3b8f2fe8be4ac564745
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.7.9
+    versionCode: 20709
+    commit: f26b4316c60e8ef10e62c34de1fc5aa34de53816
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 2.8.0
+    versionCode: 20800
+    commit: a6d5b7e9cf8e43e401d7340759bb9e17e8c90c28
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]+$
+CurrentVersion: 2.8.0
+CurrentVersionCode: 20800

@@ -1,0 +1,119 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: lucky
+AuthorEmail: x13a@pm.me
+AuthorWebSite: https://x13a.github.io
+SourceCode: https://github.com/x13a/Volta
+IssueTracker: https://github.com/x13a/Volta/issues
+Changelog: https://github.com/x13a/Volta/releases
+
+AutoName: Volta
+Description: |-
+  <b>NOTE:</b> App repo is archived by dev. It is read-only for all users and it is no longer actively maintained.
+
+  Tiny app to add several actions to volume buttons.
+
+  Actions:
+  * Long Volume Up - next track
+  * Long Volume Down - previous track
+  * Double Volume Up - flashlight/broadcast
+  * Double Volume Down - flashlight/broadcast
+
+  Does NOT work when the screen is fully off.
+  For a better user experience use Key Mapper.
+
+  Permissions:
+  * ACCESSIBILITY - receive volume key events
+  * VIBRATE - notify on action success
+  * FLASHLIGHT - toggle flashlight
+
+  It is Free Open Source Software.
+  License: GPL-3
+
+RepoType: git
+Repo: https://github.com/x13a/Volta.git
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: fe31350a6bf4c7ff255bbdfe735d846bd6f30d59
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 3
+    commit: 6483f74713bc70eaae38caf257a22a40ece67c7c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 4
+    commit: fe922f5fbf96ed7efbd36b54589ef792a545d80d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 5
+    commit: 79ce2a5a33cbe4a18e393b9c77239fbe77e5ee41
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 6
+    commit: 573458cd5a2f23c0dcd945607091a3333d69aafd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 7
+    commit: 3378cfa12fc06ca52905599d2c90b6e27050afe3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 8
+    commit: d57a73975e9e209b076b6f12ec4dcad9f924ccf9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.1.1
+CurrentVersionCode: 8

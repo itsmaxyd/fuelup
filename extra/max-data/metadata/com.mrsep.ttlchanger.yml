@@ -1,0 +1,57 @@
+Categories:
+  - Internet
+  - System
+License: GPL-3.0-or-later
+AuthorName: Aleksey Saenko
+SourceCode: https://github.com/aleksey-saenko/TTLChanger
+IssueTracker: https://github.com/aleksey-saenko/TTLChanger/issues
+Changelog: https://github.com/aleksey-saenko/TTLChanger/releases
+
+AutoName: TTL Changer
+
+RequiresRoot: true
+
+RepoType: git
+Repo: https://github.com/aleksey-saenko/TTLChanger.git
+
+Builds:
+  - versionName: 1.1.1
+    versionCode: 3
+    commit: ec87aceafd3d75b27e06b77ce840859dbbef2396
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 4
+    commit: 4d91949613f99e6631ac50d5e67a7f2e7d6fb776
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 5
+    commit: c6724581d0b471c9b8fe3d2ac544c0f04c761b23
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 6
+    commit: 44bb6eb94c0995ac9fad15e7677874eab4fc3fd3
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]+$
+CurrentVersion: 1.2.2
+CurrentVersionCode: 6

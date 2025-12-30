@@ -1,0 +1,240 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Bill Farmer
+AuthorWebSite: https://billthefarmer.github.io/
+WebSite: https://github.com/billthefarmer/sig-gen/wiki
+SourceCode: https://github.com/billthefarmer/sig-gen
+IssueTracker: https://github.com/billthefarmer/sig-gen/issues
+Changelog: https://github.com/billthefarmer/sig-gen/releases
+
+AutoName: Signal Generator
+
+RepoType: git
+Repo: https://github.com/billthefarmer/sig-gen.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+
+  - versionName: '1.01'
+    versionCode: 101
+    commit: v1.01
+
+  - versionName: '1.02'
+    versionCode: 102
+    commit: v1.02
+
+  - versionName: '1.03'
+    versionCode: 103
+    commit: v1.03
+
+  - versionName: '1.04'
+    versionCode: 104
+    commit: v1.04
+
+  - versionName: '1.05'
+    versionCode: 105
+    commit: v1.05
+
+  - versionName: '1.06'
+    versionCode: 106
+    commit: v1.06
+
+  - versionName: '1.07'
+    versionCode: 107
+    commit: v1.07
+    gradle:
+      - yes
+
+  - versionName: '1.08'
+    versionCode: 108
+    commit: v1.08
+    gradle:
+      - yes
+
+  - versionName: '1.09'
+    versionCode: 109
+    commit: v1.09
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 110
+    commit: v1.10
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 111
+    commit: v1.11
+    gradle:
+      - yes
+
+  - versionName: '1.12'
+    versionCode: 112
+    commit: v1.12
+    gradle:
+      - yes
+
+  - versionName: '1.13'
+    versionCode: 113
+    commit: v1.13
+    gradle:
+      - yes
+
+  - versionName: '1.14'
+    versionCode: 114
+    commit: v1.14
+    gradle:
+      - yes
+
+  - versionName: '1.15'
+    versionCode: 115
+    commit: v1.15
+    gradle:
+      - yes
+
+  - versionName: '1.16'
+    versionCode: 116
+    commit: v1.16
+    gradle:
+      - yes
+
+  - versionName: '1.17'
+    versionCode: 117
+    commit: v1.17
+    gradle:
+      - yes
+
+  - versionName: '1.18'
+    versionCode: 118
+    commit: v1.18
+    gradle:
+      - yes
+
+  - versionName: '1.19'
+    versionCode: 119
+    commit: v1.19
+    gradle:
+      - yes
+
+  - versionName: '1.20'
+    versionCode: 120
+    commit: v1.20
+    gradle:
+      - yes
+
+  - versionName: '1.21'
+    versionCode: 121
+    commit: v1.21
+    gradle:
+      - yes
+
+  - versionName: '1.22'
+    versionCode: 122
+    commit: v1.22
+    gradle:
+      - yes
+
+  - versionName: '1.23'
+    versionCode: 123
+    commit: v1.23
+    gradle:
+      - yes
+
+  - versionName: '1.24'
+    versionCode: 124
+    commit: 273c49bc612ce0d37b454a3102225816847d85d9
+    gradle:
+      - yes
+
+  - versionName: '1.25'
+    versionCode: 125
+    commit: 51a35e3ce6aa53a1a6840cb21e64935fd9b81250
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.26'
+    versionCode: 126
+    commit: 1d095a394403140c5f0579e65f8ca45ae7c71532
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.27'
+    versionCode: 127
+    commit: 770b790c9b1b6861928a451afbf5131f99e1edcf
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.28'
+    versionCode: 128
+    commit: b54a588ee5ff07db106eb38b6495cc8884e4bab9
+    gradle:
+      - yes
+
+  - versionName: '1.29'
+    versionCode: 129
+    commit: a73a98f3b931b9f08d68cfb61b3e083a4a886b15
+    gradle:
+      - yes
+
+  - versionName: '1.30'
+    versionCode: 130
+    commit: 8e224fa3acfbcafc5459a8d94e9516809ec564a8
+    gradle:
+      - yes
+
+  - versionName: '1.31'
+    versionCode: 131
+    commit: e85ab90f72798c68668d2f411f224117903d1c7a
+    gradle:
+      - yes
+
+  - versionName: '1.32'
+    versionCode: 132
+    commit: e271508dfa1e8ea4704c025fea694a1292b25c13
+    gradle:
+      - yes
+
+  - versionName: '1.33'
+    versionCode: 133
+    commit: 946fbf4a71b8c81d78c73dce880faa3343763518
+    gradle:
+      - yes
+
+  - versionName: '1.34'
+    versionCode: 134
+    commit: 437aee2e96fc3e13bc3e2834839989bb014a3740
+    gradle:
+      - yes
+
+  - versionName: '1.35'
+    versionCode: 135
+    commit: f85b5617a15ff92f16ee5d55d997c7f0b2f5bb89
+    gradle:
+      - yes
+
+  - versionName: '1.36'
+    versionCode: 136
+    commit: 25f1756c22401e5308a9b0cf068b65a89211b562
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.36'
+CurrentVersionCode: 136

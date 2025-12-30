@@ -1,0 +1,639 @@
+Categories:
+  - Multimedia
+  - System
+License: GPL-3.0-or-later
+AuthorName: Tim Schneeberger
+SourceCode: https://github.com/ThePBone/RootlessJamesDSP
+IssueTracker: https://github.com/ThePBone/RootlessJamesDSP/issues
+Donate: https://github.com/sponsors/ThePBone
+
+RepoType: git
+Repo: https://github.com/ThePBone/RootlessJamesDSP
+
+Builds:
+  - versionName: 1.1.1
+    versionCode: 17
+    commit: 3b11513f1648f105d50b2822820b48c2224143bf
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-rootless-fdroid-universal-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 1.1.3
+    versionCode: 19
+    commit: 43a74a7938ccc839d3ea59af68df6667bf041fb3
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-rootless-fdroid-universal-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.1.4
+    versionCode: 20
+    commit: 47dac8e1367e2e31147e1bcaa16a0ddf7edbb9bd
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-rootless-fdroid-universal-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.2.0
+    versionCode: 21
+    commit: 6dc88165cca34753161c676adbe5918ab4e84c48
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-rootless-fdroid-universal-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.2.1
+    versionCode: 22
+    commit: 626006e1fdb2b026018499da7dae7a64f611583d
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-rootless-fdroid-universal-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.2.2
+    versionCode: 23
+    commit: 7dbdaf22844c3fc704d3772c74fcb501444d5c3b
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-rootless-fdroid-universal-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.3.0
+    versionCode: 24
+    commit: 6b8377311e3cdca4301d7a74dd505aaf10dbef3d
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-rootless-fdroid-universal-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.3.1
+    versionCode: 25
+    commit: c5f0c5dba60489f1126ff10a99c0358480d25115
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-rootless-fdroid-universal-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.3.2
+    versionCode: 26
+    commit: 0a68ed0b39b8b847d4ef650740bbff45f859f03e
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.4.0
+    versionCode: 27
+    commit: 3689e43a6c9625cc8ca41beab814a51089fdd340
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.4.2
+    versionCode: 29
+    commit: 8102830a1fc1fb6e26f4c91aaf89dd235655b153
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.4.3
+    versionCode: 30
+    commit: d6e20909f7ac702f6e64fb1222fe7974f1d1602e
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.5.1
+    versionCode: 32
+    commit: 80b4918470136bc85d05f55538ce35babdc16d16
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.5.2
+    versionCode: 33
+    commit: 0e08aacaa35643dc2cfda93d6b37ff9d39371c50
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.5.3
+    versionCode: 34
+    commit: 4dafd307bcbea6476ca28ff27df69e3a2dbda021
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.5.4
+    versionCode: 36
+    commit: 7dd5e58cc73fe3ddbd44743a8b8abdc1b5d5bdf9
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.6.0
+    versionCode: 37
+    commit: 2acc87bf3c0aec2b6fbafbc085958750cd92fe65
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.6.1
+    versionCode: 38
+    commit: d55065869d82e20fadd6663723fe6ddcd89b489f
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.6.3
+    versionCode: 40
+    commit: 6005ad606bd64087a119e91f923498ce155af0ea
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.6.4
+    versionCode: 41
+    commit: b33784a25f80ca3f3a97fd289d4f458c1b9b8833
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.6.5
+    versionCode: 42
+    commit: 2d73e0c41deba95dfa3bf41991e035f25939aa9c
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.6.6
+    versionCode: 43
+    commit: c31cddf28de2e31c2a9017ae70534b5032ba1042
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.6.8
+    versionCode: 45
+    commit: 937a3ff8d8492434e6fe2e71dc587698c9a14127
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r23c
+
+  - versionName: 1.6.9
+    versionCode: 46
+    commit: bbd16f1e9c9a0a393a5e94996a9162ed571dcaa8
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r27
+
+  - versionName: 1.6.11
+    versionCode: 48
+    commit: bf6af689cf2e7cab25fd6b6754f077c85ef32796
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r27
+
+  - versionName: 1.6.12
+    versionCode: 49
+    commit: eb1b409b5be15ff7cd93c75d53b1caf2732b0a0b
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r27
+
+  - versionName: 1.6.13
+    versionCode: 50
+    commit: f00690d5c0d5e0c927eacb8048db78b4f683ea41
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r27
+
+  - versionName: 1.6.14
+    versionCode: 51
+    commit: eff31a6da995d6b90463a87b2512dd955e3c66a6
+    subdir: app
+    submodules: true
+    gradle:
+      - RootlessFdroid
+    output: build/outputs/apk/rootlessFdroid/release/JamesDSP-v$$VERSION$$-$$VERCODE$$-rootless-fdroid-release-unsigned.apk
+    prebuild:
+      - sdkmanager --install "cmake;3.18.1"
+      - sed -i 's/^.*classpath("com\.google\.gms:google-services.*$//' ../build.gradle.kts
+      - sed -i 's/^.*classpath("com\.google\.firebase:firebase-crashlytics-gradle.*$//'
+        ../build.gradle.kts
+      - sed -i 's/^.*id("com\.google\.gms\.google-services").*$//' build.gradle.kts
+      - sed -i 's/^.*id("com.google.firebase.crashlytics").*$//' build.gradle.kts
+      - sed -i 's/^.*import\ com\.google\.firebase.*$//' build.gradle.kts
+      - sed -i '/configure<CrashlyticsExtension>/,+3d' build.gradle.kts
+      - sed -i 's/isEnable = .*/isEnable = false/' build.gradle.kts
+    scandelete:
+      - app/src/main/cpp/libjamesdsp
+    ndk: r27
+
+MaintainerNotes: |-
+  Scanner complains about app/src/main/cpp/libjamesdsp/Main/DSPManager/libs/android-support-v13.jar,
+  however it's needed to build DSPManager for libjamesdsp, not libjamesdsp itself, so it's safe to
+  remove it, RootlessJamesDSP doesn't need DSPManager from libjamesdsp.
+
+  Upstream provides an fdroid flavor, crashlytics are removed at compile-time,
+  libcrashlytics-connector is still included, however crashlytics-related code
+  is also removed at compile-time.
+
+  Cmake needs to be installed manually by sdkmanager, otherwise gradle clean fails
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: buildSrc/src/main/kotlin/AndroidConfig.kt|versionCode\s=\s(\d+)|.|versionName\s=\s"(.*)"
+CurrentVersion: 1.6.14
+CurrentVersionCode: 51

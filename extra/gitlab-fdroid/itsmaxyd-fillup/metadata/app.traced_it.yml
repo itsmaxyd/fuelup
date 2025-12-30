@@ -1,0 +1,80 @@
+Categories:
+  - Note
+  - Writing
+License: GPL-3.0-or-later
+WebSite: https://www.traced-it.app/
+SourceCode: https://github.com/traced-it/traced-it-android
+IssueTracker: https://github.com/traced-it/traced-it-android/issues
+Translation: https://toolate.othing.xyz/projects/traced-it/
+Changelog: https://github.com/traced-it/traced-it-android/releases
+Donate: https://ko-fi.com/tracedit
+
+AutoName: traced it
+
+RepoType: git
+Repo: https://github.com/traced-it/traced-it-android.git
+Binaries: https://github.com/traced-it/traced-it-android/releases/download/v%v/app.traced_it.apk
+
+Builds:
+  - versionName: 1.0.4
+    versionCode: 5
+    commit: a585d183e1b802a3caf7c2650814a9038a2ece0c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 6
+    commit: 9c9cd52a616e10b741693dac37e8807229be87d7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 7
+    commit: ad1a23712b57ef7062ed00e1c8d34d7a7c4ba84d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 8
+    commit: 93161e3384b39c7e0aa9e5b6b7f3c57a4c3cc497
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 9
+    commit: f5ee2f87514116f03b28298a48e91e445cecb278
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 10
+    commit: 0ac9bc3309a2e72a8a9154f38de1ea27807699cd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 11
+    commit: 5f26d46ed898a5c0c8efa447cad26df133e5ced6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 13
+    commit: cc3a7199c53853009cde6acb6c306947f934fe2e
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: d102417bced85dfb23c49ec1e1915963d17cf3d4c028b754877943cc9b865aa9
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.5.1
+CurrentVersionCode: 13

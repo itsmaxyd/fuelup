@@ -1,0 +1,1 @@
+Alertar de notificaciones e informar al usuario a través de MAXS

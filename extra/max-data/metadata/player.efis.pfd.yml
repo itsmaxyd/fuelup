@@ -1,0 +1,522 @@
+Categories:
+  - Navigation
+License: Apache-2.0
+WebSite: https://ninelima.org/efis/
+SourceCode: https://gitlab.com/ninelima/kwikEFIS
+IssueTracker: https://gitlab.com/ninelima/kwikEFIS/issues
+Changelog: https://gitlab.com/ninelima/kwikEFIS/blob/HEAD/CHANGELOG.md
+
+AutoName: Kwik EFIS Pro
+
+RepoType: git
+Repo: https://gitlab.com/ninelima/kwikEFIS.git
+
+Builds:
+  - versionName: 2.2.0
+    versionCode: 3
+    commit: 42b6ea0131afd1cb2fa1ea4de2e1eb70258bb602
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 4
+    commit: c21215e80c40fa191bc575b1e7615f10279763a0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 6
+    commit: e9eac9018e260ecc33737bc7c23f1c44e22e3e3c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 7
+    commit: 9c984013ed2d808ab61326264286ec69d57b410d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 9
+    commit: 5d02ed4b81ebe8b52c0c1ea9b5de03fd6dadbf54
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.2'
+    versionCode: 11
+    commit: dc193e2f873c66ef0a041db703519c6aa35745a1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.3'
+    versionCode: 12
+    commit: VER_3.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.4'
+    versionCode: 13
+    commit: VER_3.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.5'
+    versionCode: 14
+    commit: VER_3.5
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '3.6'
+    versionCode: 15
+    commit: VER_3.6
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '3.7'
+    versionCode: 16
+    commit: REL_3.8
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '3.8'
+    versionCode: 17
+    commit: REL_3.10
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '3.9'
+    versionCode: 18
+    commit: REL_3.11
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '3.10'
+    versionCode: 19
+    commit: EFIS_3.10
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '3.11'
+    versionCode: 20
+    commit: EFIS_3.11
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '3.12'
+    versionCode: 21
+    commit: EFIS_3.12
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '4.0'
+    versionCode: 22
+    commit: EFIS_4.0
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '4.1'
+    versionCode: 23
+    commit: EFIS_4.1
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '4.2'
+    versionCode: 24
+    commit: EFIS_4.2
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '4.3'
+    versionCode: 26
+    commit: EFIS_4.3
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '4.4'
+    versionCode: 27
+    commit: EFIS_4.4
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '4.5'
+    versionCode: 28
+    commit: EFIS_4.5
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '4.6'
+    versionCode: 29
+    commit: EFIS_4.6
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '4.7'
+    versionCode: 32
+    commit: EFIS_4.7
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '4.8'
+    versionCode: 33
+    commit: EFIS_4.8
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 34
+    commit: EFIS_5.0
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '5.1'
+    versionCode: 35
+    commit: PRIM_5.1
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '5.2'
+    versionCode: 36
+    commit: PRIM_5.2
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '5.3'
+    versionCode: 37
+    commit: PRIM_5.3
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 38
+    commit: PRIM_6.0
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '6.1'
+    versionCode: 39
+    commit: PRIM_6.1
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '6.2'
+    versionCode: 40
+    commit: PRIM_6.2
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '6.3'
+    versionCode: 41
+    commit: PRIM_6.3
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '6.4'
+    versionCode: 42
+    commit: PRIM_6.4
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '6.5'
+    versionCode: 43
+    commit: PRIM_6.5
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: 6.6rc3
+    versionCode: 44
+    commit: PRIM_6.6
+    subdir: pfd
+    gradle:
+      - yes
+
+  - versionName: '6.7'
+    versionCode: 46
+    commit: EFIS_6.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.8'
+    versionCode: 47
+    commit: EFIS_6.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.9'
+    versionCode: 48
+    commit: 8ca62ccd8a973069cdad3a58e8b8deb4ddfeae75
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.10'
+    versionCode: 50
+    commit: 141d77a00da90df23e0ecfb1610dffa923915ecf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.11'
+    versionCode: 51
+    commit: 492eb12534b103e0a00aabe80ec67a6cb340678e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.12'
+    versionCode: 52
+    commit: c440e96bb87125d1dc62b053b40fdb2aeca8b7db
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.13'
+    versionCode: 53
+    commit: EFIS_6.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.14'
+    versionCode: 54
+    commit: 4c87dde5bee3bcdfb415581687c7d222dfe64e7a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.15'
+    versionCode: 55
+    commit: EFIS_6.15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.16'
+    versionCode: 56
+    commit: EFIS_6.16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.17'
+    versionCode: 57
+    commit: EFIS_6.17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.18'
+    versionCode: 58
+    commit: EFIS_6.18
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.19'
+    versionCode: 59
+    commit: EFIS_6.19
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.20'
+    versionCode: 60
+    commit: EFIS_6.20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.21'
+    versionCode: 61
+    commit: EFIS_6.21
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.22'
+    versionCode: 62
+    commit: 9c5b5a440562f47bcb8ccc195f391e78fb41850c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.24'
+    versionCode: 64
+    commit: cf6e6884d4ef07a99de5cfc28dde7110a0024117
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.25'
+    versionCode: 65
+    commit: 54c9eaf7c3f4ba2cdbb54920fb99ea6ba0426f5d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.00'
+    versionCode: 70
+    commit: c5d7ba39a272147a95db09db312ca539122d2a17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.01'
+    versionCode: 71
+    commit: c25897593a869a480ad46b1b20e1f75ccc99e314
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.02'
+    versionCode: 72
+    commit: 576405fdbf8a5b8dc324b6fabb31a3eabc2dadfb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.03'
+    versionCode: 73
+    commit: 22b7762dd2ec2ce24b946670fdf26a87caf23610
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.04'
+    versionCode: 74
+    commit: a2d1342b34380277ba42e33751bbb6179b073dec
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.05'
+    versionCode: 75
+    commit: 5696e74fed69ba32433ef2de017d3e35fbc6b2c8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.06'
+    versionCode: 76
+    commit: bbd2c6696d26e8f04f1b405b3604c12dcdcaafa5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.07'
+    versionCode: 77
+    commit: a9517167c196cd0271e5442d03889b48cca7f922
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.08'
+    versionCode: 78
+    commit: 3c065b7999f48c62c352fa24ce50a50c1313345f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.09'
+    versionCode: 79
+    commit: 99cf67e9e2aba7811447b09747797faef10414e7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.10'
+    versionCode: 80
+    commit: 641f2621a2b4046b5d9d0a664bc5afac84d53285
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.11'
+    versionCode: 81
+    commit: 2156761196c15f35122e306f94594e9a4d05a51a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.12'
+    versionCode: 82
+    commit: 23e638ab7f3521a3014e8596126d585e8007a098
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.13'
+    versionCode: 83
+    commit: bea1ec42948eaf98844c3e1e7f4c94a9a79b7c3d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.14'
+    versionCode: 84
+    commit: f7f919909c24a552935a5512e9789111ecfd2726
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.15'
+    versionCode: 85
+    commit: da2df529c00c2ad212dae593746940b278e2957d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.16'
+    versionCode: 86
+    commit: 2ed4381d27baccb5e39644e02462ed3a1976bc0c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.17'
+    versionCode: 87
+    commit: 2159d2cbf15765eecc342b91f8121efc49626257
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^EFIS
+CurrentVersion: '7.17'
+CurrentVersionCode: 87

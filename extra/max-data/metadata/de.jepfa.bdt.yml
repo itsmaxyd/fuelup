@@ -1,0 +1,148 @@
+Categories:
+  - Time
+License: MIT
+AuthorName: Jens Pfahl
+AuthorWebSite: https://jepfa.de
+WebSite: https://bdt.jepfa.de
+SourceCode: https://github.com/jenspfahl/BDT
+IssueTracker: https://github.com/jenspfahl/BDT/issues
+Changelog: https://github.com/jenspfahl/BDT/releases
+
+AutoName: Break.Down.Timer
+
+RepoType: git
+Repo: https://github.com/jenspfahl/BDT.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 10000
+    commit: v1.0.0
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.4
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    build:
+      - export PATH=$$flutter$$/bin:$PATH
+      - flutter packages pub get
+      - flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter config --no-analytics
+      - flutter build apk
+
+  - versionName: 1.1.0
+    versionCode: 10100
+    commit: 8ae3a796209136edc962916e935a67eaae330cb3
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.4
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    build:
+      - export PATH=$$flutter$$/bin:$PATH
+      - flutter packages pub get
+      - flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter config --no-analytics
+      - flutter build apk
+
+  - versionName: 1.1.1
+    versionCode: 10101
+    commit: b98254cbed264fb8903cb52301738fb097e51f44
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.4
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    build:
+      - export PATH=$$flutter$$/bin:$PATH
+      - flutter packages pub get
+      - flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter config --no-analytics
+      - flutter build apk
+
+  - versionName: 1.2.0
+    versionCode: 10200
+    commit: 63c081f30cae93991c6b907870b9e50b4085f389
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.13.0
+    prebuild:
+      - sdkmanager 'cmake;3.10.2.4988404'
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.2.1
+    versionCode: 10201
+    commit: c6d8e0ce0b9c0cf210e48268122b5ae9778059f7
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.13.0
+    prebuild:
+      - sdkmanager 'cmake;3.10.2.4988404'
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.2.2
+    versionCode: 10202
+    commit: 94519f6811def061218064c97f272eaa1b35abd6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.22.3
+    prebuild:
+      - sdkmanager 'cmake;3.10.2.4988404'
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.3.0
+    versionCode: 10300
+    commit: e4afdfd684761de84a7bb24a7f00a4a07782a1a2
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.27.4
+    prebuild:
+      - sdkmanager 'cmake;3.10.2.4988404'
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter clean
+      - $$flutter$$/bin/flutter build apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.3.0
+CurrentVersionCode: 10300

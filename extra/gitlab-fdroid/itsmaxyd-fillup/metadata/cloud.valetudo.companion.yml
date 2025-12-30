@@ -1,0 +1,124 @@
+Categories:
+  - Connectivity
+License: Apache-2.0
+AuthorName: Hypfer
+WebSite: https://valetudo.cloud/
+SourceCode: https://github.com/Hypfer/valetudo-companion
+IssueTracker: https://github.com/Hypfer/valetudo-companion/issues
+Donate: https://github.com/sponsors/Hypfer
+
+AutoName: Valetudo Companion
+
+RepoType: git
+Repo: https://github.com/Hypfer/valetudo-companion
+
+Builds:
+  - versionName: 2021.09.2
+    versionCode: 3
+    commit: d7078bc4ff6e786fe8dd72eaa5b706ab713f272c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2021.09.3
+    versionCode: 4
+    commit: 99ffeda16ac32d87acd4e2ddff82118ebc637325
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2021.11.0
+    versionCode: 5
+    commit: f745b08ae29c91f549355aab8335568561934286
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2021.12.0
+    versionCode: 6
+    commit: 9251ecca7479d69dfcf042816826a4a104045048
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2022.01.0
+    versionCode: 7
+    commit: 9cc2ae95664ea7fd688fb03dd18c7f76573cc911
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2022.03.0
+    versionCode: 8
+    commit: 78625c5af4cc9b074afee7bd4a9f0972746da3bd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2022.08.1
+    versionCode: 10
+    commit: 338151ee648b9137ae956c2cb6bee9a8c282043e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -t stretch-backports openjdk-11-jdk-headless openjdk-11-jre-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2022.10.0
+    versionCode: 11
+    commit: f387ea6eb83b82438e36e59ab7dcb4fadb3f5476
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2023.02.0
+    versionCode: 12
+    commit: 7634201cdeb271ea459e6391621c717f77c17ad4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2023.08.0
+    versionCode: 13
+    commit: 329b5a17cca2e273fb48f150851e84ca7d90b342
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.04.0
+    versionCode: 14
+    commit: cfadd569321659b8b21552642bedfec768074341
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2024.04.0
+CurrentVersionCode: 14

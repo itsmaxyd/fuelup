@@ -1,0 +1,1339 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on geopf.fr and ignf.github.io servers
+    fr-FR: Dépend des serveurs geopf.fr et ignf.github.io
+Categories:
+  - Navigation
+License: GPL-3.0-only
+AuthorWebSite: https://www.ign.fr
+WebSite: https://www.ign.fr/telechargez-application-cartographique-cartes-ign
+SourceCode: https://github.com/IGNF/cartes-ign-app
+IssueTracker: https://github.com/IGNF/cartes-ign-app/issues
+Changelog: https://github.com/IGNF/cartes-ign-app/releases
+
+AutoName: Cartes IGN
+
+RepoType: git
+Repo: https://github.com/IGNF/cartes-ign-app.git
+
+Builds:
+  - versionName: 3.1.3
+    versionCode: 30103
+    commit: 9c852bc44157ace565133ea45025895bed7c790b
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.4
+    versionCode: 30104
+    commit: 19e23f1712fd4b61479c9aff67e7d1af7ac635d5
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.5
+    versionCode: 30105
+    commit: d985a623103a3419975a58c32c07cb2e4892ac6e
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.6
+    versionCode: 30106
+    commit: 665a70cfde8d412433b0b3cfb2237275ae94a36f
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.7
+    versionCode: 30107
+    commit: 2862df245d8a90acc8a05ed7e473a86a6231a12f
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.8
+    versionCode: 30108
+    commit: 8f2b5411839631bd6ff9c76656d5e2cdcf558d0b
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.11
+    versionCode: 30111
+    commit: e8f83a8c7ae1a70ae24de24c38d07f81219242b2
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.12
+    versionCode: 30112
+    commit: 2556bf7e0760fa05f86512f865c60253addf3ad7
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.13
+    versionCode: 30113
+    commit: 9c9091d254ede9f5b1a21e9fdf023e4d41bbb257
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.14
+    versionCode: 30114
+    commit: 87fa3f157932dacd95aa189eccea2e0492f83d3c
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.15
+    versionCode: 30115
+    commit: 0b645c260f6386fc80a87c4dd8c017aa67a6ab1a
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.16
+    versionCode: 30116
+    commit: 50f8f1f4d03e9f13331086c3726ee33ca4a1c20f
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.17
+    versionCode: 30117
+    commit: 71fc33910c5bb91402de5ac670fad8bdad8ef8b1
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.18
+    versionCode: 30118
+    commit: 7cc8e1e96462203be87754d8704934c088f3dad0
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.23
+    versionCode: 30123
+    commit: 47fddc8cbb413f22c584b340a9019aec5e040a95
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.24
+    versionCode: 30124
+    commit: 2154dac062995abcb4397393446e15240a455bc9
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.26
+    versionCode: 30126
+    commit: bc9dcb7d42deac54382762a4fab53f346b04a94e
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.29
+    versionCode: 30129
+    commit: 56971d96ab322eb10f728302180cb082a88ef466
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.30
+    versionCode: 30130
+    commit: cc1bfea755f4dec62028472f8983eb3776d8ad69
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.1.35
+    versionCode: 30135
+    commit: 55a5d11a0a79e46b0c296abb8f1fbfd0e06e4b4d
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.2.2
+    versionCode: 30202
+    commit: 8180376e2c9d750e0bf45b93c6f73a70ff3aead3
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.2.3
+    versionCode: 30203
+    commit: b75e29db4f94579923fed1e11a52e65349d5563e
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.2.6
+    versionCode: 30206
+    commit: 67c8258e17a85a0b8b86a704b5131094feebd3ef
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.2.8
+    versionCode: 30208
+    commit: c598a3578f9341b1e23356cb5722326a794b2ea4
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.2.9
+    versionCode: 30209
+    commit: 3d7d6ee725ee73a79d66e37b8a8f5ab670f518e9
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make npm
+    gradle:
+      - fdroid
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+
+  - versionName: 3.2.10
+    versionCode: 30210
+    commit: f357cd270dccb198157a1747fac569dc3c64abba
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t bookworm make g++ libc-dev meson ninja-build pkg-config
+        libglib2.0-dev gobject-introspection libgirepository1.0-dev gtk-doc-tools
+        libexif-dev libexpat1-dev libgif-dev liblcms2-dev libpango1.0-dev libpng-dev
+        libpoppler-glib-dev librsvg2-dev libtiff5-dev libtool python-is-python3
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.0
+    versionCode: 30300
+    commit: e871b9b3d3b9230f621b32eeb6e38316433d298f
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t bookworm make g++ libc-dev meson ninja-build pkg-config
+        libglib2.0-dev gobject-introspection libgirepository1.0-dev gtk-doc-tools
+        libexif-dev libexpat1-dev libgif-dev liblcms2-dev libpango1.0-dev libpng-dev
+        libpoppler-glib-dev librsvg2-dev libtiff5-dev libtool python-is-python3
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.3
+    versionCode: 30303
+    commit: 027391d9d5957698dccc3e75ee315df6ec7462da
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.5
+    versionCode: 30305
+    commit: 517f33ca8d72de2af940b8483721f3472301a981
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.6
+    versionCode: 30306
+    commit: cb6c91565fa531ec975dc2696dfb9893090fc299
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.15
+    versionCode: 30315
+    commit: 22e2c02a8f8c59434f15d6cc27bb776edb0c3ccd
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.18
+    versionCode: 30318
+    commit: 6ebf43ac236672ca2ad56def1e0e629a4a87648b
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.21
+    versionCode: 30321
+    commit: 5c4708049ee81e0ff422bde36ac14992780aee7a
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.26
+    versionCode: 30326
+    commit: 6f385b52247ba484f467d83e07e82990dc34b2f0
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.31
+    versionCode: 30331
+    commit: 56fb088682db06210a2a2b2f99380481031ec50b
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.32
+    versionCode: 30332
+    commit: f36a60eed61065d5433688c246b32a40fdaa1162
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.34
+    versionCode: 30334
+    commit: 6c8588954d345e447538355ea00457626a2455f5
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.3.35
+    versionCode: 30335
+    commit: 684cd57818a7d3a8098e4ac2bcbbca97313591f2
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.4.0
+    versionCode: 30400
+    commit: 07f000ef51e9583d01e59037285b55b30aacb71a
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+  - versionName: 3.4.1
+    versionCode: 30401
+    commit: 6417c9a2648375c89b7ef1b86afb493c08e1c2a3
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make g++ libc-dev meson ninja-build pkg-config libglib2.0-dev
+        gobject-introspection libgirepository1.0-dev gtk-doc-tools libexif-dev libexpat1-dev
+        libgif-dev liblcms2-dev libpango1.0-dev libpng-dev libpoppler-glib-dev librsvg2-dev
+        libtiff5-dev libtool python-is-python3
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    srclibs:
+      - react-native-sharp@v0.32.6
+      - libvips@v8.14.5
+    rm:
+      - android/app/build_google.gradle
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/geolocation/d' ../../package.json
+      - cd ../..
+      - echo R1BGX2tleT1GRHJvaWQtOWtwbHc4YW4K | base64 --decode > .env
+      - echo c2lnbmFsZW1lbnRfdXJsPWh0dHBzOi8vd3d3Lmdlb3BvcnRhaWwuZ291di5mci93cC1qc29uL3dwL3YyLwo=
+        | base64 --decode >> .env
+      - npm install
+      - npm run build
+      - npx cap sync
+    scandelete:
+      - node_modules
+    build:
+      - pushd $$libvips$$
+      - mkdir build
+      - meson setup build --prefix=$$libvips$$/build/
+      - cd build
+      - meson compile
+      - meson install
+      - popd
+      - pushd $$react-native-sharp$$
+      - export PKG_CONFIG_PATH=$$libvips$$/build/lib/pkgconfig/
+      - npm install --build-from-source
+      - popd
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.4.1
+CurrentVersionCode: 30401

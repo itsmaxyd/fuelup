@@ -1,0 +1,371 @@
+Categories:
+  - Connectivity
+  - Internet
+  - Security
+  - System
+  - VPN & Proxy
+License: GPL-3.0-only
+WebSite: https://tincapp.pacien.org
+SourceCode: https://github.com/pacien/tincapp
+IssueTracker: https://github.com/pacien/tincapp/issues
+Translation: https://translate.codeberg.org/projects/tincapp/
+Changelog: https://github.com/pacien/tincapp/blob/HEAD/changelog.md
+Donate: https://paypal.me/pacien/15
+Bitcoin: 152t9TEBBhEescQx5gG7T5wHaJVeupAXQm
+
+AutoName: Tinc Mesh VPN
+
+RepoType: git
+Repo: https://github.com/pacien/tincapp.git
+
+Builds:
+  - versionName: 0.1-preview
+    versionCode: 1
+    commit: v0.1-preview
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/constraint-layout/s/1\.0\.0-alpha4/1.0.2/g' build.gradle
+
+  - versionName: '0.2'
+    versionCode: 2
+    commit: v0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.3'
+    versionCode: 3
+    commit: v0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.4'
+    versionCode: 4
+    commit: v0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.5'
+    versionCode: 5
+    commit: v0.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.6'
+    versionCode: 6
+    commit: v0.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.7'
+    versionCode: 7
+    commit: v0.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.8'
+    versionCode: 8
+    commit: v0.8
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/repositories {/ a google()' ../build.gradle
+      - sed -i -e '/lintOptions {/ a abortOnError false' build.gradle
+
+  - versionName: '0.9'
+    versionCode: 9
+    commit: v0.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.10'
+    versionCode: 10
+    commit: v0.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.11'
+    versionCode: 11
+    commit: v0.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.12'
+    versionCode: 12
+    commit: v0.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.13'
+    versionCode: 13
+    commit: v0.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.14'
+    versionCode: 14
+    commit: v0.14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.15'
+    versionCode: 15
+    commit: v0.15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.16'
+    versionCode: 16
+    commit: v0.16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.17'
+    versionCode: 17
+    commit: v0.17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.18'
+    versionCode: 18
+    commit: v0.18
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile/,+2d' -e '/signingConfigs/,+7d' -e
+      '/signingConfigs.release/d' -e '/keystoreProperties/d' build.gradle
+
+  - versionName: '0.19'
+    versionCode: 19
+    commit: v0.19
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.20'
+    versionCode: 20
+    commit: v0.20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.22'
+    versionCode: 22
+    commit: v0.22
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.23'
+    versionCode: 23
+    commit: v0.23
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r17b
+
+  - versionName: '0.24'
+    versionCode: 24
+    commit: v0.24
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r17b
+
+  - versionName: '0.25'
+    versionCode: 25
+    commit: v0.25
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r17b
+
+  - versionName: '0.27'
+    versionCode: 27
+    commit: v0.27
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r17c
+
+  - versionName: '0.28'
+    versionCode: 28
+    commit: v0.28
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r17c
+
+  - versionName: '0.30'
+    versionCode: 30
+    commit: v0.30
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r17c
+
+  - versionName: '0.31'
+    versionCode: 31
+    commit: v0.31
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r17c
+
+  - versionName: '0.32'
+    versionCode: 32
+    commit: v0.32
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r17c
+
+  - versionName: '0.33'
+    versionCode: 33
+    commit: a472dc3240c339a6c6e82757e0edd368ba69022e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r17c
+
+  - versionName: '0.34'
+    versionCode: 34
+    commit: 398f218e64a85320b88a314474ac888d12c811db
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.35'
+    versionCode: 35
+    commit: 8a470f31c97ee754f835f09a20c9b281a645e1e3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.36'
+    versionCode: 36
+    commit: 9d0466c306ec765d7d28bf0fcbd06f3c32d1194e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.37'
+    versionCode: 37
+    commit: da8e7b52698d3f9e86be779f44ce69b3fa65c153
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.38'
+    versionCode: 38
+    commit: b5fe5e49e0d3cc2b7c53af23b7a4e7d3c4491be1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.39'
+    versionCode: 39
+    commit: 9ac126525ceda9e3f66c555314996d7dfded1cec
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.40'
+    versionCode: 40
+    commit: 4c6a2a879a5847b369d5b889452bf96c3d610463
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.41'
+    versionCode: 41
+    commit: c2cee114110679b989dd583c690ddb9c76599f2b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: 26.1.10909125
+
+  - versionName: '0.42'
+    versionCode: 42
+    commit: 2975156d3f667728b67963d84727da459c290fe1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: 26.1.10909125
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '0.42'
+CurrentVersionCode: 42

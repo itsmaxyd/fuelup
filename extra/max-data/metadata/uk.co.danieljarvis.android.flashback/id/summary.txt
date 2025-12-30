@@ -1,0 +1,1 @@
+Saat ada panggilan, Flashback menampilkan riwayat telepon & SMS penelepon

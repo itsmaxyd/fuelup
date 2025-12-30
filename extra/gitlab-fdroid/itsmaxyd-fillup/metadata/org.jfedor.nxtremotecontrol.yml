@@ -1,0 +1,46 @@
+Categories:
+  - Science & Education
+License: Apache-2.0
+SourceCode: https://github.com/jfedor2/nxt-remote-control
+IssueTracker: https://github.com/jfedor2/nxt-remote-control/issues
+
+AutoName: NXT Remote Control
+Description: |-
+  Lets you control Lego Mindstorms NXT robots from an Android phone via Bluetooth.
+
+  Protocol is <a href="http://mindstorms.lego.com/en-us/support/files/default.aspx">documented</a> on Lego website.
+
+  The official <a href="https://github.com/NXT/LEGO-MINDSTORMS-MINDdroid">MINDdroid</a> app is
+  also free software.
+
+RepoType: git
+Repo: https://github.com/jfedor2/nxt-remote-control
+
+Builds:
+  - versionName: '1.4'
+    versionCode: 5
+    commit: 44f28e765f2e49348dd5f2c
+
+  - versionName: '1.7'
+    versionCode: 8
+    commit: a9921adc4d1df0592b2c06fe77a6ac75b97a1f40
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 9
+    commit: 74608ee336d4218dd7c60445ca3b92940d58b6b5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/foojay/d' ../settings.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.8'
+CurrentVersionCode: 9

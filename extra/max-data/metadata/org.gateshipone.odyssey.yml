@@ -1,0 +1,324 @@
+Categories:
+  - Local Media Player
+  - Multimedia
+License: GPL-3.0-or-later
+AuthorName: Gateship-One
+AuthorEmail: torschiffeins@gmail.com
+WebSite: https://github.com/gateship-one/odyssey/wiki
+SourceCode: https://github.com/gateship-one/odyssey
+IssueTracker: https://github.com/gateship-one/odyssey/issues
+Translation: https://github.com/gateship-one/odyssey/blob/HEAD/CONTRIBUTING.md#can-i-help-to-translate-odyssey
+Changelog: https://github.com/gateship-one/odyssey/blob/HEAD/CHANGELOG.md
+
+AutoName: Odyssey
+
+RepoType: git
+Repo: https://github.com/gateship-one/odyssey
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 6
+    commit: release-6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.0'
+    versionCode: 7
+    commit: release-7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.8
+    versionCode: 8
+    commit: release-8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.9
+    versionCode: 9
+    commit: release-9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.10
+    versionCode: 10
+    commit: release-10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.11
+    versionCode: 11
+    commit: release-11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 12
+    commit: release-12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 13
+    commit: release-13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 14
+    commit: release-14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 15
+    commit: release-15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.4
+    versionCode: 16
+    commit: release-16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.5
+    versionCode: 17
+    commit: release-17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.6
+    versionCode: 18
+    commit: release-18
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.7
+    versionCode: 19
+    commit: release-19
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.8
+    versionCode: 20
+    commit: release-20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.9
+    versionCode: 21
+    commit: release-21
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.10
+    versionCode: 22
+    commit: release-22
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.11
+    versionCode: 23
+    commit: release-23
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.12
+    versionCode: 24
+    commit: release-24
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.13
+    versionCode: 25
+    commit: release-25
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.14
+    versionCode: 26
+    commit: release-26
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.15
+    versionCode: 27
+    commit: release-27
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.16
+    versionCode: 28
+    commit: release-28
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.17
+    versionCode: 29
+    commit: release-29
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.18
+    versionCode: 30
+    commit: release-30
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.19
+    versionCode: 31
+    commit: release-31
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.20
+    versionCode: 32
+    commit: release-32
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.1.21
+    versionCode: 33
+    commit: release-33
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.2.0
+    versionCode: 34
+    commit: 4576abc5ddfc9e79056e9ea0223b37af004ae672
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.2.1
+    versionCode: 35
+    commit: 6425904276b8e46303decfcd0b90072bf930e001
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.2.2
+    versionCode: 36
+    commit: 0129625bab48d0dbfa1cb3266b87460b7dc2b123
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.2.3
+    versionCode: 37
+    commit: 677872964ace4c5eb005ea7c062b3495fff1f582
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.2.4
+    versionCode: 38
+    commit: 952c2430f207edc3f372b4e1ddd82b3588639b11
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.3.0
+    versionCode: 39
+    commit: a44d0b6d7ae2e725a901472542b0febf12c36618
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.3.1
+    versionCode: 40
+    commit: 0bc89485b9f03a6a16966d29af777f65b98b534f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.3.2
+    versionCode: 41
+    commit: 451dbffc1e16a107078aaf12f19bcdbe1bf21e56
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+
+  - versionName: 1.4.0
+    versionCode: 42
+    commit: b04e7e367e426b5e776372297ba4ba919dd2207c
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - images/ic_launcher.zip
+    prebuild: sed -i -e '/foojay/d' ../settings.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.4.0
+CurrentVersionCode: 42

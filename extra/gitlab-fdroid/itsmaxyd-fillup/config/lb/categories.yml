@@ -1,0 +1,50 @@
+Connectivity:
+  name: Connectioun
+Development:
+  name: Entwécklung
+Games:
+  name: Spiller
+Graphics:
+  name: Grafik
+Internet:
+  name: Internet
+Money:
+  name: Suen
+Multimedia:
+  name: Multimedia
+Navigation:
+  name: Navigatioun
+Phone & SMS:
+  name: Telefon & SMS
+Reading:
+  name: Liesen
+Science & Education:
+  name: Wëssenschaft & Bildung
+Security:
+  name: Sécherheet
+Sports & Health:
+  name: Sport & Gesondheet
+System:
+  name: System
+Time:
+  name: Zäit
+Writing:
+  name: Schreiwen
+Bookmark:
+  name: Lieszeechen
+Browser:
+  name: Browser
+Email:
+  name: E-Mail
+Forum:
+  name: Forum
+Gallery:
+  name: Galerie
+News:
+  name: Noriichten
+Note:
+  name: Notiz
+Podcast:
+  name: Podcast
+Public Transport:
+  name: Ëffentlechen Transport

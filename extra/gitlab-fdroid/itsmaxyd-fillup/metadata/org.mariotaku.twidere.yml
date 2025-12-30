@@ -1,0 +1,1829 @@
+Categories:
+  - Internet
+License: GPL-3.0-or-later
+AuthorName: Twidere Project
+AuthorEmail: twidere.project@gmail.com
+WebSite: https://twidere.mariotaku.org/
+SourceCode: https://github.com/TwidereProject/Twidere-Android
+IssueTracker: https://github.com/TwidereProject/Twidere-Android/issues
+Translation: http://crowdin.net/project/twidere
+Donate: https://paypal.me/yisiliu2
+Bitcoin: 3HGDdf9ptTPNaY7C53gREMUnUsUVUoqm8G
+
+AutoName: Twidere
+Description: |-
+  Features include:
+
+  * Built in image viewer and map viewer
+  * Direct messages with conversation style
+  * Extension support like Twicca, but more friendly for users and developers
+  * t.co link auto expanding
+  * Multiple account support
+  * Custom oAuth consumer key/secret
+  * Basic features supported for Fanfou
+  * Direct login with user name and password (Don't worry! It's safe!)
+  * Custom API Proxy (gtap, twip, jtapi supported)
+  * GZip compressing for API requests
+  * TCP DNS query and custom host mapping to fight against censorship
+
+  Development is focussed on Twitter and that service is the only one officially
+  supported.
+
+  You can donate via PayPal and Bitcoin/Ethereum here.
+
+RepoType: git
+Repo: https://github.com/TwidereProject/Twidere-Android
+
+Builds:
+  - versionName: 0.2.9.12
+    versionCode: 94
+    commit: 503153f4ec
+    patch:
+      - HomeActivity.patch
+    srclibs:
+      - SmoothProgressBar@0.4.0
+      - RefreshNow@edea0165172e3
+      - DragSort@0.6.1
+      - SlidingMenu@4254feca3ec
+      - HoloAccent@v0.9.1
+      - MenuComponent@2caf41895e
+      - AndroidStaggeredGrid@1.0.4
+      - ViewPagerIndicator@2.4.1
+    rm:
+      - dist
+      - art
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cp libs/android-support-v4.jar $$DragSort$$/libs/
+      - cp libs/android-support-v4.jar $$SlidingMenu$$/libs/
+      - cp libs/android-support-v4.jar $$MenuComponent$$/libs/
+      - mkdir $$AndroidStaggeredGrid$$/libs/
+      - cp libs/android-support-v4.jar $$AndroidStaggeredGrid$$/libs/
+      - cp libs/android-support-v4.jar $$ViewPagerIndicator$$/libs/
+    target: android-19
+
+  - versionName: 0.3.0-dev-fdroid
+    versionCode: 98
+    commit: 49742e744692a213668a7855f75148b5f00877a0
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.0.1
+      - CWACSacklist@v1.0.1
+    rm:
+      - twidere.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - pushd libs
+      - jar xf jsonserializer-*.jar
+      - jar xf dnsjava-ipv6-1.0-with-sources.jar
+      - find -regex ".+\.\(a\|dll\|so\|exe\|lib\|class\)" -type f -delete
+      - cp -fR org ../src/main/java/
+      - popd
+      - rm -fR libs
+      - echo -e "allprojects {\nsourceCompatibility = 1.7\ntargetCompatibility = 1.7\n}"
+        >> ../build.gradle
+
+  - versionName: 0.3.0-dev-fdroid
+    versionCode: 107
+    commit: bd0198a6237940c56063723f8ff221553b179dc0
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.0.1
+      - CWACSacklist@v1.0.1
+      - MariotakuDragSort@0.6.1
+      - MariotakuMessageBubbleView@1.0
+      - MariotakuSlidingMenu@501a9988a4d95958fe634fc09d5dc332de7830b9
+      - ColorPicker-uucky@0.9.1
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/jitpack/d'  build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - mkdir -p ../libraries/colorpicker
+      - cp -fR $$ColorPicker-uucky$$ ../libraries/colorpicker
+      - mkdir -p ../libraries/dragsort
+      - cp -fR $$MariotakuDragSort$$ ../libraries/dragsort
+      - mkdir -p ../libraries/slidingmenu
+      - cp -fR $$MariotakuSlidingMenu$$ ../libraries/slidingmenu
+      - mkdir -p ../libraries/messagebubbleview
+      - cp -fR $$MariotakuMessageBubbleView$$ ../libraries/messagebubbleview
+      - echo -e "\ninclude ':libraries:colorpicker:library'\ninclude ':libraries:dragsort:library'\ninclude
+        ':libraries:slidingmenu:library'\ninclude ':libraries:messagebubbleview:library'"
+        >> ../settings.gradle
+      - sed -i -e '/ColorPicker/acompile project(":libraries:colorpicker:library")'
+        -e '/DragSortListView/acompile project(":libraries:dragsort:library")' -e
+        '/SlidingMenu/acompile project(":libraries:slidingmenu:library")' build.gradle
+        -e '/MessageBubbleView/acompile project(":libraries:messagebubbleview:library")'
+      - sed -i -e '/ColorPicker/d' -e '/DragSortListView/d' -e '/SlidingMenu/d' -e
+        '/MessageBubbleView/d' -e '/commonsware/d' build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-fdroid"' build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-fdroid
+    versionCode: 108
+    commit: 86ec5e3f4f6aaa92dce037e12f438df4bba6281c
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.0.1
+      - CWACSacklist@v1.0.1
+      - MariotakuDragSort@0.6.1
+      - MariotakuMessageBubbleView@1.0
+      - MariotakuSlidingMenu@501a9988a4d95958fe634fc09d5dc332de7830b9
+      - ColorPicker-uucky@0.9.3
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/jitpack/d'  build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - mkdir -p ../libraries/colorpicker
+      - cp -fR $$ColorPicker-uucky$$ ../libraries/colorpicker
+      - mkdir -p ../libraries/dragsort
+      - cp -fR $$MariotakuDragSort$$ ../libraries/dragsort
+      - mkdir -p ../libraries/slidingmenu
+      - cp -fR $$MariotakuSlidingMenu$$ ../libraries/slidingmenu
+      - mkdir -p ../libraries/messagebubbleview
+      - cp -fR $$MariotakuMessageBubbleView$$ ../libraries/messagebubbleview
+      - echo -e "\ninclude ':libraries:colorpicker:library'\ninclude ':libraries:dragsort:library'\ninclude
+        ':libraries:slidingmenu:library'\ninclude ':libraries:messagebubbleview:library'"
+        >> ../settings.gradle
+      - sed -i -e '/ColorPicker/acompile project(":libraries:colorpicker:library")'
+        -e '/DragSortListView/acompile project(":libraries:dragsort:library")' -e
+        '/SlidingMenu/acompile project(":libraries:slidingmenu:library")' build.gradle
+        -e '/MessageBubbleView/acompile project(":libraries:messagebubbleview:library")'
+      - sed -i -e '/ColorPicker/d' -e '/DragSortListView/d' -e '/SlidingMenu/d' -e
+        '/MessageBubbleView/d' -e '/commonsware/d' build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-fdroid"' build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-fdroid
+    versionCode: 110
+    commit: 1a0d3eeb838d0a3585c18212361d12d3b54a93f8
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+      - MariotakuDragSort@0.6.1
+      - MariotakuMessageBubbleView@1.0
+      - MariotakuSlidingMenu@501a9988a4d95958fe634fc09d5dc332de7830b9
+      - ColorPicker-uucky@0.9.4
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/jitpack/d'  build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - mkdir -p ../libraries/colorpicker
+      - cp -fR $$ColorPicker-uucky$$ ../libraries/colorpicker
+      - mkdir -p ../libraries/dragsort
+      - cp -fR $$MariotakuDragSort$$ ../libraries/dragsort
+      - mkdir -p ../libraries/slidingmenu
+      - cp -fR $$MariotakuSlidingMenu$$ ../libraries/slidingmenu
+      - mkdir -p ../libraries/messagebubbleview
+      - cp -fR $$MariotakuMessageBubbleView$$ ../libraries/messagebubbleview
+      - echo -e "\ninclude ':libraries:colorpicker:library'\ninclude ':libraries:dragsort:library'\ninclude
+        ':libraries:slidingmenu:library'\ninclude ':libraries:messagebubbleview:library'"
+        >> ../settings.gradle
+      - sed -i -e '/ColorPicker/acompile project(":libraries:colorpicker:library")'
+        -e '/DragSortListView/acompile project(":libraries:dragsort:library")' -e
+        '/SlidingMenu/acompile project(":libraries:slidingmenu:library")' build.gradle
+        -e '/MessageBubbleView/acompile project(":libraries:messagebubbleview:library")'
+      - sed -i -e '/ColorPicker/d' -e '/DragSortListView/d' -e '/SlidingMenu/d' -e
+        '/MessageBubbleView/d' -e '/commonsware/d' build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-fdroid"' build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-fdroid
+    versionCode: 112
+    commit: f01beee026d55681ba7df43c3e3e0bcce6839d7f
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+      - MariotakuDragSort@0.6.1
+      - MariotakuMessageBubbleView@1.0
+      - MariotakuSlidingMenu@501a9988a4d95958fe634fc09d5dc332de7830b9
+      - ColorPicker-uucky@0.9.4
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/jitpack/d'  build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - mkdir -p ../libraries/colorpicker
+      - cp -fR $$ColorPicker-uucky$$ ../libraries/colorpicker
+      - mkdir -p ../libraries/dragsort
+      - cp -fR $$MariotakuDragSort$$ ../libraries/dragsort
+      - mkdir -p ../libraries/slidingmenu
+      - cp -fR $$MariotakuSlidingMenu$$ ../libraries/slidingmenu
+      - mkdir -p ../libraries/messagebubbleview
+      - cp -fR $$MariotakuMessageBubbleView$$ ../libraries/messagebubbleview
+      - echo -e "\ninclude ':libraries:colorpicker:library'\ninclude ':libraries:dragsort:library'\ninclude
+        ':libraries:slidingmenu:library'\ninclude ':libraries:messagebubbleview:library'"
+        >> ../settings.gradle
+      - sed -i -e '/ColorPicker/acompile project(":libraries:colorpicker:library")'
+        -e '/DragSortListView/acompile project(":libraries:dragsort:library")' -e
+        '/SlidingMenu/acompile project(":libraries:slidingmenu:library")' build.gradle
+        -e '/MessageBubbleView/acompile project(":libraries:messagebubbleview:library")'
+      - sed -i -e '/ColorPicker/d' -e '/DragSortListView/d' -e '/SlidingMenu/d' -e
+        '/MessageBubbleView/d' -e '/commonsware/d' build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-fdroid"' build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-113
+    versionCode: 113
+    commit: ae1acdeb4649131e0386cd1b9904eef407566c19
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+      - MariotakuDragSort@0.6.1
+      - MariotakuMessageBubbleView@1.2
+      - MariotakuSlidingMenu@501a9988a4d95958fe634fc09d5dc332de7830b9
+      - ColorPicker-uucky@0.9.4
+      - AsyncManager@9391ed71d7f3665217ab782acf4e6902d2425547
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/jitpack/d'  build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - mkdir -p ../libraries/colorpicker
+      - cp -fR $$ColorPicker-uucky$$ ../libraries/colorpicker
+      - mkdir -p ../libraries/dragsort
+      - cp -fR $$MariotakuDragSort$$ ../libraries/dragsort
+      - mkdir -p ../libraries/slidingmenu
+      - cp -fR $$MariotakuSlidingMenu$$ ../libraries/slidingmenu
+      - mkdir -p ../libraries/messagebubbleview
+      - cp -fR $$MariotakuMessageBubbleView$$ ../libraries/messagebubbleview
+      - cp -fR $$AsyncManager$$/asyncmanager ../libraries/
+      - echo -e "\ninclude ':libraries:colorpicker:library'\ninclude ':libraries:dragsort:library'\ninclude
+        ':libraries:slidingmenu:library'\ninclude ':libraries:messagebubbleview:library'\ninclude
+        ':libraries:asyncmanager'" >> ../settings.gradle
+      - sed -i -e '/ColorPicker/acompile project(":libraries:colorpicker:library")'
+        -e '/DragSortListView/acompile project(":libraries:dragsort:library")' -e
+        '/SlidingMenu/acompile project(":libraries:slidingmenu:library")' -e '/MessageBubbleView/acompile
+        project(":libraries:messagebubbleview:library")' -e '/AsyncManager/acompile
+        project(":libraries:asyncmanager")' build.gradle
+      - sed -i -e '/ColorPicker/d' -e '/DragSortListView/d' -e '/SlidingMenu/d' -e
+        '/MessageBubbleView/d' -e '/commonsware/d' -e '/AsyncManager/d' build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-$$VERCODE$$"'
+        build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-114
+    versionCode: 114
+    commit: 0.3.0-dev150617
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+      - MariotakuDragSort@0.6.1
+      - MariotakuMessageBubbleView@1.2
+      - MariotakuSlidingMenu@501a9988a4d95958fe634fc09d5dc332de7830b9
+      - ColorPicker-uucky@0.9.7
+      - AsyncManager@9391ed71d7f3665217ab782acf4e6902d2425547
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/jitpack/d'  build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - mkdir -p ../libraries/colorpicker
+      - cp -fR $$ColorPicker-uucky$$ ../libraries/colorpicker
+      - mkdir -p ../libraries/dragsort
+      - cp -fR $$MariotakuDragSort$$ ../libraries/dragsort
+      - mkdir -p ../libraries/slidingmenu
+      - cp -fR $$MariotakuSlidingMenu$$ ../libraries/slidingmenu
+      - mkdir -p ../libraries/messagebubbleview
+      - cp -fR $$MariotakuMessageBubbleView$$ ../libraries/messagebubbleview
+      - cp -fR $$AsyncManager$$/asyncmanager ../libraries/
+      - echo -e "\ninclude ':libraries:colorpicker:library'\ninclude ':libraries:dragsort:library'\ninclude
+        ':libraries:slidingmenu:library'\ninclude ':libraries:messagebubbleview:library'\ninclude
+        ':libraries:asyncmanager'" >> ../settings.gradle
+      - sed -i -e '/ColorPicker/acompile project(":libraries:colorpicker:library")'
+        -e '/DragSortListView/acompile project(":libraries:dragsort:library")' -e
+        '/SlidingMenu/acompile project(":libraries:slidingmenu:library")' -e '/MessageBubbleView/acompile
+        project(":libraries:messagebubbleview:library")' -e '/AsyncManager/acompile
+        project(":libraries:asyncmanager")' build.gradle
+      - sed -i -e '/ColorPicker/d' -e '/DragSortListView/d' -e '/SlidingMenu/d' -e
+        '/MessageBubbleView/d' -e '/commonsware/d' -e '/AsyncManager/d' build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-$$VERCODE$$"'
+        build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-115
+    versionCode: 115
+    commit: 0.3.0-dev150627
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+      - MariotakuDragSort@0.6.1
+      - MariotakuMessageBubbleView@1.2
+      - MariotakuSlidingMenu@501a9988a4d95958fe634fc09d5dc332de7830b9
+      - ColorPicker-uucky@0.9.7
+      - AsyncManager@9391ed71d7f3665217ab782acf4e6902d2425547
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/jitpack/d'  build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - mkdir -p ../libraries/colorpicker
+      - cp -fR $$ColorPicker-uucky$$ ../libraries/colorpicker
+      - mkdir -p ../libraries/dragsort
+      - cp -fR $$MariotakuDragSort$$ ../libraries/dragsort
+      - mkdir -p ../libraries/slidingmenu
+      - cp -fR $$MariotakuSlidingMenu$$ ../libraries/slidingmenu
+      - mkdir -p ../libraries/messagebubbleview
+      - cp -fR $$MariotakuMessageBubbleView$$ ../libraries/messagebubbleview
+      - cp -fR $$AsyncManager$$/asyncmanager ../libraries/
+      - echo -e "\ninclude ':libraries:colorpicker:library'\ninclude ':libraries:dragsort:library'\ninclude
+        ':libraries:slidingmenu:library'\ninclude ':libraries:messagebubbleview:library'\ninclude
+        ':libraries:asyncmanager'" >> ../settings.gradle
+      - sed -i -e '/ColorPicker/acompile project(":libraries:colorpicker:library")'
+        -e '/DragSortListView/acompile project(":libraries:dragsort:library")' -e
+        '/SlidingMenu/acompile project(":libraries:slidingmenu:library")' -e '/MessageBubbleView/acompile
+        project(":libraries:messagebubbleview:library")' -e '/AsyncManager/acompile
+        project(":libraries:asyncmanager")' build.gradle
+      - sed -i -e '/ColorPicker/d' -e '/DragSortListView/d' -e '/SlidingMenu/d' -e
+        '/MessageBubbleView/d' -e '/commonsware/d' -e '/AsyncManager/d' build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-$$VERCODE$$"'
+        build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-125
+    versionCode: 125
+    commit: 0.3.0-dev150920
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/commonsware/d' build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-$$VERCODE$$"'
+        build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-126
+    versionCode: 126
+    commit: 0.3.0-dev150922
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/commonsware/d' build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-$$VERCODE$$"'
+        build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-128
+    versionCode: 128
+    commit: 0.3.0-dev151010
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e '/amazonaws/d' -e '/commonsware/d' build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-$$VERCODE$$"'
+        build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-130
+    versionCode: 130
+    commit: 0.3.0-dev151026
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+      - CWACLayouts@v0.4.2
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+      - libraries/SlidingMenu/example
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e 's@https://s3.amazonaws.com/repo.commonsware.com@https://jitpack.io@g'
+        -e '/cwac/d'  build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - cp -fR $$CWACLayouts$$/layouts/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-$$VERCODE$$"'
+        build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+
+  - versionName: 0.3.0-dev-135
+    versionCode: 135
+    commit: 0.3.0-dev151122
+    subdir: twidere
+    submodules: true
+    gradle:
+      - fdroid
+    srclibs:
+      - CWACMerge@v1.1.1
+      - CWACSacklist@v1.0.2
+      - CWACLayouts@v0.4.2
+    rm:
+      - twidere.wear
+      - twidere.extension.push.xiaomi
+      - twidere.donate.nyanwp.wear
+    prebuild:
+      - sed -i -e '/googleCompile/d' -e 's@https://s3.amazonaws.com/repo.commonsware.com@https://jitpack.io@g'
+        -e '/cwac/d'  build.gradle
+      - cp -fR $$CWACMerge$$/merge/src/com src/main/java/
+      - cp -fR $$CWACSacklist$$/sacklist/src/com src/main/java
+      - cp -fR $$CWACLayouts$$/layouts/src/com src/main/java
+      - sed -i -e '/xujiaao/d' ../build.gradle
+      - sed -i -e '/wearApp/d' ../twidere.donate.nyanwp/build.gradle
+      - sed -i -e '/versionNameSuffix String/aversionNameSuffix "-dev-$$VERCODE$$"'
+        build.gradle
+      - sed -i -e '/versionNameSuffix String/d' build.gradle
+      - sed -i -e '/plugins.gradle.org/d' ../build.gradle
+
+  - versionName: 3.0.4
+    versionCode: 141
+    commit: 3.0.4
+    subdir: twidere
+    init:
+      - patch -p1 <patches/remove_closed_source_dependencies.patch
+      - sed -i 's/gradleVersion = .*/gradleVersion = "2.11"/g' ../build.gradle
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.0.6
+    versionCode: 151
+    commit: 3.0.6
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.0.6.1
+    versionCode: 152
+    commit: 3.0.6.1
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.0
+    versionCode: 157
+    commit: 3.1.0
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.0.9
+    versionCode: 166
+    commit: 3.1.0.9
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.0.10
+    versionCode: 167
+    commit: 3.1.0.10
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.0.14
+    versionCode: 171
+    commit: 3.1.0.14
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.1
+    versionCode: 172
+    commit: 3.1.1
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.1.5
+    versionCode: 177
+    commit: 3.1.1.5
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.1.6
+    versionCode: 178
+    commit: 3.1.1.6
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.1.7
+    versionCode: 179
+    commit: 3.1.1.7
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.2
+    versionCode: 180
+    commit: 3.1.2
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.3
+    versionCode: 181
+    commit: 3.1.3
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.3.2
+    versionCode: 183
+    commit: 3.1.3.2
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.4
+    versionCode: 186
+    commit: 3.1.4
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.4.2
+    versionCode: 188
+    commit: 3.1.4.2
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.5
+    versionCode: 189
+    commit: 3.1.5
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.5.1
+    versionCode: 190
+    commit: 3.1.5.1
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.5.2
+    versionCode: 191
+    commit: 3.1.5.2
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.6
+    versionCode: 193
+    commit: 3.1.6
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.6.1
+    versionCode: 194
+    commit: 3.1.6.1
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.6.2
+    versionCode: 195
+    commit: 3.1.6.2
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.7
+    versionCode: 196
+    commit: 3.1.7
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.8
+    versionCode: 197
+    commit: 3.1.8
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.9
+    versionCode: 198
+    commit: 3.1.9
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.10
+    versionCode: 199
+    commit: 3.1.10
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.11
+    versionCode: 200
+    commit: 3.1.11
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.12
+    versionCode: 201
+    commit: 3.1.12
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.13
+    versionCode: 202
+    commit: 3.1.13
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.1.14
+    versionCode: 203
+    commit: 3.1.14
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.2.1
+    versionCode: 205
+    commit: 3.2.1
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.2.3
+    versionCode: 207
+    commit: 3.2.3
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.2.4
+    versionCode: 208
+    commit: 3.2.4
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.2.5
+    versionCode: 209
+    commit: 3.2.5
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.2.7
+    versionCode: 211
+    commit: 3.2.7
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.2.8
+    versionCode: 212
+    commit: 3.2.8
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.2.9
+    versionCode: 213
+    commit: 3.2.9
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.2.10
+    versionCode: 214
+    commit: 3.2.10
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.2.13
+    versionCode: 217
+    commit: 3.2.13
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.2
+    versionCode: 220
+    commit: 3.3.2
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.7
+    versionCode: 225
+    commit: 3.3.7
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.10
+    versionCode: 228
+    commit: 3.3.10
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.16
+    versionCode: 234
+    commit: 3.3.16
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.20
+    versionCode: 238
+    commit: 3.3.20
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.24
+    versionCode: 242
+    commit: 3.3.24
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.29
+    versionCode: 247
+    commit: 3.3.29
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.35
+    versionCode: 253
+    commit: 3.3.35
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.38
+    versionCode: 256
+    commit: 3.3.38
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere/lib
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.41
+    versionCode: 259
+    commit: 3.3.41
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.3.42
+    versionCode: 260
+    commit: 3.3.42
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.4.2
+    versionCode: 263
+    commit: 3.4.2
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.4.5
+    versionCode: 266
+    commit: 3.4.5
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.4.9
+    versionCode: 270
+    commit: 3.4.9
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.donate*
+      - twidere.wear
+
+  - versionName: 3.4.14
+    versionCode: 276
+    commit: 3.4.14
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.16
+    versionCode: 278
+    commit: 3.4.16
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.20
+    versionCode: 282
+    commit: 3.4.20
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.22
+    versionCode: 284
+    commit: 3.4.22
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.26
+    versionCode: 288
+    commit: 3.4.26
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.27
+    versionCode: 289
+    commit: 3.4.27
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.28
+    versionCode: 290
+    commit: 3.4.28
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.29
+    versionCode: 291
+    commit: 3.4.29
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.31
+    versionCode: 293
+    commit: 3.4.31
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.32
+    versionCode: 294
+    commit: 3.4.32
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.35
+    versionCode: 297
+    commit: 3.4.35
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.37
+    versionCode: 299
+    commit: 3.4.37
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.39
+    versionCode: 301
+    commit: 3.4.39
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.41
+    versionCode: 303
+    commit: 3.4.41
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.42
+    versionCode: 304
+    commit: 3.4.42
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.44
+    versionCode: 306
+    commit: 3.4.44
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.47
+    versionCode: 309
+    commit: 3.4.47
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.48
+    versionCode: 310
+    commit: 3.4.48
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.49
+    versionCode: 311
+    commit: 3.4.49
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.52
+    versionCode: 314
+    commit: 3.4.52
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.4.54
+    versionCode: 316
+    commit: 3.4.54
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.5
+    versionCode: 322
+    commit: 3.5.5
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.9
+    versionCode: 326
+    commit: 3.5.9
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.11
+    versionCode: 328
+    commit: 3.5.11
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.13
+    versionCode: 330
+    commit: 3.5.13
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.16
+    versionCode: 333
+    commit: 3.5.16
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.18
+    versionCode: 335
+    commit: 3.5.18
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.21
+    versionCode: 338
+    commit: 3.5.21
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.25
+    versionCode: 342
+    commit: 3.5.25
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.30
+    versionCode: 347
+    commit: 3.5.30
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.31
+    versionCode: 348
+    commit: 3.5.31
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.33
+    versionCode: 350
+    commit: 3.5.33
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.36
+    versionCode: 353
+    commit: 3.5.36
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.5.40
+    versionCode: 357
+    commit: 3.5.40
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.6.10
+    versionCode: 370
+    commit: 3.6.10
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.6.11
+    versionCode: 371
+    commit: 3.6.11
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.6.14
+    versionCode: 374
+    commit: 3.6.14
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.6.15
+    versionCode: 375
+    commit: 3.6.15
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.6.16
+    versionCode: 376
+    commit: 3.6.16
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.6.18
+    versionCode: 378
+    commit: 3.6.18
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.6.19
+    versionCode: 379
+    commit: 3.6.19
+    subdir: twidere
+    init: patch -p1 <patches/remove_closed_source_dependencies.patch
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+
+  - versionName: 3.6.21
+    versionCode: 381
+    commit: 3.6.21
+    subdir: twidere
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 3.6.24
+    versionCode: 384
+    commit: 3.6.24
+    subdir: twidere
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 3.6.29
+    versionCode: 389
+    commit: 3.6.29
+    subdir: twidere
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 3.6.33
+    versionCode: 393
+    commit: 3.6.33
+    subdir: twidere
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 3.7.0
+    versionCode: 394
+    commit: 3.7.0
+    subdir: twidere
+    gradle:
+      - fdroid
+    rm:
+      - twidere.wear
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 3.7.1
+    versionCode: 395
+    commit: 3.7.1
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 3.7.3
+    versionCode: 397
+    commit: 3.7.3
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 3.7.4
+    versionCode: 398
+    commit: 3.7.4
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 3.7.5
+    versionCode: 399
+    commit: 3.7.5
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 3.7.6
+    versionCode: 400
+    commit: 3.7.6
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.0.4
+    versionCode: 503
+    commit: 4.0.4
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.0.6
+    versionCode: 505
+    commit: 4.0.6
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.0.8
+    versionCode: 507
+    commit: 4.0.8
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.1.0
+    versionCode: 509
+    commit: 4.1.0
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.1.1
+    versionCode: 510
+    commit: 4.1.1
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.1.2
+    versionCode: 511
+    commit: 4.1.2
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.1.3
+    versionCode: 512
+    commit: 4.1.3
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.1.4
+    versionCode: 513
+    commit: 4.1.4
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.1.5
+    versionCode: 514
+    commit: 4.1.5
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.1.6
+    versionCode: 515
+    commit: 4.1.6
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.1.7
+    versionCode: 516
+    commit: 4.1.7
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+  - versionName: 4.1.8
+    versionCode: 517
+    commit: 4.1.8
+    subdir: twidere
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+      - sed -i -e '/^bintray/,$d' ../twidere.component.common/build.gradle
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: build.gradle|projectVersionCode = (\d+)|.|projectVersionName = '(.*)'
+CurrentVersion: 4.1.8
+CurrentVersionCode: 517

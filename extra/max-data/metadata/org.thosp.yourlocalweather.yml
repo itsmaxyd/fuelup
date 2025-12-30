@@ -1,0 +1,999 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on OpenWeatherMap
+Categories:
+  - Internet
+  - Weather
+License: GPL-3.0-or-later
+SourceCode: https://github.com/thuryn/your-local-weather
+IssueTracker: https://github.com/thuryn/your-local-weather/issues
+Translation: https://hosted.weblate.org/projects/your-local-weather/strings
+Changelog: https://raw.githubusercontent.com/thuryn/your-local-weather/HEAD/CHANGELOG
+
+AutoName: Your local weather
+
+RepoType: git
+Repo: https://github.com/thuryn/your-local-weather
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 10
+    commit: v1.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 12
+    commit: v1.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.9'
+    versionCode: 13
+    commit: v1.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 16
+    commit: v2.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.2
+    versionCode: 18
+    commit: v2.2.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 19
+    commit: v2.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 20
+    commit: v2.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 23
+    commit: v2.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.2
+    versionCode: 25
+    commit: v2.5.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.4
+    versionCode: 30
+    commit: v3.0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.5
+    versionCode: 31
+    commit: v3.0.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.7
+    versionCode: 33
+    commit: v3.0.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.8
+    versionCode: 34
+    commit: v3.0.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.9
+    versionCode: 35
+    commit: v3.0.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.11
+    versionCode: 37
+    commit: v3.0.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.13
+    versionCode: 39
+    commit: v3.0.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.15
+    versionCode: 41
+    commit: v3.0.15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.16
+    versionCode: 42
+    commit: v3.0.16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.17
+    versionCode: 43
+    commit: v3.0.17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.0
+    versionCode: 44
+    commit: v3.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.1
+    versionCode: 45
+    commit: v3.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.2
+    versionCode: 46
+    commit: v3.1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.5
+    versionCode: 49
+    commit: v3.1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.6
+    versionCode: 50
+    commit: v3.1.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.7
+    versionCode: 51
+    commit: v3.1.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.9
+    versionCode: 53
+    commit: v3.1.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.11
+    versionCode: 55
+    commit: v3.1.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.12
+    versionCode: 56
+    commit: v3.1.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.2.0
+    versionCode: 58
+    commit: v3.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.2.1
+    versionCode: 59
+    commit: v3.2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.2.2
+    versionCode: 60
+    commit: v3.2.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.2.3
+    versionCode: 61
+    commit: v3.2.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.2.4
+    versionCode: 62
+    commit: v3.2.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.2.6
+    versionCode: 64
+    commit: v3.2.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.0.0
+    versionCode: 65
+    commit: v4.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.0.1
+    versionCode: 66
+    commit: v4.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.0.2
+    versionCode: 67
+    commit: v4.0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.0.3
+    versionCode: 68
+    commit: v4.0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.1
+    versionCode: 70
+    commit: v4.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.2
+    versionCode: 71
+    commit: v4.1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.4
+    versionCode: 73
+    commit: v4.1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.5
+    versionCode: 74
+    commit: v4.1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.6
+    versionCode: 75
+    commit: v4.1.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.0
+    versionCode: 76
+    commit: v4.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.1
+    versionCode: 77
+    commit: v4.2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.3
+    versionCode: 79
+    commit: v4.2.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.5
+    versionCode: 81
+    commit: v4.2.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.6
+    versionCode: 82
+    commit: v4.2.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.1
+    versionCode: 84
+    commit: v4.3.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.3
+    versionCode: 86
+    commit: v4.3.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.4
+    versionCode: 87
+    commit: v4.3.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.0
+    versionCode: 88
+    commit: v4.4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.2
+    versionCode: 90
+    commit: v4.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.3
+    versionCode: 91
+    commit: v4.4.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.4
+    versionCode: 92
+    commit: v4.4.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.5
+    versionCode: 93
+    commit: v4.4.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.6
+    versionCode: 94
+    commit: v4.4.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.8
+    versionCode: 96
+    commit: v4.4.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.9
+    versionCode: 97
+    commit: v4.4.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.10
+    versionCode: 98
+    commit: v4.4.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.11
+    versionCode: 99
+    commit: v4.4.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.12
+    versionCode: 100
+    commit: v4.4.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.5.0
+    versionCode: 101
+    commit: v4.5.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.5.1
+    versionCode: 102
+    commit: v4.5.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.5.2
+    versionCode: 103
+    commit: v4.5.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.5.3
+    versionCode: 104
+    commit: v4.5.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.0
+    versionCode: 105
+    commit: v4.6.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.1
+    versionCode: 106
+    commit: v4.6.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.2
+    versionCode: 107
+    commit: v4.6.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.3
+    versionCode: 108
+    commit: v4.6.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.6
+    versionCode: 111
+    commit: v4.6.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.7
+    versionCode: 112
+    commit: v4.6.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.8
+    versionCode: 113
+    commit: v4.6.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.9
+    versionCode: 114
+    commit: v4.6.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.10
+    versionCode: 115
+    commit: v4.6.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.11
+    versionCode: 116
+    commit: v4.6.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.12
+    versionCode: 117
+    commit: v4.6.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.13
+    versionCode: 118
+    commit: v4.6.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.7.1
+    versionCode: 119
+    commit: v4.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.7.2
+    versionCode: 120
+    commit: v4.7.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.7.3
+    versionCode: 121
+    commit: v4.7.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.7.4
+    versionCode: 122
+    commit: v4.7.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.7.5
+    versionCode: 123
+    commit: v4.7.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.7.6
+    versionCode: 124
+    commit: v4.7.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.7.7
+    versionCode: 125
+    commit: v4.7.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.7.8
+    versionCode: 126
+    commit: v4.7.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.7.9
+    versionCode: 127
+    commit: v4.7.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.0.0
+    versionCode: 128
+    commit: v5.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.1.0
+    versionCode: 129
+    commit: v5.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.1.1
+    versionCode: 130
+    commit: v5.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.1.2
+    versionCode: 131
+    commit: v5.1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.5.1
+    versionCode: 133
+    commit: v5.5.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.6.0
+    versionCode: 134
+    commit: v5.6.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.6.1
+    versionCode: 135
+    commit: v5.6.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.6.2
+    versionCode: 136
+    commit: v5.6.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.6.4
+    versionCode: 138
+    commit: v5.6.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.7.0
+    versionCode: 139
+    commit: v5.7.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.7.1
+    versionCode: 140
+    commit: v5.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.7.2
+    versionCode: 141
+    commit: v5.7.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.7.3
+    versionCode: 142
+    commit: v5.7.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.7.4
+    versionCode: 143
+    commit: 2e98ba430345fd0fb12aee4285c9afd8f18ee54b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.7.5
+    versionCode: 144
+    commit: 0f511cdf52e094b21446c3016f604aeab90670b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 5.7.6
+    versionCode: 145
+    commit: 6b650d821cadba01954e8ad23859d0e999a54a88
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 5.7.7
+    versionCode: 146
+    commit: 5f0dfa29f9bf94e2f08e294d31eef5fd99457798
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 5.8.0
+    versionCode: 147
+    commit: 0e0730eeeea6c37de9ecfa5ddff10fdc796c9359
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 5.8.1
+    versionCode: 148
+    commit: 426cce70b321230fa1de5928011385b3d6f2770a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.2
+    versionCode: 149
+    commit: b981d58f22645da5159d71d1c72265c3449863d0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.3
+    versionCode: 150
+    commit: 47cb3b9b38120152da5cb5ee30fb5408c0d20587
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.4
+    versionCode: 151
+    commit: 42b9dd891f8b3b2306e3d71adc19cf04a2544672
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.5
+    versionCode: 152
+    commit: 2f88c4a7397e68485669d90e34f2ace8764e3a93
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.6
+    versionCode: 153
+    commit: 3cf83713280d1d4c3b6b5df143b2f8595fb1f844
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.7
+    versionCode: 154
+    commit: 4ef2a59545be829fdac30422a463f93941fcae28
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.8
+    versionCode: 155
+    commit: 495053a4e8e3f32d2223e4c32c90d9b671f92381
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.9
+    versionCode: 156
+    commit: 17944b53178c40172831b0b8b22d5b3aa2535e90
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.10
+    versionCode: 157
+    commit: 51bf9c77bc8326ab339c7e4e0afc791dc05dbcff
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.8.13
+    versionCode: 160
+    commit: 0d69463bc67e4169715720ee9ff19e1788136b19
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 5.8.14
+    versionCode: 161
+    commit: 56a7c1f1cedd6dbe51e8e1e7f21317c96aa0af81
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 5.8.16
+    versionCode: 163
+    commit: 4be5db8a6e70d8ac48d2ca8f0a9b30414e1ec336
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 5.8.17
+    versionCode: 165
+    commit: 5217afb71f69c2f89c736d0d1bb6bd69ded0fbf1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 5.8.19
+    versionCode: 167
+    commit: 3fd12c067c5c7ee35fc1a05a810ad3c98509d425
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 5.8.20
+    versionCode: 168
+    commit: 5c846e4108590b0bdaa6e85ae6573c1542175989
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 5.8.21
+    versionCode: 169
+    commit: b3a08ccf54a0e65492adfb0713a872871f1af996
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 5.8.22
+    versionCode: 170
+    commit: f2813d29e2c3a7221b6e89e6bc7fc64c97a60f3f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 5.8.23
+    versionCode: 171
+    commit: ed931588412e3500c5c5c482a0af6d685822531f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 5.8.24
+    versionCode: 172
+    commit: c40198ba05c101f528b4f905660c3e1b75969c88
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.0.0
+    versionCode: 173
+    commit: a9e0a1269a1fc7614f65c0f64cd65ba5e7f810a4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.0.1
+    versionCode: 174
+    commit: 1a416cf5e674e4e57d2b6b5396c904a27aa51869
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.0.2
+    versionCode: 175
+    commit: 41bc47f2d1aa5860062ede9965dd916df6b22e0c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.0.3
+    versionCode: 176
+    commit: 2fbf60c606fa3b4b34d4f6aaf382d1ce9b0a6d11
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.0.4
+    versionCode: 177
+    commit: 1fbb6aa2f498e257b006e48276f454c41a9d7ce7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.0.5
+    versionCode: 178
+    commit: 97cd3bc5f36cb51cad50437f6d2d66ebe7693404
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.1.0
+    versionCode: 179
+    commit: f7bf045f74487b624dbbaacafc7caa8701ea8090
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.1.2
+    versionCode: 181
+    commit: 66b951662d12fc54a9324753b197167729d84904
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+      - sed -i -e 's/8.12.1/8.11.1/' ../build.gradle
+
+MaintainerNotes: NonFreeNet for OWM; also uses Mozilla location service (libre or
+  not?)
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 6.1.2
+CurrentVersionCode: 181

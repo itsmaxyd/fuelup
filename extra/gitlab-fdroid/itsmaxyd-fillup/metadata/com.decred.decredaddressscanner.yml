@@ -1,0 +1,39 @@
+Categories:
+  - Money
+License: ISC
+AuthorName: Joe Gruffins
+WebSite: https://decred.org
+SourceCode: https://github.com/decred/dcraddrscanner
+IssueTracker: https://github.com/decred/dcraddrscanner/issues
+
+AutoName: Decred Address Scanner
+
+RepoType: git
+Repo: https://github.com/decred/dcraddrscanner
+
+Builds:
+  - versionName: '1.08'
+    versionCode: 8
+    commit: v1.08
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.09'
+    versionCode: 9
+    commit: v1.09
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 10
+    commit: v1.10
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.10'
+CurrentVersionCode: 10

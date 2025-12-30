@@ -1,0 +1,134 @@
+Categories:
+  - Theming
+  - Wallpaper
+License: GPL-3.0-or-later
+AuthorName: ForgottenUmbrella
+SourceCode: https://gitlab.com/ForgottenUmbrella/cardboardmuseum
+IssueTracker: https://gitlab.com/ForgottenUmbrella/cardboardmuseum/issues
+Changelog: https://gitlab.com/ForgottenUmbrella/cardboardmuseum/blob/HEAD/CHANGELOG.md
+
+AutoName: Cardboard Museum
+Description: |
+  A Muzei 3.0 plugin for the (potentially NSFW) <a href="https://danbooru.donmai.us/">Danbooru</a> imageboard, which sets the wallpaper to an (anime/manga-style) image
+  matching the given tags.
+
+  Supports authentication to bypass account restrictions e.g. the default limit
+  of a maximum of two tags. Additionally, the app tries to avoid NSFW images
+  by default (although this is configurable), and there is the ability to preview
+  potential matching images to be aware of what the wallpaper will be like.
+
+  Code of the Danbooru Image Board can <a href="https://github.com/r888888888/danbooru">be
+  found at Github</a>.
+
+RepoType: git
+Repo: https://gitlab.com/ForgottenUmbrella/cardboardmuseum.git
+
+Builds:
+  - versionName: 1.1.5
+    versionCode: 7
+    commit: v1.1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.6
+    versionCode: 8
+    commit: v1.1.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.7
+    versionCode: 9
+    commit: v1.1.7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testImplementation/d' build.gradle
+
+  - versionName: 1.1.8
+    versionCode: 10
+    commit: v1.1.8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testImplementation/d' build.gradle
+
+  - versionName: 1.1.9
+    versionCode: 11
+    commit: v1.1.9
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testImplementation/d' build.gradle
+
+  - versionName: 1.2.1
+    versionCode: 13
+    commit: 6d7df102129608a7913aab02c4c3cd83e5172177
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testImplementation/d' build.gradle
+
+  - versionName: 1.2.2
+    versionCode: 14
+    commit: b2d91f3a10df9509291019281d4c7d5a9365d218
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testImplementation/d' build.gradle
+
+  - versionName: 1.2.3
+    versionCode: 15
+    commit: 8368e60c623fc66fb8876e422d03ea6490dba5e1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/testImplementation/d' -e '/signingConfigs {/,/^    }/d'
+      -e '/signingConfigs/d' -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2.0.0
+    versionCode: 16
+    commit: c672c1993e67be9be910d21bd75e8d46b7d649b6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 17
+    commit: 0e4055e4cb089ce8c1728ded5f7b0f7d6993f264
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 18
+    commit: 0935adaf0c6d9b0d7043e642cbf0cf3ced6fe050
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.2.0
+CurrentVersionCode: 18

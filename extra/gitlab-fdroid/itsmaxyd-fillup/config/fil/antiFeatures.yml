@@ -1,0 +1,26 @@
+Ads:
+  description: Naglalaman ng patalastas ang app na ito
+  name: Mga Ad
+DisabledAlgorithm:
+  description: May mahinang pirmang panseguridad ang app na ito
+  name: Pirmado gamit ang isang di-ligtas na algoritmo
+KnownVuln:
+  description: Naglalaman ng isang kilalang kahinaan sa seguridad ang app na ito
+  name: May Kahinaan
+NoSourceSince:
+  name: Wala na yung source code, di na itong muling maia-update.
+NonFreeAdd:
+  description: Nagpo-promote ng mga di-libreng addon ang app na ito
+  name: Mga di-libreng addon
+NonFreeAssets:
+  description: Naglalaman ng mga di-libreng asset ang app na ito
+  name: Mga di-libreng asset
+NonFreeDep:
+  description: Dumedepende sa ibang mga di-libreng app ang app na ito
+  name: Dumedepende sa mga di-libre
+NonFreeNet:
+  description: Nagpo-promote ng mga di-libreng serbisyong pang-network ang app na ito
+  name: Mga di-libre serbisyong pang-network
+Tracking:
+  description: Tina-track at inuulat ng app na ito ang iyong aktibidad
+  name: Pagta-track

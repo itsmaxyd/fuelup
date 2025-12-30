@@ -1,0 +1,85 @@
+Categories:
+  - Connectivity
+  - Internet
+  - Reading
+License: MIT
+AuthorName: roidujeu
+AuthorEmail: sofogos@protonmail.com
+WebSite: https://biotstoiq.gitlab.io/s/gophercle.html
+SourceCode: https://gitlab.com/biotstoiq/gophercle
+IssueTracker: https://gitlab.com/biotstoiq/gophercle/-/issues
+Donate: https://gitlab.com/biotstoiq/donate
+Bitcoin: bc1qp7668qpa9kfq2r36t7lwzkrud2hzmdvvdmvfq0
+
+Name: gophercle
+AutoName: gophercle
+Description: |-
+  <b>NOTE:</b> App is no longer maintained.
+
+  gophercle is a gopher client for android.
+
+  it lets you:
+
+  * download items
+  * go back in history for the current session
+  * bookmark a url
+  * set global search url
+  * set text size
+  * set light/dark theme
+  * share a link
+
+RepoType: git
+Repo: https://gitlab.com/biotstoiq/gophercle.git
+
+Builds:
+  - versionName: '0.91'
+    versionCode: 11
+    commit: v0.91
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.92'
+    versionCode: 12
+    commit: 880486923a8c592f8f9fee4554a91907c85aad22
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.93'
+    versionCode: 13
+    commit: 38ea376123ca4d470297cb25d7fa310ac2f43e09
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.931'
+    versionCode: 14
+    commit: eae13695e34175f66f0a42282d613fbe494c6090
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '0.931'
+CurrentVersionCode: 14
+
+NoSourceSince: '0.931'

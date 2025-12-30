@@ -1,0 +1,87 @@
+Categories:
+  - Launcher
+  - System
+  - Theming
+License: MIT
+AuthorName: Otto Petäjä
+AuthorWebSite: https://ottop.eu/
+SourceCode: https://codeberg.org/ottoptj/yamlauncher
+Donate: https://donate.stripe.com/14k6s2bMJdnDgtW288
+Liberapay: ottoptj
+
+AutoName: YAM Launcher
+
+RepoType: git
+Repo: https://codeberg.org/ottoptj/yamlauncher.git
+Binaries: https://codeberg.org/ottoptj/yamlauncher/releases/download/v%v/yamlauncher-%v.apk
+
+Builds:
+  - versionName: '0.7'
+    versionCode: 3
+    commit: 84c37734c9ae4a2a0123814ca78e74b094d81cca
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.0'
+    versionCode: 4
+    commit: b49f30c91cebf667ef6758394a1fe6b88563bc95
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 6
+    commit: 7f766c4312d915fa73fd655508372b767c8a46a8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 7
+    commit: 77fc95b2f4535d49d7aed43715a0ac075f31c02d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 8
+    commit: 4eb3ccc2a40320b1cf0ff80ee523ad037da1218a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 9
+    commit: 48365010c5ee19bed365cf88f6ed892c59ab4ab2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 10
+    commit: c1c208fc03cf1f9db6db2e968600f43b2e3823e1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 12
+    commit: 7f0174cd99598b381639ebece1c2793ecc8f4fbd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 13
+    commit: daf5140338dfa4c73a7f73ec91018bc864b5de29
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: be988b6bb056e6cdf0bb41d8d8fcdceb966fc404b76504d469dbfcf1e6c867a3
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.8'
+CurrentVersionCode: 13

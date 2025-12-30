@@ -1,0 +1,486 @@
+Categories:
+  - System
+License: GPL-3.0-only
+WebSite: https://gitlab.com/axet/android-sms-gate
+SourceCode: https://gitlab.com/axet/android-sms-gate/tree/HEAD
+IssueTracker: https://gitlab.com/axet/android-sms-gate/issues
+
+AutoName: SMS Gate
+Description: |-
+  You should be able to control all data produced by your phone and be able to
+  collect it all into one place (cloud / p2p or local).
+
+  SMS Gate app backups all your SMS from Android/INCOMING folder to the
+  IMAP/INBOX folder of Gmail or your provider of choice (you can setup one in
+  Settings). Once uploaded to an IMAP server you can even reply to the SMS
+  using standard reply e-mail mechanics.
+
+  Saving to a local folder allows you to backup it using an app like
+  https://f-droid.org/packages/com.nutomic.syncthingandroid.
+
+RepoType: git
+Repo: https://gitlab.com/axet/android-sms-gate.git
+
+Builds:
+  - versionName: 1.9.7
+    versionCode: 216
+    commit: smsgate-1.9.7
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.9.8
+    versionCode: 217
+    commit: smsgate-1.9.8
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.9.9
+    versionCode: 218
+    commit: smsgate-1.9.9
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.9.10
+    versionCode: 219
+    commit: smsgate-1.9.10
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.9.13
+    versionCode: 222
+    commit: smsgate-1.9.13
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.9.18
+    versionCode: 227
+    commit: smsgate-1.9.18
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.0
+    versionCode: 228
+    commit: smsgate-1.10.0
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.1
+    versionCode: 229
+    commit: smsgate-1.10.1
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.6
+    versionCode: 234
+    commit: smsgate-1.10.6
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.8
+    versionCode: 236
+    commit: smsgate-1.10.8
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.9
+    versionCode: 237
+    commit: smsgate-1.10.9
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.10
+    versionCode: 238
+    commit: smsgate-1.10.10
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.11
+    versionCode: 239
+    commit: smsgate-1.10.11
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.12
+    versionCode: 240
+    commit: smsgate-1.10.12
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.15
+    versionCode: 243
+    commit: 873ba2bf3ff0741457375ddbf87625e798242f4a
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.21
+    versionCode: 249
+    commit: a5670006b6ceb537ef22b1d06c250ce70210cebc
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.25
+    versionCode: 254
+    commit: 4ca837ddf3449f025a83aa94dd80c37c1e3533d9
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - android-firebase-fake@firebasefake-0.0.5
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation project(':android-firebase-fake')/implementation
+        project(':android-firebase-fake')/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+      - ln -s ../srclib/android-firebase-fake ../
+      - sed -i -e '/uploadArchives/,+42d'  -e 's/25.3.1/25.4.0/' ../android-firebase-fake/build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.10.26
+    versionCode: 255
+    commit: 4f3d50e7b29ca7691c060955e037f0b58148eeed
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.11.1
+    versionCode: 257
+    commit: fbc614c99fa3913841331c72ff624910605dc58a
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.11.4
+    versionCode: 260
+    commit: 8ae2a51a191d1a5db75cc3c959ed40b400b0d80d
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.12.1
+    versionCode: 262
+    commit: d7b7f77f291525839226e7f493df4e0b1d952b5e
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.12.2
+    versionCode: 263
+    commit: f813dc0c5d621250f3957b63df37e1842e938c61
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.12.3
+    versionCode: 264
+    commit: 5afc9e9145c170ad1ca2a8ec04e4e61ad9f53630
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.12.4
+    versionCode: 265
+    commit: 99cfb79ceae55b095a1a105599a5e97bbbeb5884
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.12.7
+    versionCode: 268
+    commit: 702cd60b3d28ac2de1d2758b2ffb1e6df4a4fc13
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.12.10
+    versionCode: 271
+    commit: cb9cfeee5f65850830fbb467de8975141a93814a
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.12.11
+    versionCode: 272
+    commit: 3c22c3233b7fbe66f4c02eb9392ed324e889c07d
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.12.12
+    versionCode: 273
+    commit: d86bf2d11fdf9278e5ff71d93d791f4b778c713f
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+    scanignore:
+      - app/build.gradle
+
+  - versionName: 1.12.13
+    versionCode: 274
+    commit: 7accbafbf43ecc85f3ee21f475297ea77adfe99f
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+
+  - versionName: 1.13.0
+    versionCode: 275
+    commit: efa65402a4ce85eeb649e2199dce7e9da7e750a4
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/com.google/d' -e "s/\/\/ implementation 'com.github.axet:android-firebase-fake/implementation
+        'com.github.axet:android-firebase-fake/" build.gradle
+      - sed -i -e '/com.google/d' ../build.gradle
+
+MaintainerNotes: Binary scanner detects 'android-firebase-fake', we should ignore
+  that in the future.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.13.0
+CurrentVersionCode: 275

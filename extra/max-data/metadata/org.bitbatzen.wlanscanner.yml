@@ -1,0 +1,59 @@
+Categories:
+  - Connectivity
+  - Security
+  - System
+License: GPL-3.0-only
+SourceCode: https://github.com/bewue/WLANScanner
+IssueTracker: https://github.com/bewue/WLANScanner/issues
+Changelog: https://github.com/bewue/WLANScanner/releases
+
+AutoName: WLANScanner
+
+RepoType: git
+Repo: https://github.com/bewue/WLANScanner.git
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 1
+    commit: v1.0.1
+    target: android-19
+
+  - versionName: 1.1.0
+    versionCode: 3
+    commit: v1.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 4
+    commit: v1.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 5
+    commit: 525fd714fbc7dbf77baeec7ffc34037b36d173c3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 6
+    commit: ae02dd42af01c83d627458113cee1e93c206cc20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.2
+    versionCode: 7
+    commit: 35c154bc037bf291df4e9b18b592009bd7ac918e
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.3.2
+CurrentVersionCode: 7

@@ -1,0 +1,1 @@
+A simple and intuitive fuel tracking app designed to help you monitor your fuel expenses and vehicle efficiency.

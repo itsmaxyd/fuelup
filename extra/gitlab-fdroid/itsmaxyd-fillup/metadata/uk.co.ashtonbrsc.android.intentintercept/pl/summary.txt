@@ -1,0 +1,1 @@
+Próbuje przechwycić intencje, aby sprawdzić ich zawartość

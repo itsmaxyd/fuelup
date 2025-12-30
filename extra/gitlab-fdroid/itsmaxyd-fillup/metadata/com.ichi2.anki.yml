@@ -1,0 +1,1146 @@
+Categories:
+  - Science & Education
+License: AGPL-3.0-or-later
+AuthorName: AnkiDroid Open Source Team
+AuthorEmail: public-forum@ankidroid.org
+WebSite: https://ankidroid.org/docs/help.html
+SourceCode: https://github.com/ankidroid/Anki-Android
+IssueTracker: https://github.com/ankidroid/Anki-Android/issues
+Translation: http://crowdin.net/project/ankidroid
+Changelog: https://ankidroid.org/docs/changelog.html
+OpenCollective: ankidroid
+
+AutoName: AnkiDroid
+
+RepoType: git
+Repo: https://github.com/ankidroid/Anki-Android.git
+
+Builds:
+  - versionName: '0.7'
+    versionCode: 21
+    commit: v0.7
+
+  - versionName: '1.1'
+    versionCode: 25
+    commit: v1.1
+    forcevercode: true
+    prebuild: sed -i -e "/key\.alias.*/d" -e "/key\.store.*/d" *.properties
+
+  - versionName: '2.0'
+    versionCode: 30
+    commit: 4e4bafed59
+    prebuild: sed -i -e "/key\.alias.*/d" -e "/key\.store.*/d" *.properties
+
+  - versionName: 2.0.1
+    versionCode: 32
+    commit: v2.0.1
+    prebuild: sed -i -e "/^key\./d" *.properties
+
+  - versionName: 2.0.2
+    versionCode: 40
+    commit: v2.0.2
+
+  - versionName: 2.0.3
+    versionCode: 43
+    commit: v2.0.3
+
+  - versionName: 2.0.4beta1
+    versionCode: 20004201
+    commit: v2.0.4beta1
+
+  - versionName: 2.1alpha5
+    versionCode: 20100105
+    commit: v2.1alpha5
+
+  - versionName: 2.1alpha6
+    versionCode: 20100106
+    commit: v2.1alpha6
+
+  - versionName: 2.1alpha7
+    versionCode: 20100107
+    commit: v2.1alpha7
+
+  - versionName: 2.1alpha11
+    versionCode: 20100111
+    commit: v2.1alpha11
+
+  - versionName: 2.1alpha13
+    versionCode: 20100113
+    commit: v2.1alpha13
+
+  - versionName: 2.1beta2
+    versionCode: 20100202
+    commit: v2.1beta2
+
+  - versionName: 2.1beta3
+    versionCode: 20100203
+    commit: v2.1beta3
+
+  - versionName: 2.1beta6
+    versionCode: 20100206
+    commit: v2.1beta6
+
+  - versionName: 2.1beta7
+    versionCode: 20100207
+    commit: v2.1beta7
+
+  - versionName: 2.1beta8
+    versionCode: 20100208
+    commit: v2.1beta8
+
+  - versionName: 2.1beta9
+    versionCode: 20100209
+    commit: v2.1beta9
+
+  - versionName: 2.1beta11
+    versionCode: 20100211
+    commit: v2.1beta11
+
+  - versionName: 2.1beta13
+    versionCode: 20100213
+    commit: v2.1beta13
+
+  - versionName: 2.1beta14
+    versionCode: 20100214
+    commit: v2.1beta14
+
+  - versionName: 2.1beta15
+    versionCode: 20100215
+    commit: v2.1beta15
+
+  - versionName: 2.1beta16
+    versionCode: 20100216
+    commit: v2.1beta16
+
+  - versionName: 2.1.1
+    versionCode: 20101300
+    commit: v2.1.1
+
+  - versionName: 2.1.2
+    versionCode: 20102300
+    commit: v2.1.2
+
+  - versionName: 2.1.3
+    versionCode: 20103300
+    commit: v2.1.3
+
+  - versionName: 2.2alpha1
+    versionCode: 20200101
+    commit: v2.2alpha1
+
+  - versionName: 2.2alpha14
+    versionCode: 20200114
+    commit: v2.2alpha14
+
+  - versionName: 2.2alpha17
+    versionCode: 20200117
+    commit: v2.2alpha17
+
+  - versionName: '2.2'
+    versionCode: 20200300
+    commit: v2.2
+
+  - versionName: 2.2.2
+    versionCode: 20202300
+    commit: v2.2.2
+
+  - versionName: 2.2.3
+    versionCode: 20203300
+    commit: v2.2.3
+
+  - versionName: '2.3'
+    versionCode: 20300300
+    commit: v2.3
+
+  - versionName: 2.3.2
+    versionCode: 20302300
+    commit: 2.3.2
+
+  - versionName: 2.4.2
+    versionCode: 20402300
+    commit: v2.4.2
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.4.3
+    versionCode: 20403300
+    commit: v2.4.3
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: '2.5'
+    versionCode: 20500300
+    commit: v2.5
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.5.1
+    versionCode: 20501300
+    commit: v2.5.1
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.5.2
+    versionCode: 20502300
+    commit: v2.5.2
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.5.4
+    versionCode: 20504301
+    commit: 1926fcc7d86d85cbc068234bc565b9f607b8e45f
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: '2.6'
+    versionCode: 20600300
+    commit: v2.6
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.6.1
+    versionCode: 20601300
+    commit: v2.6.1
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: '2.7'
+    versionCode: 20700300
+    commit: v2.7
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: '2.8'
+    versionCode: 20800300
+    commit: v2.8
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.8.1
+    versionCode: 20801300
+    commit: v2.8.1
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.8.2
+    versionCode: 20802300
+    commit: v2.8.2
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.8.3
+    versionCode: 20803300
+    commit: v2.8.3
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.8.4
+    versionCode: 20804300
+    commit: v2.8.4
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.9.1
+    versionCode: 20901300
+    commit: v2.9.1
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.9.2
+    versionCode: 20902300
+    commit: v2.9.2
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.9.3
+    versionCode: 20903300
+    commit: v2.9.3
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.9.4
+    versionCode: 20904300
+    commit: v2.9.4
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.9.5
+    versionCode: 20905300
+    commit: v2.9.5
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.9.6
+    versionCode: 20906300
+    commit: v2.9.6
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.9.7
+    versionCode: 20907300
+    commit: v2.9.7
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+
+  - versionName: 2.10.2
+    versionCode: 21002300
+    commit: v2.10.2
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+    ndk: r21b
+
+  - versionName: 2.10.3
+    versionCode: 21003300
+    commit: v2.10.3
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+    ndk: r21b
+
+  - versionName: 2.10.4
+    versionCode: 21004300
+    commit: v2.10.4
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    scanignore:
+      - AnkiDroid/src/main/java/com/ichi2/libanki/hooks/ExternalHookLoader.java
+    ndk: r21b
+
+  - versionName: 2.11.1
+    versionCode: 21101300
+    commit: v2.11.1
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    ndk: r21b
+
+  - versionName: 2.11.2
+    versionCode: 21102300
+    commit: v2.11.2
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    ndk: r21b
+
+  - versionName: 2.11.3
+    versionCode: 21103302
+    commit: v2.11.3
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' build.gradle
+    ndk: r21d
+
+  - versionName: 2.12.1
+    versionCode: 21201300
+    commit: v2.12.1
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.13.0
+    versionCode: 21300300
+    commit: v2.13.0
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.13.1
+    versionCode: 21300301
+    commit: v2.13.1
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.13.2
+    versionCode: 21300302
+    commit: v2.13.2
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.13.3
+    versionCode: 21300303
+    commit: v2.13.3
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.13.4
+    versionCode: 21300304
+    commit: v2.13.4
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.13.5
+    versionCode: 21300305
+    commit: v2.13.5
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.14.0
+    versionCode: 21400300
+    commit: v2.14.0
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.14.1
+    versionCode: 21401300
+    commit: v2.14.1
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.14.2
+    versionCode: 21402300
+    commit: v2.14.2
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.14.3
+    versionCode: 21403300
+    commit: v2.14.3
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.14.5
+    versionCode: 21405300
+    commit: v2.14.5
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.14.6
+    versionCode: 21406300
+    commit: v2.14.6
+    subdir: AnkiDroid
+    gradle:
+      - yes
+    rm:
+      - tools
+      - docs
+    prebuild: sed -i -e 's/21.1.6352462/21.3.6528147/' -e '/splits\ {/,+30d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.15.2
+    versionCode: 21502300
+    commit: v2.15.2
+    subdir: AnkiDroid
+    gradle:
+      - play
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' -e '/splits {/,/^    }/d' -e '/applicationVariants.all/,/^    }/d'
+        build.gradle
+      - sed -i -e '/publishing/,/^}/d' -e '/publish/d' ../api/build.gradle
+      - sed -i -e '/Temporary/,/End temporary/d' ../build.gradle
+    ndk: r22b
+
+  - versionName: 2.15.4
+    versionCode: 21504300
+    commit: v2.15.4
+    subdir: AnkiDroid
+    gradle:
+      - play
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' -e '/splits {/,/^    }/d' -e '/applicationVariants.all/,/^    }/d'
+        build.gradle
+      - sed -i -e '/publishing/,/^}/d' -e '/publish/d' ../api/build.gradle
+      - sed -i -e '/Temporary/,/End temporary/d' ../build.gradle
+    ndk: r22b
+
+  - versionName: 2.15.5
+    versionCode: 21505300
+    commit: 1493d0cca4072b7cacdaed425ca96ed16a4ac336
+    subdir: AnkiDroid
+    gradle:
+      - play
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' -e '/splits {/,/^    }/d' -e '/applicationVariants.all/,/^    }/d'
+        build.gradle
+      - sed -i -e '/publishing/,/^}/d' -e '/publish/d' ../api/build.gradle
+      - sed -i -e '/Temporary/,/End temporary/d' ../build.gradle
+    ndk: r22b
+
+  - versionName: 2.15.6
+    versionCode: 21506300
+    commit: 58c5bd15e897bfb32a2badc80018729b0a7238d6
+    subdir: AnkiDroid
+    gradle:
+      - play
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' -e '/splits {/,/^    }/d' -e '/applicationVariants.all/,/^    }/d'
+        build.gradle
+      - sed -i -e '/publishing/,/^}/d' -e '/publish/d' ../api/build.gradle
+      - sed -i -e '/Temporary/,/End temporary/d' ../build.gradle
+    ndk: r22b
+
+  - versionName: 2.16.2
+    versionCode: 21602300
+    commit: 13c103ea74337be0792e8344c62a7f0adb03aee8
+    subdir: AnkiDroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - play
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' -e '/splits {/,/^    }/d' -e '/applicationVariants.all/,/^    }/d'
+        build.gradle
+      - sed -i -e '/publishing/,/^}/d' -e '/publish/d' ../api/build.gradle
+      - sed -i -e '/Temporary/,/End temporary/d' ../build.gradle
+    ndk: r22b
+
+  - versionName: 2.16.3
+    versionCode: 21603300
+    commit: 43094e4937b4b039aac7441f0d6a7066faee872c
+    subdir: AnkiDroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - play
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' -e '/splits {/,/^    }/d' -e '/applicationVariants.all/,/^    }/d'
+        build.gradle
+      - sed -i -e '/publishing/,/^}/d' -e '/publish/d' ../api/build.gradle
+      - sed -i -e '/Temporary/,/End temporary/d' ../build.gradle
+    ndk: r22b
+
+  - versionName: 2.16.4
+    versionCode: 21604300
+    commit: 67fd45a351c44c46c844aa35a402b98a2a487f68
+    subdir: AnkiDroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' -e '/splits {/,/^    }/d' -e '/applicationVariants.all/,/^    }/d'
+        build.gradle
+      - sed -i -e '/publishing/,/^}/d' -e '/publish/d' ../api/build.gradle
+      - sed -i -e '/Temporary/,/End temporary/d' ../build.gradle
+    ndk: r22b
+
+  - versionName: 2.16.5
+    versionCode: 21605300
+    commit: 953b9bd879269910ee962b520da9705336d8bc2d
+    subdir: AnkiDroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e 's/22.0.7026061/22.1.7171670/' -e '/splits {/,/^    }/d' -e '/applicationVariants.all/,/^    }/d'
+        build.gradle
+      - sed -i -e '/publishing/,/^}/d' -e '/publish/d' ../api/build.gradle
+      - sed -i -e '/Temporary/,/End temporary/d' ../build.gradle
+    ndk: r22b
+
+  - versionName: 2.17.0
+    versionCode: 21700300
+    commit: af526585a5270c75db3f6b892d00035ad1ab17e0
+    subdir: AnkiDroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.17.1
+    versionCode: 21701300
+    commit: dd2f3762fb214f9dd51162b215974b23cc809713
+    subdir: AnkiDroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.17.4
+    versionCode: 21704300
+    commit: 103ccb54f833e7a78df8e0c4098a63e8daeacd51
+    subdir: AnkiDroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.17.5
+    versionCode: 21705300
+    commit: 1c1aa94ec466f37d33fd2f75020d9f9021ac811e
+    subdir: AnkiDroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.17.6
+    versionCode: 21706300
+    commit: 568538896be943818ca793dd2635822265712def
+    subdir: AnkiDroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.18.0
+    versionCode: 21800300
+    commit: 464cf290cc77c3f2c562cb03b408b78a13be261b
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.18.1
+    versionCode: 21801300
+    commit: 5d13819ba811c6baea34dc747fce0568c755f31a
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.18.2
+    versionCode: 21802300
+    commit: f624ca684f2bee10203c67ed4f801aa4c5423b95
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.18.3
+    versionCode: 21803300
+    commit: e74513bdd21d521a7939a8b1f781123fb3ee2025
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.18.4
+    versionCode: 21804300
+    commit: f867da96b8304edaebd0361326316bc7514f8cde
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.19.0
+    versionCode: 21900300
+    commit: a1ca725b545c86cfff8145f28d95c4df740c1885
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.19.1
+    versionCode: 21901300
+    commit: 6953d60532ee2762d29b06fd1d76e69203ad8455
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.19.2
+    versionCode: 21902300
+    commit: b073f52783583fd4fd1436d986090ced9006a66b
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.19.3
+    versionCode: 21903300
+    commit: 01863e5f2f4c0df81272f2ed6953464381d53575
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.20.0
+    versionCode: 22000300
+    commit: d41d16a45c00b0bdbd3b13ac988143db5ef8ae90
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.20.1
+    versionCode: 22001300
+    commit: e32a82c33646807ea19623c9c88be38965bc07e6
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.21.0
+    versionCode: 22100300
+    commit: b77bbc46e6284cd973e56321c8fd57c4212402d3
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.21.1
+    versionCode: 22101300
+    commit: 5dcdec8a8891153d8480a8ece2cdc44327cb2ff9
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.22.1
+    versionCode: 22200301
+    commit: fd0bc967db50f15229f879d4cae45da3ce6fc0ba
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.22.3
+    versionCode: 22203300
+    commit: 4f2ec681da36b8307a865f05192498b8425adf0f
+    subdir: AnkiDroid
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.23.0
+    versionCode: 22300300
+    commit: 4f768aa0be34e254d65fd4ebe19781b84e8efc37
+    subdir: AnkiDroid
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.23.1
+    versionCode: 22301300
+    commit: 3f3133b496b531383e9a6494f5a7704634935308
+    subdir: AnkiDroid
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+  - versionName: 2.23.2
+    versionCode: 22302300
+    commit: 250313087304b98facfc4219c4db10311e91ea69
+    subdir: AnkiDroid
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+    rm:
+      - tools
+      - docs
+    prebuild:
+      - sed -i -e '/splits {/,/^    }/d' -e '/applicationVariants/,/^    }/d' build.gradle
+      - sed -i -e '/publishing/,/^    }/d' -e '/publish/d' ../api/build.gradle.kts
+    ndk: r22b
+
+MaintainerNotes: Uses DexLoader to load custom decks and plugins (?).
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]*$
+CurrentVersion: 2.23.2
+CurrentVersionCode: 22302300

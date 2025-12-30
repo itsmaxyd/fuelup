@@ -1,0 +1,104 @@
+Connectivity:
+  name: Yhteydet
+Development:
+  name: Kehittäminen
+Games:
+  name: Pelit
+Graphics:
+  name: Grafiikka
+Internet:
+  name: Internet
+Money:
+  name: Raha
+Multimedia:
+  name: Multimedia
+Navigation:
+  name: Navigointi
+Phone & SMS:
+  name: Puhelin ja tekstiviestit
+Reading:
+  name: Lukeminen
+Science & Education:
+  name: Tiede ja koulutus
+Security:
+  name: Tietoturva
+Sports & Health:
+  name: Urheilu ja terveys
+System:
+  name: Järjestelmä
+Theming:
+  name: Teemat
+Time:
+  name: Aika
+Writing:
+  name: Kirjoittaminen
+Bookmark:
+  name: Kirjanmerkki
+Browser:
+  name: Selain
+Calculator:
+  name: Laskin
+Icon Pack:
+  name: Kuvakepaketti
+Gallery:
+  name: Galleria
+Messaging:
+  name: Viestit
+Password & 2FA:
+  name: Salasana ja kaksivaiheinen todennus
+Public Transport:
+  name: Joukkoliikenteen kartta ja aikataulu
+Recipe Manager:
+  name: Reseptien hallinta
+Social Network:
+  name: Sosiaalinen verkosto
+Text Editor:
+  name: Tekstimuokkain
+Translation & Dictionary:
+  name: Käännös ja sanakirja
+Weather:
+  name: Sää
+Workout:
+  name: Harjoitus
+Voice & Video Chat:
+  name: Ääni- ja videokeskustelu
+Wallet:
+  name: Lompakko
+Wallpaper:
+  name: Taustakuva
+Calendar & Agenda:
+  name: Kalenteri & esityslista
+App Store & Updater:
+  name: Sovelluskauppa & päivitysohjelma
+Cloud Storage & File Sync:
+  name: Pilvitallennus ja tiedostojen synkronointi
+Draw:
+  name: Piirtäminen
+Ebook Reader:
+  name: E-kirjan lukija
+Email:
+  name: Sähköposti
+File Encryption & Vault:
+  name: Tiedoston salaus & holvi
+File Transfer:
+  name: Tiedostonsiirto
+Local Media Player:
+  name: Paikallisen median soitin
+Keyboard & IME:
+  name: Näppäimistö ja tekstinsyöttö
+Launcher:
+  name: Käynnistin
+News:
+  name: Uutiset
+Online Media Player:
+  name: Verkkomediasoitin
+Shopping List:
+  name: Ostoslista
+Task:
+  name: Tehtävä
+Unit Convertor:
+  name: Yksikkömuunnin
+VPN & Proxy:
+  name: VPN ja välityspalvelin
+Podcast:
+  name: Podcast

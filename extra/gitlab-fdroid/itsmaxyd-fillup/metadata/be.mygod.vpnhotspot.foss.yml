@@ -1,0 +1,57 @@
+Categories:
+  - Internet
+License: Apache-2.0
+AuthorName: nekohasekai
+AuthorEmail: sekai@neko.services
+SourceCode: https://github.com/nekohasekai/VPNHotspot
+IssueTracker: https://github.com/nekohasekai/VPNHotspot/issues
+Donate: https://mygod.be/donate/
+
+AutoName: VPN Hotspot
+
+RepoType: git
+Repo: https://github.com/nekohasekai/VPNHotspot
+
+Builds:
+  - versionName: 2.11.4
+    versionCode: 257
+    commit: v2.11.4
+    subdir: mobile
+    gradle:
+      - freedom
+
+  - versionName: 2.11.6
+    versionCode: 259
+    commit: v2.11.6
+    subdir: mobile
+    gradle:
+      - freedom
+
+  - versionName: 2.11.7
+    versionCode: 260
+    commit: v2.11.7
+    subdir: mobile
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - freedom
+
+  - versionName: 2.11.9
+    versionCode: 262
+    commit: 8e3493a31e75ed71b1e304c8986655115ed7e803
+    subdir: mobile
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - freedom
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckName: be.mygod.vpnhotspot
+CurrentVersion: 2.11.9
+CurrentVersionCode: 262

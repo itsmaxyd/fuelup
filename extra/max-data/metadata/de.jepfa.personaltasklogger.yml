@@ -1,0 +1,360 @@
+Categories:
+  - Task
+  - Time
+License: MIT
+AuthorName: Jens Pfahl
+AuthorWebSite: https://jepfa.de
+WebSite: https://everydaytasks.jepfa.de
+SourceCode: https://github.com/jenspfahl/EverydayTasks
+IssueTracker: https://github.com/jenspfahl/EverydayTasks/issues
+Changelog: https://github.com/jenspfahl/EverydayTasks/releases
+
+AutoName: Everyday Tasks
+
+RepoType: git
+Repo: https://github.com/jenspfahl/EverydayTasks.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 10000
+    commit: v1.0.0
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.4
+    build:
+      - export PATH=$$flutter$$/bin:$PATH
+      - flutter packages pub get
+      - flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter config --no-analytics
+      - flutter build apk
+
+  - versionName: 1.0.1
+    versionCode: 10001
+    commit: 3f7097f96e8627fececece00ee281f0ed7352e3e
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.4
+    build:
+      - export PATH=$$flutter$$/bin:$PATH
+      - flutter packages pub get
+      - flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter config --no-analytics
+      - flutter build apk
+
+  - versionName: 1.1.0
+    versionCode: 10100
+    commit: 967c3c28938e0bb033df75232f76a48cb639e5b4
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.4
+    build:
+      - export PATH=$$flutter$$/bin:$PATH
+      - flutter packages pub get
+      - flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter config --no-analytics
+      - flutter build apk
+
+  - versionName: 1.2.0
+    versionCode: 10200
+    commit: 7a7275872a256e3edce876ea7c6daf1b99b7c5c3
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.4
+    build:
+      - export PATH=$$flutter$$/bin:$PATH
+      - flutter packages pub get
+      - flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter config --no-analytics
+      - flutter build apk
+
+  - versionName: 1.2.2
+    versionCode: 10202
+    commit: a190fdfda3359d115ee7c118331c465f70104a36
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.4
+    build:
+      - export PATH=$$flutter$$/bin:$PATH
+      - flutter packages pub get
+      - flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter config --no-analytics
+      - flutter build apk
+
+  - versionName: 1.3.0
+    versionCode: 10300
+    commit: 8d300fd557f2cdaf40d116475aecfe209da488c8
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.4
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.4.0
+    versionCode: 10400
+    commit: 6d12be9acd2f685f53a0dba239b71986e4510c0a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.5.1
+    versionCode: 10501
+    commit: 378311400302733f58b6951c5443e425682293cb
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.5.3
+    versionCode: 10503
+    commit: e82d2c9e2ebadf050f552451a4566a18f8963675
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.6.0
+    versionCode: 10600
+    commit: 78a0297e471b7f1f4cec8b0a08d5796df315da4e
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.6.1
+    versionCode: 10601
+    commit: 020ad43a16fe75bd0316ab6f323235794a733acc
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.7.0
+    versionCode: 10700
+    commit: a85475deae37649ba8ef18978e19270e3ba7ebb6
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.7.2
+    versionCode: 10702
+    commit: 5ce3f9dafef895f4fc3b8180faa4ae164795c7c0
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.7.3
+    versionCode: 10703
+    commit: d6a0cec655008b086810e61ae84373c106773101
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.7.4
+    versionCode: 10704
+    commit: 7c1fa3d022c773de65a1f4731c44ba1059ae55a7
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.7.5
+    versionCode: 10705
+    commit: 51bf19beea9a29ec9e719b6cda739aac61b52a20
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 1.7.6
+    versionCode: 10706
+    commit: fe8a3250b97164befb43e2c487dabd8cc64badc9
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - sed -i -e 's/Xmx1536M/Xmx4G/' android/gradle.properties
+      - export version="$(sed -E -n -e 's/^.*flutter:\ ([0-9.]+)/\1/p' pubspec.yaml)"
+      - '[[ $version ]]'
+      - git -C $$flutter$$ checkout -f $version
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.7.6
+CurrentVersionCode: 10706

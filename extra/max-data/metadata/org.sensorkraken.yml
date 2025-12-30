@@ -1,0 +1,38 @@
+Categories:
+  - Science & Education
+License: AGPL-3.0-only
+WebSite: https://sensorkraken.org
+SourceCode: https://gitlab.com/sensorkraken/android-app
+IssueTracker: https://gitlab.com/sensorkraken/android-app/-/issues
+
+AutoName: Sensorkraken
+
+RepoType: git
+Repo: https://gitlab.com/sensorkraken/android-app.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 101
+    commit: 3c1329e716962d1fd3f54667ad9adcc5b23ee16a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 110
+    commit: d32c295c36d9451b25112e4a5d22312ac526796b
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.0
+CurrentVersionCode: 110

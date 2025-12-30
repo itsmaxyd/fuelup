@@ -1,0 +1,28 @@
+Categories:
+  - Sports & Health
+  - Time
+License: MIT
+SourceCode: https://github.com/moritzgloeckl/FallASleep
+IssueTracker: https://github.com/moritzgloeckl/FallASleep/issues
+Changelog: https://github.com/moritzgloeckl/FallASleep/releases
+
+AutoName: FallASleep
+
+RepoType: git
+Repo: https://github.com/moritzgloeckl/FallASleep
+Binaries: https://github.com/moritzgloeckl/FallASleep/releases/download/v%v/FallASleep_v%v.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 951ff39b83ba3665102568e892dcd28b00c0864165f01a068b31e89f87c52ab2
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.0'
+CurrentVersionCode: 1

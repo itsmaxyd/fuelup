@@ -1,0 +1,72 @@
+AntiFeatures:
+  - NonFreeAssets
+  - NonFreeNet
+Categories:
+  - Internet
+  - Phone & SMS
+License: GPL-3.0-only
+AuthorEmail: wivewa@jolo.software
+SourceCode: https://codeberg.org/wivewa/wivewa-android
+IssueTracker: https://codeberg.org/wivewa/wivewa-android/issues
+
+AutoName: WiVeWa
+
+RepoType: git
+Repo: https://codeberg.org/wivewa/wivewa-android.git
+Binaries: https://codeberg.org/wivewa/wivewa-android-apk/raw/branch/main/%v.apk
+
+Builds:
+  - versionName: 1.3.0
+    versionCode: 3
+    commit: cec9fe5b23398de88147a972a47499b35b6b9d87
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 4
+    commit: e0a9f70a81c42f14bb977982766730025e4dc740
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 5
+    commit: c33ce4e6afd4add8ad43af27f396249a8b856ba3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 6
+    commit: e51a3f82ab3c1283980541e6d64d45bba259abec
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 7
+    commit: 86ba0cda88999af856012df1ceaaa71f7589cb28
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 8aba95b3c8f6b3e53547ea4c12d074e09b0fc56190bc44b3701499cb680e4ed6
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.5.0
+CurrentVersionCode: 7

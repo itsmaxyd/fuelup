@@ -1,0 +1,1 @@
+Xposed-modulo: ebligas uzi Google Cloud Messaging kun microG GmsCore

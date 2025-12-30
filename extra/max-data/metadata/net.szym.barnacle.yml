@@ -1,0 +1,43 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-only
+AuthorName: Szymon Jakubczak
+AuthorEmail: barnacle@szym.net
+WebSite: http://szym.net/barnacle
+SourceCode: https://github.com/szym/barnacle
+IssueTracker: https://github.com/szym/barnacle/issues
+Donate: https://szym.net/barnacle/#donate
+
+AutoName: Barnacle Wifi Tether
+Description: |-
+  <b>NOTE:</b> This app is no longer maintained (its repo was archived).
+
+  Barnacle is a combination of tools to provide wifi tethering on a phone:
+
+  * NAT
+  * DHCP server
+  * WLAN ad-hoc setup
+
+  Some devices might not work with certain ROMs.
+
+  Requires root.
+
+RequiresRoot: true
+
+RepoType: git
+Repo: https://github.com/szym/barnacle.git
+
+Builds:
+  - versionName: 0.6.7 (evo)
+    versionCode: 39
+    commit: 3a922c0260dea065b871b17127fa76d1bb21017c
+    prebuild: sed -i 's@name="paypalUrl"@name="paypalUrl" formatted="false"@' res/values/strings.xml
+    buildjni:
+      - yes
+    ndk: r12b
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.6.7 (evo)
+CurrentVersionCode: 39

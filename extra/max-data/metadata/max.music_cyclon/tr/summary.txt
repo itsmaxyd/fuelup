@@ -1,0 +1,1 @@
+Beets web sunucusu kullanarak ağ üzerinden müzik eşzamanlama uygulaması

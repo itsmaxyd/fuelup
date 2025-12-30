@@ -1,0 +1,1 @@
+Motor de recomendação de notícias com parâmetros personalizáveis pelo utilizador

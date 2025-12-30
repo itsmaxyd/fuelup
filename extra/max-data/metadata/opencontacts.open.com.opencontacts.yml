@@ -1,0 +1,191 @@
+Categories:
+  - Phone & SMS
+  - Security
+License: GPL-3.0-only
+SourceCode: https://gitlab.com/sultanahamer/OpenContacts
+IssueTracker: https://gitlab.com/sultanahamer/OpenContacts/-/issues
+Translation: https://crowdin.com/project/opencontacts
+Changelog: https://gitlab.com/sultanahamer/OpenContacts/-/blob/HEAD/CHANGELOG
+
+AutoName: OpenContacts
+
+RepoType: git
+Repo: https://gitlab.com/sultanahamer/OpenContacts.git
+
+Builds:
+  - versionName: '3.0'
+    versionCode: 3
+    commit: v3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.0'
+    versionCode: 4
+    commit: v4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 5
+    commit: v5.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 6
+    commit: v6.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.0'
+    versionCode: 7
+    commit: v7.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '9.0'
+    versionCode: 9
+    commit: v9.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '11.0'
+    versionCode: 11
+    commit: v11.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '12.0'
+    versionCode: 12
+    commit: v12.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '13.0'
+    versionCode: 13
+    commit: v13.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '14.0'
+    versionCode: 14
+    commit: v14.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '16.0'
+    versionCode: 16
+    commit: v16.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '17.0'
+    versionCode: 17
+    commit: v17.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '18.0'
+    versionCode: 18
+    commit: v18.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '20.0'
+    versionCode: 20
+    commit: f87db6f471729e1d505649d1542f569e6b57ab86
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '21.0'
+    versionCode: 21
+    commit: v21.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '22.0'
+    versionCode: 22
+    commit: b6754f64d05f0a97266f07c95088f4485ef66eb9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '23.0'
+    versionCode: 23
+    commit: 47606b69f291998c2c7013e2836d14c11c0aac94
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '24.0'
+    versionCode: 24
+    commit: c6dc82dbd9539b86b386d874b9e70ab7b4b1655f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '26.0'
+    versionCode: 26
+    commit: 8a965bff4c6dd02b8b14870d5c4fd470fd5505a2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '27.0'
+    versionCode: 27
+    commit: 4c84c55aa244367104b9e7331cc4b2f710679364
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '28.0'
+    versionCode: 28
+    commit: a1a4e9dac9fbf6d56df7fd0fb9f9aaf15860ff2e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '29.0'
+    versionCode: 29
+    commit: a82fb307eee86104914ecb41a29e1673caa1bcb6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '30.0'
+    versionCode: 30
+    commit: c9099b3e317adc5667b1d20b9f5896d06925b7f2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '31.0'
+    versionCode: 31
+    commit: d2b2c9112e97e1c04d297a103b40c98f3ae662bd
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '31.0'
+CurrentVersionCode: 31

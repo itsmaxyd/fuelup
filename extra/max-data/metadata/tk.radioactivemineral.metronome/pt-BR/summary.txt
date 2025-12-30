@@ -1,0 +1,1 @@
+Metrônomo simples com funcionalidade ritmo por toque e sistema de predefinição

@@ -1,0 +1,111 @@
+Categories:
+  - Games
+License: GPL-3.0-only
+SourceCode: https://github.com/etwasmitbaum/Phase10Counter
+IssueTracker: https://github.com/etwasmitbaum/Phase10Counter/issues
+
+AutoName: Phase 10 Counter
+
+RepoType: git
+Repo: https://github.com/etwasmitbaum/Phase10Counter.git
+
+Builds:
+  - versionName: 1.4.4
+    versionCode: 11
+    commit: d731f33b4a5779881db951805b6b050692b297e6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.5
+    versionCode: 12
+    commit: 2f9e46f5f5f1755897276d89656f96434b9dcf47
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.6
+    versionCode: 13
+    commit: a39291cddf54e73e6c4ebdbd01924c77b5e25d09
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.7
+    versionCode: 14
+    commit: 726bdddb55bd7c61ce3e914dc7a5cb2a703f0465
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 17
+    commit: 6c5530e2940ba6e0e91af7b6dc0c3ee9d2207de4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 18
+    commit: 6ce27c436b49152e6a4f67b87a608b42e84628fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.0.0
+    versionCode: 19
+    commit: cc80afda827b8041be9b5361869d38dd46f0e78a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.0.1
+    versionCode: 20
+    commit: 90e7d014ba1e424088228a5ac857a0d26f2a57ae
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.1.0
+    versionCode: 21
+    commit: c24f5b484fc888dbdd5ada15c5ab7710498ab7f2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.1
+    versionCode: 22
+    commit: 2051c089659416d0e2e32846d59059d640df83f8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.2.0
+    versionCode: 23
+    commit: b25d165201d31781c553d4818bdd2e37f18870b6
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - app/ScreenShotSaveGame
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.2.0
+CurrentVersionCode: 23

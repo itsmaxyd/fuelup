@@ -1,0 +1,2092 @@
+Categories:
+  - Science & Education
+License: MIT
+AuthorName: Anton Gustafsson
+AuthorEmail: anton@moimob.com
+AuthorWebSite: https://moimob.com
+SourceCode: https://github.com/MOIMOB/drinkable
+IssueTracker: https://github.com/MOIMOB/drinkable/issues
+
+AutoName: Drinkable
+
+RepoType: git
+Repo: https://github.com/MOIMOB/drinkable.git
+
+Builds:
+  - versionName: 1.8.6
+    versionCode: 10806
+    commit: 3f4c50dc89ae57bdeaca984a0a8db36cb5c5ba0c
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.xz https://nodejs.org/download/release/v16.17.0/node-v16.17.0-linux-x64.tar.xz
+      - echo "f0867d7a17a4d0df7dbb7df9ac3f9126c2b58f75450647146749ef296b31b49b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.8.7
+    versionCode: 10807
+    commit: 2f1f843682f2783d3171468d8493e2af2a40ab98
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.xz https://nodejs.org/download/release/v16.17.0/node-v16.17.0-linux-x64.tar.xz
+      - echo "f0867d7a17a4d0df7dbb7df9ac3f9126c2b58f75450647146749ef296b31b49b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.9.0
+    versionCode: 10900
+    commit: 51c66139ca4011176dcc8adb4658a8515b3f052b
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.10.0
+    versionCode: 11000
+    commit: 84f956a253d93c4423c55d62586b58e2ed456a70
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.10.1
+    versionCode: 11001
+    commit: 9f197a5e295abfdc548ba17d56bd7b504a4bf1e7
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.10.2
+    versionCode: 11002
+    commit: faaac63925a2170b7bcc5fed5534c5161becba94
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.11.0
+    versionCode: 11100
+    commit: ea6c1f8ecffddc7178387dd6a1d0efba9e9cad41
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.12.0
+    versionCode: 11200
+    commit: dbb506579e6c020d0bd5eda3e7257dff476c66c4
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.13.0
+    versionCode: 11300
+    commit: 53644a396d03fb37f096784748723df158b0437d
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.14.0
+    versionCode: 11400
+    commit: a5b300c05a176ce1e557d87ff8d933eeb1e0dad0
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.15.0
+    versionCode: 11500
+    commit: 96817ca71e81344abe9eae39bc8f71ba4c3e7735
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.16.0
+    versionCode: 11600
+    commit: eb5bfbcf2baf710ef3f185e200e0e44cbcae5124
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.16.1
+    versionCode: 11601
+    commit: 1f41ea1ba77d74ca8ea58ac179f0dd8104c8596e
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.17.0
+    versionCode: 11700
+    commit: 3252176e01ba455f6a96f7144c13194833fd155b
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.18.0
+    versionCode: 11800
+    commit: b608255be6fbb0edd66110fa6261a9e1eab677bb
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.18.1
+    versionCode: 11801
+    commit: 48ef3f7082f70991b9d1c459d4ab6a6843284623
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.19.1
+    versionCode: 11901
+    commit: a000c6418942009ab64b85e393eafcdfad60a9ab
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.19.2
+    versionCode: 11902
+    commit: 0daacb915d97da5fe4359b7f7f5e55219618b643
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.20.0
+    versionCode: 12000
+    commit: 0a69f14fa6163b0e0d99da795c43cc99427669aa
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.21.0
+    versionCode: 12100
+    commit: 9711afd6fbd4ddb506161180683f4980b9cf2a71
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.21.1
+    versionCode: 12101
+    commit: 39164e4f328a968b29527ee94cafac5aec9490aa
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.22.0
+    versionCode: 12200
+    commit: b8290f0a742cc2b7e46b4f0c59e8c45118915729
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.22.1
+    versionCode: 12201
+    commit: 231804cfe4e0b3b47bce664a8a6e347f6abd1f47
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.23.0
+    versionCode: 12300
+    commit: e849d287edc1bddb11937b7a72f290e78d1b4e20
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.24.0
+    versionCode: 12400
+    commit: 74562c781efe414def8c0c709c73b769872f8b34
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.25.0
+    versionCode: 12500
+    commit: 05090ed3a74a62b8ffe991889770125e23f630fe
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.26.0
+    versionCode: 12600
+    commit: 1f2d1469007cbcad4170f1ce51344bf3b6d29a0a
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.27.0
+    versionCode: 12700
+    commit: 8f59e3fe5fe49026128abc4968fe135809db0895
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.27.1
+    versionCode: 12701
+    commit: 70f9c099cc9ea702dea8bede5c03dd917ec73402
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.28.0
+    versionCode: 12800
+    commit: b496a5edf153cca49120f3970ed4f2b22c305274
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.29.0
+    versionCode: 12900
+    commit: c540b362cd8a5003c8e6710d446457d9e57848c5
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.30.0
+    versionCode: 13000
+    commit: 995b7fe50884f5fc56527fc4f4525b4c4a444096
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.32.0
+    versionCode: 13200
+    commit: 436e524c32c7e4dc5c0e410d19266ee3d7762e2d
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.33.0
+    versionCode: 13300
+    commit: 1cfd93db5472bcc83f13b9f1f8b497f17831133b
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.33.1
+    versionCode: 13301
+    commit: 98206e87dd7d45c8e13827ccf1608ea4fd0c26f3
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.34.0
+    versionCode: 13400
+    commit: 77dce1aa4e4a2766bbada313ea8b6993850c48b7
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.35.0
+    versionCode: 13500
+    commit: fd1af30fdfa260901d6efb8132f6d94a2ae911c7
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.36.0
+    versionCode: 13600
+    commit: 2ab24452e34939f62363a78f61211bd00a0056b9
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.36.1
+    versionCode: 13601
+    commit: fda1cf39b021be1c1de581e7caf0b49d290f71fe
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.36.2
+    versionCode: 13602
+    commit: 1faf1afe1c2b703cff2299e7d9ed2c18c1ac0ea9
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.37.0
+    versionCode: 13700
+    commit: e3743454b51af2c5b0907317994edc30f6adf446
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.38.0
+    versionCode: 13800
+    commit: 79138087f072470d6c3e6925b60299d8e0e586bd
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.39.0
+    versionCode: 13900
+    commit: 3bb345643493671d40f9e7a81557442fbc007c68
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.39.1
+    versionCode: 13901
+    commit: 3d16feb7459b6de3356f257952a2c8988b349f6f
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.40.0
+    versionCode: 14000
+    commit: 7e87d0ffa149a32c105b74d845af00ef42e0fe31
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.41.0
+    versionCode: 14100
+    commit: e29f233cb6613d9820dbcfc817574cf8e4b8f534
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.42.0
+    versionCode: 14200
+    commit: faae424b52ef1053077e683b4e66d02d20619c85
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.42.1
+    versionCode: 14201
+    commit: 319629920ebb9cc03bad9a63f193fd526450c9dd
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.43.0
+    versionCode: 14300
+    commit: 7a7fae9a386e055d272d203ffd8340e24feec384
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.44.0
+    versionCode: 14400
+    commit: c86e913957fbb467e75dc4e8c04710c101292ab7
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.44.2
+    versionCode: 14402
+    commit: 28b148e63cfe4b1a6f7fb476ab6c1e46256d4cab
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.45.0
+    versionCode: 14500
+    commit: 732d1334e768b93fd1445dbbf9705b75f7f90340
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.45.1
+    versionCode: 14501
+    commit: 2914de2460455befa7d3c089186ffb6251ac334d
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.46.0
+    versionCode: 14600
+    commit: e9590fc8ef7ad32f8518b635ea0b5bc16bd23898
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.47.0
+    versionCode: 14700
+    commit: 17fba0ff7a23af962d1d6328ce7a5019ce5b23ca
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.48.0
+    versionCode: 14800
+    commit: 5a813a8ffcb5e1cf0d9326f9c75da2b1f12bd3ed
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.49.0
+    versionCode: 14900
+    commit: d1e4dab86cc349bc85cffa073579e502040736d0
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.50.0
+    versionCode: 15000
+    commit: 4a1059070792a04fd6255395001baf9ddee48ab8
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.51.0
+    versionCode: 15100
+    commit: e9c5356c363a329eaae23c42d6a3d372306dacd4
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.51.1
+    versionCode: 15101
+    commit: eecd600b68f06c5672c6491804bb55ddcca79387
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.52.0
+    versionCode: 15200
+    commit: b19fd512b8984319f6911295c9d6f362c635f738
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install npm
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.53.0
+    versionCode: 15300
+    commit: 9dff9aa4a7757007d20b54e4d124868b093d56e4
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install npm
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.54.0
+    versionCode: 15400
+    commit: 9a196a9aee7b7b0f6a78156b0b2eb0c9e24a6af2
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install npm
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.54.1
+    versionCode: 15401
+    commit: a5914ece817c8d7d6bda878014fecfe68db6fcff
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install npm
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.55.0
+    versionCode: 15500
+    commit: e76eabcc91272fd437c61c66ff36c5fc9b98221c
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install npm
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.56.0
+    versionCode: 15600
+    commit: a84de83cb7c7ef65b11d7bddf2894e0d0787973d
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install npm
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.57.0
+    versionCode: 15700
+    commit: daf9a69e94745c05bbf01524a9d55a3c99bc3ce2
+    subdir: android/app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.57.1
+    versionCode: 15701
+    commit: e4ce49d1f6fdcf26180c645c646023fa5b3dc2bc
+    subdir: android/app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.57.3
+    versionCode: 15703
+    commit: 25eafd0ed2b59da847be05f5b900561660a2b827
+    subdir: android/app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.58.0
+    versionCode: 15800
+    commit: 842458a0098038941b0b1562cddbd5b1536682aa
+    subdir: android/app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.58.1
+    versionCode: 15801
+    commit: 41f7c8ef77d44ac952c418b6db2ecad8e4863b0c
+    subdir: android/app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    gradle:
+      - yes
+    prebuild:
+      - echo SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhYXVzZnd4ZWhjaGd0dGpjZmZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjI4MDA2NzAsImV4cCI6MTk3ODM3NjY3MH0.10YASNXEVnPoCBv2S7772K5rsJZtlQIU1xhd1Pn2P9A
+        > ../../.env
+      - echo ADMOB_APP_ID="deadbeef" > ../local.properties
+      - sed -i -e '/google-services/d' ../build.gradle
+      - pushd ../..
+      - npm ci
+      - npm run build
+      - npx cap telemetry off
+      - npx cap update
+      - popd
+    scanignore:
+      - node_modules/@capacitor/cli/assets/capacitor-cordova-android-plugins.tar.gz
+    scandelete:
+      - node_modules/
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.58.1
+CurrentVersionCode: 15801

@@ -1,0 +1,164 @@
+Categories:
+  - Email
+  - Internet
+License: GPL-3.0-only
+SourceCode: https://github.com/itprojects/InboxPager
+IssueTracker: https://github.com/itprojects/InboxPager/issues
+
+AutoName: Inbox Pager
+
+RepoType: git
+Repo: https://github.com/itprojects/InboxPager.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 28193bcd1165a9cd012dfc39cc38162c81eb4925
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: 90bee8f98577266c929f7c73a97f01e768d69942
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '1.0'
+    versionCode: 3
+    commit: 4354f83840e181ce0fe6b135f5d05b32fbd210ab
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 4
+    commit: v2.0
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 5
+    commit: v2.1
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 6
+    commit: v2.2
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 7
+    commit: v3.0
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '3.1'
+    versionCode: 8
+    commit: v3.1
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '4.0'
+    versionCode: 9
+    commit: v4.0
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '4.1'
+    versionCode: 10
+    commit: v4.1
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '4.2'
+    versionCode: 11
+    commit: v4.2
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '4.3'
+    versionCode: 12
+    commit: v4.3
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '4.4'
+    versionCode: 13
+    commit: v4.4
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '4.5'
+    versionCode: 14
+    commit: v4.5
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 15
+    commit: v5.0
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 16
+    commit: v6.0
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '6.1'
+    versionCode: 17
+    commit: v6.1
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '6.2'
+    versionCode: 18
+    commit: v6.2
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '6.3'
+    versionCode: 19
+    commit: v6.3
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '6.4'
+    versionCode: 20
+    commit: v6.4
+    subdir: InboxPager
+    gradle:
+      - yes
+
+  - versionName: '7.0'
+    versionCode: 21
+    commit: bea1cf543dde6a40be1c00ebc5cef0f562c46116
+    subdir: InboxPager
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '7.0'
+CurrentVersionCode: 21

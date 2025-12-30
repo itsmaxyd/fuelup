@@ -1,0 +1,65 @@
+Categories:
+  - Sports & Health
+License: GPL-3.0-only
+AuthorName: Burnout Software Labs
+AuthorEmail: BurnoutSoftwareLabs@gmail.com
+SourceCode: https://github.com/ChristopherRogers1991/ExerciseReminders
+IssueTracker: https://github.com/ChristopherRogers1991/ExerciseReminders/issues
+Donate: https://www.buymeacoffee.com/crogers
+
+AutoName: Exercise Reminders
+
+RepoType: git
+Repo: https://github.com/ChristopherRogers1991/ExerciseReminders
+Binaries: https://github.com/ChristopherRogers1991/ExerciseReminders/releases/download/%v/exercise-reminders-%v.apk
+
+Builds:
+  - versionName: 1.6.0
+    versionCode: 8
+    commit: 1.6.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 9
+    commit: 7bd6d10bf471afbc4cf5d570bd75a800261f853a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 10
+    commit: d8ac7acf28ea7e243fe18776faaec9dcccea0c2b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.2
+    versionCode: 11
+    commit: e38458035b6493b79caa22873be11f302434e2b1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.3
+    versionCode: 12
+    commit: 2233515fb87f9f0d459fb6ef9c21e16108bbb7d8
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 09938053874bed0b9774a477d5a8249d00db210ee125b4645eddaec89014f785
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.7.3
+CurrentVersionCode: 12

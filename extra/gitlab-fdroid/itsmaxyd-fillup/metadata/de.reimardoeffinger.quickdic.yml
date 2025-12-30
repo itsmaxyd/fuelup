@@ -1,0 +1,419 @@
+Categories:
+  - Reading
+  - Science & Education
+  - Translation & Dictionary
+License: Apache-2.0
+SourceCode: https://github.com/rdoeffinger/Dictionary
+IssueTracker: https://github.com/rdoeffinger/Dictionary/issues
+Changelog: https://github.com/rdoeffinger/Dictionary/releases
+
+AutoName: QuickDic
+Description: |-
+  Resurrection of https://f-droid.org/packages/com.hughes.android.dictionary to a new maintainer. Uses data
+  from Wiktionary and Beolingus to generate dictionary files that can be used
+  offline. These can be downloaded from within the app. These can also be
+  generated automatically, though documentation for the process is currently
+  missing.
+
+RepoType: git
+Repo: https://github.com/rdoeffinger/Dictionary.git
+
+Builds:
+  - versionName: 5.1.3
+    versionCode: 41
+    commit: v5.1.3
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@d57bfc6bcf5b
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.1.4
+    versionCode: 42
+    commit: v5.1.4
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@d57bfc6bcf5b
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.2.1
+    versionCode: 52
+    commit: v5.2.1
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@9fbd31a944cf
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.2.2
+    versionCode: 53
+    commit: v5.2.2
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@9fbd31a944cf
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.2.3
+    versionCode: 54
+    commit: v5.2.3
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@9fbd31a944cf
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.2.4
+    versionCode: 57
+    commit: v5.2.4
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@9fbd31a944cf
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.2.6
+    versionCode: 63
+    commit: v5.2.6
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@ef7a142ae766f01
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.2.8
+    versionCode: 68
+    commit: v5.2.8
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@ef7a142ae766f01
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.2.9
+    versionCode: 69
+    commit: v5.2.9
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@ef7a142ae766f01
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.2.10
+    versionCode: 70
+    commit: v5.2.10
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@ef7a142ae766f01
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.3.0
+    versionCode: 77
+    commit: v5.3.0
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@ef7a142ae766f01
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.3.2
+    versionCode: 80
+    commit: v5.3.2
+    gradle:
+      - yes
+    srclibs:
+      - QuickdicUtilsRestored@819e981b344df2a
+    prebuild: echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+
+  - versionName: 5.3.3
+    versionCode: 82
+    commit: v5.3.3
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.3.4
+    versionCode: 85
+    commit: v5.3.4
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.3.6
+    versionCode: 89
+    commit: v5.3.6
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.3.8
+    versionCode: 91
+    commit: v5.3.8
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.3.9
+    versionCode: 92
+    commit: v5.3.9
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.4.0
+    versionCode: 93
+    commit: v5.4.0
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.4.1
+    versionCode: 95
+    commit: v5.4.1
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.4.2
+    versionCode: 96
+    commit: v5.4.2
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.4.3
+    versionCode: 97
+    commit: v5.4.3
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.4.4
+    versionCode: 98
+    commit: v5.4.4
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.4.5
+    versionCode: 100
+    commit: v5.4.5
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.4.7
+    versionCode: 102
+    commit: v5.4.7
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.4.8
+    versionCode: 103
+    commit: v5.4.8
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.4.9
+    versionCode: 104
+    commit: v5.4.9
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.5.1
+    versionCode: 106
+    commit: v5.5.1
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.5.4
+    versionCode: 109
+    commit: v5.5.4
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.5.5
+    versionCode: 110
+    commit: v5.5.5
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.5.6
+    versionCode: 111
+    commit: v5.5.6
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.5.7
+    versionCode: 112
+    commit: v5.5.7
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.5.8
+    versionCode: 113
+    commit: e3a0bf08c22551137761895367bc7b3fe29a637b
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.5.9
+    versionCode: 114
+    commit: abd7512d20cd6fba56002a0a7e83cae11a98146c
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 5.6.0
+    versionCode: 115
+    commit: 04065234118bcc292dba790001a4d585acd1b77d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 5.6.1
+    versionCode: 116
+    commit: 3d8328a202eaafd7253e7c40170a3cc99937ecd6
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 5.6.2
+    versionCode: 117
+    commit: 2812182a8d0d46336a9b076a728c27315c6fe9d6
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 5.6.3
+    versionCode: 118
+    commit: fa0b0195fe0c792108b32e609337b3828defa67d
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.7.1
+    versionCode: 120
+    commit: 6a64728317db1c3a001ff1491a2f68f9775d9c32
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 5.7.2
+    versionCode: 121
+    commit: 977d2bbe690d68b217bb76477a0f1832788e3159
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+
+  - versionName: 5.7.4
+    versionCode: 123
+    commit: d8aa3e5d64d3a72e428aba51111a6e34aa98ed74
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+
+  - versionName: 5.7.5
+    versionCode: 124
+    commit: 853c16d5c1a08be5a1fa0b7d3d31da6d462f9920
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+
+  - versionName: 5.7.8
+    versionCode: 127
+    commit: 63c0de834d2addff0b6a4f15e53500a0ba37b49d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+
+  - versionName: 5.7.9
+    versionCode: 128
+    commit: b883813e8fc5a0d72c84f61193d03a4847456287
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+    prebuild: sed -i -e '/gradle/s/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 5.8.0
+    versionCode: 129
+    commit: 544a60f6d21395e7134b6c47789243f23357292f
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+    prebuild: sed -i -e '/gradle/s/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 5.8.1
+    versionCode: 130
+    commit: 2a8d8220e056ff32c6fe4e94cb0c12f161e212a0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+    prebuild: sed -i -e '/gradle/s/8.12.1/8.11.1/' build.gradle
+
+  - versionName: 5.8.2
+    versionCode: 131
+    commit: c4a87159d69bd1a552de7d2d6da6d479899b1aef
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+    prebuild: sed -i -e '/gradle/s/8.13.0/8.11.1/' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]*$
+CurrentVersion: 5.8.2
+CurrentVersionCode: 131

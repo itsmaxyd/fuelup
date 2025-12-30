@@ -1,0 +1,209 @@
+Categories:
+  - Multimedia
+  - System
+License: GPL-3.0-only
+WebSite: https://github.com/caydey/ffshare
+SourceCode: https://github.com/caydey/ffshare
+IssueTracker: https://github.com/caydey/ffshare/issues
+Changelog: https://github.com/caydey/ffshare/releases
+
+AutoName: FFShare
+
+RepoType: git
+Repo: https://github.com/caydey/ffshare.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 8bbe69be8e3218fefc557cea218690c56cfac8f0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: 2d2c95a5f2854d44597278e5731c03081042c8fa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 3
+    commit: f86a312394a2aade425e30477c2e0b89ed33ddfb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 4
+    commit: f104754ae520693c1595ef7047f9d0ce06d2b438
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 5
+    commit: acf3b5d046c1a4cc9c82f3ecf64716f17ba5fb91
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 6
+    commit: d3752b5cd829c5a644a808310769e63335d7eb35
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.4
+    versionCode: 7
+    commit: 5c1295b7891773ceeac11c199cbfdafe13c0feb1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 8
+    commit: 0b56dc05dfe76dd3c976cd9ad67f19637a5f4926
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 9
+    commit: 8b949689e5d3060def47875c1323cf11d82131d6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 10
+    commit: 4a5ca3b8400b3c1a13922890ff88562acc06111e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.3
+    versionCode: 11
+    commit: e9f81ef7575d1c5e34bd7b5928f56cc00925aecb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.4
+    versionCode: 12
+    commit: e37bbc0b13963605aaf00a6fbf8df6e3513a3304
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.5
+    versionCode: 13
+    commit: 0f5371c6d95281d5bf2035ae415b664917b59537
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.6
+    versionCode: 14
+    commit: be6b23b7e5117c7507f509ce2f82f168c812f3dd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.7
+    versionCode: 15
+    commit: a7a802842af3981494f335e45c6580cb58336bbf
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/full/release/app-full-universal-release-unsigned.apk
+
+  - versionName: 1.2.8
+    versionCode: 16
+    commit: 4ffc61626b2f56654ca962c9f3ce71f61e5b5147
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/full/release/app-full-universal-release-unsigned.apk
+
+  - versionName: 1.2.8a
+    versionCode: 17
+    commit: 5b9184c0840d5014e6f703a8010c46eb5160b283
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/full/release/app-full-universal-release-unsigned.apk
+
+  - versionName: 1.2.9
+    versionCode: 18
+    commit: c1b7fcdea13b306996371721f87bef9bec7f0e71
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/full/release/app-full-universal-release-unsigned.apk
+
+  - versionName: 1.3.0
+    versionCode: 19
+    commit: 52b3131364c20a9e58534c2b620a1e689f756e92
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/full/release/app-full-universal-release-unsigned.apk
+
+  - versionName: 1.3.1
+    versionCode: 20
+    commit: 0a2177ef4ad80b4533904e2e90f338f4ebff118e
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/full/release/app-full-universal-release-unsigned.apk
+
+  - versionName: 1.3.2
+    versionCode: 21
+    commit: 5961c84d436fe74f36a75d575b4756b4093507d1
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/full/release/app-full-universal-release-unsigned.apk
+
+  - versionName: 1.3.3
+    versionCode: 22
+    commit: 6e301e39e1a5270cb84533d2628c6e7cda68bff9
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/full/release/app-full-universal-release-unsigned.apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.3.3
+CurrentVersionCode: 22

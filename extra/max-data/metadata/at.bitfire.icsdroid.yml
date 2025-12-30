@@ -1,0 +1,566 @@
+Categories:
+  - Calendar & Agenda
+  - Time
+License: GPL-3.0-only
+AuthorName: bitfire web engineering
+WebSite: https://icsx5.bitfire.at/
+SourceCode: https://github.com/bitfireAT/icsx5
+IssueTracker: https://github.com/bitfireAT/icsx5/issues
+Translation: https://explore.transifex.com/bitfireAT/icsx5/
+Changelog: https://github.com/bitfireAT/icsx5/releases
+Donate: https://icsx5.bitfire.at/donate/
+Bitcoin: 1KSCy7RHztKuhW9fLLaUYqdwdC2iwbejZU
+
+AutoName: ICSx⁵
+
+RepoType: git
+Repo: https://github.com/bitfireAT/icsx5.git
+
+Builds:
+  - versionName: '0.9'
+    versionCode: 1
+    commit: v0.9
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.9.9
+    versionCode: 2
+    commit: v0.9.9
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '1.0'
+    versionCode: 3
+    commit: v1.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 4
+    commit: v1.0.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 5
+    commit: v1.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 7
+    commit: v1.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 8
+    commit: v1.2.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 9
+    commit: v1.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 10
+    commit: v1.4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 12
+    commit: v1.4.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 13
+    commit: v1.4.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 16
+    commit: v1.5.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 18
+    commit: v1.5.4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.5
+    versionCode: 19
+    commit: v1.5.5
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.6
+    versionCode: 21
+    commit: v1.5.6
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.7
+    versionCode: 22
+    commit: v1.5.7
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 24
+    commit: v1.6
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 26
+    commit: v1.6.1
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: '1.7'
+    versionCode: 27
+    commit: v1.7
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: '1.8'
+    versionCode: 32
+    commit: v1.8
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.8.1
+    versionCode: 33
+    commit: v1.8.1
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.8.2
+    versionCode: 36
+    commit: v1.8.2
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.8.3
+    versionCode: 37
+    commit: v1.8.3
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.8.4
+    versionCode: 38
+    commit: v1.8.4
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.8.5
+    versionCode: 40
+    commit: v1.8.5
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.8.7
+    versionCode: 43
+    commit: v1.8.7
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.8.8
+    versionCode: 46
+    commit: v1.8.8
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.8.9
+    versionCode: 47
+    commit: v1.8.9
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: '1.9'
+    versionCode: 48
+    commit: v1.9
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.9.1
+    versionCode: 50
+    commit: v1.9.1
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.9.2
+    versionCode: 52
+    commit: v1.9.2
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.9.3-beta1
+    versionCode: 53
+    commit: 931835c4369e510cd0f830a7a1edf5396a18cad7
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.9.3
+    versionCode: 54
+    commit: c930d1f2ae74983321ed45822c5468de42f8a0fe
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.9.4
+    versionCode: 56
+    commit: 95c0a7bc666cbc75e0d9529d2b3b954185e015a4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+
+  - versionName: '2.0'
+    versionCode: 58
+    commit: 1a271ce458d2bd58fa6752f9385063ca42662ec8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+
+  - versionName: 2.0.1
+    versionCode: 59
+    commit: 9260461c6d84b18ac20ff9fbd7e70441e3a7e5ea
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+
+  - versionName: 2.0.2
+    versionCode: 62
+    commit: 726f6fa77ef5ddfcd73f7b79c26f73ab397839fa
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+
+  - versionName: 2.0.3
+    versionCode: 64
+    commit: 9ff0c23f5042f6ecd3fbdbf395c71725b6de20c4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+
+  - versionName: '2.1'
+    versionCode: 70
+    commit: 326c3c0da8d6650de16a20cbe855dda16fd97881
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 2.1.1
+    versionCode: 72
+    commit: 6cb041146322fd0b752dd411776098a1d6e801d7
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: '2.2'
+    versionCode: 75
+    commit: 0c66c1d80c26002ba96f5deb8a342ca7b5cf4dea
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - standard
+
+  - versionName: 2.2.1
+    versionCode: 77
+    commit: e1f242728edefd4a14abe53ddf54462029caff61
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.2
+    versionCode: 78
+    commit: 3b6d38042751d7dac4331dd17275cd73f064a4f0
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.3
+    versionCode: 79
+    commit: 24896bd05cdd7d579ed49b8e98dd92e6798f45a3
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.4
+    versionCode: 80
+    commit: c68aef76e59abb68ce8a0d50d73fb7d25dca43cf
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.5
+    versionCode: 81
+    commit: b5d289b524c99c7cb0dd3c703cbdec1690687ca1
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.6
+    versionCode: 82
+    commit: 3c129b0029c6308518eccc78c3072cb407d180d1
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.7
+    versionCode: 83
+    commit: 061ef90e10d9ff97f1edb9f3f8575e7f74a69ac5
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.8
+    versionCode: 84
+    commit: c917dd3f310b83c6ca11349d5b42e8f82b164d27
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.9
+    versionCode: 85
+    commit: c1da69d38a52b8346fefa80cc347d96a70dfd443
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.10
+    versionCode: 86
+    commit: 8105773dd6db7d76b34313f7e312e7cc4daa283e
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.3.0
+    versionCode: 87
+    commit: 51bf78dd3dbf55868a209f17aad58bac4d15451d
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.3.1
+    versionCode: 88
+    commit: 8288eaccbaabb2e215168010b73c8a180cd4e5a0
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild:
+      - sed -i -e '/getByName("bitfire/d' build.gradle.kts
+      - sed -i -e '/agp/s/8.12.0/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 2.4.0
+    versionCode: 89
+    commit: 576e861c3e84eedb5bc03ccb579d29016c72a792
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild:
+      - sed -i -e '/getByName("bitfire/d' build.gradle.kts
+      - sed -i -e '/agp/s/8.12.2/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 2.4.2
+    versionCode: 91
+    commit: af6cb98d398c8d0ce609c18deb6d0d45784045ca
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild:
+      - sed -i -e '/getByName("bitfire/d' build.gradle.kts
+      - sed -i -e '/agp/s/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 2.4.3
+    versionCode: 92
+    commit: 81036b50c10d331ec13fc107f5beae5ca32b72de
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]*$
+CurrentVersion: 2.4.3
+CurrentVersionCode: 92

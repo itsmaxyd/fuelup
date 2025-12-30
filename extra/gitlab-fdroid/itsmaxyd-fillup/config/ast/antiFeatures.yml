@@ -1,0 +1,29 @@
+Ads:
+  description: Esta aplicación contién anuncios
+  name: Anuncios
+DisabledAlgorithm:
+  description: Esta aplicación tien una firma de seguranza que ye feble
+  name: Signed Using An Unsafe Algorithm
+KnownVuln:
+  description: This app contains a known security vulnerability
+  name: Known Vulnerability
+NSFW:
+  description: This app contains content that should not be publicized or visible everywhere
+  name: NSFW
+NoSourceSince:
+  name: El códigu fonte yá nun ta disponible. Nun va haber más anovamientos.
+NonFreeAdd:
+  description: This app promotes non-free add-ons
+  name: Complementos privativos
+NonFreeAssets:
+  description: Esta aplicación contién gráficos que son privativos
+  name: Gráficos privativos
+NonFreeDep:
+  description: This app depends on other non-free apps
+  name: Dependencies privatives
+NonFreeNet:
+  description: This app promotes non-free network services
+  name: Servicios de rede privativos
+Tracking:
+  description: This app tracks and reports your activity
+  name: Tracking

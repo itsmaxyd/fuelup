@@ -1,0 +1,616 @@
+Categories:
+  - App Manager
+  - Security
+  - System
+License: Apache-2.0
+AuthorName: proletarius101
+WebSite: https://secure-system.gitlab.io/Insular/
+SourceCode: https://gitlab.com/secure-system/Insular
+IssueTracker: https://gitlab.com/secure-system/Insular/issues
+
+RepoType: git
+Repo: https://gitlab.com/secure-system/Insular.git
+
+Builds:
+  - versionName: 5.1.2
+    versionCode: 51200
+    commit: v5.1.2-fdroid
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - sed -i -e 's!System.env.VERSION_CODE!\"$$VERCODE$$\"!' -e 's!System.env.VERSION_NAME!\"$$VERSION$$\"!'
+        build.gradle
+    antifeatures:
+      - Tracking
+
+  - versionName: 5.1.2-42172be8
+    versionCode: 51465
+    commit: v5.1.2-42172be8
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.1.2-87f1b7e9
+    versionCode: 51492
+    commit: v5.1.2-87f1b7e9
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.1.2-a9e15f6f
+    versionCode: 51496
+    commit: v5.1.2-a9e15f6f
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.1.2-f60c851c
+    versionCode: 51535
+    commit: v5.1.2-f60c851c
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.1.2-d815bc83
+    versionCode: 51538
+    commit: v5.1.2-d815bc83
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.1.3-689c8c20
+    versionCode: 51551
+    commit: v5.1.3-689c8c20
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.1.3-42de5a1a
+    versionCode: 51557
+    commit: v5.1.3-42de5a1a
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.1.3-6fcbe182
+    versionCode: 51560
+    commit: v5.1.3-6fcbe182
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.3-4cac321f
+    versionCode: 51565
+    commit: v5.3-4cac321f
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.3-da5d93e4
+    versionCode: 51569
+    commit: v5.3-da5d93e4
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.4-bbca1958
+    versionCode: 51576
+    commit: v5.4-bbca1958
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.4.3-ee1cec6a
+    versionCode: 51581
+    commit: v5.4.3-ee1cec6a
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.5-e61328e3
+    versionCode: 51584
+    commit: 0dc9d626cea33ee6fbbd139b6b56c233d5b012cc
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.5-cc477d99
+    versionCode: 51586
+    commit: 1ffb642c56c4b9819050619625eae5838981439b
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.5-4b104c42
+    versionCode: 51590
+    commit: 100ab50078723da0f7ec57f1e25370b61997516d
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android10-mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.5-404b5a48
+    versionCode: 51593
+    commit: 982b843f305db2c1eac6f22344cfae50ea3063f2
+    subdir: assembly
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.5.1-40729b7f
+    versionCode: 51598
+    commit: 20f1d9cb18562c812712a2e752767d8d33b349b9
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.5.1-c37b25e9
+    versionCode: 51601
+    commit: 72d33bb5aad9ce38205b5b070cb21fe0be59b0d4
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+      ../settings.gradle
+
+  - versionName: 5.5.1-0e1b5b1d
+    versionCode: 51604
+    commit: 765cf15b77914e55b8bc4bdcb5af65b5d83adffa
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+
+  - versionName: 6.0-7771b196
+    versionCode: 51607
+    commit: 821836706af4082c8c1b44ecf031598ef1ca4d9b
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+
+  - versionName: 6.0.2-f615cf58
+    versionCode: 51613
+    commit: b8511405d57c7075556749fcf4e8e92b0eb39e6d
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+
+  - versionName: 6.0.3-7cf8202b
+    versionCode: 51631
+    commit: ffcc770fb35495d7dd5faa0dba22c4cf380a80b6
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+
+  - versionName: 6.0.3-0abb0c15
+    versionCode: 51635
+    commit: d47e9bcae22b9f8cbf1ee2293d682020100ee15f
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+
+  - versionName: 6.0.4-7d3bbc7c
+    versionCode: 51638
+    commit: 9c5bb75c8de7d297492e5a16dd32312ffcadb695
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+
+  - versionName: 6.0.5-9859c283
+    versionCode: 51642
+    commit: 40b69b179e772e3738b4a41a209f2994bbf9f410
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@d4767d5e69074b03e641186fa9504be37f09c673
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+
+  - versionName: 6.0.5-43c525bd
+    versionCode: 51657
+    commit: 65271c1ae05c98d01e6e7d3da766e536db9b79ad
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@2430a73ecb0fb3f0d0f9cdf443b7863eb07a988d
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+
+  - versionName: 6.0.5-6f72adc7
+    versionCode: 51660
+    commit: 57d77c1b58d624c47d81905de5d070f7a4b7bf5e
+    subdir: assembly
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    srclibs:
+      - deagle@2430a73ecb0fb3f0d0f9cdf443b7863eb07a988d
+      - setupwizard@android12--mainline-release
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
+        ../settings.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+
+  - versionName: 6.3-e46a1948
+    versionCode: 51709
+    commit: 3996a938b8ccc8ada4b4d4e72ba84bd61f33b2cc
+    subdir: assembly
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+      - sed -i -e '/core-google-shortcuts/,+2d' ../mobile/build.gradle
+    scanignore:
+      - libs/setup-wizard/library/self.gradle
+    scandelete:
+      - libs/setup-wizard/tools/docs/
+
+  - versionName: 6.3-4f363088
+    versionCode: 51733
+    commit: d47dc6d83883e389f8a0f7a17c95b9f14307f650
+    subdir: assembly
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - complete
+      - fdroid
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+      - sed -i -e '/core-google-shortcuts/,+2d' ../mobile/build.gradle
+    scanignore:
+      - libs/setup-wizard/library/self.gradle
+    scandelete:
+      - libs/setup-wizard/tools/docs/
+
+  - versionName: 6.4-66cd8034
+    versionCode: 51777
+    commit: 399077ba3ffdc2ef715e5857970d0394e7f1eb08
+    subdir: assembly
+    submodules: true
+    gradle:
+      - complete
+      - fdroid
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+      - sed -i -e '/core-google-shortcuts/,+2d' ../mobile/build.gradle
+    scanignore:
+      - libs/setup-wizard/library/self.gradle
+    scandelete:
+      - libs/setup-wizard/tools/docs/
+
+  - versionName: 6.4.2-d46911c9
+    versionCode: 51801
+    commit: 27c0cd79ea641eee5e7cc22c264205673bff7e8c
+    subdir: assembly
+    submodules: true
+    gradle:
+      - complete
+      - fdroid
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+      - sed -i -e '/core-google-shortcuts/,+2d' ../mobile/build.gradle
+    scanignore:
+      - libs/setup-wizard/library/self.gradle
+    scandelete:
+      - libs/setup-wizard/tools/docs/
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags v[\d.]+-\w+$
+UpdateCheckName: Ignore
+UpdateCheckData: assembly/build.gradle|versionCode\s(\d+)|.|versionName\s'(.*)'
+CurrentVersion: 6.4.2-d46911c9
+CurrentVersionCode: 51801

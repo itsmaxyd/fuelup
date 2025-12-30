@@ -1,0 +1,42 @@
+Categories:
+  - Games
+License: GPL-3.0-only
+AuthorName: Andrés Villarreal
+AuthorEmail: andres@villarreal.co.cr
+AuthorWebSite: https://andres.villarreal.co.cr
+SourceCode: https://github.com/KaeruCT/RaumBaller
+IssueTracker: https://github.com/KaeruCT/RaumBaller/issues
+Changelog: https://github.com/KaeruCT/RaumBaller/blob/HEAD/CHANGELOG.md
+Liberapay: KaeruCT
+
+AutoName: RaumBaller
+
+RepoType: git
+Repo: https://github.com/KaeruCT/RaumBaller.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: 5e8761a6f5c3c0fde0ffd5b73c5e44e0d36d8bfd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: a44232e5df580d9e2e776e22ebf55e85422e4b2d
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.2'
+CurrentVersionCode: 3

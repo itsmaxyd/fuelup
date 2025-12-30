@@ -1,0 +1,52 @@
+Categories:
+  - Games
+  - Navigation
+License: MIT
+AuthorName: Railwaystations Team
+WebSite: https://railway-stations.org
+SourceCode: https://codeberg.org/RailwayStations/RSAndroidApp
+IssueTracker: https://codeberg.org/RailwayStations/RSAndroidApp/issues
+Translation: https://translate.codeberg.org/projects/railwaystations-android-app
+Liberapay: Railway-Stations.org
+
+AutoName: Railway station photos
+
+RepoType: git
+Repo: https://codeberg.org/RailwayStations/RSAndroidApp.git
+Binaries: https://codeberg.org/RailwayStations/RSAndroidApp/releases/download/%v/de.bahnhoefe.deutschlands.bahnhofsfotos_%v.apk
+
+Builds:
+  - versionName: 16.0.0
+    versionCode: 93
+    commit: 411426ebe54e32538aa0f0ac8285ef38a2a30dfb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 16.1.0
+    versionCode: 94
+    commit: e32b95006bb86341966541a94242a0379dd09b49
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 16.2.0
+    versionCode: 95
+    commit: 506dea367ef2853e6b023e0ba2aa74299ab4e921
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 16.3.0
+    versionCode: 96
+    commit: d7fb32848f812fae6b0326d63803d8a69455f695
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 88352051351be1cc46a202f3a1b493e7a446a7f3f50fd22ebcd8657c358e9ef8
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 16.3.0
+CurrentVersionCode: 96

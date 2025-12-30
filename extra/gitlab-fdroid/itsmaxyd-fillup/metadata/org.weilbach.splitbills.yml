@@ -1,0 +1,109 @@
+Categories:
+  - Money
+License: GPL-3.0-or-later
+AuthorName: Felix Weilbach
+AuthorEmail: felix.weilbach@t-online.de
+SourceCode: https://gitlab.com/flexw/splitbills
+IssueTracker: https://gitlab.com/flexw/splitbills/issues
+Changelog: https://gitlab.com/flexw/splitbills/blob/HEAD/CHANGELOG.md
+
+AutoName: SplitBills
+Description: |-
+  <b>NOTE:</b> App is no longer maintained.
+
+  Use SplitBills to split bills with your friends or other people. You can
+  create groups with people, add bills to the group and view your
+  balances. SplitBills works without any server or registration and is
+  free software. Your expenses belong to you!
+
+  If you have any problems with the app please contact me or open a issue
+  here, rather than leave a one-star review:
+  https://gitlab.com/flexw/splitbills/issues
+
+  Features:
+
+  * Split bills with other people
+  * Sync your expenses with other people
+  * View balances
+  * No registration needed
+  * Dezentral
+
+RepoType: git
+Repo: https://gitlab.com/flexw/splitbills.git
+
+Builds:
+  - versionName: 0.2.3.1
+    versionCode: 6
+    commit: v0.2.3.1
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 0.2.4
+    versionCode: 7
+    commit: v0.2.4
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 0.2.6
+    versionCode: 9
+    commit: v0.2.6
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 0.2.7
+    versionCode: 10
+    commit: v0.2.7
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 0.2.8
+    versionCode: 11
+    commit: v0.2.8
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 0.3.4
+    versionCode: 16
+    commit: v0.3.4
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 0.3.6
+    versionCode: 18
+    commit: v0.3.6
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 0.3.7
+    versionCode: 19
+    commit: v0.3.7
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 0.3.9
+    versionCode: 21
+    commit: v0.3.9
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 0.3.10
+    versionCode: 22
+    commit: v0.3.10
+    subdir: app
+    gradle:
+      - prod
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.3.10
+CurrentVersionCode: 22

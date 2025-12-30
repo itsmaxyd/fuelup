@@ -1,0 +1,43 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-only
+AuthorName: ZiiS
+AuthorEmail: support@zi.is
+WebSite: https://huewidgets.zi.is/
+SourceCode: https://github.com/ZiiS/huewidgets
+IssueTracker: https://github.com/ZiiS/huewidgets/issues
+Liberapay: ZiiS
+Bitcoin: 1FdGg777eP4cqMrJVMRQiMXEHE2Ee6F62T
+
+Name: Hue Widgets
+AutoName: Hue
+
+RepoType: git
+Repo: https://github.com/ZiiS/huewidgets.git
+
+Builds:
+  - versionName: 0.0.1
+    versionCode: 3
+    commit: 0.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.3
+    versionCode: 7
+    commit: 0.0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.4
+    versionCode: 8
+    commit: 0.0.4
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.0.4
+CurrentVersionCode: 8

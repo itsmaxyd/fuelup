@@ -1,0 +1,248 @@
+Categories:
+  - Sports & Health
+License: GPL-3.0-only
+AuthorEmail: kmac5dev@gmail.com
+SourceCode: https://github.com/kmac/mindfulnotifier
+IssueTracker: https://github.com/kmac/mindfulnotifier/issues
+
+AutoName: Mindful Notifier
+
+RepoType: git
+Repo: https://github.com/kmac/mindfulnotifier
+
+Builds:
+  - versionName: 1.0.5
+    versionCode: 6
+    commit: v1.0.5
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@1.22.5
+    prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.6
+    versionCode: 9
+    commit: v1.0.6
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@1.22.5
+    prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.7
+    versionCode: 10
+    commit: v1.0.7
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@1.22.5
+    prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.8
+    versionCode: 11
+    commit: v1.0.8
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@1.22.5
+    prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.10
+    versionCode: 13
+    commit: v1.0.10
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.3
+    prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.11
+    versionCode: 18
+    commit: v1.0.11
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.3
+    prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.12
+    versionCode: 19
+    commit: v1.0.12
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.3
+    prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.13
+    versionCode: 21
+    commit: v1.0.13
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.3
+    prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.14
+    versionCode: 24
+    commit: v1.0.14
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.15
+    versionCode: 27
+    commit: v1.0.15
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.16
+    versionCode: 28
+    commit: v1.0.16
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.17
+    versionCode: 29
+    commit: 49480aa95b2192f44475bed73cb58786e1aca525
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.18
+    versionCode: 30
+    commit: 81f561c6d6b2228902b8cf1c74b1d5bfded2555a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.19
+    versionCode: 31
+    commit: 2034cd7b39b35040b49ca376ea0c13c90045c4a3
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.21
+    versionCode: 40
+    commit: b08906c2c1430b9fb2fda7f3a6ed7a01d2841080
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.3
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.22
+    versionCode: 42
+    commit: 59f97ecbcaee2232e6009c31a8a5f248b8aa9925
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.3
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.23
+    versionCode: 43
+    commit: b4ad4579a80a177087c02b55918691d51ba90542
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.3
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.24
+    versionCode: 45
+    commit: dc2041c18ca3641bbd0b9008063afb4e61ca573f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.10.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v.*$
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.0.24
+CurrentVersionCode: 45

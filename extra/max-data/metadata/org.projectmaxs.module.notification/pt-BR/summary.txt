@@ -1,0 +1,1 @@
+Monitora novas notificações e informa ao usuário por meio de MAXS

@@ -1,0 +1,32 @@
+Ads:
+  description: 此應用程式含有廣告
+  name: 廣告
+DisabledAlgorithm:
+  description: 此應用程式含有弱安全簽名
+  name: 使用不安全的算法簽署
+KnownVuln:
+  description: 此應用程式含有已知的安全漏洞
+  name: 已知的安全漏洞
+NSFW:
+  description: 此應用程式的內容慎擇觀看場所，老闆出沒注意
+  name: 職場安全注意
+NoSourceSince:
+  name: 源碼不再可用，無法更新。
+NonFreeAdd:
+  description: 此應用程式推廣非自由的附加元件
+  name: 非自由的附加元件
+NonFreeAssets:
+  description: 此應用程式含有非自由的資源
+  name: 非自由資源
+NonFreeDep:
+  description: 此應用程式依賴其他非自由的應用程式
+  name: 非自由的依賴項
+NonFreeNet:
+  description: 此應用程式推廣或唯獨依賴非自由的網絡服務
+  name: 非自由的網絡服務
+Tracking:
+  description: 此應用程式會跟蹤及彙報您的行為
+  name: 追蹤
+TetheredNet:
+  description: 此應用程式唯獨依賴某一特定的網絡服務
+  name: 封閉式網絡服務

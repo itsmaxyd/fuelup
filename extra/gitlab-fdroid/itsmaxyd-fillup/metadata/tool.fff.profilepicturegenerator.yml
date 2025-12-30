@@ -1,0 +1,57 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on fridaysforfuture.de to generate the profile picture.
+Categories:
+  - Internet
+License: GPL-3.0-or-later
+WebSite: https://gitlab.com/hocuri/fff-profile-picture-generator
+SourceCode: https://gitlab.com/hocuri/fff-profile-picture-generator/tree/HEAD
+IssueTracker: https://gitlab.com/hocuri/fff-profile-picture-generator/issues
+Changelog: https://gitlab.com/hocuri/fff-profile-picture-generator/-/tags
+
+AutoName: Profilbildgenerator
+
+RepoType: git
+Repo: https://gitlab.com/hocuri/fff-profile-picture-generator.git
+
+Builds:
+  - versionName: '0.3'
+    versionCode: 3
+    commit: v0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.6'
+    versionCode: 6
+    commit: v0.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 13
+    commit: v1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 15
+    commit: v1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 17
+    commit: v1.7
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.7'
+CurrentVersionCode: 17

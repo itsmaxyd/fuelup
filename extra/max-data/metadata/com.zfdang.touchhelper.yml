@@ -1,0 +1,89 @@
+Categories:
+  - System
+License: Apache-2.0
+AuthorName: Zhengfa Dang
+AuthorWebSite: https://zfdang.com
+WebSite: https://touchhelper.zfdang.com
+SourceCode: https://github.com/zfdang/Android-Touch-Helper
+IssueTracker: https://github.com/zfdang/Android-Touch-Helper/issues
+Donate: https://touchhelper.zfdang.com/#%E6%94%AF%E6%8C%81%E4%BD%9C%E8%80%85
+
+AutoName: 开屏跳过
+
+RepoType: git
+Repo: https://github.com/zfdang/Android-Touch-Helper.git
+
+Builds:
+  - versionName: 2022.04.28
+    versionCode: 241
+    commit: de32af8484d34b447cfb2c873be584f00a92b02a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - docs
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e '/STORAGE/d' src/main/AndroidManifest.xml
+
+  - versionName: 2022.04.28
+    versionCode: 243
+    commit: b8c3fa574141dc000a1c7066a6fd125cc27642a0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - docs
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e '/STORAGE/d' src/main/AndroidManifest.xml
+
+  - versionName: 2023.05.19
+    versionCode: 245
+    commit: f1bbadd89100a2ccd05ef95c51d6e195664503ca
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e '/STORAGE/d' src/main/AndroidManifest.xml
+
+  - versionName: '251'
+    versionCode: 251
+    commit: fd053656902d06428c52d5b541da4bc46a366a04
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e '/STORAGE/d' src/main/AndroidManifest.xml
+
+  - versionName: '253'
+    versionCode: 253
+    commit: a4e333a369ad599c66b4f98646f7a27f8b5ff445
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e '/STORAGE/d' src/main/AndroidManifest.xml
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: '|tag-(\d+)||tag-(\d+)'
+CurrentVersion: '253'
+CurrentVersionCode: 253

@@ -1,0 +1,908 @@
+Categories:
+  - Sports & Health
+License: GPL-3.0-only
+SourceCode: https://github.com/davidhealey/waistline
+IssueTracker: https://github.com/davidhealey/waistline/issues
+Translation: https://crowdin.com/project/waistline
+Changelog: https://github.com/davidhealey/waistline/releases
+Donate: https://www.paypal.me/healeyd
+
+AutoName: Waistline
+
+RepoType: git
+Repo: https://github.com/davidhealey/waistline.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 10000
+    commit: v1.0
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - node_modules
+      - platforms/android/CordovaLib/build/intermediates
+      - platforms/android/app/build/intermediates
+      - platforms/browser
+      - plugins
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    scandelete:
+      - platforms
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 1.0.2
+    versionCode: 10002
+    commit: v1.0.2
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - node_modules
+      - platforms/android/CordovaLib/build/intermediates
+      - platforms/android/app/build/intermediates
+      - platforms/browser
+      - plugins
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    scandelete:
+      - platforms
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 2.0.0
+    versionCode: 20000
+    commit: v2.0.0
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - node_modules
+      - platforms/android/CordovaLib/build/intermediates
+      - platforms/android/app/build/intermediates
+      - platforms/browser
+      - plugins
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    scandelete:
+      - platforms
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 2.1.0
+    versionCode: 20100
+    commit: v2.1.0
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - node_modules
+      - platforms/android/CordovaLib/build/intermediates
+      - platforms/android/app/build/intermediates
+      - platforms/browser
+      - plugins
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    scandelete:
+      - platforms
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 2.2.1
+    versionCode: 20201
+    commit: v2.2.1
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - node_modules
+      - platforms/android/CordovaLib/build/intermediates
+      - platforms/android/app/build/intermediates
+      - platforms/browser
+      - plugins
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    scandelete:
+      - platforms
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 2.2.3
+    versionCode: 20203
+    commit: v2.2.3
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - node_modules
+      - platforms/android/CordovaLib/build/intermediates
+      - platforms/android/app/build/intermediates
+      - platforms/browser
+      - plugins
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    scandelete:
+      - platforms
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 2.3.3
+    versionCode: 20303
+    commit: 2.3.3
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - images
+      - node_modules
+      - platforms/android/CordovaLib/build/intermediates
+      - platforms/android/app/build/intermediates
+      - platforms/browser
+      - plugins
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - res
+      - www
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 2.3.5
+    versionCode: 20305
+    commit: 2.3.5
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - images
+      - node_modules
+      - platforms/android/CordovaLib/build/intermediates
+      - platforms/android/app/build/intermediates
+      - platforms/browser
+      - plugins
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - res
+      - www
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 2.3.7
+    versionCode: 20307
+    commit: 2.3.7
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - images
+      - node_modules
+      - platforms/android/CordovaLib/build/intermediates
+      - platforms/android/app/build/intermediates
+      - platforms/browser
+      - plugins
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - res
+      - www
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 2.4.2
+    versionCode: 20402
+    commit: 2.4.2
+    subdir: platforms/android/app
+    gradle:
+      - yes
+    srclibs:
+      - BarcodeScanner@2.1.5
+    rm:
+      - platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - platforms/android/CordovaLib/build
+    prebuild: sed -i -e '/gradleVersion/d' build.gradle
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        libs/barcodescanner-release-2.1.5.aar
+
+  - versionName: 3.1.7
+    versionCode: 30107
+    commit: 44ddec1b74d858dc97eb8f8ead0e1e10147dbc8d
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.1.11
+    versionCode: 30111
+    commit: cfb8beec11a113c19f9e5ffa2202ac87f5d79fda
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.2.1
+    versionCode: 30201
+    commit: b78221bac5ba7b7c6741484f56b9fdbf9917edcb
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.2.2
+    versionCode: 30202
+    commit: 152f9f327ff62bc65a1540ae137a3f741dd31967
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.2.3
+    versionCode: 30203
+    commit: fa218f2601aeb708886875ca3a7cc685653918b8
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.3.0
+    versionCode: 30300
+    commit: 47bd7ce7085477d96c356d4da42dbabb23366f62
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.3.1
+    versionCode: 30301
+    commit: 6141874bc8d02f2f229e3d333b9178afdb8ce00a
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.3.3
+    versionCode: 30303
+    commit: c05acb9c321119a3b25541058039214ec3c183ad
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.4.0
+    versionCode: 30400
+    commit: b4d2c1d06e07f38d1003a2d75b0c31fbe242b498
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.4.1
+    versionCode: 30401
+    commit: 7d5c30d7dba86051cbc1ed8f453fc69b496ddd3f
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.4.4
+    versionCode: 30404
+    commit: 4f99f982232df41143535cb52c71a454742fca6a
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.4/node-v14.17.4-linux-x64.tar.xz
+      - echo "db18c54ebe01974d46198b08729249acbb0dcdc9aea82b53eec913f8c56035c6 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      > /dev/null
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm local.properties
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.5.0
+    versionCode: 30500
+    commit: b293d1d4bf2eaf14e7135dd8b28a9caf502a2f51
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.18.0/node-v16.18.0-linux-x64.tar.gz
+      - echo "faca6476cb5b41aa995370fd856d16fcfbbef5c18718a6fa44cc1bae4140849d node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/3.6.4/' build.gradle
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.5.1
+    versionCode: 30501
+    commit: 85a112cedb49c3d010f3c2080203e195c64d568d
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.18.0/node-v16.18.0-linux-x64.tar.gz
+      - echo "faca6476cb5b41aa995370fd856d16fcfbbef5c18718a6fa44cc1bae4140849d node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/3.6.4/' build.gradle
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.5.2
+    versionCode: 30502
+    commit: 835441590fc3d4118c476f99b26fb1c40cf96335
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.18.0/node-v16.18.0-linux-x64.tar.gz
+      - echo "faca6476cb5b41aa995370fd856d16fcfbbef5c18718a6fa44cc1bae4140849d node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/3.6.4/' build.gradle
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.6.0
+    versionCode: 30600
+    commit: bd196d2ce0f4be075585f459e59168b88c568b91
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.18.0/node-v16.18.0-linux-x64.tar.gz
+      - echo "faca6476cb5b41aa995370fd856d16fcfbbef5c18718a6fa44cc1bae4140849d node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild: sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    build:
+      - npm install
+      - cordova platform add android
+      - pushd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/3.6.4/' build.gradle
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.7.1
+    versionCode: 30701
+    commit: fa0ff980d5d01344c17ffbbbe52944eb4b1357de
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.18.0/node-v16.18.0-linux-x64.tar.gz
+      - echo "faca6476cb5b41aa995370fd856d16fcfbbef5c18718a6fa44cc1bae4140849d node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+      - npm install
+      - cordova platform add android
+    scandelete:
+      - node_modules
+      - platforms
+      - plugins
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/3.6.4/' build.gradle
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        plugins/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        node_modules/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.7.2
+    versionCode: 30702
+    commit: a77d949f3112c592b671660b9583715ab17f7140
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.18.0/node-v16.18.0-linux-x64.tar.gz
+      - echo "faca6476cb5b41aa995370fd856d16fcfbbef5c18718a6fa44cc1bae4140849d node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+      - npm install
+      - cordova platform add android
+    scandelete:
+      - node_modules
+      - platforms
+      - plugins
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/3.6.4/' build.gradle
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        plugins/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        node_modules/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.7.3
+    versionCode: 30703
+    commit: 6bddb98acd9bf66ce7ee5062844de9bf45f4a596
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.18.0/node-v16.18.0-linux-x64.tar.gz
+      - echo "faca6476cb5b41aa995370fd856d16fcfbbef5c18718a6fa44cc1bae4140849d node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+      - npm install
+      - cordova platform add android
+    scandelete:
+      - node_modules
+      - platforms
+      - plugins
+    build:
+      - pushd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/3.6.4/' build.gradle
+      - gradle clean assembleRelease
+      - popd
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        plugins/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cp $$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+        node_modules/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.8.0
+    versionCode: 30800
+    commit: 2e4c0a6354708e9712bbd0a09f5907df957f0a23
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+      - npm install
+      - cordova platform add android
+      - cd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/7.2.0/' build.gradle
+      - sed -i -e 's/compile /implementation /g' barcodescanner/build.gradle
+      - gradle clean
+    scandelete:
+      - node_modules
+      - platforms
+      - plugins
+    build:
+      - pushd $$BarcodeScanner$$
+      - gradle assembleRelease
+      - popd
+      - AAR=$$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+      - cp $AAR platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cp $AAR plugins/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cp $AAR node_modules/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.9.1
+    versionCode: 30901
+    commit: 32ba1a7946b623cb2f5f7bc1ced97f36c56df89d
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+      - npm install
+      - cordova platform add android
+      - cd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/7.2.0/' build.gradle
+      - sed -i -e 's/compile /implementation /g' barcodescanner/build.gradle
+      - gradle clean
+    scandelete:
+      - node_modules
+      - platforms
+      - plugins
+    build:
+      - pushd $$BarcodeScanner$$
+      - gradle assembleRelease
+      - popd
+      - AAR=$$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+      - cp $AAR platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cp $AAR plugins/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cp $AAR node_modules/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.9.2
+    versionCode: 30902
+    commit: 70d5821de6c3462af1aac75f0e0f4e04a18d2472
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+      - npm install
+      - cordova platform add android
+      - cd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/7.2.0/' build.gradle
+      - sed -i -e 's/compile /implementation /g' barcodescanner/build.gradle
+      - gradle clean
+    scandelete:
+      - node_modules
+      - platforms
+      - plugins
+    build:
+      - pushd $$BarcodeScanner$$
+      - gradle assembleRelease
+      - popd
+      - AAR=$$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+      - cp $AAR platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cp $AAR plugins/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cp $AAR node_modules/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+  - versionName: 3.10.0
+    versionCode: 31000
+    commit: 9c7314b39e7a039700d9e37b7ec95d73c8ee310c
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - BarcodeScanner@0fc1fd2ff00683d2a2803ba6da63320bcb29fd2c
+    prebuild:
+      - sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - npm install
+      - cordova platform add android
+      - cd $$BarcodeScanner$$
+      - rm -r local.properties gradle
+      - sed -i -e 's/3.0.1/7.2.0/' build.gradle
+      - sed -i -e 's/compile /implementation /g' barcodescanner/build.gradle
+      - gradle clean
+    scandelete:
+      - node_modules
+      - platforms
+      - plugins
+    build:
+      - pushd $$BarcodeScanner$$
+      - gradle assembleRelease
+      - popd
+      - AAR=$$BarcodeScanner$$/barcodescanner/build/outputs/aar/barcodescanner-release.aar
+      - cp $AAR platforms/android/app/libs/barcodescanner-release-2.1.5.aar
+      - cp $AAR plugins/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cp $AAR node_modules/phonegap-plugin-barcodescanner/src/android/barcodescanner-release-2.1.5.aar
+      - cordova build android --release -- --packageType=apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: config.xml|android:versionCode="(\d+)"|.|version="([\d.]*)"
+CurrentVersion: 3.10.0
+CurrentVersionCode: 31000

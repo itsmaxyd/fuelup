@@ -1,0 +1,44 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on theskylive.com server
+Categories:
+  - Science & Education
+  - Time
+License: Apache-2.0
+SourceCode: https://github.com/OliverZolSza/T-CrB-Detector
+IssueTracker: https://github.com/OliverZolSza/T-CrB-Detector/issues
+
+AutoName: T CrB Detector
+
+RepoType: git
+Repo: https://github.com/OliverZolSza/T-CrB-Detector.git
+Binaries: https://github.com/OliverZolSza/T-CrB-Detector/releases/download/%v/T.CrB.Detector.v%v.apk
+
+Builds:
+  - versionName: 1.5.5
+    versionCode: 155000
+    commit: d6667676c19c9009372208951617015c59f8adbf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 200000
+    commit: 85aa182adc96cecf8b74f743f6ca0bddb21c05cf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 300000
+    commit: a950d64766ca1e72be05cf02310238862914b296
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 614eebc39f2a955c47161e2c9ca56deb2275913575df8b633d51c2a334008940
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '3.0'
+CurrentVersionCode: 300000

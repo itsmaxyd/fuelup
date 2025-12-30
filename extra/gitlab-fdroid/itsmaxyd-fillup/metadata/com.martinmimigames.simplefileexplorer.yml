@@ -1,0 +1,174 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: MGGames
+AuthorEmail: martinmimigames@gmail.com
+AuthorWebSite: https://martinmimigames.github.io/
+WebSite: https://martinmimigames.github.io/projects/little-file-explorer/
+SourceCode: https://github.com/martinmimigames/little-file-explorer
+IssueTracker: https://github.com/martinmimigames/little-file-explorer/issues
+Changelog: https://github.com/martinmimigames/little-file-explorer/releases
+
+AutoName: Little File Explorer
+
+RepoType: git
+Repo: https://github.com/martinmimigames/little-file-explorer
+
+Builds:
+  - versionName: '4.4'
+    versionCode: 6
+    commit: v4.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.5'
+    versionCode: 7
+    commit: b065fc1ca3acf77bfcf31a638a0b3079ad4b1cab
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.6'
+    versionCode: 8
+    commit: bc5752819c7e000f393b3a62cdce3e81fb115c84
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.7'
+    versionCode: 9
+    commit: e6af639ac7fc43d544d21b65e244f965d3dd25c1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.8'
+    versionCode: 10
+    commit: 2eaed7f31af982b34f54f641722d0d19a89da891
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.9'
+    versionCode: 11
+    commit: 4d6cd4ed7a70cd23d859cfbe9e04913122cdb9f0
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.10'
+    versionCode: 12
+    commit: 2918e3f1a6ed92d96379880880e293b641961b75
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.11'
+    versionCode: 13
+    commit: b602d54f69c559caed5cf0f84caa863bbfc4589f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.12'
+    versionCode: 14
+    commit: 49e47bcfc64dec98a26db32d84fc9183c226bfbd
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.13'
+    versionCode: 15
+    commit: 82e6059e35f5c958afc0e92e64d6507214a9dc90
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.14'
+    versionCode: 16
+    commit: e24e1fab9f7236dbf5746eee4c9f525afbd3279b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.15'
+    versionCode: 17
+    commit: 314152758290faf9d08b7ca30c4da984dfa5a752
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+  - versionName: '4.18'
+    versionCode: 20
+    commit: 58dd6e4883b5717a48244613a52960afc9954b69
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_17/' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '4.18'
+CurrentVersionCode: 20

@@ -1,0 +1,263 @@
+Categories:
+  - Pass Wallet
+  - Reading
+License: GPL-3.0-only
+AuthorName: SeineEloquenz
+AuthorEmail: fosswallet@eloque.nz
+AuthorWebSite: https://seine.eloque.nz/
+SourceCode: https://github.com/SeineEloquenz/fosswallet
+IssueTracker: https://github.com/SeineEloquenz/fosswallet/issues
+Translation: https://hosted.weblate.org/projects/fosswallet/app
+Donate: https://buymeacoffee.com/seineeloquenz
+
+AutoName: FossWallet
+
+RepoType: git
+Repo: https://github.com/SeineEloquenz/fosswallet
+Binaries: https://github.com/SeineEloquenz/fosswallet/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 0.11.0
+    versionCode: 35
+    commit: 291153544ebacff811b570f627a0dc65a6bacd90
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.11.1
+    versionCode: 36
+    commit: 27a7fe9218fe05d65af8750c12efd632d9fcf080
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.11.2
+    versionCode: 37
+    commit: aaa3304c359968ed051bdaefce89d24d2ead1ef5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.11.4
+    versionCode: 39
+    commit: 2fc2a9d58be019ca0c31adb720614758a73780a4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.13.0
+    versionCode: 42
+    commit: 2b6447ee0910e585fa357904eb08ff372b452f7c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.15.2
+    versionCode: 47
+    commit: 119946e0b96deecab16b2c671ddadc5b173f959c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.16.0
+    versionCode: 48
+    commit: a0847d698cd20dc91ba03af90f0d642d4b6edeb9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.17.1
+    versionCode: 50
+    commit: c3c1a1ab95713e0f0bfe53873ac458580ad15618
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.20.0
+    versionCode: 53
+    commit: eb097aadc7dec78172035b49a02683352ea04713
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.20.4
+    versionCode: 57
+    commit: 87abc9154145c6c8ea20ab4fe6730df1c6f92a95
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.21.0
+    versionCode: 59
+    commit: 52265b4e24e6bf44656797201815e175a928199e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.21.1
+    versionCode: 60
+    commit: 6e82268a816514ffdee2ccb608fb4e6577d92f26
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.22.0
+    versionCode: 61
+    commit: 4aa06a2b6baad27ecb30d21d07e73d7c0863bac9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.22.3
+    versionCode: 64
+    commit: ed71ab064096f7ffea00205bc50d888c702aa199
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.23.0
+    versionCode: 66
+    commit: ace78210081fd6b17f514145bf23634a59c2bbe5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.23.1
+    versionCode: 67
+    commit: 7dfc6e79546a40dd78d3b6844953a89e96f18ec7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.0
+    versionCode: 68
+    commit: 9d7fda537b6723433d05303b10f4672cd3565669
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.2
+    versionCode: 70
+    commit: 6aee464d4985ece742fa1cdb06c76903b3eff94f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.26.0
+    versionCode: 72
+    commit: 37e773d250be9b4626643403f080921730a12fed
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.27.1
+    versionCode: 74
+    commit: a62ceb5ab7f07850752c9af65fc862287522be1d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.28.1
+    versionCode: 76
+    commit: bd2f713a1047a8b71d0a102e6be0f2a7cdf0b479
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.28.2
+    versionCode: 77
+    commit: 5ebf8f46dcc79fcf57e3171fccc00b5d7fd33820
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.28.3
+    versionCode: 78
+    commit: 9878e7a941c363d5915980609a8a6d59f8ad3d7c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.28.5
+    versionCode: 80
+    commit: b8d4b3a18dcfce0d7122de7cf2d37327765ea031
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.29.0
+    versionCode: 81
+    commit: 8239b1efaf4090a8e4b33f6fb4c718c2bc203807
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.30.0
+    versionCode: 82
+    commit: c21482e705bcce667c1bb2573a91cb5e78eedc98
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.31.0
+    versionCode: 83
+    commit: 91dd968d42ceaf1689023485efbd25cbd0491240
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.32.0
+    versionCode: 84
+    commit: 3f3bf9152a501ffb0525b9c5e15732dfdca9f237
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.33.0
+    versionCode: 85
+    commit: 6e8d1454e71bd02007e59f614921e447b33b8a32
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.34.0
+    versionCode: 86
+    commit: 31e1081833b82f6207d9b526590293e8eb32f7b0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.34.1
+    versionCode: 87
+    commit: 1b5082d558d1963167cccedd9673f8e4f0934623
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.35.0
+    versionCode: 88
+    commit: a4d7a9ce415a1980a937d0cf4bc8b563da6fdf1a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.35.1
+    versionCode: 89
+    commit: 5a7872c576cd1cd1d716166255760074d7b13f45
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.35.2
+    versionCode: 90
+    commit: 9db93c03a3d33c7e364ea09ce3e595a71792995b
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: bf8af6d89e5595d95f4d229ec0fd971a3c752fdbabe83377230ef92c70444305
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.35.2
+CurrentVersionCode: 90

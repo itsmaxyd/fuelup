@@ -1,0 +1,26 @@
+Categories:
+  - Time
+License: Apache-2.0
+SourceCode: https://github.com/JustDeax/ComposeStopwatch
+IssueTracker: https://github.com/JustDeax/ComposeStopwatch/issues
+
+AutoName: Compose Stopwatch
+
+RepoType: git
+Repo: https://github.com/JustDeax/ComposeStopwatch.git
+Binaries: https://github.com/JustDeax/ComposeStopwatch/releases/download/%v/compose-stopwatch.apk
+
+Builds:
+  - versionName: 1.8.3
+    versionCode: 1008031
+    commit: f3af9c12691997f98b80e0b7d3f6faf1b8741da0
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 6b2ab59a567e5e05d5a3d56366bd5ae0d12a11ee2e1046d54d149bfa5343d2e0
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.8.3
+CurrentVersionCode: 1008031

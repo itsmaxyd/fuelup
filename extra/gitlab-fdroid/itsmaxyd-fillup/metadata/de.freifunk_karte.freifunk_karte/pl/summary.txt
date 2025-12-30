@@ -1,0 +1,1 @@
+Mapa dla wyświetlanie węzłów Freifunk na OpenStreetMap

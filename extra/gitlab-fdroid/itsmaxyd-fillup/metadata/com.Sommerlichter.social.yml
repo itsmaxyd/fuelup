@@ -1,0 +1,69 @@
+Categories:
+  - Internet
+  - Social Network
+License: GPL-3.0-only
+AuthorName: koyu.space
+AuthorWebSite: https://koyu.space
+SourceCode: https://github.com/koyuspace/android-native
+IssueTracker: https://github.com/koyuspace/android-native/issues
+Changelog: https://github.com/koyuspace/android-native/releases
+Donate: https://creapaid.com/koyuspace
+
+AutoName: koyu.space
+
+RepoType: git
+Repo: https://github.com/koyuspace/android-native
+
+Builds:
+  - versionName: '1.2'
+    versionCode: 1200
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0.1
+    versionCode: 1201
+    commit: v1.2.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1.0
+    versionCode: 1310
+    commit: v1.3.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.2.0
+    versionCode: 1320
+    commit: v1.3.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 1400
+    commit: 1.4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.3'
+    versionCode: 3300
+    commit: 3a34a6ccf4fcac1e6f97690e561b94999062ec9f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - husky
+      - blue
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckName: Ignore
+CurrentVersion: '3.3'
+CurrentVersionCode: 3300

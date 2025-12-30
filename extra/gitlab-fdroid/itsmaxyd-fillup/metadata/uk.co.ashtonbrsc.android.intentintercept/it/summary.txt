@@ -1,0 +1,1 @@
+Tenta di intercettare Intenti per esaminare i loro contenuti

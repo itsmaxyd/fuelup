@@ -1,0 +1,156 @@
+Categories:
+  - Launcher
+  - System
+License: GPL-2.0-only
+WebSite: https://github.com/light-launcher/Light-Android-Launcher/blob/HEAD/README.md
+SourceCode: https://github.com/light-launcher/Light-Android-Launcher
+Changelog: https://github.com/light-launcher/Light-Android-Launcher/releases
+
+AutoName: Light Android Launcher
+Description: |-
+  <b>Note:</b> This app is no longer maintained.
+
+  Configurable, minimalistic, super lightweight app launcher with a low memory usage and small install size
+
+RepoType: git
+Repo: https://github.com/light-launcher/Light-Android-Launcher
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: '1.0'
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: '1.1'
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: '1.2'
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 4
+    commit: '1.3'
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 5
+    commit: '1.4'
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 6
+    commit: '1.5'
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 7
+    commit: '1.6'
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 8
+    commit: 1.6.1
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 9
+    commit: 1.6.2
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 10
+    commit: 1.6.3
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 11
+    commit: 1.6.4
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 12
+    commit: 1.7.0
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 13
+    commit: 1.7.1
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 14
+    commit: 1.8.0
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 15
+    commit: 1.8.1
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.8.2
+    versionCode: 16
+    commit: 1.8.2
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.8.3
+    versionCode: 17
+    commit: 1.8.3
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.8.4
+    versionCode: 18
+    commit: 1.8.4
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+  - versionName: 1.8.6
+    versionCode: 19
+    commit: 1.8.6
+    subdir: LaLauncher
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.8.6
+CurrentVersionCode: 19

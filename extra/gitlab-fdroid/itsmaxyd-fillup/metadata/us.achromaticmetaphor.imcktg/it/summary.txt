@@ -1,0 +1,1 @@
+Genera suonerie da stringhe, sia come codice Morse o come testo parlato

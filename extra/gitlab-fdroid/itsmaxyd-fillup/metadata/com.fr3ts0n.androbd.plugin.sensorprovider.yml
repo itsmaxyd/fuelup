@@ -1,0 +1,60 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-or-later
+WebSite: https://github.com/fr3ts0n/AndrOBD-Plugin/wiki
+SourceCode: https://github.com/fr3ts0n/AndrOBD-Plugin
+IssueTracker: https://github.com/fr3ts0n/AndrOBD-Plugin/issues
+Changelog: https://github.com/fr3ts0n/AndrOBD-Plugin/releases
+Donate: https://paypal.me/fr3ts0n
+Bitcoin: 19UApzsc5eDJ5VNDNYCA1bpszPnkcpWeFP
+
+AutoName: AndrOBD SensorProvider
+
+RepoType: git
+Repo: https://github.com/fr3ts0n/AndrOBD-Plugin.git
+
+Builds:
+  - versionName: V1.0.3
+    versionCode: 10003
+    commit: V1.0.3
+    subdir: SensorProvider
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: V1.0.4
+    versionCode: 10004
+    commit: V1.0.4
+    subdir: SensorProvider
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: V1.1.0
+    versionCode: 10100
+    commit: a2bbb095723e8feabf14c34f5f3094aa5e188589
+    subdir: SensorProvider
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: V1.1.1
+    versionCode: 10101
+    commit: 65f285b6034cf9a645c964d88bb823d410e4bf42
+    subdir: SensorProvider
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: V1.1.1
+CurrentVersionCode: 10101

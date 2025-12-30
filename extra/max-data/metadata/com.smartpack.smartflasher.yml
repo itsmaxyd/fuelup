@@ -1,0 +1,53 @@
+Categories:
+  - System
+License: GPL-3.0-or-later
+AuthorName: sunilpaulmathew
+AuthorEmail: sunil.kde@gmail.com
+AuthorWebSite: https://smartpack.github.io
+WebSite: https://smartpack.github.io/smartflasher
+SourceCode: https://github.com/SmartPack/SmartFlasher
+IssueTracker: https://github.com/SmartPack/SmartFlasher/issues
+Changelog: https://github.com/SmartPack/SmartFlasher/blob/HEAD/change-logs.md
+Donate: https://smartpack.github.io/donation
+
+AutoName: Smart Flasher
+
+RequiresRoot: true
+
+RepoType: git
+Repo: https://github.com/SmartPack/SmartFlasher
+
+Builds:
+  - versionName: v5.1
+    versionCode: 42
+    commit: v5.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v5.2
+    versionCode: 43
+    commit: v5.2
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v5.3
+    versionCode: 44
+    commit: v5.3
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v5.4
+    versionCode: 45
+    commit: 833ad42fefa9bd5359ebcfcc4c7fafeedf210d8d
+    subdir: app
+    gradle:
+      - fdroid
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: v5.4
+CurrentVersionCode: 45

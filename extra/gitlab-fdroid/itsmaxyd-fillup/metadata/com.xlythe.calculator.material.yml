@@ -1,0 +1,43 @@
+Categories:
+  - Science & Education
+License: Apache-2.0
+SourceCode: https://github.com/Xlythe/android_packages_apps_Calculator
+IssueTracker: https://github.com/Xlythe/android_packages_apps_Calculator/issues
+
+AutoName: Calculator
+Description: |-
+  A simple calculator that tries to make graphing and matrix math as simple as
+  adding or multiplying two numbers. Slide left and right to access more panels.
+
+  Continuation of https://f-droid.org/packages/com.android2.calculator3.
+
+RepoType: git
+Repo: https://github.com/Xlythe/android_packages_apps_Calculator.git
+
+Builds:
+  - versionName: '5.4'
+    versionCode: 93
+    commit: 1c305c1e9e6b2ab2225d218576984d329913b1d9
+    subdir: mobile
+    gradle:
+      - yes
+    srclibs:
+      - Google-Gson@gson-2.2.4
+    rm:
+      - mobile/libs/*jar
+      - legacy-mobile
+      - wear
+      - glass
+      - GDK-ProgressBar
+    prebuild:
+      - sed -i -e '/wearApp/d' build.gradle
+      - pushd $$Google-Gson$$
+      - mvn package
+      - popd
+      - cp $$Google-Gson$$/target/gson-2.2.4.jar libs/
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '5.4'
+CurrentVersionCode: 93

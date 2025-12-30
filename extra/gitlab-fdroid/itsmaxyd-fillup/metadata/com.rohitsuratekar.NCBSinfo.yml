@@ -1,0 +1,32 @@
+Categories:
+  - Science & Education
+License: MIT
+AuthorName: SecretBiology
+AuthorEmail: contact@secretbiology.com
+SourceCode: https://github.com/NCBSinfo/NCBSinfo
+IssueTracker: https://github.com/NCBSinfo/NCBSinfo/issues
+
+AutoName: NCBSinfo
+
+RepoType: git
+Repo: https://github.com/NCBSinfo/NCBSinfo.git
+
+Builds:
+  - versionName: 6.6.8
+    versionCode: 73
+    commit: v6.6.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 6.6.9
+    versionCode: 74
+    commit: v6.6.9
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 6.6.9
+CurrentVersionCode: 74

@@ -1,0 +1,322 @@
+Categories:
+  - Security
+License: GPL-3.0-only
+AuthorName: SelfPrivacy
+AuthorEmail: contact@selfprivacy.org
+WebSite: https://selfprivacy.org
+SourceCode: https://git.selfprivacy.org/SelfPrivacy/selfprivacy.org.app
+IssueTracker: https://git.selfprivacy.org/SelfPrivacy/selfprivacy.org.app/issues
+Translation: https://weblate.selfprivacy.org/projects/selfprivacy/selfprivacy-app/
+
+AutoName: SelfPrivacy
+
+RepoType: git
+Repo: https://git.selfprivacy.org/SelfPrivacy/selfprivacy.org.app.git
+
+Builds:
+  - versionName: 0.10.0
+    versionCode: 20
+    commit: 1ee02b7433b8a6d89a7b2fe23fb8f641cf8e398b
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.16.8
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.10.1
+    versionCode: 21
+    commit: 418d96b842db696eafe75a17f1edd3f0f3aa98b1
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.16.8
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.11.0
+    versionCode: 22
+    commit: 1684d60a546934811c180c4bc54d1bb9d5b548e6
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.16.8
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.12.0
+    versionCode: 23
+    commit: bf99d3b73d32f7c0134443d0a1c9256a4fe311e0
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.19.6
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.12.1
+    versionCode: 24
+    commit: e58ae99cd79dab978ad3ff506b1862fafd36846a
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.19.6
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.12.2
+    versionCode: 25
+    commit: b0fa29e13ef978fc7358688f885fbf8f7bb58329
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - export flutterVersion=$(grep RECOMMENDED pubspec.yaml|cut -d "=" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $flutterVersion
+      - popd
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.12.3
+    versionCode: 26
+    commit: b24cec86f0c3b16653b8b5ac82bbc90159dd2863
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - export flutterVersion=$(grep RECOMMENDED pubspec.yaml|cut -d "=" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $flutterVersion
+      - popd
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.13.0
+    versionCode: 29
+    commit: fc9c8d1e13ce0566d330bfe2b25d31e3e281cbe4
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - export flutterVersion=$(grep RECOMMENDED pubspec.yaml|cut -d "=" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $flutterVersion
+      - popd
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.13.1
+    versionCode: 30
+    commit: 93caf406c36fd587709ff26dfd6bf7bb861dc4ac
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - export flutterVersion=$(grep RECOMMENDED pubspec.yaml|cut -d "=" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $flutterVersion
+      - popd
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.13.2
+    versionCode: 31
+    commit: 7a21cc9f26a85d858e5770c5281d283a5c276bbd
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - export flutterVersion=$(grep RECOMMENDED pubspec.yaml|cut -d "=" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $flutterVersion
+      - popd
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.13.3
+    versionCode: 32
+    commit: 21c8ea8b4186207af5821f7ab3baebb4455f3a0f
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - macos
+      - windows
+      - test
+    prebuild:
+      - export flutterVersion=$(grep RECOMMENDED pubspec.yaml|cut -d "=" -f2)
+      - pushd $$flutter$$
+      - git checkout -f $flutterVersion
+      - popd
+      - echo "flutter.sdk=$$flutter$$" >> ../local.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+    ndk: r20
+
+  - versionName: 0.13.4
+    versionCode: 33
+    commit: e7022b4cec220bd9047efb8c4567b842d6c73fbf
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - windows
+      - test
+    prebuild:
+      - export flutterVersion=$(grep RECOMMENDED pubspec.yaml|cut -d "=" -f2)
+      - '[[ $flutterVersion ]]'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[\d.]+$
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 0.13.4
+CurrentVersionCode: 33

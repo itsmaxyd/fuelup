@@ -1,0 +1,481 @@
+Categories:
+  - Development
+  - Keyboard & IME
+  - Writing
+License: GPL-3.0-only
+AuthorEmail: juloo.dsi@gmail.com
+SourceCode: https://github.com/Julow/Unexpected-Keyboard
+IssueTracker: https://github.com/Julow/Unexpected-Keyboard/issues
+Donate: https://paypal.me/JulesAguillon
+Liberapay: Julow
+
+AutoName: Unexpected Keyboard
+
+RepoType: git
+Repo: https://github.com/Julow/Unexpected-Keyboard
+
+Builds:
+  - versionName: 1.9.2
+    versionCode: 12
+    commit: ac1dd231442bba0f081598d257dfe4fd81a0a071
+    output: unsigned.apk
+    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-29' > /dev/null
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.10.0
+    versionCode: 13
+    commit: d787d982cf4f9376b5b4fe0cb71b95c52b7eb377
+    output: unsigned.apk
+    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-29' > /dev/null
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.11.0
+    versionCode: 14
+    commit: 96c4b165ac73ae43c4e462456fba083d04827363
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: unsigned.apk
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-30'
+        'build-tools;31.0.0' 'build-tools;30.0.3' > /dev/null
+      - cp $$SDK$$/build-tools/30.0.3/lib/dx.jar $$SDK$$/build-tools/31.0.0/lib/dx.jar
+      - cp $$SDK$$/build-tools/30.0.3/dx $$SDK$$/build-tools/31.0.0/dx
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.11.1
+    versionCode: 15
+    commit: aa12466767178dca4ae9d84bb54cc20330fac638
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: unsigned.apk
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-30'
+        'build-tools;31.0.0' 'build-tools;30.0.3' > /dev/null
+      - cp $$SDK$$/build-tools/30.0.3/lib/dx.jar $$SDK$$/build-tools/31.0.0/lib/dx.jar
+      - cp $$SDK$$/build-tools/30.0.3/dx $$SDK$$/build-tools/31.0.0/dx
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.12.0
+    versionCode: 16
+    commit: 93b4cc2e7bb0a7873e13ad332207d9aa76da7289
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: unsigned.apk
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-30'
+        'build-tools;31.0.0' 'build-tools;30.0.3' > /dev/null
+      - cp $$SDK$$/build-tools/30.0.3/lib/dx.jar $$SDK$$/build-tools/31.0.0/lib/dx.jar
+      - cp $$SDK$$/build-tools/30.0.3/dx $$SDK$$/build-tools/31.0.0/dx
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.13.0
+    versionCode: 17
+    commit: 44b1086be99e9a7fa0267c301d91c0c90b41e64a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: unsigned.apk
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-30'
+        'build-tools;31.0.0' 'build-tools;30.0.3' > /dev/null
+      - cp $$SDK$$/build-tools/30.0.3/lib/dx.jar $$SDK$$/build-tools/31.0.0/lib/dx.jar
+      - cp $$SDK$$/build-tools/30.0.3/dx $$SDK$$/build-tools/31.0.0/dx
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.13.1
+    versionCode: 18
+    commit: 39da0351355d4d940eadf149ee9007ee85c755c9
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: unsigned.apk
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-30'
+        'build-tools;31.0.0' 'build-tools;30.0.3' > /dev/null
+      - cp $$SDK$$/build-tools/30.0.3/lib/dx.jar $$SDK$$/build-tools/31.0.0/lib/dx.jar
+      - cp $$SDK$$/build-tools/30.0.3/dx $$SDK$$/build-tools/31.0.0/dx
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.14.0
+    versionCode: 19
+    commit: aaff8689e36817159561b97e59a3055002a919c1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - apt-get install libjpeg-dev libtiff5-dev libpng-dev libfreetype6-dev libgif-dev
+        libgtk-3-dev libxml2-dev libpango1.0-dev libcairo2-dev libspiro-dev libuninameslist-dev
+        python3-dev ninja-build build-essential
+      - curl -LO https://github.com/fontforge/fontforge/releases/download/20201107/fontforge-20201107.tar.xz
+      - echo "68bcba8f602819eddc29cd356ee13fafbad7a80d19b652d354c6791343476c78  fontforge-20201107.tar.xz"
+        | sha256sum -c -
+      - tar xf fontforge-20201107.tar.xz
+      - cd fontforge-20201107
+      - mkdir build
+      - cd build
+      - cmake -GNinja ..
+      - ninja
+      - ninja install
+    output: unsigned.apk
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-30' > /dev/null
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.14.1
+    versionCode: 20
+    commit: 8d8a58462c50a01952852eaf5ffbcc2d7f30a30c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - apt-get install libjpeg-dev libtiff5-dev libpng-dev libfreetype6-dev libgif-dev
+        libgtk-3-dev libxml2-dev libpango1.0-dev libcairo2-dev libspiro-dev libuninameslist-dev
+        python3-dev ninja-build build-essential
+      - curl -LO https://github.com/fontforge/fontforge/releases/download/20201107/fontforge-20201107.tar.xz
+      - echo "68bcba8f602819eddc29cd356ee13fafbad7a80d19b652d354c6791343476c78  fontforge-20201107.tar.xz"
+        | sha256sum -c -
+      - tar xf fontforge-20201107.tar.xz
+      - cd fontforge-20201107
+      - mkdir build
+      - cd build
+      - cmake -GNinja ..
+      - ninja
+      - ninja install
+    output: unsigned.apk
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-30' > /dev/null
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.14.2
+    versionCode: 21
+    commit: 65cc0c736edcf1de89af77f7d69c4ad73ec4621f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - apt-get install libjpeg-dev libtiff5-dev libpng-dev libfreetype6-dev libgif-dev
+        libgtk-3-dev libxml2-dev libpango1.0-dev libcairo2-dev libspiro-dev libuninameslist-dev
+        python3-dev ninja-build build-essential
+      - curl -LO https://github.com/fontforge/fontforge/releases/download/20201107/fontforge-20201107.tar.xz
+      - echo "68bcba8f602819eddc29cd356ee13fafbad7a80d19b652d354c6791343476c78  fontforge-20201107.tar.xz"
+        | sha256sum -c -
+      - tar xf fontforge-20201107.tar.xz
+      - cd fontforge-20201107
+      - mkdir build
+      - cd build
+      - cmake -GNinja ..
+      - ninja
+      - ninja install
+    output: unsigned.apk
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-30' > /dev/null
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.15.0
+    versionCode: 22
+    commit: 3b1c652370fe34f97ebdd30dbbf561375664c232
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: unsigned.apk
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-30' > /dev/null
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.16.0
+    versionCode: 23
+    commit: fda53e3952a1e5086dff618ddb4080528a7f56fb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: unsigned.apk
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-30' > /dev/null
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.16.1
+    versionCode: 24
+    commit: 1951448f9e26ec99b6c091c678821abcb9e4d264
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: unsigned.apk
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-30' > /dev/null
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.17.0
+    versionCode: 25
+    commit: 90b9b0e399b405e3346960d5a356f01e2b3c66b6
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: unsigned.apk
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-30' > /dev/null
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.18.0
+    versionCode: 26
+    commit: 167c63ee25512da45b76f1e0c43a14527f3144d4
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.19.0
+    versionCode: 27
+    commit: fdebae929b6d72886c97e9ab63feba660961ddaa
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.19.1
+    versionCode: 28
+    commit: fc68f2e07d501a350c3b520c30029683a1d05534
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.20.0
+    versionCode: 29
+    commit: cb2ea83f8a0c9d0d97a172c80828f969ebd39fee
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.20.1
+    versionCode: 30
+    commit: a891a3a99b62cd27dc4b1a59168d8f4965abf687
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.20.2
+    versionCode: 31
+    commit: de5571d4289fc4bba87d9fd28000f8e94ef6520e
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.21.0
+    versionCode: 32
+    commit: 2ca7b4427d5e7f794265309d144d227eccd90136
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.22.0
+    versionCode: 33
+    commit: 1aaf427883be8db7c8d9071d2efd8111908a4fb5
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.22.1
+    versionCode: 34
+    commit: 73737e514885c16892e805375318c70ec75453cd
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.23.0
+    versionCode: 35
+    commit: 82f347043a0dc9b1c590aec3752335e4a9a7a4a5
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.24.0
+    versionCode: 36
+    commit: cd5ca562266624b3abba1a4945a5fef9acc02fa0
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    output: unsigned.apk
+    prebuild: sdkmanager 'platforms;android-30'
+    build:
+      - make _build/juloo.keyboard2.unsigned-apk
+      - mv _build/juloo.keyboard2.unsigned-apk unsigned.apk
+
+  - versionName: 1.25.0
+    versionCode: 37
+    commit: 8b2c7d93371b3d14993a34aaf1d98de3fb8f812c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.26.0
+    versionCode: 38
+    commit: 5d1a5032106a0fa36cd87a166e3a39ef8ada0f51
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.27.0
+    versionCode: 39
+    commit: 0594127575e872f8a9b8b17d81591fe4a44a1c4c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.28.0
+    versionCode: 40
+    commit: f7f1d85f80c9112192385b4b5294a5544ca009f3
+    gradle:
+      - yes
+
+  - versionName: 1.29.0
+    versionCode: 41
+    commit: deb611a0d2c7e75a1c276238064219fc54b4417d
+    gradle:
+      - yes
+
+  - versionName: 1.29.1
+    versionCode: 42
+    commit: bd50964651b2da6c714ecd33cbc83631e2c95fa4
+    gradle:
+      - yes
+
+  - versionName: 1.30.3
+    versionCode: 46
+    commit: 1a4e61557f384261b446b5ae91ae254bf0372fc6
+    gradle:
+      - yes
+
+  - versionName: 1.31.0
+    versionCode: 47
+    commit: f0ebe454393779c91cd6ccfe40425cda5582a1de
+    gradle:
+      - yes
+
+  - versionName: 1.31.1
+    versionCode: 48
+    commit: a7d73ebd8ad7ed5fe7492f7dc62405aecd56fdfc
+    gradle:
+      - yes
+
+  - versionName: 1.32.0
+    versionCode: 49
+    commit: babc3ec88acf2152b40ece923ceec52683e6b156
+    gradle:
+      - yes
+
+  - versionName: 1.32.1
+    versionCode: 50
+    commit: e013128142870fa8c01321f1c093df4bd9eface5
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys:
+  - 9f2ed3b0ff79e892780e986e602d63cb74bd3099a454daca56024cb7d606b99c
+  - 0fd96daf7a70981edc7af42d14a20ff19e90514c9966de93abb7af251453efc4
+
+MaintainerNotes: |-
+  Until version 1.13.1, requires the 'dx' tool from Android Build Tools 30.0.3.
+  Versions 1.14.0-1.14.2, require FontForge >= 20201107 which is too recent for
+  some distros. FontForge is not required in other releases.
+  Upto version 1.24.0, was not using gradle.
+
+AutoUpdateMode: None
+UpdateCheckMode: Tags
+CurrentVersion: 1.32.1
+CurrentVersionCode: 50

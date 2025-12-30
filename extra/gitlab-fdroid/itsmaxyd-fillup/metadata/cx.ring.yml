@@ -1,0 +1,4342 @@
+Categories:
+  - Internet
+  - Messaging
+  - Phone & SMS
+  - Voice & Video Chat
+License: GPL-3.0-or-later
+WebSite: https://jami.net/
+SourceCode: https://review.jami.net/plugins/gitiles/jami-client-android
+IssueTracker: https://git.jami.net/savoirfairelinux/jami-client-android/issues
+Translation: https://www.transifex.com/savoirfairelinux/jami
+
+AutoName: Jami
+
+RepoType: git
+Repo: https://git.jami.net/savoirfairelinux/jami-client-android.git
+
+Builds:
+  - versionName: 2.0.003
+    versionCode: 20
+    commit: 0011b9ba52b6ac3aab97a2bf42a608f83f0ec15c
+    output: ring-android/app/build/outputs/apk/app-release-unsigned.apk
+    build:
+      - echo -e '#!/bin/sh\ngradle "$@"' > ring-android/gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - ./compile.sh release
+
+  - versionName: 2.0.009
+    versionCode: 27
+    commit: 4423b10e1dd8601d00486e1b78d39180cb45f410
+    subdir: ring-android/app/src/main
+    output: ../../build/outputs/apk/app-release-unsigned.apk
+    build:
+      - pushd ../../../../
+      - echo -e '#!/bin/sh\ngradle "$@"' > ring-android/gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - ./compile.sh release
+      - popd
+
+  - versionName: 2.0.011
+    versionCode: 29
+    commit: 5ec1903a9fff4f267ee7043f778c70d5b0a3be49
+    subdir: ring-android/app/src/main
+    output: ../../build/outputs/apk/app-release-unsigned.apk
+    build:
+      - pushd ../../../../
+      - echo -e '#!/bin/sh\ngradle "$@"' > ring-android/gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - ./compile.sh release
+      - popd
+
+  - versionName: 2.0.012b
+    versionCode: 31
+    commit: 729d6d1f60ab3162811d6ea01100779427a42778
+    subdir: ring-android/app/src/main
+    output: ../../build/outputs/apk/app-release-unsigned.apk
+    build:
+      - pushd ../../../../
+      - echo -e '#!/bin/sh\ngradle "$@"' > ring-android/gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - ./compile.sh release
+      - popd
+
+  - versionName: '20160315'
+    versionCode: 34
+    commit: d432dc26775397efbb81d99582f45dfe5e1388f7
+    subdir: ring-android/app/src/main
+    output: ../../build/outputs/apk/app-release-unsigned.apk
+    build:
+      - pushd ../../../../
+      - echo -e '#!/bin/sh\ngradle "$@"' > ring-android/gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - ./compile.sh release
+      - popd
+
+  - versionName: '20160520'
+    versionCode: 44
+    commit: a0273fd0334764924b62a6dbaf1b17b45cdd1dc0
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-universal-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20160526'
+    versionCode: 45
+    commit: e1b33489dcb8473d7163029ca5faa93e4f0f8147
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-universal-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20160610'
+    versionCode: 49
+    commit: 73cfbb9707b39dfed19753a94ba912f66c07f2b0
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-universal-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20160803'
+    versionCode: 50
+    commit: dfb25485e747864697c9f1bb4d0ac82cd6949ca0
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-universal-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20161103'
+    versionCode: 53
+    commit: 17a06163cc94656b53bf762cefd377cdcf169db5
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20161108'
+    versionCode: 54
+    commit: 7b381a62fba638106e5d71137a4e3351f9324b82
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20161123'
+    versionCode: 55
+    commit: 3120ba5864b414f8a2d8cb606ed02fc0000f861f
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20161130'
+    versionCode: 56
+    commit: 3a1eecdb97e6253900122cbe68418f01e8ff7098
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20161208'
+    versionCode: 57
+    commit: cea5daa40e2a60deb6e2921c4b17f80993159dc8
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20161221'
+    versionCode: 59
+    commit: 9b106adb72189f12b900f6ebd53330b243ba29ff
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20170118'
+    versionCode: 60
+    commit: 7c580b10b219d9a85c28aef8971ae4dfb251f0f2
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20170119'
+    versionCode: 61
+    commit: 145dca1ffff78af3a747b0b638d17f9f5be4919c
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20170126'
+    versionCode: 63
+    commit: 7e082b66c98a3df55c8ed11e7d21ec6553d8eccd
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20170201'
+    versionCode: 64
+    commit: 23df36fae57192b7232e27dda7ca2bbcdefde9da
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+      - client-uwp
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20170215'
+    versionCode: 65
+    commit: aa120c7551773cba8aebea291c3093fc92c5d3da
+    subdir: client-android/ring-android/app
+    submodules: true
+    output: build/outputs/apk/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+      - client-uwp
+    build:
+      - sed -i -e "/MissingTranslation/adisable 'ExtraTranslation'\n" build.gradle
+      - ln -s ../daemon/ ../../ring-daemon
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a"
+      - cd ../../
+      - ./compile.sh release
+
+  - versionName: '20171126'
+    versionCode: 96
+    commit: 84816c91a7db583f11442b7cda9751b15b211134
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes -t jessie-backports swig
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+      - client-uwp
+    build:
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - chmod +x ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - cd ../../
+      - ./compile.sh release
+    ndk: r15c
+
+  - versionName: '20171129'
+    versionCode: 97
+    commit: cf5bbff85068826144e5c00832630294cd172e0e
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes -t jessie-backports swig
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+      - client-uwp
+    build:
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - chmod +x ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - cd ../../
+      - ./compile.sh release
+    ndk: r15c
+
+  - versionName: '20171215'
+    versionCode: 99
+    commit: bc414d7cfb421d84b76ef048373fcb7ffe113aa0
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes -t jessie-backports swig
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    scandelete:
+      - client-windows
+      - client-uwp
+    build:
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - chmod +x ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - cd ../../
+      - ./compile.sh release
+    ndk: r15c
+
+  - versionName: '20180115'
+    versionCode: 101
+    commit: 8dea3991b3eca846ef83a5e68610c4961e0cc560
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes -t jessie-backports swig
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-27'
+    scandelete:
+      - client-windows
+      - client-uwp
+    build:
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - chmod +x ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - cd ../../
+      - ./compile.sh release
+    ndk: r15c
+
+  - versionName: '20180201'
+    versionCode: 102
+    commit: b855d3232daef0cc7572c712239aa218ae5b8c89
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes -t jessie-backports swig
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-27'
+    scandelete:
+      - client-windows
+      - client-uwp
+    build:
+      - echo -e '#!/bin/sh\ngradle "$@"' > ../gradlew
+      - chmod +x ../gradlew
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - cd ../../
+      - ./compile.sh release
+    ndk: r15c
+
+  - versionName: '20180421'
+    versionCode: 116
+    commit: 8ce06c1bc2ee0837281f6d05fe97393d2a351a59
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes -t jessie-backports swig
+    patch:
+      - 0001-gradle-remove-unneeded-repo.patch
+    gradle:
+      - noPush
+    prebuild:
+      - $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-27'
+      - sed -i -e '/$DAEMON_ONLY/,+7d' ../../compile.sh
+    scandelete:
+      - client-windows
+      - client-uwp
+    build:
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - cd ../../
+      - ./compile.sh release
+    ndk: r16b
+
+  - versionName: '20180501'
+    versionCode: 117
+    commit: 3b176a6abca66f1c0f1485cec57dfd87487e6d98
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes -t jessie-backports swig
+    gradle:
+      - noPush
+    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-27'
+    scandelete:
+      - client-windows
+      - client-uwp
+    build:
+      - export ANDROID_NDK_ROOT=$ANDROID_NDK
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - cd ../../
+      - ./compile.sh --release --no-gradle
+    ndk: r16b
+
+  - versionName: '20180712'
+    versionCode: 127
+    commit: af8399f830b9fd10689d2d11a4e76ddf576d2f40
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes -t jessie-backports swig
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r16b
+
+  - versionName: '20180805'
+    versionCode: 129
+    commit: ac674c27172339c0c4eb7fc23a560f694905efb0
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes -t jessie-backports swig
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r17b
+
+  - versionName: '20190103'
+    versionCode: 144
+    commit: 621cd09ae6422be770584b11a7d202bc98150a74
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install --yes swig
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r17b
+
+  - versionName: '20190503'
+    versionCode: 156
+    commit: 9165c93abb67ca90077fa3945ddf3e19b6c15d32
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r19c
+
+  - versionName: 20190602-01
+    versionCode: 169
+    commit: android/release_169
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r19c
+
+  - versionName: 20190824-01
+    versionCode: 189
+    commit: android/release_189
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r20
+
+  - versionName: 20191122-01
+    versionCode: 201
+    commit: android/release_201
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r20
+
+  - versionName: 20191208-01
+    versionCode: 205
+    commit: android/release_205
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r20
+
+  - versionName: 20200107-01
+    versionCode: 210
+    commit: android/release_210
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r20b
+
+  - versionName: 20200501-01
+    versionCode: 238
+    commit: android/release_238
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r21
+
+  - versionName: 20200701-01
+    versionCode: 249
+    commit: android/release_249
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r21d
+
+  - versionName: 20200710-01
+    versionCode: 251
+    commit: android/release_251
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r21d
+
+  - versionName: 20200810-01
+    versionCode: 255
+    commit: android/release_255
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-windows
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86"
+      - ./compile.sh --release --no-gradle
+    ndk: r21d
+
+  - versionName: 20201222-01
+    versionCode: 278
+    commit: android/release_278
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.2'
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r21d
+
+  - versionName: 20210210-01
+    versionCode: 282
+    commit: android/release_282
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.2'
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r21d
+
+  - versionName: 20210222-01
+    versionCode: 285
+    commit: android/release_285
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.2'
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r21d
+
+  - versionName: 20210226-01
+    versionCode: 286
+    commit: android/release_286
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r21d
+
+  - versionName: 20210409-01
+    versionCode: 293
+    commit: android/release_293
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    prebuild:
+      - $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      - sed -i -e 's/21.3.6528147/21.4.7075529/' build.gradle
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r21e
+
+  - versionName: 20210421-01
+    versionCode: 294
+    commit: android/release_294
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    prebuild:
+      - $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      - sed -i -e 's/21.3.6528147/21.4.7075529/' build.gradle
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r21e
+
+  - versionName: 20210503-01
+    versionCode: 296
+    commit: android/release_296
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-electron
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-uwp
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - lrc
+      - packaging
+      - scripts
+    prebuild:
+      - $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      - sed -i -e "s/ndkVersion '.*'/ndkVersion '22.1.7171670'/" build.gradle
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r22b
+
+  - versionName: 20210521-01
+    versionCode: 301
+    commit: 531663d0e8ba1e4ad217fc7083fcb2918e47cc83
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild:
+      - $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+      - sed -i -e "s/ndkVersion '.*'/ndkVersion '22.1.7171670'/" build.gradle
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r22b
+
+  - versionName: 20210908-01
+    versionCode: 318
+    commit: android/release_318
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+      - update-alternatives --auto java
+    gradle:
+      - noPush
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-30'
+        'build-tools;30.0.3'
+      - sed -i -e "s/ndkVersion '.*'/ndkVersion '22.1.7171670'/" build.gradle
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r22b
+
+  - versionName: 20210924-01
+    versionCode: 320
+    commit: android/release_320
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+      - update-alternatives --auto java
+    gradle:
+      - noPush
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-30'
+        'build-tools;30.0.3'
+      - sed -i -e "s/ndkVersion '.*'/ndkVersion '22.1.7171670'/" build.gradle
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r22b
+
+  - versionName: 20211210-01
+    versionCode: 324
+    commit: android/release_324
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+      - update-alternatives --auto java
+    gradle:
+      - noPush
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-31' 'build-tools;31.0.0'
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r23
+
+  - versionName: 20220121-01
+    versionCode: 326
+    commit: android/release_326
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t testing swig
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+      - update-alternatives --auto java
+    gradle:
+      - noPush
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-31' 'build-tools;31.0.0'
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r23
+
+  - versionName: 20220311-01
+    versionCode: 328
+    commit: android/release_328
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+      - pushd build/srclib/swig
+      - ./autogen.sh
+      - ./configure
+      - make -j`nproc`
+      - make install
+      - popd
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-31' 'build-tools;31.0.0' > /dev/null
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r23
+
+  - versionName: 20220422-01
+    versionCode: 329
+    commit: android/release_329
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+      - pushd build/srclib/swig
+      - ./autogen.sh
+      - ./configure
+      - make -j`nproc`
+      - make install
+      - popd
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-31' 'build-tools;31.0.0' > /dev/null
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r23
+
+  - versionName: 20220426-01
+    versionCode: 330
+    commit: android/release_330
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+      - pushd build/srclib/swig
+      - ./autogen.sh
+      - ./configure
+      - make -j`nproc`
+      - make install
+      - popd
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-31' 'build-tools;32.0.0' > /dev/null
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r23
+
+  - versionName: 20220527-01
+    versionCode: 331
+    commit: android/release_331
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+      - pushd build/srclib/swig
+      - ./autogen.sh
+      - ./configure
+      - make -j`nproc`
+      - make install
+      - popd
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-31' 'build-tools;31.0.0' > /dev/null
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r23
+
+  - versionName: 20220602-01
+    versionCode: 332
+    commit: android/release_332
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+      - pushd build/srclib/swig
+      - ./autogen.sh
+      - ./configure
+      - make -j`nproc`
+      - make install
+      - popd
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-31' 'build-tools;31.0.0' > /dev/null
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r23
+
+  - versionName: 20220607-01
+    versionCode: 334
+    commit: android/release_334
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+      - pushd build/srclib/swig
+      - ./autogen.sh
+      - ./configure
+      - make -j`nproc`
+      - make install
+      - popd
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-32' 'build-tools;32.0.0' > /dev/null
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r23c
+
+  - versionName: 20220615-01
+    versionCode: 335
+    commit: android/release_335
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+      - pushd build/srclib/swig
+      - ./autogen.sh
+      - ./configure
+      - make -j`nproc`
+      - make install
+      - popd
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-gnome
+      - client-ios
+      - client-macosx
+      - client-qt
+      - client-uwp
+      - lrc
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - patches
+      - scripts
+    prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
+      'platforms;android-32' 'build-tools;32.0.0' > /dev/null
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r23c
+
+  - versionName: 20220906-01
+    versionCode: 343
+    commit: e8c199719d334692563cfeb22975bfec680a3a91
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-33'
+        'build-tools;33.0.0' > /dev/null
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20220923-01
+    versionCode: 344
+    commit: 6ebe5f078829bf0a92869733ee05909cfca1c4e9
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-33'
+        'build-tools;33.0.0' > /dev/null
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20220930-01
+    versionCode: 345
+    commit: 904d538ec7c71e2dafce122f38165c7a0c10db07
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake g++
+      - update-alternatives --auto java
+    gradle:
+      - noPush
+    srclibs:
+      - swig@v4.0.2
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-33'
+        'build-tools;33.0.0' > /dev/null
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221007-01
+    versionCode: 346
+    commit: 548d2d461988d7f2fc722a5ba2dbadb0570f65f1
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.0'
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221107-01
+    versionCode: 347
+    commit: 2c4fd7449a0fdbb881a3caa86d0e21c5dc10948f
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.0'
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221121-01
+    versionCode: 348
+    commit: 6700e64fdc609beb6b5f3cc1b7bc6dce8bcc8c0e
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.0'
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221124-01
+    versionCode: 349
+    commit: f219aafa56c29463353d906d7a40158c016660b0
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.0'
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221202-01
+    versionCode: 350
+    commit: e4172b18d42ada450851e33ad3836deee90270e7
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.0'
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221207-01
+    versionCode: 352
+    commit: 6e33adba273f984ad03e001a9ea9fcc190462cb1
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - platforms=$(grep compileSdk build.gradle.kts | sed -E 's/.* ([0-9]+)/\1/')
+      - build_tools=$(grep buildToolsVersion build.gradle.kts | sed -E 's/.*"([0-9.]+)"/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221216-01
+    versionCode: 353
+    commit: 8283d6dfed9f5c1d86a7b817e6e537d69664fad1
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - platforms=$(grep compileSdk build.gradle.kts | sed -E 's/.* ([0-9]+)/\1/')
+      - build_tools=$(grep buildToolsVersion build.gradle.kts | sed -E 's/.*"([0-9.]+)"/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221220-01
+    versionCode: 354
+    commit: 0f48a1244b6e12d599ea6501a7b52c40784013e9
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - platforms=$(grep compileSdk build.gradle.kts | sed -E 's/.* ([0-9]+)/\1/')
+      - build_tools=$(grep buildToolsVersion build.gradle.kts | sed -E 's/.*"([0-9.]+)"/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221222-01
+    versionCode: 355
+    commit: a0e0ab9a6ac39fb44519325f21d793db5948df63
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - platforms=$(grep compileSdk build.gradle.kts | sed -E 's/.* ([0-9]+)/\1/')
+      - build_tools=$(grep buildToolsVersion build.gradle.kts | sed -E 's/.*"([0-9.]+)"/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20221225-01
+    versionCode: 356
+    commit: f75fdb25c2a9e815bb4737b20280e8a5d6834604
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake g++ swig autoconf automake m4 libtool pkg-config
+        yasm tar gettext autopoint xz-utils bzip2 make python-is-python3
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - platforms=$(grep compileSdk build.gradle.kts | sed -E 's/.* ([0-9]+)/\1/')
+      - build_tools=$(grep buildToolsVersion build.gradle.kts | sed -E 's/.*"([0-9.]+)"/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20230113-01
+    versionCode: 357
+    commit: 746e5671f8879e49fe73458c02dce77db21619ea
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - platforms=$(grep compileSdk build.gradle.kts | sed -E 's/.* ([0-9]+)/\1/')
+      - build_tools=$(grep buildToolsVersion build.gradle.kts | sed -E 's/.*"([0-9.]+)"/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools" "cmake;3.22.1"
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20230119-01
+    versionCode: 358
+    commit: 1584d0cee44359ef1d3aa8db349add4a3cb550c5
+    timeout: 10800
+    subdir: client-android/ring-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - noPush
+    rm:
+      - client-ios
+      - client-macosx
+      - client-qt
+      - plugins
+      - docker
+      - docs
+      - guix
+      - packaging
+      - scripts
+    prebuild:
+      - platforms=$(grep compileSdk build.gradle.kts | sed -E 's/.* ([0-9]+)/\1/')
+      - build_tools=$(grep buildToolsVersion build.gradle.kts | sed -E 's/.*"([0-9.]+)"/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools" "cmake;3.22.1"
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+    build:
+      - cd ../..
+      - export ANDROID_NDK_ROOT="$ANDROID_NDK"
+      - export ANDROID_ABI="armeabi-v7a arm64-v8a x86_64"
+      - ./compile.sh --release --daemon
+    ndk: r25b
+
+  - versionName: 20230227-01
+    versionCode: 361
+    commit: f45d27e209b78e9cf40fd6cc1137ddd6e52d981f
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230301-01
+    versionCode: 362
+    commit: f9142f5aee0b9436f590b3771b6cd8cd674f53da
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230327-01
+    versionCode: 364
+    commit: 0044418f2b62f45ba9a3d60fedb64b377af70a92
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230406-01
+    versionCode: 365
+    commit: a986d993587d286b72709c09f9eaea26d3aba75d
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230421-01
+    versionCode: 366
+    commit: 6bf216d9223fdbd7df6189a04d4cbf445b4fae55
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230424-01
+    versionCode: 367
+    commit: 3f87565cc46ca68a6c9c38154d09416f30c766a0
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230502-01
+    versionCode: 368
+    commit: 0dbb6687f2654836573c767a0c7923919375d3b2
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230529-01
+    versionCode: 370
+    commit: f368281687c3b660fd13cd583f75f546fb1f0f1b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230602-01
+    versionCode: 371
+    commit: 0063960ca38dd68d099db901c85b68a2b85e8ad0
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230616-01
+    versionCode: 372
+    commit: 392e0e997eab9d2ce1fb400860b60cecd3cec121
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230710-01
+    versionCode: 373
+    commit: 48be2a8b11273c84dff7e858148c2b197b51f615
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230714-01
+    versionCode: 374
+    commit: 8c707034cf7dfaba5eb788f9d5b45c06888e0d96
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230728-01
+    versionCode: 375
+    commit: 835c092fcc3eae5359bc337ed4eb4aa96e518b90
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230810-01
+    versionCode: 376
+    commit: 2066123520e24f3655e15202e07e759660003f3b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool make pkg-config
+        python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230818-01
+    versionCode: 377
+    commit: 5cbd22a3af7b8066468575c387a99a1731a72378
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230824-01
+    versionCode: 378
+    commit: 1c795cf92a977f192e230057965660eaf508b0fa
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230901-01
+    versionCode: 379
+    commit: 733ca2cd156a4d0f37f1a0c7c3a9f979232b448e
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230925-01
+    versionCode: 382
+    commit: fe714c57ea407bd576a0d5384b122be0c7a9a1f9
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20230928-01
+    versionCode: 383
+    commit: db090467d813f841404787bf1ba8125188f700c8
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231002-02
+    versionCode: 385
+    commit: 1a838b3b98a3444665a34cc8f07f52d0ac472699
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231006-01
+    versionCode: 386
+    commit: 54c30656a503a6796a8cec239648e1717898c13f
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r25c
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231019-01
+    versionCode: 387
+    commit: 27d9bf9c97aa0e941dc910bce58acc413cd6370b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: r26
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231024-01
+    versionCode: 388
+    commit: bb42851d1618f49aabae8e0853bbda2f3f6dfaa6
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231027-01
+    versionCode: 389
+    commit: 464f9a187ff905854cfa9f255e33e936d020cfee
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231103-01
+    versionCode: 390
+    commit: 71daa910693ea4ef8d44d5278cba0327d0172612
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231123-01
+    versionCode: 392
+    commit: 7e0fc1059e601194543d5ffaf4e49a2bd0433843
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231129-01
+    versionCode: 393
+    commit: e9a7fd3b8580513b00b99d433bcba345e21bd914
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231208-01
+    versionCode: 394
+    commit: 78e8441822ce02f01977b4acf9171662212cedc3
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231212-01
+    versionCode: 395
+    commit: a1c4206df59cc72ca95a720adc9680f2c8227c2b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231213-01
+    versionCode: 396
+    commit: df5effe1d86eb9c411ad601cb0fd15a8928e9d97
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231215-01
+    versionCode: 397
+    commit: 2d3ad02ce79f2e7817eba79da3311f52b2a29ac6
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231221-01
+    versionCode: 398
+    commit: 6fc3e6ec7e3057208b6bff56e8b310df1c20926a
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20231228-01
+    versionCode: 399
+    commit: 7925415cc22b5fc2bdee3da47ebedb58ec164acb
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240118-01
+    versionCode: 400
+    commit: 99a434e192128cd607f502f37a553e0cd27dee8f
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240126-01
+    versionCode: 401
+    commit: 6c8d62375a8efd732bb8b464711687be67ec3574
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240131-01
+    versionCode: 402
+    commit: 322fab89aac47edb7b598093b55c9dacacc5119e
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240206-01
+    versionCode: 404
+    commit: 0b5107cb7a23d2c45b40e3a92f5fab0db03e2302
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240215-01
+    versionCode: 405
+    commit: 2d9428333bbf330a8531ff69cfddd7090fa54d50
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240221-01
+    versionCode: 406
+    commit: b974face45e86b9002e206d32ea7a7970a2871dc
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240223-01
+    versionCode: 407
+    commit: 87ba1cc392db9534f89ffc80468eba5268e8dadb
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240305-01
+    versionCode: 409
+    commit: f8d17a5f0fe33d66188439d482df0d342e2fb326
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240308-01
+    versionCode: 410
+    commit: 3f15131351ca9951ddcf423f367b15423a6e53c4
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ automake autopoint bzip2 gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig tar yasm
+      - apt-get install -y -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240321-01
+    versionCode: 411
+    commit: f05f9a938e1f616c5d63979acced2b6a13b5d09e
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+    ndk: 26.1.10909125
+    gradleprops:
+      - android.builder.sdkDownload=true
+
+  - versionName: 20240409-02
+    versionCode: 414
+    commit: 0c8f3405550229f974f34128dec11b980905f8a0
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240412-01
+    versionCode: 415
+    commit: 50bf2e709e1299cbbca69bbb8dc0105784f85bef
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240419-01
+    versionCode: 416
+    commit: 38e369a03f3b48f8a78f398ea696856537609e0b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240426-01
+    versionCode: 417
+    commit: 3e92358727972782fd2a3323d108ae97d3b8ccd9
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240502-01
+    versionCode: 418
+    commit: 759f6b8fa98781f94ae835733ae09c3d07e41d7c
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240507-02
+    versionCode: 421
+    commit: 855e20513adf817b8ad4d53f1e17c7b9f20ecc68
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240521-01
+    versionCode: 422
+    commit: 16d9a0a4714da493583eb0e839aafef940a2ba0b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240529-01
+    versionCode: 423
+    commit: bdff4eed557f032b48c8875d1cbc1640674f52b3
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240620-01
+    versionCode: 424
+    commit: 84ea28b2b7f5147ec6a4aa649c2b6d8116f20aa5
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240705-01
+    versionCode: 425
+    commit: 7bb31398388fac1974c23f8f5205f2c7e648f06e
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240718-01
+    versionCode: 426
+    commit: 96fa2cfedb1da7fbf6edb176f26625b3e0e4e155
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240802-01
+    versionCode: 427
+    commit: b2dee423fb17572b2f160705f314baf60db5f4c9
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240823-01
+    versionCode: 428
+    commit: af84c16ef2ce9d68bb6c6775383e1bc40e765562
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240909-01
+    versionCode: 430
+    commit: bf5a9900e3d46a9647fca8b00afbb7098d0638e4
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20241011-01
+    versionCode: 432
+    commit: 5f52a526d80332f28355a75f09325f9d35c04658
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20241023-01
+    versionCode: 433
+    commit: 46eeb405a508993d42f3ee9df4385eb78e2b76ce
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20241105-01
+    versionCode: 434
+    commit: ace0e8d95645403bcf0aa060336cecb6c70ef088
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20241112-01
+    versionCode: 435
+    commit: 12c9c3a5befbf7f28de610f26223371518d08415
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20241126-01
+    versionCode: 436
+    commit: 45aa74be34b91edfe01682f87b173c00ce9b7c8e
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20241211-01
+    versionCode: 437
+    commit: 835a870187901cf059b54d4f7d882565b4248c2b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20241216-01
+    versionCode: 438
+    commit: de615879f7a7186808833a8a0df21876d1c47472
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250107-01
+    versionCode: 439
+    commit: e83049e160874522b45d9acc655fa9d9adc2279c
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250117-01
+    versionCode: 440
+    commit: 08641fc935b16c7d126f6ce392de0df85806ebe1
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250123-01
+    versionCode: 441
+    commit: a726677e1d00274ad031d947709b1df7c402db94
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250205-01
+    versionCode: 442
+    commit: 32cb90e24e1624d82529e64db370dd4bd1c6d12d
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250207-02
+    versionCode: 444
+    commit: f5473c0f33130b9bbc8826c4e0eee513b8d02745
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250207-03
+    versionCode: 445
+    commit: b1fb04c2f70b6baa26d3fb81459fa5bc9d2f98b3
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250307-01
+    versionCode: 449
+    commit: a32ea3a85e42691105217fb60f68da25065bc18a
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250310-01
+    versionCode: 450
+    commit: 7d9299293061e883a452ec385810110131f48eef
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250314-01
+    versionCode: 451
+    commit: 09d9b9ebf9855271c4b4f28a3fbdc7c7074ab3c7
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250319-01
+    versionCode: 452
+    commit: 53a348678ba6382d7cefa44ad4bae7bb7db87950
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250331-01
+    versionCode: 453
+    commit: 7c38d7ca8dba6927c1dffdeeb09b98544348fa77
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250410-01
+    versionCode: 454
+    commit: 0519101145089cf3b48c46a190a7741d6cd62e01
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250423-01
+    versionCode: 455
+    commit: 23696390df03097e6744af39058d3de28598b5ed
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250430-01
+    versionCode: 456
+    commit: 013255d704c8ce06e361df16593516a70b811d5a
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250508-01
+    versionCode: 457
+    commit: cabb152bdd749860a2f9a065222be8d2f86d84d0
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250513-01
+    versionCode: 458
+    commit: 31d4d3d9a871cb8264667a680b784a258752b0df
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250522-01
+    versionCode: 459
+    commit: fb47052930ea4169e0af2b4ceaae8b5b99a561ba
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.30.5'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250605-01
+    versionCode: 460
+    commit: cafe812310f49ce48d9647360e6c6aebe9d39236
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.31.6'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250626-01
+    versionCode: 461
+    commit: cc95ba6fc8caffd33d21e95c3aa1d4d355b20c1b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.31.6'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250708-01
+    versionCode: 462
+    commit: 4d9318f0cfe35e56ba58e5ff3bc0eae685747e6f
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.31.6'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250718-01
+    versionCode: 463
+    commit: f7b99c6655fccb560eeeb52d9cf32f5d72307cc6
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.31.6'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250730-01
+    versionCode: 464
+    commit: f4c1d67b7bdd8f44d919f7a0b66cb7208ac04a76
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;3.31.6'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250912-01
+    versionCode: 467
+    commit: 8e93175c8cc23cbd47e5efe62c09a091f57892ce
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' -e 's/8.13.0/8.11.1/' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250917-01
+    versionCode: 468
+    commit: a07a981862a2091616efa5eed6dcc2d39fb0aa48
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' -e 's/8.13.0/8.11.1/' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20250925-01
+    versionCode: 469
+    commit: 111ccc5116ec2f1fe5955b19f1fa3c111271ff83
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' -e 's/8.13.0/8.11.1/' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20251010-01
+    versionCode: 470
+    commit: 28618f215ea4a7f81f4246a6c54602b494184ccb
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' -e 's/8.13.0/8.11.1/' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20251024-01
+    versionCode: 471
+    commit: 24060a5a075c3f5bcaec780bf0e8bcffc330c2f2
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' -e 's/8.13.0/8.11.1/' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20251027-01
+    versionCode: 472
+    commit: 6896053d3d5a51d291b70bf26b5b4882c2d03708
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' -e 's/8.13.0/8.11.1/' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20251031-01
+    versionCode: 473
+    commit: ee84c423fb74f98c7c3c2222ab90f90eda91ab83
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' -e 's/8.13.0/8.11.1/' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20251107-01
+    versionCode: 474
+    commit: d1e301b8dcd9099d7e83ec7ad5e3265c31d970a6
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' -e 's/8.13.0/8.11.1/' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20251114-01
+    versionCode: 475
+    commit: e19c13be0cf50dd9055a329d8ec0a1b16a427e4e
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20251126-01
+    versionCode: 476
+    commit: a3fbd8da13d69f561f734cc8bb2b9abcfe6b568a
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild:
+      - sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sdkmanager 'cmake;4.1.0'
+    scandelete:
+      - daemon/contrib/src/*/package.json
+      - daemon/compat/msvc/package.json
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 20251126-01
+CurrentVersionCode: 476

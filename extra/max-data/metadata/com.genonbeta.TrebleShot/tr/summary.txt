@@ -1,0 +1,1 @@
+Mevcut bağlantılar üzerinden dosya gönderin ve alın

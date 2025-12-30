@@ -1,0 +1,37 @@
+Categories:
+  - Note
+  - Writing
+License: BSD-3-Clause
+SourceCode: https://bitbucket-archive.softwareheritage.org/projects/ne/neko259/notey.html
+Bitcoin: 1Lh7a1tx7EREENawQyHhiKoCRF6u6TzVrD
+
+AutoName: Notey
+Description: |-
+  Store plain-text or formatted notes, send them via e-mail and see on the OSM map
+  where they were edited.
+
+Builds:
+  - versionName: 1.1.1
+    versionCode: 3
+    commit: 1.1.1
+    extlibs:
+      - android/android-support-v13.jar
+
+  - versionName: '1.3'
+    versionCode: 5
+    commit: '1.2'
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 6
+    commit: 1.3.1
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.3.1
+CurrentVersionCode: 6
+
+NoSourceSince: 1.3.1

@@ -1,0 +1,47 @@
+Categories:
+  - System
+License: Apache-2.0
+WebSite: https://support.google.com/accessibility/android/answer/6283677?hl=en
+SourceCode: https://github.com/google/talkback
+
+Name: TalkBack (deprecated)
+AutoName: TalkBack
+Description: |-
+  <b>NOTE:</b> This app is deprecated, you should use https://f-droid.org/packages/com.android.talkback instead.
+
+  TalkBack is an Accessibility Service that helps blind and vision-impaired users
+  interact with their devices more easily.
+
+  This application adds spoken, audible, and vibration feedback to your device.
+
+  It comes pre-installed on many devices so you won't be able to install this if
+  that is the case.
+
+  It's only activated if you explicitly turn on Accessibility:
+  <ol>
+  <li>Go to Settings</li>
+  <li>Select Accessibility</li>
+  <li>Enable TalkBack checkboxes</li>
+  </ol>
+
+RepoType: git
+Repo: https://github.com/google/talkback.git
+
+Builds:
+  - versionName: 6.1.1
+    versionCode: 50200001
+    commit: 6.1.1
+    patch:
+      - play-services.patch
+    gradle:
+      - yes
+    rm:
+      - libs
+    prebuild: sed -i 's/android:versionCode=/android:versionName="$$VERSION$$" android:versionCode=/'
+      src/main/AndroidManifest.xml
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 6.1.1
+CurrentVersionCode: 50200001

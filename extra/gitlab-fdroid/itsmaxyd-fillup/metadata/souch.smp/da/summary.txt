@@ -1,0 +1,1 @@
+Mappebaseret musikafspiller. Viser og følger mappehierarkiet.

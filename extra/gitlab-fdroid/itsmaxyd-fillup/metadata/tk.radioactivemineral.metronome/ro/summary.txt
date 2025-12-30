@@ -1,0 +1,1 @@
+Metronom simplu cu funcționalitate tap tempo și un sistem de presetări

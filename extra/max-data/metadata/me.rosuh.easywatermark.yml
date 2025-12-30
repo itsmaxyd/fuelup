@@ -1,0 +1,313 @@
+Categories:
+  - Multimedia
+License: MIT
+AuthorName: rosuH
+AuthorEmail: rosuh@qq.com
+AuthorWebSite: https://rosuh.me/
+SourceCode: https://github.com/rosuH/EasyWatermark
+IssueTracker: https://github.com/rosuH/EasyWatermark/issues
+
+AutoName: Easy Watermark
+
+RepoType: git
+Repo: https://github.com/rosuH/EasyWatermark
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 3
+    commit: '1.0'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 10102
+    commit: 1.1.2
+    subdir: app
+    gradle:
+      - others
+
+  - versionName: 2.0.0
+    versionCode: 20000
+    commit: 2.0.0
+    subdir: app
+    gradle:
+      - others
+
+  - versionName: 2.1.0
+    versionCode: 20100
+    commit: 17a5513815f10d90a0620c241c6c81dc184226d0
+    subdir: app
+    gradle:
+      - others
+
+  - versionName: 2.2.0
+    versionCode: 20200
+    commit: 9eb1afed23765a89b555358f06685d164373141f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.5.0
+    versionCode: 20500
+    commit: 6582a2bdb42346f40b77b40632f0e76bcd0303d2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.5.1
+    versionCode: 20501
+    commit: ff31c39477a553e7c124b7c8b994d1b595a371cd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.6.1
+    versionCode: 20601
+    commit: 99ac662eba6088c8b6608ec08ef846ef07899c4a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.6.2
+    versionCode: 20602
+    commit: 21c2dcd79054df20d2602122901b09a1fa2130ae
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.6.3
+    versionCode: 20603
+    commit: fc8620ffda5484743c5421b2586483c97edefe2e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.6.5
+    versionCode: 20605
+    commit: 0b2acb1a8a18e6d9ef7f99ee265f373aa1e01698
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.6.6
+    versionCode: 20606
+    commit: d03444d8e96ed84ca355275289e994f40a0d9fba
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.6.7
+    versionCode: 20607
+    commit: 9563385f87f45370ead9bc382b0a77afc278ea7b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.6.8
+    versionCode: 20608
+    commit: f16c11a375e5ae7868886c7434e19ab811050d6f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.2
+    versionCode: 20702
+    commit: 83c67b68b81e09bec12693ade397a30a27e45860
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.4
+    versionCode: 20704
+    commit: 952fff3e2271176e803c5aa05b204bd494014c0d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.5
+    versionCode: 20705
+    commit: 4ff9c78bdfd2fc45916c46d5ccf74245a91fe660
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.6
+    versionCode: 20706
+    commit: 85e5773c205f8428b2c85bad6214d8d28f8731e0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.7
+    versionCode: 20707
+    commit: cd11d57e5ed728d2da2d57032f4cc9b624591527
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 20801
+    commit: 093fbd6dea3e6306e5f8efc6c8cf64508a4dac4b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.8.2
+    versionCode: 20802
+    commit: 84a4f2e56c019258c873eb8bc6df5f2cd9b9df34
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.8.5
+    versionCode: 20805
+    commit: 9b95d6d82254ea981fa6a3cc9484e6e8463ba9b0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.8.6
+    versionCode: 20806
+    commit: 424d79bf5732dbb4ed912b90bd66b84b07ad0c62
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.7
+    versionCode: 20807
+    commit: d4b074979ca01322ecf41803ea5e8c6b682562a1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.8
+    versionCode: 20808
+    commit: cd1e0ec61ecf806391988ffd01855a85543d90d1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.9
+    versionCode: 20809
+    commit: e14145724bfab484109b2c112c8c49b78b057beb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.0
+    versionCode: 20900
+    commit: 6e03bc45efb7118b0cc5e4ac4cea5158468c109b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.4
+    versionCode: 20904
+    commit: 7e77caea27fe667959860964acd6ccbc483e464f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.5
+    versionCode: 20905
+    commit: 2.9.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.6
+    versionCode: 20906
+    commit: 2.9.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.0
+    versionCode: 21000
+    commit: 2.10.0
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version %v
+UpdateCheckMode: HTTP
+UpdateCheckData: https://api.github.com/repos/rosuH/EasyWatermark/releases/latest|EasyWatermark-[\d.]+-(\d+)-signed.apk|.|EasyWatermark-([\d.]+)-\d+-signed.apk
+CurrentVersion: 2.10.0
+CurrentVersionCode: 21000

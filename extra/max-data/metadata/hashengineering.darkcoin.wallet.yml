@@ -1,0 +1,194 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Money
+  - Wallet
+License: GPL-3.0-or-later
+AuthorName: Dash Core Group
+AuthorEmail: support@dash.org
+WebSite: https://www.dash.org/dash-android-wallet/
+SourceCode: https://github.com/HashEngineeringSolutions/dash-wallet
+IssueTracker: https://github.com/HashEngineeringSolutions/dash-wallet/issues
+Translation: https://www.transifex.com/dash/dash-mobile-wallets
+Changelog: https://raw.github.com/HashEngineeringSolutions/dash-wallet/HEAD/wallet/CHANGES
+
+AutoName: DashPay Wallet
+
+RepoType: git
+Repo: https://github.com/HashEngineeringSolutions/dash-wallet.git
+
+Builds:
+  - versionName: 6.6.4
+    versionCode: 60640
+    commit: v6.6.4-foss
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - prod
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+      - wallet/test/de/schildbach/wallet/util/bitcoin-backup-protobuf-testnet
+    ndk: r21
+
+  - versionName: 7.0.9
+    versionCode: 70019
+    commit: v7.0.9-foss
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - prod
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+      - wallet/test/de/schildbach/wallet/util/bitcoin-backup-protobuf-testnet
+    ndk: r21d
+
+  - versionName: 7.3.1
+    versionCode: 70310
+    commit: 7cc63ecd4a490e4b90a38b961b07a5a4b3e51907
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    prebuild:
+      - sed -i -e '/kotlin-eap/d' ../build.gradle
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+      - wallet/test/de/schildbach/wallet/util/bitcoin-backup-protobuf-testnet
+    ndk: r21d
+
+  - versionName: 7.3.2
+    versionCode: 70311
+    commit: 0736379f08128ab0609c35778dc99a59d28788fd
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    prebuild:
+      - sed -i -e '/kotlin-eap/d' ../build.gradle
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+      - wallet/test/de/schildbach/wallet/util/bitcoin-backup-protobuf-testnet
+    ndk: r21d
+
+  - versionName: 8.1.3
+    versionCode: 80130
+    commit: 248ff06a01cfc3047c4fd1d39eada6ad3c6ab2ff
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+      - wallet/test/de/schildbach/wallet/util/bitcoin-backup-protobuf-testnet
+    ndk: r21d
+
+  - versionName: 9.0.6
+    versionCode: 90061
+    commit: c48b72f275fa39830a2a03642d144e08d256008a
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+      - wallet/test/de/schildbach/wallet/util/bitcoin-backup-protobuf-testnet
+    ndk: r21d
+
+  - versionName: 10.0.1
+    versionCode: 100010
+    commit: 97abc3cef5c7bf7035092d3fcacd701182e130e9
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/services/*testnet
+    ndk: r21d
+
+  - versionName: 10.0.2
+    versionCode: 100021
+    commit: 7b19dd68bf78d7924c67f5b322a3fc8d688f97ff
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/services/*testnet
+    ndk: r21d
+
+  - versionName: 10.1.1
+    versionCode: 101010
+    commit: ca783a4bff67c9ab27017261622368b48dd7e8dc
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/services/*testnet
+    ndk: r21d
+
+  - versionName: 10.2.0
+    versionCode: 102000
+    commit: 42467d0e71b182ece2c99dfb8388da3d268f45a1
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/services/*testnet
+    ndk: r21d
+
+  - versionName: 11.1.2
+    versionCode: 11010205
+    commit: 960736f4c5fcdc5a916826b821ab6b675d3d6fad
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/services/*testnet
+    ndk: r21d
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags .*-foss$
+UpdateCheckData: wallet/build.gradle|versionCode.*\s(\d+)|.|versionName.*\s"(.*)"
+CurrentVersion: 11.1.2
+CurrentVersionCode: 11010205

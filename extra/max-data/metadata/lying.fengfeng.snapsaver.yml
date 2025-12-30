@@ -1,0 +1,426 @@
+Categories:
+  - Multimedia
+License: Apache-2.0
+AuthorName: Li Linfeng
+AuthorEmail: Niels_Lee@outlook.com
+SourceCode: https://github.com/NielsLee/SnapSaver
+IssueTracker: https://github.com/NielsLee/SnapSaver/issues
+Changelog: https://github.com/NielsLee/SnapSaver/releases
+
+AutoName: SnapSaver
+
+RepoType: git
+Repo: https://github.com/NielsLee/SnapSaver.git
+Binaries: https://github.com/NielsLee/SnapSaver/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 0.1.0
+    versionCode: 1
+    commit: 7165d60aff67d9cedf4122b2aad0b31f4a6dc516
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.2.0
+    versionCode: 2
+    commit: aaf9603372180bac90e9986a6ccd8cc2d62ca7a4
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.3.0
+    versionCode: 3
+    commit: b09058d66462a459d197d2c6b4928f25072e6689
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.4.0
+    versionCode: 4
+    commit: c0e1f4812ebc057b41cf98c0585f8dbf7487fb63
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/googleapis.com/d' android/build.gradle
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.5.0
+    versionCode: 5
+    commit: 5642c04f772191d9869b4b216bb4667c46d82e18
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/googleapis.com/d' android/build.gradle
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.6.0
+    versionCode: 6
+    commit: 5a0a33233cc2109b6f114a7be82bb48b129f589d
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/googleapis.com/d' android/build.gradle
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.7.0
+    versionCode: 7
+    commit: 2cab5b6747eb901d8a3a6c401472cd7b3e79820e
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/googleapis.com/d' android/build.gradle
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.8.0
+    versionCode: 8
+    commit: f591cba09334ab25704349a68c821d59d8ad532f
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/googleapis.com/d' android/build.gradle
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.8.1
+    versionCode: 9
+    commit: 37946c5cee406be26f12809e066826830862cd14
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/googleapis.com/d' android/build.gradle
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.9.0
+    versionCode: 10
+    commit: c74cb126048710f1416d27936fa7ffc6e7ad2210
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/googleapis.com/d' android/build.gradle
+      - export repo=/home/runner/work/SnapSaver
+      - mkdir -p $repo
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo/SnapSaver
+      - pushd $repo/SnapSaver
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/SnapSaver lying.fengfeng.snapsaver
+
+  - versionName: 0.9.1
+    versionCode: 11
+    commit: 424a9173698a3066348a91783434f6df582e4385
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/SnapSaver
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/googleapis.com/d' android/build.gradle
+      - export repo=/home/runner/work/SnapSaver/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo lying.fengfeng.snapsaver
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/SnapSaver/SnapSaver
+      - cd ..
+      - mv lying.fengfeng.snapsaver $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo lying.fengfeng.snapsaver
+
+AllowedAPKSigningKeys: f6df1e0513719d034a926106a5d9f37bf05457e8a7521e091910d3cf4802e10e
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 0.9.1
+CurrentVersionCode: 11

@@ -1,0 +1,126 @@
+Categories:
+  - Sports & Health
+  - Time
+  - Workout
+License: GPL-3.0-only
+SourceCode: https://github.com/timer-machine/timer-machine-android
+IssueTracker: https://github.com/timer-machine/timer-machine-android/issues
+Translation: https://hosted.weblate.org/engage/timer-machine/
+Changelog: https://github.com/timer-machine/timer-machine-android/releases
+
+AutoName: TimeR Machine
+
+RepoType: git
+Repo: https://github.com/timer-machine/timer-machine-android
+Binaries: https://github.com/timer-machine/timer-machine-android/releases/download/%v/TimeR.Machine-v%v.%c.-other-release.apk
+
+Builds:
+  - versionName: 7.1.2
+    versionCode: 7010200
+    commit: 7.1.2
+    subdir: app
+    gradle:
+      - other
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    prebuild: sed -i -e '/firebase/d' ../flavor-google/build.gradle
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 7.2.0
+    versionCode: 7020000
+    commit: 68783e3b7a8e7e92464fc89f18d7e78ad28e0ed4
+    subdir: app
+    gradle:
+      - other
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    prebuild: sed -i -e '/firebase/d' ../flavor-google/build.gradle
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 7.3.0
+    versionCode: 7030000
+    commit: 92cec88ae19d5cd9db1b1f33d42e4565591cf65d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - other
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    prebuild: sed -i -e '/firebase/d' ../flavor-google/build.gradle
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 7.4.0
+    versionCode: 7040001
+    commit: 01d924b617ba47fd4970850b8f9ae4dbf103c454
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - other
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    prebuild: sed -i -e '/firebase/d' ../flavor-google/build.gradle
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 7.5.0
+    versionCode: 7050000
+    commit: 24fb03a0b8a1d5ac5f6be7eb4c6af5fc5a945752
+    subdir: app
+    gradle:
+      - other
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    prebuild: sed -i -e '/firebase/d' ../flavor-google/build.gradle
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 7.6.1
+    versionCode: 7060100
+    commit: 4b2e0a01bf91fabdf4e6f1fa264f18bd3265cae6
+    subdir: app
+    gradle:
+      - other
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    rm:
+      - flavor-google
+    prebuild:
+      - sed -i -e '/flavor-google/d' ../settings.gradle
+      - sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/flavor-google/d' -e '/applicationVariants/,/^}/d' build.gradle
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 7.7.0
+    versionCode: 7070000
+    commit: a90b1ba86f6f598ccd4a6c385da017bec8cc3059
+    subdir: app
+    gradle:
+      - other
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    rm:
+      - flavor-google
+    prebuild:
+      - sed -i -e '/flavor-google/d' ../settings.gradle
+      - sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/flavor-google/d' -e '/applicationVariants/,/^}/d' build.gradle
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      '$$OUT$$' 'META-INF/services/*'
+
+AllowedAPKSigningKeys: efa5cfcab9669ddc2535bb40c8470395db587e8bff5a7adfcddd8e2266f159f0
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[0-9\.]+$
+UpdateCheckData: gradle/libs.versions.toml|versionCode\s=\s"(\d+)"|.|versionName\s=\s"(.+)"
+CurrentVersion: 7.7.0
+CurrentVersionCode: 7070000

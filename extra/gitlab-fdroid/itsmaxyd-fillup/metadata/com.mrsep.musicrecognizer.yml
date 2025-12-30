@@ -1,0 +1,378 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on AudD music recognition service
+Categories:
+  - Internet
+  - Multimedia
+License: GPL-3.0-or-later
+AuthorName: Aleksey Saenko
+SourceCode: https://github.com/aleksey-saenko/MusicRecognizer
+IssueTracker: https://github.com/aleksey-saenko/MusicRecognizer/issues
+Translation: https://hosted.weblate.org/projects/audile/
+Changelog: https://github.com/aleksey-saenko/MusicRecognizer/releases
+
+AutoName: Audile
+
+RepoType: git
+Repo: https://github.com/aleksey-saenko/MusicRecognizer.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: a82bfcbfd5d7f3519692f85e3c8245cadeb63cf3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: 9e38404531dc83ce1b6f97de8c574fe054a0228d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 3
+    commit: 5592d0c426884f21a615722741b73e85692c9d6c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 4
+    commit: 9e4fa0cf739a9db52a6ca616763f9c4fb3677343
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 5
+    commit: 4ad1fd9225e7aef5582132fdc8c940824e0d6e43
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 6
+    commit: 318edd213bf95a3274fa96a6803a3c05ebc8b194
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.4
+    versionCode: 7
+    commit: b61e67405185168e7b7ab557de64aaa44f035327
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.5
+    versionCode: 8
+    commit: 443cf6cf8b81c8c9ee213cfe9c5e8ff8f8c78191
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 9
+    commit: 5a2b48bd572b41866f902e0d0617b2db7556b3a1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 10
+    commit: 1bac4ec5efdc48ce0c38da48f409151b3b686888
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 11
+    commit: f2cd3610f51f9a3b544263e1eb0bd69bf2ecd723
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.2.3
+    versionCode: 12
+    commit: 76946ad5f055f2353897b7aad28085e19a5e2385
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 13
+    commit: e6890ae45b462971097c00aa5c104c91311e5be6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 14
+    commit: 0ae7fae49d343e1d91d7f75e79094a431f105290
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 15
+    commit: fd7031365632a9e11e17d945e7f649ec119f9a62
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 16
+    commit: 0b23eeee72f302bb4f57bbc2238460e3733cd670
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 17
+    commit: 2a1244c68fd0f8807a7bc6176d42a9126e08ecf8
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.5.0
+    versionCode: 18
+    commit: 35445bba2fbcbe645a1a99afc4d799bf685d7f0b
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.5.1
+    versionCode: 19
+    commit: 37cb202ade9204329fbdc6be2faf213fcf4d36c3
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.5.2
+    versionCode: 20
+    commit: 83f2253819fd89b00a9dd2ae6b1afb94255c2f6e
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.5.3
+    versionCode: 21
+    commit: 37a0e4f6ba17851b29f172b1f1a3918afc56e634
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.5.4
+    versionCode: 22
+    commit: fef7fe7dbdd93b5f05848f10e26ff794a5e2e391
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.6.0
+    versionCode: 23
+    commit: 0300ee02bf91b149677a28f4049eb76160a34a0c
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.7.0
+    versionCode: 24
+    commit: cfbaf7bc334a49adf03406cc68d2ede6c4dba68d
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.7.1
+    versionCode: 25
+    commit: bbac4ec44f6fc94562436cdc9e00bd7a345f62b2
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.7.2
+    versionCode: 26
+    commit: 70721dfefc8487aab4ac7ad6b6cd532fd9e9ec62
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.7.3
+    versionCode: 27
+    commit: 42cec7627866c1fec4cfd91b8a792e9f2b90aa1d
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.8.0
+    versionCode: 28
+    commit: 6a14e18f6b9e72ae0e91a5ee56f89903554b5b68
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.9.0
+    versionCode: 29
+    commit: c75629c2a10edd18c7353de80d49749875fe7dc9
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.10.0
+    versionCode: 30
+    commit: ddf4ebf34c27d4e9ad21bff794811cf9ff214602
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.10.1
+    versionCode: 31
+    commit: 65c32eedb9368ac674c0f0ef0cccbdb657109995
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.11.0
+    versionCode: 32
+    commit: 0e2ed409d67e1ae856ee733adb0a4c509fafa4cd
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/androidGradlePlugin/s/8.12.0/8.11.1/' ../gradle/libs.versions.toml
+    scandelete:
+      - build-logic
+
+  - versionName: 1.12.1
+    versionCode: 34
+    commit: 82e6ca078e07c96bb522fd77d7765b5c496bfc8f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/androidGradlePlugin/s/8.12.0/8.11.1/' ../gradle/libs.versions.toml
+    scandelete:
+      - build-logic
+
+  - versionName: 1.13.0
+    versionCode: 35
+    commit: b5b0a36aa8796bd9fe9c1212dd749f1404f79095
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential curl tar gzip
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+    build:
+      - cd ../core/recognition/src/main/cpp/vibrafp/third_party/
+      - chmod +x ./build-fftw-android.sh && ./build-fftw-android.sh
+    ndk: 29.0.14206865
+
+  - versionName: 1.13.1
+    versionCode: 36
+    commit: 14a76cb1871e0bf0f5b989f730d266ea71589afe
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential curl tar gzip
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+    build:
+      - cd ../core/recognition/src/main/cpp/vibrafp/third_party/
+      - chmod +x ./build-fftw-android.sh && ./build-fftw-android.sh
+    ndk: 29.0.14206865
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]+$
+CurrentVersion: 1.13.1
+CurrentVersionCode: 36

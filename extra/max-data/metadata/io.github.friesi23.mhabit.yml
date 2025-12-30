@@ -1,0 +1,2381 @@
+Categories:
+  - Habit Tracker
+  - Sports & Health
+License: Apache-2.0
+AuthorName: FriesI23
+AuthorEmail: FriesI23@outlook.com
+SourceCode: https://github.com/FriesI23/mhabit
+IssueTracker: https://github.com/FriesI23/mhabit/issues
+Changelog: https://github.com/FriesI23/mhabit/blob/HEAD/CHANGELOG.md
+Donate: https://www.buymeacoffee.com/d49cb87qgww
+
+AutoName: Table Habit
+
+RepoType: git
+Repo: https://github.com/FriesI23/mhabit.git
+Binaries: https://github.com/FriesI23/mhabit/releases/download/v%v%2B%c/app-release.apk
+
+Builds:
+  - versionName: 1.3.0
+    versionCode: 8
+    commit: v1.3.0+8
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.3.1
+    versionCode: 9
+    commit: cfc88093cce860838518677cd145b28ef872a356
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.3.2
+    versionCode: 10
+    commit: 3b8258ac61cfd24011cecc1ef69c39ed091efd29
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.4.0
+    versionCode: 11
+    commit: 22b2c1fcdb6250704b861769a891b42432f5e461
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.4.1
+    versionCode: 12
+    commit: 1e83b05071214903bb4de9125b233c9b5b6bb570
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.4.2
+    versionCode: 13
+    commit: 61c7cd6ca5ee8579b011261ebacd6774ffb5a694
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.5.0
+    versionCode: 14
+    commit: 2d968aa7acbf06187de7df086eb1b813c21bb097
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.5.1
+    versionCode: 15
+    commit: b1fe089b289c1e7613388d82df8b5f558e5d1c4d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.7.0
+    versionCode: 17
+    commit: 0d349bc35e210716ef8241c6c999a6393b0373b9
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.7.1
+    versionCode: 18
+    commit: edf202decb16f56e0443c823378f43f0dca06861
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.8.0
+    versionCode: 19
+    commit: 7a4f782fa2497308da3a3285265187129a878e31
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.8.1
+    versionCode: 20
+    commit: ba628e1d5501af760115bff2e3d145fd6d7294c9
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.8.2
+    versionCode: 21
+    commit: d13d72d488a48b32f995d290cd798e85c7930553
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.8.3
+    versionCode: 22
+    commit: 892db3e384cfe2786e9d02fd5effad5545589e7b
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.8.4
+    versionCode: 23
+    commit: 11a43d13d2c2c20dbd87d2a4c4cdaa6b14cb63bf
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.8.5
+    versionCode: 24
+    commit: f7adf2b19059a65b44ca461667312d6236bc84d7
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.9.0
+    versionCode: 25
+    commit: aeaec2590cbd17ef211a7738daf87f3d056f3c27
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.9.1
+    versionCode: 26
+    commit: ef5006677801e59fed91d55aacc88ad2d550c9b8
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.9.2
+    versionCode: 27
+    commit: 816b61edd27dfb94d65c5161d953b5935ad42ec3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.10.0
+    versionCode: 28
+    commit: 5b642d0466ffc866315a609238ba953181fa0a73
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.10.1
+    versionCode: 29
+    commit: be61e9e8208ab25e1a4914f2c5cf8ba67e2d9a25
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.10.2
+    versionCode: 30
+    commit: 414c50823216a7d7d1a647c0a2f2bc32bb5d0968
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.10.4
+    versionCode: 32
+    commit: d04fd70dddf7b05a0839f92dedd24a4e9c678abc
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.10.5
+    versionCode: 33
+    commit: 97ca50a794d81a45d2cd8190678147e2acf995e5
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.10.6
+    versionCode: 34
+    commit: 34b3307c68ef4c24213a1abc4c4f4dfee88dca08
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.11.0
+    versionCode: 35
+    commit: 955f2c2b70241715d658e6b495e3a321b09bc53d
+    submodules: true
+    sudo:
+      - apt-get update
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.11.1
+    versionCode: 36
+    commit: d4ef4d7947c8ac3980fae69c463e8c07b712148a
+    submodules: true
+    sudo:
+      - apt-get update
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.12.0
+    versionCode: 37
+    commit: 4537d87ff63eec4b8803706b0c3020faf5149d23
+    submodules: true
+    sudo:
+      - apt-get update
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.12.2
+    versionCode: 39
+    commit: 002ba60be17abc6d6372689168f3939faa716f3c
+    submodules: true
+    sudo:
+      - apt-get update
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.12.5
+    versionCode: 42
+    commit: 119d3feded7ac00d854b3051bdc7f4e0f397b539
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.12.8
+    versionCode: 45
+    commit: 427c422d94b0f47d3591ecc006e150f2c3154d16
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.13.1
+    versionCode: 47
+    commit: 8d015e954d300027d57d6f4b01b93efd22a8fe31
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.13.3
+    versionCode: 49
+    commit: 660aebe1a941601587f1d4f0d779d52334847d00
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.13.6
+    versionCode: 52
+    commit: 0ef4434bd561abbc290b50f0c6a3803075449b3b
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.14.1
+    versionCode: 54
+    commit: 5835b31f2342f7b1618a858c97f987b4a8a6da40
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.14.4
+    versionCode: 57
+    commit: 2a26738e79db88f4365007fedc739a2b1de03ce0
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.15.3
+    versionCode: 61
+    commit: 5db39a4ac11d217e50b38550ccd08af510e26290
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.15.4
+    versionCode: 62
+    commit: 9be9cacb85baf10643789d053e2dac12d602539b
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.15.8
+    versionCode: 66
+    commit: b29650884346170d91413aeeb72b2b0618580c9b
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.16.3
+    versionCode: 70
+    commit: 5ffadec9f13035d7325e50ada2b79ad738e672ab
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.16.7
+    versionCode: 74
+    commit: a295f33dd7eea84635fcbccec94bda1290857180
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.16.10
+    versionCode: 78
+    commit: d788e928ff13d0ca2746a6b9fc1aa5196f8e8b9e
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.16.14
+    versionCode: 83
+    commit: 212459d4c9b6d581b516c513e4ff4030c3cadb99
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.16.17
+    versionCode: 86
+    commit: adbc30b7d81e47af4d1b347cd4ac091f5f3c2416
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.16.20
+    versionCode: 89
+    commit: f7630fdc6798c52a93c56318a861ad5a3ec1eda4
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.16.22
+    versionCode: 91
+    commit: 56e923e8cbea433453d0a5b31ed569d81e5f4e76
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.17.2
+    versionCode: 95
+    commit: a6b4d7a9c2c6dc32473ca63130db2c48acb72a3e
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.17.5
+    versionCode: 98
+    commit: f7885092f03e2780be06608f766fa439d3cf6433
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit
+      - mkdir -p $repo
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo/mhabit
+      - pushd $repo/mhabit
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo/mhabit io.github.friesi23.mhabit
+
+  - versionName: 1.17.10
+    versionCode: 102
+    commit: 8ced412b7b122f6aacc36cbd150ac6ae61bd4b41
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{file_selector,path_provider,shared_preferences,url_launcher}_android-*/android/build.gradle
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+  - versionName: 1.18.0
+    versionCode: 106
+    commit: 9e6b9b0e68a6e7fedd8701ee4cf3224f6d7f6aa1
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{file_selector,path_provider,shared_preferences,url_launcher}_android-*/android/build.gradle
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+  - versionName: 1.19.0
+    versionCode: 109
+    commit: e396883469a67126a1e7dab1f2e8b855e8b34c4b
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{file_selector,path_provider,shared_preferences,url_launcher}_android-*/android/build.gradle
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+  - versionName: 1.20.0
+    versionCode: 111
+    commit: c17830babcb686ef0a55c3b01ba785e18318d62f
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{file_selector,path_provider,shared_preferences,url_launcher}_android-*/android/build.gradle
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+  - versionName: 1.20.1
+    versionCode: 115
+    commit: 47a87696d237ad4ab9a37cbb3482d2ba4a71bfa1
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{file_selector,path_provider,shared_preferences,url_launcher}_android-*/android/build.gradle
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+  - versionName: 1.21.0
+    versionCode: 118
+    commit: 373e2740cc3bcc70d49d5443307b8b289f80bd95
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{file_selector,path_provider,shared_preferences,url_launcher}_android-*/android/build.gradle
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+  - versionName: 1.21.1
+    versionCode: 120
+    commit: c710efa2e2057a07370ad1d92918c3e78626a682
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+  - versionName: 1.22.1
+    versionCode: 125
+    commit: 4c2156cb3abcc690effa0fd2b0524755bacd6307
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+  - versionName: 1.22.2
+    versionCode: 129
+    commit: ed98fa38d7010ed6ed60e865a033c623b4314501
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+  - versionName: 1.22.6
+    versionCode: 133
+    commit: 776f38f204f1c8cfa6e983702ac12bb204f56658
+    submodules: true
+    sudo:
+      - mkdir -p /home/runner/work/mhabit
+      - chown -R vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .vscode
+      - demo
+      - ios
+    prebuild:
+      - sed -i -e '/signingConfig /d' android/app/build.gradle
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/mhabit/mhabit
+      - cd ..
+      - mv io.github.friesi23.mhabit $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk
+      - popd
+      - mv $repo io.github.friesi23.mhabit
+
+AllowedAPKSigningKeys: 4a31e799063f721d62135f0925f316c2f5e5ab08b462fc4b957673c9b40869b5
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v.*$
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.22.6
+CurrentVersionCode: 133

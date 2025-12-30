@@ -1,0 +1,60 @@
+Categories:
+  - Games
+License: Apache-2.0
+AuthorName: Crazy Marvin & Contributors
+AuthorEmail: marvin@poopjournal.rocks
+AuthorWebSite: https://crazymarvin.com/
+WebSite: https://halma.app/
+SourceCode: https://github.com/Crazy-Marvin/Halma
+IssueTracker: https://github.com/Crazy-Marvin/Halma/issues
+Translation: https://hosted.weblate.org/engage/halma/
+Changelog: https://github.com/Crazy-Marvin/Halma/releases
+Donate: https://poopjournal.rocks/blog/donate/
+Liberapay: PoopJournal
+Bitcoin: 1DAzWTRQFG3i1HJJvwjPhBVT7q9zv8SxBB
+
+AutoName: Halma
+
+RepoType: git
+Repo: https://github.com/Crazy-Marvin/Halma
+
+Builds:
+  - versionName: '10.0'
+    versionCode: 10
+    commit: 82aef48cb0e179f30e304e212c5c7d6e11717342
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: '11.0'
+    versionCode: 11
+    commit: a5f73cb9f93a24deb94d3014d9bbfeced15800c9
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: '12.0'
+    versionCode: 12
+    commit: b0cd13a01199f5dcb06de70888766cc4db3c5b2e
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: '13.0'
+    versionCode: 13
+    commit: 49c4d753280cdc33047121a54339f0677da08921
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: '15.0'
+    versionCode: 15
+    commit: f1d279132d37d3dd13bc96913cd3804d49bf6829
+    subdir: android
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '15.0'
+CurrentVersionCode: 15

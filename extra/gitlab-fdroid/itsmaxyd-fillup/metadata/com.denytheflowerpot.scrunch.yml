@@ -1,0 +1,51 @@
+Categories:
+  - System
+License: EUPL-1.2
+AuthorName: DenyTheFlowerpot
+SourceCode: https://github.com/DenyTheFlowerpot/Scrunch
+IssueTracker: https://github.com/DenyTheFlowerpot/Scrunch/issues
+Changelog: https://github.com/DenyTheFlowerpot/Scrunch/releases
+
+AutoName: Scrunch
+
+RepoType: git
+Repo: https://github.com/DenyTheFlowerpot/Scrunch
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 1
+    commit: d684ad961802bfd8ec506c502a8adafc6ad7b5a7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.2'
+    versionCode: 2
+    commit: fb7d39badd22678ea9f50d727671caf5a007407e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.3'
+    versionCode: 3
+    commit: 1d45987a138e14c3f027c558e9fc38b9b26f1cae
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '0.3'
+CurrentVersionCode: 3

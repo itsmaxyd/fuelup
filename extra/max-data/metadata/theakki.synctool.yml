@@ -1,0 +1,72 @@
+Categories:
+  - Cloud Storage & File Sync
+  - Connectivity
+  - System
+License: LGPL-3.0-or-later
+SourceCode: https://github.com/TheAkki/Synctool
+IssueTracker: https://github.com/TheAkki/Synctool/issues
+
+AutoName: SyncTool
+Description: |-
+  Synctool can synchronize data between an Android smartphone and a server with
+  FTP and ownCloud.
+
+  <b>Features</b>
+
+  <i>Targets</i>
+
+  * Local Files
+  * Owncloud
+  * FTP
+
+  <i>Directions</i>
+
+  * From A to B
+  * From B to A
+  * Both Directories
+
+  <i>Strategies</i>
+
+  * Copy new files
+  * Mirror
+  * Copy new files in a folder with actual data
+  * Copy all files in a folder with actual data
+  * Move File
+  * Move in a folder with actual data
+  * One side wins
+  * Date check
+
+  <i>Trigger</i>
+
+  * Trigger daily on selected time
+
+RepoType: git
+Repo: https://github.com/TheAkki/Synctool.git
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 100
+    commit: v0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.1
+    versionCode: 142
+    commit: 08731fdab6b7187c09a8d324805ac1d924ff898f
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y -t sid openjdk-8-jdk-headless
+      - update-java-alternatives --set java-1.8.0-openjdk-amd64
+      - chmod -R 777 /opt/android-sdk
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/versionCode .*/versionCode $$VERCODE$$/' -e 's/versionName
+      .*/versionName "$$VERSION$$"/' build.gradle
+
+AutoUpdateMode: None
+UpdateCheckMode: Tags
+CurrentVersion: 0.1.1
+CurrentVersionCode: 142

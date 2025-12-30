@@ -1,0 +1,53 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Rely on non-free api of delivery services.
+Categories:
+  - Internet
+License: GPL-3.0-or-later
+AuthorName: it's vic!
+AuthorWebSite: https://itsvic.dev
+SourceCode: https://github.com/itsvic-dev/Parcel
+IssueTracker: https://github.com/itsvic-dev/Parcel/issues
+Donate: https://github.com/sponsors/itsvic-dev
+
+AutoName: Parcel
+
+RepoType: git
+Repo: https://github.com/itsvic-dev/Parcel
+Binaries: https://github.com/itsvic-dev/Parcel/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 1.1.0
+    versionCode: 10100000
+    commit: 0bb457aa38299821785d5f1f2a33f3bffafb36ca
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 10200000
+    commit: 1749c0ea160b8e94585e87d5fc33a7b519fd1b28
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 10300000
+    commit: 6279d8d968884846878159a00ff4028d611783ca
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 10400000
+    commit: 769826cef5759145767aee8709bda699c4b0022a
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 35878a7bd1039f1d8dfe6b1fd4ed5df29afc931b3e561cd065448d5ee0bd7762
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.4.0
+CurrentVersionCode: 10400000

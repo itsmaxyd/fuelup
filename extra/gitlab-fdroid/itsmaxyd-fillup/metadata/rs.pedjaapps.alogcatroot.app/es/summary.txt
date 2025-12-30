@@ -1,0 +1,1 @@
+Mire los registros de Android (logcat) con colores directamente de tu teléfono.

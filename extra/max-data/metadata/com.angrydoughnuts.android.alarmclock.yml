@@ -1,0 +1,93 @@
+Categories:
+  - Time
+License: Apache-2.0
+SourceCode: https://github.com/kraigs-android/kraigsandroid
+IssueTracker: https://github.com/kraigs-android/kraigsandroid/issues
+
+AutoName: Alarm Klock
+Description: |-
+  * Global and per-alarm settings
+  * Repeats for days of the week
+  * Ringtone and/or vibrate
+  * Use MP3s/Media library as alarms
+  * Variable snooze time
+  * Variable volume adjustment
+  * Localizations: it, nl, pt, de, sr, hr, fr, es
+
+RepoType: git
+Repo: https://github.com/kraigs-android/kraigsandroid.git
+
+Builds:
+  - versionName: '1.7'
+    versionCode: 8
+    commit: alarmclock-1.7
+    subdir: android/alarmclock
+
+  - versionName: '1.9'
+    versionCode: 10
+    commit: alarmclock-1.9
+    subdir: android/alarmclock
+
+  - versionName: '1.10'
+    versionCode: 11
+    commit: alarmclock-1.10
+    subdir: android/alarmclock
+    patch:
+      - gradle-11.patch
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 14
+    commit: alarmclock-2.2
+    subdir: android/alarmclock
+    patch:
+      - gradle-11.patch
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 15
+    commit: alarmclock-2.3
+    subdir: android/alarmclock
+    patch:
+      - gradle-11.patch
+    gradle:
+      - yes
+
+  - versionName: '2.10'
+    versionCode: 24
+    commit: alarmclock-2.10
+    subdir: android/alarmclock/klock
+    gradle:
+      - yes
+
+  - versionName: '2.11'
+    versionCode: 25
+    commit: 4259b4e35f03eaa3334c9c47a6fba116d714f404
+    subdir: android/alarmclock/klock
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.12'
+    versionCode: 26
+    commit: 5f52d9101646f58dc45e05eaf52330ab30855b23
+    subdir: android/alarmclock/klock
+    gradle:
+      - yes
+
+  - versionName: '2.13'
+    versionCode: 27
+    commit: 8d9f6b898e6c41ade5a7c852fd46d7c723ce51ef
+    subdir: android/alarmclock/klock
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags .*[0-9]$
+CurrentVersion: '2.13'
+CurrentVersionCode: 27

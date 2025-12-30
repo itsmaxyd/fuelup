@@ -1,0 +1,179 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: service used for currency conversion is not libre.
+Categories:
+  - Science & Education
+  - Unit Convertor
+License: Apache-2.0
+SourceCode: https://github.com/physphil/UnitConverterUltimate
+IssueTracker: https://github.com/physphil/UnitConverterUltimate/issues
+
+AutoName: Unit Converter Ultimate
+Description: |-
+  A simple and easy-to-use unit converter to handle any conversion you'll ever
+  need.
+
+  The beautiful Material Design user interface allows for quick and easy
+  conversions from a number in one unit to another. The goal is to keep it simple
+  - you won't be overwhelmed with an excess of options and settings, allowing you
+  to perform your desired conversion as quickly as possible. Perfect for work,
+  school or in the kitchen.
+
+  Anti-Features: NonFreeNet - it connects to the internet for currency conversion
+
+RepoType: git
+Repo: https://github.com/physphil/UnitConverterUltimate.git
+
+Builds:
+  - versionName: '4.2'
+    versionCode: 40200
+    commit: v4.2
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/com/physphil/android/unitconverterultimate/DonateActivity.java
+      - app/src/main/java/com/physphil/android/unitconverterultimate/ui/DonationListAdapter.java
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+
+  - versionName: '5.1'
+    versionCode: 50100
+    commit: v5.1
+    subdir: app
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+  - versionName: '5.2'
+    versionCode: 50200
+    commit: v5.2
+    subdir: app
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+  - versionName: 5.3.1
+    versionCode: 50301
+    commit: v5.3.1
+    subdir: app
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+  - versionName: 5.3.3
+    versionCode: 50303
+    commit: v5.3.3
+    subdir: app
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+  - versionName: '5.4'
+    versionCode: 50401
+    commit: v5.4.1
+    subdir: app
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+  - versionName: '5.5'
+    versionCode: 50500
+    commit: v5.5
+    subdir: app
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+  - versionName: '5.6'
+    versionCode: 50600
+    commit: v5.6
+    subdir: app
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+  - versionName: '5.7'
+    versionCode: 50700
+    commit: v5.7
+    subdir: app
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+  - versionName: 5.7.2
+    versionCode: 50702
+    commit: 542cd0dd1aa470fb5eeea9785eb144ba5c131ca5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+  - versionName: 5.7.3
+    versionCode: 50703
+    commit: 975daef32cba6ac801d509328efd63aa86b1e4b8
+    subdir: app
+    gradle:
+      - base
+    prebuild:
+      - perl -0 -p -i -e 's|<Preference\s[^<]*<intent\s[^<]*\.DonateActivity".*?</Preference>\s*||s'
+        app/src/main/res/xml/preferences.xml
+      - perl -0 -p -i -e 's|<activity\s[^<]*"\.DonateActivity".*?/>\s*||s' app/src/main/AndroidManifest.xml
+      - sed -i -e '/gms/d' -e 's/\(repositories {\)/\1 jcenter()/' ../build.gradle
+      - sed -i -e '/firebase/d' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 5.7.3
+CurrentVersionCode: 50703

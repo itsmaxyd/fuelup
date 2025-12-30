@@ -1,0 +1,28 @@
+Categories:
+  - System
+License: Apache-2.0
+SourceCode: https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://bitbucket.org/wiffenproof/droid-examiner
+IssueTracker: https://bitbucket.org/wiffenproof/droid-examiner/issues
+
+AutoName: Droid Examiner
+Description: |-
+  Simple app to display information about device hardware and software. Doesn't
+  require a touchscreen.
+
+RepoType: git
+Repo: https://github.com/jackpal/droid-examiner.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: f35fa73
+    extlibs:
+      - android/android-support-v4.jar
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.0'
+CurrentVersionCode: 1
+
+NoSourceSince: '1.0'

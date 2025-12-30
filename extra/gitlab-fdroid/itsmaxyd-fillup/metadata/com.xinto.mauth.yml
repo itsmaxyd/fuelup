@@ -1,0 +1,109 @@
+Categories:
+  - Password & 2FA
+  - Security
+License: GPL-3.0-or-later
+AuthorName: Xinto
+SourceCode: https://github.com/X1nto/Mauth
+IssueTracker: https://github.com/X1nto/Mauth/issues
+Changelog: https://github.com/X1nto/Mauth/releases
+
+AutoName: Mauth
+
+RepoType: git
+Repo: https://github.com/X1nto/Mauth.git
+
+Builds:
+  - versionName: 0.2.1
+    versionCode: 21
+    commit: 0.2.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.3.0
+    versionCode: 30
+    commit: 0.3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.0
+    versionCode: 40
+    commit: 2fd588390307e34ae782618efcd5b0a25545e816
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.0
+    versionCode: 50
+    commit: 051481989f3f492d6d05444eadf3ef1b09a19841
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.2
+    versionCode: 52
+    commit: b15d27654d5aff79a0900c06169da9ce27f9265b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.3
+    versionCode: 53
+    commit: 6ff4a5fbaebd170bd97e43bdab884f176e6a30da
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.1
+    versionCode: 61
+    commit: a9ab554d3063b177ffcadaf0f8652505514136b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.7.0
+    versionCode: 70
+    commit: 94d170afda05b662ffeee86724f21ad3181c9e69
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.8.0
+    versionCode: 80
+    commit: 22e62020af0fd8008a6569100103577456ab40fc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.0
+    versionCode: 90
+    commit: 552214f80dc1cb5cf6ec3dd098f57607c5777044
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.10.0
+    versionCode: 100
+    commit: 2f467289099696fc02397dfed097c7eae88c02e0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.13.0/8.11.1/' ../build.gradle.kts
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.10.0
+CurrentVersionCode: 100

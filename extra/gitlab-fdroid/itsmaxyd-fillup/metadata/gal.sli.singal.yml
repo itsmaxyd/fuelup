@@ -1,0 +1,42 @@
+Categories:
+  - Science & Education
+  - Translation & Dictionary
+License: GPL-3.0-only
+AuthorName: Xavier Gómez Guinovart
+AuthorEmail: xgg2021@gmail.com
+AuthorWebSite: http://sli.uvigo.gal/
+SourceCode: https://github.com/xavier-gz/singal
+IssueTracker: https://github.com/xavier-gz/singal/issues
+
+AutoName: Dicionario SinGal
+
+RepoType: git
+Repo: https://github.com/xavier-gz/singal
+
+Builds:
+  - versionName: '2.0'
+    versionCode: 20
+    commit: v2.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 21
+    commit: f89eb612a277b4b63df79c6e2bf8d35596a18618
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '2.1'
+CurrentVersionCode: 21

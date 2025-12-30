@@ -1,0 +1,195 @@
+Categories:
+  - System
+License: GPL-3.0-or-later
+SourceCode: https://github.com/domogik/domodroid
+IssueTracker: https://github.com/domogik/domodroid/issues
+Changelog: https://github.com/domogik/domodroid/blob/HEAD/Domodroid/src/main/res/raw/changelog.txt
+
+AutoName: Domodroid
+Description: |-
+  <b>NOTE:</b> The app and server have not seen any development in years.
+
+  <i>Domodroid</i> is a remote control application that allow you to control your
+  <a href="http://www.domogik.org/">Domogik</a> home automation system. The following features
+  are already available on the latest version of <i>Domodroid:</i>
+
+  * Graph Data Values with homemade graph engine (by default)
+  * Graph Data Values with Achartengine (in development)
+  * Video camera streaming
+  * On/Off (2 versions available), Variator, Actuator, State and Data Widgets
+  * Auto-Updated widgets
+  * Full icon pack supported
+  * Technologies supported: Onewire, PLCBus, IPX800, Mirror, Teleinfo, X10, WakeOnLan, Ping, Zibase, RFXCom, YahooWather (Theorycally, all that are supported by Domogik)
+  * All screen size supported Smartphone/Tablet
+  * Power management control
+  * Startup directly in map mode.
+
+RepoType: git
+Repo: https://github.com/domogik/domodroid.git
+
+Builds:
+  - versionName: '1.4'
+    versionCode: 16
+    commit: 1.4.16
+    subdir: Domodroid
+    gradle:
+      - yes
+    srclibs:
+      - AChartEngineFr3ts0n@e2594a4a257cfeacba3595f1b16218a5541810c3
+    forceversion: true
+    rm:
+      - Domodroid/libs/*.jar
+    prebuild:
+      - pushd $$AChartEngineFr3ts0n$$
+      - mvn package
+      - popd
+      - cp $$AChartEngineFr3ts0n$$/target/achartengine-1.2.0.jar libs/
+
+  - versionName: '1.4'
+    versionCode: 18
+    commit: 1.4.18b
+    subdir: Domodroid
+    gradle:
+      - yes
+    srclibs:
+      - AChartEngineFr3ts0n@e2594a4a257cfeacba3595f1b16218a5541810c3
+    forceversion: true
+    rm:
+      - Domodroid/libs/*.jar
+    prebuild:
+      - pushd $$AChartEngineFr3ts0n$$
+      - mvn package
+      - popd
+      - cp $$AChartEngineFr3ts0n$$/target/achartengine-1.2.0.jar libs/
+
+  - versionName: '1.4'
+    versionCode: 20
+    commit: 1.4.20
+    subdir: Domodroid
+    gradle:
+      - yes
+    srclibs:
+      - AChartEngineFr3ts0n@e2594a4a257cfeacba3595f1b16218a5541810c3
+    forceversion: true
+    rm:
+      - Domodroid/libs/*.jar
+    prebuild:
+      - pushd $$AChartEngineFr3ts0n$$
+      - mvn package
+      - popd
+      - cp $$AChartEngineFr3ts0n$$/target/achartengine-1.2.0.jar libs/
+
+  - versionName: '1.4'
+    versionCode: 23
+    commit: 1.4.22
+    subdir: Domodroid
+    gradle:
+      - yes
+    srclibs:
+      - AChartEngineFr3ts0n@e2594a4a257cfeacba3595f1b16218a5541810c3
+    forceversion: true
+    rm:
+      - Domodroid/libs/*.jar
+    prebuild:
+      - pushd $$AChartEngineFr3ts0n$$
+      - mvn package
+      - popd
+      - cp $$AChartEngineFr3ts0n$$/target/achartengine-1.2.0.jar libs/
+
+  - versionName: '1.4'
+    versionCode: 24
+    commit: 1.4.24
+    subdir: Domodroid
+    gradle:
+      - yes
+    srclibs:
+      - AChartEngineFr3ts0n@e2594a4a257cfeacba3595f1b16218a5541810c3
+    forceversion: true
+    rm:
+      - Domodroid/libs/*.jar
+    prebuild:
+      - pushd $$AChartEngineFr3ts0n$$
+      - mvn package
+      - popd
+      - cp $$AChartEngineFr3ts0n$$/target/achartengine-1.2.0.jar libs/
+
+  - versionName: '1.4'
+    versionCode: 26
+    commit: 1.4.26
+    subdir: Domodroid
+    gradle:
+      - yes
+    srclibs:
+      - AChartEngineFr3ts0n@e2594a4a257cfeacba3595f1b16218a5541810c3
+    forceversion: true
+    rm:
+      - Domodroid/libs/*.jar
+    prebuild:
+      - sed -i -e '/testCoverageEnabled/s/true/false/' build.gradle
+      - pushd $$AChartEngineFr3ts0n$$
+      - mvn package
+      - popd
+      - cp $$AChartEngineFr3ts0n$$/target/achartengine-1.2.0.jar libs/
+
+  - versionName: '1.4'
+    versionCode: 27
+    commit: 1.4.27
+    subdir: Domodroid
+    gradle:
+      - yes
+    srclibs:
+      - AChartEngineFr3ts0n@e2594a4a257cfeacba3595f1b16218a5541810c3
+    forceversion: true
+    rm:
+      - Domodroid/libs/*.jar
+    prebuild:
+      - sed -i -e '/testCoverageEnabled/s/true/false/' build.gradle
+      - pushd $$AChartEngineFr3ts0n$$
+      - mvn package
+      - popd
+      - cp $$AChartEngineFr3ts0n$$/target/achartengine-1.2.0.jar libs/
+
+  - versionName: '1.4'
+    versionCode: 32
+    commit: 1.4.32
+    subdir: Domodroid
+    gradle:
+      - yes
+    srclibs:
+      - AChartEngineFr3ts0n@e2594a4a257cfeacba3595f1b16218a5541810c3
+    forceversion: true
+    rm:
+      - Domodroid/libs/*.jar
+    prebuild:
+      - sed -i -e '/testCoverageEnabled/s/true/false/' build.gradle
+      - pushd $$AChartEngineFr3ts0n$$
+      - mvn package
+      - popd
+      - cp $$AChartEngineFr3ts0n$$/target/achartengine-1.2.0.jar libs/
+
+  - versionName: '1.4'
+    versionCode: 33
+    commit: 1.4.33
+    subdir: Domodroid
+    gradle:
+      - yes
+    srclibs:
+      - AChartEngineFr3ts0n@e2594a4a257cfeacba3595f1b16218a5541810c3
+    forceversion: true
+    rm:
+      - Domodroid/libs/*.jar
+    prebuild:
+      - sed -i -e '/testCoverageEnabled/s/true/false/' build.gradle
+      - pushd $$AChartEngineFr3ts0n$$
+      - mvn package
+      - popd
+      - cp $$AChartEngineFr3ts0n$$/target/achartengine-1.2.0.jar libs/
+
+MaintainerNotes: Never update to pre-release builds since upstream uses same VC for
+  stable/release and alpha/beta versions.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.4'
+CurrentVersionCode: 33

@@ -1,0 +1,113 @@
+Categories:
+  - Money
+  - Writing
+License: MIT
+AuthorName: biotstoiq
+AuthorEmail: sofogos@protonmail.com
+AuthorWebSite: https://biotstoiq.org/
+WebSite: https://biotstoiq.gitlab.io/s/seshat.html
+SourceCode: https://gitlab.com/biotstoiq/seshat
+IssueTracker: https://gitlab.com/biotstoiq/seshat/-/issues
+Donate: https://biotstoiq.org/donate.html
+Bitcoin: bc1qp7668qpa9kfq2r36t7lwzkrud2hzmdvvdmvfq0
+
+Name: Seshat
+AutoName: Seshat
+Description: |-
+  <b>NOTE:</b> App repo is archived by dev. It is read-only for all users and it is no longer actively maintained.
+
+  <b>A minimalist logger/tracker/journal</b>
+
+  seshat is a simple and minimalist logger/journal which can keep track of
+  numerical values.
+
+  seshat can be used a wide range of purposes.
+  to learn more about the software and it's usages, please check out
+  https://biotstoiq.gitlab.io/software/seshat.
+
+  features
+  --------
+  * suckless in nature
+  * lightweight
+  * no ads/anti-features
+  * completely open-source
+  * completely hackable since the codebase is small
+  * designed with usability and efficiency in mind, rather than convenience
+  and eye-candyness
+
+  rationale for the lack of notification/notification-bar can be read here:
+  https://roidujeu.gitlab.io/blog/why_notifications_are_bad.html.
+
+  in a pool full of bloated software, please give this a try and spread the word!
+
+  website: https://biotstoiq.gitlab.io
+  source: https://biotstoiq.gitlab.io/source
+
+  made by biotstoiq, with love
+
+RepoType: git
+Repo: https://gitlab.com/biotstoiq/seshat.git
+
+Builds:
+  - versionName: '0.905'
+    versionCode: 6
+    commit: v0.905
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.906'
+    versionCode: 7
+    commit: 9983f05e82cbef18172433824e5c5961c61b7b9b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.907'
+    versionCode: 8
+    commit: ccc2a1616bd73740f00ab9fac95a2d08e7a8fd5a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.908'
+    versionCode: 9
+    commit: 87e0872fd16636c7399799b4dc033003af614651
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.91'
+    versionCode: 11
+    commit: c170723d32901a119caac40e2d060d10f8b8f873
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '0.91'
+CurrentVersionCode: 11
+
+NoSourceSince: '0.91'

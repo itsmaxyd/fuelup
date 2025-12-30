@@ -1,0 +1,34 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Money
+  - Wallet
+License: Apache-2.0
+AuthorName: nbd
+SourceCode: https://github.com/nbd-wtf/obw
+IssueTracker: https://github.com/nbd-wtf/obw/issues
+Changelog: https://github.com/nbd-wtf/obw/releases
+
+AutoName: OBW
+Description: |-
+  <b>NOTE:</b> App repo is archived by dev. It is read-only for all users and it is no longer actively maintained.
+
+  Open Bitcoin Wallet (OBW) is an open-source, non-custodial, fully autonomous Bitcoin wallet for Android with advanced onchain features, fully custom and advanced Lightning channel management, extensive LNURL support, support for Hosted Channels for immediately receiving Lightning payments with no hassle, among other experimental features.
+
+RepoType: git
+Repo: https://github.com/nbd-wtf/obw.git
+
+Builds:
+  - versionName: 0.2.1
+    versionCode: 12
+    commit: 8832c5578ff10568e638b45ac81fcc01bf32ebee
+    subdir: app
+    gradle:
+      - yes
+    prebuild: curl -Lo src/main/assets/graph.snapshot-mainnet.zlib https://github.com/nbd-wtf/obw/raw/$$COMMIT$$/app/src/main/assets/graph.snapshot-mainnet.zlib
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.2.1
+CurrentVersionCode: 12

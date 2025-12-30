@@ -1,0 +1,1 @@
+Gestor de lista de itens simples

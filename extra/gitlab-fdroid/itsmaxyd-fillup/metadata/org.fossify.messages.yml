@@ -1,0 +1,139 @@
+Categories:
+  - Phone & SMS
+License: GPL-3.0-only
+AuthorName: Fossify
+AuthorEmail: hello@fossify.org
+WebSite: https://www.fossify.org
+SourceCode: https://github.com/FossifyOrg/Messages
+IssueTracker: https://github.com/FossifyOrg/Messages/issues
+Translation: https://hosted.weblate.org/projects/fossify/sms-messenger/
+Changelog: https://github.com/FossifyOrg/Messages/releases
+Donate: https://www.fossify.org/donate
+Liberapay: naveensingh
+Bitcoin: bc1q5flmuh5f3canqza07cfekjn64p2aqvd2w7pnn3
+
+RepoType: git
+Repo: https://github.com/FossifyOrg/Messages.git
+Binaries: https://github.com/FossifyOrg/Messages/releases/download/%v/messages-%c-foss-release.apk
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: 61e0eed0fe809a49d07e7ae81cdbd5f2e4709c9e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: 38bc2ed8c1c1e002969b8cc344e0fd8a7d8e03dd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+
+  - versionName: 1.1.0
+    versionCode: 3
+    commit: 79971924d5e55d643aecb25515e8f00563466fd3
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.1.3
+    versionCode: 6
+    commit: 455588a3b1bf4c241140c5c5f937bed1d29c7b1e
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.1.4
+    versionCode: 7
+    commit: ddc0e8aa3cd14d303d84cf2e529601d443f34750
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.1.5
+    versionCode: 8
+    commit: 79d4782caf0447f6532712f7793dfb615704a9d9
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.1.6
+    versionCode: 9
+    commit: 4832d69e070983c58a56a491099d829f78b27b7d
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.1.7
+    versionCode: 10
+    commit: b965022576083500609bd28fe6a77f54021e1d81
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.2.1
+    versionCode: 12
+    commit: 8072fe2c2a41f0cc9cae926256f94e3acdb3ec6c
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.2.2
+    versionCode: 13
+    commit: 0a4ce2847c5549529ade0420257df1d0b5df5368
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.2.3
+    versionCode: 14
+    commit: c0f2c25e32640ab2877c58c0e13c9df9c742519b
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.3.0
+    versionCode: 15
+    commit: 16126c6f09d42e3dad5007fab7419ce9d91019fc
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.0
+    versionCode: 16
+    commit: c3f5cc0ef9845a76e7b6b253e22db147927b8756
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.6.0
+    versionCode: 18
+    commit: 86b5bf8eccd37c2a9e1c75fc162472cccbb6e245
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.7.0
+    versionCode: 19
+    commit: 03d1a51a94f94b8d62a1536f43b0a7d22a368926
+    subdir: app
+    gradle:
+      - foss
+
+AllowedAPKSigningKeys: affdb124d3f4720c2f98dbca9eacba0514fba4306e20a2786c861c3c0d6ff292
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle.properties|VERSION_CODE=(\d+)|.|VERSION_NAME=(.*)
+CurrentVersion: 1.7.0
+CurrentVersionCode: 19

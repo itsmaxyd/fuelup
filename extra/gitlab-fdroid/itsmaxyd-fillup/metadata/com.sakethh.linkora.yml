@@ -1,0 +1,250 @@
+Categories:
+  - Bookmark
+  - Internet
+License: MIT
+AuthorName: Saketh Pathike
+AuthorEmail: sakethh@proton.me
+AuthorWebSite: https://sakethpathike.github.io/
+SourceCode: https://github.com/LinkoraApp/Linkora
+IssueTracker: https://github.com/LinkoraApp/Linkora/issues
+Changelog: https://github.com/LinkoraApp/Linkora/releases
+
+AutoName: Linkora
+
+RepoType: git
+Repo: https://github.com/LinkoraApp/Linkora.git
+Binaries: https://github.com/LinkoraApp/Linkora/releases/download/release-v%v/composeApp-release.apk
+
+Builds:
+  - versionName: 0.7.0
+    versionCode: 25
+    commit: 43e00010ca0014fd2ce20a99910b707db238db09
+    subdir: app
+    gradle:
+      - fdroid
+    binary: https://github.com/LinkoraApp/Linkora/releases/download/release-v0.7.0/app-fdroid-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 0.7.1
+    versionCode: 26
+    commit: 0635588d27b4138a7822d317ed8c0423b5fd90b5
+    subdir: app
+    gradle:
+      - fdroid
+    binary: https://github.com/LinkoraApp/Linkora/releases/download/release-v0.7.1/app-fdroid-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 0.7.2
+    versionCode: 27
+    commit: a4232c53490be01cf40e40da66b9fb3e82b5d525
+    subdir: app
+    gradle:
+      - fdroid
+    binary: https://github.com/LinkoraApp/Linkora/releases/download/release-v0.7.2/app-fdroid-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 0.8.2
+    versionCode: 30
+    commit: 72c372c5d385472177d1736b8c47ea891d65c49b
+    subdir: app
+    gradle:
+      - fdroid
+    binary: https://github.com/LinkoraApp/Linkora/releases/download/release-v0.8.2/app-fdroid-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 0.9.0
+    versionCode: 31
+    commit: 2390718c9df59ba8b98730637cac13ffb6bd89d6
+    subdir: app
+    gradle:
+      - fdroid
+    binary: https://github.com/LinkoraApp/Linkora/releases/download/release-v0.9.0/app-fdroid-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 0.10.0
+    versionCode: 32
+    commit: 60d24196fe5c36f9b8fd23f40a6a79baee3a9140
+    subdir: app
+    gradle:
+      - fdroid
+    binary: https://github.com/LinkoraApp/Linkora/releases/download/release-v0.10.0/app-fdroid-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 0.11.2
+    versionCode: 35
+    commit: 524414247c0e2fdbc78f66bd6dd7a98af162166e
+    subdir: composeApp
+    gradle:
+      - yes
+
+  - versionName: 0.12.0
+    versionCode: 36
+    commit: 1ce1dda510a13856ff2172c9d544a6a5f1212ea0
+    subdir: composeApp
+    gradle:
+      - yes
+
+  - versionName: 0.13.0
+    versionCode: 37
+    commit: 4476c23944140b63263fa0b2043888bbe6ae562c
+    subdir: composeApp
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/LinkoraApp/Linkora/releases/download/release-v$$VERSION$$/composeApp-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.13.1
+    versionCode: 38
+    commit: ea3a4008cbe158aabdbd365ab41b4dfc78ca7f1f
+    subdir: composeApp
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/LinkoraApp/Linkora/releases/download/release-v$$VERSION$$/composeApp-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.13.3
+    versionCode: 40
+    commit: 01825980cde3de3dc2b70b586c3af49ca121ba24
+    subdir: composeApp
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/LinkoraApp/Linkora/releases/download/release-v$$VERSION$$/composeApp-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.13.5
+    versionCode: 41
+    commit: 3ed6780c7c3e740f19f561eb929ce61694519685
+    subdir: composeApp
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/LinkoraApp/Linkora/releases/download/release-v$$VERSION$$/composeApp-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.13.6
+    versionCode: 42
+    commit: aa4b59c8de7214b06939b018d15855876543004b
+    subdir: composeApp
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/LinkoraApp/Linkora/releases/download/release-v$$VERSION$$/composeApp-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.13.7
+    versionCode: 43
+    commit: 1685f27c71243e1fac26da08e21a0f75c65b0dc0
+    subdir: composeApp
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/LinkoraApp/Linkora/releases/download/release-v$$VERSION$$/composeApp-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 0.14.0
+    versionCode: 44
+    commit: c11dffef4125987356b8a8878a2ff6b6ba1e38e2
+    subdir: composeApp
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/LinkoraApp/Linkora/releases/download/release-v$$VERSION$$/composeApp-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+AllowedAPKSigningKeys: f3efd4da30e29011353b0da50ae9e3a3a74efb956adfa8cf2bf6b7e8df6f3d30
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.14.0
+CurrentVersionCode: 44

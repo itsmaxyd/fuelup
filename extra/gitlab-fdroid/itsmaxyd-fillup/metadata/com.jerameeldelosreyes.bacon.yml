@@ -1,0 +1,109 @@
+Categories:
+  - Connectivity
+License: MIT
+AuthorName: Jerameel Delos Reyes
+AuthorWebSite: https://jerameeldelosreyes.com
+SourceCode: https://github.com/jerameel/bacon
+IssueTracker: https://github.com/jerameel/bacon/issues
+
+AutoName: Bacon
+
+RepoType: git
+Repo: https://github.com/jerameel/bacon.git
+
+Builds:
+  - versionName: 1.5.0
+    versionCode: 11
+    commit: v1.5.0-fdroid-fastlane
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.19.1/node-v14.19.1-linux-x64.tar.xz
+      - echo "2a28ee68c58e2c3a2a4deecdf9ee1d7080afd69ebe211cf5141d45df8f4ecc77 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+    init: npm ci
+    gradle:
+      - yes
+    rm:
+      - node_modules/chokidar/node_modules/fsevents/fsevents.node
+      - node_modules/jest-haste-map/node_modules/fsevents/fsevents.node
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-ble-manager/android/build.gradle
+      - node_modules/@react-native-community/masked-view/android/build.gradle
+      - node_modules/@react-native-community/art/android/build.gradle
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.5.1
+    versionCode: 12
+    commit: 4c17029a085e73a6b0000cbe0e3dec7eb5144424
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.19.1/node-v14.19.1-linux-x64.tar.xz
+      - echo "2a28ee68c58e2c3a2a4deecdf9ee1d7080afd69ebe211cf5141d45df8f4ecc77 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+    init: npm ci
+    gradle:
+      - yes
+    rm:
+      - node_modules/chokidar/node_modules/fsevents/fsevents.node
+      - node_modules/jest-haste-map/node_modules/fsevents/fsevents.node
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-ble-manager/android/build.gradle
+      - node_modules/@react-native-community/masked-view/android/build.gradle
+      - node_modules/@react-native-community/art/android/build.gradle
+    scandelete:
+      - node_modules/
+
+  - versionName: 1.6.1
+    versionCode: 13
+    commit: cc28383f45ed6bf372129e97be3b67645786a5b1
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.18.1/node-v16.18.1-linux-x64.tar.gz
+      - echo "8949919fc52543efae3bfd057261927c616978614926682ad642915f98fe1981  node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    init: npm ci
+    gradle:
+      - yes
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/ReactAndroid/build.gradle
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-ble-manager/android/build.gradle
+      - node_modules/@react-native-community/masked-view/android/build.gradle
+      - node_modules/@react-native-community/art/android/build.gradle
+      - node_modules/react-native-get-random-values/android/build.gradle
+    scandelete:
+      - node_modules/
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.6.1
+CurrentVersionCode: 13

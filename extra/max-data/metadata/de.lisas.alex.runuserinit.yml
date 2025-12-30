@@ -1,0 +1,36 @@
+Categories:
+  - Connectivity
+  - System
+License: GPL-3.0-only
+AuthorName: Alexander Koenig
+AuthorEmail: alex@lisas.de
+WebSite: https://lisas.de/git/?p=runuserinit.git;a=summary
+SourceCode: https://lisas.de/git/?p=runuserinit.git;a=tree
+
+AutoName: Run Userinit
+Description: |-
+  Very simple Android app to allow running userinit scripts when the system
+  completes booting. All it does is executing run-parts on the
+  /data/local/userinit.d/ directory when the system boot has been completed. Can
+  be used to run sshd automatically after boot.
+
+RequiresRoot: true
+
+RepoType: git
+Repo: https://lisas.de/~alex/runuserinit.git
+
+Builds:
+  - versionName: '1.1'
+    versionCode: 2
+    commit: fb79b8cb50d6c4b4aa7ad5ed2812275caea866d8
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.1'
+CurrentVersionCode: 2
+
+NoSourceSince: '1.1'

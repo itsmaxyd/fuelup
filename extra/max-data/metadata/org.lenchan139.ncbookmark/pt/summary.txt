@@ -1,0 +1,1 @@
+Isto é um visualizador leve para favoritos do Nextcloud

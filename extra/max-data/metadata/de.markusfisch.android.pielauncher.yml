@@ -1,0 +1,344 @@
+Categories:
+  - Launcher
+  - Theming
+License: MIT
+AuthorName: Markus Fisch
+AuthorEmail: mf@markusfisch.de
+AuthorWebSite: https://www.markusfisch.de
+SourceCode: https://github.com/markusfisch/PieLauncher
+IssueTracker: https://github.com/markusfisch/PieLauncher/issues
+Changelog: https://github.com/markusfisch/PieLauncher/releases
+Donate: https://www.buymeacoffee.com/markusfisch
+Liberapay: markusfisch
+Bitcoin: bc1q2guk2rpll587aymrfadkdtpq32448x5khk5j8z
+
+AutoName: Pie Launcher
+
+RepoType: git
+Repo: https://github.com/markusfisch/PieLauncher.git
+
+Builds:
+  - versionName: 1.11.0
+    versionCode: 18
+    commit: 1.11.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.12.0
+    versionCode: 19
+    commit: 1.12.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.13.0
+    versionCode: 20
+    commit: cd1efbba234873475051f53af82e928d45010dae
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.14.0
+    versionCode: 21
+    commit: cdf9929493d27cfb53d25f0a5a44fcdaf2488626
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.1
+    versionCode: 22
+    commit: b51e625867c21b89a7cd8eb11fd44c6c2f42c295
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.2
+    versionCode: 23
+    commit: 1b5f3889025f0af8c9d0555b603ee902b4be582b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.14.3
+    versionCode: 24
+    commit: 82f8d0bd4a5af33a9dd376c4bbfb8063b7c696f3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.15.0
+    versionCode: 25
+    commit: e5b25f115e5f5221725a9b1ffd9f9bf31f4f4d73
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.15.1
+    versionCode: 26
+    commit: 2d6945316301a0963db898a765f739522d705f3f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.16.0
+    versionCode: 27
+    commit: 825922d5bdd217f325484df5abef5b16455a1478
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.16.1
+    versionCode: 28
+    commit: 0d7ffadb930da135eb11b7676575bbcd879f9fe7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.17.4
+    versionCode: 33
+    commit: 5934b6fa48944de92741ee92a4659b19b2eefa24
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.17.5
+    versionCode: 34
+    commit: d7e570b6c9235c1909fa2beebce6034ffe925dfc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.18.0
+    versionCode: 35
+    commit: 596d4047f9e645553aa7ad10f5d4a09ce6cbc138
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.18.1
+    versionCode: 36
+    commit: 76cb107f8386fdec9fcf6b5d17006eb233a6654a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.18.2
+    versionCode: 37
+    commit: 3fc3960a68eea6d674a64661d9d3a21057932ec9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.18.3
+    versionCode: 38
+    commit: 39b7ea6f579bae167560129a2a7a8a950a78dfe4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.18.4
+    versionCode: 39
+    commit: 6a4562e4d43cbe33c5c161f4765070565fdd2087
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.18.5
+    versionCode: 40
+    commit: c17edb3a2cc11e6e515fc7898de3f51823abab90
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.19.1
+    versionCode: 42
+    commit: fa49f1821d0814a89eddd95c4e436550d30746ee
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.19.2
+    versionCode: 43
+    commit: 88b298adaab6ea9bb1cc0094951c52c66520892b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.19.3
+    versionCode: 44
+    commit: e4afb8274a9b6e5ad34d3fe8a9b6307a2bef516b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.19.4
+    versionCode: 45
+    commit: 3e911c9ac65d26ec70ba1aaccbfe40f09e8900fd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.20.0
+    versionCode: 46
+    commit: 8c74fdd29984be5ecf31736935a556387beecf9f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.20.1
+    versionCode: 47
+    commit: c8f700ea3f6af995bf7c939c0caeb43847a254b0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.21.0
+    versionCode: 48
+    commit: 8e309997dbabf90b1a1ee33bd7b591c22a9e378e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.21.1
+    versionCode: 49
+    commit: 94f9f08ae6bb9b7da70e9131efdf34c228b02279
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.22.0
+    versionCode: 50
+    commit: 2d094d3c11da2c68b679c8b4405daf8d14394292
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.23.0
+    versionCode: 51
+    commit: 256128f1fda2ddc0017f489b74d18fe84ebd6d9c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.23.2
+    versionCode: 54
+    commit: c39cd9f8f0629cce408eb3bb8c5f8311cc508099
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.23.3
+    versionCode: 55
+    commit: 638d091676853281c7a53729e67f893c969990d6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.23.4
+    versionCode: 57
+    commit: 425b236987585ae4cfefd4219c94d69b202bef31
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.23.5
+    versionCode: 58
+    commit: 4a0731f371ae2d20727e5944d0b128ca934ba3fa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.23.6
+    versionCode: 59
+    commit: cf4c0651c1b8bbc6300e426c45a7ad68ba316444
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.23.7
+    versionCode: 60
+    commit: 2ad05d97dcda9ec01b52f24f6d94915a451cf613
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.23.8
+    versionCode: 61
+    commit: 09d0183e1973e006753431c2f768a4d3a1d5c69b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.12.3/8.11.1/' ../build.gradle
+
+  - versionName: 1.23.9
+    versionCode: 62
+    commit: 7f09c11d6a19ac27b4768b91bd8dcecce1bb6b3f
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.23.9
+CurrentVersionCode: 62

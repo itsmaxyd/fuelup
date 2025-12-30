@@ -1,0 +1,48 @@
+Categories:
+  - System
+License: GPL-3.0-or-later
+AuthorName: F-Droid
+AuthorEmail: team@f-droid.org
+WebSite: https://f-droid.org
+SourceCode: https://gitlab.com/fdroid/fdroidclient
+IssueTracker: https://gitlab.com/fdroid/fdroidclient/issues
+Translation: https://hosted.weblate.org/projects/f-droid/f-droid
+Changelog: https://gitlab.com/fdroid/fdroidclient/raw/HEAD/CHANGELOG.md
+Donate: https://f-droid.org/donate
+Liberapay: F-Droid-Data
+OpenCollective: F-Droid-Euro
+Bitcoin: bc1qd8few44yaxc3wv5ceeedhdszl238qkvu50rj4v
+
+AutoName: F-Droid OTA
+
+RepoType: git
+Repo: https://gitlab.com/fdroid/fdroidclient.git
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 1000013
+    commit: 4b80c9648c72e47a0e8de553321b4637eb4683a6
+    output: app/build/distributions/F-DroidFromBinaries-$$VERCODE$$.zip
+    prebuild: echo $$VERCODE$$ > VERCODE
+    scanignore:
+      - app/src/*est/*/*.jar
+      - libs/gradle-witness.jar
+    build: ./create_ota.sh binary `cat VERCODE`
+
+  - versionName: '1.1'
+    versionCode: 1001050
+    commit: '1.1'
+    output: app/build/distributions/F-DroidFromBinaries-$$VERCODE$$.zip
+    prebuild: echo $$VERCODE$$ > VERCODE
+    scanignore:
+      - app/src/*est/*/*.jar
+      - libs/gradle-witness.jar
+    build: ./create_ota.sh binary `cat VERCODE`
+
+MaintainerNotes: AutoUpdateMode only works for APKs right now.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.0.3
+CurrentVersionCode: 1000013

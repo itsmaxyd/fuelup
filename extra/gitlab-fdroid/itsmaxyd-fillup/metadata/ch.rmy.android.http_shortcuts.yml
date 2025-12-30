@@ -1,0 +1,863 @@
+Categories:
+  - System
+License: MIT
+AuthorName: Waboodoo
+AuthorEmail: android@rmy.ch
+AuthorWebSite: https://www.rmy.ch/
+WebSite: https://http-shortcuts.rmy.ch
+SourceCode: https://github.com/Waboodoo/HTTP-Shortcuts
+IssueTracker: https://github.com/Waboodoo/HTTP-Shortcuts/issues
+Changelog: https://github.com/Waboodoo/HTTP-Shortcuts/blob/HEAD/CHANGELOG.md
+Donate: https://http-shortcuts.rmy.ch/support-me
+
+AutoName: HTTP Shortcuts
+
+RepoType: git
+Repo: https://github.com/Waboodoo/HTTP-Shortcuts.git
+
+Builds:
+  - versionName: 1.34.0
+    versionCode: 1101340001
+    commit: v1.34.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 1.35.0
+    versionCode: 1101350001
+    commit: v1.35.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 1.36.0
+    versionCode: 1101360000
+    commit: v1.36.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 1.37.0
+    versionCode: 1101370000
+    commit: v1.37.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 1.38.0
+    versionCode: 1101380000
+    commit: v1.38.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 1.39.0
+    versionCode: 1101390001
+    commit: v1.39.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 2.0.0
+    versionCode: 1102000003
+    commit: v2.0.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 2.1.0
+    versionCode: 1102010002
+    commit: v2.1.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 2.2.0
+    versionCode: 1102020000
+    commit: v2.2.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 2.3.0
+    versionCode: 1102030002
+    commit: v2.3.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 2.4.0
+    versionCode: 1102040001
+    commit: v2.4.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+
+  - versionName: 2.5.0
+    versionCode: 1102050002
+    commit: v2.5.0
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.6.0
+    versionCode: 1102060002
+    commit: bbb5ce447faa78a91ba5f5002cbde8867860cb82
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.7.0
+    versionCode: 1102070001
+    commit: 4ab8ac1776755f3121cf7c1a1cdcb839d64e58c1
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.8.0
+    versionCode: 1102080000
+    commit: e4d810e1dfd7c1f46649176025e36e1252cf023b
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.9.0
+    versionCode: 1102090001
+    commit: 65c8e3b2c2962094165d32993590114902cb60fc
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.10.1
+    versionCode: 1102100100
+    commit: e3e2fbaa7071a78e722d92955fefccb4e38189bc
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.11.0
+    versionCode: 1102110001
+    commit: 10b8e2bfe27af9cb2ff7adfa38e46f5de42ef67f
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.12.0
+    versionCode: 1102120001
+    commit: 3c215a273d34d0a843a6889f73f65267cae8fe40
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.13.0
+    versionCode: 1102130002
+    commit: f722834bca643edb5c3a9f05abe57dee4b4ba1b3
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.14.0
+    versionCode: 1102140001
+    commit: 5c23cfd9089478ee03f10e7215832a14ae3f796d
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.14.1
+    versionCode: 1102140100
+    commit: 58b858ab0d2f468df94482bd47d8f94a1fc08f31
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.15.0
+    versionCode: 1102150004
+    commit: 571d179373fdd3295d8fd42e802c108793bc7df5
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.15.1
+    versionCode: 1102150100
+    commit: 7d075add0a37653184897149b1c1c2ff034bbf0f
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.16.0
+    versionCode: 1102160001
+    commit: a4d84395a856e09527d5f8932c7978d8eede35be
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.17.0
+    versionCode: 1102170001
+    commit: 3e4d566b07f546bf991fb6556a6a432c418269bb
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release.apk
+    ndk: r21
+
+  - versionName: 2.21.0
+    versionCode: 1102210001
+    commit: 25e4e8df4aacdbffe05d77874893c27681f36bd5
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.21.1
+    versionCode: 1102210100
+    commit: f0632ccfeadfd6e1af9b788600503bed20e6723f
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.22.0
+    versionCode: 1102220001
+    commit: 9ee45fccd5e8c92da3571d77ba759d73c5db32b2
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.23.0
+    versionCode: 1102230002
+    commit: 7a6276054184e2c3d7199fa821ceac1ea8325265
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.24.0
+    versionCode: 1102240001
+    commit: 12c9844d2945a835f061b50d619ae591a3d82b02
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.25.1
+    versionCode: 1102250100
+    commit: d17f5b5a04ad8824ad38246eea15b77de3ca0a6e
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.26.0
+    versionCode: 1102260001
+    commit: ad837a0d385b5e7a0ded31ff64fe4ad31136c8be
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.27.0
+    versionCode: 1102270001
+    commit: 4f500d870b7e27a0aad9eb384ab0f38d31c7e21e
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.28.0
+    versionCode: 1102280001
+    commit: 448826dd215ae74003cb84fd04713167ab3fc790
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.29.0
+    versionCode: 1102290000
+    commit: f702fc378a0b7946ff73da5f4b821a0a5871fd0d
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.30.0
+    versionCode: 1102300001
+    commit: 01171df1a1eb8992cd0a57b9e94d304d139fded3
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 2.31.0
+    versionCode: 1102310002
+    commit: d89d962ee4ed9b9b0121d7cc20ec43b71efd61d9
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 3.0.1
+    versionCode: 1103000101
+    commit: 281603f6c736c3229d15950b9872fb94c5fe7e73
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 3.0.2
+    versionCode: 1103000201
+    commit: 7cba74afd27b1a2dc96cbe4ea4b4fdd8d9fc9db4
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 3.1.0
+    versionCode: 1103010000
+    commit: ab88d1862aed711f54854c083ffb1161af587648
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 3.2.0
+    versionCode: 1103020001
+    commit: ce78b6432895da68a5127dc2d95dbb451c1411bc
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 3.3.0
+    versionCode: 1103030000
+    commit: b0b252fa6f52cc8f425452ec6213af41f2c180c9
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 3.4.0
+    versionCode: 1103040001
+    commit: 0f35097e015dd00e246062d470a7095b174e2a04
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 3.5.0
+    versionCode: 1103050003
+    commit: 100dbae674edce192c0e67aa9896ee1b455c5878
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: r23c
+
+  - versionName: 3.6.0
+    versionCode: 1103060002
+    commit: 975ed2080bdcc6789b5b51e403e0f8217d07af6e
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: 23.2.8568313
+
+  - versionName: 3.7.0
+    versionCode: 1103070002
+    commit: e8c267b3fe38c0973efa6a3795fed3b0057d69af
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: 23.2.8568313
+
+  - versionName: 3.8.0
+    versionCode: 1103080000
+    commit: 3c5102414e9b03da62c80e374034827093957d13
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: 23.2.8568313
+
+  - versionName: 3.9.0
+    versionCode: 1103090002
+    commit: 282116e60642b366eff174c751f8dc89cd1bb849
+    subdir: HTTPShortcuts/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: 23.2.8568313
+
+  - versionName: 3.10.0
+    versionCode: 1103100001
+    commit: f2a53349c50723d9e24a72d5685e1a149cdb081a
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: 23.2.8568313
+
+  - versionName: 3.11.1
+    versionCode: 1103110100
+    commit: 299c8956f3a6eb8a2ab5e20483889722a1a5a8cb
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    ndk: 23.2.8568313
+
+  - versionName: 3.12.0
+    versionCode: 1103120008
+    commit: aa622c12f08baabc331b4dfc93577a99477e8446
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    ndk: 23.2.8568313
+
+  - versionName: 3.12.1
+    versionCode: 1103120100
+    commit: 59d54de0f9c636c87894594b6fad198b0bc13a36
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    ndk: 23.2.8568313
+
+  - versionName: 3.13.0
+    versionCode: 1103130003
+    commit: 47f397ce397b1d8c52611064b01ab5a956c0270b
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: 23.2.8568313
+
+  - versionName: 3.14.0
+    versionCode: 1103140000
+    commit: c912679d6d97517ce934b51393ce9faebec76b95
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: 23.2.8568313
+
+  - versionName: 3.15.0
+    versionCode: 1103150003
+    commit: 65a3c8405d0bfeca655ca4eb8a4aa2f3db72aa34
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: 23.2.8568313
+
+  - versionName: 3.16.0
+    versionCode: 1103160002
+    commit: f60e8e2e402508000432a7a33aa35810f82f1d39
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: 23.2.8568313
+
+  - versionName: 3.17.0
+    versionCode: 1103170000
+    commit: 2827a324d8f61247c320c47c3f9e8d2672aa94a3
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: 23.2.8568313
+
+  - versionName: 3.18.0
+    versionCode: 1103180000
+    commit: c75aafc8d369ad07b9c9da5c8c1cb3510cb9a31c
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: 23.2.8568313
+
+  - versionName: 3.23.0
+    versionCode: 1103230000
+    commit: f3ce414ac0f510fccc82dfccdc04df4a2b3b911f
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.24.0
+    versionCode: 1103240000
+    commit: 578a32266e236a511a5304e444ebf09cfbcabe91
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.25.0
+    versionCode: 1103250000
+    commit: 5f237ae5ba6489bd4bc00ae03718d30dcc39cb0c
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.26.0
+    versionCode: 1103260001
+    commit: 832f7ff619ea76d50ddd324878ace0737b893877
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.27.0
+    versionCode: 1103270004
+    commit: 0671c450a3f9851f26ae0d08916d3eb111ec2c2a
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.29.0
+    versionCode: 1103290001
+    commit: c548c8a775735a3eb2e91047f2071ac1833b500d
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.29.1
+    versionCode: 1103290101
+    commit: 3bd6e5f6e5e5c410cd23c3680445962aa38326c3
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.30.0
+    versionCode: 1103300000
+    commit: 62c888f8973f861e5744e8546a856d0759a78838
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.30.1
+    versionCode: 1103300100
+    commit: c5ecc6e627f0a63070fdce9e56a141eada21913c
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.30.2
+    versionCode: 1103300200
+    commit: 1c31f033e970551c5fc735a0badf6d5d394289b5
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.31.0
+    versionCode: 1103310001
+    commit: 81164492e0b28433cb873d29cf041d8e37f6f219
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.32.0
+    versionCode: 1103320000
+    commit: 43c63954ae15f3bcddc899687c85c768ee96c06b
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = /d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 3.33.0
+    versionCode: 1103330001
+    commit: a18ba90a5dd1d09333fa959797d9ac58b0bfaf0a
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/isEnable = /d' -e 's:File("app/:File(":' -e 's:inputFile = ":inputFile
+        = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+      - sed -i -e '/androidGradle/s/8.12.0/8.11.1/' ../gradle/libs.versions.toml
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+  - versionName: 4.0.0
+    versionCode: 1104000001
+    commit: 43b193917b5fe085f2d4b09836d51b5c08d2f4b1
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/isEnable = /d' -e 's:File("app/:File(":' -e 's:inputFile = ":inputFile
+        = "../:g' -e 's:templateFile = ":templateFile = "../:g' build.gradle.kts
+      - sed -i -e '/JavaVersion/s/11/17/' -e '/jvm/s/11/17/' ../*/build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: r27c
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 4.0.0
+CurrentVersionCode: 1104000001

@@ -1,0 +1,39 @@
+Categories:
+  - Security
+License: GPL-3.0-only
+SourceCode: https://github.com/ginkel/hashit
+IssueTracker: https://github.com/ginkel/hashit/issues
+
+AutoName: Hash It!
+Description: |-
+  <b>NOTE:</b> App repo is archived by dev. No longer maintained.
+
+  Makes passwords based on a combination of the website address and a master key
+  so that every password is different. Using the share menu, the app either
+  creates or retrieves the password.
+
+  Compatible with the
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/password-hasher">Password Hasher</a>
+  Firefox extension (licensed under MPL1.1)
+
+RepoType: git
+Repo: https://github.com/ginkel/hashit.git
+
+Builds:
+  - versionName: 1.7.1
+    versionCode: 24
+    commit: v1.7.1
+    prebuild: mv lib/ libs/
+
+  - versionName: 1.7.2
+    versionCode: 25
+    commit: v1.7.2
+    maven: yes
+    rm:
+      - lib/*
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.7.2
+CurrentVersionCode: 25

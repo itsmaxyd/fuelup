@@ -1,0 +1,99 @@
+Categories:
+  - Games
+License: GPL-3.0-only
+AuthorName: Bill Farmer
+AuthorWebSite: https://billthefarmer.github.io/
+SourceCode: https://github.com/billthefarmer/wordlesolver
+IssueTracker: https://github.com/billthefarmer/wordlesolver/issues
+Changelog: https://github.com/billthefarmer/wordlesolver/releases
+
+AutoName: WordleSolver
+
+RepoType: git
+Repo: https://github.com/billthefarmer/wordlesolver
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.01'
+    versionCode: 101
+    commit: 843fd85bbf715a6ddc7d05ff462237a5c8c60bc0
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.02'
+    versionCode: 102
+    commit: fb1ed9de52f8f50d84dd82ab3133a5ffbe6a5416
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.03'
+    versionCode: 103
+    commit: 97746cc670ccaa35f8bfe4153071e7e45b59152d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.04'
+    versionCode: 104
+    commit: 1578490ed4ab899db0fd7e68a0de5c99a5e1ab27
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.05'
+    versionCode: 105
+    commit: cfbf487a43b4cb61e029164df8bd9c1a354da2c9
+    gradle:
+      - yes
+
+  - versionName: '1.06'
+    versionCode: 106
+    commit: 219dedb597a275c3364671a3c1c7aa39d6a24101
+    gradle:
+      - yes
+
+  - versionName: '1.07'
+    versionCode: 107
+    commit: fda93675155e6c3dc7f13436daf78b34069649f1
+    gradle:
+      - yes
+
+  - versionName: '1.08'
+    versionCode: 108
+    commit: c669fe2fd3c9750f906eecc2ffd44277dc2e269f
+    gradle:
+      - yes
+
+  - versionName: '1.09'
+    versionCode: 109
+    commit: 6e2b9a3a138e835516c283e14161ff2a37f3ad2c
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.09'
+CurrentVersionCode: 109

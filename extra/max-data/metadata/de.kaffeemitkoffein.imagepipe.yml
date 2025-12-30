@@ -1,0 +1,231 @@
+Categories:
+  - Graphics
+License: GPL-3.0-or-later
+AuthorName: Pawel Dube
+AuthorEmail: bugreport@imagepipe.de
+AuthorWebSite: https://kaffeemitkoffein.de/blog/me/
+SourceCode: https://codeberg.org/Starfish/Imagepipe
+IssueTracker: https://codeberg.org/Starfish/Imagepipe/issues
+Translation: https://translate.codeberg.org/engage/imagepipe/
+Changelog: https://codeberg.org/Starfish/Imagepipe/releases
+
+AutoName: Imagepipe
+
+RepoType: git
+Repo: https://codeberg.org/Starfish/Imagepipe.git
+
+Builds:
+  - versionName: '0.31'
+    versionCode: 24
+    commit: v0.31
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.40'
+    versionCode: 26
+    commit: v0.40
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.41'
+    versionCode: 27
+    commit: v0.41
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.42'
+    versionCode: 28
+    commit: v0.42
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.50'
+    versionCode: 29
+    commit: v0.50
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.51'
+    versionCode: 30
+    commit: v0.51
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.52'
+    versionCode: 31
+    commit: v0.52
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.53'
+    versionCode: 32
+    commit: v0.53
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.54'
+    versionCode: 33
+    commit: 3e3a335362b08019578df5674c77cf031aad364d
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.55'
+    versionCode: 34
+    commit: 6f08033b0ddd14e483ba11b23badac33dcd7e825
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.56'
+    versionCode: 35
+    commit: 73560b6dd4f1460e9455b9dc71d7815f2824de2a
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.57'
+    versionCode: 36
+    commit: f549ede99f7a4cf41a87520c48fed83f4f44fd0c
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.58'
+    versionCode: 37
+    commit: 340886ab06975d9517612c26fa15d480da69abda
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.59'
+    versionCode: 38
+    commit: 62ea0d515e48ba0f8116e3e9be7c00956e3bd987
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.60'
+    versionCode: 39
+    commit: 33a5c74a65f56f5e98949571ffab8e58c9963419
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.61'
+    versionCode: 40
+    commit: 5a3eba6906679279c51fabfd1bae5b1aeed68761
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.62'
+    versionCode: 41
+    commit: d07c3cfe0bee9d2799bd2bc9c7b531ba4a8043ec
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.63'
+    versionCode: 42
+    commit: 4b37e03e9c13c1cfff1669e773206f05b41b1663
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.64'
+    versionCode: 43
+    commit: 3d7a3d8afcb5e2979a4a3c0f0bdccdff44e1c540
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.65'
+    versionCode: 44
+    commit: ef0bb07ddb5fc3f9723df03d0a118ccc95f75e9a
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.66'
+    versionCode: 45
+    commit: 1e04064712930dc555936f1ebfbe9f0493b7a143
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.67'
+    versionCode: 46
+    commit: 1987fc3188e0a539f427fe73919b339c1c4ffbb3
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.68'
+    versionCode: 47
+    commit: b93781cb7ffb8f66d89005ec1fc3d0d2571632fa
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.69'
+    versionCode: 48
+    commit: bfb0a0a23cf5dc69870db6fd5699f7d478e59478
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.70'
+    versionCode: 49
+    commit: 1de37e24e2b24330d76788504ec0bfb7d777f9be
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.71'
+    versionCode: 50
+    commit: 5d327fd5e939d2a1fc9c908008026e975f07548d
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.72'
+    versionCode: 51
+    commit: 9552705887099aaea680cf815fdc3ed513785b0a
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.73'
+    versionCode: 52
+    commit: 58eeec284e586e60ad1ba0b26137edcf384e5fc3
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.74'
+    versionCode: 53
+    commit: 0b770cb5a0e340d0c27b820826b5bc72b087caae
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.75'
+    versionCode: 54
+    commit: 34ff01113ff5e99f7fddebe8e031254e02a55b44
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '0.75'
+CurrentVersionCode: 54

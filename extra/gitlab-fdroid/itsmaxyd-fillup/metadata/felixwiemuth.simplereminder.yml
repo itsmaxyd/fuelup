@@ -1,0 +1,113 @@
+Categories:
+  - Time
+License: GPL-3.0-or-later
+WebSite: https://github.com/felixwiemuth/SimpleReminder
+SourceCode: https://github.com/felixwiemuth/SimpleReminder
+IssueTracker: https://github.com/felixwiemuth/SimpleReminder/issues
+
+AutoName: SimpleReminder
+
+RepoType: git
+Repo: https://github.com/felixwiemuth/SimpleReminder
+
+Builds:
+  - versionName: 0.9.4
+    versionCode: 7
+    commit: v0.9.4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.9.5
+    versionCode: 9
+    commit: v0.9.5
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.9.6
+    versionCode: 11
+    commit: v0.9.6
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.9.7
+    versionCode: 12
+    commit: v0.9.7
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.9.8
+    versionCode: 908700
+    commit: v0.9.8
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.9.9
+    versionCode: 909700
+    commit: v0.9.9
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.9.10
+    versionCode: 910700
+    commit: v0.9.10
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.9.11
+    versionCode: 911700
+    commit: v0.9.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.12
+    versionCode: 912700
+    commit: v0.9.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.13
+    versionCode: 913700
+    commit: v0.9.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.14
+    versionCode: 914700
+    commit: v0.9.14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.15
+    versionCode: 915700
+    commit: v0.9.15
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.9.15
+CurrentVersionCode: 915700

@@ -1,0 +1,44 @@
+Connectivity:
+  name: Connectivity
+Development:
+  name: Development
+Games:
+  name: Games
+Graphics:
+  name: Graphics
+Internet:
+  name: Internet
+Money:
+  name: Money
+Multimedia:
+  name: Multimedia
+Navigation:
+  name: Navigation
+Phone & SMS:
+  name: Phone & SMS
+Reading:
+  name: Reading
+Science & Education:
+  name: Science & Education
+Security:
+  name: Security
+Sports & Health:
+  name: Sports & Health
+System:
+  name: System
+Theming:
+  name: Theming
+Time:
+  name: Time
+Writing:
+  name: Writing
+App Store & Updater:
+  name: App Store & Updater
+AI Chat:
+  name: AI Chat
+App Manager:
+  name: App Manager
+Bookmark:
+  name: Bookmark
+Browser:
+  name: Browser

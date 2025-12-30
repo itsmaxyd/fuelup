@@ -1,0 +1,286 @@
+Categories:
+  - Internet
+  - News
+  - Reading
+License: Apache-2.0
+AuthorName: Marco Gomiero
+AuthorEmail: mgp.dev.studio@gmail.com
+SourceCode: https://github.com/prof18/feed-flow
+IssueTracker: https://github.com/prof18/feed-flow/issues
+Translation: https://hosted.weblate.org/engage/feedflow/
+
+AutoName: FeedFlow
+
+RepoType: git
+Repo: https://github.com/prof18/feed-flow.git
+
+Builds:
+  - versionName: 0.0.58
+    versionCode: 805
+    commit: 0.0.58-fdroid
+    subdir: androidApp
+    gradle:
+      - fdroid
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.0.59
+    versionCode: 855
+    commit: 6532755618db0659d2288027fd1d4d4aec92bc61
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.0.62
+    versionCode: 949
+    commit: 9f96e73baedab066522623b106e97bd17e01d013
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.0.63
+    versionCode: 1012
+    commit: c478a15ac83c03db268b64e6565bd4fee352b05f
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.0.66
+    versionCode: 1081
+    commit: a4cff59323968c15f01a8348d3e8c52cde2e5255
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.0.70
+    versionCode: 1142
+    commit: a11b572fa5ef38b0f475ffb43abfc13187d374ed
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.0.72
+    versionCode: 1144
+    commit: 13a3d1314aa206f6a9df049d82cc2f2d6e2660b7
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.1.2
+    versionCode: 1290
+    commit: f1c48e58062dc03fa76dfa6eed570896787d9df1
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.1.6
+    versionCode: 1412
+    commit: ea3e90d11d62af01c1d8336282fc24583f89b48b
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.2.0
+    versionCode: 6008
+    commit: 660db93dcd12bd17375b734f96342f7941b6e51d
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/JvmVendorSpec/d' ../*/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.3.0
+    versionCode: 6033
+    commit: f2c02badd5c2595cd53e94dd8c05c924e3fa7fa2
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/JvmVendorSpec/d' ../*/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.4.0
+    versionCode: 6039
+    commit: 68e8cca09100eb54e6c165b2287624b1d24d2be1
+    subdir: androidApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/JvmVendorSpec/d' ../*/build.gradle.kts
+    scanignore:
+      - build-logic/settings.gradle.kts
+      - settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.5.0
+    versionCode: 6047
+    commit: 22635a469ca683534b84611cb50aa3d01346ecce
+    subdir: androidApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/JvmVendorSpec/d' ../*/build.gradle.kts
+    scanignore:
+      - build-logic/settings.gradle.kts
+      - settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.6.0
+    versionCode: 6062
+    commit: 1b17173423600b3c0c07777428f5afbd39397d0c
+    subdir: androidApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/JvmVendorSpec/d' ../*/build.gradle.kts
+    scanignore:
+      - build-logic/settings.gradle.kts
+      - settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.7.0
+    versionCode: 6065
+    commit: b233a8b56f53e8815c6dea3ff4150d83ea4b1b54
+    subdir: androidApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/JvmVendorSpec/d' ../*/build.gradle.kts
+    scanignore:
+      - build-logic/settings.gradle.kts
+      - settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.7.1
+    versionCode: 6066
+    commit: 163c20aacafc08bceeb0de6d9784cc5497acb722
+    subdir: androidApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/JvmVendorSpec/d' ../*/build.gradle.kts
+    scanignore:
+      - build-logic/settings.gradle.kts
+      - settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.8.0
+    versionCode: 6068
+    commit: bec3a2a5ca355a9e0a3217c066d16b8f913a3a8d
+    subdir: androidApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/JvmVendorSpec/d' ../*/build.gradle.kts
+    scanignore:
+      - build-logic/settings.gradle.kts
+      - settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags [\d.]+-fdroid
+CurrentVersion: 1.8.0
+CurrentVersionCode: 6068

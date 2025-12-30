@@ -1,0 +1,136 @@
+Categories:
+  - Time
+License: GPL-3.0-only
+AuthorName: Manmeet Singh
+SourceCode: https://github.com/thatsmanmeet/Tasky
+IssueTracker: https://github.com/thatsmanmeet/Tasky/issues
+Changelog: https://github.com/thatsmanmeet/Tasky/releases
+
+AutoName: Tasky
+Description: |-
+  <b>NOTE:</b>App is no longer developed.
+
+  <p>Tasky is a highly intuitive and easy-to-use todo list application designed for those who seek a powerful yet minimalistic way to manage their daily tasks.</p>
+
+  Features ⭐️:
+  <ol>
+  <li>Modern and minimal design</li>
+  <li>Notifications for tasks</li>
+  <li>Material You Dynamic theming</li>
+  <li>Repeating tasks</li>
+  <li>Cool task completion animation</li>
+  <li>Add and Delete Sounds</li>
+  <li>Completely offline making it privacy first</li>
+  <li>Free and Open Source</li>
+  <li>Offline Backups</li>
+  </ol>
+
+  <p>Tasky is a simple todo list app which offers tasks with reminders that helps you remember your tasks and eliminate the concern of forgetting your tasks.</p>
+
+  <p>Also with the help of repeating tasks or reminders, it makes it easy to form habits by getting notifications everyday about a specified task.</p>
+
+  <p>With it's minimalistic design and no extra bells and whistles, you can keep organizing your day distraction free.</p>
+
+RepoType: git
+Repo: https://github.com/thatsmanmeet/Tasky
+Binaries: https://github.com/thatsmanmeet/Tasky/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 2.3.5
+    versionCode: 19
+    commit: 8bf1d348bf0e9c8143ceb8e8f96e7fa6eab65425
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.6
+    versionCode: 20
+    commit: c892deb3d68e4653c45200178acf15eb705f624f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.7
+    versionCode: 21
+    commit: ce1ca88c401415d4803caca0b048c5236a8f55e3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.9
+    versionCode: 23
+    commit: 34de971679d826c2635d65b3437e666332fe3539
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 24
+    commit: 524f7298f13c1508f3a4433c58536605ad54db6e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.1
+    versionCode: 25
+    commit: 737c688be4615c55ad4687330321f76407a5ba2e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.2
+    versionCode: 26
+    commit: 258f2d7cd9e16359939e979492ba453f194f5c3d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.0.0
+    versionCode: 27
+    commit: 9ae21666fdc11c99d43dddc61ebb57c446118037
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.1
+    versionCode: 28
+    commit: 437a94c52420934a5e469551c0a2cabb8c7bc373
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 7eef49f0e016026000f00da20120632b90d898640b65d785caf6a587c382724f
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 3.0.1
+CurrentVersionCode: 28

@@ -1,0 +1,280 @@
+Categories:
+  - Sports & Health
+License: Apache-2.0
+SourceCode: https://gitlab.com/covpass-android-foss/covpass-android
+IssueTracker: https://gitlab.com/covpass-android-foss/covpass-android/-/issues
+
+AutoName: CovPass
+
+RepoType: git
+Repo: https://gitlab.com/covpass-android-foss/covpass-android.git
+
+Builds:
+  - versionName: 1.82.0
+    versionCode: 480
+    commit: foss-v-1.82.0
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.7.7-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.86.0
+    versionCode: 487
+    commit: foss-v-1.86.0
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.7.7-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.95.12
+    versionCode: 517
+    commit: foss-v-1.95.12
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.7.7-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.13.2
+    versionCode: 711
+    commit: foss-v-1.240.11
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.9.0-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.17.0
+    versionCode: 808
+    commit: foss-v-1.312.5
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.9.0-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.18.0
+    versionCode: 846
+    commit: foss-v-1.335.11
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.9.0-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.19.0
+    versionCode: 876
+    commit: foss-v-1.359.3
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.9.0-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.21.1
+    versionCode: 921
+    commit: foss-v-1.390.3
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.9.0-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.22.1
+    versionCode: 947
+    commit: foss-v-1.406.3
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.9.0-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.26.0
+    versionCode: 1016
+    commit: foss-v-1.458.4
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.9.0-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.26.1
+    versionCode: 1021
+    commit: foss-v-1.458.5
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.9.0-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.27.0
+    versionCode: 1039
+    commit: foss-v-1.472.0
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.9.0-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.30.0
+    versionCode: 1168
+    commit: foss-v-1.526.2
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.11.2-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.31.1
+    versionCode: 1188
+    commit: foss-v-1.538.4
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.11.2-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.32.0
+    versionCode: 1210
+    commit: foss-v-1.552.3
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.11.2-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.36.0
+    versionCode: 1277
+    commit: foss-v-1.605.3
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.11.2-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.37.0
+    versionCode: 1308
+    commit: foss-v-1.629.2
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.11.2-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.39.0
+    versionCode: 1361
+    commit: foss-v-1.675.0
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.11.2-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+  - versionName: 1.40.0
+    versionCode: 1377
+    commit: foss-v-1.686.0
+    subdir: app-covpass-prod
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    srclibs:
+      - certlogic@v0.11.2-kotlin
+    prebuild: echo versionCode=$$VERCODE$$ >> ../generated.properties
+
+MaintainerNotes: certlogic is automatially built & installed to mavenLocal()
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.40.0
+CurrentVersionCode: 1377

@@ -1,0 +1,88 @@
+Categories:
+  - Connectivity
+License: Apache-2.0
+AuthorName: mrwm
+AuthorEmail: mrwm@wchung.com
+SourceCode: https://github.com/mrwm/QRshare
+IssueTracker: https://github.com/mrwm/QRshare/issues
+
+AutoName: QR share
+
+RepoType: git
+Repo: https://github.com/mrwm/QRshare.git
+Binaries: https://github.com/mrwm/QRshare/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 1.0.10
+    versionCode: 10
+    commit: 1f43b739cb200d00a12b47f3b5666da6ab525073
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/mrwm/QRshare/releases/download/%v/app-release.apk
+
+  - versionName: 1.0.11
+    versionCode: 11
+    commit: 07ab8893bb2199b9f41309ec62c810f6e390a55c
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/mrwm/QRshare/releases/download/%v/app-release.apk
+
+  - versionName: 1.0.14
+    versionCode: 14
+    commit: 54098bbaa7767164765ea7bafb66c6397e3015a2
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/mrwm/QRshare/releases/download/v%v/app-release.apk
+
+  - versionName: 1.0.15
+    versionCode: 15
+    commit: 7c0e81a2150282c0e4ac192377c3f652f8afb810
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.16
+    versionCode: 16
+    commit: 96da4470df92337fb1c9d56c5941deb832bac164
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.17
+    versionCode: 17
+    commit: 2da17700b96e53823d3f412ece11500c1243b7b7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.19
+    versionCode: 19
+    commit: 894d61bda67e5f9921bc219c666877b0c901cd2c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.21
+    versionCode: 21
+    commit: e87d4cf0aa761170cb9f619359ca95423fac284f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.22
+    versionCode: 22
+    commit: 089267bfd84993acf696534cbcfc5753aa20436e
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: e42fc590cebbffb1434270cd226d6d70337d04419585c53652d80ceb942b3829
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[\d.]+$
+UpdateCheckData: app/build.gradle.kts|versionCode = (\d+)||
+CurrentVersion: 1.0.22
+CurrentVersionCode: 22

@@ -1,0 +1,1 @@
+Blokus jogo de tabuleiro: uma implementação open-source/Android do jogo popular

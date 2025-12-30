@@ -1,0 +1,30 @@
+Categories:
+  - Internet
+  - Writing
+License: GPL-2.0-only
+SourceCode: https://github.com/Dissem/Drupal-Editor
+IssueTracker: https://github.com/Dissem/Drupal-Editor/issues
+
+AutoName: Drupal Editor
+Description: |-
+  <b>NOTE:</b> This project was declared unmaintained in 2014.
+
+  Publish and edit pages on websites using Drupal. To make it work with your site
+  you have to activate the Blogger API in your settings.
+
+RepoType: git
+Repo: https://github.com/Dissem/Drupal-Editor
+
+Builds:
+  - versionName: 1.3.0
+    versionCode: 17
+    commit: 4c2d0b27787d
+    srclibs:
+      - MobAdMob@3bd7888479e493d0
+    prebuild: rm -f libs/GoogleAdMob*.jar
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.3.0
+CurrentVersionCode: 17

@@ -1,0 +1,1 @@
+Šifruokite failus ir susirašinėjimą. Suderinama su OpenPGP standartu.

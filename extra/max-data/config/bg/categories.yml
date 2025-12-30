@@ -1,0 +1,126 @@
+Connectivity:
+  name: Свързаност
+Development:
+  name: Разработка
+Games:
+  name: Игри
+Graphics:
+  name: Графика
+Internet:
+  name: Интернет
+Money:
+  name: Финанси
+Multimedia:
+  name: Мултимедия
+Navigation:
+  name: Местоположение
+Phone & SMS:
+  name: Телефон и съобщения
+Reading:
+  name: Четене
+Science & Education:
+  name: Наука и образование
+Security:
+  name: Сигурност
+Sports & Health:
+  name: Спорт и здраве
+System:
+  name: Системни
+Theming:
+  name: Теми
+Time:
+  name: Управление на времето
+Writing:
+  name: Писане
+App Store & Updater:
+  name: Магазин за приложения и обновяване
+Bookmark:
+  name: Отметки
+Browser:
+  name: Мрежов четец
+Calculator:
+  name: Калкулатор
+Calendar & Agenda:
+  name: Календар и график
+Cloud Storage & File Sync:
+  name: Облачно хранилище и синхронизиране
+DNS & Hosts:
+  name: DNS и хостове
+Draw:
+  name: Рисуване
+Ebook Reader:
+  name: Четене на електронни книги
+Email:
+  name: Електронна поща
+File Encryption & Vault:
+  name: Шифроване на файлове и хранилище
+File Transfer:
+  name: Прехвърляне на файлове
+Finance Manager:
+  name: Управление на файлове
+Gallery:
+  name: Галерия
+Icon Pack:
+  name: Пакет с пиктограми
+Keyboard & IME:
+  name: Клавиатура и въвеждане
+Launcher:
+  name: Начален екран
+Messaging:
+  name: Обмяна на съобщения
+News:
+  name: Новини
+Note:
+  name: Бележки
+Password & 2FA:
+  name: Парола и двустепенно удостоверяване
+Public Transport:
+  name: Обществен транспорт
+Recipe Manager:
+  name: Управление на рецепти
+Shopping List:
+  name: Списък за пазаруване
+Social Network:
+  name: Социална мрежа
+Task:
+  name: Задача
+Text Editor:
+  name: Текстов редактор
+Translation & Dictionary:
+  name: Превод и речник
+Unit Convertor:
+  name: Превръщане на мерни единици
+Voice & Video Chat:
+  name: Аудио и видео разговори
+VPN & Proxy:
+  name: ВЧМ и прокси
+Wallet:
+  name: Портмоне
+Wallpaper:
+  name: Тапет
+Weather:
+  name: Времето
+Workout:
+  name: Упражнения
+Local Media Player:
+  name: Местно изпълняване на медия
+Online Media Player:
+  name: Отдалечено изпълняване на медия
+Pass Wallet:
+  name: Портмоне за пропуски
+AI Chat:
+  name: Разговори с ИИ
+App Manager:
+  name: Управление на проложения
+Forum:
+  name: Форум
+Location Tracker & Sharer:
+  name: Публикуване и споделяне на местоположение
+Music Practice Tool:
+  name: Инструмент за музикална практика
+Podcast:
+  name: Подкасти
+Religion:
+  name: Религия
+Habit Tracker:
+  name: Проследяване на навици

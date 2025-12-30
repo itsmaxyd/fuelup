@@ -1,0 +1,168 @@
+Categories:
+  - Sports & Health
+License: GPL-3.0-only
+AuthorName: flxapps
+SourceCode: https://github.com/flxapps/DetoxDroid
+IssueTracker: https://github.com/flxapps/DetoxDroid/issues
+Changelog: https://github.com/flxapps/DetoxDroid/releases
+Donate: https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=K6T2HPXE7HQBG
+Liberapay: DetoxDroid
+
+AutoName: DetoxDroid
+
+RepoType: git
+Repo: https://github.com/flxapps/DetoxDroid
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 10000
+    commit: v1.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 10001
+    commit: v1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 10002
+    commit: v1.0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 11000
+    commit: v1.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 12000
+    commit: 1443d9e93e14816d2df5037945c0b13d5083a3bd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 12001
+    commit: 17492c68fbe1411e9d8ff7ec251e4bdb43f9921b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 12002
+    commit: 8381bcff1a5cb171565e75fb6914261d5dcf2150
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 20001
+    commit: 461a92cb0509d9582c6d4a831f85e4f1f905ea8b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.2
+    versionCode: 20002
+    commit: 31403139cc333bdf3c4f99b61846b51f0eb0473b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.3
+    versionCode: 20003
+    commit: b8b08eed250aa3704bfb18502d929eca12dfd92a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.4
+    versionCode: 20004
+    commit: 2f5459cdf42326586dafab789a60770d2f5aa753
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.5
+    versionCode: 20005
+    commit: 2db0fa61eded7e977c2a49f58ed17a5bde45c45b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.6
+    versionCode: 20006
+    commit: 56e50398ebba623c30af956d1555a8638d9b1c53
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.7
+    versionCode: 20007
+    commit: cbd07abb4d26c29e086dbae76c7904065ee60d37
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 20100
+    commit: 27a5fcd0f5b0ae61d83b2c4828cdc60e6404fa3d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 20200
+    commit: 9f6b82e5b92e1f891a37a9863a1db5844e8157f2
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.2.0
+CurrentVersionCode: 20200

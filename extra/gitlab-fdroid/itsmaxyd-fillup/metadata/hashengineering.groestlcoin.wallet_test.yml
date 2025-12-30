@@ -1,0 +1,117 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Money
+  - Wallet
+License: GPL-3.0-only
+WebSite: https://www.groestlcoin.org/groestlcoin-mobile-wallet/
+SourceCode: https://github.com/Groestlcoin/groestlcoin-wallet
+IssueTracker: https://github.com/Groestlcoin/groestlcoin-wallet/issues
+Changelog: https://raw.github.com/Groestlcoin/groestlcoin-wallet/HEAD/wallet/CHANGES
+Bitcoin: 3BCeMXVny1HbDc4NK64UZs9oFjKZdajBfx
+
+AutoName: Groestlcoin Wallet TestNet
+Description: |-
+  Have your testnet Groestlcoins always with you, in your pocket! You pay by quickly scanning
+  a QR code. As a merchant, you receive payments reliably and instantly. Groestlcoin
+  Wallet is the first mobile testnet Groestlcoin app, and arguably also the most secure!
+
+  * No registration, web service or cloud needed! This wallet is de-centralized and peer to peer.
+  * Display of testnet Groestlcoin amount in GRS, mGRS and µGRS.
+  * Conversion to and from national currencies.
+  * Sending and receiving of testnet Groestlcoin via NFC, QR codes or Groestlcoin URLs.
+  * Address book for regularly used testnet Groestlcoin addresses.
+  * When you're offline, you can still pay via Bluetooth.
+  * System notification for received coins.
+  * Sweeping of paper wallets (e.g. those used for cold storage).
+  * App widget for Groestlcoin balance.
+
+  See the
+  <a href="https://raw.githubusercontent.com/Groestlcoin/groestlcoin-wallet/HEAD/wallet/README.md">README</a> for more details. Use this at your own risk and be wary that if you
+  don't make a backup of the private keys you will no longer be able to access the testnet
+  Groestlcoins contained in the wallet, should the data of the app be lost.
+
+RepoType: git
+Repo: https://github.com/Groestlcoin/groestlcoin-wallet.git
+
+Builds:
+  - versionName: '7.38'
+    versionCode: 73803
+    commit: v7.38
+    subdir: wallet
+    gradle:
+      - dev
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+  - versionName: 7.38.1
+    versionCode: 73804
+    commit: v7.38.1
+    subdir: wallet
+    gradle:
+      - dev
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+  - versionName: 8.14.1
+    versionCode: 81401
+    commit: v8.14.1
+    subdir: wallet
+    gradle:
+      - dev
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+  - versionName: '9.03'
+    versionCode: 90301
+    commit: 7571049384c297225af767a2a25e7c57c40ab272
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - dev
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+  - versionName: '10.03'
+    versionCode: 100301
+    commit: 2264cbd65f78784d4820a77a8522c92048869693
+    subdir: wallet
+    gradle:
+      - dev
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+  - versionName: '10.07'
+    versionCode: 100700
+    commit: 3564d24e1e264b518d982b4987ba65a87228fe58
+    subdir: wallet
+    gradle:
+      - dev
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+  - versionName: 10.07.1
+    versionCode: 100701
+    commit: 89ab4179686b62d85a1d2ce3a176c6027339ae73
+    subdir: wallet
+    gradle:
+      - dev
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+  - versionName: '10.20'
+    versionCode: 102002
+    commit: e38a81e33f847d90b8062a394d14f494a0b443dd
+    subdir: wallet
+    gradle:
+      - dev
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '10.20'
+CurrentVersionCode: 102002

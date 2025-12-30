@@ -1,0 +1,1 @@
+Cifra tus archivos y comunicaciones, es compatible con el estándar OpenPGP.

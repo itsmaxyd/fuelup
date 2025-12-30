@@ -1,0 +1,304 @@
+Categories:
+  - Internet
+License: GPL-3.0-only
+WebSite: https://www.xabber.com
+SourceCode: https://github.com/redsolution/xabber-android
+IssueTracker: https://github.com/redsolution/xabber-android/issues
+Changelog: https://github.com/redsolution/xabber-android/releases
+
+Name: Xabber
+AutoName: Xabber Development Version
+Description: |-
+  Note: This version is no longer supported, being replaced with https://f-droid.org/packages/com.xabber.android.
+
+  Jabber (XMPP) client app with multiple accounts, privacy modes and a clean and
+  simple interface. This version is tracking recent development builds, for legacy
+  devices there is also https://f-droid.org/packages/com.xabber.android.classic.
+
+  Supported protocols:
+
+  * RFC-3920: Core;
+  * RFC-3921: Instant Messaging and Presence;
+  * XEP-0030: Service Discovery;
+  * XEP-0128: Service Discovery Extensions;
+  * XEP-0115: Entity Capabilities;
+  * XEP-0054: vcard-temp;
+  * XEP-0153: vCard-Based Avatars;
+  * XEP-0045: Multi-User Chat (incompletely);
+  * XEP-0078: Non-SASL Authentication;
+  * XEP-0138: Stream Compression;
+  * XEP-0203: Delayed Delivery;
+  * XEP-0091: Legacy Delayed Delivery;
+  * XEP-0199: XMPP Ping;
+  * XEP-0147: XMPP URI Scheme Query Components;
+  * XEP-0085: Chat State Notifications;
+  * XEP-0184: Message Delivery Receipts;
+  * XEP-0155: Stanza Session Negotiation;
+  * XEP-0059: Result Set Management;
+  * XEP-0136: Message Archiving;
+  * XEP-0224: Attention.
+  * XEP-0077: In-Band Registration
+  * XEP-0280: Message Carbons
+
+RepoType: git
+Repo: https://github.com/redsolution/xabber-android.git
+
+Builds:
+  - versionName: 0.9.29a
+    versionCode: 78
+    commit: cbfe6da973b63ea36ea9e879ceaa057ad21624ec
+    prebuild:
+      - git clone https://github.com/redsolution/otr4j
+      - ant jar -f otr4j/build.xml
+      - mv otr4j/bin/debug/jar/otr4j.jar libs/otr4j.jar
+    target: android-10
+
+  - versionName: 0.9.30a
+    versionCode: 80
+    commit: f95362dd838a18691d5899c5
+    target: android-10
+
+  - versionName: 0.9.30b
+    versionCode: 81
+    commit: 2b8e6b216fa2a928b2f62b7cd62b2c079d706d38
+    target: android-10
+
+  - versionName: 0.9.30c
+    versionCode: 82
+    commit: 277806a50e665696ef1a176e96f94cc3487a92fc
+    target: android-10
+
+  - versionName: 0.9.30d
+    versionCode: 86
+    commit: 8bb32fcf2253d9b7a5fbc57e9c2d3cbb3f76cc5c
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - Otr4j@7fb42b2ef912fe664064edf717a6b72ce77ccb3b
+    rm:
+      - app/libs/*.jar
+    prebuild:
+      - sed -i -e '/otr4j.jar/d' build.gradle
+      - cp -fR $$Otr4j$$/src/net src/main/java
+
+  - versionName: 0.9.30e
+    versionCode: 88
+    commit: 0.9.30e
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - Otr4j@7fb42b2ef912fe664064edf717a6b72ce77ccb3b
+    rm:
+      - app/libs/*.jar
+    prebuild:
+      - sed -i -e '/otr4j.jar/d' build.gradle
+      - cp -fR $$Otr4j$$/src/net src/main/java
+
+  - versionName: 0.9.30f
+    versionCode: 102
+    commit: 0.9.30f
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - Otr4j@7fb42b2ef912fe664064edf717a6b72ce77ccb3b
+    rm:
+      - app/libs/*.jar
+    prebuild:
+      - sed -i -e '/otr4j.jar/d' build.gradle
+      - cp -fR $$Otr4j$$/src/net src/main/java
+
+  - versionName: 1.0.23
+    versionCode: 195
+    commit: 1.0.23
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.24
+    versionCode: 196
+    commit: 1.0.24
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.25
+    versionCode: 197
+    commit: 1.0.25
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.28
+    versionCode: 200
+    commit: 1.0.28
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.29
+    versionCode: 201
+    commit: 1.0.29
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.30
+    versionCode: 202
+    commit: 1.0.30
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.31
+    versionCode: 203
+    commit: 1.0.31
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.33
+    versionCode: 206
+    commit: 1.0.33
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.38
+    versionCode: 211
+    commit: 1.0.38
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.39
+    versionCode: 212
+    commit: 1.0.39
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.42
+    versionCode: 215
+    commit: 1.0.42
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.44
+    versionCode: 217
+    commit: 1.0.44
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.45
+    versionCode: 218
+    commit: 1.0.45
+    subdir: app
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.51
+    versionCode: 224
+    commit: 1.0.51
+    subdir: xabber
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.53
+    versionCode: 226
+    commit: 1.0.53
+    subdir: xabber
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.63
+    versionCode: 236
+    commit: 1.0.63
+    subdir: xabber
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.73
+    versionCode: 246
+    commit: 1.0.73
+    subdir: xabber
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.74
+    versionCode: 247
+    commit: 1.0.74
+    subdir: xabber
+    submodules: true
+    gradle:
+      - dev
+
+  - versionName: 1.0.155
+    versionCode: 327
+    commit: 558839176ecda7a3fc33b17691f4eebd14b94d9e
+    subdir: xabber
+    submodules: true
+    gradle:
+      - dev
+    output: build/outputs/apk/xabber-dev-universal-release-unsigned.apk
+
+  - versionName: 2.0.1
+    versionCode: 348
+    commit: 2.0.1
+    subdir: xabber
+    submodules: true
+    gradle:
+      - dev
+    output: build/outputs/apk/xabber-dev-universal-release-unsigned.apk
+    prebuild:
+      - echo "smackCommitShortHash=8466a5a" >> gradle.properties
+      - sed -i "s/maven { url 'https:\/\/igniterealtime.org\/repo' }//" ../build.gradle
+      - sed -i 's/compile \"org.igniterealtime.smack:smack-android-extensions.*\"/compile
+        \"com.github.igniterealtime.smack:smack-android-extensions:$smackCommitShortHash\"/'
+        build.gradle
+      - sed -i 's/compile \"org.igniterealtime.smack:smack-experimental.*\"/compile
+        \"com.github.igniterealtime.smack:smack-experimental:$smackCommitShortHash\"/'
+        build.gradle
+      - sed -i 's/compile \"org.igniterealtime.smack:smack-experimental.*\"/compile
+        \"com.github.igniterealtime.smack:smack-experimental:$smackCommitShortHash\"/'
+        build.gradle
+      - sed -i 's/compile \"org.igniterealtime.smack:smack-tcp.*\"/compile \"com.github.igniterealtime.smack:smack-tcp:$smackCommitShortHash\"/'
+        build.gradle
+      - sed -i 's/compile \"org.igniterealtime.smack:smack-resolver-dnsjava.*\"/compile
+        \"com.github.igniterealtime.smack:smack-resolver-dnsjava:$smackCommitShortHash\"/'
+        build.gradle
+
+MaintainerNotes: |-
+  Upstream uses the (untrusted) igniterealtime Maven repository for Smack.
+  While it does this, before adding an update, make sure
+  smackCommitShortHash is the commit corresponding to the Smack snapshot
+  used by upstream.  To do this, cross reference xabber/build.gradle
+  dependencies (version/date) with commits in igniterealtime's Smack
+  github respository (may not be in master branch).
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2.6.6.644
+CurrentVersionCode: 644

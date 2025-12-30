@@ -1,0 +1,79 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Youtube, Github and returnyoutubedislikeapi.com servers
+Categories:
+  - Internet
+  - Multimedia
+  - Online Media Player
+License: GPL-3.0-only
+AuthorEmail: hhstyyds520@gmail.com
+SourceCode: https://github.com/HydeYYHH/litube
+IssueTracker: https://github.com/HydeYYHH/litube/issues
+
+AutoName: litube
+
+RepoType: git
+Repo: https://github.com/HydeYYHH/litube
+
+Builds:
+  - versionName: 1.5.0
+    versionCode: 15
+    commit: c7c053086cdee86f3a23ae81664a3bc22e3c3162
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 16
+    commit: 97f552d2695695afa49b4de82921c2a856c2c0b7
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release-unsigned.apk
+
+  - versionName: 1.5.2
+    versionCode: 17
+    commit: a928247e4ccda4447528dd71b005449e562238c9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.3
+    versionCode: 18
+    commit: b49d9fa6c0b28a8b6462410a20ee53a2d6082b62
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.3.1
+    versionCode: 19
+    commit: 9ec54883ea0ab3f6f561ed868a005250bf7b960f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 20
+    commit: 47e37c17b703245c9b22c704c5e4a92877926606
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0.1
+    versionCode: 21
+    commit: 27066a508d3793bb7d47059cbf4f8cd7f4165b8f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0.2
+    versionCode: 22
+    commit: 8955ef8fbccf70180d02ab57e8018145e31b36d3
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.6.0.2
+CurrentVersionCode: 22

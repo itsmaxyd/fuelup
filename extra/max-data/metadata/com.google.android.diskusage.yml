@@ -1,0 +1,136 @@
+Categories:
+  - System
+License: GPL-2.0-or-later
+AuthorName: Ivan Volosyuk
+SourceCode: https://github.com/IvanVolosyuk/diskusage
+IssueTracker: https://github.com/ivanvolosyuk/diskusage/issues
+
+AutoName: DiskUsage
+Description: |-
+  Visually explore used and free space on internal and external storage.
+
+  <i>DiskUsage</i> provides a way to find files and directories on storage card which
+  consume a lot of space. It displays a diagram with directories/subdirectories
+  shown proportional to their size.
+
+  Press MENU for actions.
+
+  Integrates with OI FileManager and Solid Explorer.
+
+RepoType: git
+Repo: https://github.com/IvanVolosyuk/diskusage.git
+
+Builds:
+  - versionName: 2.0.4
+    versionCode: 2004
+    commit: d3c0dc5bafdb
+    prebuild:
+      - mkdir libs
+      - cp extra/system.jar libs/
+
+  - versionName: 2.0.5
+    versionCode: 2005
+    commit: cb8e91528207
+    prebuild:
+      - mkdir libs
+      - cp extra/system.jar libs/
+
+  - versionName: 2.1.3
+    versionCode: 2103
+    commit: 296d3317a49d
+    prebuild:
+      - mkdir libs
+      - cp extra/system.jar libs/
+
+  - versionName: '3.1'
+    versionCode: 3010
+    commit: f97462007110
+    prebuild:
+      - mkdir libs
+      - cp extra/system.jar libs/
+
+  - versionName: '3.2'
+    versionCode: 3020
+    commit: dfcba57e1d92
+    prebuild:
+      - mkdir libs
+      - cp extra/system.jar libs/
+
+  - versionName: 3.2.1
+    versionCode: 3021
+    commit: 1ac11c9696b6
+    prebuild:
+      - mkdir libs
+      - cp extra/system.jar libs/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: '3.4'
+    versionCode: 3040
+    commit: bb21ead5dd0f
+    prebuild:
+      - mkdir libs
+      - cp extra/system.jar libs/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 3.4.2
+    versionCode: 3042
+    commit: 23bce9d7fc7b
+    patch:
+      - ndk-out.patch
+    rm:
+      - jni/scan
+      - assets/scan
+    prebuild:
+      - mkdir libs
+      - cp extra/system.jar libs/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 3.8.0
+    versionCode: 3080
+    commit: 471f435ef84b5a3a0c0d5d10d7c2d6ce012fe5a0
+    subdir: app
+    patch:
+      - scan5-recipe.patch
+      - system-jar-sources.patch
+    gradle:
+      - yes
+    rm:
+      - jni/scan
+      - app/src/main/assets/scan*
+      - app/src/main/extra/system.jar
+    scanignore:
+      - app/src/main/res/raw/mimes
+    build: $$NDK$$/ndk-build
+
+  - versionName: 5.0-alpha0
+    versionCode: 5000
+    commit: 15e9cad98daedfea04d7e1314833949a2a53e01f
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/mimes
+    ndk: r26b
+
+  - versionName: 5.0-alpha1
+    versionCode: 5001
+    commit: 7b2c42e4d0ad87b4885e06363698ba5e126bcdcd
+    subdir: app
+    gradle:
+      - yes
+    ndk: r26b
+
+MaintainerNotes: |-
+  The system.jar is from AOSP - see extra/system.jar.README and
+  <a href="https://github.com/ivanvolosyuk/diskusage/issues/19">https://github.com/ivanvolosyuk/diskusage/issues/19</a>
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 5.0-alpha1
+CurrentVersionCode: 5001

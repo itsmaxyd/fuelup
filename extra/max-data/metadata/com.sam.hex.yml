@@ -1,0 +1,36 @@
+Categories:
+  - Games
+License: NCSA
+WebSite: http://xlythe.com
+SourceCode: https://github.com/Xlythe/HexGame_Android
+IssueTracker: https://github.com/Xlythe/HexGame_Android/issues
+
+AutoName: Hex
+Description: |-
+  Hex is a simple board game where two players race to connect their sides of the
+  board. The winner is the first to build a solid path connecting their two sides.
+
+  Newer versions of this app use the non-free Google Play Services library.
+
+RepoType: git
+Repo: https://github.com/Xlythe/HexGame_Android.git
+
+Builds:
+  - versionName: '2.2'
+    versionCode: 13
+    commit: '900717'
+    target: android-15
+
+  - versionName: '2.3'
+    versionCode: 14
+    commit: ed1053230e77e13a
+    target: android-15
+
+MaintainerNotes: Play services is a hard dependency, see https://github.com/Xlythe/HexGame_Android/issues/9
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '2.3'
+CurrentVersionCode: 14
+
+NoSourceSince: '2.3'

@@ -1,0 +1,976 @@
+Categories:
+  - Multimedia
+License: MIT
+AuthorName: Markus Fisch
+AuthorWebSite: https://markusfisch.de/
+SourceCode: https://github.com/markusfisch/BinaryEye
+IssueTracker: https://github.com/markusfisch/BinaryEye/issues
+Translation: https://toolate.othing.xyz/projects/binaryeye/
+Changelog: https://github.com/markusfisch/BinaryEye/blob/HEAD/CHANGELOG.md
+Donate: https://www.buymeacoffee.com/markusfisch
+Liberapay: markusfisch
+Bitcoin: bc1q2guk2rpll587aymrfadkdtpq32448x5khk5j8z
+
+AutoName: Binary Eye
+
+RepoType: git
+Repo: https://github.com/markusfisch/BinaryEye.git
+
+Builds:
+  - versionName: 1.3.8
+    versionCode: 14
+    commit: 1.3.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 16
+    commit: 1.4.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 17
+    commit: 1.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 18
+    commit: 1.4.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 19
+    commit: 1.5.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 20
+    commit: 1.5.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 21
+    commit: 1.6.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 22
+    commit: 1.7.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 23
+    commit: 1.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.2
+    versionCode: 24
+    commit: 1.7.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.3
+    versionCode: 25
+    commit: 1.7.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 27
+    commit: 1.8.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 28
+    commit: 1.9.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.1
+    versionCode: 29
+    commit: 1.9.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.0
+    versionCode: 30
+    commit: 1.10.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.11.0
+    versionCode: 31
+    commit: 1.11.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.11.1
+    versionCode: 32
+    commit: 1.11.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.11.2
+    versionCode: 33
+    commit: 1.11.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.12.0
+    versionCode: 36
+    commit: 1.12.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.13.0
+    versionCode: 37
+    commit: 1.13.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.13.1
+    versionCode: 38
+    commit: 1.13.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.0
+    versionCode: 39
+    commit: 1.14.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.15.0
+    versionCode: 40
+    commit: 1.15.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.16.0
+    versionCode: 43
+    commit: 1.16.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.17.0
+    versionCode: 44
+    commit: 1.17.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.17.1
+    versionCode: 45
+    commit: 1.17.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.18.0
+    versionCode: 46
+    commit: 1.18.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.19.0
+    versionCode: 48
+    commit: 1.19.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.20.1
+    versionCode: 50
+    commit: 1.20.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.21.0
+    versionCode: 51
+    commit: 1.21.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.22.0
+    versionCode: 52
+    commit: 1.22.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.22.1
+    versionCode: 53
+    commit: 1.22.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.22.3
+    versionCode: 55
+    commit: 1.22.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.23.0
+    versionCode: 56
+    commit: 1.23.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.24.0
+    versionCode: 57
+    commit: 1.24.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.25.1
+    versionCode: 59
+    commit: 1.25.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.26.0
+    versionCode: 60
+    commit: 1.26.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.27.0
+    versionCode: 62
+    commit: 1.27.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.27.1
+    versionCode: 63
+    commit: 1.27.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.28.0
+    versionCode: 64
+    commit: 1.28.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.29.0
+    versionCode: 65
+    commit: 1.29.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.30.0
+    versionCode: 66
+    commit: 1.30.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.30.1
+    versionCode: 67
+    commit: 1.30.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.31.0
+    versionCode: 68
+    commit: 1.31.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.32.0
+    versionCode: 69
+    commit: 1.32.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.32.1
+    versionCode: 70
+    commit: 1.32.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.33.0
+    versionCode: 71
+    commit: 1.33.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.34.0
+    versionCode: 72
+    commit: 1.34.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.35.0
+    versionCode: 74
+    commit: 1.35.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.36.0
+    versionCode: 75
+    commit: 1.36.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.37.0
+    versionCode: 76
+    commit: 1.37.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.38.0
+    versionCode: 77
+    commit: 1.38.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.39.0
+    versionCode: 78
+    commit: 1.39.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.40.0
+    versionCode: 79
+    commit: 1.40.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.41.0
+    versionCode: 80
+    commit: 1.41.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.41.1
+    versionCode: 81
+    commit: 1.41.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.42.0
+    versionCode: 82
+    commit: 1.42.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.43.0
+    versionCode: 83
+    commit: 1.43.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.44.0
+    versionCode: 84
+    commit: 1.44.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.44.1
+    versionCode: 85
+    commit: 4a9e700d2086fcbedf908c5afe14cad6c1efe5e9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7
+    gradle:
+      - yes
+
+  - versionName: 1.45.0
+    versionCode: 86
+    commit: c88d5cf4cd66cf70e4c4f0a859cf24e2a114d7a7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.46.0
+    versionCode: 87
+    commit: c492897fa9b1d1b2ec60aa81ee9b381357b1cccb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.46.1
+    versionCode: 88
+    commit: e91c30f7c2249bcd3f357be7f5f8847437fa6817
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.46.2
+    versionCode: 89
+    commit: 9dbb78ce676bc217918adf758a37eddd280786a9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.46.3
+    versionCode: 90
+    commit: d77e464554a4071f775eb53c35f6013bcd0ae92f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.47.0
+    versionCode: 91
+    commit: b16519237772af7a27a858417985f17507e7e2f9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.48.0
+    versionCode: 92
+    commit: b5bbe659db4bff1a82fd843e143c9ca6cf03aa86
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.48.1
+    versionCode: 93
+    commit: 4be9421b44af5c50925c7c8236b01ef04c8714e5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.49.0
+    versionCode: 94
+    commit: fe7e36804e90d14ac2107bf0024db1fcb5924c80
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.49.1
+    versionCode: 95
+    commit: bb9d556c1677bdee21cc94442368fd44244fa06d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.49.2
+    versionCode: 96
+    commit: 9986a4ffb51f91b7d21caa40372dc52e9b12957c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.50.0
+    versionCode: 97
+    commit: 1dde8c2817e0e72d40d6bef7c4f601df0d8906ce
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.51.1
+    versionCode: 99
+    commit: f4af35ad4689ee32f4dbd582b446843bf91c7fb1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.52.0
+    versionCode: 100
+    commit: ce6c6f26d23d3e826579388746c21346c6feb791
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y --no-install-recommends libc++1-7 openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.54.0
+    versionCode: 103
+    commit: c72b6a2e5f550f6d30f846a4c6fb6e5dda8adaf9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.54.1
+    versionCode: 104
+    commit: 9f2efeb0011e3e1ed7c27d5d5ac9b0ba76cf3bb1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.55.0
+    versionCode: 105
+    commit: 40a6a77b8de5f38d8926334a3343145f49a8958a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.56.0
+    versionCode: 106
+    commit: 4326df50695831a966168df7b08df6e3c8a923dd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.56.1
+    versionCode: 109
+    commit: 1e76b140387c5f173645770f6fdb35d7f49f1bde
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.56.2
+    versionCode: 110
+    commit: fa568686b6c22c61297b40904ee99f257c366200
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.56.3
+    versionCode: 111
+    commit: 300c3bfd2632d4c0a54ef9c7b952e3d5a9bc81c3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.57.0
+    versionCode: 112
+    commit: 425f3a7b80e16cddb0dfba968b60176da7a9ff3a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.58.0
+    versionCode: 113
+    commit: 0265909fd709160112733564fda2f620c59b1510
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.58.2
+    versionCode: 115
+    commit: 9abc01fc4f2ec513b4e83556d587452a4953fc87
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.59.0
+    versionCode: 116
+    commit: 33ef78443e2dd07e3bd75a11440452c403d284c2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.60.1
+    versionCode: 118
+    commit: 5f82f216fd4e4c652982bfac87d71e0b8beab049
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.60.2
+    versionCode: 119
+    commit: 076da26075a93f1920d28792746724da5cde9f1f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.60.3
+    versionCode: 120
+    commit: 4971f58f445a49c0ee3db39c338d6b02ce43552e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.61.0
+    versionCode: 121
+    commit: 746ff143d8c62d99b4924a147587755841147064
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.61.1
+    versionCode: 122
+    commit: 464279807c93d3f7f6e98d2de68717d8162b3620
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.61.2
+    versionCode: 123
+    commit: 180339269f61aba43af0f94c5feb2bd9bb868c29
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.62.1
+    versionCode: 125
+    commit: 4048314cf7599ff879a13e5d813954c70233bf81
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.62.2
+    versionCode: 126
+    commit: b2730259fc31f3a92bc980e4d3a379df37291f18
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.62.3
+    versionCode: 127
+    commit: 38f658e2537bf4ea9cedbee22b3995cea643abc9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.0
+    versionCode: 128
+    commit: eeae1eb0ad3e0f383273cefaee3ed31098887369
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.1
+    versionCode: 129
+    commit: dc819a6e1a09f20a5d706a68ae7a50def9686854
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.2
+    versionCode: 130
+    commit: d124c29919682a15ad3a0a9be81393a8f25c4153
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.3
+    versionCode: 131
+    commit: 4f12c3e27046c7139e242919b37a624ddb2c420f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.4
+    versionCode: 132
+    commit: 3c7012e3c4ec71b251d6b94b3e3e910078bb1489
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.5
+    versionCode: 133
+    commit: 3aa2371eeb61344baf83a381c17a7cfe2de8c91c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.6
+    versionCode: 134
+    commit: b87464ec400d87371431adc40aa66049e400cb91
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.7
+    versionCode: 135
+    commit: bce36306862911759bd95bda3926c35574b6e6a9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.8
+    versionCode: 136
+    commit: 863caed387ae897ef7456445a2a1915e34c77166
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.9
+    versionCode: 137
+    commit: 7bdcdaaa5dc0401dbe1db26a1e8d8a8860cde471
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.10
+    versionCode: 138
+    commit: 449d8fdbbd9f160c3f599e0815b1e82f2d360b99
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.11
+    versionCode: 139
+    commit: 0a11611b8f31229e89d64eb851a5e93ff2d84544
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.12
+    versionCode: 140
+    commit: bf5dc96ac9621a3ab0f395a580f3509d3f823444
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.13
+    versionCode: 141
+    commit: 1476f41cda1f3324bffc83280b21a18abbd90c12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.65.0
+    versionCode: 145
+    commit: faeae9e9047cf547215b4129644cda59045f9fb4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.65.2
+    versionCode: 147
+    commit: 20b4f7aac5946d16a18837c2b517a695669e4967
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.66.0
+    versionCode: 148
+    commit: 469429e663b0b947f2051dbf7bedf3fd007ebd99
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.66.1
+    versionCode: 149
+    commit: 202bb32b29453fccae43416370a15e125efbb14f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.66.2
+    versionCode: 150
+    commit: f0d09e81b4c62882337186458d8488845947d45b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.12.1/8.11.1/' ../build.gradle
+
+  - versionName: 1.67.0
+    versionCode: 151
+    commit: ffe8e4c5ba018c6d4e6198e4235e616d285ae482
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.12.3/8.11.1/' ../build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.67.0
+CurrentVersionCode: 151

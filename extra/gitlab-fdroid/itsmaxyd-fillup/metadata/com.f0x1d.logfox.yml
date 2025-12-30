@@ -1,0 +1,253 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorWebSite: https://f0x1d.com
+SourceCode: https://github.com/F0x1d/LogFox
+IssueTracker: https://github.com/F0x1d/LogFox/issues
+Changelog: https://github.com/F0x1d/LogFox/releases
+
+AutoName: LogFox
+
+RepoType: git
+Repo: https://github.com/F0x1d/LogFox.git
+Binaries: https://github.com/F0x1d/LogFox/releases/download/v%v/logfox-%v.apk
+
+Builds:
+  - versionName: 1.3.9
+    versionCode: 41
+    commit: 00c64a77e1455619d4845f21e6657b075b114fe1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 42
+    commit: 3a013301afb73dc891e3d3162831a120e05df768
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 45
+    commit: 5e8112ab60a1cdc227a39c3d7a7bec1e81b90fcd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 46
+    commit: 78ce0c7935d45a3f6210aa9331516a37963b2526
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.5
+    versionCode: 47
+    commit: 5edd92ddfff4065135a20417e83ff818e98d0ea8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.6
+    versionCode: 48
+    commit: 4580aaefbc85fc169ed6b0483ed89f575cd9b67b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.7
+    versionCode: 49
+    commit: 119df8613c91ad52fa5e5f0d4feff2f2c5323426
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.8
+    versionCode: 50
+    commit: 2534a1c48cba76092005a0324514cf16d629d279
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.9
+    versionCode: 51
+    commit: ebd15f94767a3c89bef680fad124f2a7d3620ae5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 52
+    commit: 7f6d060fefb929d0ba6d2b47abd27329401c20be
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 53
+    commit: 36339897789948e8a8d9a1988c07c94d8d1edb2c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 54
+    commit: 27c82dd8b02c81115af67e7dfc79b1b3e1b80a2d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.3
+    versionCode: 55
+    commit: 892b1130dbf148671250b5c3adaf441cc39b402b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 56
+    commit: 0df9e89b378f1f83720519f7f7347f8d65097c87
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.6
+    versionCode: 58
+    commit: 5dddf32689077e8084d5fc14006295d076365ef0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.7
+    versionCode: 59
+    commit: a315498e969b15291914677e04863c87b11e05be
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 61
+    commit: dc5074e59639e07645b50cdc83857842e516e3c2
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/F0x1d/LogFox/releases/download/v%v/logfox-v%v.apk
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 2.0.2
+    versionCode: 62
+    commit: 9fa3549c5c831854a7bb7e4d33eac67f780c7c4f
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/F0x1d/LogFox/releases/download/v%v/logfox-v%v.apk
+    prebuild: sed -i -e '/TYPESAFE_PROJECT_ACCESSORS/a rootProject.name = "logfox"'
+      ../settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 2.0.4
+    versionCode: 64
+    commit: 8a88c6f52fc78393db01445e2c99b8680f8b042d
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/F0x1d/LogFox/releases/download/v%v/logfox-v%v.apk
+    prebuild: sed -i -e 's/File("/File(rootProject.projectDir, "/g' ../settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 2.0.6
+    versionCode: 66
+    commit: 3c3ed3a044e588f7fbf434315d74122070f6cd8b
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/F0x1d/LogFox/releases/download/v%v/logfox-v%v.apk
+    prebuild: sed -i -e 's/File("/File(rootProject.projectDir, "/g' ../settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 2.0.7
+    versionCode: 67
+    commit: dd1405c67737601b27530533feeebf73711fe47e
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/F0x1d/LogFox/releases/download/v%v/logfox-v%v.apk
+    prebuild: sed -i -e 's/File("/File(rootProject.projectDir, "/g' ../settings.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+AllowedAPKSigningKeys: 741f819a4c213ba438053134890b40e258774fce55a778846ec5c67a1c92709f
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/build.gradle.kts|versionCode = (\d+)|.|versionName = "([\d.]+)"
+CurrentVersion: 2.0.7
+CurrentVersionCode: 67

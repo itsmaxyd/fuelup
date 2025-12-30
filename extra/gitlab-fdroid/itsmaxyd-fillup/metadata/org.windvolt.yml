@@ -1,0 +1,72 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Data is retrieved from non-libre sources online.
+Categories:
+  - Science & Education
+License: GPL-3.0-or-later
+AuthorName: Max Sumer
+SourceCode: https://github.com/MuzSumer/windvolt
+IssueTracker: https://github.com/MuzSumer/windvolt/issues
+Changelog: https://github.com/MuzSumer/windvolt/releases
+
+AutoName: windvolt
+
+RepoType: git
+Repo: https://github.com/MuzSumer/windvolt
+
+Builds:
+  - versionName: '1.03'
+    versionCode: 103
+    commit: V1.03
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.04'
+    versionCode: 104
+    commit: V1.04
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 110
+    commit: V1.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 111
+    commit: V1.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2021.0'
+    versionCode: 20210
+    commit: V2021.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2021.6'
+    versionCode: 20216
+    commit: V2021.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2021.10'
+    versionCode: 202110
+    commit: cb12f1f238de0df02bc6622a96d01bd0ad87e40c
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '2021.10'
+CurrentVersionCode: 202110
+
+NoSourceSince: '2021.10'

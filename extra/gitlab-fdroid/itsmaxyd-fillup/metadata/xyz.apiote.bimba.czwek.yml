@@ -1,0 +1,176 @@
+Categories:
+  - Navigation
+  - Public Transport
+License: GPL-3.0-or-later
+AuthorName: apiote
+AuthorEmail: questions@bimba.app
+AuthorWebSite: https://apiote.xyz
+WebSite: https://bimba.app
+SourceCode: https://codeberg.org/bimba/czwek
+IssueTracker: https://roadmap.apiote.xyz
+Changelog: https://codeberg.org/bimba/czwek/src/branch/stable/CHANGELOG.adoc
+Donate: https://bimba.app/donate
+Liberapay: bimba
+
+AutoName: Bimba
+
+RepoType: git
+Repo: https://codeberg.org/bimba/czwek.git
+Binaries: https://apiote.xyz/p/bimba/a/Bimba-v%v.apk
+
+Builds:
+  - versionName: 3.0.1
+    versionCode: 21
+    commit: v3.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.0
+    versionCode: 22
+    commit: c6594b28ee7bff7c8c338de68a7fa9fa6209f63f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.1.1
+    versionCode: 23
+    commit: b70fbb75415d17f73c9d8011f7122da0f00882d5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.2.0
+    versionCode: 24
+    commit: 5cf3845ac76de37bd5d838ec81e17b206ec23e58
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.3.0
+    versionCode: 25
+    commit: 31660a80e777e6f685543e3fca942e34882b4e2d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.3.1
+    versionCode: 26
+    commit: 7aa914409fdd89ec7e4ae76b5c60e26a5680d672
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.3.2
+    versionCode: 27
+    commit: 9472c4e2ac8aeb33900f7274c372def03627b007
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.4.0
+    versionCode: 28
+    commit: 0ae2a8256ae07d540e8e24148d64e56481e0d7de
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.5.0
+    versionCode: 29
+    commit: c1db5ac8fc4a50eb6c9f311c14b04c65a2654a24
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.6.1
+    versionCode: 31
+    commit: 409f8c666e49deb35b70006171a63b3aaaaae012
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.7.0
+    versionCode: 32
+    commit: 64b6ac71a98b9598b34df27988fa1932bf72b9a6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.7.1
+    versionCode: 33
+    commit: e5119fad29a5efcfc4c404387455eadd27b245fb
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.8.0
+    versionCode: 34
+    commit: 9cbb301b78ce6c1767a1199c85d3d1e48c413edd
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.9.0
+    versionCode: 37
+    commit: 5ffcc3afdf79d8847dec036b51bd67f42a98fe77
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.10.1
+    versionCode: 43
+    commit: 2270b30073166e00267ddaa636f3c5e01e032ae2
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.11.0
+    versionCode: 46
+    commit: 71ac038da603a4cbd716662aef7993779b988e67
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 2786eb169ee9ae8d170f09266e068febc2a0a5a2438ac0d5ef6eafba45cabde1
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags v[0-9]+\.[0-9]+\.[0-9]+$
+CurrentVersion: 3.11.0
+CurrentVersionCode: 46

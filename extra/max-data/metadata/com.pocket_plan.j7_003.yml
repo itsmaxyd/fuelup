@@ -1,0 +1,93 @@
+Categories:
+  - Note
+  - Shopping List
+  - Task
+  - Writing
+License: MIT
+AuthorName: estep248
+SourceCode: https://github.com/RayLeaf-Studios/PocketPlan
+IssueTracker: https://github.com/RayLeaf-Studios/PocketPlan/issues
+Changelog: https://github.com/RayLeaf-Studios/PocketPlan/releases
+
+AutoName: PocketPlan
+
+RepoType: git
+Repo: https://github.com/RayLeaf-Studios/PocketPlan.git
+
+Builds:
+  - versionName: 1.3.6
+    versionCode: 36
+    commit: v.1.3.6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.7
+    versionCode: 37
+    commit: 675f102d6191cf6b328e46681e0672b7842f27bf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.8
+    versionCode: 38
+    commit: 37a995b830575af89cda2b2ca2cea352c2678b5d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.9
+    versionCode: 39
+    commit: d4c21767f52c3f4fb9f93414da89445fb9f1dbdc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 40
+    commit: c7e855e1ca867541fdd04ba6e6a836c5ce08d8b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 42
+    commit: 09cd6c21a4cfd5b7719cd30cea04e7bc3ac40525
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 43
+    commit: 2d6a3f7dde0bd5b3bb1e29437bad786f65c8fe94
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 44
+    commit: 5bd8266932718556d4964d93dd8fb404f5374783
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.4.4
+CurrentVersionCode: 44

@@ -1,0 +1,187 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App uses multiple wallpaper APIs which are unfree unfortunately.
+Categories:
+  - System
+  - Wallpaper
+License: GPL-3.0-only
+AuthorName: You Apps
+WebSite: https://you-apps.github.io/
+SourceCode: https://github.com/you-apps/WallYou
+IssueTracker: https://github.com/you-apps/WallYou/issues
+Translation: https://hosted.weblate.org/projects/you-apps/wall-you/
+Changelog: https://github.com/you-apps/WallYou/releases
+
+AutoName: Wall You
+
+RepoType: git
+Repo: https://github.com/you-apps/WallYou.git
+Binaries: https://github.com/you-apps/WallYou/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: '5.0'
+    versionCode: 20
+    commit: 07b9b00a6b32c87f4666b5bb46bfc718cb35aab6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 21
+    commit: 72a6bc0ac3637872b1f3fa3dab94df67dd63d3b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '6.1'
+    versionCode: 22
+    commit: a4c4f97f7ea75b1c67a589f399781b6448559e7a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '6.2'
+    versionCode: 23
+    commit: c506568c4f5592642fe5bcebbfe9e484203ea58f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '7.0'
+    versionCode: 24
+    commit: ed2d91e41689824b50ba361ee22a4549ad8c859c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '8.1'
+    versionCode: 26
+    commit: 9857d14f8ae833f9b51ec77ade78b04e308aca53
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '9.1'
+    versionCode: 28
+    commit: fef652f2d8745b15e72eb7d81e9e47bdce4b91b0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '10.0'
+    versionCode: 29
+    commit: 91e52b72eb229ebe6ca0a1a1e506e80f84cb1e7e
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 4 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: '11.0'
+    versionCode: 30
+    commit: d06e8598e429af05c82a565cf2047b9247c0baf7
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 4 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: '12.0'
+    versionCode: 31
+    commit: 1a9447472e25b3bc19d67c964b9caf6eaa588617
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 4 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: '12.1'
+    versionCode: 32
+    commit: a4ecef5db24b4f1b0f8642f348c29f6e2edafee0
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 4 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: '12.2'
+    versionCode: 33
+    commit: 3a4b1a6edea336ffa0b912b3a9f38cf46e1fbe07
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 4 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: '13.0'
+    versionCode: 34
+    commit: c2430bef906a531217fbb991320be36da65228a3
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 4 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: '13.1'
+    versionCode: 35
+    commit: 3fe15c6d7443ff79ddf99fc0cec0d40f43e1cbc9
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 4 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+AllowedAPKSigningKeys: b3bc73b117df5dfe38130c6c2b946852ae7088557fe8e433f0d9983a6b55cc95
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '13.1'
+CurrentVersionCode: 35

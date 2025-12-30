@@ -1,0 +1,45 @@
+Categories:
+  - Sports & Health
+License: Apache-2.0
+AuthorName: Vincent AUDIBERT
+SourceCode: https://github.com/VincentAudibert/CanIDrive
+IssueTracker: https://github.com/VincentAudibert/CanIDrive/issues
+
+AutoName: CanIDrive
+
+RepoType: git
+Repo: https://github.com/VincentAudibert/CanIDrive
+
+Builds:
+  - versionName: 0.2.4
+    versionCode: 17
+    commit: 0.2.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.6
+    versionCode: 19
+    commit: 3e840ad5ed10ee6d80950bbf3049e1d62100d472
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.7
+    versionCode: 20
+    commit: f754958de1315b95693e5f6eae45d21201dd6c1c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.9
+    versionCode: 22
+    commit: 4f0b05924dc1212e9a8a682e50020c407e6f389e
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.2.9
+CurrentVersionCode: 22

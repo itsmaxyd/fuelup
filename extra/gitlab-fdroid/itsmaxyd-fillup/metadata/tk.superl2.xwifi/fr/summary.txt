@@ -1,0 +1,1 @@
+Affiche les informations d'identification Wi-Fi et les partage avec un QR code

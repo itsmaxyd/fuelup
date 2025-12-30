@@ -1,0 +1,155 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App connects to DeepL.com and some servers behind Cloudflare.
+Categories:
+  - Internet
+  - System
+License: Apache-2.0
+SourceCode: https://github.com/scubajeff/Setter
+IssueTracker: https://github.com/scubajeff/Setter/issues
+Changelog: https://github.com/scubajeff/Setter/releases
+
+AutoName: Setter
+
+RepoType: git
+Repo: https://github.com/scubajeff/Setter
+
+Builds:
+  - versionName: 0.1.5
+    versionCode: 5
+    commit: 0.1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.6
+    versionCode: 6
+    commit: 0.1.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.7
+    versionCode: 7
+    commit: 0.1.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.8
+    versionCode: 9
+    commit: 7c12dd13102958d0567311cc5d5da8ffd5b14c99
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.9
+    versionCode: 10
+    commit: 7484e8cb258e5aa5bebbc25451fbd01774067276
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.10
+    versionCode: 11
+    commit: 3c4ec84580917f1c60083a4a0e3159e738eb361a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.11
+    versionCode: 12
+    commit: 3f8e7554c6bb79e900c0114574dfea5c4d1639f4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.12
+    versionCode: 13
+    commit: 2d908377265608cd58772a0618d7e3524dffdb3c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.13
+    versionCode: 14
+    commit: bdc924dd4bf643c778817903cab3520b09077146
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.14
+    versionCode: 15
+    commit: 8eacf8081eded3dc7f962e4a1ea856f85639e994
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.15
+    versionCode: 16
+    commit: 9b440c756448276b597c8b90499b83a6d7df6488
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.16
+    versionCode: 17
+    commit: 2fa7dca5e3f1969e45a959eac48f127b54dfacbb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.17
+    versionCode: 18
+    commit: 938df7bee8a9a7d318af2da0797f11e655dacd6e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.18
+    versionCode: 19
+    commit: 402ccc1daade61f49e829e4d9d05efffc35007a8
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.1.18
+CurrentVersionCode: 19

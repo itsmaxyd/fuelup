@@ -1,0 +1,221 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: Guillaume Payet
+AuthorEmail: theolizard@gmail.com
+SourceCode: https://github.com/guillaumevpayet/remote-numpad
+IssueTracker: https://github.com/guillaumevpayet/remote-numpad/issues
+
+AutoName: Remote Numpad
+
+RepoType: git
+Repo: https://github.com/guillaumevpayet/remote-numpad
+
+Builds:
+  - versionName: 1.6.2
+    versionCode: 25
+    commit: 1.6.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 26
+    commit: 1.6.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 27
+    commit: 1.6.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 28
+    commit: 1.7.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 29
+    commit: 1.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 30
+    commit: c2ecd961de4ee6ec72d46e75b6faa6a389d45230
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 1.8.2
+    versionCode: 32
+    commit: bc7d5faa92a5c396b9063a4f820cdb03b342f85a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 1.8.3
+    versionCode: 33
+    commit: e1aee4853386ba32dd7349d17d6cf47bedb57598
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.0
+    versionCode: 34
+    commit: 8016c052cfe3b0158574abbc3012b8efd530c0ef
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.1
+    versionCode: 35
+    commit: 2a3dfbe3efd2c50c9eaddb4af2155cc3bb4c5ea3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.2
+    versionCode: 36
+    commit: aa35b2d65f742be5bd13681ad375f6c8ba7c0ca4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.3
+    versionCode: 37
+    commit: 5af43e1b7daa1a6a9303694e01c5baffb436ac78
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.4
+    versionCode: 38
+    commit: 47ce8622009c291d899a7ec2645aa4173963c92c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.5
+    versionCode: 39
+    commit: 34173a15775849872a6be9db80b833e73b7bff06
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.6
+    versionCode: 40
+    commit: 08903b06e330af182286d655c4e4abd055616d72
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.7
+    versionCode: 41
+    commit: e5d3f41614691d95c21a43cca97aa0037f1fe8ca
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.8
+    versionCode: 42
+    commit: 90db3057e8af41117e7890e36cccbe07d9d691e4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.9
+    versionCode: 43
+    commit: cb5dddf62e8271db1ec92f2ede7552628c5c09e2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.10
+    versionCode: 44
+    commit: b2657356401d65b003da415025b30e76337f0cc1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.1.0
+    versionCode: 45
+    commit: c665ad395097f488bc43256470096be0024b63d8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.1.1
+    versionCode: 46
+    commit: 915662b75c22f80412fe0e9a323a048e7018d234
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.1.2
+    versionCode: 47
+    commit: efcb88747f28d9bb2378776c56364da6319aa186
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.2.0
+    versionCode: 48
+    commit: 1a66ca5b1c43f6ad22aee03c79da312fb9416751
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 2.2.3
+    versionCode: 51
+    commit: 4645757bdae994a91454679a547b98bc6a817ccc
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.2.3
+CurrentVersionCode: 51

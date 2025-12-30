@@ -1,0 +1,474 @@
+Categories:
+  - Connectivity
+  - Development
+License: GPL-3.0-only
+AuthorName: IKARUS Projects
+AuthorEmail: fooblubb@gmail.com
+AuthorWebSite: https://www.icaria.de/
+WebSite: https://www.icaria.de/mct/
+SourceCode: https://github.com/ikarus23/MifareClassicTool
+IssueTracker: https://github.com/ikarus23/MifareClassicTool/issues
+Changelog: https://github.com/ikarus23/MifareClassicTool/raw/HEAD/CHANGELOG.txt
+Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=24ET8A36XLMNW
+
+AutoName: MIFARE Classic Tool
+
+RepoType: git
+Repo: https://github.com/ikarus23/MifareClassicTool.git
+
+Builds:
+  - versionName: 1.6.0
+    versionCode: 18
+    commit: v1.6.0
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.7.0
+    versionCode: 19
+    commit: v1.7.0
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.7.1
+    versionCode: 20
+    commit: v1.7.1
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.7.2
+    versionCode: 21
+    commit: v1.7.2
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.7.3
+    versionCode: 22
+    commit: v1.7.3
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.7.4
+    versionCode: 23
+    commit: v1.7.4
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.7.5
+    versionCode: 24
+    commit: v1.7.5
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.7.6
+    versionCode: 25
+    commit: v1.7.6
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.7.7
+    versionCode: 26
+    commit: v1.7.7
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.8.0
+    versionCode: 27
+    commit: v1.8.0
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.8.1
+    versionCode: 28
+    commit: v1.8.1
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.8.2
+    versionCode: 29
+    commit: v1.8.2
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 1.8.3
+    versionCode: 30
+    commit: v1.8.3
+    subdir: Mifare Classic Tool
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.0.0
+    versionCode: 31
+    commit: v2.0.0
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.0.1
+    versionCode: 32
+    commit: v2.0.1
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.0.2
+    versionCode: 33
+    commit: v2.0.2
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.0.3
+    versionCode: 34
+    commit: v2.0.3
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.0.4
+    versionCode: 35
+    commit: v2.0.4
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.0.5
+    versionCode: 36
+    commit: v2.0.5
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.0.6
+    versionCode: 37
+    commit: v2.0.6
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.0.7
+    versionCode: 38
+    commit: v2.0.7
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.1.0
+    versionCode: 39
+    commit: v2.1.0
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.2.3
+    versionCode: 43
+    commit: v2.2.3
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.2.4
+    versionCode: 44
+    commit: v2.2.4
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.2.5
+    versionCode: 45
+    commit: v2.2.5
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.2.6
+    versionCode: 46
+    commit: v2.2.6
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 2.3.1
+    versionCode: 48
+    commit: v2.3.1
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 3.0.0
+    versionCode: 50
+    commit: v3.0.0
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 3.0.1
+    versionCode: 51
+    commit: v3.0.1
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 3.0.2
+    versionCode: 52
+    commit: v3.0.2
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 3.0.3
+    versionCode: 53
+    commit: v3.0.3
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 3.1.0
+    versionCode: 54
+    commit: v3.1.0
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 3.1.1
+    versionCode: 55
+    commit: v3.1.1
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 3.1.2
+    versionCode: 56
+    commit: v3.1.2
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 3.2.0
+    versionCode: 57
+    commit: v3.2.0
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - logo
+      - tools
+
+  - versionName: 4.0.0
+    versionCode: 58
+    commit: v4.0.0
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.0.1
+    versionCode: 59
+    commit: v4.0.1
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.0.2
+    versionCode: 60
+    commit: v4.0.2
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.0.3
+    versionCode: 61
+    commit: 4b5b020f740e1d3c9f81ab5a27d8687ea9106c83
+    subdir: Mifare Classic Tool/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.0.4
+    versionCode: 62
+    commit: 788ca8c373ded16a2d9954286cbc1ffa1dbb8319
+    subdir: Mifare Classic Tool/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.0.5
+    versionCode: 63
+    commit: 2f61bb7e0ee52ce6bc61fcaafbdb61565fc7c82b
+    subdir: Mifare Classic Tool/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.1.0
+    versionCode: 64
+    commit: 745d1a4cd20dd261b2aa4c9fc9ad865fa1c94ea0
+    subdir: Mifare Classic Tool/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.2.0
+    versionCode: 65
+    commit: aaddd859102ba1eb229d22549d215b1ccd91cba2
+    subdir: Mifare Classic Tool/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.2.1
+    versionCode: 66
+    commit: 9336861081d73922f65b0f4859fb2b04e7b2f289
+    subdir: Mifare Classic Tool/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.2.2
+    versionCode: 67
+    commit: 353f789b6bb183f280e820f4703e2738aa7918e6
+    subdir: Mifare Classic Tool/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - tools
+
+  - versionName: 4.2.3
+    versionCode: 68
+    commit: c74cd02d9f868f4daaa6afc5c78f70b7c970b3fe
+    subdir: Mifare Classic Tool/app
+    gradle:
+      - yes
+    rm:
+      - tools
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 4.2.3
+CurrentVersionCode: 68

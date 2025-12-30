@@ -1,0 +1,35 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Google Books API.
+Categories:
+  - Connectivity
+  - Development
+License: GPL-3.0-only
+AuthorName: Darshpreet Singh
+SourceCode: https://github.com/Darshpreet2000/BookListingApp
+IssueTracker: https://github.com/Darshpreet2000/BookListingApp/issues
+
+AutoName: BookListingApk
+
+RepoType: git
+Repo: https://github.com/Darshpreet2000/BookListingApp
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.1'
+CurrentVersionCode: 2

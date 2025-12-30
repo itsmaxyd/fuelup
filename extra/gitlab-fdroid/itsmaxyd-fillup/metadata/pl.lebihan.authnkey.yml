@@ -1,0 +1,42 @@
+Categories:
+  - Password & 2FA
+  - Security
+  - System
+License: MIT
+AuthorName: Michel Le Bihan
+AuthorEmail: michel@lebihan.pl
+SourceCode: https://github.com/mimi89999/Authnkey
+IssueTracker: https://github.com/mimi89999/Authnkey/issues
+Translation: https://toolate.othing.xyz/translate/Authnkey
+
+AutoName: Authnkey
+
+RepoType: git
+Repo: https://github.com/mimi89999/Authnkey.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: 5e3cc32e5790914f0e7b356fefd615d05b8cd1e1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 3
+    commit: 99658af1d8ffa8f10fdfb0d69fcb232d2b1f9fec
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 4
+    commit: c32d9c664ad997faa56f2a3f6743fdcf34199206
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.3
+CurrentVersionCode: 4

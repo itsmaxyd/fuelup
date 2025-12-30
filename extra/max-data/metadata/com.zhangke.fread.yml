@@ -1,0 +1,230 @@
+Categories:
+  - Connectivity
+  - Social Network
+License: Apache-2.0
+AuthorName: ZhangKe
+AuthorEmail: kezhang404@gmail.com
+AuthorWebSite: https://zhangke.space
+WebSite: https://fread.xyz
+SourceCode: https://github.com/0xZhangKe/Fread
+IssueTracker: https://github.com/0xZhangKe/Fread/issues
+Donate: https://github.com/0xZhangKe/Fread#donate
+
+AutoName: Fread
+
+RepoType: git
+Repo: https://github.com/0xZhangKe/Fread
+Binaries: https://github.com/0xZhangKe/Fread/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 1.3.4
+    versionCode: 103040
+    commit: 47aea894604c2178aa1438526bc65073b66b2a6d
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.4.1
+    versionCode: 104010
+    commit: 8d0d4387e2e706814b3d7a67000a2957359d59cf
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.4.2
+    versionCode: 104020
+    commit: 5c16c44544bb3e795833a3fa49a6a1936db26108
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.4.3
+    versionCode: 104030
+    commit: f379a3428d3f1ae763e607bec8790904a608327b
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.4.52
+    versionCode: 104052
+    commit: 5bd73ecc732195e98266e7d69c80612be9482f40
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.5.0
+    versionCode: 105000
+    commit: fb4b36fd5622d8f2e2e18ae3412985b46c3987e9
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/0xZhangKe/Fread/releases/download/%v/fread-%c-fdroid.apk
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+    gradleprops:
+      - disableFirebase=true
+
+  - versionName: 1.5.1
+    versionCode: 105010
+    commit: 352c487903329b534ff518cb120b32190173f424
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/0xZhangKe/Fread/releases/download/%v/fread-%c-fdroid.apk
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+    gradleprops:
+      - disableFirebase=true
+
+  - versionName: 1.6.0
+    versionCode: 106000
+    commit: 5f71017786a92477369fb2ee66d9175e64cb98e0
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/0xZhangKe/Fread/releases/download/%v/fread-%c-fdroid.apk
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+    gradleprops:
+      - disableFirebase=true
+
+  - versionName: 1.7.11
+    versionCode: 107011
+    commit: c5f201ab96b6766bfd36b7f14335fecd727336c6
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/0xZhangKe/Fread/releases/download/%v/fread-%c-fdroid.apk
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+    gradleprops:
+      - disableFirebase=true
+
+  - versionName: 1.7.21
+    versionCode: 107021
+    commit: ab4a70e65320e43b9da688d4b43a7a7c7dba09ce
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/0xZhangKe/Fread/releases/download/%v/fread-%c-fdroid.apk
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+    gradleprops:
+      - disableFirebase=true
+
+  - versionName: 1.7.30
+    versionCode: 107030
+    commit: 325b76adbde5703f362674de8666f3e15bdfd8bd
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/0xZhangKe/Fread/releases/download/%v/fread-%c-fdroid.apk
+    rm:
+      - iosApp
+    prebuild:
+      - sed -i -e '/google.service/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/keystoreProperties/d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build-logic/convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt
+    scanignore:
+      - plugins/activitypub-app/src/commonMain/composeResources/files/mastodon-servers.zip
+    scandelete:
+      - build-logic/convention/build
+    gradleprops:
+      - disableFirebase=true
+
+AllowedAPKSigningKeys: 9a45615528d43869fe9dd9c25b2604d7a2d95ff1a85bcb94f8ffb74eba752dab
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.7.30
+CurrentVersionCode: 107030

@@ -1,0 +1,52 @@
+Categories:
+  - Reading
+  - Science & Education
+  - Writing
+License: GPL-3.0-only
+AuthorName: Subin Siby
+AuthorEmail: mail@subinsb.com
+AuthorWebSite: https://subinsb.com/
+WebSite: https://subinsb.com/manglish
+SourceCode: https://github.com/subins2000/manglish
+IssueTracker: https://github.com/subins2000/manglish/issues
+Changelog: https://github.com/subins2000/manglish/releases
+Donate: https://subinsb.com/donate
+
+AutoName: Manglish
+
+RepoType: git
+Repo: https://github.com/subins2000/manglish.git
+
+Builds:
+  - versionName: '3.0'
+    versionCode: 3
+    commit: '3.0'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 5
+    commit: '5.0'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 6
+    commit: '6.0'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.0'
+    versionCode: 7
+    commit: '7.0'
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '7.0'
+CurrentVersionCode: 7

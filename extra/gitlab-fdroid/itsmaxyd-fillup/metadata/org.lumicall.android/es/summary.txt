@@ -1,0 +1,1 @@
+Teléfono virtual de voz por internet cifrada usando estándares abiertos (SIP)

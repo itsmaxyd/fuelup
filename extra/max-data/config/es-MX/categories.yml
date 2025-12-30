@@ -1,0 +1,48 @@
+Connectivity:
+  name: Conectividad
+Development:
+  name: Desarrollo
+Games:
+  name: Juegos
+Graphics:
+  name: Gráficos
+Internet:
+  name: Internet
+Money:
+  name: Dinero
+Multimedia:
+  name: Multimedia
+Navigation:
+  name: Navegación
+Phone & SMS:
+  name: Teléfono & SMS
+Reading:
+  name: Leyendo
+Science & Education:
+  name: Ciencia y Educación
+Security:
+  name: Seguridad
+Sports & Health:
+  name: Deportes & Salud
+System:
+  name: Sistema
+Time:
+  name: Hora
+Writing:
+  name: Escribiendo
+Theming:
+  name: Personalización
+VPN & Proxy:
+  name: VPN & Proxy
+Email:
+  name: Email
+App Store & Updater:
+  name: Tienda de Aplicaciones y Actualizador
+Bookmark:
+  name: Marcador
+Browser:
+  name: Navegador
+Calculator:
+  name: Calculadora
+Calendar & Agenda:
+  name: Calendario y Agenda

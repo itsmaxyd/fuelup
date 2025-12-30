@@ -1,0 +1,219 @@
+Categories:
+  - Internet
+License: MPL-2.0
+SourceCode: https://github.com/yggdrasil-network/crispa-android
+IssueTracker: https://github.com/yggdrasil-network/crispa-android/issues
+
+AutoName: Yggdrasil
+
+RepoType: git
+Repo: https://github.com/yggdrasil-network/crispa-android.git
+
+Builds:
+  - versionName: '1.5'
+    versionCode: 5
+    commit: v1.5
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - sed -i '/signingConfig\ signing/d' build.gradle
+      - sed -i '/ndkVersion/d' build.gradle
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.15.4.linux-amd64.tar.gz
+      - echo "eb61005f0b932c93b424a3a4eaa67d72196c79129d9a3ea8578047683e2c80d5 go.tar.gz"
+        | sha256sum -c -
+      - mkdir -p golang
+      - tar -C golang -xzf go.tar.gz
+      - export GOPATH="$PWD"
+      - export GO_LANG="$PWD/golang/go/bin"
+      - export GO_COMPILED="$PWD/bin"
+      - export PATH="$GO_LANG:$GO_COMPILED:$PATH"
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - export ANDROID_NDK_ROOT=$$NDK$$
+      - export PATH=$(pwd)/go/bin:$PATH
+      - go version
+      - ./golang/go/bin/go get golang.org/x/mobile/cmd/gomobile
+      - ./bin/gomobile init
+      - cd ../yggdrasil; make
+    ndk: r21d
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: '1.6'
+    versionCode: 16
+    commit: v1.6
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - sed -i '/signingConfig\ signing/d' build.gradle
+      - sed -i '/ndkVersion/d' build.gradle
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.15.4.linux-amd64.tar.gz
+      - echo "eb61005f0b932c93b424a3a4eaa67d72196c79129d9a3ea8578047683e2c80d5 go.tar.gz"
+        | sha256sum -c -
+      - mkdir -p golang
+      - tar -C golang -xzf go.tar.gz
+      - export GOPATH="$PWD"
+      - export GO_LANG="$PWD/golang/go/bin"
+      - export GO_COMPILED="$PWD/bin"
+      - export PATH="$GO_LANG:$GO_COMPILED:$PATH"
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - export ANDROID_NDK_ROOT=$$NDK$$
+      - export PATH=$(pwd)/go/bin:$PATH
+      - go version
+      - ./golang/go/bin/go get golang.org/x/mobile/cmd/gomobile
+      - ./bin/gomobile init
+      - cd ../yggdrasil; make
+    ndk: r21d
+
+  - versionName: '1.7'
+    versionCode: 18
+    commit: v1.7
+    subdir: app
+    gradle:
+      - yes
+    build:
+      - sed -i '/signingConfig\ signing/d' build.gradle
+      - sed -i '/ndkVersion/d' build.gradle
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.15.4.linux-amd64.tar.gz
+      - echo "eb61005f0b932c93b424a3a4eaa67d72196c79129d9a3ea8578047683e2c80d5 go.tar.gz"
+        | sha256sum -c -
+      - mkdir -p golang
+      - tar -C golang -xzf go.tar.gz
+      - export GOPATH="$PWD"
+      - export GO_LANG="$PWD/golang/go/bin"
+      - export GO_COMPILED="$PWD/bin"
+      - export PATH="$GO_LANG:$GO_COMPILED:$PATH"
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - export ANDROID_NDK_ROOT=$$NDK$$
+      - export PATH=$(pwd)/go/bin:$PATH
+      - go version
+      - ./golang/go/bin/go get golang.org/x/mobile/cmd/gomobile
+      - ./bin/gomobile init
+      - cd ../yggdrasil; make
+    ndk: r21e
+
+  - versionName: 2.0.19
+    versionCode: 37
+    commit: 02694abab7ff804e09917aa1d1fdd4f00c254530
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.16.4.linux-amd64.tar.gz
+      - echo "7154e88f5a8047aad4b80ebace58a059e36e7e2e4eb3b383127a28c711b4ff59 go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - yes
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-31'
+        'build-tools;31.0.0' > /dev/null
+      - mv ../acra.properties.sample ../acra.properties
+      - sed -i -e '/signingConfig\ signing/d' -e '/ndkVersion/d' build.gradle
+    build:
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - export ANDROID_NDK_ROOT=$$NDK$$
+      - export GOPATH="$PWD"
+      - export GO_COMPILED="$PWD/bin"
+      - export PATH="$GO_COMPILED:$PATH"
+      - go get golang.org/x/mobile/cmd/gomobile
+      - cd ../yggdrasil/yggdrasil-extras
+      - gomobile init
+      - cd ..
+      - make
+    ndk: r21e
+
+  - versionName: 2.1.2
+    versionCode: 39
+    commit: 04c58d2a57e671d41e32bf5f6749a6ea8fae9559
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'platforms;android-31'
+        'build-tools;31.0.0' > /dev/null
+      - mv ../acra.properties.sample ../acra.properties
+      - sed -i -e '/signingConfig\ signing/d' -e '/ndkVersion/d' build.gradle
+    build:
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - export ANDROID_NDK_ROOT=$$NDK$$
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.18.1.linux-amd64.tar.gz
+      - echo "b3b815f47ababac13810fc6021eb73d65478e0b2db4b09d348eefad9581a2334 go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz
+      - export GOPATH="$PWD/golang"
+      - export PATH="$GOPATH/bin:$PWD/go/bin:$PATH"
+      - cd ../yggdrasil/yggdrasil-go
+      - go install golang.org/x/mobile/cmd/gomobile
+      - gomobile init
+      - cd ..
+      - make
+    ndk: r21e
+
+  - versionName: 2.1.4
+    versionCode: 40
+    commit: d6ac6fcca64865b203a281382a9e93670d756d24
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'platforms;android-31' 'build-tools;31.0.0'
+      - mv ../acra.properties.sample ../acra.properties
+      - sed -i -e '/signingConfig signing/d' build.gradle
+    build:
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - export ANDROID_NDK_ROOT=$$NDK$$
+      - export GOPATH="$PWD/golang"
+      - export PATH="$GOPATH/bin:$PATH"
+      - cd ../yggdrasil/yggdrasil-go
+      - go install golang.org/x/mobile/cmd/gomobile
+      - gomobile init
+      - cd ..
+      - make
+    ndk: r21c
+
+  - versionName: 2.1.7
+    versionCode: 43
+    commit: d4f8af5e299e78b584528f680991b4acf2bfdc1c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'platforms;android-31' 'build-tools;31.0.0'
+      - mv ../acra.properties.sample ../acra.properties
+      - sed -i -e '/signingConfig signing/d' build.gradle
+    build:
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - export ANDROID_NDK_ROOT=$$NDK$$
+      - export GOPATH="$PWD/golang"
+      - export PATH="$GOPATH/bin:$PATH"
+      - cd ../yggdrasil/yggdrasil-go
+      - go install golang.org/x/mobile/cmd/gomobile
+      - gomobile init
+      - cd ..
+      - make
+    ndk: r21c
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2.1.7
+CurrentVersionCode: 43

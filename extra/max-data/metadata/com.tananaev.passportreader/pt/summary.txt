@@ -1,0 +1,1 @@
+use o chip NFC para comunicar com um passaporte eletrónico

@@ -1,0 +1,109 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App uses non-libre exchange rate APIs.
+Categories:
+  - Money
+License: MIT
+AuthorName: Hank Milliken
+AuthorEmail: hank.milliken94@protonmail.com
+AuthorWebSite: https://github.com/hank-milliken
+WebSite: https://github.com/Minimalistic-Apps/price-converter
+SourceCode: https://github.com/Minimalistic-Apps/price-converter
+IssueTracker: https://github.com/Minimalistic-Apps/price-converter/issues
+Changelog: https://github.com/Minimalistic-Apps/price-converter/releases
+Bitcoin: bc1qv9s85973s87rxu0628xtzmdcsvwxf2hlxqdddm
+
+AutoName: Price Converter
+
+RepoType: git
+Repo: https://github.com/Minimalistic-Apps/price-converter.git
+
+Builds:
+  - versionName: 1.0.5
+    versionCode: 6
+    commit: 1.0.5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 8
+    commit: dc77ff28e920cce3b879598d6048d7b1a5596eeb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.0
+    versionCode: 10
+    commit: b958956badce1fc6e68d135d4980bfa65c00ae9d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.5.0
+    versionCode: 12
+    commit: 938cc8157248d98ed64397e7121e9f24dbc3695c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.6.0
+    versionCode: 13
+    commit: cf1382105f562e0100e171710e5042f2c3b519e9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.6.1
+    versionCode: 14
+    commit: b220c550030cf5e25ec55e613c285e9bfaf580a7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.0
+    versionCode: 15
+    commit: 8e5248075bb79861578ee2bd58cf1e63f8046c54
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 16
+    commit: e3f5eda04a4132c6766268f69c42b3d153cacbc2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.8.0
+CurrentVersionCode: 16

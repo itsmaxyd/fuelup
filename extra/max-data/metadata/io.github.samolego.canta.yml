@@ -1,0 +1,115 @@
+AntiFeatures:
+  NonFreeDep:
+    en-US: Depends on Shizuku for functionality
+  NonFreeNet:
+    en-US: Connects to Github as app info data source
+Categories:
+  - App Manager
+  - System
+License: LGPL-3.0-or-later
+SourceCode: https://github.com/samolego/Canta
+IssueTracker: https://github.com/samolego/Canta/issues
+
+AutoName: Canta
+
+RepoType: git
+Repo: https://github.com/samolego/Canta.git
+
+Builds:
+  - versionName: 3.0.0
+    versionCode: 218
+    commit: b8b7c92579554c390dabcc11f81d342b655da992
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/samolego/Canta/releases/download/%v/app-release.apk
+    rm:
+      - docs
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/samolego/Canta/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; gradle clean
+        assembleRelease; done
+
+  - versionName: 3.0.1
+    versionCode: 219
+    commit: f398ba0d154d625921b3a1b518ef1ee2124aa521
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/samolego/Canta/releases/download/%v/app-release.apk
+    rm:
+      - docs
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/samolego/Canta/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; taskset -c 0-5
+        gradle clean assembleRelease; done
+
+  - versionName: 3.0.2
+    versionCode: 220
+    commit: 7a8133c459686f045bf6dc86e8fcb80c698c5d24
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/samolego/Canta/releases/download/%v/app-release.apk
+    rm:
+      - docs
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/samolego/Canta/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; taskset -c 0-5
+        gradle clean assembleRelease; done
+
+  - versionName: 3.1.1
+    versionCode: 222
+    commit: 4794fe5d415965589213df70a561680f737d5874
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/samolego/Canta/releases/download/%v/app-release.apk
+    rm:
+      - docs
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/samolego/Canta/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; taskset -c 0-5
+        gradle clean assembleRelease; done
+
+  - versionName: 3.1.2
+    versionCode: 223
+    commit: 23e912baaaf514f89d75d1e105c187eba63ae8d1
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/samolego/Canta/releases/download/%v/app-release.apk
+    rm:
+      - docs
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/samolego/Canta/releases/download/$$VERSION$$/app-release.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; taskset -c 0-5
+        gradle clean assembleRelease; done
+
+AllowedAPKSigningKeys: 0a2640317c43272188c3e13194c15460691f12c39ea19bba727dd67fb56289d4
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/gradle.properties|version_code=(\d+)|.|version_name=(.+)
+CurrentVersion: 3.1.2
+CurrentVersionCode: 223

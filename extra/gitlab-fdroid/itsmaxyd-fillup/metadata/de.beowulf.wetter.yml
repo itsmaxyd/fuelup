@@ -1,0 +1,294 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Uses OpenWeatherMap, which is not libre.
+Categories:
+  - Internet
+License: EUPL-1.2
+AuthorName: BeoCode
+AuthorEmail: weather@beocode.eu
+WebSite: https://codeberg.org/BeoCode/Weather/wiki
+SourceCode: https://codeberg.org/BeoCode/Weather
+IssueTracker: https://codeberg.org/BeoCode/Weather/issues
+Translation: https://poeditor.com/join/project?hash=WhLrkxFJUt
+Changelog: https://codeberg.org/BeoCode/Weather/raw/branch/main/CHANGELOG
+
+AutoName: Weather
+
+RepoType: git
+Repo: https://codeberg.org/BeoCode/Weather.git
+
+Builds:
+  - versionName: '2.01'
+    versionCode: 22
+    commit: '2.01'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.02'
+    versionCode: 23
+    commit: '2.02'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.03'
+    versionCode: 24
+    commit: '2.03'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.04'
+    versionCode: 25
+    commit: '2.04'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.10'
+    versionCode: 26
+    commit: '2.10'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.11'
+    versionCode: 27
+    commit: '2.11'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.1
+    versionCode: 28
+    commit: 2.11.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.20'
+    versionCode: 29
+    commit: '2.20'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.21'
+    versionCode: 30
+    commit: '2.21'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.21.1
+    versionCode: 31
+    commit: 2.21.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.21.2
+    versionCode: 33
+    commit: 2.21.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.22'
+    versionCode: 35
+    commit: '2.22'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.00'
+    versionCode: 36
+    commit: '3.00'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.01'
+    versionCode: 37
+    commit: '3.01'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.02'
+    versionCode: 38
+    commit: '3.02'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.03'
+    versionCode: 39
+    commit: c7a4109b9ab535fa1ffbce58e0a1196ce2b07e02
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.03.1
+    versionCode: 40
+    commit: 05309f1857fd68aac3e7513ac697b9cc87a8ab5a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.03.2
+    versionCode: 41
+    commit: 1d6b936d5e07eca3bdfa16b26c61462a6b5f5bbf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.10'
+    versionCode: 42
+    commit: 1e4b688484da442d5f6925ec3e212d15bed09172
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.11'
+    versionCode: 43
+    commit: f0f70cf81b035834c713f1c3f90a051d4a438e34
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.12'
+    versionCode: 44
+    commit: c541b626a4867bee31dc81c911d4c0f58483e53b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.13'
+    versionCode: 45
+    commit: 8ff6dc70ac875dccdd76c1262442dd6210584f1d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.14'
+    versionCode: 46
+    commit: ffb8da428c99da7ff119371d0395f4ce17f07cf9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.15-pre1
+    versionCode: 47
+    commit: 9d273f8c7a3b073fc06baa958533b762a7d4e94b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.15'
+    versionCode: 48
+    commit: 3288b9a37b667653c723588a173eba9faa6c455b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.16-pre1
+    versionCode: 49
+    commit: 940a3b7c6177fb96ffdbefafbfb37c9e961e9921
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.16'
+    versionCode: 51
+    commit: 10e3c16006ece6e0cf4897c1c34b96cae236ce7a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.17'
+    versionCode: 54
+    commit: db30b87f76143a102a54bda9fb245cdf990b4c0c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.19'
+    versionCode: 57
+    commit: d453433a8e8b4d9ace3e9c7752686e7cd71829fa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.19.1
+    versionCode: 58
+    commit: d5c67a32922d1707d00668a4e1bbf2878b194453
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.20'
+    versionCode: 61
+    commit: fcabe8c1d0463952620c9fc664350e8716d83f25
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '3.20'
+CurrentVersionCode: 61

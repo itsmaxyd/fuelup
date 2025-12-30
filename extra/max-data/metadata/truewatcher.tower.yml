@@ -1,0 +1,61 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Location Tracker & Sharer
+License: GPL-3.0-or-later
+WebSite: http://tower.posmotrel.net
+SourceCode: https://github.com/TrueWatcher/tower
+IssueTracker: https://github.com/TrueWatcher/tower/issues
+
+AutoName: tower
+
+RepoType: git
+Repo: https://github.com/TrueWatcher/tower.git
+
+Builds:
+  - versionName: 2.6.12
+    versionCode: 60
+    commit: v2.6.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.3
+    versionCode: 64
+    commit: v2.7.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.2
+    versionCode: 67
+    commit: v2.8.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.3
+    versionCode: 68
+    commit: v2.8.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.6
+    versionCode: 75
+    commit: 891491e287cee3f7fd47dd9ac35fc932223cee51
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.1
+    versionCode: 82
+    commit: 1dfbc98ceb61400491182c000d579fffde04fd91
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.11.1
+CurrentVersionCode: 82

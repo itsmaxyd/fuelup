@@ -1,0 +1,136 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Pinboard is a paid subscription service, an account is needed.
+Categories:
+  - Bookmark
+  - Internet
+License: GPL-3.0-only
+SourceCode: https://github.com/maxpower47/PinDroid
+IssueTracker: https://github.com/maxpower47/PinDroid/issues
+
+AutoName: PinDroid
+Description: |-
+  Pinboard is an online bookmark management service and the app itself is a port
+  of DeliciousDroid. Make bookmarks via the browser share menu so that they are
+  backed up and accessible anywhere.
+
+  Features:
+
+  * Background sync for bookmarks
+  * Bookmarks are cached to allow offline viewing and to reduce network traffic
+  * Accounts managed through Android's built-in account manager
+  * Multiple accounts supported
+  * Add, view, edit, and delete bookmarks
+  * Bookmark titles, tags, and notes are searchable from both the global search and from within the app
+  * Home screen widget for quick access to several activities
+
+  Note: Pinboard is a paid subscription service, an account is needed.
+
+  Translations: English, Finnish, Spanish, German, Korean
+
+RepoType: git
+Repo: https://github.com/maxpower47/PinDroid.git
+
+Builds:
+  - versionName: 2.0.3
+    versionCode: 44
+    commit: v2.0.3
+
+  - versionName: 2.0.4
+    versionCode: 45
+    commit: v2.0.4
+
+  - versionName: 2.1.0
+    versionCode: 46
+    commit: v2.1.0
+
+  - versionName: 2.1.1
+    versionCode: 47
+    commit: v2.1.1
+
+  - versionName: 2.1.2
+    versionCode: 48
+    commit: v2.1.2
+    target: android-16
+
+  - versionName: 2.1.4
+    versionCode: 50
+    commit: v2.1.4
+    target: android-16
+
+  - versionName: 2.2.0
+    versionCode: 51
+    commit: v2.2.0
+    target: android-16
+
+  - versionName: 2.2.1
+    versionCode: 52
+    commit: v2.2.1
+    target: android-17
+
+  - versionName: 2.3.0
+    versionCode: 53
+    commit: v2.3.0
+    target: android-17
+
+  - versionName: 2.3.1
+    versionCode: 54
+    commit: v2.3.1
+    target: android-17
+
+  - versionName: 2.3.2
+    versionCode: 55
+    commit: v2.3.2
+    target: android-17
+
+  - versionName: 2.3.3
+    versionCode: 56
+    commit: v2.3.3
+    target: android-17
+
+  - versionName: 3.1.0
+    versionCode: 63
+    commit: v3.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.1
+    versionCode: 64
+    commit: v3.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.2.0
+    versionCode: 65
+    commit: v3.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.3.0
+    versionCode: 67
+    commit: v3.3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.3.1
+    versionCode: 68
+    commit: v3.3.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.3.2
+    versionCode: 69
+    commit: v3.3.2
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.3.2
+CurrentVersionCode: 69

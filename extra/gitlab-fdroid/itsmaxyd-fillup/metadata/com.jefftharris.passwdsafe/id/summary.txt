@@ -1,0 +1,1 @@
+Port dari PasswordSafe, pengelola kata sandi

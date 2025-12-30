@@ -1,0 +1,126 @@
+Connectivity:
+  name: Зв'язок
+Development:
+  name: Розробка
+Games:
+  name: Ігри
+Graphics:
+  name: Графіка
+Internet:
+  name: Інтернет
+Money:
+  name: Фінанси
+Multimedia:
+  name: Мультимедіа
+Navigation:
+  name: Навігація
+Phone & SMS:
+  name: Телефон і SMS
+Reading:
+  name: Читання
+Science & Education:
+  name: Освіта й наука
+Security:
+  name: Безпека
+Sports & Health:
+  name: Спорт і здоров'я
+System:
+  name: Система
+Theming:
+  name: Тематика
+Time:
+  name: Час
+Writing:
+  name: Написання
+Email:
+  name: Електронна пошта
+VPN & Proxy:
+  name: VPN та проксі
+DNS & Hosts:
+  name: DNS та хости
+Password & 2FA:
+  name: Пароль і двофакторна автентифікація
+Social Network:
+  name: Соціальна мережа
+File Transfer:
+  name: Передавання файлів
+File Encryption & Vault:
+  name: Шифрування файлів та сховище
+Messaging:
+  name: Повідомлення
+App Store & Updater:
+  name: App Store та оновлення
+Browser:
+  name: Браузер
+Local Media Player:
+  name: Локальний медіаплеєр
+News:
+  name: Новини
+Weather:
+  name: Погода
+Online Media Player:
+  name: Онлайн-медіаплеєр
+Keyboard & IME:
+  name: Клавіатура та редактор вхідних даних
+Podcast:
+  name: Подкаст
+Voice & Video Chat:
+  name: Голосовий та відеочат
+Cloud Storage & File Sync:
+  name: Хмарне сховище та синхронізація файлів
+Wallet:
+  name: Гаманець
+Calendar & Agenda:
+  name: Календар і порядок денний
+Bookmark:
+  name: Закладка
+Calculator:
+  name: Калькулятор
+Draw:
+  name: Нічия
+Ebook Reader:
+  name: Зчитувач електронних книг
+Finance Manager:
+  name: Фінансовий менеджер
+Gallery:
+  name: Галерея
+Icon Pack:
+  name: Набір значків
+Launcher:
+  name: Запуск
+Note:
+  name: Примітка
+Pass Wallet:
+  name: Гаманець Pass
+Recipe Manager:
+  name: Менеджер рецептів
+Text Editor:
+  name: Текстовий редактор
+Translation & Dictionary:
+  name: Переклад і словник
+Unit Convertor:
+  name: Конвертер одиниць
+Wallpaper:
+  name: Шпалери
+Workout:
+  name: Тренування
+Public Transport:
+  name: Карта та розклад руху громадського транспорту
+Task:
+  name: Завдання
+Shopping List:
+  name: Список покупок
+Forum:
+  name: Форум
+Habit Tracker:
+  name: Трекер звичок
+Music Practice Tool:
+  name: Інструмент для музичної практики
+Location Tracker & Sharer:
+  name: Відстеження та поширення місцезнаходження
+AI Chat:
+  name: Чат з ШІ
+App Manager:
+  name: Менеджер застосунків
+Religion:
+  name: Релігія

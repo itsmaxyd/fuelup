@@ -1,0 +1,83 @@
+Categories:
+  - Internet
+License: GPL-3.0-only
+WebSite: https://github.com/vbier/habpanelviewer/wiki
+SourceCode: https://github.com/vbier/habpanelviewer
+IssueTracker: https://github.com/vbier/habpanelviewer/issues
+Changelog: https://github.com/vbier/habpanelviewer/releases
+
+AutoName: HABPanelViewer
+
+RepoType: git
+Repo: https://github.com/vbier/habpanelviewer
+
+Builds:
+  - versionName: 0.9.19
+    versionCode: 2
+    commit: 0.9.19
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.20
+    versionCode: 3
+    commit: 0.9.20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.22
+    versionCode: 5
+    commit: 0.9.22
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.23
+    versionCode: 6
+    commit: 0.9.23
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.24
+    versionCode: 7
+    commit: 0.9.24
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.25
+    versionCode: 8
+    commit: 0.9.25
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.26
+    versionCode: 9
+    commit: 0.9.26
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+
+  - versionName: 0.9.27
+    versionCode: 10
+    commit: 0c5756752e45562fc880fd096a8c67a703f83382
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - app/src/test
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.9.27
+CurrentVersionCode: 10

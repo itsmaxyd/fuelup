@@ -1,0 +1,137 @@
+Categories:
+  - Navigation
+License: MIT
+AuthorName: Waboodoo
+AuthorEmail: android@rmy.ch
+SourceCode: https://github.com/Waboodoo/Status-Bar-Tachometer
+IssueTracker: https://github.com/Waboodoo/Status-Bar-Tachometer/issues
+Translation: https://crowdin.com/project/status-bar-speedometer
+
+AutoName: Speedometer
+
+RepoType: git
+Repo: https://github.com/Waboodoo/Status-Bar-Tachometer
+
+Builds:
+  - versionName: '1.2'
+    versionCode: 3
+    commit: '1.2'
+    subdir: Status Bar Tacho
+
+  - versionName: 3.0.0
+    versionCode: 2003000001
+    commit: v3.0
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.1.0
+    versionCode: 2003010000
+    commit: v3.1
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.2.0
+    versionCode: 2003020000
+    commit: 9221a6fb0d80be778e06982950c40c4d3e6ab2f8
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.3.0
+    versionCode: 2003030000
+    commit: 728ee8c1efac9824d240931a3bcd9d30f946fb0d
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.4.0
+    versionCode: 2003040000
+    commit: f06f0fe50f7570fac33b2fff652a56671079081a
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.5.0
+    versionCode: 2003050002
+    commit: 6d540b09c93891571318c00cd6e7defdfa3a9a9a
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.5.1
+    versionCode: 2003050100
+    commit: fcb33177e7d863914caf5008e158ffff4f50f41a
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.6.0
+    versionCode: 2003060000
+    commit: 9301b48d5e6a0cd81031872bbcf92f683defbafd
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.7.0
+    versionCode: 2003070000
+    commit: 8d114070fb8ce0701e1dcdd6943462b871fb4e2c
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.8.0
+    versionCode: 2003080001
+    commit: 67ffcec2c6e92f30b90c17da18a8d20169f2754a
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.10.0
+    versionCode: 2003100000
+    commit: 4013973f4910ed742c119df52c44771aa61a8c93
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.10.1
+    versionCode: 2003100100
+    commit: ebf4c8739f3ab069d103b6943de914be6b29088d
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.11.0
+    versionCode: 2003110000
+    commit: 94afbd992d43fd4dc2191a313974445e0dd17ba5
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.12.0
+    versionCode: 2003120001
+    commit: 88aa1fa03cf9f15db275f8f6fcccc1384fd50fb5
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.13.0
+    versionCode: 2003130001
+    commit: f50b92ffe3ee972c1a26422af2a842f724751b11
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+
+  - versionName: 3.14.0
+    versionCode: 2003140001
+    commit: 86254d7f0141b539d06c89fc9386aa0ed4800f23
+    subdir: StatusBarSpeedometer/app/
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.12.1/8.11.1/' ../gradle/libs.versions.toml
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.14.0
+CurrentVersionCode: 2003140001

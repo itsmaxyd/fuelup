@@ -1,0 +1,1440 @@
+Categories:
+  - Reading
+  - Science & Education
+  - Writing
+License: GPL-3.0-or-later
+AuthorName: Marco Bresciani
+AuthorEmail: marco.530@outlook.it
+AuthorWebSite: https://codeberg.org/marcoXbresciani
+SourceCode: https://codeberg.org/marcoXbresciani/TKCompanionApp
+IssueTracker: https://codeberg.org/marcoXbresciani/TKCompanionApp/issues
+Changelog: https://codeberg.org/marcoXbresciani/TKCompanionApp/src/branch/master/CHANGELOG.org
+Liberapay: marcoXbresciani
+
+AutoName: TKCompanionApp
+
+RepoType: git
+Repo: https://codeberg.org/marco.bresciani/TKCompanionApp.git
+
+Builds:
+  - versionName: 0.2.9
+    versionCode: 29
+    commit: 0.2.9
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
+      - echo "0570b9354959f651b814e56a4ce98d4a067bf2385b9a0e6be075739bc65b0fae node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.0-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 0.2.10
+    versionCode: 30
+    commit: 6a26d209dad4ac4b55a83163ab219a1016229d46
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
+      - echo "0570b9354959f651b814e56a4ce98d4a067bf2385b9a0e6be075739bc65b0fae node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.0-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 0.2.11
+    versionCode: 31
+    commit: cd19aa6167db95f281363d098a3710be6fcb3477
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
+      - echo "0570b9354959f651b814e56a4ce98d4a067bf2385b9a0e6be075739bc65b0fae node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.0-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 0.2.12
+    versionCode: 32
+    commit: c79fa4fe93dd3a3ec799a963660bc72c37a571a6
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
+      - echo "0570b9354959f651b814e56a4ce98d4a067bf2385b9a0e6be075739bc65b0fae node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.0-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 0.2.13
+    versionCode: 33
+    commit: c39f79b6249c5a3e82bc3f3810203551d8417e53
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
+      - echo "0570b9354959f651b814e56a4ce98d4a067bf2385b9a0e6be075739bc65b0fae node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.0-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 0.2.14
+    versionCode: 34
+    commit: 6ff21457dab6617c968e874701e41e4aaadc1827
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
+      - echo "0570b9354959f651b814e56a4ce98d4a067bf2385b9a0e6be075739bc65b0fae node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.0-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 0.3.0
+    versionCode: 35
+    commit: e25ab4ba2bc13e4f2179e9249990fe8497854946
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
+      - echo "0570b9354959f651b814e56a4ce98d4a067bf2385b9a0e6be075739bc65b0fae node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.0-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 0.4.0
+    versionCode: 40
+    commit: e77b9caa5cb292a95892edae7427cad545d7eb2c
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
+      - echo "0570b9354959f651b814e56a4ce98d4a067bf2385b9a0e6be075739bc65b0fae node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.0-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 0.5.0
+    versionCode: 50
+    commit: 465c6a478e4c454e8fcb11e9b780962463a96e12
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
+      - echo "0570b9354959f651b814e56a4ce98d4a067bf2385b9a0e6be075739bc65b0fae node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.0-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 0.6.0
+    versionCode: 60
+    commit: 2992ac1e5047bb680661258cdab868919b65976c
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.2/node-v16.14.2-linux-x64.tar.xz
+      - echo "e40c6f81bfd078976d85296b5e657be19e06862497741ad82902d0704b34bb1b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.2-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 1.0.0
+    versionCode: 100
+    commit: 3dd7798255b106df02312445e6bece86f85fc275
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.2/node-v16.14.2-linux-x64.tar.xz
+      - echo "e40c6f81bfd078976d85296b5e657be19e06862497741ad82902d0704b34bb1b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.2-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 1.0.1
+    versionCode: 101
+    commit: ef5469a402b934148eaf3ce62586b7cb09c5a036
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.2/node-v16.14.2-linux-x64.tar.xz
+      - echo "e40c6f81bfd078976d85296b5e657be19e06862497741ad82902d0704b34bb1b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.2-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 1.1.0
+    versionCode: 110
+    commit: d8deb0bd80981d4427e1af693f5b48ec124bf70b
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.2/node-v16.14.2-linux-x64.tar.xz
+      - echo "e40c6f81bfd078976d85296b5e657be19e06862497741ad82902d0704b34bb1b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.2-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 2.0.0
+    versionCode: 200
+    commit: 1a84b17158e0eea934842d19afbedc2a40cb4a5e
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.14.2/node-v16.14.2-linux-x64.tar.xz
+      - echo "e40c6f81bfd078976d85296b5e657be19e06862497741ad82902d0704b34bb1b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v16.14.2-linux-x64/. /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '\!WRITE_EXTERNAL_STORAGE!a<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+        tools:node="remove" />' -e 's!xmlns:android!xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android!' -e '/INTERNET/d' -e '/SYSTEM_ALERT_WINDOW/d' -e '/VIBRATE/d'
+        -e 's/EXTERNAL_STORAGE"/EXTERNAL_STORAGE" tools:node="remove"/g' src/main/AndroidManifest.xml
+      - sed -i -e '/play-services/d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 2.0.1
+    versionCode: 201
+    commit: 4ae841ccac0bef3eb45d2a2bd0f0d3b822784472
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.xz
+      - echo "ebdf4dc9d992d19631f0931cca2fc33c6d0d382543639bc6560d31d5060a8372 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 2.0.2
+    versionCode: 202
+    commit: c8a84a8e4362198426eb07ff9a89fe944c75924b
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.xz
+      - echo "ebdf4dc9d992d19631f0931cca2fc33c6d0d382543639bc6560d31d5060a8372 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 2.1.0
+    versionCode: 210
+    commit: fad85a09896037f9ef49177203f1b6385a6e5438
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.xz
+      - echo "ebdf4dc9d992d19631f0931cca2fc33c6d0d382543639bc6560d31d5060a8372 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-encrypted-storage/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 2.2.0
+    versionCode: 220
+    commit: 951a434aa6647533ef7b71ed62b6977cba07f40d
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.15.1/node-v16.15.1-linux-x64.tar.xz
+      - echo "b749f7a76e56dfd6dfb8a910b8a2a871159661557680aa95acf13c9514422c12 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g npm@8.12.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-encrypted-storage/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 3.0.0
+    versionCode: 300
+    commit: 1191a37fd2c651190e381d9b0fd0692e845a54fe
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.15.1/node-v16.15.1-linux-x64.tar.xz
+      - echo "b749f7a76e56dfd6dfb8a910b8a2a871159661557680aa95acf13c9514422c12 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g npm@8.12.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-encrypted-storage/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 3.0.1
+    versionCode: 301
+    commit: abd7bc9f8268258be142b550d99aa08884e566b5
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v16.15.1/node-v16.15.1-linux-x64.tar.xz
+      - echo "b749f7a76e56dfd6dfb8a910b8a2a871159661557680aa95acf13c9514422c12 node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g npm@8.12.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-encrypted-storage/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 3.1.0
+    versionCode: 310
+    commit: f7af24b9fbe351fa40012399d0c3e68b04303b16
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/latest-gallium/node-v16.17.0-linux-x64.tar.xz
+      - echo "f0867d7a17a4d0df7dbb7df9ac3f9126c2b58f75450647146749ef296b31b49b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g npm@8.15.0
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-encrypted-storage/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 3.1.1
+    versionCode: 311
+    commit: d29365e85df26991ebc9a506481350c52113f14c
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/latest-gallium/node-v16.17.0-linux-x64.tar.xz
+      - echo "f0867d7a17a4d0df7dbb7df9ac3f9126c2b58f75450647146749ef296b31b49b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g npm@8.15.0
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-encrypted-storage/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 3.1.2
+    versionCode: 312
+    commit: 689607b9fdb3d0c3c10cc4db50d99b57d2edddda
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - sysctl fs.inotify.max_user_watches=524288
+      - curl -Lo node.tar.xz https://nodejs.org/dist/latest-gallium/node-v16.17.0-linux-x64.tar.xz
+      - echo "f0867d7a17a4d0df7dbb7df9ac3f9126c2b58f75450647146749ef296b31b49b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g npm@8.15.0
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - android/app/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-encrypted-storage/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/react-native/ReactAndroid/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 5.0.0
+    versionCode: 500
+    commit: 1f7032e4c353e384b0c352f443869a7ff2af9eb4
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-x64.tar.gz
+      - echo "da5658693243b3ecf6a4cba6751a71df1eb9e9703ca93b42a9404aed85f58ad0 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@8.19.2
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/hermes-engine
+      - node_modules/jsc-android
+      - node_modules/react-native/ReactAndroid/build.gradle
+      - node_modules/react-native/android/com/facebook/react/react-native/*/
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-encrypted-storage/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.0.0
+    versionCode: 600
+    commit: 75a0c41a1b3bca99eb45b8cb977f56bae616c4ff
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+      - echo "a8fcacb8033504e6d704bdee821f7005ee3774db25c799bcf2a13b5bda7de172 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@8.19.2
+    init: npm install --force
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native/ReactAndroid/build.gradle
+      - node_modules/react-native/android/com/facebook/react/react-native
+      - node_modules/react-native/android/com/facebook/react/hermes-engine
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.1.0
+    versionCode: 610
+    commit: 8a496ee6c2d968726d34e431ac1ebe2b51585ebf
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+      - echo "a8fcacb8033504e6d704bdee821f7005ee3774db25c799bcf2a13b5bda7de172 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@8.19.2
+    init: npm install --force
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native/ReactAndroid/build.gradle
+      - node_modules/react-native/android/com/facebook/react/react-native
+      - node_modules/react-native/android/com/facebook/react/hermes-engine
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.1.1
+    versionCode: 611
+    commit: 1cc4fe059013d460374be08dcfe446702df31fa4
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+      - echo "a8fcacb8033504e6d704bdee821f7005ee3774db25c799bcf2a13b5bda7de172 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@8.19.2
+    init: npm install --force
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native/ReactAndroid/build.gradle
+      - node_modules/react-native/android/com/facebook/react/react-native
+      - node_modules/react-native/android/com/facebook/react/hermes-engine
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.2.0
+    versionCode: 620
+    commit: cb309c1d792b80eccee77b39bc0dbb5c712df7f7
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.13.0/node-v18.13.0-linux-x64.tar.gz
+      - echo "2d2881cf860624b9fa9866670a65708c747d458213bdccaa8e7266b105d404ad node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.4.0
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.3.0
+    versionCode: 630
+    commit: e1ebe43fc2192d3a9ba7211ed564d4e200b8cab4
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.13.0/node-v18.13.0-linux-x64.tar.gz
+      - echo "2d2881cf860624b9fa9866670a65708c747d458213bdccaa8e7266b105d404ad node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.4.0
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.4.2
+    versionCode: 642
+    commit: e065e4d9071bf7bb6a9508865c93314f89b709f0
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.15.0/node-v18.15.0-linux-x64.tar.gz
+      - echo "b298a73a9fc07badfa9e4a2e86ed48824fc9201327cdc43e3f3f58b273c535e7 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.5.0
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.5.0
+    versionCode: 650
+    commit: 618ea65736ad701120e50af6214163b759a7929e
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.15.0/node-v18.15.0-linux-x64.tar.gz
+      - echo "b298a73a9fc07badfa9e4a2e86ed48824fc9201327cdc43e3f3f58b273c535e7 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.5.0
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.5.1
+    versionCode: 651
+    commit: a2bc24d17155e5858ffd75f56aa380eb35b341ec
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.gz
+      - echo "fc83046a93d2189d919005a348db3b2372b598a145d84eb9781a3a4b0f032e95 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.5.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.6.0
+    versionCode: 660
+    commit: 99ee818aff146a26dd442a47b998a8aa088bd454
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.gz
+      - echo "fc83046a93d2189d919005a348db3b2372b598a145d84eb9781a3a4b0f032e95 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.5.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.6.1
+    versionCode: 661
+    commit: 2207b549641a234f97fd8fb716bb68ec4b6c0c6e
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.gz
+      - echo "fc83046a93d2189d919005a348db3b2372b598a145d84eb9781a3a4b0f032e95 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.5.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.6.2
+    versionCode: 662
+    commit: 6c7d53ad646b519ed5d48822451f843da525dad9
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.gz
+      - echo "fc83046a93d2189d919005a348db3b2372b598a145d84eb9781a3a4b0f032e95 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.5.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.7.0
+    versionCode: 670
+    commit: bb7dd81f95744c8499f0bc77a98fa17bac8d6b4e
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.gz
+      - echo "fc83046a93d2189d919005a348db3b2372b598a145d84eb9781a3a4b0f032e95 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.5.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.8.0
+    versionCode: 680
+    commit: 83aebc21b7a1dfbe523cff02505e2366dfc2de3a
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.gz
+      - echo "fc83046a93d2189d919005a348db3b2372b598a145d84eb9781a3a4b0f032e95 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.5.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 6.8.1
+    versionCode: 681
+    commit: 7a15b2760430f4df38e1d91cdff2d72e9d184d96
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.gz
+      - echo "fc83046a93d2189d919005a348db3b2372b598a145d84eb9781a3a4b0f032e95 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.5.1
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 7.0.0
+    versionCode: 700
+    commit: b5672d7b5b44e258c0d04d3f6b358449304393b2
+    subdir: android/app
+    sudo:
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.17.1/node-v18.17.1-linux-x64.tar.gz
+      - echo "2cb75f2bc04b0a3498733fbee779b2f76fe3f655188b4ac69ef2887b6721da2d node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - npm install -g npm@9.6.7
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+  - versionName: 7.1.0
+    versionCode: 710
+    disable: crashing
+    commit: 8ef6fe5f86074d428c12ecd991d161d2dc6e9e13
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+      - sysctl fs.inotify.max_user_watches=524288 || true
+    init:
+      - export NODE_VERSION=$(node --version | sed 's/v//')
+      - export NPM_VERSION=$(npm --version | sed 's/v//')
+      - sed -i -e "s/\"node\":\ \".*\"/\"node\":\ \"$NODE_VERSION\"/" -e "s/\"npm\":\
+        \".*\"/\"npm\":\ \"$NPM_VERSION\"/" ../../package.json
+      - npm install
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/installReferrerVersion/,+11d' ../../node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e "/swiperefreshlayout/a implementation(project(':react-native-device-info'))
+        { exclude group\x3a 'com.google.firebase'\\ exclude group\x3a 'com.google.android.gms'\\
+        exclude group\x3a 'com.android.installreferrer'\\ }" build.gradle
+    scanignore:
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+    scandelete:
+      - node_modules/
+    ndk: r21e
+
+MaintainerNotes: scanignore is used to allow the "node_modules/react-native/android"
+  local Maven repository.
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 7.1.0
+CurrentVersionCode: 710

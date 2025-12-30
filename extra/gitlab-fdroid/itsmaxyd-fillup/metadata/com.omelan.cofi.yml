@@ -1,0 +1,372 @@
+Categories:
+  - Time
+License: GPL-3.0-only
+AuthorName: Leon Omelan
+AuthorEmail: rozpierog@gmail.com
+AuthorWebSite: https://fosstodon.org/@LeonOmelan
+WebSite: https://rozpierog.github.io/Cofi/
+SourceCode: https://github.com/rozPierog/Cofi
+IssueTracker: https://github.com/rozPierog/Cofi/issues
+Donate: https://github.com/sponsors/rozPierog
+
+Name: Cofi - Brew Timer
+AutoName: Cofi
+
+RepoType: git
+Repo: https://github.com/rozPierog/Cofi.git
+
+Builds:
+  - versionName: 1.3.1
+    versionCode: 48
+    commit: v1.3.1-fd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.3.2
+    versionCode: 50
+    commit: f2a1d5aebce63b1d4e964a74b85f046187145b3a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.3.3
+    versionCode: 52
+    commit: f7691a4fe04678937d1746ff4d52d2a3969e4f56
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.3.4
+    versionCode: 54
+    commit: 63e0f13651c9fec381b2f8d836c86de74e692827
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.5.0
+    versionCode: 60
+    commit: c76ebc36ed581617378bcbb21569099f7a5b1802
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.6.0
+    versionCode: 62
+    commit: d461881a2b2ba7912b4eff4133f4177d33a0bfd6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.7.0
+    versionCode: 64
+    commit: 1bc8e1adb3ff340ebc0da99056efc01dc74ceff5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.7.1
+    versionCode: 66
+    commit: a8cd97709684103e9348c9f7f70ea6c6633ba08b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.7.3
+    versionCode: 72
+    commit: 001185cbbb0c906de580c08a3d9965f4eb7df8a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.7.4
+    versionCode: 74
+    commit: 3d7a17b182cd7dfeb6251936639e10de50636cc9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.7.5
+    versionCode: 77
+    commit: 6e02949fd2a935593837cce29e71cf57d43720c4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.7.8
+    versionCode: 81
+    commit: c5146c256f810944b0cc63eb74e141a168ba73ae
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.8.0
+    versionCode: 83
+    commit: 2719d8111977e02290520fc6a63c669d6e0da127
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 1.9.1
+    versionCode: 88
+    commit: c4318348d11dd5c25d5ca21e4b4460a3b5541422
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 1.11.1
+    versionCode: 105
+    commit: f8c0316031da1fdb326bf8c643eeb3f1e369998a
+    subdir: app
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.11.2
+    versionCode: 111
+    commit: d001f84f1f6c33d2720107e5b3cc193c19c6fb8e
+    subdir: app
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.13.0
+    versionCode: 114
+    commit: 7641de4964f323beb1c06a5f5a9b671d97b7e52b
+    subdir: app
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.13.1
+    versionCode: 120
+    commit: 8dc993b33d93e7a900b6d0d98888b7acdb2fb3dd
+    subdir: app
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.13.2
+    versionCode: 123
+    commit: d45e7655b3e065d150d5dfc1dde47d68bbc5fa49
+    subdir: app
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.14.0
+    versionCode: 126
+    commit: ae9981f4c45ece119e28d77d7f7c9582fbe978bd
+    subdir: app
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.18.0
+    versionCode: 129
+    commit: 3741fc5278b886ff2dd07b2885e31a349beb423e
+    subdir: app
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.18.1
+    versionCode: 132
+    commit: a41f457d957d53f60e1a5ba14e3547f13414549c
+    subdir: app
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.18.6
+    versionCode: 143
+    commit: e0ef829423e2f705146694f1909a6c739866c19b
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y openjdk-19-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.19.0
+    versionCode: 146
+    commit: e767a713535abc8bbc09d7bbd659112c394989f9
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y openjdk-19-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.19.1
+    versionCode: 149
+    commit: 514978cbc711b36366955ecd804e2e0d029d4a00
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y openjdk-19-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.19.2
+    versionCode: 152
+    commit: ee0b5daeeb7c009307c4626a0b62e52e7f60b34e
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y openjdk-19-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.20.0
+    versionCode: 155
+    commit: 9f62536a1fba9e67a9e7ebbe317776753e79b297
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y openjdk-19-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.20.1
+    versionCode: 158
+    commit: c20a00929a5c1d59a5ecb03ab83db2bb8ea0266f
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y openjdk-19-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.21.1
+    versionCode: 167
+    commit: ddacfe4d478a2ddb18b0bd2d0bd6296a4ed5f900
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y openjdk-19-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+  - versionName: 1.21.5
+    versionCode: 176
+    commit: 1ba1721e199f9deb44b6471adc7f0813a05dae75
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    rm:
+      - wearOS
+    prebuild: sed -i -e '/wearOS/d' ../settings.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.21.5
+CurrentVersionCode: 176

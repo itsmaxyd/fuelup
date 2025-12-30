@@ -1,0 +1,34 @@
+AntiFeatures:
+  - Ads
+  - NonFreeDep
+Categories:
+  - Internet
+License: Apache-2.0
+SourceCode: https://github.com/powerpoint45/Lucid-Browser
+IssueTracker: https://github.com/powerpoint45/Lucid-Browser/issues
+
+AutoName: Lucid Browser
+Description: |-
+  Simple, lightweight and small browser with binary size below 1MB. It uses a
+  custom homepage that loads locally for quick start-ups.
+
+  Not updated - newer versions are non-free.
+
+RepoType: git
+Repo: https://github.com/powerpoint45/Lucid-Browser
+
+Builds:
+  - versionName: '3.7'
+    versionCode: 27
+    commit: eaa8315bc286dcdcd9a65018c5568b89e93f1105
+    srclibs:
+      - appcompat@v7
+    prebuild: rm libs/android-support-v4.jar
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '3.7'
+CurrentVersionCode: 27
+
+NoSourceSince: '3.7'

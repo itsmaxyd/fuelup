@@ -1,0 +1,62 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: SensorApps
+AuthorWebSite: https://sensors2.org/
+WebSite: https://sensors2.org/pd
+SourceCode: https://github.com/SensorApps/Sensors2Pd
+IssueTracker: https://github.com/SensorApps/Sensors2Pd/issues
+
+AutoName: Sensors2Pd
+Description: |-
+  Using sensor data in Puredata patches. Sensors are available as receivers in the
+  patch.
+
+RepoType: git
+Repo: https://github.com/SensorApps/Sensors2Pd
+
+Builds:
+  - versionName: 0.1.0
+    versionCode: 1
+    commit: c0ea00264b99f0fcf1ee3d4726c302b2da5f847f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.0
+    versionCode: 2
+    commit: 3793b3e4a38da0a06ae7f08f2013f5fd968eed9d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.3.0
+    versionCode: 3
+    commit: 3cbbd8387b4134ac949fd711665faf91bc6b8408
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.3.1
+    versionCode: 4
+    commit: 406129b6904a5854c1d52fb7f8a6afd4ed88db42
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.3.1
+CurrentVersionCode: 4

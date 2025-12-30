@@ -1,0 +1,45 @@
+Categories:
+  - Security
+License: LGPL-2.1-only
+AuthorName: Kevin C. Krinke
+SourceCode: https://github.com/OneTimePass/OneTimePass
+IssueTracker: https://github.com/OneTimePass/OneTimePass/issues
+Changelog: https://github.com/OneTimePass/OneTimePass/releases
+
+AutoName: OneTimePass
+Description: |-
+  Do not install this application. This application is no longer maintained and
+  anyone using it is advised to migrate away from it. Please see the github
+  README for ways to migrate away from OneTimePass.
+
+RepoType: git
+Repo: https://github.com/OneTimePass/OneTimePass
+
+Builds:
+  - versionName: 1.2.2
+    versionCode: 1002002
+    commit: v1.2.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.3
+    versionCode: 1002003
+    commit: v1.2.3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+MaintainerNotes: |-
+  This repo is tag-based for its releases on the "production" branch.
+  Everything else should be pretty straight forward and simple.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.2.3
+CurrentVersionCode: 1002003

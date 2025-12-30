@@ -1,0 +1,191 @@
+Categories:
+  - Calculator
+  - Science & Education
+License: GPL-3.0-only
+SourceCode: https://github.com/mkulesh/microMathematics
+IssueTracker: https://github.com/mkulesh/microMathematics/issues
+Changelog: https://github.com/mkulesh/microMathematics/releases
+
+AutoName: microMathematics Plus
+
+RepoType: git
+Repo: https://github.com/mkulesh/microMathematics
+
+Builds:
+  - versionName: 2.15.2.a
+    versionCode: 300
+    commit: v2.15.2.a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.15.3
+    versionCode: 301
+    commit: v2.15.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.15.4
+    versionCode: 302
+    commit: v2.15.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.15.5
+    versionCode: 303
+    commit: v2.15.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.15.6
+    versionCode: 304
+    commit: v2.15.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.16'
+    versionCode: 305
+    commit: v2.16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.16.1
+    versionCode: 306
+    commit: v2.16.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.16.2
+    versionCode: 307
+    commit: v2.16.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.17.0
+    versionCode: 308
+    commit: v2.17.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.17.1
+    versionCode: 309
+    commit: v2.17.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.17.2
+    versionCode: 310
+    commit: v2.17.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.17.3
+    versionCode: 311
+    commit: v2.17.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.17.4
+    versionCode: 312
+    commit: v2.17.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.18.0
+    versionCode: 313
+    commit: v2.18.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.19.0
+    versionCode: 314
+    commit: v2.19.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.20.0
+    versionCode: 315
+    commit: v2.20.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.20.1
+    versionCode: 316
+    commit: v2.20.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.21.0
+    versionCode: 317
+    commit: v2.21.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.21.1
+    versionCode: 318
+    commit: v2.21.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.22.0
+    versionCode: 319
+    commit: v2.22.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.22.1
+    versionCode: 321
+    commit: fa38c3aa0c7b9d5deb9a7c9b014d618a1fdf1570
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - $$SDK$$/tools/bin/sdkmanager 'build-tools;32.0.0' 'build-tools;30.0.3' > /dev/null
+      - cp $$SDK$$/build-tools/30.0.3/lib/dx.jar $$SDK$$/build-tools/32.0.0/lib/dx.jar
+      - cp $$SDK$$/build-tools/30.0.3/dx $$SDK$$/build-tools/32.0.0/dx
+
+  - versionName: 2.23.1
+    versionCode: 323
+    commit: 95d8a0d703d8aba370b2463ca1cfa9070a94e55a
+    subdir: app
+    sudo:
+      - sdkmanager 'build-tools;32.0.0' 'build-tools;30.0.3'
+      - cp /opt/android-sdk/build-tools/30.0.3/lib/dx.jar /opt/android-sdk/build-tools/32.0.0/lib/dx.jar
+      - cp /opt/android-sdk/build-tools/30.0.3/dx /opt/android-sdk/build-tools/32.0.0/dx
+    gradle:
+      - yes
+
+  - versionName: 2.23.2
+    versionCode: 324
+    commit: c13a1b31b881a6d128a38579e68211d4602233dd
+    subdir: app
+    sudo:
+      - sdkmanager 'build-tools;32.0.0' 'build-tools;30.0.3'
+      - cp /opt/android-sdk/build-tools/30.0.3/lib/dx.jar /opt/android-sdk/build-tools/32.0.0/lib/dx.jar
+      - cp /opt/android-sdk/build-tools/30.0.3/dx /opt/android-sdk/build-tools/32.0.0/dx
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.23.2
+CurrentVersionCode: 324

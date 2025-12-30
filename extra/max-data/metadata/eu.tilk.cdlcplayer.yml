@@ -1,0 +1,41 @@
+Categories:
+  - Games
+License: GPL-3.0-or-later
+AuthorName: Marek Materzok
+AuthorEmail: tilk@tilk.eu
+SourceCode: https://github.com/tilk/cdlc_player
+IssueTracker: https://github.com/tilk/cdlc_player/issues
+
+Name: CDLC Player
+AutoName: CDLC Player
+
+RepoType: git
+Repo: https://github.com/tilk/cdlc_player.git
+
+Builds:
+  - versionName: 0.0.5
+    versionCode: 5
+    commit: 0.0.5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.0.6
+    versionCode: 6
+    commit: 05c8dfb4aec799eac26d1a9ee4fdccb10c29d788
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.0.6
+CurrentVersionCode: 6

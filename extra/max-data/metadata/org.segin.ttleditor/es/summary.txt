@@ -1,0 +1,1 @@
+Cambia el TTL de los paquetes de red

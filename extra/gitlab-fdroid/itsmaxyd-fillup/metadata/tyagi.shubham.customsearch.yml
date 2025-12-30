@@ -1,0 +1,33 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App depends on Google search.
+Categories:
+  - Internet
+License: MIT
+SourceCode: https://github.com/SubhamTyagi/dork-explore
+IssueTracker: https://github.com/SubhamTyagi/dork-explore/issues
+Changelog: https://github.com/SubhamTyagi/dork-explore/releases
+
+AutoName: Custom Search
+Description: |-
+  Note: This app is unmaintained, its app repository is archived by the dev
+
+  This app uses a simple Google dorking to search on Google for exact result of
+  search.
+
+RepoType: git
+Repo: https://github.com/SubhamTyagi/dork-explore.git
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 1
+    commit: '0.1'
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '0.1'
+CurrentVersionCode: 1

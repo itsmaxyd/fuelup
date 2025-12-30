@@ -1,0 +1,41 @@
+Categories:
+  - Games
+  - Science & Education
+License: AGPL-3.0-only
+AuthorName: Afrikalan - Julien Marin
+AuthorEmail: apps@afrikalan.org
+AuthorWebSite: https://www.afrikalan.org/
+WebSite: https://www.tuxmath.org
+SourceCode: https://gitlab.com/Afrikalan/tuxmath-android
+IssueTracker: https://gitlab.com/Afrikalan/tuxmath-android/issues
+Donate: https://www.afrikalan.org/support-afrikalan/
+
+AutoName: Tux Math
+
+RepoType: git
+Repo: https://gitlab.com/Afrikalan/tuxmath-android.git
+Binaries: https://download.tuxfamily.org/afrikalan/fdroid/tuxmath.apk
+
+Builds:
+  - versionName: '2.00'
+    versionCode: 3
+    commit: V2.00
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/release/tuxmath.apk
+
+  - versionName: '2.10'
+    versionCode: 4
+    commit: e6e1f1e99ae43f7f295545082a1bc5a5d0b68657
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/release/tuxmath.apk
+
+AllowedAPKSigningKeys: db0ddb1a8f0307e0dec8a5c7f4b04cfd7f05be9cc5b521a3272a54012ec60396
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '2.10'
+CurrentVersionCode: 4

@@ -1,0 +1,298 @@
+Categories:
+  - Browser
+  - Internet
+  - Security
+License: AGPL-3.0-or-later
+AuthorName: Khiet Tam Nguyen
+AuthorEmail: support@webviewkiosk.nktnet.uk
+WebSite: https://webviewkiosk.nktnet.uk
+SourceCode: https://github.com/nktnet1/webview-kiosk
+IssueTracker: https://github.com/nktnet1/webview-kiosk/issues
+Changelog: https://github.com/nktnet1/webview-kiosk/releases
+
+AutoName: Webview Kiosk
+
+RepoType: git
+Repo: https://github.com/nktnet1/webview-kiosk
+Binaries: https://github.com/nktnet1/webview-kiosk/releases/download/v%v/WebviewKiosk_v%v.apk
+
+Builds:
+  - versionName: 0.16.0
+    versionCode: 43
+    commit: cc8f50fac63f61d234ff5d6f5b55fd0a23fa6a1d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.17.0
+    versionCode: 44
+    commit: f18e5108e6eedb77b8c46e12c9fe0d5c0c57c8a8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.17.1
+    versionCode: 45
+    commit: 36c40878c7c19c7f33270ce8011d1c8689496161
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.18.0
+    versionCode: 46
+    commit: 19f8ad12b41fef5b01dbb41bc66a65098194ebc1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.20.0
+    versionCode: 48
+    commit: 4154dfa94a989f62891ea4d2252c5d5eb38b353d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.22.0
+    versionCode: 50
+    commit: a5a721a0fe0b3be97fad4a3145b8f1133a7591e2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.22.5
+    versionCode: 55
+    commit: db2c30516782bdc3dc8efc9dd0c135f2534e0733
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.22.6
+    versionCode: 56
+    commit: 3909ebd355dd0a4997cb0c5dbf6989113cbf4210
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.23.0
+    versionCode: 57
+    commit: 9771c86bc5c3da3a5d03abb3125e7b124adbaf7d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.3
+    versionCode: 61
+    commit: 7c7c19e999703e506490b84ad477a1a30a551c56
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.6
+    versionCode: 64
+    commit: 0d0ccdbc1c722cc24ebd29fdc49d3eeb6a66fe36
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.8
+    versionCode: 66
+    commit: bc3005a538b0acea70b6e76ab5966570a6f06de5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.11
+    versionCode: 69
+    commit: 4505e9b2beeb05002bac7a4318c68731c0c0f7fd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.14
+    versionCode: 72
+    commit: b8fc8d744f1c0b81d86ce11f8913a1e8209e3802
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.16
+    versionCode: 74
+    commit: cce15aaf8dd25dafe7ce7db7adec83b9d01ecb8a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.18
+    versionCode: 76
+    commit: ffd7a18bf7a353a82216e79a64fb2011091dbe1f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.19
+    versionCode: 77
+    commit: 4422b85c96f542d45e861976d66489422d07e3b2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.24
+    versionCode: 82
+    commit: 62845e56162a63668bf371fe376bf59b1da3123c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.25
+    versionCode: 83
+    commit: 05d4030ab2263693ebe97a484a14b052ed229bad
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.26
+    versionCode: 84
+    commit: d51a6f82715a0a9d456d341cf7b6c2d096c232d0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.29
+    versionCode: 87
+    commit: d0ed9a40f54dd6a424a714fb4e5518b85f1cadb3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.30
+    versionCode: 88
+    commit: fb2c3ef4eb82e7c2fb41ee1cbf528183a6d0ac9d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.31
+    versionCode: 89
+    commit: 807c26f572abdfd518f732b03fd395902b457097
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.32
+    versionCode: 90
+    commit: 5473a7e305ace5a37399e0333a96cd063b151799
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.34
+    versionCode: 92
+    commit: c8cd10e1ad6f7ba43d0668d9d6b554f3b58c4fdf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.35
+    versionCode: 93
+    commit: dbd5f629b8cf42bab91d8361c7d1d5afbfb46f38
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.36
+    versionCode: 94
+    commit: d185aa8e0ea9163e1cfedbc10c5c05eaadff0a6d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.37
+    versionCode: 95
+    commit: ee6e6ed4eedb001efecf77f8c8235625e3b528f0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.39
+    versionCode: 97
+    commit: 00275c893a914671bb7c41dae75715ad32278dfa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.40
+    versionCode: 98
+    commit: 94c9acadcbd64c90bcf210d9c4844422e3495e4a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.41
+    versionCode: 99
+    commit: 151c914407c9e1b2dc5225ddb6c3724060efa79f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.42
+    versionCode: 100
+    commit: f0035b79841cc608b2d955738ea0d9ef158a2b28
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.45
+    versionCode: 103
+    commit: 8f4668db2a52379abcbcad6598dc498ff2939772
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.24.46
+    versionCode: 104
+    commit: 240846f29e9afd52e6305d94e74be40f11d21ce6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.25.0
+    versionCode: 105
+    commit: 46868134c1ec46ec0d800af4b8ffa18defec2467
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.25.1
+    versionCode: 106
+    commit: 0e326a2857a99942cf9345e2777218460e7dfffc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.25.2
+    versionCode: 107
+    commit: bf8deb0298839e0ceef464fa2effb66a6b43437a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.25.4
+    versionCode: 109
+    commit: 4027cb6b255b73bd6d88bca08baf8bf3aaaee22b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.25.5
+    versionCode: 110
+    commit: b70c58cc1c30063cd1dfca5714b3b92ff414d765
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 2fe10de0ec70a07f383a87892ca45667214ea13c4eeea4a3254f3a331a7a6b15
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.25.5
+CurrentVersionCode: 110

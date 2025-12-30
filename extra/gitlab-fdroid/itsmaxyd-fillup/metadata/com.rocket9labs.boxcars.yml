@@ -1,0 +1,606 @@
+Categories:
+  - Games
+  - Internet
+License: AGPL-3.0-or-later
+AuthorName: Trevor Slocum
+AuthorEmail: trevor@rocket9labs.com
+AuthorWebSite: https://rocket9labs.com/
+SourceCode: https://codeberg.org/tslocum/boxcars-android
+IssueTracker: https://codeberg.org/tslocum/boxcars/issues
+Changelog: https://codeberg.org/tslocum/boxcars/src/branch/main/CHANGELOG
+Donate: https://rocket9labs.com/donate/
+Liberapay: rocket9labs.com
+
+Name: Boxcars
+AutoName: bgammon
+
+RepoType: git
+Repo: https://codeberg.org/tslocum/boxcars-android.git
+
+Builds:
+  - versionName: 1.0.5
+    versionCode: 100050
+    commit: 1d7f380033b99eecd0e8fdcf4d5693f4f257510b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.0.6
+    versionCode: 100060
+    commit: dd2e44bea15da6ff6a903b81938568e921212621
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.0.7
+    versionCode: 100070
+    commit: 10237f9d2da362125825699502e5b5a88e41d162
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.0.8
+    versionCode: 100080
+    commit: 685e8e7b3ea92f976dbbfebe08d01232be6390c5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.0.9
+    versionCode: 100090
+    commit: f8b1f0a6b89d18dfcd3655c50938121f7c57965f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.1.0
+    versionCode: 101000
+    commit: 37ec3557ab61f0508d7557cb202c4d1611c32f96
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.1.1
+    versionCode: 101010
+    commit: 7e58d665ea41c880a27370cbe234e5608ecba6cd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.1.2
+    versionCode: 101020
+    commit: 370480f02997819e25bb0ccf51a550a289fdce78
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.1.3
+    versionCode: 101030
+    commit: 0bad381a484f99bef8287bef102075075a0a8e3a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.1.4
+    versionCode: 101040
+    commit: f688ae702da31b2071bf97af1a91f4ab1afb5391
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.1.5
+    versionCode: 101050
+    commit: f855593d0c62f160601457a44ec786a30fa9d3fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.1.7
+    versionCode: 101070
+    commit: 4671356bbbe1c3e9ceb777f51d7eddb6bed4a5c0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.1.8
+    versionCode: 101080
+    commit: b079b2e25eccb620d09781e90d701b02a798ec7b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.1.9
+    versionCode: 101090
+    commit: ffc7748a532d5820122519dbac3d4e801d0027e6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.2.0
+    versionCode: 102000
+    commit: 71f6cfcabc53950697142f39fdd02b66a8430f4a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.2.1
+    versionCode: 102010
+    commit: b6fedc8c3f41e3f320df1575cf5835936e230064
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.2.4
+    versionCode: 102040
+    commit: 279b9a5275844031ae33c9b2f1537ede7ad4cabb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.2.5
+    versionCode: 102050
+    commit: f8197bd9597541224b31b091aebf9608f7a10ab2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.2.7
+    versionCode: 102070
+    commit: 4eea632c5f8a342b9daf3c0a73c1da249dcd2f8c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.2.9
+    versionCode: 102090
+    commit: 939b09ea399c1a489a18d5f3a348e47a45a7fb40
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.0
+    versionCode: 103000
+    commit: ce88cc2cde39d1069f939be9c916d5cb81bb9eb0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.1
+    versionCode: 103010
+    commit: 5800cd4277cf7cf61111c2f0f2bfaa9839ad6460
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc libc-dev openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.20.10
+    prebuild: sed -i -e '1aexport PATH=$$go$$/bin:$PATH' bind.sh
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.2
+    versionCode: 103020
+    commit: 61dd96baa5f39384bd195ea7bebe83a855b3421d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.3
+    versionCode: 103030
+    commit: ed32bc8ff4d65b3a8a0f69316386181e74775de7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.4
+    versionCode: 103040
+    commit: 7f8e822b9640326aceacc5c8afc39bce1f21c8f2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.5
+    versionCode: 103050
+    commit: ec1a8817014775a95aeaaad5bd930fea4c64a7ce
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.6
+    versionCode: 103060
+    commit: 16c61cb23651496fc67cbe4827dab3868bd5ad65
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.7
+    versionCode: 103070
+    commit: 42e04495ad26b3ac1097c3c063980c8d5be92c10
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.8
+    versionCode: 103080
+    commit: db8dc155745841995893ae8c7d2dfca3265b55f3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.3.9
+    versionCode: 103090
+    commit: 9ec53e9ebbf41afb942948405bb339d62da1d17e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.0
+    versionCode: 104000
+    commit: 9270036463fc6316cf85ddcac6cbddd5a6f96d6b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.1
+    versionCode: 104010
+    commit: 054e2d86f26e482cd19d26c21a7f56d5d80a7fbd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bookworm-backports
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.2
+    versionCode: 104020
+    commit: d5e4cc14548a9b746fff3b2c9b1e718d4126b1bb
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie -y golang-go
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.3
+    versionCode: 104030
+    commit: 318804b15999735ae740242e7b9770e00a51d06e
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie -y golang-go
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.4
+    versionCode: 104040
+    commit: 08a40d45211b9aca8e0c05e3f010374891a92bda
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie -y golang-go
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.5
+    versionCode: 104050
+    commit: 657681a6831e4d610a729c6409bee8e1ee4d1507
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie -y golang-go
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.6
+    versionCode: 104060
+    commit: f1fc986c0f5eb9aa45592f849bcc22d0ddce90be
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie -y golang-go
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.7
+    versionCode: 104070
+    commit: 4ec14abcd765c07ddd0f6bb28602f200f7031b2c
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie -y golang-go
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.8
+    versionCode: 104080
+    commit: 990e568ae017bf0798c5b313d855d29f22e05297
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie -y golang-go
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.4.9
+    versionCode: 104090
+    commit: ee0295326065fdf02f7e7ada2f74870a374626cc
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie -y golang-go
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.5.0p1
+    versionCode: 105001
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3674
+    commit: 2d55f97ade4897f5fc091e2b44a800d596f7c2c2
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie -y golang-go
+    gradle:
+      - yes
+    ndk: r29
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.5.0p1
+CurrentVersionCode: 105001

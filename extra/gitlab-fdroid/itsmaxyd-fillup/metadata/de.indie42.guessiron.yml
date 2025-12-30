@@ -1,0 +1,74 @@
+Categories:
+  - System
+License: Apache-2.0
+SourceCode: https://github.com/mobeil1/GuessIron
+IssueTracker: https://github.com/mobeil1/GuessIron/issues
+
+AutoName: GuessIron
+
+RepoType: git
+Repo: https://github.com/mobeil1/GuessIron
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 2
+    commit: 6e785acf36ad512ea7f7eac2f0eeaeeaa92bf57a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 3
+    commit: 534e8a560f6e2a61e54105e60701e2b738ee0232
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '4.0'
+    versionCode: 4
+    commit: d478eed1ce0fd3c117bb15baeeeaa0ae409055d8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 5
+    commit: f09d0ef52890e73f1afb1eb3ee3f2f1340f8f8df
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 6
+    commit: 314191851c61e9b9c38e2dcbb3da0c3661d29a22
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '6.0'
+CurrentVersionCode: 6

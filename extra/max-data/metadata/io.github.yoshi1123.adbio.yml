@@ -1,0 +1,37 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorEmail: yoshi1@tutanota.com
+SourceCode: https://github.com/yoshi1123/adbio
+IssueTracker: https://github.com/yoshi1123/adbio/issues
+
+AutoName: ADBio
+
+RequiresRoot: true
+
+RepoType: git
+Repo: https://github.com/yoshi1123/adbio.git
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 1
+    commit: v0.1
+    gradle:
+      - yes
+
+  - versionName: 1.0c1
+    versionCode: 3
+    commit: 45bacd64788da0c3bf95462835e636727a4232fb
+    gradle:
+      - yes
+
+  - versionName: 1.0c2
+    versionCode: 4
+    commit: a767f4ce7503ad2437e97e98f256ab9a1d511fdc
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0c2
+CurrentVersionCode: 4

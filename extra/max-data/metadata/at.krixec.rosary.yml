@@ -1,0 +1,63 @@
+Categories:
+  - Religion
+License: MIT
+AuthorName: Krixec
+AuthorEmail: dev@krixec.at
+SourceCode: https://codeberg.org/Krixec/Rosarium
+IssueTracker: https://codeberg.org/Krixec/Rosarium/issues
+
+AutoName: Rosarium
+
+RepoType: git
+Repo: https://codeberg.org/Krixec/Rosarium
+Binaries: https://codeberg.org/Krixec/Rosarium/releases/download/%v/Rosarium.apk
+
+Builds:
+  - versionName: Exodus
+    versionCode: 4
+    commit: 5f524df501739be5a06d0fda0ac52acf9b8fa44e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: Leviticus
+    versionCode: 5
+    commit: b32247ae4c669ce1c7528a748009c0191e4f361d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: Numeri
+    versionCode: 8
+    commit: 0fcea2052215b7d5a01ca5ecdc43a2b90c1ad955
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: Josue
+    versionCode: 10
+    commit: d166c3609584bc021b7089144e85733716a474bb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: Judices
+    versionCode: 11
+    commit: e0d83b91f24e1067cb36b7e57802e71f1a4cbdb8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: Ruth
+    versionCode: 12
+    commit: 1fc90a8119382878267426781fa9ce4bb657ff95
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 4240b361798ab06652434aff00685039b5d454a723c4a51bdfd52ef30f028abf
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: Ruth
+CurrentVersionCode: 12

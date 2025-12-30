@@ -1,0 +1,1 @@
+Copier YubiKey NEO OTP de CCP vers le presse-papiers

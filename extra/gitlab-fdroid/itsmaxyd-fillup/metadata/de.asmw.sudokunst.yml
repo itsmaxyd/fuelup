@@ -1,0 +1,37 @@
+Categories:
+  - Games
+License: MIT
+WebSite: https://gitlab.com/asmw/sudokunst
+SourceCode: https://gitlab.com/asmw/sudokunst/-/tree/master
+IssueTracker: https://gitlab.com/asmw/sudokunst/-/issues
+
+Description: |-
+  A sudoku game which allows the user to draw the letters into the fields
+
+  * Uses <a href="https://github.com/tiny-dnn/tiny-dnn">tiny-dnn</a> and the MNIST dataset for character recognition
+  * the games are generated using <a href="https://github.com/stephenostermiller/qqwing">QQwing</a>
+
+RepoType: git
+Repo: https://gitlab.com/asmw/sudokunst.git
+
+Builds:
+  - versionName: 1.0.4
+    versionCode: 2
+    commit: 1.0.4
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential openjdk-11-jdk
+    output: build/android-build/build/outputs/apk/release/android-build-release-unsigned.apk
+    scandelete:
+      - third-party/tiny-dnn/vc/
+    build:
+      - export BASE=$(realpath ..)
+      - ./build-openssl.sh $$NDK$$
+      - ./build-qt.sh $$NDK$$ $$SDK$$
+      - ./build-app.sh $$NDK$$ $$SDK$$
+    ndk: r21d
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.0.4
+CurrentVersionCode: 2

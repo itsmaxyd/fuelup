@@ -1,0 +1,402 @@
+Categories:
+  - Connectivity
+  - DNS & Hosts
+  - Firewall
+  - Internet
+  - Network Analyzer
+  - Security
+  - VPN & Proxy
+License: Apache-2.0
+AuthorName: The RethinkDNS Authors
+AuthorEmail: hello@celzero.com
+WebSite: https://rethinkdns.com/app
+SourceCode: https://github.com/celzero/rethink-app
+IssueTracker: https://github.com/celzero/rethink-app/issues
+Translation: https://hosted.weblate.org/projects/rethink-dns-firewall/android/
+Changelog: https://github.com/celzero/rethink-app/releases
+Bitcoin: 35dbvH3YNbgqD2xWGXwotjHM7gbVLyno11
+
+AutoName: Rethink
+
+RepoType: git
+Repo: https://github.com/celzero/rethink-app.git
+
+Builds:
+  - versionName: 0.5.3e
+    versionCode: 16
+    commit: v0.5.3e
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 053g
+    versionCode: 18
+    commit: 63efbf6f5e014bef64b07836cc7e96aa9cf20dd8
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 053h
+    versionCode: 19
+    commit: 161674b1cdbdd72fefee5edd953179a637e00f6f
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 053i
+    versionCode: 20
+    commit: 7a8f95899860e95559bf8f6769b9cd336fd5f856
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 053j
+    versionCode: 21
+    commit: adf8b89f65570ebce92c95e3804e61d058b86b52
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 053k
+    versionCode: 22
+    commit: 8c0d5fb2734c1aede6ae1614198ac94f1f0c9a58
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 053l
+    versionCode: 23
+    commit: 77da06e108f801bdbbba5493a1e5d66dc526f8b5
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 053m
+    versionCode: 24
+    commit: 780fc1549649890e542d3418b466581f42583706
+    subdir: app
+    gradle:
+      - fdroidFull
+
+  - versionName: 053n
+    versionCode: 25
+    commit: 62e9bbb6c36341786ca962093afcbf54ddd0887c
+    subdir: app
+    gradle:
+      - fdroidFull
+
+  - versionName: 054a
+    versionCode: 27
+    commit: 139272a1ad86f76492af3e9f827ce9cc10cba21e
+    subdir: app
+    gradle:
+      - fdroidFull
+
+  - versionName: v054c
+    versionCode: 29
+    commit: 2e0a19ebdcefd387c30a57a0acf4afa28c2d5e53
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroidFull
+
+  - versionName: v055
+    versionCode: 30
+    commit: 260672c749d7d5c6ec1754b01144e7c1acfc7d6b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroidFull
+
+  - versionName: v055a
+    versionCode: 32
+    commit: dc4b1733fc35200062b07784b0cdf130d9cff35d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroidFull
+
+  - versionName: v0.5.5c
+    versionCode: 34
+    commit: d24918c6650fb9bc3d7500bea77cb6442ff108f8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5d
+    versionCode: 35
+    commit: 014681756ea88b7214297840565c0d17a2ec1d0d
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5e
+    versionCode: 36
+    commit: 21fa180df35be73eed0a29b8d04a28cb6d8c865b
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5g
+    versionCode: 38
+    commit: dbd34c57954c38edabb3d36e7ac8c02541d85755
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5h
+    versionCode: 39
+    commit: d5b04288c3c873560e431a52cd6ca60faaabbf63
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5i
+    versionCode: 40
+    commit: 7df385354b7a16ce1ac5e651ad59521372d4fdd0
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5j
+    versionCode: 41
+    commit: ad897b069bacf377003f40ab5e99efa5b5d89607
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: v0.5.5k
+    versionCode: 42
+    commit: c162bebdd553d0a03795efb827f8830eeb7e6a69
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: v0.5.5l
+    versionCode: 43
+    commit: fa81dfb486b0ce4c53249121b2be375ddbf51cda
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: v0.5.5m
+    versionCode: 44
+    commit: 1c3a1534dd8175d08455668dd6cff4dc2923b9d8
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: v0.5.5n
+    versionCode: 45
+    commit: c74a7ae105edaa03ee6fe7b39793662542b00e15
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: v0.5.5q
+    versionCode: 492
+    commit: 251dbba19ec2118db4d0c69804122f4fe0ca57dc
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "armeabi-v7a"/' -e '/universalApk/d' -e 's/def
+        v = .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5q
+    versionCode: 493
+    commit: 251dbba19ec2118db4d0c69804122f4fe0ca57dc
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "arm64-v8a"/' -e '/universalApk/d' -e 's/def
+        v = .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5q
+    versionCode: 498
+    commit: 251dbba19ec2118db4d0c69804122f4fe0ca57dc
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "x86"/' -e '/universalApk/d' -e 's/def v =
+        .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5q
+    versionCode: 499
+    commit: 251dbba19ec2118db4d0c69804122f4fe0ca57dc
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "x86_64"/' -e '/universalApk/d' -e 's/def
+        v = .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5r
+    versionCode: 502
+    commit: 9a55d689b380c621f91df2c0e73a19c6267d315c
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "armeabi-v7a"/' -e '/universalApk/d' -e 's/def
+        v = .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5r
+    versionCode: 503
+    commit: 9a55d689b380c621f91df2c0e73a19c6267d315c
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "arm64-v8a"/' -e '/universalApk/d' -e 's/def
+        v = .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5r
+    versionCode: 508
+    commit: 9a55d689b380c621f91df2c0e73a19c6267d315c
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "x86"/' -e '/universalApk/d' -e 's/def v =
+        .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5r
+    versionCode: 509
+    commit: 9a55d689b380c621f91df2c0e73a19c6267d315c
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "x86_64"/' -e '/universalApk/d' -e 's/def
+        v = .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5t
+    versionCode: 512
+    commit: db622e1a266e9322dc9b6396809793b06d535e6f
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "armeabi-v7a"/' -e '/universalApk/d' -e 's/def
+        v = .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5t
+    versionCode: 513
+    commit: db622e1a266e9322dc9b6396809793b06d535e6f
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "arm64-v8a"/' -e '/universalApk/d' -e 's/def
+        v = .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5t
+    versionCode: 518
+    commit: db622e1a266e9322dc9b6396809793b06d535e6f
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "x86"/' -e '/universalApk/d' -e 's/def v =
+        .*/def v = $$VERCODE$$/' build.gradle
+
+  - versionName: v0.5.5t
+    versionCode: 519
+    commit: db622e1a266e9322dc9b6396809793b06d535e6f
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild:
+      - sed -i -e 's|maven.pkg.github.com/celzero/firestack|jitpack.io|' ../build.gradle
+      - sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e 's/include .*/include "x86_64"/' -e '/universalApk/d' -e 's/def
+        v = .*/def v = $$VERCODE$$/' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+[a-z]?$
+VercodeOperation:
+  - 10 * %c + 2
+  - 10 * %c + 3
+  - 10 * %c + 8
+  - 10 * %c + 9
+UpdateCheckData: gradle.properties|VERSION_CODE=(\d+)||(.*)
+CurrentVersion: v0.5.5t
+CurrentVersionCode: 519

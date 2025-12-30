@@ -1,0 +1,1 @@
+Ireki ateak Wi-Fi bidez HTTPS/SSH erabilita.

@@ -1,0 +1,42 @@
+Categories:
+  - Writing
+License: Apache-2.0
+WebSite: http://www.evendanan.net
+SourceCode: https://softkeyboard.googlecode.com/svn/trunk/LanguagePacks/FrenchXLarge
+IssueTracker: https://github.com/anysoftkeyboard/LanguagePack/issues
+Donate: https://anysoftkeyboard.github.io/
+
+Name: 'AnySoftKeyboard: French'
+AutoName: AnySoftKeyboard - French Language Pack with XLarge dictionary
+Description: |-
+  AZERTY, BEPO and French-Canadian layouts with an almost 400,000 word dictionary.
+  You would need an 800MHz processor for it work smoothly.
+
+  Dictionary is from <a href="http://www.dicollecte.org/inscription.php?prj=fr">Dicollecte.org</a>, and is licensed under the terms of the Mozilla public license.
+
+  Install https://f-droid.org/packages/com.menny.android.anysoftkeyboard first, then select the desired
+  layout from AnySoftKeyboard's Settings->Keyboards menu.
+
+Builds:
+  - versionName: '20111029'
+    versionCode: 1
+    commit: '2019'
+    init: rm -rf build.xml
+    srclibs:
+      - AnySoftKeyboard-API@b21d8907
+      - AnySoftKeyboardTools@73e9a09496
+    prebuild:
+      - sed -i 's@\(reference.1=\).*@\1$$AnySoftKeyboard-API$$@' project.properties
+      - mkdir -p dict/
+      - rm -f release/* res/raw/*
+      - sed -i 's/fr_main/words/g' res/values/values.xml
+      - wget https://softkeyboard.googlecode.com/svn/trunk/DictionaryTools/xml/fr_xlarge.xml
+        -O dict/words.xml
+    build: java -jar $$AnySoftKeyboardTools$$/makedict/makedict.jar
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '20111029'
+CurrentVersionCode: 1
+
+NoSourceSince: '20111029'

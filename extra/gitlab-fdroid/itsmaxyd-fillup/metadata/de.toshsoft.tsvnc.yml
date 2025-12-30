@@ -1,0 +1,30 @@
+Categories:
+  - Connectivity
+License: GPL-2.0-or-later
+SourceCode: https://github.com/lowtraxx/TSVNC
+IssueTracker: https://github.com/lowtraxx/TSVNC/issues
+
+AutoName: TSVNC
+
+RepoType: git
+Repo: https://github.com/lowtraxx/TSVNC
+
+Builds:
+  - versionName: 0.7.5
+    versionCode: 20
+    commit: 0.7.5
+    subdir: TSVNC
+    gradle:
+      - yes
+
+  - versionName: 0.7.6
+    versionCode: 21
+    commit: 0.7.6
+    subdir: TSVNC
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.7.6
+CurrentVersionCode: 21

@@ -1,0 +1,81 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Internet
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: You Apps
+WebSite: https://you-apps.net
+SourceCode: https://github.com/you-apps/VibeYou
+IssueTracker: https://github.com/you-apps/VibeYou/issues
+Translation: https://hosted.weblate.org/projects/you-apps
+Changelog: https://github.com/you-apps/VibeYou/releases
+
+AutoName: Vibe You
+Description: |-
+  <b>NOTE:</b> App is no longer developed.
+
+  Vibe You is a music app that lets you play music from your device storage or from Piped Music.
+  It has a Material You dynamic theme with dark mode support, offline cached playback, shuffle, queue, and more.
+
+  With the added benefit of playing region blocked music, This app also has advanced queue management and offline caching for songs to play them later without data consumption.
+
+RepoType: git
+Repo: https://github.com/you-apps/VibeYou.git
+Binaries: https://github.com/you-apps/VibeYou/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 560201dd9c3b5597c84019666e12df757ae0ff56
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 2
+    commit: 9b2cb1e3cb592f5aef14dec92bfac4454cdb6714
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 3
+    commit: 087650c99e446cfe9c2406f68b4af876ab366bf8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '4.0'
+    versionCode: 4
+    commit: 1242d7ac7dd0ad2f6e5d67b6026ba9af45ed83e2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.1'
+    versionCode: 5
+    commit: 6d1679f60d937f50942cae73e42a4954711e2d85
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: b3bc73b117df5dfe38130c6c2b946852ae7088557fe8e433f0d9983a6b55cc95
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '5.0'
+CurrentVersionCode: 6

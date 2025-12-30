@@ -1,0 +1,121 @@
+Categories:
+  - Translation & Dictionary
+  - Writing
+License: Apache-2.0
+SourceCode: https://github.com/De7vID/klingon-assistant-android
+IssueTracker: https://github.com/De7vID/klingon-assistant-android/issues
+Changelog: https://github.com/De7vID/klingon-assistant-android/blob/HEAD/CHANGELOG
+
+AutoName: boQwI'
+Description: "tlhIngan Hol boQwI' / Klingon Language Assistant is a lexicon dictionary,\
+  \ canon search tool, and grammar analyser for the Klingon language ({tlhIngan Hol})\
+  \ devised by Marc Okrand for Star Trek's warrior race, and spoken by characters\
+  \ on The Big Bang Theory and Star Trek: Discovery. It can parse Klingon grammar\
+  \ and serve as an aid in Klingon-to-English translation. However, it is NOT a general-purpose\
+  \ English-to-Klingon translator. You will need to know some Klingon already to make\
+  \ use of it for that purpose."
+
+RepoType: git
+Repo: https://github.com/De7vID/klingon-assistant-android.git
+
+Builds:
+  - versionName: 2019.07.23a
+    versionCode: 521
+    commit: v2019.07.23a
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2020.02.03a
+    versionCode: 523
+    commit: v2020.02.03a
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2020.07.24a
+    versionCode: 527
+    commit: v2020.07.24a
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2020.08.24a
+    versionCode: 533
+    commit: v2020.08.24a
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2020.12.16b
+    versionCode: 541
+    commit: v2020.12.16b
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2021.02.22a
+    versionCode: 547
+    commit: v2021.02.22a
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2021.04.09a
+    versionCode: 551
+    commit: v2021.04.09a
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2021.09.27a
+    versionCode: 561
+    commit: 449441c9aae05a8f1fa3de0c5bb1112b82580a99
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2022.06.22b
+    versionCode: 567
+    commit: e5f2c5874942d859cbadd44a7bf8ccc406aa4d63
+    subdir: app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2022.08.12a
+    versionCode: 569
+    commit: 5bada317031f6c3c612ead584a4b4b21633d7f15
+    subdir: app/
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+  - versionName: 2023.11.20b
+    versionCode: 575
+    commit: b573985c91f7d8e16b1a6b6995164ecc0d7a0935
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties/d' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2023.11.20b
+CurrentVersionCode: 575

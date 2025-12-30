@@ -1,0 +1,1 @@
+Explorador de dispositivos Bluetooth Low Energy (BLE) - ver los valores y UUID

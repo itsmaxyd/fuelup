@@ -1,0 +1,70 @@
+Categories:
+  - Connectivity
+  - Navigation
+License: GPL-3.0-only
+AuthorName: Daniele Verducci
+AuthorEmail: daniele.verducci@gmail.com
+SourceCode: https://github.com/penguin86/nextcloud-maps-client
+IssueTracker: https://github.com/penguin86/nextcloud-maps-client/issues
+
+Name: Nextcloud Maps Geobookmarks
+AutoName: Maps Geofavorites
+
+RepoType: git
+Repo: https://github.com/penguin86/nextcloud-maps-client.git
+
+Builds:
+  - versionName: 0.3.2
+    versionCode: 4
+    commit: v0.3.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.3
+    versionCode: 5
+    commit: e64b89bce61b66416ac1c5d5efe1ff7dfcf000f4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.4
+    versionCode: 6
+    commit: 61263c191e701923a0626b0b39dc56cfd9bb030e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.5
+    versionCode: 7
+    commit: 7efd2a2f8b27003d26f30bd24a8fde5402108b48
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.3.6
+    versionCode: 8
+    commit: cd576ada12678227dee4e72b5e12d5360a6f9631
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.0
+    versionCode: 9
+    commit: 5cf1f72d9c78da683243334d8d5c34f46865b3b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.4.0
+CurrentVersionCode: 9

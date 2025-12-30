@@ -1,0 +1,31 @@
+Categories:
+  - Time
+License: GPL-2.0-only
+AuthorName: Igor Kruchinin
+SourceCode: https://github.com/IgorKruchinin/AchieApp
+IssueTracker: https://github.com/IgorKruchinin/AchieApp/issues
+
+AutoName: Achie
+
+RepoType: git
+Repo: https://github.com/IgorKruchinin/AchieApp.git
+Binaries: https://github.com/IgorKruchinin/AchieApp/releases/latest/download/app-release.apk
+
+Builds:
+  - versionName: '1.4'
+    versionCode: 9
+    commit: 36a869919385e4511495020dab91ea0486b216a6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 5753fa3e344f569851c05db41bd15614569f916e3a020bfbe41d5f96d52f681f
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.4'
+CurrentVersionCode: 9

@@ -1,0 +1,43 @@
+Categories:
+  - System
+License: MIT
+AuthorName: Finn M Glas
+AuthorEmail: finn@finnmglas.com
+AuthorWebSite: https://www.finnmglas.com/
+SourceCode: https://github.com/finnmglas/Launcher
+IssueTracker: https://github.com/finnmglas/Launcher/issues
+Changelog: https://github.com/finnmglas/Launcher/releases
+Bitcoin: 3JkEnenR6ZLTeyKT2wnEyzh5QHN6VJDqrq
+
+AutoName: Launcher
+
+RepoType: git
+Repo: https://github.com/finnmglas/Launcher
+
+Builds:
+  - versionName: v1.4.0
+    versionCode: 10
+    commit: v1.4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.5.0
+    versionCode: 11
+    commit: v1.5.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.6.0
+    versionCode: 12
+    commit: v1.6.0
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: v1.6.0
+CurrentVersionCode: 12

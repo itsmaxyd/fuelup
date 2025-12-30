@@ -1,0 +1,1 @@
+Attempts to catch Intents in order to examine their contents

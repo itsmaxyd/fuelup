@@ -1,0 +1,141 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Youtube.
+Categories:
+  - Internet
+  - Multimedia
+  - Online Media Player
+License: GPL-3.0-only
+SourceCode: https://github.com/SkyTubeTeam/SkyTubeLegacy
+IssueTracker: https://github.com/SkyTubeTeam/SkyTubeLegacy/issues
+Translation: https://hosted.weblate.org/engage/skytube/
+Changelog: https://github.com/SkyTubeTeam/SkyTubeLegacy/releases
+
+AutoName: SkyTube Legacy
+
+RepoType: git
+Repo: https://github.com/SkyTubeTeam/SkyTubeLegacy.git
+
+Builds:
+  - versionName: '2.984'
+    versionCode: 44
+    commit: 9c84ff10d21c6b8ec01d2cf54dbf6f5727876b0f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.985'
+    versionCode: 45
+    commit: cade5953c475a07dea884cbb9693521855cf91fc
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.986'
+    versionCode: 46
+    commit: caeb58fcb47b7b18acf427eb4ad5babd63d0caca
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.987'
+    versionCode: 47
+    commit: 66fa3b0669e26e0efa1022ac365c132a3138826c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.988'
+    versionCode: 48
+    commit: 4b1d189cb1e360a29a79cf9f5dbd54e3e9702db7
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.989'
+    versionCode: 49
+    commit: 11811a5251e4199261e8911362685f7f35c6526e
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.990'
+    versionCode: 50
+    commit: 5878424a395085e7b4c94da492123e45c1fc041c
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.991'
+    versionCode: 51
+    commit: edacde54af815ade7bdce9992a3adf0d4f7ebb16
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.993'
+    versionCode: 53
+    commit: v2.993
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.994'
+    versionCode: 54
+    commit: 8d33fb2272e8a9f644fd067d90ece8be41cf217d
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.995'
+    versionCode: 55
+    commit: 9bf199e3d4eb294ec5229bcb24ae377e40ba935a
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.996'
+    versionCode: 56
+    commit: 44c949274899ad4ed067c43abf8a56c88143edc3
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+MaintainerNotes: '* Current versions include app/libs/*.jar. Remove them.'
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '2.996'
+CurrentVersionCode: 56

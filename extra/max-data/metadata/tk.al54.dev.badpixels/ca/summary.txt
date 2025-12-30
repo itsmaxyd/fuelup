@@ -1,0 +1,1 @@
+Detecta errors de píxels a pantalles de 8 colors, b/n

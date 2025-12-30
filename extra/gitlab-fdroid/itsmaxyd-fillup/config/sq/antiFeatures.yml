@@ -1,0 +1,31 @@
+Ads:
+  description: Ky aplikacion përmban reklama
+  name: Reklama
+DisabledAlgorithm:
+  description: Ky aplikacion ka një nënshkrim të dobët sigurie
+  name: Nënshkruar Duke Përdorur Një Algoritëm Jo të Parrezik
+KnownVuln:
+  description: Ky aplikacion përmban një cenueshmëri të njohur sigurie
+  name: Cenueshmëri e Ditur
+NSFW:
+  description: Ky aplikacion përmban lëndë që s’duhet bërë publike apo të jetë e dukshme kudo
+  name: NSFW
+NoSourceSince:
+  name: Kodi burim s’mund të kihet më, s’ka përditësime të mundshme.
+NonFreeAdd:
+  description: Ky aplikacion rekomandon shtesa jo të lira
+  name: Shtesa Jo të Lira
+NonFreeAssets:
+  description: Ky aplikacion përmban elementë jo të lirë
+  name: Elementë Jo të Lirë
+NonFreeDep:
+  description: Ky aplikacion varet nga aplikacione të tjera jo të lira
+  name: Varësi Jo të Lira
+NonFreeNet:
+  description: Ky aplikacion promovon, ose varet tërësisht nga një shërbim rrjeti jo të lirë
+  name: Shërbime Rrjeti Jo të Lira
+Tracking:
+  description: Ky aplikacion gjurmon dhe raporton veprimtarinë tuaj
+  name: Gjurmim
+TetheredNet:
+  description: Ky aplikacion varet tërësisht në njëfarë instance të një shërbimi rrjeti

@@ -1,0 +1,507 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Connects to traewelling.de for push, GitHub for Emoji fonts and line colors
+      and OpenStreetMap and OpenRailwayMap for maps
+    de-DE: Verbindungen zu traewelling.de für Push Nachrichten, GitHub für Emoji Schriftarten
+      und Linien Farben und OpenStreetMap & OpenRailwayMap für Karten
+Categories:
+  - Navigation
+  - Public Transport
+License: AGPL-3.0-only
+AuthorName: Jonas Heubuch
+AuthorEmail: app@traewelldroid.de
+AuthorWebSite: https://heubi.bayern/
+WebSite: https://traewelldroid.de/
+SourceCode: https://github.com/Traewelldroid/traewelldroid
+IssueTracker: https://github.com/Traewelldroid/traewelldroid/issues
+Translation: https://translate.codeberg.org/engage/traewelldroid/
+Changelog: https://github.com/Traewelldroid/traewelldroid/releases
+
+AutoName: Träwelldroid
+
+RepoType: git
+Repo: https://github.com/Traewelldroid/traewelldroid
+Binaries: https://github.com/Traewelldroid/traewelldroid/releases/download/v%v/app-foss-release.apk
+
+Builds:
+  - versionName: 2.7.0
+    versionCode: 141
+    commit: 5d36d7d46f639e7032778cf32f48704fb155e40c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.7.1
+    versionCode: 142
+    commit: 43d4156a102fd5328b9914fe5e3939e6913bc259
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.7.2
+    versionCode: 144
+    commit: a469cf305dff78b868c452fe77cc71aaed17aeff
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.7.3
+    versionCode: 145
+    commit: 726bccdab1a3b0a71c4e9bf940a903f3cd88cbb6
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.7.4
+    versionCode: 146
+    commit: b69fd07a0a23a465a0c0ff9636e5774e1f36b7f9
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.7.5
+    versionCode: 147
+    commit: 28e32eaa71da0f4c66088c6495645aa1e0f34abb
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.8.1
+    versionCode: 149
+    commit: 23f2fc10c9d4fd893cef657c916d8259cbe39e8a
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.8.2
+    versionCode: 150
+    commit: 7fa5a69d9cc81fc0eda22b2b72ed00fe69561ec3
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.9.0
+    versionCode: 151
+    commit: f05cf5fdce934c509382a5046b2982509dca5ed7
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.0
+    versionCode: 152
+    commit: 756e77dddd89153161f5dffc78a7c3fc90f55837
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.1
+    versionCode: 153
+    commit: bdc15bc75f7e41f0d3f49a8b85563be5fe70f21c
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.2
+    versionCode: 154
+    commit: 2c9e778ed7ebd40fcb4078ceaad3812a5eb9e00a
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.3
+    versionCode: 155
+    commit: d9e6e397ad819a3344148e3826f77b9dea14d9f8
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.4
+    versionCode: 156
+    commit: cdc29cc3bc5605d3864c48be66539e154e9b8a3d
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.11.0
+    versionCode: 157
+    commit: 574b5848cdccc79cf3d09b3ff78b182e5de99e73
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.11.2
+    versionCode: 159
+    commit: fa850b77201d706c5682a544857e9f08fb083f65
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.12.0
+    versionCode: 160
+    commit: bdd5894de3b59ba2ffc99dfb767509d6dece8d73
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.13.1
+    versionCode: 162
+    commit: a0e0dd1e16b096aed12340808f803897da12e3fd
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.13.2
+    versionCode: 163
+    commit: 6921f7cb87b72f9cf4f8b2f704bd5e22962287e0
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.14.1
+    versionCode: 165
+    commit: 872e646af8a63c96649323f809653e7692c0f7a0
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.1
+    versionCode: 167
+    commit: d3f5208dc349b2b7f8cba1afe7020e78829e3c16
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.4
+    versionCode: 170
+    commit: b22cb641fa90dfd278ac8f242d407c31de1c6e20
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.5
+    versionCode: 171
+    commit: 1e24487e7dcae71d9c93d0c9f251941daea39759
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.7
+    versionCode: 173
+    commit: 31f631041f60e412059a7f9e538c70a48e358201
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.16.0
+    versionCode: 174
+    commit: 7727c44b16ffd62b5392c3eb00fa17968ac8c27d
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.16.1
+    versionCode: 175
+    commit: e7ec1bb14ab6037646ed7bd4e41520727bfaf105
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.16.2
+    versionCode: 176
+    commit: b0d42c10e8707b5005a55929af07e7854c87ec0b
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.17.0
+    versionCode: 177
+    commit: 73cab9c9cd0fbe90ade58d5a13d28d978645f83d
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.17.1
+    versionCode: 178
+    commit: d1b3df04c27ba76ed753aa6dd775add9378acef7
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.17.2
+    versionCode: 179
+    commit: 66ccc8a3453c09130de97a52a57b167d2928a384
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.17.3
+    versionCode: 180
+    commit: 85e339d6ff63c22aa738781447e59e46474731bb
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.17.5
+    versionCode: 182
+    commit: a27d4c77aafc4d452657bc9ae629d8d2c2d18228
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.17.7
+    versionCode: 184
+    commit: 05b95e716f1024edf5b67c86e71f8c1839990155
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.17.8
+    versionCode: 185
+    commit: b92c3570ec0d7261dbd7a778e64fe43a0598c6d4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.17.9
+    versionCode: 186
+    commit: f30a39ae92262bda97cd424ac80cf7cbf3ff2ae4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.17.10
+    versionCode: 187
+    commit: bd5c3eedff81d571ee78f6065c598d5f8c75b1a8
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.18.0
+    versionCode: 188
+    commit: 14760f8b590adf5de8c675d99c67a60f3f7bbf49
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.18.1
+    versionCode: 189
+    commit: abaefc82561bfa655e63eb9563a8befab228f2bd
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.18.3
+    versionCode: 191
+    commit: 77c67cdf699b2a85b88fb91a6a050da7abd3e981
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.18.4
+    versionCode: 192
+    commit: 0363b97bacdbc67ae61d39a32591c273d2da15f6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.18.5
+    versionCode: 193
+    commit: e7b63dfa724170f1736d15bfc770feca45f211f9
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.19.0
+    versionCode: 194
+    commit: 682b84b4269706b4282b8782b7b1c95ca8beac60
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.19.1
+    versionCode: 195
+    commit: a295f565c950f8488c3e9ab3f2db78905a81bc15
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.19.2
+    versionCode: 196
+    commit: 3a48485cc7f35affcef436c03caab4a339598b28
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.19.3
+    versionCode: 197
+    commit: e900d766656abfac7f7585908c4b44cfeecec551
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.21.0
+    versionCode: 201
+    commit: 1144917215957819fc46ee5ae8fff91b0ed6c026
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.21.2
+    versionCode: 203
+    commit: dd525631f383d070ab64d398259f7a921fcce282
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.21.3
+    versionCode: 204
+    commit: 8d9acbe6afb0e0399b5609726ef3e6fcdce1833d
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.21.4
+    versionCode: 205
+    commit: 23c521c68c20364acd03fc4a16a53acacf36358c
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.21.5
+    versionCode: 206
+    commit: eb8e35989ab3b7f0a39456194084f4d25f35b3d7
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+AllowedAPKSigningKeys: 989fb4f387a7ea95f56405841bbae8af0c14ddff0462a1c919d9119944b20efc
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/build.gradle.kts|code = (\d+)|.|name = "(.+)"
+CurrentVersion: 2.21.5
+CurrentVersionCode: 206

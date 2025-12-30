@@ -1,0 +1,204 @@
+Categories:
+  - Connectivity
+  - File Transfer
+  - System
+License: MIT
+AuthorName: Atsushi Wada
+AuthorWebSite: https://www.wa2c.com/wp/
+WebSite: https://github.com/wa2c/cifs-documents-provider/wiki
+SourceCode: https://github.com/wa2c/cifs-documents-provider
+IssueTracker: https://github.com/wa2c/cifs-documents-provider/issues
+
+AutoName: CIFS Documents Provider
+
+RepoType: git
+Repo: https://github.com/wa2c/cifs-documents-provider.git
+
+Builds:
+  - versionName: 1.2.1
+    versionCode: 5
+    commit: Ver.1.2.1a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 6
+    commit: f3492110445505b7bf00d16930e110dcf52190da
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 7
+    commit: b61a5ebda1fb5f6a4d49cbb34086ded9211518a8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.2
+    versionCode: 8
+    commit: 50950647477331f14fcb34428c5a9cd8395d68d0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 11
+    commit: 12c2ab4136f06eadb322244935470d3b5110ea7d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 12
+    commit: 5acf83dd8ee329b20ac5b060be0165deea67440a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 16
+    commit: eca77fbee439fe9713bfbbcfcf0268dc9b8e782e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 17
+    commit: 12be0539f7fd74153b6792ec68a4d70e9cc54d75
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.8.0-beta2
+    versionCode: 19
+    commit: 70ef6f99d0d0b9aa603c6e54f082d34463649d7a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 20
+    commit: 6a826c0bd6bfc63159d6a66e5d20b0f01d892afa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.2
+    versionCode: 24
+    commit: 07660a8e7edfb65470129fcd005924859547bae0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
+
+  - versionName: 2.1.0
+    versionCode: 25
+    commit: a43a1215308184dcc7c3ca28e48625242c4d5fe0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
+
+  - versionName: 2.1.1
+    versionCode: 26
+    commit: 7e2602fa0f5d2c86810b3f0a3b3ea529f80e7195
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
+
+  - versionName: 2.2.0
+    versionCode: 27
+    commit: f024a3bea5f8c226a2704116fb4db79b78e64c4f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
+
+  - versionName: 2.2.1
+    versionCode: 28
+    commit: acd4bec5fb04e78531462af243532d94c0742498
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
+
+  - versionName: 2.3.0
+    versionCode: 29
+    commit: 1145bebed366f707c1c07bc9e2102322e59f9b61
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
+
+  - versionName: 2.4.0
+    versionCode: 31
+    commit: d1f01434cb4fc253d72ef3940ae5cc418bd6c287
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: build.gradle.kts|appVersionCode\sby\sextra\s\((\d+)\)|.|appVersionName\sby\sextra\s\("(.*)"\)
+CurrentVersion: 2.4.0
+CurrentVersionCode: 31

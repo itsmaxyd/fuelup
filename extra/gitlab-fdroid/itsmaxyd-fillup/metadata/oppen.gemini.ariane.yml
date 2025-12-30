@@ -1,0 +1,50 @@
+Categories:
+  - Internet
+License: EUPL-1.2
+AuthorName: Öppenlab
+AuthorWebSite: https://oppenlab.net/
+WebSite: https://oppen.digital/software/ariane/
+SourceCode: https://codeberg.org/oppenlab/Ariane
+IssueTracker: https://codeberg.org/oppenlab/Ariane/issues
+Changelog: https://codeberg.org/oppenlab/Ariane/releases
+
+AutoName: Ariane
+
+RepoType: git
+Repo: https://codeberg.org/oppenlab/Ariane
+
+Builds:
+  - versionName: 2.3.4
+    versionCode: 36
+    commit: 2.3.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.7
+    versionCode: 39
+    commit: 2.3.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 42
+    commit: 2.4.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - ariadne/build
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2.4.0
+CurrentVersionCode: 42
+
+NoSourceSince: 2.4.0

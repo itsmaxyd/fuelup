@@ -1,0 +1,33 @@
+Ads:
+  description: Aplicația conține reclamă
+  name: Reclame
+DisabledAlgorithm:
+  description: Aplicația are o semnătură slab securizată
+  name: Algoritm nesigur semnătură
+KnownVuln:
+  description: Aplicația conține o vulnerabilitate de securitate cunoscută
+  name: Vulnerabilitate cunoscută
+NSFW:
+  description: Această aplicație conține conținut care nu ar trebui să fie făcut public sau vizibil peste tot
+  name: NSFW
+NoSourceSince:
+  name: Nicio Sursă Din
+  description: Codul sursă nu mai este disponibil, nu mai există posibilitatea de a actualiza
+NonFreeAdd:
+  description: Aplicația promovează anexe ce nu sunt software liber
+  name: Anexe ne-libere
+NonFreeAssets:
+  description: Aceasta aplicație conține resurse ce nu sunt la disponibile la liber
+  name: Resurse ne-libere
+NonFreeDep:
+  description: Aplicația depinde de alte aplicații ce nu sunt software liber
+  name: Dependențe ne-libere
+NonFreeNet:
+  description: Aplicația promovează sau depinde în întregime de un serviciu de rețea care nu este liber
+  name: Servicii de rețea ne-libere
+Tracking:
+  description: Aplicația îți înregistrează și raportează activitatea undeva
+  name: Urmărire
+TetheredNet:
+  description: Această aplicație depinde în întregime de o anumită instanță a unui serviciu de rețea
+  name: Servicii de rețea captive

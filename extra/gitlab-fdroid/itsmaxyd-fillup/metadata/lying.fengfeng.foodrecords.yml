@@ -1,0 +1,172 @@
+Categories:
+  - Inventory
+  - Sports & Health
+License: Apache-2.0
+AuthorName: Li Linfeng
+AuthorEmail: Niels_Lee@outlook.com
+SourceCode: https://github.com/NielsLee/FoodRecords
+IssueTracker: https://github.com/NielsLee/FoodRecords/issues
+Changelog: https://github.com/NielsLee/FoodRecords/releases
+
+AutoName: Fridgey
+
+RepoType: git
+Repo: https://github.com/NielsLee/FoodRecords.git
+Binaries: https://github.com/NielsLee/FoodRecords/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 4fefd29de09626b372e859fe7f5fc95dbff7253b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: 038aa6721085791d82af698712d06c71e1525730
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: a44214422b3dd9dd69547ecfc063723469676d8f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 4
+    commit: c7bcc7d02cb4591f1fce85ee75437c561f58270f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 5
+    commit: 069c99f6e8c5d2052640bef34e26a686c6ca8edf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 6
+    commit: 01d42e4485b5a53fa316231b6baa8a7ae568ac17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 7
+    commit: 315b51ebb6b949c2c523cba649af023f63377249
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 8
+    commit: a6aaab920ac65684ac9aa2cb5b044188a578e85f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 9
+    commit: 9e5cce1bb76a5bf6af23955b61ed03505d400d5e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.9'
+    versionCode: 10
+    commit: 482e032c1c6277ce8cdcb9049e45ad6624b3066a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 11
+    commit: ad731e62da3858b0bdfd57ad2373d152e9deafef
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 12
+    commit: 24138d05886160f8b8a1407133f9ead8e8a4e2b4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 13
+    commit: f187af1acbc1623e49bac22581cf8cfddf29e3c3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 14
+    commit: 29decd3e805cad6559c8e7bd0e382537c89b0bfa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 15
+    commit: 6b66b1ffa2f8b78e9be561393e7f4e011523e91c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.2
+    versionCode: 16
+    commit: a842a178fb2e0fc735eb53930d3529295a6fd37f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.4
+    versionCode: 18
+    commit: daa112d966d7e6feda94aac4729ed04476fd82f8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.5
+    versionCode: 19
+    commit: 3aa41f696bc0f992b0eeccf11e10030da5a3dceb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.6
+    versionCode: 20
+    commit: 688f31f203c320d660ead82cb9d83c785d63141e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.7
+    versionCode: 21
+    commit: 17123092683dfe4fbd46ce83c37ca355779c97fc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.9
+    versionCode: 23
+    commit: 2d0ae1b995ab0f7ed3fa8f110ba92fb629337ebf
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/def backendHost/s/""/"103.30.41.129:8811"/' build.gradle
+
+AllowedAPKSigningKeys: f6df1e0513719d034a926106a5d9f37bf05457e8a7521e091910d3cf4802e10e
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: version.properties|version.code=(\d+)|.|version.name=(.*)
+CurrentVersion: 2.2.9
+CurrentVersionCode: 23

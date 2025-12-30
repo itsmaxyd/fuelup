@@ -1,0 +1,255 @@
+Categories:
+  - Connectivity
+  - Internet
+  - Recipe Manager
+  - Sports & Health
+License: MIT
+AuthorName: Lukas Neugebauer
+AuthorEmail: kontakt+nextcloudcookbook@lukasneugebauer.de
+WebSite: https://lneugebauer.github.io/nextcloud-cookbook/
+SourceCode: https://github.com/lneugebauer/nextcloud-cookbook
+IssueTracker: https://github.com/lneugebauer/nextcloud-cookbook/issues
+Translation: https://lneugebauer.github.io/nextcloud-cookbook/contributing.html#translations
+
+AutoName: Cookbook
+
+RepoType: git
+Repo: https://github.com/lneugebauer/nextcloud-cookbook.git
+
+Builds:
+  - versionName: 0.11.3
+    versionCode: 25
+    commit: af68b945a0e98bb03520f96c4816b0c6b99b73df
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 0.12.1
+    versionCode: 27
+    commit: 7c09e778495184e604f27b52c978899df484dc23
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 0.13.0
+    versionCode: 28
+    commit: 5fef9dd16354634ffd1028b998df4eceed1fd124
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 0.14.1
+    versionCode: 30
+    commit: a396f00382d20d2ad31d95da21f33f01a9289b48
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 0.14.2
+    versionCode: 31
+    commit: 1472453e67de90f2c84129e12f8b932f37608c15
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 0.14.3
+    versionCode: 32
+    commit: 7f2e2e75c212b914c26861ec7b4f44633ceec406
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 0.14.4
+    versionCode: 33
+    commit: 559938d367745b0a35b8257a0ec9c12731f4f036
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 0.14.5
+    versionCode: 34
+    commit: ceb68510e25d1368cbbc0bd4d7108d785c94ca8a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 0.14.6
+    versionCode: 36
+    commit: 847572621364c667c1ef286fe63e10a4c561ece8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+
+  - versionName: 0.15.0
+    versionCode: 37
+    commit: 83a593366850d9386a35469a55dfa585edb42611
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.16.0
+    versionCode: 38
+    commit: 2617403aebecac674576de14c243815f4fcd3479
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.17.0
+    versionCode: 39
+    commit: 07228dad49dc88df5e7175ef5058458112e1d8c2
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.18.0
+    versionCode: 40
+    commit: 1770e7209d924070a0307e78d40c14ddbb106fed
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.20.1
+    versionCode: 43
+    commit: 2042d9d7c355e1b1f90dff853e9ec211fd08ecf0
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.21.0
+    versionCode: 44
+    commit: 4718ab283788fc2e4c0f769bb11b8db0afee959c
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.21.1
+    versionCode: 45
+    commit: 6578e32a87690737cb05fffd75b994d8a0913493
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.22.0
+    versionCode: 47
+    commit: 8bc5eba0cd51f4fb6c2b4f4432c914dff2b06ebb
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.22.0
+    versionCode: 48
+    commit: 32a3df74213b109f1abb63f2c998aa061c7e8e8c
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.23.0
+    versionCode: 49
+    commit: faf114068b8aa500053c239a29e069c43239d131
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.24.0
+    versionCode: 50
+    commit: 558b88bef2fa1fe06e71ff9135a338a4d1ad6626
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.24.1
+    versionCode: 53
+    commit: 02db1e5f41db8156b4c9375a221ffe2fb50eab61
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.24.2
+    versionCode: 54
+    commit: 04b4d96ac3b4a7f21f2ec511de73da81c384c9eb
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.24.3
+    versionCode: 55
+    commit: 499682c86f7352a4e80eea9db8cc60775c4bd758
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.25.0
+    versionCode: 56
+    commit: 166d5d306b73a72243ee41fbeae5bc91d1c64902
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.25.1
+    versionCode: 57
+    commit: d5f0383e16f9348c81d3cfbccff34dba42ed7f7a
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.25.2
+    versionCode: 58
+    commit: 3cfb4fab6d2678026fd67a3cffa754e030ea06ef
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.25.3
+    versionCode: 59
+    commit: eb555555b1f764850b7ce072c1c5fbd4c5025923
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.26.0
+    versionCode: 60
+    commit: 883e245007f1b0f7da9247881778d79f21509fe3
+    subdir: app
+    gradle:
+      - full
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.26.0
+CurrentVersionCode: 60

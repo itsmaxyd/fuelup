@@ -1,0 +1,44 @@
+Categories:
+  - System
+License: BSD-3-Clause
+AuthorName: kuesji koesnu
+AuthorEmail: kuesji@koesnu.com
+WebSite: https://koesnu.com/
+SourceCode: https://github.com/kuesji/link_eye
+IssueTracker: https://github.com/kuesji/link_eye/issues
+Liberapay: kuesji
+
+AutoName: link eye
+
+RepoType: git
+Repo: https://github.com/kuesji/link_eye
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 2
+    commit: 77c0037a1698cd1a4769915dd8993980bec00811
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 4
+    commit: a0a4527c6b750ecfef1459be7317f8561df482e2
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '2.2'
+CurrentVersionCode: 4
+
+NoSourceSince: '2.2'

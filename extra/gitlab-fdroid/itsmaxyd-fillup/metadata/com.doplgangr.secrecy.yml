@@ -1,0 +1,34 @@
+Categories:
+  - Security
+License: Apache-2.0
+SourceCode: https://github.com/Doplgangr/Secrecy_fDroid
+IssueTracker: https://github.com/Doplgangr/Secrecy_fDroid/issues
+
+AutoName: Secrecy
+Description: |-
+  <b>NOTE:</b> This app is no longer maintained.
+
+  Encrypt all sort of files with AES256.
+
+RepoType: git
+Repo: https://github.com/Doplgangr/Secrecy_fDroid.git
+
+Builds:
+  - versionName: alpha-4.0
+    versionCode: 40
+    commit: b62c67b736d75721d34e0da0e53aed0e591db03d
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - payme/build
+      - aFileChooser/build
+      - Preferencefragment/build
+      - Preferencefragment/maven-repository
+    prebuild: sed -i -e '/crashlytics/d' ../build.gradle build.gradle
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: alpha-4.0
+CurrentVersionCode: 40

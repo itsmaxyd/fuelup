@@ -1,0 +1,40 @@
+AntiFeatures:
+  - NonFreeAdd
+Categories:
+  - Security
+License: GPL-3.0-or-later
+AuthorName: Aravind Chowdary
+AuthorEmail: kamaravichow@gmail.com
+AuthorWebSite: https://www.aravi.me/
+WebSite: https://safedot.aravi.me
+SourceCode: https://github.com/kamaravichow/safe-dot-android
+IssueTracker: https://github.com/kamaravichow/safe-dot-android/issues
+Changelog: https://github.com/kamaravichow/safe-dot-android/releases
+Donate: https://patreon.com/kamaravichow
+
+AutoName: SafeDot
+
+RepoType: git
+Repo: https://github.com/kamaravichow/safe-dot-android.git
+
+Builds:
+  - versionName: 3.0.9
+    versionCode: 30009
+    commit: v3.0.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.5
+    versionCode: 30105
+    commit: 08f122593c20b9a844de55fc6ceb740e4913770d
+    subdir: app
+    gradle:
+      - yes
+
+MaintainerNotes: AUM disabled due to generated version code
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 3.1.5
+CurrentVersionCode: 30105

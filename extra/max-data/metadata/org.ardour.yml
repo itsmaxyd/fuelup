@@ -1,0 +1,27 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorEmail: help@ardour.org
+WebSite: https://ardour.org/
+SourceCode: http://subversion.ardour.org/svn/thirdparty/ardroid
+IssueTracker: https://tracker.ardour.org
+Donate: https://community.ardour.org/community
+
+AutoName: Ardroid
+Description: Transport controls for Ardour 3, a digital audio workstation
+
+RepoType: git-svn
+Repo: http://subversion.ardour.org/svn/thirdparty/ardroid
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: '9120'
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.0'
+CurrentVersionCode: 1
+
+NoSourceSince: '1.0'

@@ -1,0 +1,1 @@
+SMS-Nachrichten in SMS-Datenbank des Geräts schreiben

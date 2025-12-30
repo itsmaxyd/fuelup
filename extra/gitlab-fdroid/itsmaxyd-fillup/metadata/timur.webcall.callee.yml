@@ -1,0 +1,43 @@
+Categories:
+  - Internet
+License: GPL-3.0-only
+AuthorName: Timur
+AuthorEmail: timur@timur.mobi
+AuthorWebSite: https://timur.mobi
+SourceCode: https://codeberg.org/timurmobi/webcall-android
+IssueTracker: https://codeberg.org/timurmobi/webcall-android/issues
+
+AutoName: WebCall
+
+RepoType: git
+Repo: https://codeberg.org/timurmobi/webcall-android.git
+
+Builds:
+  - versionName: 1.2.5
+    versionCode: 114
+    commit: 37b71b87c3af237d79ba77af362b92ea40b65f79
+    gradle:
+      - yes
+    binary: https://mehrvarz.github.io/webcall-android/WebCall-%v.apk
+
+  - versionName: 1.2.7
+    versionCode: 116
+    commit: 1a485a0281aee77e4e1a3f00e4d53003b4345c00
+    gradle:
+      - yes
+    binary: https://mehrvarz.github.io/webcall-android/WebCall-%v.apk
+
+  - versionName: 1.4.11
+    versionCode: 135
+    commit: 474318b9adcd5ab1b28c69185a1cf8652d512e81
+    gradle:
+      - yes
+    binary: https://timurmobi.codeberg.page/bin/WebCall-%v.apk
+
+AllowedAPKSigningKeys: 0b2c8663fafe65f73c5a0ec60d38392c64384d9b91cc9712db3b748874fe5c75
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.4.11
+CurrentVersionCode: 135

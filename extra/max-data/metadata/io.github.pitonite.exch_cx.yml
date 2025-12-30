@@ -1,0 +1,105 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Tethered to the exch.cx website
+Categories:
+  - Money
+License: AGPL-3.0-only
+AuthorName: pitonite
+SourceCode: https://github.com/pitonite/exch_cx
+IssueTracker: https://github.com/pitonite/exch_cx/issues
+Bitcoin: bc1qv0klzuy8y50sq3u44dv96u5fyxdwz7pv08hxrd
+
+AutoName: eXch.
+
+RepoType: git
+Repo: https://github.com/pitonite/exch_cx.git
+Binaries: https://github.com/pitonite/exch_cx/releases/download/v%v/exch-cx-v%v-%c-signed.apk
+
+Builds:
+  - versionName: 1.1.0
+    versionCode: 10000
+    commit: 5c4340391b6a23b3d047320dd04207c6987a80bc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 11000
+    commit: 7f5a19c2510c623fc070e88bf39beeaba413bf0d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 12000
+    commit: 2e8db45bc981d42c4d619561eb8ecd706c507e3b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 13000
+    commit: fc177345140126d010c4fe62bff74b8044c1c588
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 14000
+    commit: 7a08ca4511adb4c8e41cdc465cd10e6cac8c7e53
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 15000
+    commit: 2cc40720df7053fb9c0be09f4c487a1557889301
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.2
+    versionCode: 16000
+    commit: 808f8643e59a24bf2cd2938fd508b8d9681f7720
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.3
+    versionCode: 17000
+    commit: c26ff451e5bb9df6e2174a8a3cf5c35584658e38
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 18000
+    commit: 19b386721142eb4076e7357638339a429db13238
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: a16429d6ef0f9b2171efe0151082e17e10fdb08e032dc13d9c84a7758aeb5b68
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+VercodeOperation:
+  - 1000 * %c
+CurrentVersion: 1.4.0
+CurrentVersionCode: 18000

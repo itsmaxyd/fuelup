@@ -1,0 +1,75 @@
+Categories:
+  - Launcher
+  - System
+  - Theming
+License: MIT
+AuthorName: Zoe
+SourceCode: https://github.com/Robby-Blue/SimpleFolderLauncher
+IssueTracker: https://github.com/Robby-Blue/SimpleFolderLauncher/issues
+
+AutoName: folder launcher
+
+RepoType: git
+Repo: https://github.com/Robby-Blue/SimpleFolderLauncher
+
+Builds:
+  - versionName: 0.1b3
+    versionCode: 3
+    commit: v0.1b3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.2'
+    versionCode: 4
+    commit: 43d26089e88f08a3a76341631ace3ec9ef8fe893
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.1
+    versionCode: 5
+    commit: ef2db59b4d2011f126efaf435a1067edbb875b12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.1
+    versionCode: 7
+    commit: 065e3b2b5c9f55767e540dd2920e2595f099fe56
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.2
+    versionCode: 8
+    commit: d0289bd9ce4068ec888920d10374451353b01457
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.3
+    versionCode: 9
+    commit: 840a57a50b76a7a02243b62e11d6f7be208e8e67
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.4
+    versionCode: 10
+    commit: a987eace04635c60761b47f00ee78d0811c443ed
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.5
+    versionCode: 11
+    commit: 6cd07beeeadf1fc73dbef34eb5295a90b5a9471d
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.3.5
+CurrentVersionCode: 11

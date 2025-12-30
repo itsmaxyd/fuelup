@@ -1,0 +1,1 @@
+Transmisión de la pantalla a través de HTTP

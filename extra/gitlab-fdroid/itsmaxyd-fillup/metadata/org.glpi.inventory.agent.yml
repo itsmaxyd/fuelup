@@ -1,0 +1,155 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: GLPI Project
+AuthorEmail: glpi@teclib.com
+SourceCode: https://github.com/glpi-project/android-inventory-agent
+Changelog: https://github.com/glpi-project/android-inventory-agent/blob/HEAD/CHANGELOG.md
+
+AutoName: GLPI Agent
+Description: |-
+  The Inventory Agent for Android is part of GLPI Android Inventory Agent project.
+  It allows you to collect a complete inventory of your Android device and sent it
+  to your management software.
+
+RepoType: git
+Repo: https://github.com/glpi-project/android-inventory-agent.git
+
+Builds:
+  - versionName: 1.2.0
+    versionCode: 39351
+    commit: be37e39dddeb8bd0de2527ca088eeb01779dc04d
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/libs/*.aar
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e '/dependencies {/a implementation "com.github.flyve-mdm:android-inventory-library:5d28aee9bc@aar"'
+        build.gradle
+      - sed -i -e 's|maven.fabric.io/public|jitpack.io|' -e '/repositories {/a maven{
+        url "https://jitpack.io" }' ../build.gradle
+      - sed -i -e 's/android:versionName=\"/android:versionName=\"$$VERSION$$/' src/main/AndroidManifest.xml
+
+  - versionName: 1.3.0
+    versionCode: 39371
+    commit: dbbcb1f22986a525f2af71df4ea6d99c06076b20
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/libs/*.aar
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e '/dependencies {/a implementation "com.github.flyve-mdm:android-inventory-library:5d28aee9bc@aar"'
+        build.gradle
+      - sed -i -e 's|maven.fabric.io/public|jitpack.io|' -e '/repositories {/a maven{
+        url "https://jitpack.io" }' ../build.gradle
+      - sed -i -e 's/android:versionName=\"/android:versionName=\"$$VERSION$$/' src/main/AndroidManifest.xml
+
+  - versionName: 1.3.0
+    versionCode: 39383
+    commit: 5fcbd138168f59b68c8f1b9d3a3776206ef80e53
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/libs/*.aar
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e '/dependencies {/a implementation "com.github.flyve-mdm:android-inventory-library:5d28aee9bc@aar"'
+        build.gradle
+      - sed -i -e 's|maven.fabric.io/public|jitpack.io|' -e '/repositories {/a maven{
+        url "https://jitpack.io" }' ../build.gradle
+      - sed -i -e 's/android:versionName=\"/android:versionName=\"$$VERSION$$/' src/main/AndroidManifest.xml
+
+  - versionName: 1.4.0
+    versionCode: 39387
+    commit: 9e7349c2d64c241e2e261a827e47530098c2372f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/libs/*.aar
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e '/dependencies {/a implementation "com.github.flyve-mdm:android-inventory-library:5d28aee9bc@aar"'
+        build.gradle
+      - sed -i -e 's|maven.fabric.io/public|jitpack.io|' -e '/repositories {/a maven{
+        url "https://jitpack.io" }' ../build.gradle
+      - sed -i -e 's/android:versionName=\"/android:versionName=\"$$VERSION$$/' src/main/AndroidManifest.xml
+
+  - versionName: 1.5.0
+    versionCode: 39403
+    commit: aa9b55f94ff77a59189d71a018665d0b3e025cf7
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/libs/*.aar
+      - package.json
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e '/dependencies {/a implementation "com.github.flyve-mdm:android-inventory-library:5d28aee9bc@aar"'
+        build.gradle
+      - sed -i -e 's|maven.fabric.io/public|jitpack.io|' -e '/repositories {/a maven{
+        url "https://jitpack.io" }' ../build.gradle
+      - sed -i -e 's/android:versionName=\"/android:versionName=\"$$VERSION$$/' src/main/AndroidManifest.xml
+
+  - versionName: 1.6.0
+    versionCode: 39415
+    commit: f54e712f3893e5bb7698ba81febc373175eb223b
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/libs/*.aar
+      - package.json
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e '/dependencies {/a implementation "com.github.flyve-mdm:android-inventory-library:5d28aee9bc@aar"'
+        build.gradle
+      - sed -i -e 's|maven.fabric.io/public|jitpack.io|' -e '/repositories {/a maven{
+        url "https://jitpack.io" }' ../build.gradle
+      - sed -i -e 's/android:versionName=\"/android:versionName=\"$$VERSION$$/' src/main/AndroidManifest.xml
+
+  - versionName: 1.6.1
+    versionCode: 39429
+    commit: 74390e633532296a439bb080bd41090d9d867248
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/libs/*.aar
+      - package.json
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e '/dependencies {/a implementation "com.github.flyve-mdm:android-inventory-library:5d28aee9bc@aar"'
+        build.gradle
+      - sed -i -e 's|maven.fabric.io/public|jitpack.io|' -e '/repositories {/a maven{
+        url "https://jitpack.io" }' ../build.gradle
+      - sed -i -e 's/android:versionName=\"/android:versionName=\"$$VERSION$$/' src/main/AndroidManifest.xml
+
+  - versionName: 1.7.0
+    versionCode: 39439
+    commit: fe08db4e03bc3b272710bb05e66d2c621a30973f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/libs/*.aar
+      - package.json
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+      - sed -i -e '/dependencies {/a implementation "com.github.flyve-mdm:android-inventory-library:5d28aee9bc@aar"'
+        build.gradle
+      - sed -i -e 's|maven.fabric.io/public|jitpack.io|' -e '/repositories {/a maven{
+        url "https://jitpack.io" }' ../build.gradle
+      - sed -i -e 's/android:versionName=\"/android:versionName=\"$$VERSION$$/' src/main/AndroidManifest.xml
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/src/main/AndroidManifest.xml|android:versionCode="(\d+)"||
+CurrentVersion: 1.7.0
+CurrentVersionCode: 39439

@@ -1,0 +1,157 @@
+Categories:
+  - Habit Tracker
+  - Sports & Health
+  - Writing
+License: GPL-3.0-only
+AuthorName: wuapps
+AuthorEmail: info@wuapps.de
+AuthorWebSite: http://www.wuapps.de/
+WebSite: http://www.wuapps.de/
+SourceCode: https://gitlab.com/wuapps/moredays
+IssueTracker: https://gitlab.com/wuapps/moredays/issues
+Changelog: https://gitlab.com/wuapps/moredays/blob/HEAD/CHANGELOG.md
+
+AutoName: moreDays
+
+RepoType: git
+Repo: https://gitlab.com/wuapps/moredays.git
+
+Builds:
+  - versionName: 1.0.8
+    versionCode: 8
+    commit: 6873b87654d859247d5fcc772581f55f79e6f299
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.10
+    versionCode: 10
+    commit: 048bbbac12cb1334810f382633cf66ab23d9ec4b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.11
+    versionCode: 11
+    commit: 560c6672ea4b6b49bcabc0816b244780cb9f65ea
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.12
+    versionCode: 12
+    commit: 3d45cbef96e5960bb6f3171f98e9bc91f89472c6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.15
+    versionCode: 15
+    commit: 949f53d872de6299e30ac0d33c25af829d36edc5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.16
+    versionCode: 16
+    commit: a7e9cd54fbd2d21b38b36a9c5a4aebe455220320
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.17
+    versionCode: 17
+    commit: 69505ac5a8ec8a8b32df8e8ff0d4725f4a3f9587
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.18
+    versionCode: 18
+    commit: 56fe5b367fd87f2c29751273c1d47922972b60aa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.19
+    versionCode: 19
+    commit: de867a5fb08473192bb292cf3f46134aead9292d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.20
+    versionCode: 20
+    commit: bad56113a7e15f600f4cd015a3af2f327a1c7ac6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.21
+    versionCode: 21
+    commit: 3ae964ad1b161fbea0b75ad13b2b84543dd089d0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.22
+    versionCode: 22
+    commit: 1f277b76c7191a16017d554e1b5c71bb77daa2a6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.23
+    versionCode: 23
+    commit: 68cb19b9b5f33718db6f819e43c0abaf90018088
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.24
+    versionCode: 24
+    commit: b4b691c35a495d0b9ec32c724f4f38d382972125
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.24
+CurrentVersionCode: 24

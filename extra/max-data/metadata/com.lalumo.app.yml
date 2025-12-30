@@ -1,0 +1,90 @@
+Categories:
+  - Multimedia
+  - Music Practice Tool
+  - Science & Education
+License: GPL-3.0-or-later
+AuthorName: Ruben Barkow-Kuder
+WebSite: https://lalumo.eu
+SourceCode: https://github.com/Eastcoast-Laboratories/Lalumo
+IssueTracker: https://github.com/Eastcoast-Laboratories/Lalumo/issues
+Changelog: https://github.com/Eastcoast-Laboratories/Lalumo/releases
+
+AutoName: Lalumo
+
+RepoType: git
+Repo: https://github.com/Eastcoast-Laboratories/Lalumo
+
+Builds:
+  - versionName: '5.3'
+    versionCode: 34
+    commit: eea74a60c01d34827daa724031c2bc6aec60781e
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - yes
+    prebuild:
+      - pushd ../..
+      - npm install --build-from-source
+      - mkdir -p app/images/backgrounds
+      - cp -r public/images/backgrounds/* app/images/backgrounds/
+      - mkdir -p android/app/capacitor-cordova-android-plugins
+      - echo "// Empty cordova variables" > android/app/capacitor-cordova-android-plugins/cordova.variables.gradle
+      - bash mobile-build.sh
+      - popd
+    scandelete:
+      - node_modules
+    gradleprops:
+      - fdroid
+
+  - versionName: '5.4'
+    versionCode: 35
+    commit: 20988f66c5fecac2677fbddd17cd594c0f2b7e67
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - yes
+    prebuild:
+      - pushd ../..
+      - npm install --build-from-source
+      - mkdir -p app/images/backgrounds
+      - cp -r public/images/backgrounds/* app/images/backgrounds/
+      - mkdir -p android/app/capacitor-cordova-android-plugins
+      - echo "// Empty cordova variables" > android/app/capacitor-cordova-android-plugins/cordova.variables.gradle
+      - bash mobile-build.sh
+      - popd
+    scandelete:
+      - node_modules
+    gradleprops:
+      - fdroid
+
+  - versionName: '6.0'
+    versionCode: 37
+    commit: d4e4c2ccc8ff3d67d63ac675557d1c6cd3c623d9
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - yes
+    prebuild:
+      - pushd ../..
+      - npm install --build-from-source
+      - mkdir -p app/images/backgrounds
+      - cp -r public/images/backgrounds/* app/images/backgrounds/
+      - mkdir -p android/app/capacitor-cordova-android-plugins
+      - echo "// Empty cordova variables" > android/app/capacitor-cordova-android-plugins/cordova.variables.gradle
+      - bash mobile-build.sh
+      - popd
+    scandelete:
+      - node_modules
+    gradleprops:
+      - fdroid
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '6.0'
+CurrentVersionCode: 37

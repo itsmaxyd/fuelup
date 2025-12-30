@@ -1,0 +1,373 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Forum
+  - Internet
+  - Reading
+License: Apache-2.0
+AuthorName: Zhengfa Dang
+AuthorWebSite: https://zfdang.com
+WebSite: https://zsmth.zfdang.com
+SourceCode: https://github.com/zfdang/zSMTH-Android
+IssueTracker: https://github.com/zfdang/zSMTH-Android/issues
+
+AutoName: zSMTH
+
+RepoType: git
+Repo: https://github.com/zfdang/zSMTH-Android
+
+Builds:
+  - versionName: 22.04.29
+    versionCode: 961
+    commit: d1b80f6f3024695bf998c2ac26f62166f1398315
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|http://mvn.mob.com/android/|https://jitpack.io|' -e '/MobSDK/d'
+        -e '/ben-manes/d' ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 22.04.29
+    versionCode: 962
+    commit: c957257fefdcd3ac73ad998b055df95bd1343838
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|http://mvn.mob.com/android/|https://jitpack.io|' -e '/MobSDK/d'
+        -e '/ben-manes/d' ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 22.04.29
+    versionCode: 964
+    commit: 65d90e9b200af922e142739a995e28fbe63e113e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|http://mvn.mob.com/android/|https://jitpack.io|' -e '/MobSDK/d'
+        -e '/ben-manes/d' ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 23.03.31
+    versionCode: 966
+    commit: 69f205c6e136155e573f1cfc6b9722618fad832b
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|http://mvn.mob.com/android/|https://jitpack.io|' -e '/MobSDK/d'
+        -e '/ben-manes/d' ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 23.04.19
+    versionCode: 971
+    commit: b0f1d7b1fed98580245c0b2f33eee017db0b0771
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|http://mvn.mob.com/android/|https://jitpack.io|' -e '/MobSDK/d'
+        -e '/ben-manes/d' ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 23.04.19
+    versionCode: 972
+    commit: 064dffa9483a506d456c44b0043f407fa272df87
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|http://mvn.mob.com/android/|https://jitpack.io|' -e '/MobSDK/d'
+        -e '/ben-manes/d' ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 23.04.19
+    versionCode: 975
+    commit: 38c69137f7fa553714ea2846e9188afecc825f11
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|http://mvn.mob.com/android/|https://jitpack.io|' -e '/MobSDK/d'
+        -e '/ben-manes/d' ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 24.06.19
+    versionCode: 988
+    commit: f3841a9e832cdb7dd7ada43071b827f771947cd4
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|http://mvn.mob.com/android/|https://jitpack.io|' -e '/MobSDK/d'
+        -e '/ben-manes/d' ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 24.07.26
+    versionCode: 991
+    commit: a8d1b81408bb9d49876640cd8d19db42fb505602
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|http://mvn.mob.com/android/|https://jitpack.io|' -e '/MobSDK/d'
+        -e '/ben-manes/d' ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 24.11.07
+    versionCode: 1010
+    commit: 88e9fa31bbeefe60566027461021ba168073e189
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/libs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|"http.*"|"https://jitpack.io"|' -e '/MobSDK/d' -e '/ben-manes/d'
+        ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' -e "s|files('libs/wheelview.*')|'com.github.venshine:WheelView:ccf190e117'|"
+        -e "s/'com.jude:swipebackhelper:3.1.2'/'com.github.Jude95:SwipeBackHelper:master'/"
+        build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 24.12.27
+    versionCode: 1012
+    commit: 28c8521a47fba9491c7a73aa7c638c502b52eb72
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/libs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|"http.*"|"https://jitpack.io"|' -e '/MobSDK/d' -e '/ben-manes/d'
+        ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' -e "s|files('libs/wheelview.*')|'com.github.venshine:WheelView:ccf190e117'|"
+        -e "s/'com.jude:swipebackhelper:3.1.2'/'com.github.Jude95:SwipeBackHelper:master'/"
+        build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 24.12.27
+    versionCode: 1013
+    commit: 04eb9f63d43c7c6c4712492c5c09cae37ee9fd8e
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/libs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|"http.*"|"https://jitpack.io"|' -e '/MobSDK/d' -e '/ben-manes/d'
+        ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' -e "s|files('libs/wheelview.*')|'com.github.venshine:WheelView:ccf190e117'|"
+        -e "s/'com.jude:swipebackhelper:3.1.2'/'com.github.Jude95:SwipeBackHelper:master'/"
+        build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 24.12.27
+    versionCode: 1019
+    commit: 16c6f38a564e8cf2f0aec9c8dd3da3560888e8ac
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/libs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|"http.*"|"https://jitpack.io"|' -e '/MobSDK/d' -e '/ben-manes/d'
+        ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' -e "s|files('libs/wheelview.*')|'com.github.venshine:WheelView:ccf190e117'|"
+        -e "s/'com.jude:swipebackhelper:3.1.2'/'com.github.Jude95:SwipeBackHelper:master'/"
+        build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+  - versionName: 25.11.22
+    versionCode: 1025
+    commit: 719f207ce6e871a667deaa1ea907d09d0ffb4e35
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - docs
+      - app/libs
+      - app/MobSDK.gradle
+      - app/qqwry/SQLiteCompare.zip
+    prebuild:
+      - sed -i -e '/versionName/s/appVersion/"$$VERSION$$"/' build.gradle
+      - sed -i -e 's|"http.*"|"https://jitpack.io"|' -e '/MobSDK/d' -e '/ben-manes/d'
+        ../build.gradle
+      - sed -i -e '/MobSDK/d' ../gradle.properties
+      - sed -i -e '/MobSDK/d' -e '/umeng/d' -e "s|files('libs/wheelview.*')|'com.github.venshine:WheelView:ccf190e117'|"
+        -e "s/'com.jude:swipebackhelper:3.1.2'/'com.github.Jude95:SwipeBackHelper:master'/"
+        build.gradle
+      - cd src/main/java/com/zfdang
+      - sed -i -e '/MobSDK/d' -e '/UMConfigure/d' SMTHApplication.java
+      - sed -i -e '/MobSDK/d' -e '/MobclickAgent/d' zsmth_android/MainActivity.java
+      - sed -i -e '/void sharePost/,/^  }/d' -e '/sharePost(post)/d' -e '/sharesdk/d'
+        zsmth_android/PostListActivity.java
+    ndk: r21e
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: '|tag-(\d+)|docs/release.html|zSMTH-release-v([\d.]+).apk'
+CurrentVersion: 25.11.22
+CurrentVersionCode: 1025

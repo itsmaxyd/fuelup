@@ -1,0 +1,84 @@
+Categories:
+  - Games
+License: GPL-2.0-only
+SourceCode: https://github.com/emileb/Freedoom-for-Android
+
+Description: |-
+  GZDoom is a feature centric port for all Doom
+  engine games, based on ZDoom, adding an OpenGL
+  renderer and powerful scripting capabilities.
+
+  In addition to Doom, GZDoom supports Heretic,
+  Hexen, Strife, Chex Quest, and other games
+  based on the Doom engine.
+
+  The Freedoom project aims to create a complete
+  free content game based on the Doom engine.
+
+  Combined with the engine, Freedoom is also
+  compatible with game modifications (“mods”) made
+  for the original Doom games, made by Doom fans
+  and artists over the decades.
+
+  In addition to Freedoom 1 & 2 WADs, this app
+  comes with more level packs: Sigil, 10 sectors
+  and 10 sectors part 2.
+
+  Note: this is an unofficial port of GZDoom and
+  FreeDoom to android and it's not affiliated with
+  these projects.
+
+RepoType: git
+Repo: https://github.com/emileb/Freedoom-for-Android
+
+Builds:
+  - versionName: 0.4.3
+    versionCode: 19
+    commit: b6cd1025e73cdc57b01e026b7d79bf8580749e64
+    subdir: doom
+    submodules: true
+    gradle:
+      - yes
+    scanignore:
+      - doom/src/main/jni/gzdoom_android/wadsrc/static/indexfont
+    scandelete:
+      - .
+    build:
+      - cd src/main/jni
+      - ndk-build
+    ndk: r21d
+
+  - versionName: 0.4.3
+    versionCode: 20
+    commit: b6cd1025e73cdc57b01e026b7d79bf8580749e64
+    subdir: doom
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/abiFilters "armeabi-v7a"/abiFilters "arm64-v8a"/g' -e 's://ndk.abiFilters
+        'armeabi-v7a','arm64-v8a','x86_64':ndk.abiFilters 'arm64-v8a':' -e 's/versionCode
+        19/versionCode 20/' build.gradle
+      - sed -i -e '/SDL_timer.h/a#define HAVE_GCC_ATOMICS 1' src/main/jni/SDL/src/atomic/SDL_spinlock.c
+      - cd ..
+      - sed -i -e 's/nvllsvm/emileb/' .gitmodules
+      - git submodule update --init --recursive
+    scanignore:
+      - doom/src/main/jni/gzdoom_android/wadsrc/static/indexfont
+    scandelete:
+      - .
+    build:
+      - cd src/main/jni
+      - sed -i -e 's:armeabi-v7a:arm64-v8a:' Application.mk
+      - ndk-build -j$(nproc)
+    ndk: 21.3.6528147
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.4.3
+CurrentVersionCode: 20

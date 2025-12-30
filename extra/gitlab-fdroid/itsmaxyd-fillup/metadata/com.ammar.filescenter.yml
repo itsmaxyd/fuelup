@@ -1,0 +1,29 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-or-later
+AuthorName: Ammar64
+AuthorEmail: ammar_ramadan151515@hotmail.com
+SourceCode: https://github.com/Ammar64/Sharing
+IssueTracker: https://github.com/Ammar64/Sharing/issues
+
+AutoName: sharing
+
+RepoType: git
+Repo: https://github.com/Ammar64/Sharing
+Binaries: https://github.com/Ammar64/Sharing/releases/download/%v/Sharing.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 0f4d2c62006969dfe919d83752f89deba3a26f06
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 82322a1b5caac500e9547cca4579b234ef872572cd5fad82cd75edeb589e8f8d
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.0'
+CurrentVersionCode: 1

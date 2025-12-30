@@ -1,0 +1,49 @@
+Categories:
+  - Sports & Health
+  - System
+  - Time
+License: GPL-3.0-only
+AuthorName: Anton Lazarev
+AuthorWebSite: https://antonok.com
+SourceCode: https://gitlab.com/antonok/warpclock
+IssueTracker: https://gitlab.com/antonok/warpclock/-/issues
+
+AutoName: Warpclock
+
+RepoType: git
+Repo: https://gitlab.com/antonok/warpclock.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: 4f0dd72ad629570218d03a94ede2766fbc3d38d9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: 760c0fd84ed262ddc1a3ebef2114e0ffd7063f0e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags v[0-9].*[0-9]$
+CurrentVersion: '1.2'
+CurrentVersionCode: 3

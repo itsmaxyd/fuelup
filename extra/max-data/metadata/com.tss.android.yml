@@ -1,0 +1,46 @@
+Categories:
+  - Science & Education
+License: GPL-2.0-only
+AuthorName: langurmonkey
+WebSite: https://tonisagrista.com/project/pps/
+SourceCode: https://gitlab.com/langurmonkey/particle-physics-sim
+IssueTracker: https://gitlab.com/langurmonkey/particle-physics-sim/issues
+
+AutoName: ParticleSim
+
+RepoType: git
+Repo: https://gitlab.com/langurmonkey/particle-physics-sim.git
+
+Builds:
+  - versionName: 3.7.4
+    versionCode: 69
+    commit: 3.7.4
+    subdir: app/nbodyandroid/
+    gradle:
+      - yes
+
+  - versionName: 3.8.0
+    versionCode: 70
+    commit: 3.8.0
+    subdir: app/nbodyandroid/
+    gradle:
+      - yes
+
+  - versionName: 3.8.1
+    versionCode: 71
+    commit: 3.8.1
+    subdir: app/nbodyandroid/
+    gradle:
+      - yes
+
+  - versionName: 3.8.2
+    versionCode: 72
+    commit: 7c698324cb64d301d74ada3b1d3cfdde9092f040
+    subdir: app/nbodyandroid/
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.8.2
+CurrentVersionCode: 72

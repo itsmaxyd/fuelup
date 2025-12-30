@@ -1,0 +1,189 @@
+Categories:
+  - Internet
+License: GPL-3.0-only
+AuthorName: Twidere Project
+AuthorEmail: twidere.project@gmail.com
+WebSite: https://twidere.com/
+SourceCode: https://github.com/TwidereProject/TwidereX-Android
+IssueTracker: https://github.com/TwidereProject/TwidereX-Android/issues
+Translation: http://crowdin.net/project/twidere-x
+Donate: https://paypal.me/yisiliu2
+Bitcoin: 3HGDdf9ptTPNaY7C53gREMUnUsUVUoqm8G
+
+AutoName: Twidere X
+Description: |-
+  Next generation of Twidere for Android 5.0+. Still in early stage.
+
+  Development is focussed on Twitter and that service is the only one officially
+  supported.
+
+  <b>Features</b>
+
+  <ul>
+  <li>Modern Material Design</li>
+  <li>Dark mode</li>
+  <li>Tweet with photos</li>
+  <li>Multiple accounts support</li>
+  <li>Free, open source, NO ads, forever!</li>
+  </ul>
+
+  You can donate via PayPal and Bitcoin here.
+
+RepoType: git
+Repo: https://github.com/TwidereProject/TwidereX-Android
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 15
+    commit: 1.0.3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+
+  - versionName: 1.0.6
+    versionCode: 27
+    commit: 1.0.6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+
+  - versionName: 1.1.0
+    versionCode: 39
+    commit: 1.1.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+
+  - versionName: 1.2.0
+    versionCode: 42
+    commit: 1.2.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+
+  - versionName: 1.3.0
+    versionCode: 46
+    commit: 992ff14dc8b4f4e822845838dea6c6f562c500b6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+
+  - versionName: 1.4.0
+    versionCode: 49
+    commit: a9336d8651ab285010ec4de85f7e37e6f973e154
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle
+
+  - versionName: 1.5.0
+    versionCode: 53
+    commit: 4689f3a1c3fa2dbd0098c3001d2fc2ee5eb141fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle.kts
+
+  - versionName: 1.5.1
+    versionCode: 55
+    commit: e5f5b50cbc6460f0d02ea03951560b5f22ba2963
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle.kts
+
+  - versionName: 1.6.0
+    versionCode: 59
+    commit: f1b1ad71a671bb01b34a2c58c4b0463f4cbe13b6
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle.kts
+      - sed -i -e '/const val jvmTarget = /s/17/11/' -e '/val java = JavaVersion/s/17/11/'
+        ../buildSrc/src/main/kotlin/Versions.kt
+
+  - versionName: 1.7.0-beta01
+    versionCode: 60
+    commit: 5ebe4d325dbb2a331d344df7208e84702d89dd2d
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle.kts
+      - sed -i -e '/jetbrains.space/d' ../settings.gradle.kts
+      - sed -i -e 's/compose-jb = "1.3.0-rc01"/compose_jb = "1.2.2"/' ../gradle/libs.versions.toml
+    scanignore:
+      - build-logic/build
+
+  - versionName: 1.7.0-beta02
+    versionCode: 61
+    commit: a1e2c6a3aed3107bfbe70e689573b500d117d6fd
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/START Non-FOSS component/,/END Non-FOSS component/d' build.gradle.kts
+      - sed -i -e '/jetbrains.space/d' ../settings.gradle.kts
+      - sed -i -e 's/compose-jb = "1.3.0-rc01"/compose_jb = "1.2.2"/' ../gradle/libs.versions.toml
+    scanignore:
+      - build-logic/build
+
+MaintainerNotes: Force using a stable JetBrains Compose version to avoid using JetBrains'
+  private repo. See https://github.com/TwidereProject/TwidereX-Android/issues/565.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: build-logic/src/main/kotlin/Package.kt|const val build = (\d+)||
+CurrentVersion: 1.7.0-beta02
+CurrentVersionCode: 61

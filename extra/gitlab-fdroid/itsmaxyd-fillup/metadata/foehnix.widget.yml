@@ -1,0 +1,117 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on data.geo.admin.ch servers
+Categories:
+  - Navigation
+  - Phone & SMS
+  - Weather
+License: GPL-3.0-only
+SourceCode: https://github.com/dzmanto/foehnix
+IssueTracker: https://github.com/dzmanto/foehnix/issues
+Changelog: https://github.com/dzmanto/foehnix/releases
+
+AutoName: Föhnix
+Description: |-
+  * Assessment of Foehn conditions for pilots.
+  * Intended for paraglider and for hangglider pilots.
+  * Displays pressure differences + relevant wind gusts.
+  * Updates every 15 minutes or on request.
+  * Share functionality via text message, emails.
+
+RepoType: git
+Repo: https://github.com/dzmanto/foehnix.git
+
+Builds:
+  - versionName: '2.2'
+    versionCode: 22
+    commit: '2.3'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 24
+    commit: '2.4'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 26
+    commit: '2.6'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 27
+    commit: '2.7'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 28
+    commit: '2.8'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 30
+    commit: ae9e6f9e43dadaf9195181d355cebc15bbe17f50
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.2'
+    versionCode: 32
+    commit: '3.2'
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/main/java/foehnix/widget/DSPTask.java.gz
+
+  - versionName: '3.4'
+    versionCode: 34
+    commit: 6097d789a21ebabcbc376cf80bb32744e4942a9e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.5'
+    versionCode: 35
+    commit: 6a112dc1a19ef23456adc7a1a720518a80b2d639
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.8'
+    versionCode: 38
+    commit: f7c8b4681a8efc4350707a73d78c67cfbdadd64c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/gradle:4.1.1/gradle:4.2.0/' ../build.gradle
+
+  - versionName: '4.0'
+    versionCode: 40
+    commit: 0aedeb7365c6cd52bcbfe4b582d296784a4c2465
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'build-tools;34.0.0' 'build-tools;30.0.3'
+      - cp /opt/android-sdk/build-tools/30.0.3/lib/dx.jar /opt/android-sdk/build-tools/34.0.0/lib/dx.jar
+      - cp /opt/android-sdk/build-tools/30.0.3/dx /opt/android-sdk/build-tools/34.0.0/dx
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '4.0'
+CurrentVersionCode: 40

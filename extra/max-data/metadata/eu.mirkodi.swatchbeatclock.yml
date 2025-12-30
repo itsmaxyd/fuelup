@@ -1,0 +1,73 @@
+Categories:
+  - Time
+License: GPL-3.0-or-later
+AuthorName: mirk0dex
+AuthorWebSite: https://www.mirkodi.eu
+SourceCode: https://codeberg.org/mirk0dex/swatchbeatclock
+
+AutoName: Swatch .beat clock
+
+RepoType: git
+Repo: https://codeberg.org/mirk0dex/swatchbeatclock
+
+Builds:
+  - versionName: v1.2.1
+    versionCode: 9
+    commit: 0b692d131fc41e0fe9d9f1e59b375976e0fa8483
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.2.1-fdroid-metadata
+    versionCode: 10
+    commit: 3e4c0204ab48af6867c857fedc1b9bf695676eae
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.2.2
+    versionCode: 11
+    commit: 52c7d05ececd78029f325d47142fdcfe19699068
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.2.4
+    versionCode: 13
+    commit: fd60ca6daee68dd17d44c33b72cb376396d903b0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.2.6
+    versionCode: 15
+    commit: f4fca1c5894694567d92fe71bed97ff6be0a436d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.2.7
+    versionCode: 17
+    commit: 0e5271b5109c263e4e6d68f446aef1a64eb6d38f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/main/res/values-images
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v1.2.7
+CurrentVersionCode: 17

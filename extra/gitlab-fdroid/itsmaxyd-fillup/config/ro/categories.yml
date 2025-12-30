@@ -1,0 +1,126 @@
+Connectivity:
+  name: Conectivitate
+Development:
+  name: Dezvoltare programe
+Games:
+  name: Jocuri
+Graphics:
+  name: Grafică
+Internet:
+  name: Internet
+Money:
+  name: Finanțe
+Multimedia:
+  name: Multimedia
+Navigation:
+  name: Navigație
+Phone & SMS:
+  name: Telefon & SMS
+Reading:
+  name: Citit
+Science & Education:
+  name: Știință & educație
+Security:
+  name: Securitate
+Sports & Health:
+  name: Sport & sănătate
+System:
+  name: Sistem
+Theming:
+  name: Teme
+Time:
+  name: Timp
+Writing:
+  name: Scris
+Email:
+  name: E-mail
+DNS & Hosts:
+  name: DNS & Gazde
+VPN & Proxy:
+  name: VPN & Proxy
+File Encryption & Vault:
+  name: Criptare fișiere și seif
+File Transfer:
+  name: Transfer fișiere
+Messaging:
+  name: Mesagerie
+Password & 2FA:
+  name: Parole & 2FA
+Social Network:
+  name: Rețea socială
+App Store & Updater:
+  name: Magazin aplicații & Actualizări
+Browser:
+  name: Navigator web
+Local Media Player:
+  name: Vizualizator media local
+News:
+  name: Știri
+Online Media Player:
+  name: Vizualizator media pe Internet
+Podcast:
+  name: Podcast
+Weather:
+  name: Meteo
+Keyboard & IME:
+  name: Tastatură & IME
+Calendar & Agenda:
+  name: Calendar & Agenda
+Cloud Storage & File Sync:
+  name: Stocare în cloud & Sincronizare fișiere
+Voice & Video Chat:
+  name: Apeluri audio & Video
+Wallet:
+  name: Portofel
+Bookmark:
+  name: Semn de carte
+Calculator:
+  name: Calculator
+Draw:
+  name: Desen
+Ebook Reader:
+  name: Carte electronică
+Finance Manager:
+  name: Manager financiar
+Gallery:
+  name: Galerie
+Icon Pack:
+  name: Pachet iconițe
+Launcher:
+  name: Lansator
+Note:
+  name: Notițe
+Pass Wallet:
+  name: Portofel tichete
+Recipe Manager:
+  name: Manager rețete
+Text Editor:
+  name: Editor text
+Translation & Dictionary:
+  name: Traducere & dicționar
+Unit Convertor:
+  name: Convertor unități
+Wallpaper:
+  name: Fundal
+Workout:
+  name: Antrenament
+Public Transport:
+  name: Transport public & Orar
+Shopping List:
+  name: Listă cumpărături
+Task:
+  name: Activitate
+Forum:
+  name: Forum
+Habit Tracker:
+  name: Jurnal de obiceiuri
+Music Practice Tool:
+  name: Instrumentul de practică muzicală
+Location Tracker & Sharer:
+  name: Localizare și partajare locație
+AI Chat:
+  name: Chat AI
+App Manager:
+  name: Manager aplicații
+Religion:
+  name: Religie

@@ -1,0 +1,150 @@
+Categories:
+  - Task
+  - Time
+  - Writing
+License: Apache-2.0
+AuthorName: SECUSO - Security Usability Society
+AuthorEmail: contact@secuso.org
+AuthorWebSite: https://secuso.aifb.kit.edu/english/105.php
+WebSite: https://secuso.aifb.kit.edu/english/To-Do-List.php
+SourceCode: https://github.com/SecUSo/privacy-friendly-todo-list
+IssueTracker: https://github.com/SecUSo/privacy-friendly-todo-list/issues
+Changelog: https://github.com/SecUSo/privacy-friendly-todo-list/blob/HEAD/CHANGELOG.md
+
+AutoName: To-Do List
+
+RepoType: git
+Repo: https://github.com/SecUSo/privacy-friendly-todo-list
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: v1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 3
+    commit: v2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 4
+    commit: v2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 5
+    commit: v2.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 6
+    commit: v2.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 7
+    commit: cd26ec626c5a8d83fb12c9c6d313e925e9c49221
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.2
+    versionCode: 9
+    commit: 0fcfc2d75edd5fb8bb113ed73ce1edc196f7d41e
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 3.0.0
+    versionCode: 11
+    commit: 8aaafe6952cb1be539c931a75fc40011a667d90d
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.1.0
+    versionCode: 12
+    commit: eb91bd2003845b28b09f061bc7cc68728785558c
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.2.1
+    versionCode: 100
+    commit: d5a031fc73ba4dd02239b3c7a1863a395510667c
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.3.0
+    versionCode: 101
+    commit: 83fd416e35c2e91d2c6a3ba9f1650c0acaf4f218
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.3.1
+    versionCode: 102
+    commit: 2e15709e944b25fd5925ac58dba9d1b233a7ca10
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.3.1
+CurrentVersionCode: 102

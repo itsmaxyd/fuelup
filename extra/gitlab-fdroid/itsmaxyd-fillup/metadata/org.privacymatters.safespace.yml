@@ -1,0 +1,237 @@
+Categories:
+  - File Encryption & Vault
+  - Security
+License: GPL-3.0-only
+SourceCode: https://github.com/aashishksahu/SafeSpace
+IssueTracker: https://github.com/aashishksahu/SafeSpace/issues
+
+AutoName: Safe Space
+
+RepoType: git
+Repo: https://github.com/aashishksahu/SafeSpace.git
+Binaries: https://github.com/aashishksahu/SafeSpace/releases/download/%v/safe-space-v%v.apk
+
+Builds:
+  - versionName: 1.1.3
+    versionCode: 5
+    commit: 401ab2026b5974291401132983366400dcf61d36
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.5
+    versionCode: 7
+    commit: 398cc86772569cd72afd0ed2cff11c6add7e10d0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 8
+    commit: 5f341b31ba062eb3c61ad4dc152eda877e00f4ae
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 9
+    commit: e16420e51013f7351ee9e5d6d7e85c5deab0a4b8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 10
+    commit: 4b30502f90756bee60734609801033697112191c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 13
+    commit: 1065f983ddb8b951ef61cd8422b33b1646358fa1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://github.com/aashishksahu/SafeSpace/releases/download/v%v/safe-space-v%v.apk
+
+  - versionName: 1.4.1
+    versionCode: 15
+    commit: 4fbcbbb4dc26c03851abdec36cb167fe5c4506d1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 17
+    commit: 006e9685cc92ab622a547eb8067a85eefefdd8ea
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.5
+    versionCode: 19
+    commit: 2633feba2d409417dac5c22800c0da94ce7acb6c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.6
+    versionCode: 20
+    commit: 200a17941146c74f191aaca32360dcf859049561
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.8
+    versionCode: 22
+    commit: 1a2d5a71e2f233ed214a32a30e15f85a5ccea94a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 31
+    commit: 5d97aa40161adf74c85b58ac654de9bfad6a6635
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 32
+    commit: 5e892517dd91cc53a791f75c335a86cc0e6202d6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.3
+    versionCode: 34
+    commit: 2a81d80b6e68a2aa61166d44c48546aea4ebff03
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.4
+    versionCode: 35
+    commit: eba36e79281d330d7e21c21e69d3072ac410a511
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.5
+    versionCode: 36
+    commit: c65b10d00f63c3cd09c8202b0c1c5d92bd3cf5d3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.6
+    versionCode: 37
+    commit: fa39916496ee2decbc8b19eb3ea0c48c90d7ec76
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.7
+    versionCode: 38
+    commit: 0af6133c8391add8862728201c782fdcde745182
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 40
+    commit: 53747e8958a7ef9f1abb2ca220573b36d3cdf040
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 41
+    commit: d911e129685e3219882429e2b3c22eaed7976ff8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 42
+    commit: a71e841faaaed6d9ea31f498a9383531816b37a2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.1
+    versionCode: 44
+    commit: cd58dc02682b15461083e9ee15db2baa13c7226d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.2
+    versionCode: 45
+    commit: a52a372b909df194f97c125f76677aebde93c95f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.3
+    versionCode: 46
+    commit: be49e02bde94ed60acbf94492519935fed116ff1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.4
+    versionCode: 47
+    commit: 7181ad6f6cde1526b62953bb2bb5cb93813005d6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 944169ad7bb469dabdf5ffb09503ce745ebd6730a16b85986808c4523a7dee63
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.3.4
+CurrentVersionCode: 47

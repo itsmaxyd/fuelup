@@ -1,0 +1,26 @@
+Categories:
+  - Development
+License: GPL-3.0-only
+SourceCode: https://github.com/arifhn/nstools
+IssueTracker: https://github.com/arifhn/nstools/issues
+
+AutoName: NSTools
+Description: |-
+  Manage BLX,BLN,Deep Idle,Governor and voltage settings for custom kernels.
+  Relevant for most custom kernels on the i9020 and i9023, Crespo and Crespo 4g.
+
+RepoType: git
+Repo: https://github.com/arifhn/NSTools.git
+
+Builds:
+  - versionName: '1.16'
+    versionCode: 20
+    commit: v1.16
+    extlibs:
+      - android/android-support-v4.jar
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.16'
+CurrentVersionCode: 20

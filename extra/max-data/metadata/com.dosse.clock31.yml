@@ -1,0 +1,45 @@
+Categories:
+  - Calendar & Agenda
+  - Theming
+  - Time
+License: GPL-3.0-only
+WebSite: https://fdossena.com/?p=clock31/index.frag
+SourceCode: https://github.com/adolfintel/Clock31
+IssueTracker: https://github.com/adolfintel/Clock31/issues
+Changelog: https://github.com/adolfintel/Clock31/releases
+Donate: https://paypal.me/sineisochronic
+
+AutoName: Clock 31
+
+RepoType: git
+Repo: https://github.com/adolfintel/Clock31.git
+Binaries: https://downloads.fdossena.com/geth.php?r=clock31-apk
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 3
+    commit: 1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 4
+    commit: 495d5b0a51943fec8e2718cf28ff232922b30d94
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 5
+    commit: 1d3e0eb4fa2b8086b83ee94271941e0a145a116d
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: a7bbe156479131d86eaa298e44f1b5f93612f66665e8ef7c604559ce3eaf2caa
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.3
+CurrentVersionCode: 5

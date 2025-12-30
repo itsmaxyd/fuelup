@@ -1,0 +1,151 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Paul Marks
+AuthorEmail: paul@pmarks.net
+SourceCode: https://github.com/pmarks-net/chromadoze
+IssueTracker: https://github.com/pmarks-net/chromadoze/issues
+
+AutoName: ChromaDoze
+Description: |-
+  Generates noise with a custom colour profile. It is intended to be used as a
+  sleep sound generator. It provides rapid feedback to adjustments in the
+  spectrum, and is designed to minimize CPU usage in the steady state.
+
+  It works by running shaped white noise through an Inverse Discrete Cosine
+  Transform, generating a few megabytes of distinct audio blocks. The steady-state
+  behavior selects blocks at random, and smoothly crossfades between them
+
+RepoType: git
+Repo: https://github.com/pmarks-net/chromadoze
+
+Builds:
+  - versionName: 1.1.1
+    versionCode: 7
+    commit: '26'
+
+  - versionName: '2.1'
+    versionCode: 9
+    commit: '34'
+    srclibs:
+      - ActionBarSherlock@4.3.0
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - echo "android.library.reference.1=$$ActionBarSherlock$$" >> project.properties
+      - cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs
+    target: android-16
+
+  - versionName: '2.2'
+    versionCode: 10
+    commit: '37'
+    srclibs:
+      - ActionBarSherlock@4.3.0
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - echo "android.library.reference.1=$$ActionBarSherlock$$" >> project.properties
+      - cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs
+    target: android-16
+
+  - versionName: '3.1'
+    versionCode: 12
+    commit: '65'
+    prebuild:
+      - cp -R $$SDK$$/extras/android/support/v7/appcompat/ appcompat/
+      - echo -e "\nandroid.library.reference.1=./appcompat/" >> ./local.properties
+      - $$SDK$$/tools/android update lib-project --path ./appcompat/
+    target: android-18
+
+  - versionName: '3.3'
+    versionCode: 14
+    commit: '72'
+    prebuild:
+      - cp -R $$SDK$$/extras/android/support/v7/appcompat/ appcompat/
+      - echo -e "\nandroid.library.reference.1=./appcompat/" >> ./local.properties
+      - $$SDK$$/tools/android update lib-project --path ./appcompat/
+    target: android-18
+
+  - versionName: '3.4'
+    versionCode: 15
+    commit: '76'
+    prebuild:
+      - cp -R $$SDK$$/extras/android/support/v7/appcompat/ appcompat/
+      - echo -e "\nandroid.library.reference.1=./appcompat/" >> ./local.properties
+      - $$SDK$$/tools/android update lib-project --path ./appcompat/
+    target: android-18
+
+  - versionName: 3.5.1
+    versionCode: 17
+    commit: v3.5.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.5.2
+    versionCode: 18
+    commit: v3.5.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.5.3
+    versionCode: 20
+    commit: v3.5.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.5.4
+    versionCode: 21
+    commit: v3.5.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.5.5
+    versionCode: 22
+    commit: v3.5.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.6'
+    versionCode: 23
+    commit: v3.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.7.1
+    versionCode: 25
+    commit: v3.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.2'
+    versionCode: 28
+    commit: 0c626494f86ba49da6db2a079f08912a398dc708
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.3'
+    versionCode: 29
+    commit: d97acd88c21de7d4136c4215245d02fa6631af72
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.4'
+    versionCode: 30
+    commit: 085619856f874ad89b95f68c565e1c2a65d7a4ae
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '4.4'
+CurrentVersionCode: 30

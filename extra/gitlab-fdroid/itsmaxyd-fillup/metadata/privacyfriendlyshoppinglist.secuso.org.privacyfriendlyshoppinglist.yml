@@ -1,0 +1,80 @@
+Categories:
+  - Shopping List
+  - Writing
+License: Apache-2.0
+AuthorName: SECUSO
+AuthorEmail: contact@secuso.org
+AuthorWebSite: https://secuso.aifb.kit.edu/english/105.php
+WebSite: https://secuso.aifb.kit.edu/english/Shopping_List.php
+SourceCode: https://github.com/SecUSo/privacy-friendly-shopping-list
+IssueTracker: https://github.com/SecUSo/privacy-friendly-shopping-list/issues
+Changelog: https://github.com/SecUSo/privacy-friendly-shopping-list/blob/HEAD/CHANGELOG.md
+
+AutoName: Shopping List
+
+RepoType: git
+Repo: https://github.com/SecUSo/privacy-friendly-shopping-list
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 1
+    commit: ed628faed63a17edcd0b2a39d2cc048d046deb85
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 2
+    commit: v1.0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 3
+    commit: v1.0.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.7
+    versionCode: 5
+    commit: v1.0.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.8
+    versionCode: 6
+    commit: v1.0.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.9
+    versionCode: 7
+    commit: v1.0.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 8
+    commit: a77fe075f6543a0182089874c104f5457aed8df8
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 100
+    commit: 104f1551596f78067942c091311052c4715c217c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.2.1
+CurrentVersionCode: 100

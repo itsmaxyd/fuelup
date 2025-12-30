@@ -1,0 +1,313 @@
+Categories:
+  - Internet
+  - Messaging
+License: MIT
+WebSite: https://textbrowser.github.io/smoke/
+SourceCode: https://github.com/textbrowser/smoke
+IssueTracker: https://github.com/textbrowser/smoke/issues
+
+AutoName: Smoke
+
+RepoType: git
+Repo: https://github.com/textbrowser/smoke.git
+
+Builds:
+  - versionName: 2020.12.25
+    versionCode: 20201225
+    commit: 2020.12.25
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-168/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.68'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.01.10
+    versionCode: 20210110
+    commit: 2021.01.10
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-168/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.68'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.01.20
+    versionCode: 20210120
+    commit: 2021.01.20
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-168/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.68'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.01.30
+    versionCode: 20210130
+    commit: 2021.01.30
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-168/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.68'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.02.10
+    versionCode: 20210210
+    commit: 2021.02.10
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-168/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.68'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.02.25
+    versionCode: 20210225
+    commit: 2021.02.27
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-168/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.68'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.03.20
+    versionCode: 20210320
+    commit: 2021.03.20
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-168/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.68'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.07.07
+    versionCode: 20210707
+    commit: 942e0896f89f07609d087dee2d1c07ab51d68542
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-169/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.69'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.07.25
+    versionCode: 20210725
+    commit: fc9aeab86e2117a0343285446b463256a4cd6c10
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-169/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.69'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.10.05
+    versionCode: 20211005
+    commit: dc137237e80074c1f65f64d1c4f91c540b1d7e81
+    subdir: Smoke/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    rm:
+      - Smoke/app/libs/*
+    prebuild: sed -i -e '/bcprov-ext-jdk15on-169/d' -e "/fileTree/aimplementation
+      'org.bouncycastle:bcprov-ext-jdk15on:1.69'" -e '/MissingTranslation/aabortOnError\
+      false' build.gradle
+
+  - versionName: 2021.12.17
+    versionCode: 20211217
+    commit: 58274017f7f6b5f5ed7f17590cd3ce6fc44decd5
+    subdir: Smoke/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2021.12.25
+    versionCode: 20211225
+    commit: 12a75277dd752275f7d0d2c599ff25332c2b5eb9
+    subdir: Smoke/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2022.04.10
+    versionCode: 20220410
+    commit: 25b1b99041598efe7f31e1911d598dba56a61099
+    subdir: Smoke/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2022.11.15
+    versionCode: 20221115
+    commit: e17e42971ffb50e9093a2a2b01a777ad793060ca
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.01.05
+    versionCode: 20230105
+    commit: 0a955b4832dfe289c6b53ce132bdae6aa40fbc62
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.01.07
+    versionCode: 20230107
+    commit: db65eda9a17d51a836bdd08bca9aabdc5cbf4327
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.01.10
+    versionCode: 20230110
+    commit: 3f16b92cdf4d1f0f33bf96d64bceb4b9bacdcdd7
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.03.10
+    versionCode: 20230310
+    commit: 12ae613204bf057754f15e976b365a97542c2950
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.03.11
+    versionCode: 20230311
+    commit: c59eb6ee814cf47ca4803d2e0d4f922770e67a13
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.03.15
+    versionCode: 20230315
+    commit: 7138b1e0ab77f2e333c7c3a215b4796c85c34428
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.03.30
+    versionCode: 20230330
+    commit: d5b1705df33cafe5bf721dd0c7f85acd8b8d2d9e
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.04.05
+    versionCode: 20230405
+    commit: 838f8a3f867580d96a284f0f22bbe73147971b5e
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.05.10
+    versionCode: 20230510
+    commit: f11ca55906abd61582de401c97b4977da5216545
+    subdir: Smoke/app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/apk/smoke.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' build.gradle
+
+  - versionName: 2023.12.25
+    versionCode: 20231225
+    commit: 694cf2736aa685f54da9609adcb472cfc003064a
+    subdir: Smoke/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions {checkReleaseBuilds false}' build.gradle
+
+  - versionName: 2024.01.05
+    versionCode: 20240105
+    commit: 12242dc3ab0c7ead0fc6f7b501c995e82f8b420a
+    subdir: Smoke/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions {checkReleaseBuilds false}' build.gradle
+
+  - versionName: 2024.06.25
+    versionCode: 20240625
+    commit: aa6461d531db82a457cac6cc2af67d4741887498
+    subdir: Smoke/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions {checkReleaseBuilds false}' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2024.06.25
+CurrentVersionCode: 20240625

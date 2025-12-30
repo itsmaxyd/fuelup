@@ -1,0 +1,1 @@
+Un metrónomo simple con marcación de tempo y un sistema de reseteo

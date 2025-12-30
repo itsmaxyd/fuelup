@@ -1,0 +1,784 @@
+Categories:
+  - Local Media Player
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: chr_56
+SourceCode: https://github.com/chr56/Phonograph_Plus
+IssueTracker: https://github.com/chr56/Phonograph_Plus/issues
+Translation: https://crowdin.com/project/phonograph-plus
+Changelog: https://phonographplus.github.io/changelogs/changeslogs/changelog.html
+
+AutoName: Phonograph Plus
+
+RepoType: git
+Repo: https://github.com/chr56/Phonograph_Plus.git
+
+Builds:
+  - versionName: 0.6.1
+    versionCode: 510
+    commit: fc429ef6a8acd7087ddb13ac0e7ad3da53ded3a9
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.6.2
+    versionCode: 520
+    commit: c8ef9eaee568f4a79ed28f30f76f5d0e0dbedeb9
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.6.2.1
+    versionCode: 521
+    commit: 90e69dd46fcd73aafcc11fb55baa1fcb64e3b1f4
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.6.3
+    versionCode: 530
+    commit: 85536e54bf1b7f9519a80f9757a3436705e83f1d
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.7.0
+    versionCode: 600
+    commit: 190d18826661b2e655f82eb6a99582a66b960238
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.7.1
+    versionCode: 610
+    commit: d49e807f46870c3196d6076ccd1a21ea29f9be4a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.7.2
+    versionCode: 620
+    commit: 79fff77f342e7602594b3de46c93fdeb7f24da4e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.7.2.1
+    versionCode: 621
+    commit: 33ce6fca472087b9d01bac522fcb3150a197ff17
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.7.2.3
+    versionCode: 623
+    commit: 67e915f53097b48bbcdd374e6af6a07a33afe6ef
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.0.0
+    versionCode: 1000
+    commit: 37d0d222a6a1f9047a711da54fee4c3e7a044c73
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.0.1
+    versionCode: 1001
+    commit: 543ee277190bd8c0fb891ab005da530b259f227a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.0.2
+    versionCode: 1002
+    commit: 1298bd36464d1786c96a52953c94b91b1efffba2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.1.0
+    versionCode: 1010
+    commit: 374a7e2791709a079348795f90898da90cba8a7e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.2.0
+    versionCode: 1020
+    commit: fe5970aaf5f339c2dbd0c8560b79aedaec941e90
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.3.0
+    versionCode: 1030
+    commit: eb15b85f63c8240be7d631ecdf30e601188c1674
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.3.1
+    versionCode: 1031
+    commit: 2721533f9cdc69d5af23acb709e8c8e0f22e689d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.3.2
+    versionCode: 1032
+    commit: e5fd7bf0db27965a967f680490fbedd07dc23f60
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.4.0
+    versionCode: 1040
+    commit: 0a83c54d6dc66e50a4ba92d224c716889a5c3412
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.4.1
+    versionCode: 1041
+    commit: 20e9360c2292226e2cc9f239ccac984620fa1bde
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.4.2
+    versionCode: 1042
+    commit: 45ddb146603d51306c32c31a80ca2bc1ad620e86
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.4.3
+    versionCode: 1043
+    commit: 70742f7631390b010b728062331031b8f2721872
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.4.4
+    versionCode: 1044
+    commit: fed2dee21d07a2a65d48959249b44abecf671768
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.5.0
+    versionCode: 1050
+    commit: a3ae0db9dc053c2f0b48bdc57bb7b09b9a391574
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.5.1
+    versionCode: 1051
+    commit: 980d8b5c5054cadf889c954ef9aff1c21efcdce6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    scandelete:
+      - tools/release-tool/build
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.5.2
+    versionCode: 1052
+    commit: d6f721af75b773b3c85f28703666cade18a3d5bb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.6.0
+    versionCode: 1060
+    commit: 86916ee0b9f8df660b6b9792d273923588014126
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.6.1
+    versionCode: 1061
+    commit: f5697850d98bb66a2005ed30b243103dca446e2a
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.6.2
+    versionCode: 1062
+    commit: be7844c9854908da5cae636d12fa0b328ce4e6de
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.6.3
+    versionCode: 1063
+    commit: f7efa61e7a0f7f81270e0b145e8caf75a0c325a9
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.7.0
+    versionCode: 1070
+    commit: 12eb98aab8eca9221924d02089b9331369877e92
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.7.1
+    versionCode: 1071
+    commit: d06682554c9d5c521b1ce79f8f9280ce8f7b33a4
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.7.2.1
+    versionCode: 1072
+    commit: 22ea8e91a5590cbd09405e40f63328facb0f488c
+    subdir: app
+    gradle:
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.8.0
+    versionCode: 1080
+    commit: d6bf4b15c3a6784c37dbe340a83b00612062f1af
+    subdir: app
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.8.1
+    versionCode: 1081
+    commit: 1956a97a5c4760f3e7dacbc7fe828a784a941575
+    subdir: app
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.8.2
+    versionCode: 1082
+    commit: 27e8f24d1ee2efe63d55c66f993185860cea696f
+    subdir: app
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.8.3
+    versionCode: 1083
+    commit: aad08e40ce94acf73919fce44887951110e0dff5
+    subdir: app
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines "$$OUT$$"
+      'META-INF/services/*'
+
+  - versionName: 1.8.4
+    versionCode: 1084
+    commit: ff9861b5a23611e2a02b2b62eebc0f7dbd119bca
+    subdir: app
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.8.5.1
+    versionCode: 1085
+    commit: d37a3b69c8c70fcc49693df53d9bd02dd33f775a
+    subdir: app
+    sudo:
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.9.0
+    versionCode: 1090
+    commit: 48deeae75bf9c223500fe0e2f7c7fabe059fb129
+    subdir: app
+    sudo:
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.9.1
+    versionCode: 1091
+    commit: 0cbee8569ff58200a5deae9fe56d6fa30c1f70a9
+    subdir: app
+    sudo:
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.9.2
+    versionCode: 1092
+    commit: e5c4d928ec01ba57d5819100f9a40fd1cbd52d86
+    subdir: app
+    sudo:
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.9.3
+    versionCode: 1093
+    commit: c2bccefd0c035fc18f532bd867773077257e24ab
+    subdir: app
+    sudo:
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.9.4
+    versionCode: 1094
+    commit: 773917ef8e12100bf4fc2e65a7d6a8832b1ac835
+    subdir: app
+    sudo:
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    output: build/outputs/apk/modernStable/release/PhonographPlus-*-modern-stable-release-unsigned.apk
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    prebuild: gradle clean
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/chr56/Phonograph_Plus/releases/download/v$$VERSION$$/PhonographPlus_$$VERSION$$_ModernStableRelease.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleModernStableRelease; mkdir local;
+        pushd local; unzip -q ../build/outputs/apk/modernStable/release/PhonographPlus-*-modern-stable-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      "$$OUT$$" 'META-INF/services/*'
+
+  - versionName: 1.9.5.1
+    versionCode: 1095
+    commit: 4c084a99947e697731c4e40f5e959b74467011dd
+    subdir: app
+    gradle:
+      - modern
+      - stable
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernStableRelease.apk
+
+  - versionName: 1.10.0
+    versionCode: 1100
+    commit: 15706f815b409cfffe1cc9ff637a0c4b5a9d735f
+    subdir: app
+    gradle:
+      - modern
+      - fdroid
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernFdroidRelease.apk
+
+  - versionName: 1.10.1
+    versionCode: 1101
+    commit: da7506068d9f3d6282001a2d3ca6a5968bcfa9a0
+    subdir: app
+    gradle:
+      - modern
+      - fdroid
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernFdroidRelease.apk
+
+  - versionName: 1.11.0
+    versionCode: 1110
+    commit: 96e5a7bdffc0040e15d52ce92cc42382a8d48d77
+    subdir: app
+    gradle:
+      - modern
+      - fdroid
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernFdroidRelease.apk
+
+  - versionName: 1.11.1
+    versionCode: 1111
+    commit: 9addaf9bdeb9af0e1ab187accb1040fc69aa43ec
+    subdir: app
+    gradle:
+      - modern
+      - fdroid
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernFdroidRelease.apk
+
+  - versionName: 1.11.2
+    versionCode: 1112
+    commit: ca046f59c9ce9f46260a7767c8f2010aaae41a87
+    subdir: app
+    gradle:
+      - modern
+      - fdroid
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernFdroidRelease.apk
+
+  - versionName: 1.11.3
+    versionCode: 1113
+    commit: 25f246f60b159f7d99b5ac4e7b4fca4e77810dc2
+    subdir: app
+    gradle:
+      - modern
+      - fdroid
+    binary: https://github.com/chr56/Phonograph_Plus/releases/download/v%v/PhonographPlus_%v_ModernFdroidRelease.apk
+
+AllowedAPKSigningKeys: 01654eb9348b2c802fcbf21282de0cdca2a226337b9a2fa201e3ac376b0ce76c
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v(.*)$
+CurrentVersion: 1.11.3
+CurrentVersionCode: 1113

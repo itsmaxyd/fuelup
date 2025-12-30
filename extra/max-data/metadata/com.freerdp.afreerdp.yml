@@ -1,0 +1,351 @@
+Categories:
+  - Connectivity
+  - Internet
+License: Apache-2.0
+WebSite: https://www.freerdp.com/
+SourceCode: https://github.com/FreeRDP/FreeRDP
+IssueTracker: https://github.com/FreeRDP/FreeRDP/issues
+Changelog: https://github.com/FreeRDP/FreeRDP/blob/HEAD/ChangeLog
+
+AutoName: aFreeRDP
+Description: |-
+  <i>FreeRDP</i> is a free implementation of the Remote Desktop Protocol (RDP),
+  released under the Apache license. Enjoy the freedom of using your software
+  wherever you want, the way you want it, in a world where interoperability can
+  finally liberate your computing experience.
+
+  You can simply use your Android device to start all your applications like Word,
+  Outlook, Adobe Photoshop, games or any other installed application.
+
+  <i>aFreeRDP</i> supports all operating systems that support Terminal Services
+  respectively Remote Desktop Services out of the box.
+
+RepoType: git
+Repo: https://github.com/FreeRDP/FreeRDP.git
+
+Builds:
+  - versionName: 2.0.0-rc0
+    versionCode: 10
+    commit: 2.0.0-rc0
+    subdir: client/Android/Studio/aFreeRDP
+    patch:
+      - 2.0.0-rc0-gcc-sysroot.diff
+    gradle:
+      - yes
+    prebuild:
+      - echo -e "RELEASE_STORE_FILE=\nRELEASE_KEY_ALIAS=" >>../gradle.properties
+      - cd ../../../../scripts
+      - sed -i -e 's/OPENSSL_TAG=OpenSSL_1_1_0[a-f]/OPENSSL_TAG=OpenSSL_1_1_0g/' -e
+        's/WITH_OPENH264=0/WITH_OPENH264=1/' android-build-*.conf
+      - sed -i -e 's/make/make USE_ASM=no/' android-build-openh264.sh
+    build:
+      - cd ../../../../scripts
+      - ./android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --conf android-build-32.conf
+      - ./android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --conf android-build-64.conf
+    ndk: r12b
+
+  - versionName: 2.0.0-rc1
+    versionCode: 11
+    commit: 2.0.0-rc1
+    subdir: client/Android/Studio/aFreeRDP
+    patch:
+      - 2.0.0-rc0-gcc-sysroot.diff
+    gradle:
+      - yes
+    prebuild:
+      - echo -e "RELEASE_STORE_FILE=\nRELEASE_KEY_ALIAS=" >>../gradle.properties
+      - cd ../../../../scripts
+      - sed -i -e 's/OPENSSL_TAG=OpenSSL_1_1_0[a-f]/OPENSSL_TAG=OpenSSL_1_1_0g/' -e
+        's/WITH_OPENH264=0/WITH_OPENH264=1/' android-build-*.conf
+      - sed -i -e 's/make/make USE_ASM=no/' android-build-openh264.sh
+    build:
+      - cd ../../../../scripts
+      - ./android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --conf android-build-32.conf
+      - ./android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --conf android-build-64.conf
+    ndk: r12b
+
+  - versionName: 2.0.0-rc2
+    versionCode: 12
+    commit: 2.0.0-rc2
+    subdir: client/Android/Studio/aFreeRDP
+    patch:
+      - 2.0.0-rc0-gcc-sysroot.diff
+    gradle:
+      - yes
+    prebuild:
+      - echo -e "RELEASE_STORE_FILE=\nRELEASE_KEY_ALIAS=" >>../gradle.properties
+      - cd ../../../../scripts
+      - sed -i -e 's/OPENSSL_TAG=OpenSSL_1_1_0[a-g]/OPENSSL_TAG=OpenSSL_1_1_0h/' -e
+        's/WITH_OPENH264=0/WITH_OPENH264=1/' android-build-*.conf
+      - sed -i -e 's/make/make USE_ASM=no/' android-build-openh264.sh
+    build:
+      - cd ../../../../scripts
+      - ./android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --conf android-build-32.conf
+      - ./android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --conf android-build-64.conf
+    ndk: r12b
+
+  - versionName: 2.0.0-rc4
+    versionCode: 14
+    commit: 2.0.0-rc4
+    subdir: client/Android/Studio/aFreeRDP
+    gradle:
+      - yes
+    prebuild:
+      - echo -e "RELEASE_STORE_FILE=\nRELEASE_KEY_ALIAS=" >>../gradle.properties
+      - cd ../../../../scripts
+      - sed -i -e 's/OPENSSL_TAG=OpenSSL_1_1_0[a-h]/OPENSSL_TAG=OpenSSL_1_1_0i/' -e
+        's/WITH_OPENH264=0/WITH_OPENH264=1/' android-build-*.conf
+      - sed -i -e 's/make/make USE_ASM=no/' android-build-openh264.sh
+    build:
+      - cd ../../../../scripts
+      - ./android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --conf android-build-32.conf
+      - ./android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --conf android-build-64.conf
+    ndk: r12b
+
+  - versionName: 2.2.0
+    versionCode: 19
+    commit: 2.2.0
+    subdir: client/Android/Studio/aFreeRDP
+    patch:
+      - openh264-ndk.patch
+    gradle:
+      - yes
+    prebuild:
+      - $$SDK$$/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
+      - pushd ../../../../scripts
+      - sed -i -e 's/OPENSSL_TAG=OpenSSL_1_1_[0-1][a-h]/OPENSSL_TAG=OpenSSL_1_1_1h/'
+        -e 's/WITH_OPENH264=0/WITH_OPENH264=1/' -e 's/NDK_TARGET=14/NDK_TARGET=21/'
+        android-build-*.conf
+    build:
+      - pushd ../../../../scripts
+      - export ANDROID_NDK=$$NDK$$
+      - export ANDROID_SDK=$$SDK$$
+      - export ANDROID_NDK_OPENH264=$$NDK$$/../*r15c
+      - ./android-build-freerdp.sh --conf android-build-32.conf
+      - ./android-build-freerdp.sh --conf android-build-64.conf
+      - popd
+    ndk: r21d
+
+  - versionName: 2.3.1
+    versionCode: 21
+    commit: 2.3.1
+    subdir: client/Android/Studio/aFreeRDP
+    gradle:
+      - yes
+    prebuild:
+      - $$SDK$$/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
+      - pushd ../../../../scripts
+      - sed -i -e 's/OPENSSL_TAG=OpenSSL_1_1_[0-1][a-h]/OPENSSL_TAG=OpenSSL_1_1_1j/'
+        -e 's/WITH_OPENH264=0/WITH_OPENH264=1/' -e 's/NDK_TARGET=14/NDK_TARGET=21/'
+        android-build-*.conf
+    build:
+      - pushd ../../../../scripts
+      - export ANDROID_NDK=$$NDK$$
+      - export ANDROID_SDK=$$SDK$$
+      - export ANDROID_NDK_OPENH264=$$NDK$$/../*r15c
+      - ./android-build-freerdp.sh --conf android-build-32.conf
+      - ./android-build-freerdp.sh --conf android-build-64.conf
+      - popd
+    ndk: r21d
+
+  - versionName: 2.3.2
+    versionCode: 22
+    commit: 2.3.2
+    subdir: client/Android/Studio/aFreeRDP
+    gradle:
+      - yes
+    prebuild:
+      - $$SDK$$/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
+      - pushd ../../../../scripts
+      - sed -i -e 's/OPENSSL_TAG=OpenSSL_1_1_[0-1][a-h]/OPENSSL_TAG=OpenSSL_1_1_1j/'
+        -e 's/WITH_OPENH264=0/WITH_OPENH264=1/' -e 's/NDK_TARGET=14/NDK_TARGET=21/'
+        android-build-*.conf
+    build:
+      - pushd ../../../../scripts
+      - export ANDROID_NDK=$$NDK$$
+      - export ANDROID_SDK=$$SDK$$
+      - export ANDROID_NDK_OPENH264=$$NDK$$/../*r15c
+      - ./android-build-freerdp.sh --conf android-build-32.conf
+      - ./android-build-freerdp.sh --conf android-build-64.conf
+      - popd
+    ndk: r21e
+
+  - versionName: 2.4.0
+    versionCode: 23
+    commit: 2.4.0
+    subdir: client/Android/Studio/aFreeRDP
+    gradle:
+      - yes
+    build:
+      - $$SDK$$/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
+      - sed -i -e 's/WITH_OPENH264=1/WITH_OPENH264=0/' ../../../../scripts/android-build-release.conf
+      - ../../../../scripts/android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --conf
+        ../../../../scripts/android-build-release.conf
+      - sed -i '/VERSION_CODE/s/22/23/' ../build.gradle
+    ndk: r21e
+
+  - versionName: 2.11.0
+    versionCode: 2011000
+    commit: 1384b3c33b9bd7599633cc54bf20cf20ec6be83c
+    subdir: client/Android/Studio/aFreeRDP
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config wget
+    gradle:
+      - yes
+    rm:
+      - client/Mac
+      - client/Sample
+      - client/Wayland
+      - client/Windows
+      - client/X11
+      - client/iOS
+    prebuild:
+      - sed -i -e '/androidGitVersion {/a format "%tag%"' build.gradle
+      - sed -i -e '/<activity-alias/a android:exported="true"' {.,../freeRDPCore}/src/main/AndroidManifest.xml
+    build:
+      - cd ../../../..
+      - sdkmanager 'cmake;3.18.1' 'ndk;15.2.4203891'
+      - scripts/android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --openh264-ndk
+        $$SDK$$/ndk/15.2.4203891 --conf scripts/android-build-release.conf
+    ndk: r25c
+
+  - versionName: 3.5.1
+    versionCode: 3005001
+    commit: eda5c99686e15327f2f37b9cadf307e852b96adf
+    subdir: client/Android/Studio/aFreeRDP
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config wget file libncurses5
+    gradle:
+      - yes
+    rm:
+      - client/Mac
+      - client/Wayland
+      - client/Windows
+      - client/X11
+      - client/iOS
+    prebuild:
+      - sed -i -e '/androidGitVersion {/a format "%tag%"' build.gradle
+      - sed -i -e '/hasProperty/,+2d' -e '/println/d' ../build.gradle
+      - sed -i -e 's/wget/wget -q/' ../../../../scripts/android-build-common.sh
+    build:
+      - cd ../../../..
+      - sdkmanager 'cmake;3.18.1' 'ndk;15.2.4203891'
+      - scripts/android-build-freerdp.sh --ndk $$NDK$$ --sdk $$SDK$$ --openh264 --openh264-ndk
+        $$SDK$$/ndk/15.2.4203891 --release
+    ndk: r25c
+
+  - versionName: 3.14.0
+    versionCode: 3014000
+    commit: cd0a17f8607ec7ed310d39aa48ac9a5caf640592
+    subdir: client/Android/Studio/aFreeRDP
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config file libncurses5 nasm
+    gradle:
+      - yes
+    rm:
+      - client/Mac
+      - client/Wayland
+      - client/Windows
+      - client/X11
+      - client/iOS
+    prebuild:
+      - sed -i -e "/hasProperty('RELEASE/,+2d" -e '/println/d' ../build.gradle
+      - sed -i -e 's/versionCode =.*/versionCode = $$VERCODE$$/' -e 's/versionName
+        =.*/versionName = "$$VERSION$$"/' build.gradle
+      - sdkmanager 'cmake;3.22.1'
+    build:
+      - cd ../../../..
+      - sed -i -e 's/OPENSSL_TAG=.*/OPENSSL_TAG=OpenSSL_1_1_1w/' -e 's/OPENSSL_HASH=.*/OPENSSL_HASH=cf3098950cb4d853ad95c0841f1f9c6d3dc102dccfcacd521d93925208b76ac8/'
+        scripts/android-build-release.conf
+      - scripts/android-build-freerdp.sh --conf scripts/android-build-release.conf
+    ndk: 27.2.12479018
+
+  - versionName: 3.14.1
+    versionCode: 3014010
+    commit: 4019dcd4097d550d02dd6b70ee88b6a1189be26c
+    subdir: client/Android/Studio/aFreeRDP
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config file libncurses5 nasm
+    gradle:
+      - yes
+    rm:
+      - client/Mac
+      - client/Wayland
+      - client/Windows
+      - client/X11
+      - client/iOS
+    prebuild:
+      - sed -i -e "/hasProperty('RELEASE/,+2d" -e '/println/d' ../build.gradle
+      - sed -i -e 's/versionCode =.*/versionCode = $$VERCODE$$/' -e 's/versionName
+        =.*/versionName = "$$VERSION$$"/' build.gradle
+      - sdkmanager 'cmake;3.22.1'
+    build:
+      - cd ../../../..
+      - sed -i -e 's/OPENSSL_TAG=.*/OPENSSL_TAG=OpenSSL_1_1_1w/' -e 's/OPENSSL_HASH=.*/OPENSSL_HASH=cf3098950cb4d853ad95c0841f1f9c6d3dc102dccfcacd521d93925208b76ac8/'
+        scripts/android-build-release.conf
+      - scripts/android-build-freerdp.sh --conf scripts/android-build-release.conf
+    ndk: 27.2.12479018
+
+  - versionName: 3.17.2
+    versionCode: 3017002
+    commit: 955ad49545919c35ed731bc7716b26ddf888833a
+    subdir: client/Android/Studio/aFreeRDP
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential file libncurses5 make nasm pkg-config
+    gradle:
+      - yes
+    rm:
+      - client/Mac
+      - client/Wayland
+      - client/Windows
+      - client/X11
+      - client/iOS
+    prebuild:
+      - sed -i -e "/hasProperty('RELEASE/,+2d" -e '/println/d' -e 's/8.13.0/8.11.1/'
+        ../build.gradle
+      - sed -i -e 's/versionCode =.*/versionCode = $$VERCODE$$/' -e 's/versionName
+        =.*/versionName = "$$VERSION$$"/' build.gradle
+      - sdkmanager 'cmake;3.31.6'
+    build:
+      - cd ../../../..
+      - sed -i -e 's/OPENSSL_TAG=.*/OPENSSL_TAG=OpenSSL_1_1_1w/' -e "s/OPENSSL_HASH=.*/OPENSSL_HASH=cf3098950cb4d853ad95c0841f1f9c6d3dc102dccfcacd521d93925208b76ac8/"
+        scripts/android-build-release.conf
+      - scripts/android-build-freerdp.sh --conf scripts/android-build-release.conf
+    ndk: 29.0.13113456
+
+  - versionName: 3.18.0
+    versionCode: 3018000
+    commit: 11ed2c65fe1f50f8714e51be5bcb2655cd8ba31f
+    subdir: client/Android/Studio/aFreeRDP
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential file libncurses5 make nasm pkg-config
+    gradle:
+      - yes
+    rm:
+      - client/Mac
+      - client/Wayland
+      - client/Windows
+      - client/X11
+      - client/iOS
+    prebuild:
+      - sed -i -e "/hasProperty('RELEASE/,+2d" -e '/println/d' ../build.gradle
+      - sed -i -e 's/versionCode =.*/versionCode = $$VERCODE$$/' -e 's/versionName
+        =.*/versionName = "$$VERSION$$"/' build.gradle
+      - sdkmanager 'cmake;3.31.6'
+    build:
+      - cd ../../../..
+      - sed -i -e 's/OPENSSL_TAG=.*/OPENSSL_TAG=OpenSSL_1_1_1w/' -e "s/OPENSSL_HASH=.*/OPENSSL_HASH=cf3098950cb4d853ad95c0841f1f9c6d3dc102dccfcacd521d93925208b76ac8/"
+        scripts/android-build-release.conf
+      - scripts/android-build-freerdp.sh --conf scripts/android-build-release.conf
+    ndk: 29.0.13113456
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 3.18.0
+CurrentVersionCode: 3018000

@@ -1,0 +1,21 @@
+Ads:
+  description: Ova aplikacija sadrži oglase
+DisabledAlgorithm:
+  description: Ova aplikacija ima slab sigurnosni potpis
+KnownVuln:
+  description: Ova aplikacija sadrži poznat sigurnosni problem
+NoSourceSince:
+  name: Nema izvora od
+NonFreeAdd:
+  description: Ova aplikacija promiče neslobodne dodatke
+NonFreeAssets:
+  description: Ova aplikacija sadrži neslobodne resurse
+NonFreeDep:
+  description: Ova aplikacija ovisi o drugim neslobodnim aplikacijama
+NonFreeNet:
+  description: Ova aplikacija promovira neslobodne mrežne usluge
+Tracking:
+  description: Ova aplikacija prati i javlja Vašu aktivnost
+  name: Praćenje
+NSFW:
+  description: Ova aplikacija sadrži sadržaj koji ne bi trebao biti objavljen ili vidljiv svugdje

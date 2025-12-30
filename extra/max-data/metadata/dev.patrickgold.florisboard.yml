@@ -1,0 +1,280 @@
+Categories:
+  - Keyboard & IME
+  - System
+License: Apache-2.0
+AuthorName: Patrick Goldinger
+AuthorEmail: patrick@patrickgold.dev
+AuthorWebSite: https://patrickgold.dev
+SourceCode: https://github.com/florisboard/florisboard
+IssueTracker: https://github.com/florisboard/florisboard/issues
+Translation: https://crowdin.florisboard.patrickgold.dev
+
+AutoName: FlorisBoard
+
+RepoType: git
+Repo: https://github.com/florisboard/florisboard
+
+Builds:
+  - versionName: 0.3.2
+    versionCode: 21
+    commit: v0.3.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.3
+    versionCode: 22
+    commit: v0.3.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.4
+    versionCode: 23
+    commit: v0.3.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.5
+    versionCode: 24
+    commit: v0.3.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.6
+    versionCode: 25
+    commit: v0.3.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.7
+    versionCode: 26
+    commit: v0.3.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.9
+    versionCode: 28
+    commit: v0.3.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.10
+    versionCode: 35
+    commit: v0.3.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.11
+    versionCode: 42
+    commit: v0.3.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.12
+    versionCode: 43
+    commit: v0.3.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.13
+    versionCode: 56
+    commit: v0.3.13
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless gcc g++
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/icu4c/prebuilt
+      - app/src/main/icu4c/src/android/icu/icu4j
+    build: NDK=$$NDK$$ SDK=$$SDK$$ bash src/main/icu4c/floris-cc-icu4c.sh
+    ndk: r22b
+
+  - versionName: 0.3.14
+    versionCode: 75
+    commit: 1c6a719aa55f945687560156717dbf3b249888f0
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless gcc g++
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/icu4c/prebuilt
+      - app/src/main/icu4c/src/android/icu/icu4j
+    build: NDK=$$NDK$$ SDK=$$SDK$$ bash src/main/icu4c/floris-cc-icu4c.sh
+    ndk: r22b
+
+  - versionName: 0.3.15
+    versionCode: 80
+    commit: 166734757f957e2c3ae57f7c980b8f2503e0ddb9
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless gcc g++
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/icu4c/prebuilt
+      - app/src/main/icu4c/src/android/icu/icu4j
+    build: NDK=$$NDK$$ SDK=$$SDK$$ bash src/main/icu4c/floris-cc-icu4c.sh
+    ndk: r22b
+
+  - versionName: 0.3.16
+    versionCode: 86
+    commit: b98feab9c4a284e6f543d83a7d0916cc2aceff06
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless gcc g++
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - app/src/main/icu4c/prebuilt
+      - app/src/main/icu4c/src/android/icu/icu4j
+    build: NDK=$$NDK$$ SDK=$$SDK$$ bash src/main/icu4c/floris-cc-icu4c.sh
+    ndk: r22b
+
+  - versionName: 0.4.0
+    versionCode: 98
+    commit: 80fb20885ba335947b6fd8f3449de8be11c0e13d
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    prebuild:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0
+      - source $HOME/.cargo/env
+    ndk: r26b
+
+  - versionName: 0.4.1
+    versionCode: 99
+    commit: 9cffcea246ba22572535f2dd2333da32ab1034aa
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    prebuild:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0
+      - source $HOME/.cargo/env
+    ndk: r26b
+
+  - versionName: 0.4.2
+    versionCode: 100
+    commit: ddc4f7f1ba405a57680055de78f42a45e1c6fa7c
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    prebuild:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0
+      - source $HOME/.cargo/env
+    ndk: r26b
+
+  - versionName: 0.4.3
+    versionCode: 101
+    commit: ff011209252c6b417695aee3872f70ef23af1a07
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    prebuild:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0
+      - source $HOME/.cargo/env
+    ndk: r26b
+
+  - versionName: 0.4.5
+    versionCode: 103
+    commit: a146c6f84614f8305bed2177746938ef0a1f5773
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    prebuild:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0
+      - source $HOME/.cargo/env
+    ndk: r26b
+
+  - versionName: 0.4.6
+    versionCode: 104
+    commit: bc5ed3475c40d3d1ba40a53b5063186d7228c13c
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    prebuild:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0
+      - source $HOME/.cargo/env
+    ndk: r26b
+
+  - versionName: 0.5.0
+    versionCode: 115
+    commit: 0799adc19352dbfd0475b28ce9270666a474ff39
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    prebuild:
+      - sdkmanager 'cmake;4.0.2'
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0
+      - source $HOME/.cargo/env
+    ndk: r26b
+
+  - versionName: 0.5.1
+    versionCode: 116
+    commit: ab49fc5f2951cfe26fdc980f3ba5c4053f6a9967
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    prebuild:
+      - sdkmanager 'cmake;4.0.2'
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0
+      - source $HOME/.cargo/env
+    ndk: r26b
+
+  - versionName: 0.5.2
+    versionCode: 117
+    commit: 2e82060251897226c0739b9f52d1d051b02305fb
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+    prebuild:
+      - sdkmanager 'cmake;4.0.2'
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0
+      - source $HOME/.cargo/env
+    ndk: r26b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+UpdateCheckData: gradle.properties|projectVersionCode=(\d+)|.|projectVersionName=([\d.]+)
+CurrentVersion: 0.5.2
+CurrentVersionCode: 117

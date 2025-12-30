@@ -1,0 +1,1 @@
+MAXS NFC-Modul meldet Informationen über gescannte NFC-Tags und NFC-Subsysteme

@@ -1,0 +1,73 @@
+Categories:
+  - Games
+License: GPL-3.0-only
+AuthorName: J.FORESTIER
+AuthorEmail: app@palmeteo.com
+SourceCode: https://github.com/psa-jforestier/makesomenoise
+IssueTracker: https://github.com/psa-jforestier/makesomenoise/issues
+
+AutoName: Make Some Noise
+
+RepoType: git
+Repo: https://github.com/psa-jforestier/makesomenoise.git
+
+Builds:
+  - versionName: 1.2.1
+    versionCode: 121
+    commit: 1.2.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 122
+    commit: 3dfa4b133c7e1e5a6d8ffa787e7b53a74c34cc88
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.3
+    versionCode: 123
+    commit: 0b24121979eadfab4c5bddee564d6eadd2b457c0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.4
+    versionCode: 124
+    commit: 3532f9755c6d8629b9c35a8a75a270e4acd82bef
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.5
+    versionCode: 125
+    commit: 1cad99d955a4ef487e20d0cbf259aadc54ac9292
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.2.5
+CurrentVersionCode: 125

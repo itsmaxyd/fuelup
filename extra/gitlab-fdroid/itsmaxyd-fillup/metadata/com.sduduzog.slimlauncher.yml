@@ -1,0 +1,147 @@
+Categories:
+  - Launcher
+  - System
+  - Theming
+License: MIT
+SourceCode: https://github.com/sduduzog/slim-launcher
+IssueTracker: https://github.com/sduduzog/slim-launcher/issues
+
+AutoName: Slim Launcher
+Description: |-
+  Slim launcher only allows you to use fewer apps on your phone. Giving you more time to enjoy life as it was intended. Also a perfect app for a minimalist lifestyle
+
+  But this launcher comes with a twist:<ol>
+  <li>No wallpapers: Of course Slim comes with a few color themes but that's it. (This is a good thing, trust me)</li>
+  <li>Slim only allows you to use 5 apps on your mobile. Of course, you can switch and choose the ones you want but cheating slim by always replacing your choices becomes annoying.</li>
+  <li>No app icons on the home screen. You make your pick to the apps you need the most and they will be displayed by the name on the home screen.</li>
+  </ol>
+  This gives you a pretty simple theme with no sudden distractions.
+
+RepoType: git
+Repo: https://github.com/sduduzog/slim-launcher
+
+Builds:
+  - versionName: 2.2.5
+    versionCode: 27
+    commit: v2.2.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.6
+    versionCode: 28
+    commit: v2.2.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.7
+    versionCode: 29
+    commit: v2.2.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.0-beta3
+    versionCode: 33
+    commit: v2.3.0-beta3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.1
+    versionCode: 36
+    commit: v2.3.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.2
+    versionCode: 37
+    commit: v2.3.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.3
+    versionCode: 38
+    commit: v2.3.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.5
+    versionCode: 40
+    commit: v2.3.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.6
+    versionCode: 41
+    commit: v2.4.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.8
+    versionCode: 44
+    commit: v2.4.8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/play\ {/,+11d' -e '/triplet/d' build.gradle.kts
+
+  - versionName: 2.4.14
+    versionCode: 48
+    commit: v2.4.14
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/play\ {/,+11d' -e '/triplet/d' build.gradle.kts
+
+  - versionName: 2.4.16
+    versionCode: 50
+    commit: v2.4.16
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/play\ {/,+11d' -e '/triplet/d' build.gradle.kts
+
+  - versionName: 2.4.17
+    versionCode: 51
+    commit: v2.4.17
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/play\ {/,+11d' -e '/triplet/d' build.gradle.kts
+
+  - versionName: 2.4.18
+    versionCode: 52
+    commit: v2.4.18
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/play\ {/,+11d' -e '/triplet/d' build.gradle.kts
+
+  - versionName: 2.4.19
+    versionCode: 53
+    commit: v2.4.19
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/play\ {/,+11d' -e '/triplet/d' build.gradle.kts
+
+  - versionName: 2.4.20
+    versionCode: 54
+    commit: 53cfe2b51d5a8ceb49c1d1e28c8293670cbfeaf7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/play\ {/,+11d' -e '/triplet/d' build.gradle.kts
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2.4.20
+CurrentVersionCode: 54

@@ -1,0 +1,36 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App connects to Newsapi.org and Google (YouTube).
+Categories:
+  - Sports & Health
+License: GPL-2.0-or-later
+AuthorName: Shoukolate
+AuthorWebSite: https://komishouko.gq/
+SourceCode: https://github.com/gibcheesepuffs/CalorieScope
+IssueTracker: https://github.com/gibcheesepuffs/CalorieScope/issues
+
+AutoName: CalorieScope
+
+RepoType: git
+Repo: https://github.com/gibcheesepuffs/CalorieScope
+
+Builds:
+  - versionName: '1.1'
+    versionCode: 2
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.2'
+CurrentVersionCode: 3

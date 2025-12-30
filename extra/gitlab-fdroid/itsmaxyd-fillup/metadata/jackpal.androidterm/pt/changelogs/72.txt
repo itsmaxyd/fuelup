@@ -1,0 +1,5 @@
+v1.0.70.1 (apenas F-Droid) renunciou para se livrar do MD5
+
+v1.0.70 Permitir esconder Barra de Ação do Material Design
+Melhorar a pasta de texto.
+Corrigir o suporte UTF-8.

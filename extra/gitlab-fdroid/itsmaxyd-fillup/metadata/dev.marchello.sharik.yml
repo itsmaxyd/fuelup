@@ -1,0 +1,60 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: loads fronts from Google
+  Tracking:
+    en-US: reports e.g. device details to ackee.mark.vin (opt-out)
+Categories:
+  - Connectivity
+License: MIT
+AuthorName: marchellodev
+AuthorWebSite: https://marchello.cf/
+SourceCode: https://github.com/marchellodev/sharik
+IssueTracker: https://github.com/marchellodev/sharik/issues
+Changelog: https://github.com/marchellodev/sharik/releases
+
+AutoName: Sharik
+
+RepoType: git
+Repo: https://github.com/marchellodev/sharik
+
+Builds:
+  - versionName: '2.5'
+    versionCode: 10
+    commit: v2.5
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@1.22.5
+    prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 3.1.0
+    versionCode: 13
+    commit: b433cb2351d40b31bf4ede45402f34f2fa0ff18d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.0
+    rm:
+      - ios
+      - linux
+      - macos
+      - windows
+      - android/app/proguard-rules.pro
+    prebuild: sed -i -e '/signingConfig /,/proguardFiles/d' android/app/build.gradle
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+
+MaintainerNotes: NonFreeNet see https://github.com/marchellodev/sharik/issues/114
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v.*$
+UpdateCheckData: pubspec.yaml|version:\s.*\+(\d+)|.|version:\s([\d.]+)\+
+CurrentVersion: 3.1.0
+CurrentVersionCode: 13

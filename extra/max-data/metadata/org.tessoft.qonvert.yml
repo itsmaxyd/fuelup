@@ -1,0 +1,80 @@
+Categories:
+  - Science & Education
+License: GPL-3.0-only
+AuthorName: Anypodetos
+AuthorWebSite: https://lemizh.conlang.org/
+SourceCode: https://github.com/Anypodetos/qonvert
+IssueTracker: https://github.com/Anypodetos/qonvert/issues
+Changelog: https://github.com/Anypodetos/qonvert/releases
+
+AutoName: Qonvert
+
+RepoType: git
+Repo: https://github.com/Anypodetos/qonvert
+
+Builds:
+  - versionName: 1.4.0
+    versionCode: 6
+    commit: v1.4.0
+    subdir: Qonvert
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 7
+    commit: b20b781c96c2a68885b982473f29114b0429c3a3
+    subdir: Qonvert
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 8
+    commit: 28ed6feaeb5b8a2bbf0f65657092fe99843e1008
+    subdir: Qonvert
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 9
+    commit: 9cb4db7bab151d1639e7dd4c4919da138dc81ac3
+    subdir: Qonvert
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 10
+    commit: 601ba7ef128b1fda44eaebb0ad83bda7c0c5a791
+    subdir: Qonvert
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 11
+    commit: 9b1582159b3c0dae05a8abc6774a834af80afbaf
+    subdir: Qonvert
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 12
+    commit: 113ea57f6b0584acebf13bdc9de19a11dacaea41
+    subdir: Qonvert
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.8.0
+CurrentVersionCode: 12

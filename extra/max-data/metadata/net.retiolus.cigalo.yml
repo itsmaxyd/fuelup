@@ -1,0 +1,61 @@
+AntiFeatures:
+  - NSFW
+Categories:
+  - Games
+License: AGPL-3.0-only
+SourceCode: https://codeberg.org/retiolus/Cigalo
+IssueTracker: https://codeberg.org/retiolus/Cigalo/issues
+
+AutoName: Cigaló
+
+RepoType: git
+Repo: https://codeberg.org/retiolus/Cigalo.git
+Binaries: https://codeberg.org/retiolus/Cigalo/releases/download/v%v/net.retiolus.cigalo-v%v.apk
+
+Builds:
+  - versionName: 0.0.6
+    versionCode: 6
+    commit: v0.0.6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.1
+    versionCode: 8
+    commit: 399ef0d049689b9be8456e1683bc6ce2ff9bf33e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.2
+    versionCode: 9
+    commit: 56dbf10c8d9fd0cba774b939f5a0d80eb1abdb08
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.4
+    versionCode: 12
+    commit: ace36a6556e10b28f801324bb25515fbef89c6c8
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 47778e80ac39f0bc1ca249885899f003294564bd92de7f2912c6298f9a003d23
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.1.4
+CurrentVersionCode: 12

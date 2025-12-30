@@ -1,0 +1,221 @@
+Categories:
+  - Games
+License: AGPL-3.0-or-later
+AuthorName: obfusk
+AuthorEmail: flx@obfusk.net
+AuthorWebSite: https://obfusk.ch
+WebSite: https://sokobang.obfusk.dev
+SourceCode: https://github.com/obfusk/sokobang
+IssueTracker: https://github.com/obfusk/sokobang/issues
+Changelog: https://github.com/obfusk/sokobang/releases
+Donate: https://ko-fi.com/obfusk
+
+Name: Sokoban(g)
+
+RepoType: git
+Repo: https://github.com/obfusk/sokobang
+
+Builds:
+  - versionName: 0.2.2
+    versionCode: 1000202001
+    commit: v0.2.2
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential git
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y zlib1g-dev zip unzip pkg-config libffi-dev
+      - apt-get install -y libltdl-dev
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y lld-7
+      - ln -fs lld-7 /usr/bin/lld
+      - cd build/srclib/cpython
+      - ./configure --enable-loadable-sqlite-extensions
+      - make -j`nproc`
+      - make altinstall
+    output: bin/sokobang-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    srclibs:
+      - cpython@v3.7.8
+      - buildozer@1.2.0
+      - python-for-android@7a934f3
+    prebuild:
+      - python3.7 -mvenv ../../env
+      - source ../../env/bin/activate
+      - sed -r "s:#?android.sdk_path =.*:android.sdk_path = $$SDK$$:" -i buildozer.spec
+      - sed -r "s:#?android.ndk_path =.*:android.ndk_path = $$NDK$$:" -i buildozer.spec
+      - sed -r "s:#?android.accept_sdk_license =.*:android.accept_sdk_license = False:"
+        -i buildozer.spec
+      - sed -r "s:#?p4a.source_dir =.*:p4a.source_dir = $$python-for-android$$:" -i
+        buildozer.spec
+      - make _android_setup_user BUILDOZER="$$buildozer$$"
+    build:
+      - source ../../env/bin/activate
+      - make android-release-armeabi-v7a
+    ndk: r20b
+
+  - versionName: 0.2.4
+    versionCode: 1000204001
+    commit: v0.2.4
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential git
+      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y zlib1g-dev zip unzip pkg-config libffi-dev
+      - apt-get install -y libltdl-dev
+      - apt-get install -y libsqlite3-dev
+      - apt-get install -y lld-7
+      - ln -fs lld-7 /usr/bin/lld
+      - cd build/srclib/cpython
+      - ./configure --enable-loadable-sqlite-extensions
+      - make -j`nproc`
+      - make altinstall
+    output: bin/sokobang-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    srclibs:
+      - cpython@v3.7.10
+      - buildozer@1.2.0
+      - python-for-android@bf76add7a46928deffe6a098bf8f159f3288eb3c
+    prebuild:
+      - python3.7 -mvenv ../../env
+      - source ../../env/bin/activate
+      - ln -sf "$$python-for-android$$" .p4a
+      - sed -r "s:#?android.sdk_path =.*:android.sdk_path = $$SDK$$:" -i buildozer.spec
+      - sed -r "s:#?android.ndk_path =.*:android.ndk_path = $$NDK$$:" -i buildozer.spec
+      - sed -r "s:#?android.accept_sdk_license =.*:android.accept_sdk_license = False:"
+        -i buildozer.spec
+      - sed -r "s:#?p4a.source_dir =.*:p4a.source_dir = $$python-for-android$$:" -i
+        buildozer.spec
+      - make _android_setup_user BUILDOZER="$$buildozer$$"
+    build:
+      - source ../../env/bin/activate
+      - make android-release-armeabi-v7a
+    ndk: r22b
+
+  - versionName: 0.2.5
+    versionCode: 1000205001
+    commit: v0.2.5
+    sudo:
+      - apt-get update
+      - apt-get upgrade -y
+      - apt-get install -y git lsb-release wget
+      - apt-get install -y build-essential git automake
+      - apt-get install -y python3-pip python3-dev libpcre3-dev liblzma-dev
+      - apt-get install -y zlib1g-dev zip unzip pkg-config libffi-dev
+      - apt-get install -y libltdl-dev libssl-dev
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+      - apt-get remove -y libsqlite3-dev
+      - apt-get install -y lld-7
+      - ( test -e /usr/bin/lld || ln -s lld-7 /usr/bin/lld )
+      - ( test -e /bin/install || ln -s /usr/bin/install /bin/install )
+      - if ! which python3.9; then git clone build/srclib/cpython
+      - cd cpython
+      - ./configure
+      - make -j`nproc`
+      - make altinstall
+      - cd ..
+      - rm -fr cpython; fi
+      - wget -O sqlite-amalgamation-3360000.zip -- https://www.sqlite.org/2021/sqlite-amalgamation-3360000.zip
+      - printf '5c18f158a599b1e91d95c91de3aa5c5de52f986845ad0cb49dfd56b650587e55e24d469571b5b864229b870d0eaf85d78893f61ef950b95389cb41692be37f58  sqlite-amalgamation-3360000.zip\n'
+        | sha512sum -c
+      - rm -fr sqlite-amalgamation-3360000
+      - unzip sqlite-amalgamation-3360000.zip
+      - cd sqlite-amalgamation-3360000
+      - cc -shared -fPIC -ldl -lm -lpthread -o libsqlite3.so sqlite3.c
+      - mv libsqlite3.so /usr/lib/x86_64-linux-gnu/
+      - mv *.h /usr/include/
+      - cd /opt/android-sdk
+      - rm -r tools
+      - wget -O tools.zip -- https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zip
+      - printf '39aea82cd958e60ffed8f8dd9bacdce4f1fd22a2e0c97b25b348f56309dd671533109e0e39aa5ca6d0fff36dc653fb5ff270773d2ee94d6b2fab7905bd2c85a9  tools.zip\n'
+        | sha512sum -c
+      - unzip -q tools.zip
+      - chown -R vagrant .
+    output: bin/sokobang-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    srclibs:
+      - cpython@v3.9.6
+      - buildozer@1.2.0
+      - python-for-android@dc2806ee31b2316e51dfc059f5061a820543ace7
+    prebuild:
+      - ( test -e ../../env || python3.9 -mvenv ../../env )
+      - source ../../env/bin/activate
+      - ln -sf "$$python-for-android$$" .p4a
+      - sed -r "s:#?android.sdk_path =.*:android.sdk_path = $$SDK$$:" -i buildozer.spec
+      - sed -r "s:#?android.ndk_path =.*:android.ndk_path = $$NDK$$:" -i buildozer.spec
+      - sed -r "s:#?p4a.source_dir =.*:p4a.source_dir = $$python-for-android$$:" -i
+        buildozer.spec
+      - make _android_setup_user BUILDOZER="$$buildozer$$"
+    build:
+      - export PATH=/usr/local/bin:/bin:/usr/bin
+      - source ../../env/bin/activate
+      - unset PYTHONPATH PYTHONUNBUFFERED
+      - make android-release-armeabi-v7a
+    ndk: r22b
+
+  - versionName: 0.2.5
+    versionCode: 1000205002
+    commit: v0.2.5
+    sudo:
+      - apt-get update
+      - apt-get upgrade -y
+      - apt-get install -y git lsb-release wget
+      - apt-get install -y build-essential git automake
+      - apt-get install -y python3-pip python3-dev libpcre3-dev liblzma-dev
+      - apt-get install -y zlib1g-dev zip unzip pkg-config libffi-dev
+      - apt-get install -y libltdl-dev libssl-dev
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+      - apt-get remove -y libsqlite3-dev
+      - apt-get install -y lld-7
+      - ( test -e /usr/bin/lld || ln -s lld-7 /usr/bin/lld )
+      - ( test -e /bin/install || ln -s /usr/bin/install /bin/install )
+      - if ! which python3.9; then git clone build/srclib/cpython
+      - cd cpython
+      - ./configure
+      - make -j`nproc`
+      - make altinstall
+      - cd ..
+      - rm -fr cpython; fi
+      - wget -O sqlite-amalgamation-3360000.zip -- https://www.sqlite.org/2021/sqlite-amalgamation-3360000.zip
+      - printf '5c18f158a599b1e91d95c91de3aa5c5de52f986845ad0cb49dfd56b650587e55e24d469571b5b864229b870d0eaf85d78893f61ef950b95389cb41692be37f58  sqlite-amalgamation-3360000.zip\n'
+        | sha512sum -c
+      - rm -fr sqlite-amalgamation-3360000
+      - unzip sqlite-amalgamation-3360000.zip
+      - cd sqlite-amalgamation-3360000
+      - cc -shared -fPIC -ldl -lm -lpthread -o libsqlite3.so sqlite3.c
+      - mv libsqlite3.so /usr/lib/x86_64-linux-gnu/
+      - mv *.h /usr/include/
+      - cd /opt/android-sdk
+      - rm -r tools
+      - wget -O tools.zip -- https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zip
+      - printf '39aea82cd958e60ffed8f8dd9bacdce4f1fd22a2e0c97b25b348f56309dd671533109e0e39aa5ca6d0fff36dc653fb5ff270773d2ee94d6b2fab7905bd2c85a9  tools.zip\n'
+        | sha512sum -c
+      - unzip -q tools.zip
+      - chown -R vagrant .
+    output: bin/sokobang-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    srclibs:
+      - cpython@v3.9.6
+      - buildozer@1.2.0
+      - python-for-android@dc2806ee31b2316e51dfc059f5061a820543ace7
+    prebuild:
+      - ( test -e ../../env || python3.9 -mvenv ../../env )
+      - source ../../env/bin/activate
+      - ln -sf "$$python-for-android$$" .p4a
+      - sed -r "s:#?android.sdk_path =.*:android.sdk_path = $$SDK$$:" -i buildozer.spec
+      - sed -r "s:#?android.ndk_path =.*:android.ndk_path = $$NDK$$:" -i buildozer.spec
+      - sed -r "s:#?p4a.source_dir =.*:p4a.source_dir = $$python-for-android$$:" -i
+        buildozer.spec
+      - make _android_setup_user BUILDOZER="$$buildozer$$"
+    build:
+      - export PATH=/usr/local/bin:/bin:/usr/bin
+      - source ../../env/bin/activate
+      - unset PYTHONPATH PYTHONUNBUFFERED
+      - make android-release-arm64-v8a
+    ndk: r22b
+
+AllowedAPKSigningKeys:
+  - 123422400ac0a9a4ee1edb0df0ab16e2688663292d4a3d0ea4e8a8dae2e7dba3
+  - e3603f6a1c0a41cb00ee821bbc4d07032d4b2ca26d03745d4a26ebebfbc7d4fd
+
+AutoUpdateMode: None
+UpdateCheckMode: Static
+CurrentVersion: 0.2.5
+CurrentVersionCode: 1000205002

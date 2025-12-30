@@ -1,0 +1,448 @@
+Categories:
+  - Draw
+  - Graphics
+  - Science & Education
+License: GPL-2.0-or-later
+WebSite: http://tuxpaint.org
+SourceCode: https://github.com/tux4kids/Tuxpaint-Android
+IssueTracker: https://sourceforge.net/p/tuxpaint/bugs/?source=navbar
+Translation: https://tuxpaint.org/help/po/
+Changelog: https://tuxpaint.org/docs/CHANGES.php
+
+AutoName: Tux Paint
+
+RepoType: git
+Repo: https://github.com/tux4kids/Tuxpaint-Android.git
+
+Builds:
+  - versionName: 0.9.23-beta
+    versionCode: 1
+    commit: 966b358a6379e272466e7dc821f2bc469e301de5
+    extlibs:
+      - android/android-support-v4.jar
+    scandelete:
+      - jni/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 0.9.23-beta
+    versionCode: 2
+    commit: 4b5b368bfe2c471381197f275ccf9349b2b9bda2
+    extlibs:
+      - android/android-support-v4.jar
+    scandelete:
+      - jni/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 0.9.23-beta
+    versionCode: 3
+    commit: faa0708ea54a6d1e826af146bb915372d5f082f5
+    extlibs:
+      - android/android-support-v4.jar
+    scandelete:
+      - jni/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 0.9.23-beta
+    versionCode: 5
+    commit: a837c65caa395a93a839fd2b1949d7e457c184d9
+    extlibs:
+      - android/android-support-v4.jar
+    scandelete:
+      - jni/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 0.9.23-beta_6
+    versionCode: 6
+    commit: 2b37fe929211ab500ee37d90b7510ce470d06565
+    extlibs:
+      - android/android-support-v4.jar
+    scandelete:
+      - jni/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 0.9.23-beta_7
+    versionCode: 7
+    commit: 87c3b479e2b1690d8f76711dbb415cc3b659c23e
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cd jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - jni/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 0.9.23-beta_8
+    versionCode: 8
+    commit: f5cd0709c5e062ef7794f7824e489fc10b642078
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cd jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - jni/
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 0.9.23-beta_10
+    versionCode: 10
+    commit: 0.9.23-beta_10
+    subdir: app
+    gradle:
+      - yes
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - echo NDK_TOOLCHAIN_VERSION := 4.9 >> src/main/jni/Application.mk
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r14b
+
+  - versionName: 0.9.23-beta_11b2
+    versionCode: 112
+    commit: 0.9.23-beta_11b2
+    subdir: app
+    gradle:
+      - yes
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - echo NDK_TOOLCHAIN_VERSION := 4.9 >> src/main/jni/Application.mk
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r14b
+
+  - versionName: 0.9.23-beta_12
+    versionCode: 120
+    commit: 0.9.23-beta_12
+    subdir: app
+    gradle:
+      - yes
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - echo NDK_TOOLCHAIN_VERSION := 4.9 >> src/main/jni/Application.mk
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r14b
+
+  - versionName: 0.9.23
+    versionCode: 923
+    commit: 0.9.23
+    subdir: app
+    gradle:
+      - yes
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - echo NDK_TOOLCHAIN_VERSION := 4.9 >> src/main/jni/Application.mk
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r14b
+
+  - versionName: 0.9.24
+    versionCode: 924
+    commit: 0.9.24
+    subdir: app
+    gradle:
+      - yes
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.25
+    versionCode: 925
+    commit: 0.9.25
+    subdir: app
+    gradle:
+      - yes
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.25-bugfix-0
+    versionCode: 9250
+    commit: 0.9.25-bugfix-0
+    subdir: app
+    gradle:
+      - yes
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.26
+    versionCode: 9260
+    commit: ff5561b55944782cf745cbae63629c3f06fea20a
+    subdir: app
+    gradle:
+      - yes
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.27
+    versionCode: 9270
+    commit: 7171f5d27892f5130eccb44acab396f03b36d8c9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.28
+    versionCode: 9280
+    commit: ff2751c7a2b8e0937b7d43a3507c6d2237048da9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.28b
+    versionCode: 9281
+    commit: be3b8950acb81cbabd362fd6131798d3815ceb55
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.28c
+    versionCode: 9283
+    commit: 916a52be8221ab293372773373dc364c2f2f9b05
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext
+    gradle:
+      - yes
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.29
+    versionCode: 9290
+    commit: a5aa71f833e79c4f53bc23624912cab1633a1813
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext
+      - update-alternatives --auto java
+    gradle:
+      - offPlayStore
+    prebuild:
+      - mkdir -p gradle/wrapper/
+      - echo "distributionUrl=https\://services.gradle.org/distributions/gradle-7.3.3-all.zip"
+        > gradle/wrapper/gradle-wrapper.properties
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.30
+    versionCode: 9300
+    commit: 178b55e7f9a18836f8707c4afd210719a1b70e48
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext
+      - update-alternatives --auto java
+    gradle:
+      - offPlayStore
+    prebuild:
+      - mkdir -p gradle/wrapper/
+      - echo "distributionUrl=https\://services.gradle.org/distributions/gradle-7.3.3-all.zip"
+        > gradle/wrapper/gradle-wrapper.properties
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+    ndk: r19c
+
+  - versionName: 0.9.31
+    versionCode: 9310
+    commit: 97eb63188be508fd458f9e5b0d5cd90852866281
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext wget openjdk-17-jdk-headless librsvg2-bin
+        optipng imagemagick
+      - update-alternatives --auto java
+    gradle:
+      - offPlayStore
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+
+  - versionName: 0.9.32
+    versionCode: 9320
+    commit: e82b16e6e32db36017e4cfc6da030988879d1985
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext wget openjdk-17-jdk-headless librsvg2-bin
+        optipng imagemagick
+      - update-alternatives --auto java
+    gradle:
+      - offPlayStore
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+
+  - versionName: 0.9.32-1
+    versionCode: 9321
+    commit: 9e8878a043d715db591b7e989c8b24fe2c2a42f2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext wget openjdk-17-jdk-headless librsvg2-bin
+        optipng imagemagick
+      - update-alternatives --auto java
+    gradle:
+      - offPlayStore
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+
+  - versionName: 0.9.32-2
+    versionCode: 9322
+    commit: b1a71a57e06a22257ae4e4e3b9f796413ce3c3d5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext wget openjdk-17-jdk-headless librsvg2-bin
+        optipng imagemagick
+      - update-alternatives --auto java
+    gradle:
+      - offPlayStore
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+
+  - versionName: 0.9.33
+    versionCode: 9330
+    commit: c8c5bd63f46723ddee86290f7bb4d5c2a62cc1ae
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext wget librsvg2-bin optipng imagemagick
+    gradle:
+      - offPlayStore
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+
+  - versionName: 0.9.34
+    versionCode: 9340
+    commit: 7338be5d57ff534deb6aa955e7fe086a550174b9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext wget librsvg2-bin optipng imagemagick
+    gradle:
+      - offPlayStore
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+
+  - versionName: 0.9.35
+    versionCode: 9350
+    commit: 34fe3f156ad67f3354bce196e505a2266ecd5158
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make pkg-config gettext wget librsvg2-bin optipng imagemagick
+    gradle:
+      - offPlayStore
+    prebuild:
+      - cd src/main/jni/tuxpaint/
+      - ./mkzip_assets.sh
+    scandelete:
+      - app/src/main/jni/
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.9.35
+CurrentVersionCode: 9350

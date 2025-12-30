@@ -1,0 +1,210 @@
+Categories:
+  - Games
+  - Time
+License: Apache-2.0
+WebSite: https://blitz.leodesouza.net
+SourceCode: https://github.com/ldeso/blitz
+IssueTracker: https://github.com/ldeso/blitz/issues
+Changelog: https://blitz.leodesouza.net/changelog/
+
+AutoName: Blitz
+
+RepoType: git
+Repo: https://github.com/ldeso/blitz.git
+Binaries: https://github.com/ldeso/blitz/releases/download/v%v/net.leodesouza.blitz_%c.apk
+
+Builds:
+  - versionName: 1.1.3
+    versionCode: 113
+    commit: v1.1.3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 120
+    commit: 2fe3a1f89502056cf7d8e3c292302ad5905cbc8e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.9
+    versionCode: 149
+    commit: 139ab4c69158faef7b41971f8a892644d826c600
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 152
+    commit: d6196a9d39510b4d6316524e7f0af31672a8be9f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 154
+    commit: c82d72a785b1947742fc77419805ed19030ab21a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.5
+    versionCode: 165
+    commit: f832a644fc8ffbb5a2a7287ed22207e6ab6b7a0d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.5
+    versionCode: 175
+    commit: 4aa1ee16ea10322971c7fab7b170ccb21722b25b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.8
+    versionCode: 178
+    commit: 9cbc71dc3b8705571eaf5f6465a4983ca24b5e0b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 180
+    commit: 9008ba2bf4b8816fa901fa80caf369fcc22bf0b8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 181
+    commit: b24454169d71c96377493b4892826cef912259e2
+    gradle:
+      - yes
+
+  - versionName: 1.8.2
+    versionCode: 182
+    commit: 6355da71a74e44e011ae40ab87c874d492da7c9e
+    gradle:
+      - yes
+
+  - versionName: 1.8.5
+    versionCode: 185
+    commit: b6bfc1a4a60bc1ea1e12ec1380f8589200d39201
+    gradle:
+      - yes
+
+  - versionName: 1.8.6
+    versionCode: 186
+    commit: 86ea171d618b2592de51c6e02aca05be40a94f49
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfigs {/,/^    }/d' -e '/bundletool {/,/^}/d' build.gradle.kts
+
+  - versionName: 1.8.7
+    versionCode: 187
+    commit: aed3256204b05133585f7cb82d9072f9c3cc2443
+    gradle:
+      - yes
+    prebuild: sed --in-place '/^bundletool/,/^}/d' build.gradle.kts
+
+  - versionName: 1.8.8
+    versionCode: 188
+    commit: 362ddd33e2dc4627165cfe757662fb030f44670a
+    gradle:
+      - yes
+    prebuild: sed --in-place '/^bundletool/,/^}/d' build.gradle.kts
+
+  - versionName: 1.9.0
+    versionCode: 190
+    commit: 0a2c0c1c3a1e34d6805a0f3cda28529304455399
+    gradle:
+      - yes
+    prebuild: sed --in-place '/^bundletool/,/^}/d' build.gradle.kts
+
+  - versionName: 1.9.1
+    versionCode: 191
+    commit: 769c8a7ee41b912f4af19670268a3d6c60c2954c
+    gradle:
+      - yes
+    prebuild: sed --in-place '/^bundletool/,/^}/d' build.gradle.kts
+
+  - versionName: 2.0.1
+    versionCode: 201
+    commit: cb8a8c5020fb977d2e6a6d431f44329239c9c808
+    gradle:
+      - yes
+    prebuild: sed --in-place '/^bundletool/,/^}/d' build.gradle.kts
+
+  - versionName: 2.0.2
+    versionCode: 202
+    commit: 316ed413758f0a0867e0fbd5bdf91e8177a98023
+    gradle:
+      - yes
+    prebuild: sed --in-place '/^bundletool/,/^}/d' build.gradle.kts
+
+  - versionName: 2.0.3
+    versionCode: 203
+    commit: be81b39557c94572ce76a8f8018b24affdba0ad2
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    prebuild: sed --in-place '/^bundletool/,/^}/d' build.gradle.kts
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 2.0.4
+    versionCode: 204
+    commit: ed1463733b82201e8e974399690104bb1988a23a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    prebuild: sed --in-place '/^bundletool/,/^}/d' build.gradle.kts
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 2.0.5
+    versionCode: 205
+    commit: 7842b2a318742bb2c1080b13ada3fd43b67e4595
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    prebuild: sed --in-place '/^bundletool/,/^}/d' build.gradle.kts
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 2.0.6
+    versionCode: 206
+    commit: fd28dc0045443b5f2b08a0cc902ae14a19985ec6
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/^bundletool/,/^}/d' build.gradle.kts
+      - sed -i -e '/foojay/d' settings.gradle.kts
+
+AllowedAPKSigningKeys: 6d7fd2715ed21cff64086dc5fcf8820a685a793ebd07d972163d86172babba75
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.0.6
+CurrentVersionCode: 206

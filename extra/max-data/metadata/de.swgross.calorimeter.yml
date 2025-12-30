@@ -1,0 +1,225 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on openfoodfacts.org servers
+Categories:
+  - Sports & Health
+License: GPL-3.0-or-later
+AuthorName: Marco Groß (Marco Gross)
+AuthorEmail: mgross@sw-gross.de
+AuthorWebSite: https://sw-gross.de
+SourceCode: https://git.justquitstudios.de/marco/calorimeter
+
+AutoName: Calorimeter
+
+RepoType: git
+Repo: https://git.justquitstudios.de/marco/calorimeter.git
+Binaries: https://git.justquitstudios.de/marco/calorimeter/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 3
+    commit: b5e0d1953695a6f483053e30d2d3fcf4b29982d2
+    submodules: true
+    sudo:
+      - mkdir -p /home/m
+      - chown vagrant /home/m
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/m/dev/projects
+      - mkdir -p $repo
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/m/dev/projects
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+
+  - versionName: 1.0.4
+    versionCode: 4
+    commit: cfc712458fd99c41c74d6ecfef84692576384025
+    submodules: true
+    sudo:
+      - mkdir -p /home/m
+      - chown vagrant /home/m
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/m/dev/projects
+      - mkdir -p $repo
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/m/dev/projects
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+
+  - versionName: 1.0.5
+    versionCode: 5
+    commit: e1fdefe979b7af1a8a9d8747bc2c2b0b8620568f
+    submodules: true
+    sudo:
+      - mkdir -p /home/m
+      - chown vagrant /home/m
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/m/dev/projects
+      - mkdir -p $repo
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/m/dev/projects
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+
+  - versionName: 1.1.0
+    versionCode: 6
+    commit: fe3057219ff17bdc28257af2f2f9c61e700da1fe
+    submodules: true
+    sudo:
+      - mkdir -p /home/m
+      - chown vagrant /home/m
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/m/dev/projects
+      - mkdir -p $repo
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/m/dev/projects
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+
+  - versionName: 1.2.0
+    versionCode: 7
+    commit: v1.2.0
+    submodules: true
+    sudo:
+      - mkdir -p /home/m
+      - chown vagrant /home/m
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export repo=/home/m/dev/projects/apps
+      - mkdir -p $repo
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export repo=/home/m/dev/projects/apps
+      - cd ..
+      - mv de.swgross.calorimeter $repo/calorimeter
+      - pushd $repo/calorimeter
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release
+      - popd
+      - mv $repo/calorimeter de.swgross.calorimeter
+
+AllowedAPKSigningKeys: 99379801b5b331cf29436dde1d592ec6831afe55def2beb04b4c61efb4d168a3
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.2.0
+CurrentVersionCode: 7

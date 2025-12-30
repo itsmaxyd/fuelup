@@ -1,0 +1,28 @@
+Categories:
+  - Theming
+License: GPL-3.0-only
+WebSite: https://sentienhq.com/sentien-launcher/
+SourceCode: https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/sentienhq/Sentien-Launcher
+IssueTracker: https://github.com/sentienhq/Sentien-Launcher/issues
+Changelog: https://github.com/sentienhq/Sentien-Launcher/releases
+
+AutoName: Sentien Launcher
+
+RepoType: git
+Repo: https://github.com/sentienhq/Sentien-Launcher
+
+Builds:
+  - versionName: 3.11.4
+    versionCode: 165
+    commit: v3.11.4
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 3.11.4
+CurrentVersionCode: 165
+
+NoSourceSince: 3.11.4

@@ -1,0 +1,294 @@
+Categories:
+  - Multimedia
+License: MIT
+AuthorName: Diyan Iliev
+SourceCode: https://github.com/tuntorius/mightier_amp
+IssueTracker: https://github.com/tuntorius/mightier_amp/issues
+Donate: https://www.paypal.com/donate?hosted_button_id=FZWWAM4NUFRPC
+
+AutoName: Mightier Amp
+
+RepoType: git
+Repo: https://github.com/tuntorius/mightier_amp.git
+
+Builds:
+  - versionName: 0.9.0
+    versionCode: 16
+    commit: d5f3db043ad46e2e8fdd2fa08db692b8f322192f
+    patch:
+      - remove_youtube_sentry_support.diff
+      - remove_internet_permission.diff
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.5.3
+    rm:
+      - ios
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 0.9.1
+    versionCode: 17
+    commit: 1632538fbec0b8138b96750852428e48e570ae44
+    patch:
+      - remove_youtube_sentry_support_17.diff
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.10.1
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        pubspec.lock
+      - sed -i -e '/sentry_flutter/d' pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 0.9.5
+    versionCode: 24
+    commit: 8a257fb6e3d42772ed202452deacadaf68b1d2c1
+    patch:
+      - remove_youtube_sentry_support_24.diff
+      - fix_import_for_case_sensitive_filesystems.diff
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.8
+    rm:
+      - ios
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        pubspec.lock
+      - sed -i -e '/sentry_flutter/d' pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 0.9.9
+    versionCode: 28
+    commit: efe9852eb69d84f3d02a53e2a1060a109ed8bc73
+    patch:
+      - remove_youtube_sentry_support_28.diff
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.7
+    rm:
+      - ios
+      - linux
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        pubspec.lock
+      - sed -i -e '/sentry_flutter/d' pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 0.9.10
+    versionCode: 29
+    commit: 2de8826742952e27f0a2121f4f15d6eddeff3349
+    patch:
+      - remove_youtube_sentry_support_29.diff
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.7
+    rm:
+      - ios
+      - linux
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        pubspec.lock
+      - sed -i -e '/sentry_flutter/d' pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 0.9.11
+    versionCode: 30
+    commit: a3a64a5dd17c4b4f941de2d47c437324d7555ebc
+    patch:
+      - remove_youtube_sentry_support_29.diff
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.7
+    rm:
+      - ios
+      - linux
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        pubspec.lock
+      - sed -i -e '/sentry_flutter/d' pubspec.yaml
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 1.0.6
+    versionCode: 49
+    commit: 238102cda9cce24bb8e4aa2dcb4697660d7986fc
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.6
+    rm:
+      - ios
+      - linux
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        -e '/^  youtube_explode_dart:/,/^    version:/d' pubspec.lock
+      - sed -i -e '/sentry_flutter/d' -e '/youtube_explode_dart/d' pubspec.yaml
+      - sed -i -e '/startsWith("yt:")/,/^    }/s/^      .*//g' -e '/YoutubeSource/d'
+        lib/audio/online_sources/sourceResolver.dart
+      - sed -i -e '/void addFromYoutubeSource/,/^  }/d' -e '/addFromYoutubeSource/d'
+        -e '/YoutubeSource/d' lib/audio/tracksPage.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 1.0.7
+    versionCode: 57
+    commit: 2413d13a91a04d64855ea3ca3ba3e14678d8c98f
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.6
+    rm:
+      - ios
+      - linux
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        -e '/^  youtube_explode_dart:/,/^    version:/d' pubspec.lock
+      - sed -i -e '/sentry_flutter/d' -e '/youtube_explode_dart/d' pubspec.yaml
+      - sed -i -e '/startsWith("yt:")/,/^    }/s/^      .*//g' -e '/YoutubeSource/d'
+        lib/audio/online_sources/sourceResolver.dart
+      - sed -i -e '/void addFromYoutubeSource/,/^  }/d' -e '/addFromYoutubeSource/d'
+        -e '/YoutubeSource/d' lib/audio/tracksPage.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 1.0.10
+    versionCode: 61
+    commit: 66e91bfd04fdcd40ec89ff307f26c2612c7b2531
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.6
+    rm:
+      - ios
+      - linux
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        -e '/^  youtube_explode_dart:/,/^    version:/d' pubspec.lock
+      - sed -i -e '/sentry_flutter/d' -e '/youtube_explode_dart/d' pubspec.yaml
+      - sed -i -e '/startsWith("yt:")/,/^    }/s/^      .*//g' -e '/YoutubeSource/d'
+        lib/audio/online_sources/sourceResolver.dart
+      - sed -i -e '/void addFromYoutubeSource/,/^  }/d' -e '/addFromYoutubeSource/d'
+        -e '/YoutubeSource/d' lib/audio/tracksPage.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 1.0.15
+    versionCode: 65
+    commit: 5ed349dc3b69d18543e355c5a5a44553c7b904bf
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.6
+    rm:
+      - ios
+      - linux
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        -e '/^  youtube_explode_dart:/,/^    version:/d' pubspec.lock
+      - sed -i -e '/sentry_flutter/d' -e '/youtube_explode_dart/d' pubspec.yaml
+      - sed -i -e '/startsWith("yt:")/,/^    }/s/^      .*//g' -e '/YoutubeSource/d'
+        lib/audio/online_sources/sourceResolver.dart
+      - sed -i -e '/void addFromYoutubeSource/,/^  }/d' -e '/addFromYoutubeSource/d'
+        -e '/YoutubeSource/d' lib/audio/tracksPage.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+  - versionName: 1.0.16
+    versionCode: 66
+    commit: 52bf2e634f588c2d5ddcb4062c1d298767a77599
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.6
+    rm:
+      - ios
+      - linux
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/INTERNET/d' -e '/ACCESS_NETWORK_STATE/d' android/app/src/main/AndroidManifest.xml
+      - sed -i -e '/^  sentry:/,/^    version:/d' -e '/^  sentry_flutter:/,/^    version:/d'
+        -e '/^  youtube_explode_dart:/,/^    version:/d' pubspec.lock
+      - sed -i -e '/sentry_flutter/d' -e '/youtube_explode_dart/d' pubspec.yaml
+      - sed -i -e '/startsWith("yt:")/,/^    }/s/^      .*//g' -e '/YoutubeSource/d'
+        lib/audio/online_sources/sourceResolver.dart
+      - sed -i -e '/void addFromYoutubeSource/,/^  }/d' -e '/addFromYoutubeSource/d'
+        -e '/YoutubeSource/d' lib/audio/tracksPage.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+    ndk: r21
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.0.16
+CurrentVersionCode: 66

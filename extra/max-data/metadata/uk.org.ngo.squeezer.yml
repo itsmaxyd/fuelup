@@ -1,0 +1,214 @@
+Categories:
+  - Multimedia
+License: Apache-2.0
+AuthorName: Kurt Aaholst
+WebSite: https://kaaholst.github.io/android-squeezer
+SourceCode: https://github.com/kaaholst/android-squeezer
+IssueTracker: https://github.com/kaaholst/android-squeezer/issues
+Changelog: https://kaaholst.github.io/android-squeezer/changelog
+
+AutoName: Squeezer
+
+RepoType: git
+Repo: https://github.com/kaaholst/android-squeezer.git
+
+Builds:
+  - versionName: '0.9'
+    versionCode: 12
+    commit: '0.9'
+    srclibs:
+      - NoAnalytics@158a4a
+    rm:
+      - libs/libGoogleAnalytics.jar
+    prebuild:
+      - echo "android.library.reference.1=$$NoAnalytics$$" >> project.properties
+      - rm -rf market
+
+  - versionName: 0.9.1
+    versionCode: 13
+    commit: 0.9.1
+    srclibs:
+      - NoAnalytics@158a4a
+    rm:
+      - libs/libGoogleAnalytics.jar
+    prebuild:
+      - echo "android.library.reference.1=$$NoAnalytics$$" >> project.properties
+      - rm -rf market
+      - sed -i '/proguard/d' project.properties
+
+  - versionName: 2.2.2
+    versionCode: 91
+    commit: 2.2.2
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.2.3
+    versionCode: 93
+    commit: 2.2.3
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.2.4
+    versionCode: 97
+    commit: 2.2.4
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.2.5
+    versionCode: 100
+    commit: 2.2.5
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.2.6
+    versionCode: 101
+    commit: 2.2.6
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.2.7
+    versionCode: 104
+    commit: 85c19a40adf571ff44881e37a7448fda81624ea0
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.2.8
+    versionCode: 110
+    commit: 4be630900331c8c68fe0d7594de98e49a0182bcf
+    subdir: Squeezer
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.2.9
+    versionCode: 111
+    commit: d4c31f8108dc804d4910af865fe6be225edbcf97
+    subdir: Squeezer
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.0
+    versionCode: 117
+    commit: 50071d9c37ea5ff0660888f5bc3bbaad5791011f
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.3.1
+    versionCode: 119
+    commit: b5186af82fee740a152d624264bd1d4052816346
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.3.2
+    versionCode: 123
+    commit: 038e825aaf32fc1bd9c7a501daed2c71072ac0bd
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.3.3
+    versionCode: 125
+    commit: 9c7254459ab05f186c47f38c4758be7c37ba9647
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.3.4
+    versionCode: 128
+    commit: 2413d2121e253be4af9b6e89ed2de140c6ccd4bf
+    subdir: Squeezer
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.3.5
+    versionCode: 129
+    commit: 734f6055469e30ac8cac7785ad55189fa45a5efe
+    subdir: Squeezer
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.3.6
+    versionCode: 132
+    commit: db00b11c6768e806b8c3184745c2c0f6c4b44a59
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.3.7
+    versionCode: 136
+    commit: 25c281b61bab3224c84cb6af528a2a0f002b5cba
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.3.8
+    versionCode: 141
+    commit: 79b257778557bb3222173953376045e4b8bbb827
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.3.9
+    versionCode: 144
+    commit: 0976d28906324e129554ad6468445f7c19b31a97
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.3.10
+    versionCode: 148
+    commit: 8ed7c1f82541e56a3754e60f7313c3a852d4a5d6
+    subdir: Squeezer
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.12.1/8.11.1/' ../build.gradle
+
+  - versionName: 2.3.11
+    versionCode: 150
+    commit: 069e6c00e5019dbb503427cad29f1be28e0ba5bc
+    subdir: Squeezer
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.12.1/8.11.1/' ../build.gradle
+
+  - versionName: 2.3.12
+    versionCode: 152
+    commit: 27e73790aa2cc593ff857bec6b273d183ee4aa21
+    subdir: Squeezer
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 154
+    commit: 39272fd92225f2e589153961d720d7613729e998
+    subdir: Squeezer
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.4.0
+CurrentVersionCode: 154

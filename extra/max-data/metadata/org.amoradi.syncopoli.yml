@@ -1,0 +1,235 @@
+Categories:
+  - Cloud Storage & File Sync
+  - Connectivity
+License: GPL-3.0-only
+WebSite: https://gitlab.com/fengshaun/syncopoli
+SourceCode: https://gitlab.com/fengshaun/syncopoli
+IssueTracker: https://gitlab.com/fengshaun/syncopoli/issues
+Changelog: https://gitlab.com/fengshaun/syncopoli/blob/HEAD/CHANGELOG
+
+AutoName: Syncopoli
+
+RepoType: git
+Repo: https://gitlab.com/fengshaun/syncopoli.git
+
+Builds:
+  - versionName: v0.1
+    versionCode: 1
+    commit: v0.1-nobin
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.1.1
+    versionCode: 2
+    commit: v0.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.2
+    versionCode: 3
+    commit: v0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.3
+    versionCode: 4
+    commit: v0.3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/distributionUrl/s/2.10-all/2.14.1-bin/g' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: v0.3.1
+    versionCode: 5
+    commit: v0.3.1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/distributionUrl/s/2.10-all/2.14.1-bin/g' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: v0.3.2
+    versionCode: 6
+    commit: v0.3.2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/distributionUrl/s/2.10-all/2.14.1-bin/g' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: v0.3.3
+    versionCode: 7
+    commit: v0.3.3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/distributionUrl/s/2.14.1-all/3.3-bin/g' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: v0.4
+    versionCode: 8
+    commit: v0.4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15b
+
+  - versionName: v0.4.1
+    versionCode: 9
+    commit: v0.4.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15b
+
+  - versionName: v0.4.2
+    versionCode: 10
+    commit: v0.4.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.4.3
+    versionCode: 11
+    commit: v0.4.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.4.4
+    versionCode: 12
+    commit: v0.4.4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.4.5.4
+    versionCode: 17
+    commit: v0.4.5.4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.4.5.5
+    versionCode: 18
+    commit: v0.4.5.5
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.4.6
+    versionCode: 19
+    commit: v0.4.6
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.5
+    versionCode: 20
+    commit: v0.5
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.5.1
+    versionCode: 21
+    commit: v0.5.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.5.2
+    versionCode: 22
+    commit: v0.5.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.5.3
+    versionCode: 23
+    commit: v0.5.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.6
+    versionCode: 24
+    commit: v0.6
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    buildjni:
+      - no
+    ndk: r15c
+
+  - versionName: v0.7.1
+    versionCode: 25
+    commit: fb33344a7d81345f6814998828f4a0a0e68c004c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions {abortOnError false}' build.gradle
+    ndk: r25
+
+  - versionName: v0.7.2
+    versionCode: 26
+    commit: 2f514376b32cdc080af952dd2daa12cfa5c96cc4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions {abortOnError false}' build.gradle
+    ndk: r25
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v0.7.2
+CurrentVersionCode: 26

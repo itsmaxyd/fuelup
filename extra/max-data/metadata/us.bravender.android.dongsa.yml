@@ -1,0 +1,32 @@
+Categories:
+  - Science & Education
+License: AGPL-3.0-only
+AuthorName: Dan Bravender
+AuthorWebSite: https://dan.bravender.net/
+WebSite: https://dongsa.net/
+SourceCode: https://github.com/dbravender/korean_conjugation
+IssueTracker: https://github.com/dbravender/korean_conjugation/issues
+
+AutoName: Dongsa
+Description: Shows Korean verb conjugations for learners of Korean.
+
+Builds:
+  - versionName: '2.0'
+    versionCode: 6
+    commit: android-2.0
+    subdir: android
+    init: rm -f build.xml
+
+  - versionName: '2.2'
+    versionCode: 8
+    commit: android-2.2
+    subdir: android
+    init: rm -f build.xml
+    target: android-8
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '2.2'
+CurrentVersionCode: 8
+
+NoSourceSince: '2.2'

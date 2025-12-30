@@ -1,0 +1,263 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - App Manager
+  - System
+License: Apache-2.0
+AuthorName: lihenggui
+SourceCode: https://github.com/lihenggui/blocker
+IssueTracker: https://github.com/lihenggui/blocker/issues
+Changelog: https://github.com/lihenggui/blocker/releases
+
+AutoName: Blocker
+
+RepoType: git
+Repo: https://github.com/lihenggui/blocker.git
+
+Builds:
+  - versionName: 1.2.64-alpha
+    versionCode: 1264
+    commit: 1468006808f3d6a026e935cabf057e2f58757038
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - basic
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+
+  - versionName: 2.0.2254
+    versionCode: 2254
+    commit: a82f1a90cb47ac7a75d30c2684985f789778b626
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.2390
+    versionCode: 2390
+    commit: 63b3b03917c4f2f39764fa87c8f0702917742bb1
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.2485
+    versionCode: 2485
+    commit: 3bbc5c7a053879bad960947277022cb6cfebd303
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.2914-fdroid
+    versionCode: 2914
+    commit: a7f648f83437b7e8d26b213e88b4631b77f10705
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.2942-fdroid
+    versionCode: 2942
+    commit: 9c79e6a5b304c549f640229cd245f40c9a360d98
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.2976-fdroid
+    versionCode: 2976
+    commit: 52ecea56dd7ca28efb9c96c7a859cb9e36e4b956
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.3058-fdroid
+    versionCode: 3058
+    commit: 6d69fdf35ef2a11bdcb153e7c33bb9e43c49be83
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.3111-fdroid
+    versionCode: 3111
+    commit: 83b96f47878414b2fc893eac18e85a1c4efa6254
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.3361-fdroid
+    versionCode: 3361
+    commit: fee0f6904c0bd6508c5bde1c5c36308d98d2d8e3
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.3511
+    versionCode: 3511
+    commit: d7f0081a94079f4e3dd995a953beddc2e24fee0a
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.3607
+    versionCode: 3607
+    commit: 1de30f0228643eae26ddc5bafde65b26ec6be5f7
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.3662-fdroid
+    versionCode: 3662
+    commit: 5d9fdc60b34efb65674d7bc7b8b69bf310e0e678
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.3961-fdroid
+    versionCode: 3961
+    commit: d077bec574a6e3369b460508a04af650be0bf64f
+    subdir: app-compose
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.4044-fdroid
+    versionCode: 4044
+    commit: bac737b366ac4263c03b334bf0d56077baf4f506
+    subdir: app-compose
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.4373-fdroid
+    versionCode: 4373
+    commit: 9e92011f65e2b328b8fde3f790a827d7721c4013
+    subdir: app-compose
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.4803-fdroid
+    versionCode: 4803
+    commit: 0790a45e3b4e04794baadc103672f3c5d4881d20
+    subdir: app-compose
+    submodules: true
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.4839-fdroid
+    versionCode: 4839
+    commit: 48532079843170f7e18694496bcec3d421dc6ebd
+    subdir: app-compose
+    submodules: true
+    gradle:
+      - foss
+    scandelete:
+      - build-logic
+
+  - versionName: 2.0.5839
+    versionCode: 5839
+    commit: 8065a06ee22ff993201832db602b5020c1a42ea4
+    subdir: app-compose
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - build-logic/convention/src/main/kotlin/AndroidApplicationFirebaseConventionPlugin.kt
+    prebuild:
+      - sed -i -e '/signingConfig =/,+9d' build.gradle.kts
+      - sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/libs.firebase/d' -e '/register("firebase")/,+3d' ../build-logic/convention/build.gradle.kts
+    scandelete:
+      - build-logic
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: '|v2.0.(\d+)||v(.+)'
+CurrentVersion: 2.0.5839
+CurrentVersionCode: 5839

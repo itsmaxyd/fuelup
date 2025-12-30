@@ -1,0 +1,50 @@
+Categories:
+  - Games
+License: GPL-2.0-only
+SourceCode: https://github.com/tube42/candymem
+IssueTracker: https://github.com/tube42/candymem/issues
+
+AutoName: Candy Memory
+Description: |-
+  Candy Memory is a casual "match two" memory game for children and adults. It was
+  created during #CANDYJAM, because everybody loves candy (well, maybe not some
+  lawyers).
+
+RepoType: git
+Repo: https://github.com/tube42/candymem
+
+Builds:
+  - versionName: '1.4'
+    versionCode: 14
+    commit: v1.4
+    submodules: true
+    build: ant setup
+
+  - versionName: 1.6.0
+    versionCode: 16
+    commit: v1.6.0
+    subdir: android
+    submodules: true
+    gradle:
+      - yes
+    scandelete:
+      - android/libs
+
+  - versionName: 1.7.0
+    versionCode: 17
+    commit: v1.7.0
+    subdir: android
+    submodules: true
+    gradle:
+      - yes
+    scandelete:
+      - android/libs
+
+MaintainerNotes: |-
+  libgdx.so and libgdx-freetype.so binaries are extracted from
+  com.badlogicgames.gdx:gdx-platform JARs that come from Maven Central.
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.7.0
+CurrentVersionCode: 17

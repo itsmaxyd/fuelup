@@ -1,0 +1,297 @@
+Categories:
+  - Connectivity
+  - Internet
+License: GPL-3.0-only
+AuthorName: Bartu Özen
+AuthorEmail: mail@bartuzen.dev
+AuthorWebSite: https://bartuzen.dev
+SourceCode: https://github.com/Bartuzen/qBitController
+IssueTracker: https://github.com/Bartuzen/qBitController/issues
+Translation: https://hosted.weblate.org/engage/qbitcontroller
+Changelog: https://github.com/Bartuzen/qBitController/releases
+Donate: https://github.com/sponsors/Bartuzen
+
+AutoName: qBitController
+
+RepoType: git
+Repo: https://github.com/Bartuzen/qBitController.git
+Binaries: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v-android.apk
+
+Builds:
+  - versionName: 0.2.0
+    versionCode: 3
+    commit: b67e6bd12260f4488a1080b10e6b037fa0c605c8
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.3.0
+    versionCode: 4
+    commit: 7ca69be12ccd94a39a6217fec7da2455df380f60
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.4.0
+    versionCode: 5
+    commit: 053525c3b126fb1bcd5c68f25fcc6bd5a113db49
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.5.0
+    versionCode: 6
+    commit: 260197cf562286e6d84efd8b745b2681233888a4
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.5.1
+    versionCode: 7
+    commit: 92676f12af22f590bc2e2ddb6f18fbc2d06b1e4d
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.6.0
+    versionCode: 8
+    commit: 9359073e21153a605c4e4bef5d3ef3a38ce8f1d9
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.7.0
+    versionCode: 9
+    commit: 344721a5f092d23f6542a73fd821a1d5a4d945b7
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.7.2
+    versionCode: 11
+    commit: b887a9c52f168da7a60dd7acdd1beed526163b63
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.7.3
+    versionCode: 12
+    commit: 2eca51c4d8cefbbf0cde67dd81875e9f4504b95f
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.8.0
+    versionCode: 13
+    commit: b091a365beb88d0fff51c6217c1c86754a5d2cbc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.8.1
+    versionCode: 14
+    commit: 90cb268421b345bc4611de9cf1d68a6c4d4b389f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.8.2
+    versionCode: 15
+    commit: b7479126094bdf887c6f50dea5f2803771a644d5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.8.3
+    versionCode: 16
+    commit: ed757ab52626b8ac208511e5e0f902b69a6bca0f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.8.4
+    versionCode: 17
+    commit: d30e3c66fdfef8eb7c80c2251ac1b1aef9a0640b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 0.8.5
+    versionCode: 18
+    commit: 13b6799c32a67c9fda3f52cf19d6ac8384691996
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 1.0.0
+    versionCode: 19
+    commit: cbb78571d8266b3524526e30bb9e58f3b01a9472
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 1.1.1
+    versionCode: 21
+    commit: 7457ab0c2e6b134ae5013982351abd9760b82814
+    subdir: app
+    gradle:
+      - free
+    binary: https://github.com/Bartuzen/qBitController/releases/download/v%v/qbitcontroller-%v.apk
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+
+  - versionName: 2.0.0
+    versionCode: 22
+    commit: 32b622e417509d80163b23e092add84990f6ff24
+    subdir: composeApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i '/foojay-resolver-convention/d' ../settings.gradle.kts
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/Bartuzen/qBitController/releases/download/v$$VERSION$$/qbitcontroller-$$VERSION$$-android.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; taskset --cpu-list
+        0-5 gradle clean assembleFreeRelease; done
+
+  - versionName: 2.0.2
+    versionCode: 24
+    commit: 184ad6cacee82aaaf56d0f1ce97ae5ef4a36412a
+    subdir: composeApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i '/foojay-resolver-convention/d' ../settings.gradle.kts
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/Bartuzen/qBitController/releases/download/v$$VERSION$$/qbitcontroller-$$VERSION$$-android.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; taskset --cpu-list
+        0-5 gradle clean assembleFreeRelease; done
+
+  - versionName: 2.0.4
+    versionCode: 26
+    commit: 108d21d6cb108ab0d6053d9e12b2ed60ac587f2b
+    subdir: composeApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i '/foojay-resolver-convention/d' ../settings.gradle.kts
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/Bartuzen/qBitController/releases/download/v$$VERSION$$/qbitcontroller-$$VERSION$$-android.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; taskset --cpu-list
+        0-5 gradle clean assembleFreeRelease; done
+
+  - versionName: 2.1.0
+    versionCode: 27
+    commit: 59f4f7d042396a02700019c5e326453beb8e6590
+    subdir: composeApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i '/foojay-resolver-convention/d' ../settings.gradle.kts
+    postbuild:
+      - curl -Lo upstream.apk https://github.com/Bartuzen/qBitController/releases/download/v$$VERSION$$/qbitcontroller-$$VERSION$$-android.apk
+      - unzip -q upstream.apk -d apk
+      - export hash=$(sha256sum apk/assets/dexopt/baseline.prof)
+      - rm -rf apk upstream.apk
+      - for i in {1..10}; do unzip -q $$OUT$$ -d apk; sha256sum -c - <<< $hash &&
+        break; sha256sum apk/assets/dexopt/baseline.prof; rm -fr apk; taskset --cpu-list
+        0-5 gradle clean assembleFreeRelease; done
+
+AllowedAPKSigningKeys: 366038e51ee41078a23a37fd9212238ebad03f1de073e81c738bb6f07b114339
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: buildSrc/src/main/java/dev/bartuzen/qbitcontroller/Versions.kt|AppVersionCode
+  = (\d+)|.|AppVersion = "(.+)"
+CurrentVersion: 2.1.0
+CurrentVersionCode: 27

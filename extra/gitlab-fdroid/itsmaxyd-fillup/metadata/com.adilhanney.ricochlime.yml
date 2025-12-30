@@ -1,0 +1,3433 @@
+Categories:
+  - Games
+License: AGPL-3.0-only
+AuthorName: Adil Hanney
+SourceCode: https://github.com/adil192/ricochlime
+IssueTracker: https://github.com/adil192/ricochlime/issues
+Translation: https://github.com/adil192/ricochlime#translating
+Donate: https://github.com/sponsors/adil192
+Liberapay: adil192
+
+AutoName: Ricochlime
+
+RepoType: git
+Repo: https://github.com/adil192/ricochlime.git
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 1000301
+    commit: 08e14f6578eae7ec7fa6407568f0de20f1040c7f
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.3
+    versionCode: 1000302
+    commit: 08e14f6578eae7ec7fa6407568f0de20f1040c7f
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.3
+    versionCode: 1000303
+    commit: 08e14f6578eae7ec7fa6407568f0de20f1040c7f
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.4
+    versionCode: 1000401
+    commit: f3fcc975a305ab60cef26063522c3c67507122e8
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.4
+    versionCode: 1000402
+    commit: f3fcc975a305ab60cef26063522c3c67507122e8
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.4
+    versionCode: 1000403
+    commit: f3fcc975a305ab60cef26063522c3c67507122e8
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.5
+    versionCode: 1000501
+    commit: 6844dd36db66ac38d62adda6ce9b7526c5289b28
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.5
+    versionCode: 1000502
+    commit: 6844dd36db66ac38d62adda6ce9b7526c5289b28
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.5
+    versionCode: 1000503
+    commit: 6844dd36db66ac38d62adda6ce9b7526c5289b28
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.0.6
+    versionCode: 1000601
+    commit: 0581766c6b1d74f535c736333c0aa360024f58f8
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.0.6
+    versionCode: 1000602
+    commit: 0581766c6b1d74f535c736333c0aa360024f58f8
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.0.6
+    versionCode: 1000603
+    commit: 0581766c6b1d74f535c736333c0aa360024f58f8
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.0
+    versionCode: 1010001
+    commit: b0c0627df6ab68353c6c8e3bcc14ee6e011398e3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.0
+    versionCode: 1010002
+    commit: b0c0627df6ab68353c6c8e3bcc14ee6e011398e3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.0
+    versionCode: 1010003
+    commit: b0c0627df6ab68353c6c8e3bcc14ee6e011398e3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.1
+    versionCode: 1010101
+    commit: bf0b819ee13b975596383e0721a503a23b573ab2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.1
+    versionCode: 1010102
+    commit: bf0b819ee13b975596383e0721a503a23b573ab2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.1
+    versionCode: 1010103
+    commit: bf0b819ee13b975596383e0721a503a23b573ab2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.2
+    versionCode: 1010201
+    commit: 994692dcb0fff1fbe6ba5a9afca5cfc79ff08fbd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.2
+    versionCode: 1010202
+    commit: 994692dcb0fff1fbe6ba5a9afca5cfc79ff08fbd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.2
+    versionCode: 1010203
+    commit: 994692dcb0fff1fbe6ba5a9afca5cfc79ff08fbd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.1.3
+    versionCode: 1010301
+    commit: 7ee4021791cc5b6020471accad470bcca41c6ca0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.1.3
+    versionCode: 1010302
+    commit: 7ee4021791cc5b6020471accad470bcca41c6ca0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.1.3
+    versionCode: 1010303
+    commit: 7ee4021791cc5b6020471accad470bcca41c6ca0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.3.0
+    versionCode: 1030001
+    commit: b86bf03b516f642214e89bb4830856a9c276427a
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.3.0
+    versionCode: 1030002
+    commit: b86bf03b516f642214e89bb4830856a9c276427a
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.3.0
+    versionCode: 1030003
+    commit: b86bf03b516f642214e89bb4830856a9c276427a
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.3.1
+    versionCode: 1030101
+    commit: 265d7432501154f10c57b2d41e8ff10493433aa5
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.3.1
+    versionCode: 1030102
+    commit: 265d7432501154f10c57b2d41e8ff10493433aa5
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.3.1
+    versionCode: 1030103
+    commit: 265d7432501154f10c57b2d41e8ff10493433aa5
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.4.0
+    versionCode: 1040001
+    commit: e2fd339af4c22677ea39abfcc2bbe4a4f944719d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.4.0
+    versionCode: 1040002
+    commit: e2fd339af4c22677ea39abfcc2bbe4a4f944719d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.4.0
+    versionCode: 1040003
+    commit: e2fd339af4c22677ea39abfcc2bbe4a4f944719d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.4.2
+    versionCode: 1040201
+    commit: c982adb42f5aa3404f2d933db32a0c4de4cdf046
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.4.2
+    versionCode: 1040202
+    commit: c982adb42f5aa3404f2d933db32a0c4de4cdf046
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.4.2
+    versionCode: 1040203
+    commit: c982adb42f5aa3404f2d933db32a0c4de4cdf046
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.5.0
+    versionCode: 1050001
+    commit: 88a3820d5dac464c92af33ddb49a65650f8e6fd9
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.5.0
+    versionCode: 1050002
+    commit: 88a3820d5dac464c92af33ddb49a65650f8e6fd9
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.5.0
+    versionCode: 1050003
+    commit: 88a3820d5dac464c92af33ddb49a65650f8e6fd9
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.5.1
+    versionCode: 1050101
+    commit: 4864410f7ce78ae61056f2359164abcf3accd3ef
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.5.1
+    versionCode: 1050102
+    commit: 4864410f7ce78ae61056f2359164abcf3accd3ef
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.5.1
+    versionCode: 1050103
+    commit: 4864410f7ce78ae61056f2359164abcf3accd3ef
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.5.2
+    versionCode: 1050201
+    commit: c8f81fb19cff95f379980ffd306a7fadf9adf7df
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.5.2
+    versionCode: 1050202
+    commit: c8f81fb19cff95f379980ffd306a7fadf9adf7df
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.5.2
+    versionCode: 1050203
+    commit: c8f81fb19cff95f379980ffd306a7fadf9adf7df
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.6.0
+    versionCode: 1060001
+    commit: b9c4cb9cd02e086ea6830be668a0bbc1fb72273e
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.6.0
+    versionCode: 1060002
+    commit: b9c4cb9cd02e086ea6830be668a0bbc1fb72273e
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.6.0
+    versionCode: 1060003
+    commit: b9c4cb9cd02e086ea6830be668a0bbc1fb72273e
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.7.1
+    versionCode: 1070101
+    commit: 53c146333744749ea2966a5d87d88a15bae1283d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.7.1
+    versionCode: 1070102
+    commit: 53c146333744749ea2966a5d87d88a15bae1283d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.7.1
+    versionCode: 1070103
+    commit: 53c146333744749ea2966a5d87d88a15bae1283d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.8.2
+    versionCode: 1080201
+    commit: f12b450eb1f6e1b51343785fd3d12e8ce5cb7f9c
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.8.2
+    versionCode: 1080202
+    commit: f12b450eb1f6e1b51343785fd3d12e8ce5cb7f9c
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.8.2
+    versionCode: 1080203
+    commit: f12b450eb1f6e1b51343785fd3d12e8ce5cb7f9c
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.9.0
+    versionCode: 1090001
+    commit: 5f43317f126a8c665220691653202593b53c1a37
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.9.0
+    versionCode: 1090002
+    commit: 5f43317f126a8c665220691653202593b53c1a37
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.9.0
+    versionCode: 1090003
+    commit: 5f43317f126a8c665220691653202593b53c1a37
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.10.0
+    versionCode: 1100001
+    commit: dd652f401014aa9c6cf514b3b18778524f1f0c1b
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.10.0
+    versionCode: 1100002
+    commit: dd652f401014aa9c6cf514b3b18778524f1f0c1b
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.10.0
+    versionCode: 1100003
+    commit: dd652f401014aa9c6cf514b3b18778524f1f0c1b
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.10.1
+    versionCode: 1100101
+    commit: 145d461276872dc24b315c1a750e441b2e3772ac
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.10.1
+    versionCode: 1100102
+    commit: 145d461276872dc24b315c1a750e441b2e3772ac
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.10.1
+    versionCode: 1100103
+    commit: 145d461276872dc24b315c1a750e441b2e3772ac
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.0
+    versionCode: 1110001
+    commit: 946805d4dd0beff535845ec329ceb8c2e079dbaa
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.0
+    versionCode: 1110002
+    commit: 946805d4dd0beff535845ec329ceb8c2e079dbaa
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.0
+    versionCode: 1110003
+    commit: 946805d4dd0beff535845ec329ceb8c2e079dbaa
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.1
+    versionCode: 1110101
+    commit: 1759e1e1ea94a1d7d35015133306327870cad5d4
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.1
+    versionCode: 1110102
+    commit: 1759e1e1ea94a1d7d35015133306327870cad5d4
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.1
+    versionCode: 1110103
+    commit: 1759e1e1ea94a1d7d35015133306327870cad5d4
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.2
+    versionCode: 1110201
+    commit: d3d01399c992e37dcb558da31a858719788de419
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.2
+    versionCode: 1110202
+    commit: d3d01399c992e37dcb558da31a858719788de419
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.2
+    versionCode: 1110203
+    commit: d3d01399c992e37dcb558da31a858719788de419
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.3
+    versionCode: 1110301
+    commit: 1368f59ac12fc2e5bb44f5832c2abeeab35f1c11
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.3
+    versionCode: 1110302
+    commit: 1368f59ac12fc2e5bb44f5832c2abeeab35f1c11
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.3
+    versionCode: 1110303
+    commit: 1368f59ac12fc2e5bb44f5832c2abeeab35f1c11
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.4
+    versionCode: 1110401
+    commit: f54fe71409964e3e459ed759a56a914899fac470
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.4
+    versionCode: 1110402
+    commit: f54fe71409964e3e459ed759a56a914899fac470
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.4
+    versionCode: 1110403
+    commit: f54fe71409964e3e459ed759a56a914899fac470
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.5
+    versionCode: 1110501
+    commit: 9f80748730c162eac71a021dd9205fc6d1770a7d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.5
+    versionCode: 1110502
+    commit: 9f80748730c162eac71a021dd9205fc6d1770a7d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.5
+    versionCode: 1110503
+    commit: 9f80748730c162eac71a021dd9205fc6d1770a7d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.6
+    versionCode: 1110601
+    commit: c9ad1cdbf77078dcf4cb437d0f4c8c43a8aaa527
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.6
+    versionCode: 1110602
+    commit: c9ad1cdbf77078dcf4cb437d0f4c8c43a8aaa527
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.6
+    versionCode: 1110603
+    commit: c9ad1cdbf77078dcf4cb437d0f4c8c43a8aaa527
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.7
+    versionCode: 1110701
+    commit: d2dcc4487253105b32d0dd6f0bd309fd915abd15
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.7
+    versionCode: 1110702
+    commit: d2dcc4487253105b32d0dd6f0bd309fd915abd15
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.7
+    versionCode: 1110703
+    commit: d2dcc4487253105b32d0dd6f0bd309fd915abd15
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.8
+    versionCode: 1110811
+    commit: 41e0d9490b99c3b89b48d34e34f55d1b20981b07
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.8
+    versionCode: 1110812
+    commit: 41e0d9490b99c3b89b48d34e34f55d1b20981b07
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.8
+    versionCode: 1110813
+    commit: 41e0d9490b99c3b89b48d34e34f55d1b20981b07
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.9
+    versionCode: 1110901
+    commit: 67a67d28d1726f721d9270ee4eaa02084a4a2b69
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.9
+    versionCode: 1110902
+    commit: 67a67d28d1726f721d9270ee4eaa02084a4a2b69
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.9
+    versionCode: 1110903
+    commit: 67a67d28d1726f721d9270ee4eaa02084a4a2b69
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.10
+    versionCode: 1111011
+    commit: c776681db1d6c628e2b6ec39711136133d7fed1a
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.10
+    versionCode: 1111012
+    commit: c776681db1d6c628e2b6ec39711136133d7fed1a
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.10
+    versionCode: 1111013
+    commit: c776681db1d6c628e2b6ec39711136133d7fed1a
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.11
+    versionCode: 1111101
+    commit: d4d907471f6e8cbdb18dbd4ef08f46fc4c338813
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.11
+    versionCode: 1111102
+    commit: d4d907471f6e8cbdb18dbd4ef08f46fc4c338813
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.11
+    versionCode: 1111103
+    commit: d4d907471f6e8cbdb18dbd4ef08f46fc4c338813
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.13
+    versionCode: 1111301
+    commit: 83a6edd9cf51c625afda3a8b66c90a80ef226ea5
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.13
+    versionCode: 1111302
+    commit: 83a6edd9cf51c625afda3a8b66c90a80ef226ea5
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.13
+    versionCode: 1111303
+    commit: 83a6edd9cf51c625afda3a8b66c90a80ef226ea5
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.11.14
+    versionCode: 1111401
+    commit: 6344b086014e2e32477f08b8ae27e0d1e24dc5c2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.11.14
+    versionCode: 1111402
+    commit: 6344b086014e2e32477f08b8ae27e0d1e24dc5c2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.11.14
+    versionCode: 1111403
+    commit: 6344b086014e2e32477f08b8ae27e0d1e24dc5c2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc libc-dev
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - .github
+      - assets_raw
+      - flatpak
+      - installers
+      - ios
+      - linux
+      - macos
+      - snap
+      - windows
+    prebuild:
+      - ./patches/foss.sh
+      - ./patches/remove_dev_dependencies.sh
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{path_provider,shared_preferences}_android-*/android/build.gradle
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter build apk --split-per-abi --target-platform="android-x64"
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - '%c * 10 + 1'
+  - '%c * 10 + 2'
+  - '%c * 10 + 3'
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.11.14
+CurrentVersionCode: 1111403

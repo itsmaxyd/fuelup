@@ -1,0 +1,695 @@
+Categories:
+  - Habit Tracker
+  - Science & Education
+  - Task
+License: GPL-3.0-or-later
+AuthorName: Ahmet Çetinkaya
+AuthorEmail: contact@ahmetcetinkaya.me
+WebSite: https://whph.ahmetcetinkaya.me
+SourceCode: https://github.com/ahmet-cetinkaya/whph
+IssueTracker: https://github.com/ahmet-cetinkaya/whph/issues
+Donate: https://ahmetcetinkaya.me/donate
+
+AutoName: WHPH
+
+RepoType: git
+Repo: https://github.com/ahmet-cetinkaya/whph
+Binaries: https://github.com/ahmet-cetinkaya/whph/releases/download/v%v/whph-v%v-android.apk
+
+Builds:
+  - versionName: 0.9.8
+    versionCode: 45
+    commit: 8af3fce42080e9d46e5a786f01770ed1559f52ed
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.10.0
+    versionCode: 46
+    commit: d2b86fa3d894024f9c8ff6cb5591ae758a86d97c
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.10.1
+    versionCode: 47
+    commit: 277eb167cfdd9d0c7d26d3a27e0793278a532e14
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.11.0
+    versionCode: 48
+    commit: 31f104be996a787c5072ea1a2d4ca5acc3dd6107
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.12.0
+    versionCode: 50
+    commit: d6b8ae1b4a452867e584a49c44f5f8c1441fe715
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.13.0
+    versionCode: 51
+    commit: bdf3ec913bf31e202148e8f0dddd5816fbdf22a5
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.13.1
+    versionCode: 52
+    commit: fce5f73fc69b2a6d255ca9fa16b9d3cc761843bf
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.13.2
+    versionCode: 53
+    commit: 6eb780fbf772bfa63abfc3ea7c1f14bc31eab402
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - git reset --soft f24ba5344af6c8e542fb67a7288d45de4e727890
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.14.1
+    versionCode: 55
+    commit: a6e7a3db1bcaa07e47a459f623f367f4485ad7cf
+    subdir: src
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - src/ios
+      - src/linux
+      - src/macos
+      - src/web
+      - src/windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - src/.pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.15.0
+    versionCode: 56
+    commit: 2ed0d17229ab270e515cdf94c07b2a25ed8e33cf
+    subdir: src
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - src/ios
+      - src/linux
+      - src/macos
+      - src/web
+      - src/windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - src/.pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.16.4
+    versionCode: 61
+    commit: c0c00d1108cc701abe9d95e7c853f6e149ee30cb
+    subdir: src
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - src/ios
+      - src/linux
+      - src/macos
+      - src/web
+      - src/windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - src/.pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.16.5
+    versionCode: 62
+    commit: 1d8a9dbd428a29b68bc1cd43331f5933cea14ad7
+    subdir: src
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - src/ios
+      - src/linux
+      - src/macos
+      - src/web
+      - src/windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - src/.pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.17.1
+    versionCode: 64
+    commit: 3d8d29d6e054a6a8d5cb64e22d8f60cc7238e1d1
+    subdir: src
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - src/ios
+      - src/linux
+      - src/macos
+      - src/web
+      - src/windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{{path_provider,shared_preferences,url_launcher}_android,package_info_plus,wakelock_plus,flutter_plugin_android_lifecycle}-*/android/build.gradle
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - src/.pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.18.0
+    versionCode: 65
+    commit: 84e4f17cc13a2d2e10b6e6df05f8db8e6cc04525
+    subdir: src
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - src/ios
+      - src/linux
+      - src/macos
+      - src/web
+      - src/windows
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/{{path_provider,shared_preferences,url_launcher}_android,package_info_plus,wakelock_plus,flutter_plugin_android_lifecycle}-*/android/build.gradle
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - src/.pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.19.0
+    versionCode: 66
+    commit: b15fa17c7598eeaf625aa2e376eebf5b42e34da3
+    subdir: src
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - src/ios
+      - src/linux
+      - src/macos
+      - src/web
+      - src/windows
+      - pubspec.yaml
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - src/.pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+  - versionName: 0.19.2
+    versionCode: 68
+    commit: d78f2cde8bc19c6391d7d16a78bd6173a9ecadb9
+    subdir: src
+    sudo:
+      - mkdir -p /home/runner/work/whph
+      - chown -R vagrant /home/runner
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - src/ios
+      - src/linux
+      - src/macos
+      - src/web
+      - src/windows
+      - pubspec.yaml
+    prebuild:
+      - git submodule update --init lib/corePackages/acore
+      - git -C $$flutter$$ reset --hard $(bash scripts/get_flutter_version.sh)
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter config --no-analytics
+      - flutter pub get
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+    scandelete:
+      - src/.pub-cache
+    build:
+      - export repo=/home/runner/work/whph/whph
+      - cd ../..
+      - mv me.ahmetcetinkaya.whph $repo
+      - pushd $repo/src
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH="$$flutter$$/bin:$PATH"
+      - flutter build apk --release
+      - popd
+      - mv $repo me.ahmetcetinkaya.whph
+
+AllowedAPKSigningKeys: 4b0de165375bb1179fbee37fbd70de03813284529e0b0c5d3ce5e794f03aa0ae
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: src/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 0.19.2
+CurrentVersionCode: 68

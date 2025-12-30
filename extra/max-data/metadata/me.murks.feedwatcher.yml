@@ -1,0 +1,226 @@
+Categories:
+  - Internet
+  - News
+  - Reading
+License: GPL-3.0-or-later
+AuthorName: Zouroboros
+AuthorEmail: zouroboros@gmail.com
+SourceCode: https://github.com/zouroboros/feed-watcher
+IssueTracker: https://github.com/zouroboros/feed-watcher/issues
+
+AutoName: FeedWatcher
+
+RepoType: git
+Repo: https://github.com/zouroboros/feed-watcher
+
+Builds:
+  - versionName: 0.0.1-alpha
+    versionCode: 1
+    commit: 0.0.1-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.2-alpha
+    versionCode: 2
+    commit: 0.0.2-alpha
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.0.3-alpha
+    versionCode: 3
+    commit: 0.0.3-alpha
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.0.4-alpha
+    versionCode: 4
+    commit: 0.0.4-alpha
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.0.5-alpha
+    versionCode: 5
+    commit: 0.0.5-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.6-alpha
+    versionCode: 6
+    commit: 0.0.6-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.7-alpha
+    versionCode: 7
+    commit: 0.0.7-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.8-alpha
+    versionCode: 8
+    commit: 0.0.8-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.9-alpha
+    versionCode: 9
+    commit: 0.0.9-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.10-alpha
+    versionCode: 10
+    commit: 0.0.10-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.11-alpha
+    versionCode: 11
+    commit: 0.0.11-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.12-alpha
+    versionCode: 12
+    commit: 0.0.12-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.13-alpha
+    versionCode: 13
+    commit: 0.0.13-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.14-alpha
+    versionCode: 14
+    commit: 0.0.14-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.15-alpha
+    versionCode: 15
+    commit: 0.0.15-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.16-alpha
+    versionCode: 16
+    commit: 0.0.16-alpha
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.18-alpha
+    versionCode: 18
+    commit: 6c73ba6da96ab01e70fbac9042bea52335879c44
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.0.19-alpha
+    versionCode: 19
+    commit: 324466b0a6e4a6a6b894b5f1e742cd38eaab42bb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.0.20-alpha
+    versionCode: 20
+    commit: cbf2af53143199fa11adcab6586efe1a35fe7d8b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.0.21-alpha
+    versionCode: 21
+    commit: 430d32e7f64a8587f3552fe0d47abe25fb1d98f6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.0.22-alpha
+    versionCode: 22
+    commit: 8b29fcb32fa94c30d345b090570891728a17c7d9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.0.23-alpha
+    versionCode: 23
+    commit: c35078f661508b489cb729754acef1e4fcc75892
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.0.24-alpha
+    versionCode: 24
+    commit: 5c8d23dd37138b609a2dde827d8380505d92e4e1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.0.26-alpha
+    versionCode: 26
+    commit: 1b9ca3a6194f81e952ed97b2c692b82bbeb586a6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.27-alpha
+    versionCode: 27
+    commit: 9e8f0b3ac07c5f95ec407a390283537a3029076a
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.0.27-alpha
+CurrentVersionCode: 27

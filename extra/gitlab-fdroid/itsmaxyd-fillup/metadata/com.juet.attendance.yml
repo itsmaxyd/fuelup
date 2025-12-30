@@ -1,0 +1,43 @@
+Categories:
+  - Science & Education
+  - Time
+License: MIT
+WebSite: http://sidverma.net
+SourceCode: https://github.com/mavidser/attendance-viewer
+IssueTracker: https://github.com/mavidser/attendance-viewer/issues
+
+AutoName: Attendance
+Description: |-
+  Students of JUET and JIIT-128 can view class attendance. It visualizes the
+  attendance in a streamlined manner, along with additional details for each
+  subject, providing details about the subject. You can also set a threshold
+  attendance which helps you in maintaining the attendance.
+
+RepoType: git
+Repo: https://github.com/mavidser/attendance-viewer
+
+Builds:
+  - versionName: 2.1.1
+    versionCode: 6
+    commit: 2c9586d2d3601ef02e42c2817fff9b4c1c474952
+    srclibs:
+      - ActionBarSherlock@4.4.0
+    rm:
+      - out
+      - libs
+      - gen
+      - gradle
+      - libraries
+      - build.gradle
+      - settings.gradle
+      - gradlew
+      - gradlew.bat
+      - .idea
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild: cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2.1.1
+CurrentVersionCode: 6

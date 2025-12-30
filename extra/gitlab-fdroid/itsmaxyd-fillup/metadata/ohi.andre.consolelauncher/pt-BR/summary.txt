@@ -1,0 +1,1 @@
+Lançador (Inicializador) baseado em terminal

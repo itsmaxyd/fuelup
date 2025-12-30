@@ -1,0 +1,96 @@
+Categories:
+  - Connectivity
+  - VPN & Proxy
+License: MIT
+AuthorName: hev
+AuthorEmail: r@hev.cc
+AuthorWebSite: https://hev.cc
+SourceCode: https://github.com/heiher/sockstun
+IssueTracker: https://github.com/heiher/sockstun/issues
+Changelog: https://github.com/heiher/sockstun/releases
+
+AutoName: SocksTun
+
+RepoType: git
+Repo: https://github.com/heiher/sockstun.git
+Binaries: https://github.com/heiher/sockstun/releases/download/%v/hev.sockstun-%v-release.apk
+
+Builds:
+  - versionName: '2.4'
+    versionCode: 1
+    commit: ae8d4b5096ae7c084a8e2cce5c605e1fca387819
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 2
+    commit: 5afac2eefe664034d3098cee93fb6391e127563b
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 3
+    commit: 5f307d4c918baae542fe436dce4d8f6a9f826a64
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 4
+    commit: 6bd63fb6d02c8518a383afd7c06c35ef4cb12fc1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 5
+    commit: b8d92588668b0f40c52c9fb5f602dc8144d1f28a
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 7
+    commit: 71184c5e2a3074643243f37150e542580d5a357e
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '4.0'
+    versionCode: 8
+    commit: 2821e37d84ac62027b42b16bb3c80c17e35143d7
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 9
+    commit: a7c2c98e11cd530fdd41b139e40135028cef406a
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 10
+    commit: baa91ad6f1c20231ba3632f5d066dba23634f506
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 431ab14485930fa7cc0cb5b643c9c9c99245ad6554d1af95331a6d31bb29b257
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '6.0'
+CurrentVersionCode: 10

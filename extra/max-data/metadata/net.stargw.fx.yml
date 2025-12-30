@@ -1,0 +1,33 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on non-libre currency site.
+Categories:
+  - Money
+License: Apache-2.0
+AuthorName: StarGW
+AuthorEmail: android-apps@stargw.net
+WebSite: https://www.stargw.net/android/
+SourceCode: https://github.com/StarGW-net/stargw-fx
+IssueTracker: https://github.com/StarGW-net/stargw-fx/issues
+Donate: https://www.stargw.net/money/?android
+
+AutoName: STARGW FX
+
+RepoType: git
+Repo: https://github.com/StarGW-net/stargw-fx.git
+Binaries: https://www.stargw.net/android/apks/net.stargw.fx-release-v%v.apk
+
+Builds:
+  - versionName: '13'
+    versionCode: 13
+    commit: ea7cc99ebfbb6911b89f079e07804fefaf707742
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 0506d8a76c40c47815395ddb9deaff30d6290d123de508290e482d993f376131
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '13'
+CurrentVersionCode: 13

@@ -1,0 +1,106 @@
+Categories:
+  - Games
+License: MIT
+AuthorName: Peter Kosyh
+AuthorEmail: p.kosyh@gmail.com
+SourceCode: https://gitlab.com/gl00my/reinstead-fdroid
+IssueTracker: https://gitlab.com/gl00my/reinstead-fdroid/-/issues
+Changelog: https://gitlab.com/gl00my/reinstead-fdroid/-/blob/HEAD/ChangeLog
+Donate: https://paypal.me/hugeping
+
+AutoName: Re:instead
+
+RepoType: git
+Repo: https://gitlab.com/gl00my/reinstead-fdroid.git
+
+Builds:
+  - versionName: '0.2'
+    versionCode: 2
+    commit: '0.2'
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+    preassemble:
+      - downloadDependencies
+
+  - versionName: '0.3'
+    versionCode: 3
+    commit: b5fc4da10600283db1be31cfbac0cde15d0239f5
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+    preassemble:
+      - downloadDependencies
+
+  - versionName: '0.4'
+    versionCode: 4
+    commit: 81f1fabb22c28f3b72f0544a5550f12670327fb6
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+    preassemble:
+      - downloadDependencies
+
+  - versionName: '0.5'
+    versionCode: 5
+    commit: 18cd2ec047dbc37ee1694c54c34fc10b3f91418c
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+    preassemble:
+      - downloadDependencies
+
+  - versionName: '0.6'
+    versionCode: 6
+    commit: 0d2fca114524ea602b7409f04d488b2f0c2fd42c
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+    preassemble:
+      - downloadDependencies
+
+  - versionName: '0.7'
+    versionCode: 7
+    commit: 0b4ddebc7f1e20a8c17579666909b2e7d4d5ef27
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21e
+    preassemble:
+      - downloadDependencies
+
+  - versionName: '0.8'
+    versionCode: 8
+    commit: 93cebc0680bd81858577a2330d188bdba698ceb2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file make
+    gradle:
+      - yes
+    ndk: 21.4.7075529
+    preassemble:
+      - downloadDependencies
+
+  - versionName: '0.9'
+    versionCode: 9
+    commit: 0615240f4f1d7abb455c666e31e021daed308ce0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file make
+    gradle:
+      - yes
+    ndk: 21.4.7075529
+    preassemble:
+      - downloadDependencies
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '0.9'
+CurrentVersionCode: 9

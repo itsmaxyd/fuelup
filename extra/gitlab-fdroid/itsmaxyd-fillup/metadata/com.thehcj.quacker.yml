@@ -1,0 +1,583 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Twitter/X, which is proprietary
+Categories:
+  - Internet
+  - Social Network
+License: MIT
+AuthorName: Harley Jones
+SourceCode: https://github.com/TheHCJ/Quacker
+IssueTracker: https://github.com/TheHCJ/Quacker/issues
+Changelog: https://github.com/TheHCJ/Quacker/releases
+
+AutoName: Quacker
+
+RepoType: git
+Repo: https://github.com/TheHCJ/Quacker.git
+
+Builds:
+  - versionName: 3.3.1
+    versionCode: 300200103
+    commit: 3a0769caa20a21b04b2f4317a4a250f98f022fee
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-x64
+    antifeatures:
+      NonFreeNet:
+        en-US: Depends on Twitter/X and Github for updates, which are proprietary
+
+  - versionName: 3.3.1
+    versionCode: 300200104
+    commit: 3a0769caa20a21b04b2f4317a4a250f98f022fee
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm
+    antifeatures:
+      NonFreeNet:
+        en-US: Depends on Twitter/X and Github for updates, which are proprietary
+
+  - versionName: 3.3.1
+    versionCode: 300200105
+    commit: 3a0769caa20a21b04b2f4317a4a250f98f022fee
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm64
+    antifeatures:
+      NonFreeNet:
+        en-US: Depends on Twitter/X and Github for updates, which are proprietary
+
+  - versionName: 3.4.1
+    versionCode: 300200121
+    commit: 796c130e5ead534b9288f3f06cf5610de51ac08d
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-x64
+
+  - versionName: 3.4.1
+    versionCode: 300200122
+    commit: 796c130e5ead534b9288f3f06cf5610de51ac08d
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm
+
+  - versionName: 3.4.1
+    versionCode: 300200123
+    commit: 796c130e5ead534b9288f3f06cf5610de51ac08d
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm64
+
+  - versionName: 3.4.2
+    versionCode: 300200125
+    commit: d067616fe81fbe733b696d5574a7748fe4531db8
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-x64
+
+  - versionName: 3.4.2
+    versionCode: 300200126
+    commit: d067616fe81fbe733b696d5574a7748fe4531db8
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm
+
+  - versionName: 3.4.2
+    versionCode: 300200127
+    commit: d067616fe81fbe733b696d5574a7748fe4531db8
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm64
+
+  - versionName: 3.4.3
+    versionCode: 300200129
+    commit: 2ad278992c8aeb716076358f2e66a49fd7821799
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-x64
+
+  - versionName: 3.4.3
+    versionCode: 300200130
+    commit: 2ad278992c8aeb716076358f2e66a49fd7821799
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm
+
+  - versionName: 3.4.3
+    versionCode: 300200131
+    commit: 2ad278992c8aeb716076358f2e66a49fd7821799
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm64
+
+  - versionName: 3.5.0
+    versionCode: 300200201
+    commit: 08f360aa65fae586d22a58c90431288f549faf33
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager_plus-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+      - android/app/.cxx
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-x64
+
+  - versionName: 3.5.0
+    versionCode: 300200202
+    commit: 08f360aa65fae586d22a58c90431288f549faf33
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager_plus-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+      - android/app/.cxx
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm
+
+  - versionName: 3.5.0
+    versionCode: 300200203
+    commit: 08f360aa65fae586d22a58c90431288f549faf33
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager_plus-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+      - android/app/.cxx
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm64
+
+  - versionName: 3.5.1
+    versionCode: 300200211
+    commit: b17e71b0d1df4b4d9b27ed0411756d376cbf6115
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager_plus-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+      - android/app/.cxx
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-x64
+
+  - versionName: 3.5.1
+    versionCode: 300200212
+    commit: b17e71b0d1df4b4d9b27ed0411756d376cbf6115
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager_plus-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+      - android/app/.cxx
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm
+
+  - versionName: 3.5.1
+    versionCode: 300200213
+    commit: b17e71b0d1df4b4d9b27ed0411756d376cbf6115
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager_plus-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+      - android/app/.cxx
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm64
+
+  - versionName: 3.5.2
+    versionCode: 300200301
+    commit: 3bcdbcd89aee883184baa478f9c5359ffc0764b9
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager_plus-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+      - android/app/.cxx
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-x64
+
+  - versionName: 3.5.2
+    versionCode: 300200302
+    commit: 3bcdbcd89aee883184baa478f9c5359ffc0764b9
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager_plus-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+      - android/app/.cxx
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm
+
+  - versionName: 3.5.2
+    versionCode: 300200303
+    commit: 3bcdbcd89aee883184baa478f9c5359ffc0764b9
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+    prebuild:
+      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e '/googleapis/d' .pub-cache/hosted/pub.dev/webview_cookie_manager_plus-*/android/build.gradle
+    scandelete:
+      - .pub-cache
+      - android/app/.cxx
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --dart-define=app.flavor=fdroid --release
+        --no-tree-shake-icons --split-per-abi --target-platform=android-arm64
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+VercodeOperation:
+  - 1+%c
+  - 2+%c
+  - 3+%c
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 3.5.2
+CurrentVersionCode: 300200303

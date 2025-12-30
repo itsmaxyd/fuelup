@@ -1,0 +1,76 @@
+Categories:
+  - Development
+License: Apache-2.0
+WebSite: https://bined.exbin.org/android
+SourceCode: https://github.com/exbin/bined-android
+IssueTracker: https://github.com/exbin/bined-android/issues
+
+AutoName: BinEd
+
+RepoType: git
+Repo: https://github.com/exbin/bined-android.git
+Binaries: https://github.com/exbin/bined-android/releases/download/%v/bined-android-%v.apk
+
+Builds:
+  - versionName: 0.2.1
+    versionCode: 5
+    commit: 3860f62924e3c8c297394b29c5cff7714bd410bd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.2
+    versionCode: 8
+    commit: 721c5f0cdcd500b313ddd12e1642761a649c5f67
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.3
+    versionCode: 10
+    commit: dbcfa995fb824e61aec355c5ea414bcbac99695c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.4
+    versionCode: 11
+    commit: 4e7279c766429ba75672ff257600d7750eed8ff2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.5
+    versionCode: 13
+    commit: 44d6ee0df69c06fe50aace573dacdbd78d422aa3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.6
+    versionCode: 15
+    commit: 80fbed262ddc3af5d96615a5711259fa38eefdf3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.7
+    versionCode: 16
+    commit: 6f5d152cbdad5b347e662bda15377c10ab64160f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.9
+    versionCode: 18
+    commit: 4068c8b73584267eb9ad2e7e1a7586a51143c482
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 82cf998baecbf6bac92c47627b06c352a7261cc0840fdcbde1394944e94ba946
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.2.9
+CurrentVersionCode: 18

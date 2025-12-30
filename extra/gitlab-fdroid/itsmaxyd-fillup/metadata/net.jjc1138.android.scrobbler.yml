@@ -1,0 +1,31 @@
+Categories:
+  - Multimedia
+License: MIT
+SourceCode: https://github.com/JJC1138/scrobbledroid
+IssueTracker: https://github.com/JJC1138/scrobbledroid/issues
+
+AutoName: Scrobble Droid
+Description: |-
+  Last.fm only: check out https://f-droid.org/packages/com.adam.aslfms for Libre.fm scrobbling. Requires a
+  compatible audio player to work e.g. the basic Android music player. The
+  <a href="https://code.google.com/p/scrobbledroid/wiki/DeveloperAPI">Scrobbledroid API</a>
+  documentation is on the website.
+
+RepoType: git
+Repo: https://github.com/JJC1138/scrobbledroid
+
+Builds:
+  - versionName: 1.0.6
+    versionCode: 7
+    commit: '86'
+    prebuild:
+      - mkdir -p src/com/android/music
+      - wget https://raw.github.com/CyanogenMod/android_packages_apps_Music/366ed000b36c17b587408923b21ecb03a08da6fc/src/com/android/music/IMediaPlaybackService.aidl
+        -P src/com/android/music
+    target: android-10
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.0.6
+CurrentVersionCode: 7

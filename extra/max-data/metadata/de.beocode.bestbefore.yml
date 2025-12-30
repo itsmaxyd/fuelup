@@ -1,0 +1,101 @@
+Categories:
+  - Sports & Health
+License: EUPL-1.2
+AuthorName: BeoCode
+AuthorEmail: best-before@beocode.eu
+SourceCode: https://codeberg.org/BeoCode/Best-Before
+IssueTracker: https://codeberg.org/BeoCode/Best-Before/issues
+Translation: https://poeditor.com/join/project/sYYYC34Bgf
+Changelog: https://codeberg.org/BeoCode/Best-Before/raw/branch/main/CHANGELOG
+
+AutoName: Best-Before
+Description: |-
+  <b>NOTE:</b> App is no longer developed, source repo has been archived.
+
+  Features:
+  * add, edit and remove products
+  * save best-before date
+  * search through products
+  * data import and export
+
+  Supported languages:
+  * English
+  * Czech
+  * Danish
+  * Dutch
+  * Finnish
+  * French
+  * German
+  * Hungarian
+  * Polish
+  * Portuguese (BR)
+  * Spanish (AR)
+  * Turkish
+  * Ukrainian
+
+  Wiki:
+  You have questions, need help to set up the app or simply want to know more about it? Then take a look at the <a href="https://codeberg.org/BeoCode/Best-Before/wiki">Wiki</a>.
+
+  Licensing:
+  Licensed under the <a href="https://codeberg.org/BeoCode/Best-Before/src/branch/main/LICENSE">EUPL-1.2</a>.
+
+  OpenSource:
+  This app is <a href="https://codeberg.org/BeoCode/Best-Before">open source</a>.
+  Many thanks to all <a href="https://codeberg.org/BeoCode/Best-Before/wiki/Contributors">contributors</a>.
+
+  Icons:
+  <a href="https://fonts.google.com/icons?icon.set=Material+Icons">Icons</a> by Google licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a>.
+
+RepoType: git
+Repo: https://codeberg.org/BeoCode/Best-Before.git
+
+Builds:
+  - versionName: '1.00'
+    versionCode: 1
+    commit: d6d40d9934c20e4e209e4f0b0493e40e35591725
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.01'
+    versionCode: 2
+    commit: 81becdd57d4452663d4ded59f095be1e8314460e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.02'
+    versionCode: 3
+    commit: 56b74b158e4682618740bdb75cdcd95c1b5c1d24
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.02.1
+    versionCode: 4
+    commit: 56d5cfac54e9c4f22afaf461ac99c940266e7928
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: app/build.gradle|version_code\s=\s(\d+)|.|version_name\s=\s"(.+)"
+CurrentVersion: 1.02.1
+CurrentVersionCode: 4

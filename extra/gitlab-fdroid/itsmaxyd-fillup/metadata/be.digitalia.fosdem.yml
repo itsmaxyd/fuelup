@@ -1,0 +1,351 @@
+Categories:
+  - Time
+License: Apache-2.0
+AuthorName: Dreamy Robots
+AuthorEmail: software@digitalia.be
+WebSite: https://www.digitalia.be/
+SourceCode: https://github.com/cbeyls/fosdem-companion-android
+IssueTracker: https://github.com/cbeyls/fosdem-companion-android/issues
+Changelog: https://github.com/cbeyls/fosdem-companion-android/releases
+
+AutoName: FOSDEM Companion
+Description: |-
+  Advanced schedule browser for the <a href="https://fosdem.org/">FOSDEM</a> conference in
+  Brussels, Belgium. Download the most recent schedule and browse it offline.
+
+  Features:
+
+  * Browse sessions by day and by track
+  * Instant search
+  * Track schedule view optimized for phones and tablets
+  * Full sessions details with related links, speakers info and room maps
+  * Add sessions directly to your calendar
+  * Share sessions with a link to their page on the FOSDEM website
+  * Manage bookmarks and get notified when a bookmarked session is about to start
+  * “Live” view: during FOSDEM, watch the realtime updated list of currently running and upcoming sessions
+  * Includes a simple map of the site.
+
+  Note: this app properly handles timezone changes and device reboots for
+  notifications; you can download the schedule and add bookmarks on any timezone
+  and you will get notified at the right time when the events start in Belgium.
+
+  The name FOSDEM and the gear logo are registered trademarks of FOSDEM VZW. Used
+  with permission.
+
+RepoType: git
+Repo: https://github.com/cbeyls/fosdem-companion-android.git
+
+Builds:
+  - versionName: 1.0.5
+    versionCode: 700105
+    commit: 1.0.5
+    srclibs:
+      - Support-v7@android-sdk-4.4.2_r1
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild: mv libs/android-support-v4.jar $$Support-v7$$/libs/
+
+  - versionName: 1.0.7
+    versionCode: 700107
+    commit: 1.0.7
+    gradle:
+      - yes
+
+  - versionName: 1.0.8
+    versionCode: 700108
+    commit: 1.0.8
+    gradle:
+      - yes
+    rm:
+      - libs/*
+    prebuild: sed -i -e '/appcompat/acompile "com.github.chrisbanes.photoview:library:1.2.3"'
+      -e '/libs\/photoview-1.2.2.jar/d' build.gradle
+
+  - versionName: 1.1.1
+    versionCode: 700111
+    commit: 1.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 700130
+    commit: 1.3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 700131
+    commit: 1.3.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.5
+    versionCode: 700135
+    commit: 1.3.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.6
+    versionCode: 700136
+    commit: 1.3.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.8
+    versionCode: 700138
+    commit: 1.3.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 700140
+    commit: 1.4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 700142
+    commit: 1.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 700143
+    commit: 1.4.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 700144
+    commit: 1.4.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.5
+    versionCode: 700145
+    commit: 1.4.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.6
+    versionCode: 700146
+    commit: 1.4.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 1500150
+    commit: 1.5.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 1500151
+    commit: 1.5.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 1600160
+    commit: 1.6.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 1600162
+    commit: 1.6.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 1700171
+    commit: 1.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.2
+    versionCode: 1700172
+    commit: 1.7.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.3
+    versionCode: 1700173
+    commit: 1.7.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 1700201
+    commit: 2.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.5
+    versionCode: 1700205
+    commit: 2.0.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 1900210
+    commit: fc86cb4f4fef1761e90f97db15c3c981af66526a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 1900211
+    commit: 4527cc6dbfefac2ba33d25ddfb64cc0c29623a12
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-11-jdk-headless
+    gradle:
+      - yes
+
+  - versionName: 2.1.2
+    versionCode: 1900212
+    commit: bc092d6b0e487f8c8e7b253f999adb57ac020d05
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-11-jdk-headless
+    gradle:
+      - yes
+
+  - versionName: 2.1.3
+    versionCode: 1900213
+    commit: 1051c4305de7605c710c20a3bd93a49328f89d2b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-11-jdk-headless
+    gradle:
+      - yes
+
+  - versionName: 2.1.9
+    versionCode: 2100219
+    commit: b8afc45049eebbf7e0aba64de11e9a7017fbda7f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 2100220
+    commit: e9977fdb631e4028ac5a10ab9ed0acc61795ef48
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 2100221
+    commit: 71402f118759fddd74443f1ccf242e4ac1b16a3f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.4
+    versionCode: 2100224
+    commit: 399e54c3908458dff501b16d26aa39b3a3eda801
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.5
+    versionCode: 2100225
+    commit: 8602821b0ce052ed42245209cc692cdb361f255f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.6
+    versionCode: 2100226
+    commit: b4b0268592b160da9cd69318615c32e5f91fbd97
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.7
+    versionCode: 2100227
+    commit: db99983116f4fd08760585dad0eb417edec3228b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++
+    gradle:
+      - yes
+
+  - versionName: 2.2.8
+    versionCode: 2100228
+    commit: 6add2d104e7ac60822ac471755953b2444cb9908
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++
+    gradle:
+      - yes
+
+  - versionName: 2.2.9
+    versionCode: 2100229
+    commit: 8339b76ea0bdeeff84ecca6af180234866478a5e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.2.9
+CurrentVersionCode: 2100229

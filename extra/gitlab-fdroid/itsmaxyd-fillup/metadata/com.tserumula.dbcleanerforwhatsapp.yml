@@ -1,0 +1,91 @@
+AntiFeatures:
+  NonFreeDep:
+    en-US: Requires WhatsApp to be installed on the device.
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: Thabang Serumula
+AuthorEmail: tjserumula@gmail.com
+AuthorWebSite: http://www.thabangserumula.co.za/
+SourceCode: https://github.com/tserumula/DbCleanerforWhatsapp
+IssueTracker: https://github.com/tserumula/DbCleanerforWhatsapp/issues
+
+AutoName: DbCleaner for Whatsapp
+
+RepoType: git
+Repo: https://github.com/tserumula/DbCleanerforWhatsapp.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 2
+    commit: 69e1ed2d2b45fdc7a80e0211c24aad8f3d00ad67
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 4
+    commit: a026f4405ac16ff06ee9cc5403002bd7c56e7f71
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 5
+    commit: f6794a9f306568f95530912d191a02a3eb8a6b14
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 6
+    commit: 1f4751af15d7acf4d9880eb3d17d48cd076b6930
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.2
+    versionCode: 7
+    commit: 34860bd053854547910c0932e6ebb24781c2a3a1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.3
+    versionCode: 8
+    commit: 4adea07780ce8161a586194c6c9792d0ea6ffc52
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 9
+    commit: 29df2b75274d723a14eb1e898053d7cd156520f6
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '2.0'
+CurrentVersionCode: 9

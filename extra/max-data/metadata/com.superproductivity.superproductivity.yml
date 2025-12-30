@@ -1,0 +1,1405 @@
+Categories:
+  - Bookmark
+  - Note
+  - Task
+  - Time
+License: MIT
+AuthorName: Johannes Millan
+AuthorWebSite: https://super-productivity.com/
+WebSite: https://super-productivity.com/
+SourceCode: https://github.com/johannesjo/super-productivity/
+IssueTracker: https://github.com/johannesjo/super-productivity//issues
+
+AutoName: Super Productivity
+
+RepoType: git
+Repo: https://github.com/johannesjo/super-productivity/
+
+Builds:
+  - versionName: '7.0'
+    versionCode: 7
+    commit: v7.0
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Depends on super-productivity.com, which is not libre.
+
+  - versionName: '17.0'
+    versionCode: 17
+    commit: 7ff9c3763f5858dcc0c592daee079a32f382caad
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Depends on super-productivity.com, which is not libre.
+
+  - versionName: '19.0'
+    versionCode: 19
+    commit: ded2a4028cc5422fdfffb64bc6f410da0f434414
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Depends on super-productivity.com, which is not libre.
+
+  - versionName: '20.0'
+    versionCode: 20
+    commit: 4a440a209e3a0a46d777aeb654f0422e4ce091ed
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Depends on super-productivity.com, which is not libre.
+
+  - versionName: '21.0'
+    versionCode: 21
+    commit: 216336170e93773defd07aab56add083b0f6a29f
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Depends on super-productivity.com, which is not libre.
+
+  - versionName: 11.0.3
+    versionCode: 1100030000
+    commit: b8016de2c3d03aa925c9af7a666f891c0d781419
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+
+  - versionName: 11.1.1
+    versionCode: 1101010000
+    commit: ad2e88417048a91aad63ad5725b03f3b48b6646c
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+
+  - versionName: 11.1.2
+    versionCode: 1101020000
+    commit: d71bc0988f42f001d6f05b51fd91b0dc30937bb2
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+
+  - versionName: 11.1.3
+    versionCode: 1101030000
+    commit: d0f2fa1f237b2f912abf6488e95ba38ae0651e62
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 12.0.0
+    versionCode: 1200000000
+    commit: c4a634155a6c4b645b52c76f6f78ad3ae501efe9
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 12.0.1
+    versionCode: 1200010000
+    commit: 0684809242683195a098cb07bcacba6c585f35ea
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 12.0.3
+    versionCode: 1200030000
+    commit: 6923127d8b374e80fbc1a7bffe80a11010537fec
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 12.0.5
+    versionCode: 1200050000
+    commit: e682cb7f97d05dd4920843081bd72ab9ef674d74
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 13.0.4
+    versionCode: 1300040000
+    commit: 7024cb6e9387fee731194cb2b318fc4b78cc8f0e
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 13.0.10
+    versionCode: 1300100000
+    commit: 05d9e2c2de02e39dafff46d7c27ce9684147ef9c
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 13.0.11
+    versionCode: 1300110000
+    commit: 94b77b46d8dec377fcc23043f0e4def6045a8c37
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 13.1.0
+    versionCode: 1301000000
+    commit: 5250d71c30a70f26801e01a85b675d3d17bf7806
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 13.1.2
+    versionCode: 1301020000
+    commit: 2cfae6ccd4c928acbd2ba7100256ca2a4c019e6a
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 13.1.5
+    versionCode: 1301050000
+    commit: 0b3cdb5f9c34f5884241185e29b8a6b5f43d5129
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run build
+      - npx cap sync
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    scandelete:
+      - node_modules
+      - .swp
+
+  - versionName: 14.0.1
+    versionCode: 1400010000
+    commit: 736d9fe0f365abf8557cc592650ccc0909d85531
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    gradle:
+      - fdroid
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.0.2
+    versionCode: 1400020000
+    commit: 051eb52e4de90fe4ffa430f071ac6d2b9971c8a2
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    gradle:
+      - fdroid
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.0.5
+    versionCode: 1400050000
+    commit: 43d335be3144ce132b04f62ef281861a2d9db637
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    gradle:
+      - fdroid
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.2.2
+    versionCode: 1402020000
+    commit: 030b180c3c97044d9a08d167317be17bad72144d
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    gradle:
+      - fdroid
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.2.4
+    versionCode: 1402040000
+    commit: 071bab8c0b46936308fc3abd0cb1083da5650aea
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    gradle:
+      - fdroid
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.2.6
+    versionCode: 1402060000
+    commit: 16a4c9b9572f7023a8ef33b6d467d4151feafaaf
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init:
+      - cd ../..
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    gradle:
+      - fdroid
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.3.2
+    versionCode: 1403020000
+    commit: a3ebf37cc720723c2efeef4eaf1d7db160ee519b
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.3.3
+    versionCode: 1403030000
+    commit: 2126cd3f904accdb670194043d5c56101cbdcd7e
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.3.4
+    versionCode: 1403040000
+    commit: 1a2c0a141ae923cf14ca982ca7642ead5338a1ec
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.4.0
+    versionCode: 1404000000
+    commit: 5eb4d6652927c50bfb38ba020891347f44675b02
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.4.1
+    versionCode: 1404010000
+    commit: 7d5c430ecf38e171d9817f8f7b8b4eb39014dff5
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 14.5.0
+    versionCode: 1405000000
+    commit: 3c8c4de3cbdea67dfe1ba24ae0779ac877a6e738
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 15.0.0
+    versionCode: 1500000000
+    commit: 0916ab98d78b9d612bde426b54434c2bdb0f1b62
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 15.0.1
+    versionCode: 1500010000
+    commit: bea25c8755db89e218bebe1efa28c66d0cbe2de8
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 15.0.3
+    versionCode: 1500030000
+    commit: c168406c7511494044896a405d0148e6611433e2
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 15.1.1
+    versionCode: 1501010000
+    commit: 8731cc184952f9d75fb490411a33c9cec33f6be1
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 15.2.2
+    versionCode: 1502020000
+    commit: f6f74da056dd4e2a504e394f1038a7ceb9e8bae4
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 15.2.16
+    versionCode: 1502160000
+    commit: a20e875c1f9f572f28e4fc7f5ccf6db425d82c46
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 15.3.0
+    versionCode: 1503000000
+    commit: 595a396d81c8b8673a4833e1bc248d3c5a7f8baa
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.0.0
+    versionCode: 1600000000
+    commit: ed8f8282d0570f46bf81cb3a7dbe1ba2814990e5
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.1.0
+    versionCode: 1601000000
+    commit: 2762c60319291f18083bdea3216beb8aad2c7fd4
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.2.0
+    versionCode: 1602000000
+    commit: 52ce9e602270e3068bb45cd817513d4a023c28c3
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.2.1
+    versionCode: 1602010000
+    commit: b77f407cc53b905599c9c11ba97855804c2fb610
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.3.0
+    versionCode: 1603000000
+    commit: 43ceb545b44494e19ec15b302ce38a5087235a97
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.3.1
+    versionCode: 1603010000
+    commit: 0bf97455ab2d3861549761c04c909e031f032d81
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.3.3
+    versionCode: 1603030000
+    commit: a3dfd22ed7053795986de0ad3c59a4f1cbeaab3b
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.3.5
+    versionCode: 1603050000
+    commit: 96f73ccfc77dd229b0cd9afe1fdeeaa9d53b5473
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.3.6
+    versionCode: 1603060000
+    commit: 9d9715fd297fbae0b120af8c5ffedb2d555a0562
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.4.1
+    versionCode: 1604010000
+    commit: e2d6f82638ea09ae093d6a679c055ba0a1b9fc23
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.4.3
+    versionCode: 1604030000
+    commit: b9490291cbdcfc1ee7faec99b2c276325f4eb5b8
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/ai-productivity-prompts/node_modules
+      - packages/plugin-dev/sync-md/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.5.3
+    versionCode: 1605030000
+    commit: 4bf3754fef01dc326cd12432727be0d5dbb2b576
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/*/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.5.4
+    versionCode: 1605040000
+    commit: 7ce0d784cefb864d6422993d14d804192429f245
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/*/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.5.5
+    versionCode: 1605050000
+    commit: 102ac1c3304d0499039797c09e0465de9269b527
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/*/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.6.0
+    versionCode: 1606000000
+    commit: a10eb2fcf8d08edac8cf58094036c83a1caa4b31
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/*/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.6.1
+    versionCode: 1606010000
+    commit: 0e17203d0a9473b30c7ef36a294d612e07909fc6
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/*/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.7.2
+    versionCode: 1607020000
+    commit: 1d52bb91be902afb65f519cab1e0b303c0318cb3
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/*/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+  - versionName: 16.7.3
+    versionCode: 1607030000
+    commit: 77b991c75c6c2edd2ea6b18a8e71b1778948de51
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie npm openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ../..
+      - sed -i -e "s/getEnv('UNSPLASH_KEY')/''/" src/app/core/unsplash/unsplash.service.ts
+      - npm install --build-from-source
+      - npm run buildFrontend:prodWeb
+      - npm run sync:android
+    scanignore:
+      - android/app/src/main/assets/public/assets/test-plugin.zip
+    scandelete:
+      - node_modules
+      - packages/plugin-dev/node_modules
+      - packages/plugin-dev/*/node_modules
+      - dist/browser/assets/test-plugin.zip
+      - src/assets/test-plugin.zip
+      - .swp
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v(?!11.0.3)[\d.]+$
+CurrentVersion: 16.7.3
+CurrentVersionCode: 1607030000

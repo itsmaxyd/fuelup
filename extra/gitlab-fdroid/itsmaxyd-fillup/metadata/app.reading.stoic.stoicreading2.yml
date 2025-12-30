@@ -1,0 +1,77 @@
+Categories:
+  - Reading
+License: GPL-3.0-or-later
+AuthorName: Paul Hill
+SourceCode: https://github.com/zikalify/StoicReading
+IssueTracker: https://github.com/zikalify/StoicReading/issues
+Changelog: https://github.com/zikalify/StoicReading/releases
+
+AutoName: Stoic Reading
+Description: |-
+  This app contains texts from Stoics including those of Emperor Marcus Aurelius,
+  the freed slave Epictetus, and Seneca. It contains other, less well known, Stoic
+  texts too.
+
+RepoType: git
+Repo: https://github.com/zikalify/StoicReading.git
+
+Builds:
+  - versionName: 1.8.3
+    versionCode: 72
+    commit: 62a8f6c4dd2db707ead34f0fac73103b2ac59b3e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.8.4
+    versionCode: 73
+    commit: f108a39c0999f843555c008a88c921d86dab4749
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.8.5
+    versionCode: 74
+    commit: 0f740ff3adb98e72c557277a3d1de1595e18e515
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.8.6
+    versionCode: 75
+    commit: c8a6f94f33bbae79dc2ba671c581140ddd451bfc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.8.8
+    versionCode: 77
+    commit: ba02ed4b7bfe69edded5df7b9c82614863314fed
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[0-9.]+$
+CurrentVersion: 1.8.8
+CurrentVersionCode: 77

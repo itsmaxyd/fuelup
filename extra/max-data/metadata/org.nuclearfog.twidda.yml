@@ -1,0 +1,265 @@
+Categories:
+  - Internet
+License: Apache-2.0
+SourceCode: https://archive.softwareheritage.org/browse/origin/https://github.com/nuclearfog/Shitter/directory/
+IssueTracker: https://github.com/nuclearfog/Shitter/issues
+Changelog: https://github.com/nuclearfog/Shitter/releases
+
+AutoName: Shitter
+
+Builds:
+  - versionName: 3.2.2
+    versionCode: 89
+    commit: 89b4b0c9ec104d8bf3bdf0ee1024e617828d7ef7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 3.2.3
+    versionCode: 90
+    commit: be0a1285b0e83b6d09c4ebcc57fe46d7edf1a76f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 3.2.4
+    versionCode: 91
+    commit: 4f4fc191ae93e6ae0cccefbd65225e8094715b42
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 3.2.5
+    versionCode: 92
+    commit: 6471f550ad5907a469dfc638415072343dfb5eea
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 3.2.6
+    versionCode: 93
+    commit: df114ba49431e07f4c6f5c2bd7b4939d9a653744
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: '3.3'
+    versionCode: 94
+    commit: f36a1499e96afaf66bea8a655b9b5fb0f64482d9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 3.3.1
+    versionCode: 95
+    commit: 0aa15a1f7126ba7b6366fd935d5e0bdfab2c7062
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: '3.4'
+    versionCode: 96
+    commit: b288d44f0596bdd7f95fb7c1daf2d79883ac0d21
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.1
+    versionCode: 97
+    commit: c78df7a9c191394fbe3bc821fc46e859707c2a4d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.2
+    versionCode: 98
+    commit: 5b22305713465e3b728c4339b5169131f303e2e6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.3
+    versionCode: 99
+    commit: 9c58d22bad3361cf0a694dc7ad0fa3a507f9f6fc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.4
+    versionCode: 100
+    commit: 97213b039e5524e651a32c9e8c1a67efe4b80dee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.5
+    versionCode: 101
+    commit: a2b53d752762ff51239865bbf7022db44f0a1f72
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.4.6
+    versionCode: 102
+    commit: bd23e009a96da25713f0e65518b03a455ae05483
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.5'
+    versionCode: 103
+    commit: 6098e1fd6302b6873808a9d54e5b7cf0707a2380
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.5.1
+    versionCode: 104
+    commit: 6090aa13e9b787dbe81a40b0eaa70271d11e3e45
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.5.2
+    versionCode: 105
+    commit: 0e800e84c7a5754823a95c16da1a2bd8727f67f6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.5.3
+    versionCode: 106
+    commit: b1f1ed2d62c5322016c8bbb355930b543148e986
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.5.4
+    versionCode: 107
+    commit: d57ed18f7ce41ba5fcaef44119f7f29420bd3df3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.5.5
+    versionCode: 108
+    commit: b27c2e5153c8c4161736250a2e4ba16da013125b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.5.8
+    versionCode: 111
+    commit: 6191fe4a79b2117a9ca80ccc8c77b12ae52cd4c0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.5.9
+    versionCode: 112
+    commit: 064655067f8a1e9f9898ba977bbbac055dfe6d0f
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 3.5.9
+CurrentVersionCode: 112
+
+NoSourceSince: 3.5.9

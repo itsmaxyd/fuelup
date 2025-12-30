@@ -1,0 +1,51 @@
+Categories:
+  - Finance Manager
+  - Money
+License: MIT
+AuthorName: xvzan
+AuthorEmail: xvzan0@gmail.com
+SourceCode: https://github.com/xvzan/SimpleMoneyTracker
+IssueTracker: https://github.com/xvzan/SimpleMoneyTracker/issues
+
+AutoName: Simple Money Tracker
+
+RepoType: git
+Repo: https://github.com/xvzan/SimpleMoneyTracker
+
+Builds:
+  - versionName: 0.8.8
+    versionCode: 20200630
+    commit: v0.8.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.9
+    versionCode: 20200725
+    commit: v0.8.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.10
+    versionCode: 20240126
+    commit: 855003643301030da945252b06e26a38f13b8936
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.8.11
+    versionCode: 20250704
+    commit: 74f33d1bfd5a700e67348349d94b8c385df14199
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.8.11
+CurrentVersionCode: 20250704

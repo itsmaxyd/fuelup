@@ -1,0 +1,1 @@
+Kryptér dine filer og kommunikation. Kompatibel med OpenPGP Standard.

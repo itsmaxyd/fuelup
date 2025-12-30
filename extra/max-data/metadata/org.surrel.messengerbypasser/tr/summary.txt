@@ -1,0 +1,1 @@
+"OpenFB Messenger" isteklerini web sohbetine yeniden yönlendirir

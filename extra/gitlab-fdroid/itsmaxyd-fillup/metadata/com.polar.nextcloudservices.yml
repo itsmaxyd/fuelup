@@ -1,0 +1,142 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-only
+SourceCode: https://github.com/Andrewerr/NextcloudServices
+IssueTracker: https://github.com/Andrewerr/NextcloudServices/issues
+Changelog: https://github.com/Andrewerr/NextcloudServices/releases
+
+AutoName: Nextcloud Services
+
+RepoType: git
+Repo: https://github.com/Andrewerr/NextcloudServices
+
+Builds:
+  - versionName: 1.0-beta6
+    versionCode: 6
+    commit: v1.0-beta6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta7
+    versionCode: 7
+    commit: fe2aa458f5ff4ebd1cad0b51087feb0f1e9c32bc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta8
+    versionCode: 8
+    commit: 62adcd30bc6a85478bf355e43486900be2e75ca3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta9
+    versionCode: 9
+    commit: 44e24443430033595865d1703857ffc30c6359ce
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta10
+    versionCode: 10
+    commit: c89f3363c54c95b07b651dbfe15e971a2c14c168
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta11
+    versionCode: 11
+    commit: 2b36c9396cdbb548f52ddb5c3585244ebdd14535
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta12
+    versionCode: 12
+    commit: 92250d7fbbff0e5a940dccae8c2bedd029132317
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta13
+    versionCode: 13
+    commit: e02f9f3e44f6a817f65383be9eb77f7e28a2b656
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta14
+    versionCode: 14
+    commit: 4ec2aeb0a2f1822f09259d223ab7c7283aa12541
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta15
+    versionCode: 15
+    commit: 909d44ed0d50c692768ac08ab194a50656ae5c4e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta16
+    versionCode: 16
+    commit: b91cb227c3033a5038a70b2fb61600cc91c5196b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta17
+    versionCode: 17
+    commit: 01c43482593f6ed1d0480ec2fafe4b1a8e995794
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta18
+    versionCode: 18
+    commit: 39ad1db6e2c20ca162849ce0a264ba59d737cff5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta19
+    versionCode: 19
+    commit: b214b6f21cefa135691207fba130400afda9b4d4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta20
+    versionCode: 20
+    commit: aa3b831dde3ef54d50a470417718632c429f1770
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1-beta20
+CurrentVersionCode: 20

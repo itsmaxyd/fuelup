@@ -1,0 +1,226 @@
+Categories:
+  - Forum
+  - Internet
+License: Apache-2.0
+AuthorName: slartus
+AuthorEmail: slartus@gmail.com
+SourceCode: https://github.com/slartus/4pdaClient-plus
+IssueTracker: https://github.com/slartus/4pdaClient-plus/issues
+
+AutoName: ForPDA
+Description: Client companion for the 4pda.ru forum.
+
+RepoType: git
+Repo: https://github.com/slartus/4pdaClient-plus
+
+Builds:
+  - versionName: '2.3'
+    versionCode: 459
+    commit: dcd069fe1a0f2ad94d39c3360ccf88c00feefa06
+    subdir: app
+    gradle:
+      - yes
+    forceversion: true
+    forcevercode: true
+
+  - versionName: 2.4b5
+    versionCode: 500
+    commit: 9f672b5bba8f244ee3b58041a59712622e0d1a41
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 501
+    commit: 0974170a4066fd599f17a97673c02fbf92cf6b2f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.1
+    versionCode: 520
+    commit: 2.5.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.2
+    versionCode: 522
+    commit: f1c2687b674581c45ba8231cb235f791b75bcba7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.5
+    versionCode: 525
+    commit: 65f329b2689ccc625fabc6769dbb7ad1e2382c8f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.6
+    versionCode: 526
+    commit: 2.5.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.2
+    versionCode: 530
+    commit: 5a682243bfc3ee6ac8abfd4dd6833b837f01b75e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.9
+    versionCode: 537
+    commit: d30d5e36b409338ce6e2c98b22956f91c437ae81
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.0
+    versionCode: 538
+    commit: d9429f9c7d816790d7f8046f4f807979a6e1d71b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.4b3
+    versionCode: 543
+    commit: 16a6ca3346de7811394d34eed254ff04751f013e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.4b4
+    versionCode: 545
+    commit: 5cebc772e71e046311d9a85f46c87de7553a0a07
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.2.9
+    versionCode: 568
+    commit: da0803cc70722221d10fc3a1d195ebe6d7986a93
+    subdir: app
+    gradle:
+      - rel
+    prebuild:
+      - sed -i -e '/buildTypes {/i/*' -e '/productFlavors/i*/' -e '/defaultSigningVariable/d'  build.gradle
+      - mv src/main/res/lang/strings.xml src/main/res/values/strings.xml
+      - echo "android { lintOptions { abortOnError false } }" >> build.gradle
+
+  - versionName: 3.4.0
+    versionCode: 579
+    commit: 003e01c8709e3c2d0e9a39c945720acf02f80b79
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/signingConfigs {/,+11d' -e '/defaultSigningVariable/d' build.gradle
+
+  - versionName: 3.4.8
+    versionCode: 594
+    commit: 3.4.8
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/applicationVariants.all/,+8d' -e '/signingConfigs {/,+11d'
+      -e '/defaultSigningVariable/d' build.gradle
+
+  - versionName: 3.4.8.1
+    versionCode: 595
+    commit: 3.4.8.1
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/applicationVariants.all/,+8d' -e '/signingConfigs {/,+11d'
+      -e '/defaultSigningVariable/d' build.gradle
+
+  - versionName: 3.4.8.2
+    versionCode: 596
+    commit: 3.4.8.2
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/applicationVariants.all/,+8d' -e '/signingConfigs {/,+11d'
+      -e '/defaultSigningVariable/d' build.gradle
+
+  - versionName: 3.5.2.7
+    versionCode: 615
+    commit: 8bea9a7e78d53217aea15577953734d8a2a19cc3
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/applicationVariants.all/,+5d' -e '/signingConfigs {/,+11d'
+      -e '/defaultSigningVariable/d' build.gradle
+
+  - versionName: 3.5.2.8
+    versionCode: 616
+    commit: 3.5.2.8
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/applicationVariants.all/,/^    }/d; /signingConfigs/d' build.gradle
+
+  - versionName: 3.5.2.9
+    versionCode: 617
+    commit: 3.5.2.9
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/applicationVariants.all/,/^    }/d; /signingConfigs/d' build.gradle
+
+  - versionName: 3.5.4
+    versionCode: 621
+    commit: 3.5.4
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/applicationVariants.all/,/^    }/d; /signingConfigs/d' build.gradle
+
+  - versionName: 3.5.4.7
+    versionCode: 628
+    commit: 3.5.4.7
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/applicationVariants.all/,/^    }/d; /signingConfigs/d' build.gradle
+
+  - versionName: 3.5.4.8
+    versionCode: 629
+    commit: 3.5.4.8
+    subdir: app
+    gradle:
+      - rel
+    prebuild: sed -i -e '/applicationVariants.all/,/^    }/d; /signingConfigs/d' build.gradle
+
+  - versionName: 3.6.4
+    versionCode: 678
+    commit: 2f2f61898f532eca569a517ba4ff86c49f7cd9d7
+    subdir: app
+    gradle:
+      - rel
+    prebuild:
+      - sed -i -e '/applicationVariants.all/,/^    }/d' -e '/signingConfig/d' build.gradle
+      - sed -i -e 's/4.1.3/4.0.2/' ../build.gradle
+    scanignore:
+      - app/src/main/assets/databases/*.zip
+
+  - versionName: 3.6.6
+    versionCode: 680
+    commit: 1578acaa330b353121715605698b021cc1f2b8e9
+    subdir: app
+    gradle:
+      - rel
+    prebuild:
+      - sed -i -e '/applicationVariants.all/,/^    }/d' -e '/signingConfig/d' build.gradle
+      - sed -i -e 's/4.1.3/4.0.2/' ../build.gradle
+    scanignore:
+      - app/src/main/assets/databases/*.zip
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/build.gradle|appVersionCode = (\d+)|.|appVersionName = "(.*)"
+CurrentVersion: 3.6.6
+CurrentVersionCode: 680

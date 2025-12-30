@@ -1,0 +1,179 @@
+AntiFeatures:
+  - NonFreeAssets
+Categories:
+  - Theming
+  - Wallpaper
+License: Apache-2.0
+AuthorName: Ivan D'Ortenzio
+AuthorEmail: enrico.dortenzio@hotmail.it
+SourceCode: https://github.com/enricocid/VectorifyDaHome
+IssueTracker: https://github.com/enricocid/VectorifyDaHome/issues
+Changelog: https://github.com/enricocid/VectorifyDaHome/releases
+
+AutoName: Vectorify da home!
+
+RepoType: git
+Repo: https://github.com/enricocid/VectorifyDaHome
+
+Builds:
+  - versionName: 1.7.3
+    versionCode: 37
+    commit: v1.7.3
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 39
+    commit: v1.8.1
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.8.2
+    versionCode: 40
+    commit: v1.8.2
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.8.3
+    versionCode: 41
+    commit: v1.8.3
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.8.4
+    versionCode: 42
+    commit: v1.8.4
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.8.5
+    versionCode: 43
+    commit: v1.8.5
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.8.6
+    versionCode: 44
+    commit: v1.8.6
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.8.7
+    versionCode: 45
+    commit: v1.8.7
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.8.8
+    versionCode: 46
+    commit: v1.8.8
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.9.1
+    versionCode: 49
+    commit: v1.9.1
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.9.2
+    versionCode: 50
+    commit: v1.9.2
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.9.3
+    versionCode: 51
+    commit: v1.9.3
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.9.4
+    versionCode: 52
+    commit: 3181b0e02dc15e4118c0b4c2bfb11347e3bdc8bc
+    subdir: project/app
+    gradle:
+      - yes
+
+  - versionName: 1.9.5
+    versionCode: 53
+    commit: b198770071b15a7b487fd9539a8503fead8214ca
+    subdir: project/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.9.5.1
+    versionCode: 54
+    commit: 9ff36b456dacd9eb8aab3bb9d2f62f81562ecaaf
+    subdir: project/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.9.6.1
+    versionCode: 56
+    commit: 8bef5cb21fbecc8d6fc5d21b65e770c21395c401
+    subdir: project/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.9.6.2
+    versionCode: 57
+    commit: 1cb0aab4d520f146701df62d8ca267a3f6ed59fd
+    subdir: project/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.9.6.3
+    versionCode: 58
+    commit: 03e3f14a30dd4ec3da6e5e14e7f1b40cfb3849f8
+    subdir: project/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.9.6.4
+    versionCode: 59
+    commit: 107872cd26dbb8179eb5724e395aa53362c679a0
+    subdir: project/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.9.6.4
+CurrentVersionCode: 59

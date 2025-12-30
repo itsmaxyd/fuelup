@@ -1,0 +1,1 @@
+Lader dig åbne en HTML-fil eller et billede fra en filhåndtering i en browser

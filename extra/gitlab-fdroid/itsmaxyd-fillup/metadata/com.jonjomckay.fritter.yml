@@ -1,0 +1,858 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Twitter, which is proprietary.
+Categories:
+  - Internet
+License: MIT
+AuthorName: Jonjo McKay
+AuthorEmail: jonjo@jonjomckay.com
+WebSite: https://fritter.cc/
+SourceCode: https://github.com/jonjomckay/fritter
+IssueTracker: https://github.com/jonjomckay/fritter/issues
+Translation: https://hosted.weblate.org/projects/fritter/
+Changelog: https://github.com/jonjomckay/fritter/releases
+
+AutoName: Fritter
+
+RepoType: git
+Repo: https://github.com/jonjomckay/fritter
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 20210205
+    commit: v1.0.1
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@1.22.6
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.1.0
+    versionCode: 20210316
+    commit: v1.1.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@1.22.6
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.0.0
+    versionCode: 20210419
+    commit: v2.0.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.1.0
+    versionCode: 20210422
+    commit: v2.1.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.2.0
+    versionCode: 20210424
+    commit: v2.2.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.2.1
+    versionCode: 20210427
+    commit: v2.2.1
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.2.2
+    versionCode: 20210503
+    commit: v2.2.2
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.3.0
+    versionCode: 20210507
+    commit: v2.3.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.3.1
+    versionCode: 20210512
+    commit: v2.3.1
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.4.0
+    versionCode: 20210514
+    commit: v2.4.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.5.0
+    versionCode: 20210516
+    commit: v2.5.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.6.0
+    versionCode: 20210519
+    commit: v2.6.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.6.1
+    versionCode: 20210521
+    commit: v2.6.1
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.6.2
+    versionCode: 20210523
+    commit: v2.6.2
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.7.0
+    versionCode: 20210528
+    commit: v2.7.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.7.1
+    versionCode: 20210529
+    commit: v2.7.1
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.0.4
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.8.0
+    versionCode: 20210610
+    commit: v2.8.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.9.0
+    versionCode: 20210611
+    commit: v2.9.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.10.0
+    versionCode: 20210615
+    commit: v2.10.0
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.11.2
+    versionCode: 20210620
+    commit: 5f9a2403ce9abeaf11776a46984c54e93c5f7959
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.12.0
+    versionCode: 20210625
+    commit: 331a9136ca8a2d9aaf64b896361616799a6c59aa
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.13.0
+    versionCode: 20210716
+    commit: e93db2db278dfec260a0c23b3f27bdbbf1e1670a
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.14.0
+    versionCode: 20210910
+    commit: fc42370039eb509a68020f9f5ecdf7d2a5305997
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.14.1
+    versionCode: 20210926
+    commit: 376f7fd7aca9b5abe9f95c4dbdd012b4be4eda1e
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.15.0
+    versionCode: 20211018
+    commit: 871a3648ce0760df6ae65843cb1cd7b9b989ca30
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@2.2.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons
+
+  - versionName: 2.15.1
+    versionCode: 202110190
+    commit: a0e97834d38e4ac8afa018c7c775c12d52118454
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@2.5.3
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 2.15.1
+    versionCode: 202110191
+    commit: a0e97834d38e4ac8afa018c7c775c12d52118454
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@2.5.3
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 2.15.1
+    versionCode: 202110192
+    commit: a0e97834d38e4ac8afa018c7c775c12d52118454
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@2.5.3
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 2.16.0
+    versionCode: 202201180
+    commit: f6cfbe924951a19f2fce0539680f2b3ead9a8d2d
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@2.8.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 2.16.0
+    versionCode: 202201181
+    commit: f6cfbe924951a19f2fce0539680f2b3ead9a8d2d
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@2.8.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 2.16.0
+    versionCode: 202201182
+    commit: f6cfbe924951a19f2fce0539680f2b3ead9a8d2d
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@2.8.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 2.16.3
+    versionCode: 202201230
+    commit: 5618e3f17bbec51fc5499a736a31cfd62d047fb7
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@2.8.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 2.16.3
+    versionCode: 202201231
+    commit: 5618e3f17bbec51fc5499a736a31cfd62d047fb7
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@2.8.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 2.16.3
+    versionCode: 202201232
+    commit: 5618e3f17bbec51fc5499a736a31cfd62d047fb7
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@2.8.1
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 3.0.0-beta1
+    versionCode: 202208200
+    commit: a49e9f478a22c76b0dcb8d647bae7d7e872e592e
+    sudo:
+      - apt-get update
+      - apt-get install -y librsvg2-bin openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 3.0.0-beta1
+    versionCode: 202208201
+    commit: a49e9f478a22c76b0dcb8d647bae7d7e872e592e
+    sudo:
+      - apt-get update
+      - apt-get install -y librsvg2-bin openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 3.0.0-beta1
+    versionCode: 202208202
+    commit: a49e9f478a22c76b0dcb8d647bae7d7e872e592e
+    sudo:
+      - apt-get update
+      - apt-get install -y librsvg2-bin openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 3.0.0-beta3
+    versionCode: 202209040
+    commit: 145c6f905c21f90165756fc511128d6c6dccdc3c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 3.0.0-beta3
+    versionCode: 202209041
+    commit: 145c6f905c21f90165756fc511128d6c6dccdc3c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 3.0.0-beta3
+    versionCode: 202209042
+    commit: 145c6f905c21f90165756fc511128d6c6dccdc3c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 3.0.0-beta5
+    versionCode: 202211260
+    commit: 30d3e242ac85d081a95abc16246f31b2fc6ae1fe
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@3.3.2
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 3.0.0-beta5
+    versionCode: 202211261
+    commit: 30d3e242ac85d081a95abc16246f31b2fc6ae1fe
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@3.3.2
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 3.0.0-beta5
+    versionCode: 202211262
+    commit: 30d3e242ac85d081a95abc16246f31b2fc6ae1fe
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@3.3.2
+    rm:
+      - ios
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 2.16.4
+    versionCode: 202212090
+    commit: 4423f91b2d7cd88067128db7eeec997b239df3f0
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@2.8.1
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - sed -i -e 's/2.1.6/2.1.7/' pubspec.lock
+      - sed -i -e 's/1.4.32/1.7.0/' -e 's/4.1.3/7.2.1/' android/build.gradle
+      - sed -i -e 's/6.8.3/7.3.3/' android/gradle/wrapper/gradle-wrapper.properties
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 2.16.4
+    versionCode: 202212091
+    commit: 4423f91b2d7cd88067128db7eeec997b239df3f0
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@2.8.1
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - sed -i -e 's/2.1.6/2.1.7/' pubspec.lock
+      - sed -i -e 's/1.4.32/1.7.0/' -e 's/4.1.3/7.2.1/' android/build.gradle
+      - sed -i -e 's/6.8.3/7.3.3/' android/gradle/wrapper/gradle-wrapper.properties
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 2.16.4
+    versionCode: 202212092
+    commit: 4423f91b2d7cd88067128db7eeec997b239df3f0
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@2.8.1
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - sed -i -e 's/2.1.6/2.1.7/' pubspec.lock
+      - sed -i -e 's/1.4.32/1.7.0/' -e 's/4.1.3/7.2.1/' android/build.gradle
+      - sed -i -e 's/6.8.3/7.3.3/' android/gradle/wrapper/gradle-wrapper.properties
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 3.0.0-beta9
+    versionCode: 300002014
+    commit: 09dd5378c695697b5f5314eaad360f248d8d2c98
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 3.0.0-beta9
+    versionCode: 300003014
+    commit: 09dd5378c695697b5f5314eaad360f248d8d2c98
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 3.0.0-beta9
+    versionCode: 300005014
+    commit: 09dd5378c695697b5f5314eaad360f248d8d2c98
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - ios
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter packages pub run flutter_oss_licenses:generate.dart
+      - $$flutter$$/bin/flutter packages pub run intl_utils:generate
+      - $$flutter$$/bin/flutter build apk --release --no-tree-shake-icons --split-per-abi
+        --target-platform=android-x64
+
+MaintainerNotes: Sentry is configured opt-in. See https://github.com/jonjomckay/fritter/blob/f24406be6c3245b398d4bb299b8192df1f04096a/lib/catcher/sentry_handler.dart
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2.16.4
+CurrentVersionCode: 202212092

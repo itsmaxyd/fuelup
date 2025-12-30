@@ -1,0 +1,518 @@
+Categories:
+  - Games
+License: Apache-2.0
+AuthorName: Nikita Shakarun
+AuthorEmail: nikita36078@gmail.com
+WebSite: https://github.com/nikita36078/J2ME-Loader/wiki
+SourceCode: https://github.com/nikita36078/J2ME-Loader
+IssueTracker: https://github.com/nikita36078/J2ME-Loader/blob/HEAD/README.md/issues
+Translation: https://crowdin.com/project/j2me-loader
+Donate: https://www.paypal.me/nikita36078
+
+AutoName: J2ME Loader
+
+RepoType: git
+Repo: https://github.com/nikita36078/J2ME-Loader.git
+
+Builds:
+  - versionName: 1.3.1
+    versionCode: 46
+    commit: 1.3.1
+    subdir: app
+    gradle:
+      - open
+    prebuild:
+      - sed -i -e 's/28.0.0-rc1/28.0.0/' ../build.gradle
+      - sed -i -e '/versionNameSuffix/d' build.gradle
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.3.3
+    versionCode: 48
+    commit: 1.3.3
+    subdir: app
+    gradle:
+      - open
+    prebuild: sed -i -e '/versionNameSuffix/d' build.gradle
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.3.4
+    versionCode: 49
+    commit: 1.3.4
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.3.6
+    versionCode: 51
+    commit: 1.3.6
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.3.7
+    versionCode: 52
+    commit: 1.3.7
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.3.8
+    versionCode: 55
+    commit: 1.3.8
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.3.9
+    versionCode: 56
+    commit: 1.3.9
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.4.0
+    versionCode: 57
+    commit: 1.4.0
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.4.1
+    versionCode: 58
+    commit: 1.4.1
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.4.2
+    versionCode: 59
+    commit: 1.4.2
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.4.3
+    versionCode: 60
+    commit: 1.4.3
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.4.4
+    versionCode: 61
+    commit: 1.4.4
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.4.5
+    versionCode: 62
+    commit: 1.4.5
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.4.6
+    versionCode: 63
+    commit: 1.4.6
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.4.7
+    versionCode: 64
+    commit: 1.4.7
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.4.9
+    versionCode: 66
+    commit: 1.4.9
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.5.0
+    versionCode: 67
+    commit: 1.5.0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.5.1
+    versionCode: 68
+    commit: 1.5.1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.5.2
+    versionCode: 69
+    commit: 1.5.2
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.5.3
+    versionCode: 70
+    commit: 1.5.3
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.5.4
+    versionCode: 71
+    commit: 1.5.4
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.5.5
+    versionCode: 72
+    commit: 1.5.5
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.5.6
+    versionCode: 73
+    commit: 1.5.6
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.5.9
+    versionCode: 76
+    commit: 1.5.9
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.6.0
+    versionCode: 77
+    commit: 1.6.0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.6.1-fixed2
+    versionCode: 80
+    commit: 1.6.1-fixed2
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.6.2
+    versionCode: 81
+    commit: 1.6.2
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.6.3
+    versionCode: 82
+    commit: 1.6.3
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/MyClassLoader.java
+    ndk: r16b
+
+  - versionName: 1.6.7
+    versionCode: 86
+    commit: 1.6.7
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r21d
+
+  - versionName: 1.6.8
+    versionCode: 87
+    commit: 1.6.8
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r21d
+
+  - versionName: 1.6.9
+    versionCode: 88
+    commit: 1.6.9
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/5.2-/5.1-/' ../gradle/wrapper/gradle-wrapper.properties
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r21d
+
+  - versionName: 1.7.0
+    versionCode: 89
+    commit: 1.7.0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/21.3.6528147/21.4.7075529/' build.gradle
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r21e
+
+  - versionName: 1.7.2
+    versionCode: 91
+    commit: e2d805447741a3c4f3479abc1153a123ad81a03e
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.7.3
+    versionCode: 92
+    commit: d72ed5e251220878d351372fc434c743a1cbf86c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.7.4
+    versionCode: 93
+    commit: 4f4fd7e90e6d68f48ad288af67cd70208a3b8f39
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.7.5
+    versionCode: 94
+    commit: 1aed1f45fa79929c0d1c4ea919fc0492aa8c9c14
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.7.6
+    versionCode: 95
+    commit: b76aaaec142173e3b509c737aecb1b1386f0de41
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.7.7
+    versionCode: 96
+    commit: d64d50ef695301746d6b972b0d455c89e8f9f43e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.7.8
+    versionCode: 97
+    commit: cea6588b9f54893131f3246ba9d396e4c5596f54
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.7.9
+    versionCode: 98
+    commit: 0d4e76ea86af854acab39f37e87764e5be9ebf6c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.8.0
+    versionCode: 99
+    commit: 20469809def7958969294a522f2c154c606d0910
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.8.1
+    versionCode: 100
+    commit: ec51bc25574b4ff43f86492e7b7cd1cba0fe957f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystoreProps/d' build.gradle
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+  - versionName: 1.8.2
+    versionCode: 101
+    commit: 7e978c5ddee51a13d78ac59fa059d773d9de6b48
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystoreProps/d' build.gradle
+    scanignore:
+      - app/src/main/java/javax/microedition/shell/AppClassLoader.java
+    ndk: r22b
+
+MaintainerNotes: 'The class loader is needed for the main function of the app: load
+  JARs.'
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.8.2
+CurrentVersionCode: 101

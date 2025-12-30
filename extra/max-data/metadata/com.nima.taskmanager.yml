@@ -1,0 +1,36 @@
+Categories:
+  - Task
+  - Writing
+License: MIT
+AuthorName: Nima Khajehpour
+AuthorEmail: nima1038khajehpour@gmail.com
+SourceCode: https://github.com/NimaKhajehpour/TaskManager
+IssueTracker: https://github.com/NimaKhajehpour/TaskManager/issues
+
+AutoName: Task Manager
+
+RepoType: git
+Repo: https://github.com/NimaKhajehpour/TaskManager
+Binaries: https://github.com/NimaKhajehpour/TaskManager/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 43607839707e36dad45846add5d63a546a248e1a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 3
+    commit: b64f831762ad48554d6d6f79e998f08c372de5d1
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 078cf684a4a79572dcced6a269b668417b2a6d0f1bb857cc1e78dce45d0b82f7
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.1
+CurrentVersionCode: 3

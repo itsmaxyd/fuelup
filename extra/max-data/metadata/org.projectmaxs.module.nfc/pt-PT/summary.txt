@@ -1,0 +1,1 @@
+Módulo NFC relata informações sobre tags NFC digitalizados e o subsistema de NFC

@@ -1,0 +1,167 @@
+Categories:
+  - Keyboard & IME
+  - System
+License: Apache-2.0
+AuthorName: Ravi Agarwal
+AuthorEmail: 8vim@protonmail.com
+SourceCode: https://github.com/8VIM/8VIM
+IssueTracker: https://github.com/8VIM/8VIM/issues
+
+AutoName: 8Vim
+
+RepoType: git
+Repo: https://github.com/8VIM/8VIM.git
+
+Builds:
+  - versionName: iteration-3
+    versionCode: 4
+    commit: iteration-3
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: iteration-5
+    versionCode: 5
+    commit: iteration-5
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: iteration-6
+    versionCode: 6
+    commit: Iteration-6
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: iteration-7
+    versionCode: 7
+    commit: iteration-7
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: iteration-8
+    versionCode: 8
+    commit: 94d1973644a051aac170f3178d33160094eea607
+    subdir: 8vim
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: iteration-9
+    versionCode: 9
+    commit: e1dbda4ad376e1658f95211040647be1878ad752
+    subdir: 8vim
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: iteration-11
+    versionCode: 11
+    commit: 65fd29f20f66f0ccca56a28f7ffec14f96ee7e15
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: iteration-12
+    versionCode: 12
+    commit: 32411a6989c41be4ca54d4c4795e77f4d8be3ee8
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: iteration-12.2
+    versionCode: 15
+    commit: 7deea06ee621b94a92122bd8f61fe6a8b3f42a9b
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: iteration-13
+    versionCode: 16
+    commit: 510ee0b227ad3ef8c5e15c1b0919e9a1008ff080
+    subdir: 8vim
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.14.0
+    versionCode: 140000
+    commit: v0.14.0
+    subdir: 8vim
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.16.1
+    versionCode: 160100
+    commit: v0.16.1
+    subdir: 8vim
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.16.2
+    versionCode: 160200
+    commit: v0.16.2
+    subdir: 8vim
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.16.3
+    versionCode: 160300
+    commit: v0.16.3
+    subdir: 8vim
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.17.3
+    versionCode: 170300
+    commit: v0.17.3
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: 0.17.4
+    versionCode: 170400
+    commit: v0.17.4
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: 0.17.5
+    versionCode: 170500
+    commit: v0.17.5
+    subdir: 8vim
+    gradle:
+      - yes
+
+AutoUpdateMode: Version v%v
+UpdateCheckMode: HTTP
+UpdateCheckData: https://8vim.github.io/version.json|"version_code":\s*(\d+)|.|"version_name":\s*"(.*)"
+CurrentVersion: 0.17.5
+CurrentVersionCode: 170500

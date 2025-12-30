@@ -1,0 +1,110 @@
+Categories:
+  - Multimedia
+  - Sports & Health
+License: GPL-3.0-or-later
+AuthorName: C. Liam Brown
+AuthorEmail: liam@cliambrown.com
+AuthorWebSite: https://cliambrown.com/
+SourceCode: https://github.com/cliambrown/EasyNoise
+IssueTracker: https://github.com/cliambrown/EasyNoise/issues
+Changelog: https://github.com/cliambrown/EasyNoise/releases
+Donate: https://ko-fi.com/cliambrown
+
+AutoName: Easy Noise
+
+RepoType: git
+Repo: https://github.com/cliambrown/EasyNoise
+
+Builds:
+  - versionName: '0.2'
+    versionCode: 2
+    commit: v0.2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.3'
+    versionCode: 3
+    commit: d766515ac738725fc368c098533118bfebe8dd7f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.4'
+    versionCode: 4
+    commit: dcca1a306342af69f0f50208c93397a1004744fc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.5'
+    versionCode: 5
+    commit: 3b5b741dad1934e30c788d15fd7443868f6e4280
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.6'
+    versionCode: 6
+    commit: 9cc776dde7ac8fb888ad3ddf4da1b77294463cb0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.7'
+    versionCode: 7
+    commit: 6bce3fa276be1daddf71ee8b65b0c2569f210f58
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.8'
+    versionCode: 8
+    commit: 9297c057f7d282344298e4c12d86428538920487
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '0.10'
+    versionCode: 10
+    commit: 1c359a26dcea63d93e7a142851f9649f81596f63
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '0.10'
+CurrentVersionCode: 10

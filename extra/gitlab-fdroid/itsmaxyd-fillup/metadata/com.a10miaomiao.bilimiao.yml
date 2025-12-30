@@ -1,0 +1,170 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Rely on Bilibili.
+Categories:
+  - Internet
+  - Multimedia
+  - Online Media Player
+License: GPL-3.0-only
+AuthorName: 10喵喵
+AuthorWebSite: https://10miaomiao.cn
+SourceCode: https://github.com/10miaomiao/bilimiao2
+Changelog: https://github.com/10miaomiao/bilimiao2/releases
+
+AutoName: bilimiao
+
+RepoType: git
+Repo: https://github.com/10miaomiao/bilimiao2.git
+Binaries: https://github.com/10miaomiao/bilimiao2/releases/download/%v/bilimiao-foss-%v.apk
+
+Builds:
+  - versionName: 2.3.8.3
+    versionCode: 103
+    commit: 5512221db5422065e1d6baed26f256e6c9ac0683
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.3.9
+    versionCode: 104
+    commit: 86998334f08298ef46a93525976892a72c36fca9
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.3.10
+    versionCode: 105
+    commit: bd27381192009426c981f7a0de6a9684b5c31a0c
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.3.11
+    versionCode: 106
+    commit: f7012e13d5548595fa202dfd298f3389d20b34b6
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.3.12
+    versionCode: 107
+    commit: b54f455e5e4f0df45142f248cce54b9af97c4bd1
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.4.3
+    versionCode: 111
+    commit: 68ba2cb3dabf5912070a29eb5ebe4f7ac474b97f
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.4.4
+    versionCode: 112
+    commit: e249231adbabe832b46cbec7899eb4ffb5c10ac2
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.4.5
+    versionCode: 113
+    commit: 30b8060e98e390a710db8ce6d49a75a17d4ee6ae
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.4.6
+    versionCode: 114
+    commit: 69aaa86a27552b35ad035aec1bcc6c401425653f
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.4.7
+    versionCode: 115
+    commit: e73f3d428b61b491691535e9be41163a5e7d9d3f
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.4.8
+    versionCode: 116
+    commit: 0549a5d435b21b7ee11866fe85f7a8d9a5719971
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+  - versionName: 2.4.8.1
+    versionCode: 117
+    commit: b14f2fecbf931a6376c47008553fcb1cb099990c
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/libs/*.aar
+    prebuild: sed -i -e '/aliyun/d' ../*.gradle.kts
+    scandelete:
+      - bilimiao-build/build/
+
+AllowedAPKSigningKeys: d30ba38d50a8d2dc9a0ab2c5a6df8409163cc479d300cc64ba0e3857f0ab0ddf
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[\d.]+$
+CurrentVersion: 2.4.8.1
+CurrentVersionCode: 117

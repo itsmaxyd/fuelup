@@ -1,0 +1,313 @@
+Categories:
+  - Internet
+  - Security
+  - VPN & Proxy
+License: GPL-3.0-or-later
+AuthorName: SURF Cooperative
+AuthorEmail: eduvpn-support@lists.geant.org
+AuthorWebSite: https://www.eduvpn.org/
+WebSite: https://eduvpn.org/
+SourceCode: https://codeberg.org/eduVPN/android
+IssueTracker: https://codeberg.org/eduVPN/android/issues
+Translation: https://docs.eduvpn.org/server/v3/contribute-translations.html#android
+Changelog: https://codeberg.org/eduVPN/android/src/branch/master/CHANGES.md
+
+AutoName: eduVPN
+
+RepoType: git
+Repo: https://codeberg.org/eduVPN/android.git
+
+Builds:
+  - versionName: 2.0.5
+    versionCode: 18
+    commit: 2.0.5
+    submodules: true
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    ndk: r21
+
+  - versionName: 2.99.0
+    versionCode: 19
+    commit: 42853cb51ddd16f1acff84205f4bb7c170b70117
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r21
+
+  - versionName: 3.0.0
+    versionCode: 20
+    commit: 11aa493e361cc123bbf73496328cd20f31f799aa
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r21
+
+  - versionName: 3.0.1
+    versionCode: 21
+    commit: fcb2cb2a625c45934183f059539a4b151b641598
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y swig
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r25b
+
+  - versionName: 3.1.0
+    versionCode: 22
+    commit: 684545ed3ad97bd05a81cf2e72e7af8d1c332ef0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y swig
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r25b
+
+  - versionName: 3.1.1
+    versionCode: 23
+    commit: 0ea27c9368f4f4d91a4a88491f14c55eadd5f386
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y swig
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r25b
+
+  - versionName: 3.2.0
+    versionCode: 24
+    commit: 9bee19dda175c65ca3234f8ea7e317529183847c
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y swig make
+      - apt-get install -y -t bullseye-backports golang-go
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    prebuild: sed -i -e '/signingConfigs/d' ics-openvpn/main/build.gradle.kts
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r26b
+
+  - versionName: 3.2.1
+    versionCode: 25
+    commit: a27fd860d97963925e8cb84aaa9250bbacd406b3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y swig make
+      - apt-get install -y -t bullseye-backports golang-go
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    prebuild: sed -i -e '/signingConfigs/d' ics-openvpn/main/build.gradle.kts
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r26b
+
+  - versionName: 3.2.2
+    versionCode: 26
+    commit: fbf697946ac1ed57b41f9a94ae3209fa040e4a2b
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y swig make
+      - apt-get install -y -t bullseye-backports golang-go
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    prebuild: sed -i -e '/signingConfigs/d' ics-openvpn/main/build.gradle.kts
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r26b
+
+  - versionName: 3.3.0
+    versionCode: 27
+    commit: d3ee90d8fed4b09f6a236e41ad08e97073c71c5d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go make swig
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    prebuild: sed -i -e '/signingConfigs/d' ics-openvpn/main/build.gradle.kts
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r26b
+
+  - versionName: 3.3.2
+    versionCode: 29
+    commit: 069b68ee4a4f9b5ed8dae1ce79335c5501d93b79
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go make swig
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    prebuild: sed -i -e '/signingConfigs/d' ics-openvpn/main/build.gradle.kts
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+    ndk: r26b
+
+  - versionName: 3.3.4
+    versionCode: 31
+    commit: 04b3de8379ff81ea1648ce94f8a1eb29f6c36213
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make swig
+      - apt-get install -y -t bookworm-backports golang-go
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    prebuild: sed -i -e '/signingConfigs/d' ics-openvpn/main/build.gradle.kts
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+      - wireguard/tunnel/tools/wireguard-tools/contrib/external-tests/rust/Cargo.toml
+
+  - versionName: 3.4.0
+    versionCode: 32
+    commit: 5da24626bd9af66b0313e95822f64533d2007895
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make minisign swig
+      - apt-get install -y -t bookworm-backports golang-go
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    prebuild: sed -i -e '/signingConfigs/d' ics-openvpn/main/build.gradle.kts
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+      - wireguard/tunnel/tools/wireguard-tools/contrib/external-tests/rust/Cargo.toml
+
+  - versionName: 3.5.0
+    versionCode: 33
+    commit: 8c1a8b1edbd0a88c201d7fdbc4a069d5b150d530
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make minisign swig
+      - apt-get install -y -t bookworm-backports golang-go
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    prebuild: sed -i -e '/signingConfigs/d' ics-openvpn/main/build.gradle.kts
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+      - wireguard/tunnel/tools/wireguard-tools/contrib/external-tests/rust/Cargo.toml
+
+  - versionName: 3.5.1
+    versionCode: 34
+    commit: 449e747e29d654851953a092b6389669c5b7f3ac
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make minisign swig
+      - apt-get install -y -t bookworm-backports golang-go
+    gradle:
+      - basic
+    output: app/build/outputs/apk/basic/release/app-basic-release-unsigned.apk
+    rm:
+      - ics-openvpn/main/src/main/cpp/mbedtls/programs/fuzz
+      - ics-openvpn/main/src/main/cpp/mbedtls/tests
+      - ics-openvpn/main/src/main/cpp/openvpn3/test/unittests
+    prebuild: sed -i -e '/signingConfigs/d' ics-openvpn/main/build.gradle.kts
+    scandelete:
+      - ics-openvpn/main/src/main/cpp/lz4
+      - wireguard/tunnel/tools/wireguard-tools/contrib/external-tests/rust/Cargo.toml
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.5.1
+CurrentVersionCode: 34

@@ -1,0 +1,59 @@
+Categories:
+  - Games
+License: GPL-2.0-only
+SourceCode: https://github.com/ge0rg/gamemasterdice
+IssueTracker: https://github.com/ge0rg/gamemasterdice/issues
+
+AutoName: DSA Dice
+Description: |-
+  A dice rolling application with a special focus on the 3D20 role playing game
+  (RPG) system.
+
+  Features:
+
+  * four configurable dice buttons (long-press to configure)
+  * backlog of recent dice rolls
+  * remembers the most commonly used dice
+
+  Supported games:
+
+  * Dungeons & Dragons (DnD)
+  * Neuroshima
+  * Monastyr
+  * Star Wars RPG
+  * Shadowrun
+  * and further d20 and 3d20 titles
+
+RepoType: git
+Repo: https://github.com/ge0rg/gamemasterdice.git
+
+Builds:
+  - versionName: 0.1.5
+    versionCode: 6
+    commit: 852aa5d917a
+
+  - versionName: 0.1.6
+    versionCode: 7
+    commit: 0.1.6
+
+  - versionName: '1.0'
+    versionCode: 8
+    commit: '1.0'
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 10
+    commit: 86daa9ec6a2f71024a27534f762971b98e910a61
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.1'
+CurrentVersionCode: 10

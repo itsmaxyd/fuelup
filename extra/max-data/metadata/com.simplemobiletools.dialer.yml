@@ -1,0 +1,444 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: Tibor Kaputa
+AuthorEmail: hello@simplemobiletools.com
+WebSite: https://simplemobiletools.com
+SourceCode: https://github.com/SimpleMobileTools/Simple-Dialer
+IssueTracker: https://github.com/SimpleMobileTools/Simple-Dialer/issues
+Changelog: https://github.com/SimpleMobileTools/Simple-Dialer/blob/HEAD/CHANGELOG.md
+Donate: https://simplemobiletools.com/donate
+Bitcoin: 19Hc8A7sWGud8sP19VXDC5a5j28UyJfpyJ
+Litecoin: LYACbHTKaM9ZubKQGxJ4NRyVy1gHUuztRP
+
+AutoName: Dialer
+
+RepoType: git
+Repo: https://github.com/SimpleMobileTools/Simple-Dialer.git
+
+Builds:
+  - versionName: 5.0.0
+    versionCode: 1
+    commit: 5.0.0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.1.2
+    versionCode: 4
+    commit: 5.1.2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.1.3
+    versionCode: 5
+    commit: 5.1.3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.2.0
+    versionCode: 7
+    commit: 5.2.0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.2.2
+    versionCode: 9
+    commit: 5.2.2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.3.0
+    versionCode: 10
+    commit: 5.3.0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.4.0
+    versionCode: 11
+    commit: 5.4.0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.4.1
+    versionCode: 12
+    commit: 5.4.1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.5.0
+    versionCode: 14
+    commit: 5.5.0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.5.1
+    versionCode: 15
+    commit: 5.5.1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.5.2
+    versionCode: 16
+    commit: 5.5.2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.5.3
+    versionCode: 17
+    commit: 5.5.3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.5.4
+    versionCode: 18
+    commit: 5.5.4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.6.0
+    versionCode: 19
+    commit: 5.6.0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.6.1
+    versionCode: 20
+    commit: 5.6.1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.6.2
+    versionCode: 21
+    commit: 5.6.2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.6.3
+    versionCode: 22
+    commit: 5.6.3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.6.4
+    versionCode: 23
+    commit: 5.6.4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.7.0
+    versionCode: 24
+    commit: 5.7.0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.8.0
+    versionCode: 25
+    commit: b1408d65261069457cb7a8fb2d126d6443bbe203
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.9.0
+    versionCode: 26
+    commit: 8113972a193f1a2947470d6acfa18a05ead14d2a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.10.0
+    versionCode: 27
+    commit: b05f874bd947c43f85e4ce0e0228467aac8518cb
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.10.1
+    versionCode: 28
+    commit: 837166387888538595c7e43396bb6c35781262ef
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.11.4
+    versionCode: 33
+    commit: 2f626a16dc49e5d5aaf307f0431213b3e81c67ba
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.11.5
+    versionCode: 34
+    commit: 53fc7fd84f993eb716c078d7967ceff3c11d0422
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.12.0
+    versionCode: 35
+    commit: c7c2d9108a297be0bcced80b37477544186f11c1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.13.1
+    versionCode: 37
+    commit: 91c6ac37fe2ef5779fb4d6f53bade114e88b6393
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.13.2
+    versionCode: 38
+    commit: 6d6680875390e41440296eb52753adb4a2e8ae67
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.13.3
+    versionCode: 39
+    commit: ecb19fff517fd27b333616b06763546281843fb6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.14.0
+    versionCode: 40
+    commit: 8627fafb9baf8d3c7d76862b22d2a853780f4922
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.14.1
+    versionCode: 41
+    commit: 126d9cc15dd02b24269d37753adcbe4a05bc51ff
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.15.0
+    versionCode: 42
+    commit: 6392a9266a8d4edd308164149851703634bfeb20
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.15.3
+    versionCode: 43
+    commit: 0b1ef3ee87e03264fe139bc720511a1daeea04e2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.15.4
+    versionCode: 44
+    commit: 764f4a7e667b55a646b5b14e75c1aca32ba52ca0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.15.5
+    versionCode: 45
+    commit: 8796d06b045f6d9c6f5f61cf1090884c7b40b2a2
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.16.0
+    versionCode: 46
+    commit: 723fceefecef8347e7af6e78deb80c304bac9ebf
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.0
+    versionCode: 47
+    commit: a31ee16b0e1a873273d8da051e7e033b91545f68
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.1
+    versionCode: 48
+    commit: 719ee1f4b97241b961fb61596b65f5733ec55133
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.2
+    versionCode: 49
+    commit: 9c5ada75e9176aafff26087d38e1e12d5df9fb8a
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.3
+    versionCode: 50
+    commit: 5440c12a2a6dbb6dd3306b374ddf6343240afcf4
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.5
+    versionCode: 52
+    commit: 0f3d24d6e5f4c451a4444fe9da87f4a394c7cfd3
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.6
+    versionCode: 53
+    commit: d16c3183f272522d149a424e4897cec26dcb06e0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.7
+    versionCode: 54
+    commit: 8fa124680aff1989ddea3d86c39e63f0d7af0d1f
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.8
+    versionCode: 55
+    commit: 5a9de64ccd5c57ca01b4f88beb1b67950b94b3e0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.18.0
+    versionCode: 56
+    commit: 56d0a0ca07a17e43a38e29a2082edca04bfa63c1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.18.1
+    versionCode: 57
+    commit: 15b34495c5262bf20a454c3ecce9f05b8da3372c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 5.18.1
+CurrentVersionCode: 57

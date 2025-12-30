@@ -1,0 +1,51 @@
+Categories:
+  - System
+License: MIT
+AuthorName: Lukas Pieper
+SourceCode: https://github.com/lukaspieper/Gcam-Services-Provider
+IssueTracker: https://github.com/lukaspieper/Gcam-Services-Provider/issues
+Changelog: https://github.com/lukaspieper/Gcam-Services-Provider/releases
+
+Name: Gcam Services Provider (Basic)
+AutoName: Gcam Services Provider
+
+RepoType: git
+Repo: https://github.com/lukaspieper/Gcam-Services-Provider
+
+Builds:
+  - versionName: '1.5'
+    versionCode: 6
+    commit: v1.5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - basic
+
+  - versionName: 1.5.2
+    versionCode: 8
+    commit: b9857801f9fa562b0a773b3d3466a6e1556bfa4a
+    subdir: app
+    gradle:
+      - basic
+
+  - versionName: 1.6.0
+    versionCode: 9
+    commit: ee192e61ca9a39a5072228db61e31d21f992b55a
+    subdir: app
+    gradle:
+      - basic
+
+  - versionName: 1.6.1
+    versionCode: 100000010
+    commit: 4f357e0a00c5242fdd790b95631c5caab82c7c14
+    subdir: app
+    gradle:
+      - basic
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.6.1
+CurrentVersionCode: 100000010

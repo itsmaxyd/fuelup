@@ -1,0 +1,86 @@
+Categories:
+  - System
+License: Apache-2.0
+WebSite: https://support.google.com/accessibility/android/answer/6283677?hl=en
+SourceCode: https://github.com/google/talkback
+
+Name: TalkBack
+Description: |-
+  TalkBack is an Accessibility Service that helps blind and vision-impaired users
+  interact with their devices more easily.
+
+  This application adds spoken, audible, and vibration feedback to your device.
+
+  It comes pre-installed on many devices so you won't be able to install this if
+  that is the case.
+
+  It's only activated if you explicitly turn on Accessibility:
+  <ol>
+  <li>Go to Settings</li>
+  <li>Select Accessibility</li>
+  <li>Enable TalkBack checkboxes</li>
+  </ol>
+
+  For Android older then 8.0 use version 5.0.7_aosp.
+  For Android newer then 8.0 use version 2021-04-23.
+
+RepoType: git
+Repo: https://github.com/google/talkback.git
+
+Builds:
+  - versionName: 5.0.7_aosp
+    versionCode: 50007000
+    commit: 12bdf2063e121a021f050c94cf5ebb2489c8af8a
+    patch:
+      - play-services-50007000.patch
+    output: build/outputs/apk/com.android.talkback-aosp-release.apk
+    rm:
+      - libs
+    build:
+      - gradle assembleRelease
+      - zip -d build/outputs/apk/com.android.talkback-aosp-release.apk 'META-INF/*.*'
+
+  - versionName: '2021-04-23'
+    versionCode: 370044210
+    commit: 9db811af90009e625e8e6c75e350cabeb906853d
+    patch:
+      - 370044210-Remove-GMS-dependency.patch
+    gradle:
+      - yes
+    rm:
+      - talkback/src/main/java/com/google/android/accessibility/talkback/PrimesController.java
+      - utils/src/main/java/com/google/android/accessibility/utils/ocr/OCRController.java
+      - utils/src/main/java/com/google/android/accessibility/utils/ocr/OCRInfo.java
+    prebuild:
+      - sed -i "39i\        versionCode 370044210" build.gradle
+      - sed -i "40i\        versionName \"2021-04-23\"" build.gradle
+
+  - versionName: TfPu_release_15_1-2024_10_17_0000
+    versionCode: 370044211
+    commit: 26a27dc009d5b3605e744222541f045a3c24e038
+    sudo:
+      - apt-get update
+      - apt-get install -y make file
+    patch:
+      - 370044211-Remove-Google-non-free-dependencies.patch
+    gradle:
+      - phone
+    rm:
+      - talkback/src/main/java/com/google/android/accessibility/talkback/PrimesController.java
+      - talkback/src/main/java/com/google/android/accessibility/talkback/imagecaption/CharacterCaptionRequest.java
+      - utils/src/main/java/com/google/android/accessibility/utils/ocr/OcrController.java
+      - utils/src/main/java/com/google/android/accessibility/utils/ocr/OcrInfo.java
+    prebuild:
+      - mkdir -p gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.6.4-bin.zip'
+        > gradle/wrapper/gradle-wrapper.properties
+      - sed -i -e 's/BUILD_TIMESTAMP = .*/BUILD_TIMESTAMP = "2024_10_17_0000"/' -e
+        '/defaultConfig/a versionCode $$VERCODE$$' build.gradle
+
+MaintainerNotes: com/google/android/libraries/accessibility might trigger the scanner
+  but are part of the source
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '2024-10-17'
+CurrentVersionCode: 370044211

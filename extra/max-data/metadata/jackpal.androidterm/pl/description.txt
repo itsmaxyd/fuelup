@@ -1,0 +1,32 @@
+Dostęp do wiersza poleceń Androida.
+
+Nowa wersja popularnej aplikacji „Android Terminal Emulator”. Ten sam program, nowa nazwa.
+
+Główne cechy
+
++ Pełna emulacja konsoli Linux.
++ Wiele okien.
++ Skróty do uruchamiania.
++ Wsparcie UTF-8. (arabski, chiński, grecki, hebrajski, japoński, koreański, rosyjski, tajski, itp.)
++ Całkowicie za darmo. Żadnych reklam, żadnych zakupów w aplikacji, denerwujących ekranów, nic.
+
+Szybkie FAQ:
+
++ Jeżeli masz problem z wprowadzaniem tekstu, zainstaluj „Hacker's Keyboard IME” (Szczególnie na urządzeniach Samsung i HTC)
++ to nie jest emulator gier.
++ Ta aplikacja nie da Ci praw roota i nie zmieni IMEI Twojego telefonu.
++ Musisz znać (lub być gotowym do nauki), jak korzystać z linii poleceń Linuksa, aby korzystać z tej aplikacji.
++ Możesz zainstalować zestaw narzędzi wiersza poleceń, takich jak „Busy Box” lub „Debian chroot”, aby dodać komendy niedostępne standardowo na urządzeniach z systemem Androd.
++ Jeśli podczas instalacji tej aplikacji w systemie Android 5.0 pojawi się błąd -505, oznacza to, że inna aplikacja korzysta z tych samych uprawnień. Będziesz musiał ją odinstalować przed instalacją Terminal Emulator for Android. (Urzytkownicy zgłaszają, że „jrummy's Toolbox Pro” powoduje ten problem.)
+
+Chcesz wiedzieć więcej o Terminal Emulator for Android?
+
+Dołącz do społeczności G+: #Android Terminal Emulator
+
+https://plus.google.com/u/0/communities/106164413936367578283
+
+Albo sprawdź dokumentację na wiki:
+
+http://github.com/jackpal/Android-Terminal-Emulator/wiki
+
+Chcesz dodać lub ulepszyć tłumaczenie Terminal Emulator for Android? Zajrzyj na [https://github.com/jackpal/Android-Terminal-Emulator/wiki/Translating-to-Other-Languages](stronę) po instrukcje.

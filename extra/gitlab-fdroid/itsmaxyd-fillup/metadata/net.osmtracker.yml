@@ -1,0 +1,98 @@
+Categories:
+  - Location Tracker & Sharer
+License: GPL-3.0-only
+AuthorName: Laboratorio Experimental
+AuthorEmail: contacto@labexp.org
+AuthorWebSite: https://labexp.github.io/
+WebSite: https://github.com/labexp/osmtracker-android/wiki
+SourceCode: https://github.com/labexp/osmtracker-android
+IssueTracker: https://github.com/labexp/osmtracker-android/issues
+Translation: https://www.transifex.com/projects/p/osmtracker-android/
+Changelog: https://github.com/labexp/osmtracker-android/releases
+
+Name: OSMTracker
+AutoName: OSMTracker for Android™
+Description: |-
+  OSMTracker allows you to track your journey and mark significant way points. Way
+  points can be marked with a tag using a button, with a quick voice record, a
+  text note or by taking a picture. The various button pages and layouts can be
+  customized to suit your OpenStreetMap activities. You can view your current
+  track on top of an OpenStreetMap background.
+
+RepoType: git
+Repo: https://github.com/labexp/osmtracker-android.git
+
+Builds:
+  - versionName: 0.6.12
+    versionCode: 40
+    commit: v0.6.12
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i 1,3d build.gradle
+      - "sed -i \"1 i\\apply plugin: 'com.android.application'\" build.gradle"
+
+  - versionName: '0.7'
+    versionCode: 42
+    commit: v0.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.1
+    versionCode: 43
+    commit: v0.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.2
+    versionCode: 48
+    commit: v0.7.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.0
+    versionCode: 56
+    commit: v1.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 57
+    commit: v1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.07.09
+    versionCode: 62
+    commit: d1092f2c42f99e54c1ab9e28e494ec0adbf2df9b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2025.02'
+    versionCode: 65
+    commit: 329699691076602ec50240d6304178fad91abc08
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/versionName .*/versionName "$$VERSION$$"/' build.gradle
+
+  - versionName: '2025.09'
+    versionCode: 70
+    commit: 88d9d421168aa4a0ee40904cd9b600d08b3b03a7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/versionName .*/versionName "$$VERSION$$"/' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+UpdateCheckData: app/build.gradle|versionCode (\d+)||v([\d.]+)
+CurrentVersion: '2025.09'
+CurrentVersionCode: 70

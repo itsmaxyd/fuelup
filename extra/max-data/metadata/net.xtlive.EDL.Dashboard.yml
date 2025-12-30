@@ -1,0 +1,74 @@
+Categories:
+  - Connectivity
+  - System
+License: GPL-3.0-or-later
+AuthorName: Jacob Geigle
+AuthorEmail: jacob@geigle.me
+SourceCode: https://github.com/techie66/EngineDataLogger---Dashboard
+IssueTracker: https://github.com/techie66/EngineDataLogger---Dashboard/issues
+
+AutoName: EDL Dashboard
+
+RepoType: git
+Repo: https://github.com/techie66/EngineDataLogger---Dashboard.git
+
+Builds:
+  - versionName: '1.1'
+    versionCode: 2
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 4
+    commit: v1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 5
+    commit: 2428756c0f5d5778c90b755ac52c8146a0eeb3a4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 6
+    commit: b133c85abaf68eee085c959587d2e54e60a38a52
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 7
+    commit: 3ce1137b3ebd11f13a37c6ad71db28897eeb3cac
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/gradle:4.1.2/gradle:4.2.0/' ../build.gradle
+      - sed -i -e 's/6.5-bin/6.7.1-bin/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '1.7'
+    versionCode: 8
+    commit: ec8faea2931dbadf21860074c760c3db2324d187
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/gradle:4.1.2/gradle:4.2.0/' ../build.gradle
+      - sed -i -e 's/6.5-bin/6.7.1-bin/' ../gradle/wrapper/gradle-wrapper.properties
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.7'
+CurrentVersionCode: 8

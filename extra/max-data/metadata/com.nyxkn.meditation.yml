@@ -1,0 +1,289 @@
+Categories:
+  - Sports & Health
+  - Time
+License: GPL-3.0-only
+AuthorName: nyxkn
+AuthorEmail: contact@nyxkn.com
+AuthorWebSite: https://nyxkn.com/
+WebSite: https://github.com/nyxkn/meditation
+SourceCode: https://github.com/nyxkn/meditation
+IssueTracker: https://github.com/nyxkn/meditation/issues
+Donate: https://nyxkn.com/donate
+Liberapay: nyxkn
+Bitcoin: bc1qfu5gk78898zdcxw372unmwua0yd5luf3z60sgq
+
+AutoName: Meditation
+
+RepoType: git
+Repo: https://github.com/nyxkn/meditation
+
+Builds:
+  - versionName: 1.1.3
+    versionCode: 5
+    commit: 58c53832894370f95c4683056e79f002248fba04
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@2.10.1
+    rm:
+      - ios
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.2.0
+    versionCode: 6
+    commit: 9ee793c7dc895d8469c015819eb4df0328c10027
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.1
+    rm:
+      - ios
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.3.0
+    versionCode: 7
+    commit: 88ce3cb4ea805c14bbb45c13e9378e3878735c7b
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.1
+    rm:
+      - ios
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.3.1
+    versionCode: 8
+    commit: 208cdb28be37c44deee38efec2caef1102a25054
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.5
+    rm:
+      - ios
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.3.2
+    versionCode: 9
+    commit: d7e44c7f527caacc074bd59a2faaf98f92953dec
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.10
+    rm:
+      - ios
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.3.2
+    versionCode: 1101
+    commit: 5923229f80ba9d73a4ab3965172e425bd0398d42
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.3.2
+    versionCode: 1102
+    commit: 5923229f80ba9d73a4ab3965172e425bd0398d42
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.3.2
+    versionCode: 1103
+    commit: 5923229f80ba9d73a4ab3965172e425bd0398d42
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.4.2
+    versionCode: 1601
+    commit: 895ab385098ec6bc3d9e89f50c683f98a8d4000d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.4.2
+    versionCode: 1602
+    commit: 895ab385098ec6bc3d9e89f50c683f98a8d4000d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.4.2
+    versionCode: 1603
+    commit: 895ab385098ec6bc3d9e89f50c683f98a8d4000d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+
+  - versionName: 1.5.0
+    versionCode: 1701
+    commit: 56f56d0a2f2ec97aae04f852f8b5dc90dbf72b4c
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+
+  - versionName: 1.5.0
+    versionCode: 1702
+    commit: 56f56d0a2f2ec97aae04f852f8b5dc90dbf72b4c
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm"
+
+  - versionName: 1.5.0
+    versionCode: 1703
+    commit: 56f56d0a2f2ec97aae04f852f8b5dc90dbf72b4c
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    rm:
+      - ios
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - '%c * 100 + 1'
+  - '%c * 100 + 2'
+  - '%c * 100 + 3'
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.5.0
+CurrentVersionCode: 1703

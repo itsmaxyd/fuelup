@@ -1,0 +1,28 @@
+Categories:
+  - Theming
+License: GPL-2.0-only
+WebSite: http://forum.xda-developers.com/showthread.php?p=53218143
+SourceCode: https://github.com/Pi-Developers/Pi-Locker
+IssueTracker: https://github.com/Pi-Developers/Pi-Locker/issues
+
+AutoName: Pi Locker
+Description: |-
+  A smart and clean lockscreen replacement with unlocking gestures. It features
+  lightweight design for usage even with low-RAM devices, PIN and password
+  security, changeable colors and texts and the ability to hide/unhide the status
+  bar.
+
+RepoType: git
+Repo: https://github.com/Pi-Developers/Pi-Locker
+
+Builds:
+  - versionName: '3.0'
+    versionCode: 3
+    commit: 17ef7d58cee1fe9776a790371fe9ebfa93c6d7ce
+    extlibs:
+      - android/android-support-v4.jar
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '3.0'
+CurrentVersionCode: 3

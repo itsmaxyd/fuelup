@@ -1,0 +1,135 @@
+Categories:
+  - Launcher
+  - Theming
+License: GPL-3.0-or-later
+AuthorName: F4
+AuthorEmail: this.f4@protonmail.com
+SourceCode: https://github.com/F4uzan/HgLauncher
+IssueTracker: https://github.com/F4uzan/HgLauncher/issues
+Translation: https://hosted.weblate.org/engage/hglauncher/
+Changelog: https://github.com/F4uzan/HgLauncher/releases
+
+AutoName: HgLauncher
+Description: HgLauncher is a launcher with a design philosophy of 'if it works, it
+  works.' Consisting of simply a scrolling list of apps, there is very little visual
+  cue to disturb you. If all you want in a launcher is for it to just launch apps
+  ASAP, then you may be looking at the right launcher.
+
+RepoType: git
+Repo: https://github.com/F4uzan/HgLauncher
+
+Builds:
+  - versionName: 1.3.5.5
+    versionCode: 19
+    commit: v1.3.5.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.6
+    versionCode: 20
+    commit: v1.3.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.6.1
+    versionCode: 21
+    commit: v1.3.6.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 22
+    commit: v1.4.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 23
+    commit: v1.4.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.1.1
+    versionCode: 24
+    commit: v1.4.1.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.1.2
+    versionCode: 25
+    commit: v1.4.1.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.1.3
+    versionCode: 26
+    commit: v1.4.1.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 27
+    commit: v1.4.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.2.1
+    versionCode: 28
+    commit: v1.4.2.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.2.2
+    versionCode: 29
+    commit: v1.4.2.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.2.3
+    versionCode: 30
+    commit: v1.4.2.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 1500000
+    commit: v1.5.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 1510000
+    commit: v1.5.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.5.1
+CurrentVersionCode: 1510000

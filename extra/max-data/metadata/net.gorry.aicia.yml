@@ -1,0 +1,33 @@
+Categories:
+  - Internet
+License: Apache-2.0
+WebSite: http://gorry.haun.org/android/aicia
+SourceCode: https://bitbucket-archive.softwareheritage.org/projects/da/dalb8/aicia.html
+
+AutoName: AiCiA
+Description: |-
+  <i>AiCiA</i> is an Internet Relay Chat (IRC) client with a twin-pane view and
+  configurable buttons. It supports multi-server, body rotation and more.
+  <i>AiCiA</i> also keeps the connection on background.
+
+  Original source code is available via the website (see dist/old): the source
+  code page points to an F-Droid contributor's bitbucket.org account.
+
+Builds:
+  - versionName: 2012.1224.1
+    versionCode: 201212241
+    commit: '4'
+    subdir: AiCiA
+
+  - versionName: 2015.0314.1
+    versionCode: 201503141
+    commit: 1fefccc
+    subdir: AiCiA
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2015.0314.1
+CurrentVersionCode: 201503141
+
+NoSourceSince: 2015.0314.1

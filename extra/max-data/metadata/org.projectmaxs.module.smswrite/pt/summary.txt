@@ -1,0 +1,1 @@
+Adicionar mensagens SMS para o banco de dados SMS do aparelho via MAXS

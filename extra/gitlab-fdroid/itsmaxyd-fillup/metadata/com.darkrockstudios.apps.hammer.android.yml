@@ -1,0 +1,216 @@
+Categories:
+  - Writing
+License: MIT
+AuthorName: Adam Brown
+SourceCode: https://github.com/Wavesonics/hammer-editor
+IssueTracker: https://github.com/Wavesonics/hammer-editor/issues
+Changelog: https://github.com/Wavesonics/hammer-editor/blob/develop/CHANGELOG.md
+
+AutoName: Hammer
+
+RepoType: git
+Repo: https://github.com/Wavesonics/hammer-editor
+
+Builds:
+  - versionName: 1.5.4
+    versionCode: 26
+    commit: f418e40bcbaa9101cdb9f1ec2262ebdceed44cac
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.6.0
+    versionCode: 27
+    commit: 6dc6943967b68e19ab87e6b6e70855bf58716b27
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.7.0
+    versionCode: 107010000
+    commit: 54e3ce460407028e8ff84cf16bb499b1da798608
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.7.1
+    versionCode: 107020000
+    commit: 45deaa9ff5c6a46026192801830eacee5aa28577
+    subdir: android
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.7.2
+    versionCode: 107030000
+    commit: ce4aee99380991d0c27d48c17233a444418be58f
+    subdir: android
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.8.1
+    versionCode: 108020000
+    commit: 3c02966632d1478c84d772c507329521ff0b5284
+    subdir: android
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.9.0
+    versionCode: 109010000
+    commit: 0bcfbcc3f3f331e92d7648337fba855c561e5809
+    subdir: android
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.9.2
+    versionCode: 109030000
+    commit: 02dcc1c457fe51de2eac26e1f94eb13d6702aa03
+    subdir: android
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.10.0
+    versionCode: 110010000
+    commit: 7150713dd44ac63e71199b547fc9728c48401f89
+    subdir: android
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+      - common/src/commonMain/resources/raw/*fdic
+
+  - versionName: 1.10.2
+    versionCode: 110030000
+    commit: 6428f808c5c0df660e52a34a696b8ab867f8f58b
+    subdir: android
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+      - common/src/commonMain/resources/raw/*fdic
+
+  - versionName: 1.11.1
+    versionCode: 111020000
+    commit: d623a5ace6b642780ef0bfeaf4a6b70c6a501fb1
+    subdir: android
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.12.1
+    versionCode: 112020000
+    commit: 2cfaadbbf720e75436887058e714c5dd5ad8c702
+    subdir: android
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.12.2
+    versionCode: 112030000
+    commit: dc7f071186aacbcd1adc0b6f75371ea75edd3dd7
+    subdir: android
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+  - versionName: 1.12.4
+    versionCode: 112050000
+    commit: 840c2619e86cef6a4928d815047d40e29635cfe7
+    subdir: android
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/val isRelease = .*/val isRelease = true/' ../buildSrc/src/main/java/versioncode.kt
+    scanignore:
+      - common/src/commonMain/resources/raw/alice_in_wonderland_zip
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^fdroid-(\d+)$
+UpdateCheckData: '|^fdroid-(\d+)$|gradle/libs.versions.toml|app = "([\d.]+)"'
+CurrentVersion: 1.12.4
+CurrentVersionCode: 112050000

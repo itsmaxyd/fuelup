@@ -1,0 +1,83 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: lucky
+AuthorEmail: x13a@pm.me
+AuthorWebSite: https://x13a.github.io
+SourceCode: https://github.com/x13a/WyFy
+IssueTracker: https://github.com/x13a/WyFy/issues
+
+AutoName: WyFy
+Description: |-
+  <b>NOTE:</b> App repo is archived by dev. It is read-only for all users and it is no longer actively maintained.
+
+  Tiny app to change Wi-Fi state via broadcast.
+  Useful to bypass Google limitation on apps targeting API 29 and higher.
+
+  You have to sent a broadcast message to "me.lucky.wyfy/.ControlReceiver" with one of the actions below.
+
+  Actions:
+  * me.lucky.wyfy.action.SET_ON
+  * me.lucky.wyfy.action.SET_OFF
+  * me.lucky.wyfy.action.TOGGLE
+
+  Permissions:
+  * ACCESS_WIFI_STATE - check Wi-Fi state
+  * CHANGE_WIFI_STATE - change Wi-Fi state
+
+  It is Free Open Source Software.
+  License: GPL-3
+
+RepoType: git
+Repo: https://github.com/x13a/WyFy.git
+
+Builds:
+  - versionName: 1.0.4
+    versionCode: 5
+    commit: ee1295409b88ad293b66ee4f0c05348442f76b18
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 6
+    commit: 6adff77c7299ac5142d7886bd66b3241dae0206e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.6
+    versionCode: 7
+    commit: d3d2ff5d2e39c2b42fa0e0481697c6f3508a3ce4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.7
+    versionCode: 8
+    commit: 7a86a4d1c25e71c6272d700728a91023035a95eb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.0.7
+CurrentVersionCode: 8

@@ -1,0 +1,240 @@
+Categories:
+  - AI Chat
+  - Ebook Reader
+License: MIT
+AuthorName: Anxcye
+AuthorEmail: anxcye@outlook.com
+AuthorWebSite: https://anxcye.com/
+WebSite: https://anx.anxcye.com/
+SourceCode: https://github.com/Anxcye/anx-reader
+IssueTracker: https://github.com/Anxcye/anx-reader/issues
+Changelog: https://github.com/Anxcye/anx-reader/releases
+
+AutoName: Anx Reader
+
+RepoType: git
+Repo: https://github.com/Anxcye/anx-reader
+
+Builds:
+  - versionName: 1.8.1
+    versionCode: 6213
+    commit: 255ea44c5a3ccdee23fb398f2bbe3938b3b0824d
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+      - lib/page/iap_page.dart
+      - lib/service/iap_service.dart
+    prebuild:
+      - sed -i -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/in_app_purchase/,/version:/d' pubspec.lock
+      - sed -i -z -E -e 's/\n( +)if \(EnvVar.isAppStore\)( \{)?(\n\1 [^\n]*)*\n\1[)}][^\n]*//'
+        -e 's/[^\n]*iap_[^\n]*//g' lib/page/home_page/settings_page.dart lib/page/home_page.dart
+        lib/service/book.dart lib/page/settings_page/sync.dart
+      - sed -i -e '/isAppStore/,/ ),/d' lib/page/home_page/settings_page.dart
+      - sed -i -e '/checkUpdate/d' lib/page/home_page.dart
+      - flutterVersion=$(sed -n -E "s/^\s*FLUTTER_VERSION=(.*)/\1/p" .github/workflows/setup.yaml)
+      - '[[ $flutterVersion ]]'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter gen-l10n
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/dart run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 1.9.0
+    versionCode: 6223
+    commit: 1290338a69f5befac501469004094254412a5598
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+      - lib/page/iap_page.dart
+      - lib/service/iap_service.dart
+    prebuild:
+      - sed -i -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/in_app_purchase/,/version:/d' pubspec.lock
+      - sed -i -z -E -e 's/\n( +)if \(EnvVar.isAppStore\)( \{)?(\n\1 [^\n]*)*\n\1[)}][^\n]*//'
+        -e 's/[^\n]*iap_[^\n]*//g' lib/page/home_page/settings_page.dart lib/page/home_page.dart
+        lib/service/book.dart lib/page/settings_page/sync.dart
+      - sed -i -e '/isAppStore/,/ ),/d' lib/page/home_page/settings_page.dart
+      - sed -i -e '/checkUpdate/d' lib/page/home_page.dart
+      - flutterVersion=$(sed -n -E "s/^\s*FLUTTER_VERSION=(.*)/\1/p" .github/workflows/setup.yaml)
+      - '[[ $flutterVersion ]]'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter gen-l10n
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/dart run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 1.9.1
+    versionCode: 6225
+    commit: 40d54e3405526f3de2dfdd1c3ebbc80204be2b2f
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+      - lib/page/iap_page.dart
+      - lib/service/iap_service.dart
+    prebuild:
+      - sed -i -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/in_app_purchase/,/version:/d' pubspec.lock
+      - sed -i -z -E -e 's/\n( +)if \(EnvVar.isAppStore\)( \{)?(\n\1 [^\n]*)*\n\1[)}][^\n]*//'
+        -e 's/[^\n]*iap_[^\n]*//g' lib/page/home_page/settings_page.dart lib/page/home_page.dart
+        lib/service/book.dart lib/page/settings_page/sync.dart
+      - sed -i -e '/isAppStore/,/ ),/d' lib/page/home_page/settings_page.dart
+      - sed -i -e '/checkUpdate/d' lib/page/home_page.dart
+      - flutterVersion=$(sed -n -E "s/^\s*FLUTTER_VERSION=(.*)/\1/p" .github/workflows/setup.yaml)
+      - '[[ $flutterVersion ]]'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter gen-l10n
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/dart run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 1.9.2
+    versionCode: 6241
+    commit: 8252b7d530e7066c3c463d7f0f596f25b5409866
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+      - lib/page/iap_page.dart
+      - lib/service/iap_service.dart
+    prebuild:
+      - sed -i -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/in_app_purchase/,/version:/d' pubspec.lock
+      - sed -i -z -E -e 's/\n( +)if \(EnvVar.isAppStore\)( \{)?(\n\1 [^\n]*)*\n\1[)}][^\n]*//'
+        -e 's/[^\n]*iap_[^\n]*//g' lib/page/home_page/settings_page.dart lib/page/home_page.dart
+        lib/service/book.dart lib/page/settings_page/sync.dart
+      - sed -i -e '/isAppStore/,/ ),/d' lib/page/home_page/settings_page.dart
+      - sed -i -e '/checkUpdate/d' lib/page/home_page.dart
+      - flutterVersion=$(sed -n -E "s/^\s*FLUTTER_VERSION=(.*)/\1/p" .github/workflows/setup.yaml)
+      - '[[ $flutterVersion ]]'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter gen-l10n
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/dart run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 1.10.0
+    versionCode: 6255
+    commit: 300b40e8d2306833046bd1b0cc9540a8d99fc398
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+      - lib/page/iap_page.dart
+      - lib/service/iap_service.dart
+    prebuild:
+      - sed -i -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/in_app_purchase/,/version:/d' pubspec.lock
+      - sed -i -z -E -e 's/\n( +)if \(EnvVar.isAppStore\)( \{)?(\n\1 [^\n]*)*\n\1[)}][^\n]*//'
+        -e 's/[^\n]*iap_[^\n]*//g' lib/page/home_page/settings_page.dart lib/page/home_page.dart
+        lib/service/book.dart lib/page/settings_page/sync.dart
+      - sed -i -e '/isAppStore/,/ ),/d' lib/page/home_page/settings_page.dart
+      - sed -i -e '/checkUpdate/d' lib/page/home_page.dart
+      - flutterVersion=$(sed -n -E "s/^\s*FLUTTER_VERSION=(.*)/\1/p" .github/workflows/setup.yaml)
+      - '[[ $flutterVersion ]]'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter gen-l10n
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/dart run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 1.10.1
+    versionCode: 6279
+    commit: a1e56536d528f8cd9fe80f08abe634189033fd5e
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+      - lib/service/iap
+      - lib/page/iap_page.dart
+      - lib/providers/iap.dart
+      - lib/models/iap_state.dart
+    prebuild:
+      - sed -i -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/in_app_purchase/,/version:/d' pubspec.lock
+      - sed -i -z -E -e 's/\n( +)if \(EnvVar\.enableInAppPurchase\) \{(\n(\1 +[^\n]*|\1|))*\n\1\}//'
+        -e 's/\n( +)if \(EnvVar\.enableInAppPurchase\)\n\1 +[A-Z][a-zA-Z]*\((\n(\1
+        +[^\n]*|\1|))*\n\1 +\),//' -e 's/\nimport [^\n]*iap[^\n]*//g' lib/page/home_page/settings_page.dart
+        lib/page/home_page.dart lib/service/book.dart lib/page/settings_page/sync.dart
+      - flutterVersion=$(sed -n -E "s/^\s*FLUTTER_VERSION=(.*)/\1/p" .github/workflows/setup.yaml)
+      - '[[ $flutterVersion ]]'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter gen-l10n
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/dart run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --release --dart-define=isFdroid=true
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.10.1
+CurrentVersionCode: 6279

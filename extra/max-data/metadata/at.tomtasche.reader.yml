@@ -1,0 +1,539 @@
+Categories:
+  - Ebook Reader
+  - Reading
+  - Text Editor
+License: GPL-3.0-or-later
+AuthorName: Thomas Taschauer
+AuthorEmail: support@opendocument.app
+AuthorWebSite: https://tomtasche.at
+WebSite: https://opendocument.app/
+SourceCode: https://github.com/opendocument-app/OpenDocument.droid
+IssueTracker: https://github.com/opendocument-app/OpenDocument.droid/issues
+Translation: https://crowdin.com/project/opendocument
+
+AutoName: OpenDocument Reader
+
+RepoType: git
+Repo: https://github.com/opendocument-app/OpenDocument.droid.git
+
+Builds:
+  - versionName: 1.1.9
+    versionCode: 11
+    commit: 243eba4f441b3601de96
+
+  - versionName: '1.2'
+    versionCode: 12
+    commit: d174bed05a6026ddb5db
+
+  - versionName: 1.2.3
+    versionCode: 15
+    commit: 8fe022fd67e5bb62c6d8
+
+  - versionName: 1.3.0
+    versionCode: 22
+    commit: 4b8ea7438125e90d43bdadfc042723a7a485a217
+    srclibs:
+      - JOpenDocument@35ec3d3ddfc11592cefe8cae9eea3608ad2b30c2
+    prebuild:
+      - cp -r $$JOpenDocument$$/src/* src/
+      - rm -rf src/test/
+
+  - versionName: 1.3.2
+    versionCode: 24
+    commit: 4bcf9024ac9fb96bc5c03c3129f9d401272caaf0
+    srclibs:
+      - JOpenDocument@35ec3d3ddfc11592cefe8cae9eea3608ad2b30c2
+    prebuild:
+      - rm libs/jopendocument.jar
+      - cp -r $$JOpenDocument$$/src/* src/
+      - rm -rf src/test/
+
+  - versionName: 2.0.7
+    versionCode: 34
+    commit: 771437a702
+    init:
+      - git config -f .gitmodules --remove-section submodule.test
+      - git rm --cached test
+      - rm -rf test
+      - git submodule update --init
+    srclibs:
+      - MobAdMob@2d5736
+    prebuild:
+      - sed -i '42d' filepicker-android/src/io/filepicker/AuthActivity.java
+      - echo "source.dir=src;$$MobAdMob$$/src" >> project.properties
+      - rm -rf libs/GoogleAdMobAdsSdk*.jar libs/android-support-v4.jar
+      - cp aFileChooser/aFileChooser/libs/android-support-v4.jar filepicker-android/libs/
+      - cp aFileChooser/aFileChooser/libs/android-support-v4.jar ActionBarSherlock/library/libs/
+    androidupdate:
+      - .
+      - aFileChooser/aFileChooser
+      - ActionBarSherlock/library
+      - AndroidBillingLibrary/AndroidBillingLibrary
+      - Android-AppMsg/library
+
+  - versionName: 3.10.2
+    versionCode: 152
+    commit: a86727d4c267215ba907210c2b18148b6562324f
+    subdir: app
+    init: git submodule update --init
+    gradle:
+      - pro
+    prebuild:
+      - sed -i -e '/com.google/d' ../build.gradle
+      - sed -i -e '/com.google.firebase/d' -e '/firebaseCrashlytics/d' -e '/com.google.android.play/d'
+        -e '/com.android.billingclient/d' -e '/com.google.gms/d' -e '/ratethisapp/,/^    }/d'
+        -e '/pro"/d' build.gradle
+      - sed -i -e '/INTERNET/d' -e '/BILLING/d' -e '/^        <meta-data/,+5d' src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/com.google.firebase/d' background/FileLoader.java
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' ui/activity/*.java
+      - sed -i -e '/com.google/d' -e '/Firebase/d' -e '/Storage/d' -e '/auth == null/i}'
+        -e '/auth == null/,/^    }/d' -e '/auth /d' -e '/storage /d' background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig/,/^            });/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' ui/activity/DocumentFragment.java
+      - sed -i -e '/void initializeProprietaryLibraries/,/^    }/d' -e '/initializeProprietaryLibraries/d'
+        -e '/void initializeRatingDialog/,/^    }/d' -e '/initializeRatingDialog/d'
+        -e '/RateThisApp/d' -e 's/billingManager.hasPurchased()/true/' -e 's/billingManager.isEnabled()/false/'
+        ui/activity/MainActivity.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+      - $$SDK$$/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+    ndk: r22
+
+  - versionName: 3.10.4
+    versionCode: 158
+    commit: 7b5338542e86ef5b526ccde87285964c38f41e0e
+    subdir: app
+    init: git submodule update --init
+    gradle:
+      - pro
+    prebuild:
+      - sed -i -e '/com.google/d' ../build.gradle
+      - sed -i -e '/com.google.firebase/d' -e '/firebaseCrashlytics/d' -e '/com.google.android.play/d'
+        -e '/com.android.billingclient/d' -e '/com.google.gms/d' -e '/pro"/d' build.gradle
+      - sed -i -e '/INTERNET/d' -e '/BILLING/d' -e '/^        <meta-data/,+5d' src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/com.google.firebase/d' background/FileLoader.java
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' ui/activity/*.java
+      - sed -i -e '/com.google/d' -e '/Firebase/d' -e '/Storage/d' -e '/auth == null/i}'
+        -e '/auth == null/,/^    }/d' -e '/auth /d' -e '/storage /d' background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig/,/^            });/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' ui/activity/DocumentFragment.java
+      - sed -i -e '/void initializeProprietaryLibraries/,/^    }/d' -e '/initializeProprietaryLibraries/d'
+        -e '/void buyAdRemoval/,/^    }/d' -e '/buyAdRemoval/d' -e 's/billingManager.hasPurchased()/true/'
+        -e 's/billingManager.isEnabled()/false/' ui/activity/MainActivity.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+      - $$SDK$$/tools/bin/sdkmanager 'cmake;3.18.1' > /dev/null
+    ndk: r22
+
+  - versionName: '3.12'
+    versionCode: 164
+    commit: bcf48e2fe55fd0ec7c675b7043d18b7f5d939311
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    init: git submodule update --init
+    gradle:
+      - pro
+    prebuild:
+      - sed -i -e '/com.google/d' ../build.gradle
+      - sed -i -e '/com.google.firebase/d' -e '/firebaseCrashlytics/d' -e '/com.google.android.play/d'
+        -e '/com.android.billingclient/d' -e '/com.google.gms/d' -e '/pro"/d' -e '/com.google.android.gms/d'
+        build.gradle
+      - sed -i -e '/INTERNET/d' -e '/BILLING/d' -e '/^        <meta-data/,+5d' src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/com.google.firebase/d' background/FileLoader.java
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' ui/activity/*.java
+      - sed -i -e '/com.google/d' -e '/Firebase/d' -e '/Storage/d' -e '/auth == null/i}'
+        -e '/auth == null/,/^    }/d' -e '/auth /d' -e '/storage /d' background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig/,/^            });/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' ui/activity/DocumentFragment.java
+      - sed -i -e '/void initializeProprietaryLibraries/,/^    }/d' -e '/initializeProprietaryLibraries/d'
+        -e '/void buyAdRemoval/,/^    }/d' -e '/buyAdRemoval/d' -e 's/billingManager.hasPurchased()/true/'
+        -e 's/billingManager.isEnabled()/false/' -e '/addOnPreDrawListener/,/});/d'
+        ui/activity/MainActivity.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'cmake;3.18.1'
+        > /dev/null
+    ndk: r23b
+
+  - versionName: '3.15'
+    versionCode: 167
+    commit: c681a0c8c0d51164fee2e5fb87ac62d4c156c060
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - apt-get install -y ninja-build
+      - pip3 install wheel
+      - pip3 install conan
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - pro
+    prebuild:
+      - sed -i -e '/com.google/d' ../build.gradle
+      - sed -i -e '/com.google.firebase/d' -e '/firebaseCrashlytics/d' -e '/com.google.android.play/d'
+        -e '/com.android.billingclient/d' -e '/com.google.gms/d' -e '/pro"/d' -e '/com.google.android.gms/d'
+        build.gradle
+      - sed -i -e '/INTERNET/d' -e '/BILLING/d' -e '/^        <meta-data/,+5d' src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/com.google.firebase/d' background/FileLoader.java
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' ui/activity/*.java
+      - sed -i -e '/com.google/d' -e '/Firebase/d' -e '/Storage/d' -e '/auth == null/i}'
+        -e '/auth == null/,/^    }/d' -e '/auth /d' -e '/storage /d' background/OnlineLoader.java
+      - sed -i -e '/void initializeProprietaryLibraries/,/^    }/d' -e '/initializeProprietaryLibraries/d'
+        -e '/void buyAdRemoval/,/^    }/d' -e '/buyAdRemoval/d' -e 's/billingManager.hasPurchased()/true/'
+        -e 's/billingManager.isEnabled()/false/' -e '/addOnPreDrawListener/,/});/d'
+        ui/activity/MainActivity.java
+      - sed -i -e '/getBooleanConfig/,/^            });/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' ui/activity/DocumentFragment.java
+      - sed -i -e 's/configManager.getBooleanConfig(".*")/null/' background/OdfLoader.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+      - conan config set general.revisions_enabled=1
+      - conan remote add odr https://odr.jfrog.io/artifactory/api/conan/odr-conan
+    ndk: r23b
+
+  - versionName: '3.19'
+    versionCode: 172
+    commit: 5c5463d04d485b434e3eb7a61c5390095d302e8e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - apt-get install -y ninja-build
+      - pip3 install wheel
+      - pip3 install conan==1.45.0
+      - curl -Lo cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.22.1/cmake-3.22.1-linux-x86_64.tar.gz
+      - echo "73565c72355c6652e9db149249af36bcab44d9d478c5546fd926e69ad6b43640 cmake.tar.gz"
+        | sha256sum -c -
+      - tar xzf cmake.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - pro
+    prebuild:
+      - sed -i -e '/com.google/d' ../build.gradle
+      - sed -i -e '/com.google.firebase/d' -e '/firebaseCrashlytics/d' -e '/com.google.android.play/d'
+        -e '/com.android.billingclient/d' -e '/com.google.gms/d' -e '/pro"/d' -e '/com.google.android.gms/d'
+        build.gradle
+      - sed -i -e '/INTERNET/d' -e '/BILLING/d' -e '/^        <meta-data/,+5d' src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/com.google.firebase/d' background/FileLoader.java
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' ui/activity/*.java
+      - sed -i -e '/private Uri doFirebaseConvert/,/^    }/d' -e 's/viewerUri = doFirebaseConvert(options)/return/'
+        -e '/com.google/d' -e '/Firebase/d' -e '/Storage/d' -e '/auth /d' -e '/storage
+        /d' background/OnlineLoader.java
+      - sed -i -e '/void initializeProprietaryLibraries/,/^    }/d' -e '/initializeProprietaryLibraries/d'
+        -e '/void buyAdRemoval/,/^    }/d' -e '/buyAdRemoval/d' -e 's/billingManager.hasPurchased()/true/'
+        -e 's/billingManager.isEnabled()/false/' -e '/addOnPreDrawListener/,/});/d'
+        ui/activity/MainActivity.java
+      - sed -i -e '/getBooleanConfig("show_in_app_rating/,/^                });/d'
+        -e '/void offerUpload/,/^    }/d' -e '/offerUpload/d' -e '/void requestInAppRating/,/^    }/d'
+        -e '/requestInAppRating/d' ui/activity/DocumentFragment.java
+      - sed -i -e 's/configManager.getBooleanConfig(".*")/null/' background/OdfLoader.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+      - conan config set general.revisions_enabled=1
+      - conan remote add odr https://odr.jfrog.io/artifactory/api/conan/odr-conan
+    ndk: r23b
+
+  - versionName: '3.26'
+    versionCode: 179
+    commit: 08186c4d4af88bd22f560ec9f64ecdfda0a66067
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make ninja-build cmake pipx
+      - PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install conan==1.64.1
+    gradle:
+      - pro
+    srclibs:
+      - OpenDocument.core@v3.0.0
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+      - sed -i -e '/com.google.android.play/d' -e '/ump/d' -e '/pro"/d' build.gradle
+      - sed -i -e '/INTERNET/d' -e '/^        <meta-data/,+5d' -e '/property/,+4d'
+        src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' -e '/void initializeProprietaryLibraries/,/^    }/d'
+        -e '/initializeProprietaryLibraries/d' -e 's/billingManager.hasPurchased()/true/'
+        ui/activity/*.java background/FileLoader.java background/LoaderService.java
+      - sed -i -e '/private Uri doFirebaseConvert/,/^    }/d' -e 's/viewerUri = doFirebaseConvert(options)/return/'
+        -e '/gms/d' -e '/firebase/Id' -e '/Storage/d' -e '/auth /d' -e '/storage /d'
+        background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig("show_in_app_rating/,/});/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' -e '/void requestInAppRating/,/^    }/d' -e '/requestInAppRating/d'
+        ui/activity/DocumentFragment.java
+      - sed -i -e 's/configManager.getBooleanConfig(".*")/null/' background/OdfLoader.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+    build:
+      - export coreVersion=$(sed -n -E 's/odrcore\/([0-9.]+)@/\1/p' ../conanfile.txt)
+      - git -C $$OpenDocument.core$$ checkout -f v$coreVersion
+      - conan export $$OpenDocument.core$$ odrcore/$coreVersion@
+    ndk: r26b
+
+  - versionName: '3.31'
+    versionCode: 185
+    commit: v3.31
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make ninja-build pipx
+      - PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install conan
+    gradle:
+      - pro
+    srclibs:
+      - OpenDocument.core@v3.0.0
+    prebuild:
+      - export coreVersion=$(sed -n -E 's/odrcore\/([0-9.]+)@/\1/p' conanfile.txt)
+      - git -C $$OpenDocument.core$$ checkout -f v$coreVersion
+      - conan export $$OpenDocument.core$$ --name odrcore --version $coreVersion
+      - conan profile detect
+      - sed -i -e '/gms/d' -e '/firebase/d' -e 's/build=missing/build=*/' {.,..}/build.gradle
+      - sed -i -e '/com.google.android.play/d' -e '/ump/d' -e '/pro"/d' build.gradle
+      - sed -i -e '/INTERNET/d' -e '/^        <meta-data/,+5d' -e '/property/,+4d'
+        src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' -e '/void initializeProprietaryLibraries/,/^    }/d'
+        -e '/initializeProprietaryLibraries/d' -e 's/billingManager.hasPurchased()/true/'
+        ui/activity/*.java background/FileLoader.java background/LoaderService.java
+      - sed -i -e '/private Uri doFirebaseConvert/,/^    }/d' -e 's/viewerUri = doFirebaseConvert(options)/return/'
+        -e '/gms/d' -e '/firebase/Id' -e '/Storage/d' -e '/auth /d' -e '/storage /d'
+        background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig("show_in_app_rating/,/});/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' -e '/void requestInAppRating/,/^    }/d' -e '/requestInAppRating/d'
+        ui/activity/DocumentFragment.java
+      - sed -i -e 's/configManager.getBooleanConfig(".*")/null/' background/OdfLoader.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+    ndk: 26.3.11579264
+
+  - versionName: '3.32'
+    versionCode: 186
+    commit: v3.32
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make ninja-build pipx
+      - PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install conan
+    gradle:
+      - pro
+    srclibs:
+      - OpenDocument.core@v3.0.0
+    prebuild:
+      - export coreVersion=$(sed -n -E 's/odrcore\/([0-9.]+)@/\1/p' conanfile.txt)
+      - git -C $$OpenDocument.core$$ checkout -f v$coreVersion
+      - conan export $$OpenDocument.core$$ --name odrcore --version $coreVersion
+      - conan profile detect
+      - sed -i -e '/gms/d' -e '/firebase/d' -e 's/build=missing/build=*/' {.,..}/build.gradle
+      - sed -i -e '/com.google.android.play/d' -e '/ump/d' -e '/pro"/d' build.gradle
+      - sed -i -e '/INTERNET/d' -e '/^        <meta-data/,+5d' -e '/property/,+4d'
+        src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' -e '/void initializeProprietaryLibraries/,/^    }/d'
+        -e '/initializeProprietaryLibraries/d' -e 's/billingManager.hasPurchased()/true/'
+        ui/activity/*.java background/FileLoader.java background/LoaderService.java
+      - sed -i -e '/private Uri doFirebaseConvert/,/^    }/d' -e 's/viewerUri = doFirebaseConvert(options)/return/'
+        -e '/gms/d' -e '/firebase/Id' -e '/Storage/d' -e '/auth /d' -e '/storage /d'
+        background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig("show_in_app_rating/,/});/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' -e '/void requestInAppRating/,/^    }/d' -e '/requestInAppRating/d'
+        ui/activity/DocumentFragment.java
+      - sed -i -e 's/configManager.getBooleanConfig(".*")/null/' background/OdfLoader.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+    ndk: 26.3.11579264
+
+  - versionName: '3.39'
+    versionCode: 193
+    commit: v3.39
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make ninja-build pipx
+      - PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install conan
+    gradle:
+      - pro
+    srclibs:
+      - OpenDocument.core@v3.0.0
+    prebuild:
+      - export coreVersion=$(sed -n -E 's/odrcore\/([0-9.]+)@/\1/p' conanfile.txt)
+      - git -C $$OpenDocument.core$$ checkout -f v$coreVersion
+      - conan export $$OpenDocument.core$$ --name odrcore --version $coreVersion
+      - conan profile detect
+      - sed -i -e '/gms/d' -e '/firebase/d' -e 's/build=missing/build=*/' {.,..}/build.gradle
+      - sed -i -e '/com.google.android.play/d' -e '/ump/d' -e '/pro"/d' build.gradle
+      - sed -i -e '/^        <meta-data/,+5d' -e '/property/,+4d' src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' -e '/void initializeProprietaryLibraries/,/^    }/d'
+        -e '/initializeProprietaryLibraries/d' -e 's/billingManager.hasPurchased()/true/'
+        ui/activity/*.java background/FileLoader.java background/LoaderService.java
+      - sed -i -e '/private Uri doFirebaseConvert/,/^    }/d' -e 's/viewerUri = doFirebaseConvert(options)/return/'
+        -e '/gms/d' -e '/firebase/Id' -e '/Storage/d' -e '/auth /d' -e '/storage /d'
+        background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig("show_in_app_rating/,/});/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' -e '/void requestInAppRating/,/^    }/d' -e '/requestInAppRating/d'
+        ui/activity/DocumentFragment.java
+      - sed -i -e 's/configManager.getBooleanConfig(".*")/null/' background/OdfLoader.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+    ndk: r26d
+
+  - versionName: '4.0'
+    versionCode: 196
+    commit: 774494a9d7c502750b36357ac9af6627c44cb63d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make ninja-build pipx
+      - PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install conan
+    gradle:
+      - pro
+    srclibs:
+      - conan-odr-index@8ec140a221791147797063e2112376de58bd01ac
+    prebuild:
+      - date=$(git show --format=%ad --no-patch --no-notes)
+      - pushd $$conan-odr-index$$
+      - git fetch origin
+      - git checkout $(git rev-list -1 --before="$date" origin/main)
+      - popd
+      - conan remote remove "*"
+      - conan remote add odr $$conan-odr-index$$
+      - conan remote add conancenter https://center2.conan.io
+      - conan profile detect
+      - sed -i -e '/gms/d' -e '/firebase/d' -e 's/build=missing/build=*/' {.,..}/build.gradle
+      - sed -i -e '/com.google.android.play/d' -e '/ump/d' -e '/pro"/d' build.gradle
+      - sed -i -e '/^        <meta-data/,+5d' -e '/property/,+4d' src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' -e '/void initializeProprietaryLibraries/,/^    }/d'
+        -e '/initializeProprietaryLibraries/d' -e 's/billingManager.hasPurchased()/true/'
+        ui/activity/*.java background/FileLoader.java background/LoaderService.java
+      - sed -i -e '/private Uri doFirebaseConvert/,/^    }/d' -e 's/viewerUri = doFirebaseConvert(options)/return/'
+        -e '/gms/d' -e '/firebase/Id' -e '/Storage/d' -e '/auth /d' -e '/storage /d'
+        background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig("show_in_app_rating/,/});/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' -e '/void requestInAppRating/,/^    }/d' -e '/requestInAppRating/d'
+        ui/activity/DocumentFragment.java
+      - sed -i -e 's/configManager.getBooleanConfig(".*")/null/' background/CoreLoader.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+    ndk: r28b
+
+  - versionName: '4.1'
+    versionCode: 197
+    commit: 766389d61333e51ae12fb90ce2ea9278c1e1f672
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make ninja-build pipx
+      - PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install conan
+    gradle:
+      - pro
+    srclibs:
+      - conan-odr-index@8ec140a221791147797063e2112376de58bd01ac
+    prebuild:
+      - date=$(git show --format=%ad --no-patch --no-notes)
+      - pushd $$conan-odr-index$$
+      - git fetch origin
+      - git checkout $(git rev-list -1 --before="$date" origin/main)
+      - popd
+      - conan remote remove "*"
+      - conan remote add odr $$conan-odr-index$$
+      - conan remote add conancenter https://center2.conan.io
+      - conan profile detect
+      - sed -i -e '/gms/d' -e '/firebase/d' -e 's/build=missing/build=*/' {.,..}/build.gradle
+      - sed -i -e '/com.google.android.play/d' -e '/ump/d' -e '/pro"/d' build.gradle
+      - sed -i -e '/^        <meta-data/,+5d' -e '/property/,+4d' src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' -e '/void initializeProprietaryLibraries/,/^    }/d'
+        -e '/initializeProprietaryLibraries/d' -e 's/billingManager.hasPurchased()/true/'
+        ui/activity/*.java background/FileLoader.java background/LoaderService.java
+      - sed -i -e '/private Uri doFirebaseConvert/,/^    }/d' -e 's/viewerUri = doFirebaseConvert(options)/return/'
+        -e '/gms/d' -e '/firebase/Id' -e '/Storage/d' -e '/auth /d' -e '/storage /d'
+        background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig("show_in_app_rating/,/});/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' -e '/void requestInAppRating/,/^    }/d' -e '/requestInAppRating/d'
+        ui/activity/DocumentFragment.java
+      - sed -i -e 's/configManager.getBooleanConfig(".*")/null/' background/CoreLoader.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+    ndk: r28b
+
+  - versionName: '4.2'
+    versionCode: 198
+    commit: a5f7b4cd56c959ca9c24da361eb209cf7f4f575b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make ninja-build pipx
+      - PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install conan
+    gradle:
+      - pro
+    srclibs:
+      - conan-odr-index@8ec140a221791147797063e2112376de58bd01ac
+    prebuild:
+      - date=$(git show --format=%ad --no-patch --no-notes)
+      - pushd $$conan-odr-index$$
+      - git fetch origin
+      - git checkout $(git rev-list -1 --before="$date" origin/main)
+      - popd
+      - conan remote remove "*"
+      - conan remote add odr $$conan-odr-index$$
+      - conan remote add conancenter https://center2.conan.io
+      - conan profile detect
+      - sed -i -e '/gms/d' -e '/firebase/d' -e 's/build=missing/build=*/' {.,..}/build.gradle
+      - sed -i -e '/com.google.android.play/d' -e '/ump/d' -e '/pro"/d' build.gradle
+      - sed -i -e '/^        <meta-data/,+5d' -e '/property/,+4d' src/main/AndroidManifest.xml
+      - cd src/main/java/at/tomtasche/reader
+      - sed -i -e '/gms/d' -e '/play.core/d' -e '/firebase/d' -e '/void initializeProprietaryLibraries/,/^    }/d'
+        -e '/initializeProprietaryLibraries/d' -e 's/billingManager.hasPurchased()/true/'
+        ui/activity/*.java background/FileLoader.java background/LoaderService.java
+      - sed -i -e '/private Uri doFirebaseConvert/,/^    }/d' -e 's/viewerUri = doFirebaseConvert(options)/return/'
+        -e '/gms/d' -e '/firebase/Id' -e '/Storage/d' -e '/auth /d' -e '/storage /d'
+        background/OnlineLoader.java
+      - sed -i -e '/getBooleanConfig("show_in_app_rating/,/});/d' -e '/void offerUpload/,/^    }/d'
+        -e '/offerUpload/d' -e '/void requestInAppRating/,/^    }/d' -e '/requestInAppRating/d'
+        ui/activity/DocumentFragment.java
+      - sed -i -e 's/configManager.getBooleanConfig(".*")/null/' background/CoreLoader.java
+      - for class in AdManager AnalyticsManager BillingManager ConfigManager CrashManager
+        HelpManager; do echo "package at.tomtasche.reader.nonfree; public class ${class}
+        {}" > nonfree/${class}.java; sed -i -e "/${class}\./Id" background/*.java
+        ui/*/*.java ui/*.java; done
+    ndk: r28b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/src/main/AndroidManifest.xml|versionCode="(\d+)|.|versionName="([\d.]+)
+CurrentVersion: '4.2'
+CurrentVersionCode: 198

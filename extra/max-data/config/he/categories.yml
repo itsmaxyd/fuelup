@@ -1,0 +1,112 @@
+Connectivity:
+  name: קישוריות
+Development:
+  name: פיתוח
+Games:
+  name: משחקים
+Graphics:
+  name: גרפיקה
+Internet:
+  name: אינטרנט
+Money:
+  name: כלכלה
+Multimedia:
+  name: מולטימדיה
+Navigation:
+  name: ניווט
+Phone & SMS:
+  name: טלפון ומסרונים
+Reading:
+  name: קריאה
+Science & Education:
+  name: מדע וחינוך
+Security:
+  name: אבטחה
+Sports & Health:
+  name: בריאות וספורט
+System:
+  name: מערכת
+Theming:
+  name: עיצוב
+Time:
+  name: זמן
+Writing:
+  name: כתיבה
+App Store & Updater:
+  name: חנות יישומונים ומעדכן
+Bookmark:
+  name: סימנייה
+Browser:
+  name: דפדפן
+Calculator:
+  name: מחשבון
+Calendar & Agenda:
+  name: לוח שנה וסדר יום
+Cloud Storage & File Sync:
+  name: אחסון בענן וסנכרון קבצים
+DNS & Hosts:
+  name: DNS ומארחים
+Draw:
+  name: ציור
+Ebook Reader:
+  name: מציג Ebook
+Email:
+  name: דוא״ל
+File Encryption & Vault:
+  name: הצפנת קבצים וכספת
+File Transfer:
+  name: העברת קבצים
+Finance Manager:
+  name: ניהול כספים
+Gallery:
+  name: גלריה
+Icon Pack:
+  name: חבילת סמלים
+Keyboard & IME:
+  name: מקלדת ושיטות קלט
+Launcher:
+  name: משגר
+Local Media Player:
+  name: נגן מדיה מקומית
+Messaging:
+  name: התכתבות
+News:
+  name: חדשות
+Note:
+  name: הערה
+Online Media Player:
+  name: נגן מדיה מקוונת
+Pass Wallet:
+  name: ארנק סודות
+Password & 2FA:
+  name: סיסמה ואימות דו־שלבי
+Podcast:
+  name: הסכת
+Public Transport:
+  name: מפה ולו״ז תחבורה ציבורית
+Translation & Dictionary:
+  name: תרגום ומילונים
+Unit Convertor:
+  name: המרת יחידות מידה
+Voice & Video Chat:
+  name: שיחות שמע ווידאו
+VPN & Proxy:
+  name: VPN ותיווך
+Wallet:
+  name: ארנקים
+Wallpaper:
+  name: תמונות רקע
+Weather:
+  name: מזג אוויר
+Workout:
+  name: כושר
+Recipe Manager:
+  name: ניהול מתכונים
+Shopping List:
+  name: רשימת קניות
+Social Network:
+  name: רשתות חברתיות
+Task:
+  name: משימות
+Text Editor:
+  name: עריכת טקסט

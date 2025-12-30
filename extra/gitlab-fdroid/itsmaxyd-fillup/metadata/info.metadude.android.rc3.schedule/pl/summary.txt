@@ -1,0 +1,1 @@
+Aplikacja programu konferencji dla JahresEndVeranstaltungen (JEV)

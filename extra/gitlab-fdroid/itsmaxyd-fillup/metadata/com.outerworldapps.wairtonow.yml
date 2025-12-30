@@ -1,0 +1,40 @@
+Categories:
+  - Navigation
+License: GPL-2.0-only
+AuthorName: Mike Rieker
+WebSite: https://www.outerworldapps.com
+SourceCode: https://github.com/mrieker/WairToNow
+IssueTracker: https://github.com/mrieker/WairToNow/issues
+Changelog: https://github.com/mrieker/WairToNow/releases
+
+AutoName: WairToNow
+
+RepoType: git
+Repo: https://github.com/mrieker/WairToNow.git
+
+Builds:
+  - versionName: 4.11.3
+    versionCode: 41103
+    commit: v4.11.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 50000
+    commit: v5.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.1'
+    versionCode: 50100
+    commit: v5.1
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '5.1'
+CurrentVersionCode: 50100

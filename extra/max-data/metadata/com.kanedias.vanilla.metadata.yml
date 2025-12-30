@@ -1,0 +1,69 @@
+Categories:
+  - Local Media Player
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Kanedias
+AuthorEmail: kanedias@keemail.me
+SourceCode: https://github.com/vanilla-music/vanilla-music-metadata-fetch
+IssueTracker: https://github.com/vanilla-music/vanilla-music-metadata-fetch/issues
+Donate: https://www.patreon.com/kanedias
+Liberapay: Kanedias
+
+AutoName: Metadata Fetcher
+Description: |-
+  This app is a plugin. Prior to use it you should have
+  https://f-droid.org/packages/ch.blinkenlights.android.vanilla installed. Once both player and this plugin
+  are installed, request a context menu from library screen, select "Plugins" and
+  "Metadata fetch" afterwards. Note that this plugin requires internet connection
+  to be useful.
+
+  This plugin can create fingerprint for any music file you wish to know about and
+  request its metadata from <a href="https://acoustid.org">AcoustID</a>, libre and open source
+  fingerprinting service. If match is found it is then shown on the screen.
+
+  <b>Features:</b>
+
+  * Fetches tag metadata for various music files (mp3/ogg/flac)
+  * Can also fetch cover image for selected song
+  * Can write retrieved cover and tags if https://f-droid.org/packages/com.kanedias.vanilla.audiotag is installed
+
+RepoType: git
+Repo: https://github.com/vanilla-music/vanilla-music-metadata-fetch
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 4
+    commit: 1.0.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+15d' build.gradle
+
+  - versionName: 1.0.4
+    versionCode: 5
+    commit: 1.0.4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+15d' build.gradle
+
+  - versionName: 1.0.8
+    versionCode: 9
+    commit: 1.0.8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+15d' build.gradle
+    ndk: r21d
+
+MaintainerNotes: |-
+  - This app doesn't have default activity, this is normal
+  - This app requires https://f-droid.org/packages/ch.blinkenlights.android.vanilla
+  - This app contains native code and uses abi splits
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.8
+CurrentVersionCode: 9

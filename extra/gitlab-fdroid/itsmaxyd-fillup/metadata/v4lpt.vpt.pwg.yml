@@ -1,0 +1,50 @@
+Categories:
+  - Password & 2FA
+  - Security
+License: GPL-3.0-only
+AuthorName: Valentin
+SourceCode: https://github.com/v4lpt/pwg
+IssueTracker: https://github.com/v4lpt/pwg/issues
+
+AutoName: VPT#002-PWG
+
+RepoType: git
+Repo: https://github.com/v4lpt/pwg
+
+Builds:
+  - versionName: 1.0.4
+    versionCode: 104
+    commit: 341db8941bd0ccf0a42c32e69d2642cd5fdf204d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 105
+    commit: 750367b9ef0a46533ca1324929f995af8c8eb647
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.6
+    versionCode: 106
+    commit: 5cb20ffcb223abcebad0b593cadb46ff31522d03
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.7
+    versionCode: 107
+    commit: cd12d7bffd8cc4000f50a892a9a230c9b1e85f8b
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.7
+CurrentVersionCode: 107

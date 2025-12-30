@@ -1,0 +1,139 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on non-libre floatrates.com exchange rate API.
+Categories:
+  - Money
+License: GPL-3.0-only
+AuthorName: Bill Farmer
+AuthorWebSite: https://billthefarmer.github.io/
+WebSite: https://billthefarmer.github.io/specie/
+SourceCode: https://github.com/billthefarmer/specie
+IssueTracker: https://github.com/billthefarmer/specie/issues
+Changelog: https://github.com/billthefarmer/specie/releases
+
+AutoName: Specie
+
+RepoType: git
+Repo: https://github.com/billthefarmer/specie
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.01'
+    versionCode: 101
+    commit: 1f82fd64e2579ebe6028199d2a45826f9ddb6879
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.02'
+    versionCode: 102
+    commit: 4257a08fbe6294ad715a24ebef1ad57433a7045a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.03'
+    versionCode: 103
+    commit: 70257f8e2978b5759430a22a07be3d7adce95d4d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.04'
+    versionCode: 104
+    commit: 8f22c02e7b34f94f2271f5c08509025afcd64eb5
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.05'
+    versionCode: 105
+    commit: 1526884b27e5a9be6a865dbbd69d0a7faf5ce25f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.06'
+    versionCode: 106
+    commit: aba1e2eebdfc363a3ccdb54fb4d4eeb2aad66cf1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.07'
+    versionCode: 107
+    commit: e15dde55c3f8037afeb0452ccac2bf8f7027cc16
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.08'
+    versionCode: 108
+    commit: bf97aed1506e797dc2b678f6dcef418d8eae9455
+    gradle:
+      - yes
+
+  - versionName: '1.09'
+    versionCode: 109
+    commit: 8d794969d218fae4dbbbc00713f4c22df3f1f34f
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 110
+    commit: bbdfda4c7709e01c63d7d0357eec488b3e213e15
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 111
+    commit: 611d6d5fb9c528519ecffe22eb853043ff6067ac
+    gradle:
+      - yes
+
+  - versionName: '1.12'
+    versionCode: 112
+    commit: eb7aa6df5f64d5d7180b154b63b3b6489e24b1da
+    gradle:
+      - yes
+
+  - versionName: '1.13'
+    versionCode: 113
+    commit: c278f38fb5cc32df6f85eb3e63e682d27ce421d9
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.13'
+CurrentVersionCode: 113

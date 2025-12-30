@@ -1,0 +1,85 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: lucky
+AuthorEmail: x13a@pm.me
+AuthorWebSite: https://x13a.github.io
+SourceCode: https://github.com/x13a/Clipeus
+IssueTracker: https://github.com/x13a/Clipeus/issues
+Translation: https://crwd.in/me-lucky-clipeus
+Changelog: https://github.com/x13a/Clipeus/releases
+Donate: https://x13a.github.io/donate/
+Bitcoin: bc1q7xenxqvuck6kar5qjmkaf99l6cfdrvttnvvur9
+
+AutoName: Clipeus
+
+RepoType: git
+Repo: https://github.com/x13a/Clipeus.git
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: 73a916d39798dd9ce3bdd4bea229f0ce9119f260
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 3
+    commit: 53ba90c608d7e0c0084898d447f93afc31599394
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 4
+    commit: e482fec62df7a9cce68881fdd3982a63b99a3c22
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 5
+    commit: 53e0531ddb7d06d613ddf38b7e443a752071786c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 6
+    commit: c20eb169c4d3114867b649adbcf03f0d06ec1719
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 8
+    commit: 8a9898083f86a10730d355d79fa0fa4c0669698a
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.1
+CurrentVersionCode: 8

@@ -1,0 +1,31 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on ultimate-guitar.com.
+Categories:
+  - Multimedia
+License: WTFPL
+AuthorName: Marcel Klehr
+AuthorEmail: mklehr@gmx.net
+AuthorWebSite: https://marcelklehr.de/
+SourceCode: https://github.com/marcelklehr/chordreader
+IssueTracker: https://github.com/marcelklehr/chordreader/issues
+
+AutoName: Chord Reader
+Description: This simple app allows you to search the web for tabs and chords and
+  capture them for display in the app with the ability to store the chords for offline
+  usage and transpose them to fit your voice.
+
+RepoType: git
+Repo: https://github.com/marcelklehr/chordreader
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 8
+    commit: v1.0.3
+    subdir: ChordReader/
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.0.3
+CurrentVersionCode: 8

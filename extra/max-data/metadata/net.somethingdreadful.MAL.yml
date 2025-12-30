@@ -1,0 +1,71 @@
+Categories:
+  - Reading
+License: BSD-2-Clause
+WebSite: https://atarashiiapp.com
+SourceCode: https://github.com/AnimeNeko/Atarashii
+IssueTracker: https://github.com/AnimeNeko/Atarashii/issues
+Changelog: https://github.com/AnimeNeko/Atarashii/releases
+
+AutoName: Atarashii!
+Description: |-
+  <b>Discontinued</b>
+
+  "Atarashii" is Japanese for "New, Modern". Atarashii! aims to be a modern,
+  native Android app for managing your MAL.
+
+  You'll need an account on that website or to create one in the app.
+
+RepoType: git
+Repo: https://github.com/AnimeNeko/Atarashii.git
+
+Builds:
+  - versionName: 1.3.1
+    versionCode: 12
+    commit: 1.3.1
+    subdir: Atarashii
+    srclibs:
+      - NumberPicker-SimonVT@35e4d
+      - ActionBarSherlock@c0d437
+      - Crouton@b6735
+      - SherlockNavDrawer@808a1
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+      - mv libs/android-support-v4.jar $$Crouton$$/libs/
+
+  - versionName: 1.3.2
+    versionCode: 13
+    commit: 1.3.2
+    subdir: Atarashii
+    srclibs:
+      - NumberPicker-SimonVT@35e4d
+      - ActionBarSherlock@c0d437
+      - Crouton@b6735
+      - SherlockNavDrawer@808a1
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+      - mv libs/android-support-v4.jar $$Crouton$$/libs/
+
+  - versionName: '1.4'
+    versionCode: 14
+    commit: '1.4'
+    subdir: Atarashii
+    srclibs:
+      - NumberPicker-SimonVT@35e4d
+      - ActionBarSherlock@c0d437
+      - Crouton@b6735
+      - SherlockNavDrawer@808a1
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+      - mv libs/android-support-v4.jar $$Crouton$$/libs/
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.4'
+CurrentVersionCode: 14

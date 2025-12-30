@@ -1,0 +1,39 @@
+Categories:
+  - Keyboard & IME
+  - System
+License: GPL-3.0-only
+AuthorEmail: 13.7apps@gmail.com
+SourceCode: https://github.com/adgad/kboard
+IssueTracker: https://github.com/adgad/kboard/issues
+
+AutoName: kboard
+
+RepoType: git
+Repo: https://github.com/adgad/kboard
+
+Builds:
+  - versionName: 4.1.4
+    versionCode: 33
+    commit: v4.1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.0.0
+    versionCode: 40
+    commit: f1deb49d9f594015fed6bb1e88783be3c39d72b8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.0.1
+    versionCode: 41
+    commit: 47d46753dc4434ca89327a1a9258fb904c289e36
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 5.0.1
+CurrentVersionCode: 41

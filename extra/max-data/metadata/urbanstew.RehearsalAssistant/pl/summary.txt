@@ -1,0 +1,1 @@
+Uniwersalny program do nagrywania dźwięku. Obsługuje nieskompresowane nagrania.

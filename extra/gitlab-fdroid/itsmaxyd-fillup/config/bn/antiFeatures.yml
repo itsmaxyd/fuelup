@@ -1,0 +1,26 @@
+Ads:
+  description: এই অ্যাপে বিজ্ঞাপন আছে
+  name: বিজ্ঞাপন
+DisabledAlgorithm:
+  description: এই অ্যাপের নিরাপত্তা স্বাক্ষর খুব দুর্বল
+  name: অনিরাপদভাবে স্বাক্ষরিত
+KnownVuln:
+  description: এই অ্যাপের একটি জানা নিরাপত্তা দুর্বলতা রয়েছে
+  name: জানা অনিরাপত্তা আছে
+NoSourceSince:
+  name: উৎস কোড এখন অনুপভ্য, হালনাগাদ সম্ভব নয়।
+NonFreeAdd:
+  description: এই অ্যাপ অ-মুক্ত অ্যাড-অন ব্যবহারে উৎসাহিত করে
+  name: অ-মুক্ত সংযোজন
+NonFreeAssets:
+  description: এই অ্যাপে অ-মুক্ত উপাদান আছে
+  name: অমুক্ত অংশ
+NonFreeDep:
+  description: এই অ্যাপ অন্যান্য অ-মুক্ত অ্যাপের উপর নির্ভর করে
+  name: অ-মুক্ত নির্ভরশীল শাখা
+NonFreeNet:
+  description: এই অ্যাপ অ-মুক্ত নেটওয়ার্ক সেবা নিতে উৎসাহিত করে
+  name: অ-মুক্ত নেটওয়ার্ক সেবা
+Tracking:
+  description: এই অ্যাপটি আপনার কার্যকলাপ ট্র্যাক করে এবং বলে দেয়
+  name: নজরদারী

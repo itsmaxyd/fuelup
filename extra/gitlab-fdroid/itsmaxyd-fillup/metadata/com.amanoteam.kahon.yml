@@ -1,0 +1,71 @@
+Categories:
+  - Internet
+  - Multimedia
+  - Reading
+License: Apache-2.0
+AuthorName: Amano Team
+AuthorEmail: contact@amanoteam.com
+AuthorWebSite: https://amanoteam.com/
+SourceCode: https://github.com/AmanoTeam/Kahon
+IssueTracker: https://github.com/AmanoTeam/Kahon/issues
+Changelog: https://github.com/AmanoTeam/Kahon/releases
+
+AutoName: Kahon
+
+RepoType: git
+Repo: https://github.com/AmanoTeam/Kahon
+
+Builds:
+  - versionName: 0.17.2
+    versionCode: 10
+    commit: v0.17.2
+    subdir: app
+    gradle:
+      - yes
+    ndk: r24
+
+  - versionName: 0.18.1
+    versionCode: 12
+    commit: 3b2beceef62fd9e2c23fec17c45007967027cc11
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '38,40d' ../settings.gradle.kts
+    ndk: r24
+
+  - versionName: 0.19.2
+    versionCode: 13
+    commit: cee03c67b7be75eb7fe1f24c773c6218dd4b5d91
+    subdir: app
+    gradle:
+      - yes
+    ndk: r27b
+
+  - versionName: 0.19.3
+    versionCode: 14
+    commit: 0be9094df497b3e7e29244f6bf99ca0fb8afd689
+    subdir: app
+    gradle:
+      - yes
+    ndk: r27b
+
+  - versionName: 0.19.4
+    versionCode: 15
+    commit: 2fc3f28f0b5a5ba51d0706e281dfb2bf3a3f6a16
+    subdir: app
+    gradle:
+      - yes
+    ndk: r27b
+
+  - versionName: 0.19.5
+    versionCode: 16
+    commit: 02801b1a7944077a7d27c28e5bcb8ba2af01a11d
+    subdir: app
+    gradle:
+      - yes
+    ndk: r27b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.19.5
+CurrentVersionCode: 16

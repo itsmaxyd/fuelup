@@ -1,0 +1,35 @@
+Categories:
+  - Reading
+License: GPL-3.0-only
+AuthorName: Petabyte
+AuthorEmail: brikbusters@gmail.com
+WebSite: https://heb12.ml/mobile/
+SourceCode: https://github.com/heb12/heb12-mobile
+IssueTracker: https://github.com/heb12/heb12-mobile/issues
+Translation: https://github.com/heb12/heb12-mobile#translate
+
+AutoName: Heb12
+
+RepoType: git
+Repo: https://github.com/heb12/heb12-mobile
+
+Builds:
+  - versionName: 0.1.0
+    versionCode: 1
+    commit: 0.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.0
+    versionCode: 2
+    commit: 0.2.0
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.2.0
+CurrentVersionCode: 2

@@ -1,0 +1,231 @@
+Categories:
+  - Science & Education
+License: GPL-3.0-or-later
+AuthorName: Yaroslav Shuliak
+AuthorEmail: shuliak.yaroslav@gmail.com
+SourceCode: https://github.com/syt0r/Kanji-Dojo
+IssueTracker: https://github.com/syt0r/Kanji-Dojo/issues
+
+AutoName: Kanji Dojo
+
+RepoType: git
+Repo: https://github.com/syt0r/Kanji-Dojo
+Binaries: https://github.com/syt0r/Kanji-Dojo/releases/download/v%v/app-fdroid-release.apk
+
+Builds:
+  - versionName: '1.1'
+    versionCode: 11
+    commit: v1.1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {..,.}/build.gradle
+
+  - versionName: '1.2'
+    versionCode: 12
+    commit: 80b14e73293cd538d55881c3d3d111c5de616b81
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {..,.}/build.gradle
+
+  - versionName: '1.5'
+    versionCode: 15
+    commit: bd8b63e5e1360d8a8877cc63f851c49fb1aacb9d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: '1.6'
+    versionCode: 16
+    commit: e6d63af50fcd75aad1c5de06e108496c129f63c6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: '1.7'
+    versionCode: 17
+    commit: fa38c190b80a31dfa355404352a2dd80ab10b684
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: '1.9'
+    versionCode: 19
+    commit: aea64e53a7cace2ee2bf3f55d21c5985c8d9f679
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.0
+    versionCode: 2000
+    commit: 32ffc9b3708e5e778514b05c1a1996cb71284f42
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.2
+    versionCode: 2020
+    commit: e5d14f7ae84d12020c872e7d14bb8566aa14e641
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.3
+    versionCode: 2030
+    commit: 5a0bee8d6fab986f0cd1489a642c5d48a1e2c663
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.4
+    versionCode: 2040
+    commit: 45a93c9041f995e5666a17e4dcd4c3657fe53489
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.5
+    versionCode: 2050
+    commit: b8fa4bef06e507bf4c40aa233ebf29f40df84f62
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.7
+    versionCode: 2070
+    commit: e3400622e06827329f512073180d0423b7c16f2f
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.8
+    versionCode: 2080
+    commit: bd6c294f206565f18b94f32e7e4e2839fe94b377
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.9
+    versionCode: 2090
+    commit: 8b54aa8c566182f03620099653b55556380166e1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.0
+    versionCode: 2100
+    commit: a76488a22cbff696b71b6399d60ac5736dfe520a
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.1
+    versionCode: 2110
+    commit: b7ca65780d74c1d0234c599da9b029ec5263f8fa
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.2
+    versionCode: 2120
+    commit: d3ca9b52d5789dabc6f2d0e8968131518589415a
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.3
+    versionCode: 2130
+    commit: ea436b0bcbb5ec0b523f0698202d6ff0fd3869fe
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.5
+    versionCode: 2150
+    commit: 77175eff28be1efa998d140ef6eb96889e17a14f
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.6
+    versionCode: 2160
+    commit: d134b310503c5977239ce45c5366c4ed4bdc65dd
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.7
+    versionCode: 2170
+    commit: e31434c4779bb0a51e89d9c803edb2fe0e7a3703
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.8
+    versionCode: 2180
+    commit: aca1b3eced5c72c449eae148a097f070b5e83d56
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.9
+    versionCode: 2190
+    commit: 8b07be7a002b220337c86966989ee514bc0b0c01
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+AllowedAPKSigningKeys: 5ad10466f09ea3c4f7c5004268cd54da7af37c094e2d94cd91dd8894d99fb0dd
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: buildSrc/src/main/kotlin/AppVersion.kt|versionCode = (\d+)|.|versionName
+  = "(.*)"
+CurrentVersion: 2.1.9
+CurrentVersionCode: 2190

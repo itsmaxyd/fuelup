@@ -1,0 +1,177 @@
+Categories:
+  - Note
+  - Reading
+  - Writing
+License: GPL-3.0-only
+AuthorName: rikodot
+AuthorEmail: rikodot@kardi.tech
+AuthorWebSite: http://www.kardi.tech/
+WebSite: https://www.kardi.tech/#notes
+SourceCode: https://github.com/rikodot/kardi_notes_app
+IssueTracker: https://github.com/rikodot/kardi_notes_app/issues
+Changelog: https://www.kardi.tech/notes/
+Donate: https://www.kardi.tech/#contact
+Bitcoin: bc1qz6uws8vxz7renadfy5lchmtj99tvd3gr8t9856
+Litecoin: Lds4TLCW6GNcbTw3AwwvCGsrNCZjWX5SpU
+
+AutoName: kardi notes
+
+RepoType: git
+Repo: https://github.com/rikodot/kardi_notes_app
+
+Builds:
+  - versionName: 2.0.7
+    versionCode: 19
+    commit: 2.0.7
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - sed -i 's@\/\/await HttpHelper.default_server_option_first_launch(context);@await
+        HttpHelper.default_server_option_first_launch(context);@' lib/pages/loading_page.dart
+      - sed -i 's@\/\/GoogleFonts@GoogleFonts@' lib/main.dart
+      - sed -i 's@\/\/LicenseRegistry@LicenseRegistry@' lib/main.dart
+      - export version=$(cat flutter_version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 2.0.9
+    versionCode: 22
+    commit: 63807183af5a43bd1a11f0562cc0e6ee440a65d4
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - sed -i 's@\/\/await HttpHelper.default_server_option_first_launch(context);@await
+        HttpHelper.default_server_option_first_launch(context);@' lib/pages/loading_page.dart
+      - sed -i 's@\/\/GoogleFonts@GoogleFonts@' lib/main.dart
+      - sed -i 's@\/\/LicenseRegistry@LicenseRegistry@' lib/main.dart
+      - export version=$(cat flutter_version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 2.1.0
+    versionCode: 23
+    commit: da6fa29ccbe65f479d7e040dff06ccbf4532a1de
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - sed -i 's@\/\/await HttpHelper.default_server_option_first_launch(context);@await
+        HttpHelper.default_server_option_first_launch(context);@' lib/pages/loading_page.dart
+      - sed -i 's@\/\/GoogleFonts@GoogleFonts@' lib/main.dart
+      - sed -i 's@\/\/LicenseRegistry@LicenseRegistry@' lib/main.dart
+      - export version=$(cat flutter_version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 2.1.2
+    versionCode: 27
+    commit: 4d295eecc87e99fdc8d518df3e311b767b360db2
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - sed -i 's@\/\/await HttpHelper.default_server_option_first_launch(context);@await
+        HttpHelper.default_server_option_first_launch(context);@' lib/pages/loading_page.dart
+      - sed -i 's@\/\/GoogleFonts@GoogleFonts@' lib/main.dart
+      - sed -i 's@\/\/LicenseRegistry@LicenseRegistry@' lib/main.dart
+      - export version=$(cat flutter_version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 2.1.3
+    versionCode: 28
+    commit: 2f9c2ffb65ec3d3bc9eb0417ee7683e5ea16c81a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - sed -i 's@\/\/await HttpHelper.default_server_option_first_launch(context);@await
+        HttpHelper.default_server_option_first_launch(context);@' lib/pages/loading_page.dart
+      - sed -i 's@\/\/GoogleFonts@GoogleFonts@' lib/main.dart
+      - sed -i 's@\/\/LicenseRegistry@LicenseRegistry@' lib/main.dart
+      - export version=$(cat flutter_version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 2.1.3
+CurrentVersionCode: 28

@@ -1,0 +1,73 @@
+Categories:
+  - Internet
+License: GPL-3.0-only
+AuthorName: AucT
+AuthorEmail: auct.eu@gmail.com
+AuthorWebSite: https://auct.eu/
+SourceCode: https://github.com/AucT/twitter2nitter
+IssueTracker: https://github.com/AucT/twitter2nitter/issues
+Changelog: https://github.com/AucT/twitter2nitter/releases
+
+AutoName: twitter2nitter
+
+RepoType: git
+Repo: https://github.com/AucT/twitter2nitter.git
+Binaries: https://github.com/AucT/twitter2nitter/releases/download/v%v/twitter2nitter.v%v.apk
+
+Builds:
+  - versionName: '1.5'
+    versionCode: 6
+    commit: df9b3caa359b860d6222a0b538a7dffca49543f2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get -y install zipalign
+    output: out.apk
+    srclibs:
+      - reproducible-apk-tools@v0.1.1
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/fix-newlines.py build/outputs/apk/release/*.apk
+        fixed.apk 'META-INF/services/*'
+      - zipalign 4 fixed.apk out.apk
+
+  - versionName: '1.8'
+    versionCode: 9
+    commit: dc123abb37e3e40281ded5dd7148568b785e401a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get -y install zipalign
+    output: out.apk
+    srclibs:
+      - reproducible-apk-tools@v0.1.1
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/fix-newlines.py build/outputs/apk/release/*.apk
+        fixed.apk 'META-INF/services/*'
+      - zipalign 4 fixed.apk out.apk
+
+  - versionName: '1.9'
+    versionCode: 10
+    commit: 00c15999d621273ccba6df6b519bc03e433d1b68
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get -y install zipalign
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: out.apk
+    srclibs:
+      - reproducible-apk-tools@v0.1.1
+    build:
+      - gradle assembleRelease
+      - $$reproducible-apk-tools$$/fix-newlines.py build/outputs/apk/release/*.apk
+        fixed.apk 'META-INF/services/*'
+      - zipalign 4 fixed.apk out.apk
+
+AllowedAPKSigningKeys: 26e002f60d0fd6c641a58f843623ac2d5aa90a80f62565f5206183627bc29685
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.9'
+CurrentVersionCode: 10

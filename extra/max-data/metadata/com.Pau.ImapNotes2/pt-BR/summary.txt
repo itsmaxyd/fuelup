@@ -1,0 +1,1 @@
+Sincronize notas com dispositivos iOs com contas diferentes, como Gmail e outras

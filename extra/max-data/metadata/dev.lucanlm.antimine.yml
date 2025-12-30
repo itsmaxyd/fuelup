@@ -1,0 +1,1109 @@
+Categories:
+  - Games
+License: GPL-3.0-only
+AuthorName: Lucas Nunes
+AuthorEmail: me@lucasnlm.dev
+SourceCode: https://github.com/lucasnlm/antimine-android
+IssueTracker: https://github.com/lucasnlm/antimine-android/issues
+Translation: https://crowdin.com/project/antimine-android
+Donate: https://www.paypal.com/donate/?hosted_button_id=49XX9XDNUV4SW
+Bitcoin: 1CG9cyRHkVMW3onjDmXVNzDawnX1ydSWiM
+
+RepoType: git
+Repo: https://github.com/lucasnlm/antimine-android.git
+
+Builds:
+  - versionName: 6.3.2
+    versionCode: 603021
+    commit: 6.3.2
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.0.1
+    versionCode: 700011
+    commit: 7.0.1
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.0.2
+    versionCode: 700021
+    commit: 7.0.2
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.1.0
+    versionCode: 701001
+    commit: 7.1.0
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.1.1
+    versionCode: 701011
+    commit: 7.1.1
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.1.4
+    versionCode: 701041
+    commit: 7.1.4
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.2.0
+    versionCode: 702001
+    commit: 7.2.0
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.2.1
+    versionCode: 702011
+    commit: 7.2.1
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.2.2
+    versionCode: 702021
+    commit: 7.2.2
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.2.7
+    versionCode: 702071
+    commit: 7.2.7
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.3.0
+    versionCode: 703001
+    commit: 7.3.0
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.3.1
+    versionCode: 703011
+    commit: 7.3.1
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.3.2
+    versionCode: 703021
+    commit: 7.3.2
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 7.3.3
+    versionCode: 703031
+    commit: 7.3.3
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 8.0.1
+    versionCode: 800011
+    commit: 8.0.1
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 8.0.4
+    versionCode: 800041
+    commit: 8.0.4
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/play-services/d' ../proprietary/build.gradle ../wear/build.gradle
+
+  - versionName: 8.0.5
+    versionCode: 800051
+    commit: 8.0.5
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e '/googleImplementation/d' build.gradle
+
+  - versionName: 8.0.6
+    versionCode: 800061
+    commit: 8.0.6
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e '/googleImplementation/d' build.gradle
+
+  - versionName: 8.3.0
+    versionCode: 803001
+    commit: 8.3.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.3.2
+    versionCode: 803021
+    commit: 8.3.2
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.3.3
+    versionCode: 803031
+    commit: 8.3.3
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.3.4
+    versionCode: 803041
+    commit: 8.3.4
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.3.7
+    versionCode: 803071
+    commit: 8.3.7
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.3.8
+    versionCode: 803081
+    commit: 8.3.8
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.4.0
+    versionCode: 804001
+    commit: 8.4.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.4.3
+    versionCode: 804031
+    commit: 8.4.3
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.5.0
+    versionCode: 805001
+    commit: 8.5.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.5.1
+    versionCode: 805011
+    commit: 8.5.1
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.5.2
+    versionCode: 805021
+    commit: 8.5.2
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.7.0
+    versionCode: 807001
+    commit: 8.7.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.7.2
+    versionCode: 807021
+    commit: 8.7.2
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.7.3
+    versionCode: 807031
+    commit: 8.7.3
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 8.8.0
+    versionCode: 808001
+    commit: 8.8.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 9.0.0
+    versionCode: 900001
+    commit: 9.0.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 9.0.1
+    versionCode: 900011
+    commit: 9.0.1
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 9.0.3
+    versionCode: 900031
+    commit: 9.0.3
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 9.1.0
+    versionCode: 901001
+    commit: 9.1.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 9.1.1
+    versionCode: 901011
+    commit: 9.1.1
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 10.0.3
+    versionCode: 1000031
+    commit: 10.0.3
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 10.0.4
+    versionCode: 1000041
+    commit: 10.0.4
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 10.1.2
+    versionCode: 1001021
+    commit: 10.1.2
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 10.1.4
+    versionCode: 1001041
+    commit: 10.1.4
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 10.1.5
+    versionCode: 1001051
+    commit: 10.1.5
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 10.1.6
+    versionCode: 1001061
+    commit: 10.1.6
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 10.3.0
+    versionCode: 1003001
+    commit: 10.3.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 11.1.0
+    versionCode: 1101001
+    commit: 11.1.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+
+  - versionName: 12.0.0
+    versionCode: 1200001
+    commit: 12.0.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+    ndk: r21
+
+  - versionName: 12.1.1
+    versionCode: 1201011
+    commit: d783258944ec1cab300e3a2ec8a7cb202d3b691f
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+    ndk: r21
+
+  - versionName: 12.4.2
+    versionCode: 1204021
+    commit: 3a1b71351fb4ffe44465d85cbb4fe7334435b6c9
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+    ndk: r21
+
+  - versionName: 14.0.0
+    versionCode: 1400001
+    commit: 834030f2d908e8b5e8d501640ec14407cb8d3915
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+    ndk: r21
+
+  - versionName: 14.0.1
+    versionCode: 1400011
+    commit: 30c04f26a14035dd2cde1f8a426fc307eaaa5e34
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+    ndk: r21
+
+  - versionName: 14.2.0
+    versionCode: 1402001
+    commit: 41919beae887149c2f2221a12f0e9caf518d96a0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+    ndk: r21
+
+  - versionName: 14.2.2
+    versionCode: 1402021
+    commit: cdcd07cf2cf12925f7297b0a28556399cc5e9f20
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+    ndk: r21
+
+  - versionName: 14.3.0
+    versionCode: 1403001
+    commit: ba66630f0a5d63703f1532385f62c23bc94df743
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - wear
+    prebuild:
+      - sed -i -e "s/':proprietary', //; s/':wear', //" ../settings.gradle
+      - sed -i -e "/':proprietary'/d" build.gradle
+    ndk: r21
+
+  - versionName: 15.0.0
+    versionCode: 1500001
+    commit: e9768e166380b76e6c769b8ce92e1892070a8b6c
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.0.1
+    versionCode: 1500011
+    commit: b7ba365c192ed04b4171038288876788ac8bc18b
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.0.2
+    versionCode: 1500021
+    commit: 3bdb3b33aab094fd4f24e4b41be30c21763ec033
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.1.0
+    versionCode: 1501001
+    commit: d8e7a6e80fc3f2dc2fe2d89da9c94102cea2f8ef
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.1.1
+    versionCode: 1501011
+    commit: 541a0f0ba586e1ddcc0144c7bee639d93f24510c
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.2.0
+    versionCode: 1502001
+    commit: 43184fd265c9f4f4e9552a7e38acf6e634f383f6
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.3.0
+    versionCode: 1503001
+    commit: 3d2e781af2815dd05a5fb3f1e7843aec4ff25a93
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.4.0
+    versionCode: 1504001
+    commit: 77b1e711cbe16107d4a78f0b6996edd981fdcf0e
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.5.0
+    versionCode: 1505001
+    commit: a4c402200b7b60e20c60f037571c6108b7a93417
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.6.0
+    versionCode: 1506001
+    commit: da036c4937c25a87559ae9578782efe92bec2414
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+    prebuild: sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.7.1
+    versionCode: 1507011
+    commit: ee744690263e2f64f1472ac762fb0ab3e4d29191
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
+        > /dev/null
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 15.9.2
+    versionCode: 1509021
+    commit: 4717c5489a2c7739d245a50656ddeadb742b7fd8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
+        > /dev/null
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+    ndk: r21
+
+  - versionName: 16.1.1
+    versionCode: 1601011
+    commit: fb7af4e5500c74ae0017eefc65cd1e02f51cc8bb
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.10.2.4988404'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle
+    ndk: r21
+
+  - versionName: 17.0.0
+    versionCode: 1700001
+    commit: 871e5445b9f88dc9be97c89124ed49035184c3ec
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.0.1
+    versionCode: 1700011
+    commit: d05ec296176fa459e018d8e6dad79009e5a6ff19
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.1.5
+    versionCode: 1701051
+    commit: 577d2937c880bd78914363d8dc8d6ca0157847da
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.1.7 F
+    versionCode: 1701071
+    commit: 3ce87a83dc552c69940ede405da0a0ec5a40b6c1
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.2.0 F
+    versionCode: 1702001
+    commit: 3922c9f8d1f61b5804e0cd962c221f3d1d5f81fd
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.2.1 F
+    versionCode: 1702011
+    commit: 74dcedf058b9fb22de22e790a1385264957898e7
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.2.2 F
+    versionCode: 1702021
+    commit: 169be1a6a055c1d556a243c1270daaaf09b910ea
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.2.3 F
+    versionCode: 1702031
+    commit: dfaa473c805fa6293ba2c6d8141f13abfc7509e4
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.4.0 F
+    versionCode: 1704001
+    commit: 0eb90ff719b12c9c3b4c82a04a5fea99caa3ca36
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.5.0 F
+    versionCode: 1705001
+    commit: 21ecce8ceb59237e5659b48140716df3706c2e20
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.5.1 F
+    versionCode: 1705011
+    commit: fb0b8f850958457979936ccdd28b8c20d9b8e7e6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.5.8 F
+    versionCode: 1705081
+    commit: 638ddf9bf224dbfcbb619f0bcbc938906c896bba
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/bugsnag/d' -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.5.9 F
+    versionCode: 1705091
+    commit: f500c6305a04d81d4b50d956c6f287a32352d8e6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/bugsnag/d' -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.5.10 F
+    versionCode: 1705101
+    commit: 5354543aebc9534b18fe3c451ecad25475e7a835
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - proprietary
+      - app/gradle
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" ../settings.gradle build.gradle
+      - sed -i -e '/bugsnag/d' -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+    ndk: r25b
+
+  - versionName: 17.6.0 F
+    versionCode: 1706001
+    commit: 6b5a45756a69b33741acfc4c6bc10e6446fcff06
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - app/gradle
+      - proprietary
+      - wear
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" -e '/:wear/d' -e '/google.services/d' ../settings.gradle.kts
+        build.gradle.kts ../build.gradle.kts
+      - sed -i -e '/bugsnag/d' -e '/gms/d' -e '/firebase/d' -e '/play-core-ktx/d'
+        -e '/wear/d' ../gradle/libs.versions.toml
+    ndk: r25b
+
+  - versionName: 17.6.3 F
+    versionCode: 1706031
+    commit: 48f4dac77d0e4dfd6cbd64ca982b473453dc10ba
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - app/gradle
+      - proprietary
+      - wear
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" -e '/:wear/d' -e '/google.services/d' ../settings.gradle.kts
+        build.gradle.kts ../build.gradle.kts
+      - sed -i -e '/bugsnag/d' -e '/gms/d' -e '/firebase/d' -e '/play-core-ktx/d'
+        -e '/wear/d' ../gradle/libs.versions.toml
+    ndk: r25b
+
+  - versionName: 17.7.0 F
+    versionCode: 1707001
+    disable: https://github.com/lucasnlm/antimine-android/issues/470#issuecomment-2214239593
+    commit: fc2be239e5b275cbaf43bfe99d7967a873cc63b4
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/gradle
+      - proprietary
+      - wear
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e "/:proprietary/d" -e '/:wear/d' -e '/google.services/d' ../settings.gradle.kts
+        build.gradle.kts ../build.gradle.kts
+      - sed -i -e '/bugsnag/d' -e '/gms/d' -e '/firebase/d' -e '/play-core-ktx/d'
+        -e '/wear/d' ../gradle/libs.versions.toml
+    ndk: r25b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 17.7.0 F
+CurrentVersionCode: 1707001

@@ -1,0 +1,60 @@
+Categories:
+  - Multimedia
+License: MIT
+AuthorName: The Funkwhale Collective
+AuthorEmail: maintainers@funkwhale.audio
+WebSite: https://funkwhale.audio
+SourceCode: https://dev.funkwhale.audio/funkwhale/funkwhale-android
+IssueTracker: https://dev.funkwhale.audio/funkwhale/funkwhale-android/-/issues
+Translation: https://translate.funkwhale.audio/projects/funkwhale/ffa/
+Changelog: https://dev.funkwhale.audio/funkwhale/funkwhale-android/-/blob/develop/CHANGELOG
+Donate: https://funkwhale.audio/en_US/support-us/#donate
+OpenCollective: funkwhale
+
+AutoName: Funkwhale
+
+RepoType: git
+Repo: https://dev.funkwhale.audio/funkwhale/funkwhale-android.git
+
+Builds:
+  - versionName: 0.1.4
+    versionCode: 104000
+    commit: 0.1.4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.1.5
+    versionCode: 105000
+    commit: 6fe879833e98d70f55064bc0406a97c96b46ca61
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.2.1-1
+    versionCode: 201000
+    commit: e1be5b130347b54bda0189f71637545a35f39b1b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.0
+    versionCode: 300000
+    commit: 554bc0ca5c63165af9155dfffa78814cb496cfe4
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: fdroidversion.txt|versionCode\s=\s(\d+)|.|versionName\s=\s(.+)
+CurrentVersion: 0.3.0
+CurrentVersionCode: 300000

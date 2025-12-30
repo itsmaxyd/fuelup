@@ -1,0 +1,1 @@
+Kısa iletileri süzgeçten geçirin ve onları bir sahte uygulamada gösterin

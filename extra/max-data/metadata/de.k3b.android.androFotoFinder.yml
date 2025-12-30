@@ -1,0 +1,227 @@
+Categories:
+  - Graphics
+  - Multimedia
+License: GPL-3.0-only
+WebSite: https://github.com/k3b/APhotoManager/wiki
+SourceCode: https://github.com/k3b/APhotoManager
+IssueTracker: https://github.com/k3b/APhotoManager/issues
+Translation: 'https://crowdin.com/project/AndroFotoFinder '
+Changelog: https://github.com/k3b/APhotoManager/wiki/History
+Donate: https://donate.openstreetmap.org/
+
+AutoName: A Photo Manager
+
+RepoType: git
+Repo: https://github.com/k3b/APhotoManager
+
+Builds:
+  - versionName: 0.3.4.150728
+    versionCode: 4
+    commit: v0.3.4.150728
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.0.150816
+    versionCode: 5
+    commit: v0.4.0.150816
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.1.150911
+    versionCode: 8
+    commit: v0.4.1.150911
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.2.151105
+    versionCode: 9
+    commit: v0.4.2.151105
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.3.151201
+    versionCode: 10
+    commit: v0.4.3.151201
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.4.160117
+    versionCode: 12
+    commit: v0.4.4.160117
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.5.160221
+    versionCode: 13
+    commit: v0.4.5.160221
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.6.160304
+    versionCode: 14
+    commit: v0.4.6.160304
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.0.160629
+    versionCode: 17
+    commit: v0.5.0.160629
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.1.160712
+    versionCode: 18
+    commit: v0.5.1.160712
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.2.160726
+    versionCode: 19
+    commit: v0.5.2.160726
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.3.160927
+    versionCode: 21
+    commit: v0.5.3.160927
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.4.161112
+    versionCode: 23
+    commit: v0.5.4.161112
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.5.161220
+    versionCode: 24
+    commit: v0.5.5.161220
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.0.170502
+    versionCode: 30
+    commit: v0.6.0.170502
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.1.170816
+    versionCode: 32
+    commit: v0.6.1.170816
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.2.171126
+    versionCode: 34
+    commit: v0.6.2.171126
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.3.180211
+    versionCode: 35
+    commit: v0.6.3.180211
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.4.180321
+    versionCode: 37
+    commit: v0.6.4.180321
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.0.180823
+    versionCode: 38
+    commit: v0.7.0.180823
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.1.180830
+    versionCode: 39
+    commit: v0.7.1.180830
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.2.181027
+    versionCode: 40
+    commit: v0.7.2.181027
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.3.190424
+    versionCode: 41
+    commit: v0.7.3.190424
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.4.190801
+    versionCode: 42
+    commit: v0.7.4.190801
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.5.190916
+    versionCode: 43
+    commit: v0.7.5.190916
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.0.191021
+    versionCode: 44
+    commit: v0.8.0.191021
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.1.200212
+    versionCode: 45
+    commit: v0.8.1.200212
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.1.200218
+    versionCode: 46
+    commit: v0.8.1.200218
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.8.3.200315
+    versionCode: 47
+    commit: v0.8.3.200315
+    subdir: app
+    gradle:
+      - yes
+
+MaintainerNotes: Please use git-branch "FDroid" for FDroid-builds.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.8.3.200315
+CurrentVersionCode: 47

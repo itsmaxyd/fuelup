@@ -1,0 +1,579 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App depends on the Le Monde website, which is not libre.
+Categories:
+  - News
+  - Reading
+License: GPL-3.0-only
+AuthorName: mbach
+WebSite: https://mbach.github.io/LeMondeRssReader/
+SourceCode: https://github.com/MBach/LeMondeRssReader
+IssueTracker: https://github.com/MBach/LeMondeRssReader/issues
+Changelog: https://github.com/MBach/LeMondeRssReader/releases
+Bitcoin: 39RBokXr4V9FPpuF7v1bM6PYcbgRRApp9W
+
+AutoName: LeMondeRssReader
+
+RepoType: git
+Repo: https://github.com/MBach/LeMondeRssReader.git
+
+Builds:
+  - versionName: '1.8'
+    versionCode: 8
+    commit: v1.8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+      ../build.gradle
+
+  - versionName: '1.9'
+    versionCode: 9
+    commit: v1.9
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+      ../build.gradle
+
+  - versionName: '1.10'
+    versionCode: 10
+    commit: v1.10
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+      ../build.gradle
+
+  - versionName: '1.11'
+    versionCode: 11
+    commit: v1.11
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+      ../build.gradle
+
+  - versionName: '1.12'
+    versionCode: 12
+    commit: v1.12
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+      ../build.gradle
+
+  - versionName: '1.13'
+    versionCode: 13
+    commit: v1.13
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+      ../build.gradle
+
+  - versionName: '1.14'
+    versionCode: 14
+    commit: v1.14
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+      ../build.gradle
+
+  - versionName: '1.15'
+    versionCode: 15
+    commit: v1.15
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+      ../build.gradle
+
+  - versionName: '1.16'
+    versionCode: 16
+    commit: v1.16
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+        ../build.gradle
+      - sed -i -e 's/gradle-4.10/gradle-5.6.2/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '1.17'
+    versionCode: 17
+    commit: v1.17
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+        ../build.gradle
+      - sed -i -e 's/gradle-4.10/gradle-5.6.2/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '1.18'
+    versionCode: 18
+    commit: v1.18
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+        ../build.gradle
+      - sed -i -e 's/gradle-4.10/gradle-5.6.2/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '1.19'
+    versionCode: 19
+    commit: v1.19
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+        ../build.gradle
+      - sed -i -e 's/gradle-4.10/gradle-5.6.2/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '1.20'
+    versionCode: 20
+    commit: v1.20
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+        ../build.gradle
+      - sed -i -e 's/gradle-4.10/gradle-5.6.2/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '1.21'
+    versionCode: 21
+    commit: v1.21
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/com.android.tools.build:gradle:3.2.0-alpha05/com.android.tools.build:gradle:3.1.2/g'
+        ../build.gradle
+      - sed -i -e 's/gradle-4.10/gradle-5.6.2/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.1.3
+    versionCode: 26
+    commit: v2.1.3
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - sysctl -p
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm
+    init:
+      - sed -E -i 's/^.*(fabric|com\.(crashlytics|google\.(firebase|android.gms))).*$//g'
+        build.gradle
+      - sed -E -i 's/^.*fabric.*$//g' ../build.gradle
+      - sed -E -i 's/libreBuild =.*$/libreBuild = true/g' ../build.gradle
+      - sed -E -i 's/^.*fabric.*$//g' ../../package.json
+      - sed -E -i 's/vcode =.*$/vcode = $$VERCODE$$/g' build.gradle
+      - sed -i '/flow-bin/d' ../../package.json
+      - sed -E -i 's/^.*libflacjs.*$//g' ../../package.json
+      - export LIBRE_BUILD=true
+      - npm install
+    gradle:
+      - yes
+    rm:
+      - node_modules/node-notifier
+      - node_modules/bplist-parser
+      - node_modules/jetifier/lib/*.jar
+      - node_modules/react-native/template
+      - node_modules/react-native/ReactAndroid/src/main/third-party/java/buck-android-support/buck-android-support.jar
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/hermes-engine
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native/android
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/@react-native-community/async-storage/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/@react-native-community/masked-view/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+
+  - versionName: 2.1.4
+    versionCode: 27
+    commit: v2.1.4
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288
+      - sysctl -p
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm
+    init:
+      - sed -E -i 's/^.*(fabric|com\.(crashlytics|google\.(firebase|android.gms))).*$//g'
+        build.gradle
+      - sed -E -i 's/^.*fabric.*$//g' ../build.gradle
+      - sed -E -i 's/libreBuild =.*$/libreBuild = true/g' ../build.gradle
+      - sed -E -i 's/^.*fabric.*$//g' ../../package.json
+      - sed -E -i 's/vcode =.*$/vcode = $$VERCODE$$/g' build.gradle
+      - sed -i '/flow-bin/d' ../../package.json
+      - sed -E -i 's/^.*libflacjs.*$//g' ../../package.json
+      - export LIBRE_BUILD=true
+      - npm install
+    gradle:
+      - yes
+    rm:
+      - node_modules/bplist-parser
+      - node_modules/jetifier/lib/*.jar
+      - node_modules/react-native/template
+      - node_modules/react-native/ReactAndroid/src/main/third-party/java/buck-android-support/buck-android-support.jar
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/hermes-engine
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native/android
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/@react-native-community/async-storage/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/@react-native-community/masked-view/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+
+  - versionName: 2.1.6
+    versionCode: 29
+    commit: 2.1.6
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-x64.tar.xz
+      - echo "3bbe4faf356738d88b45be222bf5e858330541ff16bd0d4cfad36540c331461b node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz --strip-components=1 -C /usr/local/
+      - npm install -g yarn
+    gradle:
+      - yes
+    prebuild:
+      - cd ../..
+      - yarn
+      - sed -i -e '/installreferrer/,+11d' node_modules/react-native-device-info/android/build.gradle
+    scanignore:
+      - android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/hermes-engine
+      - node_modules/react-native/android
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/@react-native-community/masked-view/android/build.gradle
+    scandelete:
+      - node_modules
+    ndk: r20
+
+  - versionName: 3.0.0
+    versionCode: 30
+    commit: 4895b9400490bb88f1c5fae84214d63f4ff9a5d0
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+      - echo "a8fcacb8033504e6d704bdee821f7005ee3774db25c799bcf2a13b5bda7de172 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm install -g yarn
+    gradle:
+      - yes
+    prebuild:
+      - cd ../..
+      - yarn
+      - sed -i -e '/installreferrer/,+11d' node_modules/react-native-device-info/android/build.gradle
+    scanignore:
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/@react-native-masked-view/masked-view/android/build.gradle
+    scandelete:
+      - node_modules
+    ndk: r20
+
+  - versionName: 3.0.1
+    versionCode: 31
+    commit: 2f6d9e94ed48055d398d6642670e32f5efb4d748
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+      - echo "a8fcacb8033504e6d704bdee821f7005ee3774db25c799bcf2a13b5bda7de172 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm install -g yarn
+    gradle:
+      - yes
+    prebuild:
+      - cd ../..
+      - yarn
+      - sed -i -e '/installreferrer/,+11d' node_modules/react-native-device-info/android/build.gradle
+    scanignore:
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/@react-native-masked-view/masked-view/android/build.gradle
+    scandelete:
+      - node_modules
+    ndk: r20
+
+  - versionName: 3.0.2
+    versionCode: 32
+    commit: dc61030e8e0eac360f6690c557ab62265df63cdd
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g yarn
+    gradle:
+      - yes
+    prebuild:
+      - cd ../..
+      - yarn
+      - sed -i -e '/installreferrer/,+11d' node_modules/react-native-device-info/android/build.gradle
+    scanignore:
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/@react-native-masked-view/masked-view/android/build.gradle
+    scandelete:
+      - node_modules
+    ndk: 26.1.10909125
+
+  - versionName: 3.2.0
+    versionCode: 34
+    commit: d614eb9e267dbc98ee4cbcd798313d8b03ce123f
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g corepack
+    gradle:
+      - yes
+    prebuild:
+      - cd ../..
+      - corepack enable
+      - yarn
+      - sed -i -e '/installreferrer/,+11d' node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/media3-exoplayer-ima/d' node_modules/react-native-video/android/build.gradle
+    scanignore:
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/expo-modules-autolinking/scripts/android/autolinking_implementation.gradle
+      - node_modules/@pchmn/expo-material3-theme/android/build.gradle
+      - node_modules/react-native-video/android/build.gradle
+      - node_modules/expo-modules-core/android/ExpoModulesCorePlugin.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/@react-native-masked-view/masked-view/android/build.gradle
+    scandelete:
+      - node_modules
+      - .yarn
+    ndk: 26.1.10909125
+
+  - versionName: 3.2.1
+    versionCode: 35
+    commit: 52a96919b5da2071cc98d8d14e2134dbc2023b27
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g corepack
+    gradle:
+      - yes
+    prebuild:
+      - cd ../..
+      - corepack enable
+      - yarn
+      - sed -i -e '/installreferrer/,+11d' node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/media3-exoplayer-ima/d' node_modules/react-native-video/android/build.gradle
+    scanignore:
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/expo-modules-autolinking/scripts/android/autolinking_implementation.gradle
+      - node_modules/@pchmn/expo-material3-theme/android/build.gradle
+      - node_modules/react-native-video/android/build.gradle
+      - node_modules/expo-modules-core/android/ExpoModulesCorePlugin.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/@react-native-masked-view/masked-view/android/build.gradle
+    scandelete:
+      - node_modules
+      - .yarn
+    ndk: 26.1.10909125
+
+  - versionName: 3.2.2
+    versionCode: 36
+    commit: 5f6576c2e283bd553cb10c90b833dc7b7e3f12a0
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g corepack
+    gradle:
+      - yes
+    prebuild:
+      - cd ../..
+      - corepack enable
+      - yarn
+      - sed -i -e '/installreferrer/,+11d' node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/media3-exoplayer-ima/d' node_modules/react-native-video/android/build.gradle
+    scanignore:
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/expo-modules-autolinking/scripts/android/autolinking_implementation.gradle
+      - node_modules/@pchmn/expo-material3-theme/android/build.gradle
+      - node_modules/react-native-video/android/build.gradle
+      - node_modules/expo-modules-core/android/ExpoModulesCorePlugin.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/@react-native-masked-view/masked-view/android/build.gradle
+    scandelete:
+      - node_modules
+      - .yarn
+    ndk: 26.1.10909125
+
+  - versionName: 3.3.0
+    versionCode: 37
+    commit: 36521350892b73bb3fee091489dc6d447db83191
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g corepack
+    gradle:
+      - yes
+    prebuild:
+      - cd ../..
+      - corepack enable
+      - yarn
+      - sed -i -e '/installreferrer/,+12d' node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/media3-exoplayer-ima/d' node_modules/react-native-video/android/build.gradle
+    scanignore:
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/expo-modules-autolinking/scripts/android/autolinking_implementation.gradle
+      - node_modules/@pchmn/expo-material3-theme/android/build.gradle
+      - node_modules/react-native-video/android/build.gradle
+      - node_modules/expo-modules-core/android/ExpoModulesCorePlugin.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/@react-native-masked-view/masked-view/android/build.gradle
+    scandelete:
+      - node_modules
+      - .yarn
+    ndk: r27b
+
+  - versionName: 3.3.1
+    versionCode: 38
+    commit: 78d9a67207311f519ab3641a5d175b00c09c57b1
+    subdir: android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y npm
+      - npm install -g corepack
+    gradle:
+      - yes
+    prebuild:
+      - cd ../..
+      - corepack enable
+      - yarn
+      - sed -i -e '/installreferrer/,+12d' node_modules/react-native-device-info/android/build.gradle
+      - sed -i -e '/media3-exoplayer-ima/d' node_modules/react-native-video/android/build.gradle
+    scanignore:
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/expo-modules-autolinking/scripts/android/autolinking_implementation.gradle
+      - node_modules/@pchmn/expo-material3-theme/android/build.gradle
+      - node_modules/react-native-video/android/build.gradle
+      - node_modules/expo-modules-core/android/ExpoModulesCorePlugin.gradle
+      - node_modules/react-native-device-info/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-localize/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/@react-native-masked-view/masked-view/android/build.gradle
+    scandelete:
+      - node_modules
+      - .yarn
+    ndk: r27b
+
+MaintainerNotes: scanner might detect 'com/google/ads/interactivemedia/v3/api/AdEvent'
+  stubs from react-native-video
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.3.1
+CurrentVersionCode: 38

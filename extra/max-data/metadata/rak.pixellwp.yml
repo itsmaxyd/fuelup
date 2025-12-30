@@ -1,0 +1,43 @@
+AntiFeatures:
+  NonFreeAssets:
+    en-US: Artwork is partly non-libre.
+  NonFreeNet:
+    en-US: App connects to effectgames.com for artwork.
+Categories:
+  - Theming
+  - Wallpaper
+License: GPL-3.0-only
+AuthorName: Austin Kucera
+AuthorWebSite: https://austinkucera.com/
+SourceCode: https://github.com/ManApart/palette-cycle
+IssueTracker: https://github.com/ManApart/palette-cycle/issues
+Changelog: https://github.com/ManApart/palette-cycle/releases
+
+AutoName: Palette Cycling LWP
+
+RepoType: git
+Repo: https://github.com/ManApart/palette-cycle
+
+Builds:
+  - versionName: 2.2.2
+    versionCode: 11
+    commit: 2.2.2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.1
+    versionCode: 12
+    commit: 52efb547b88483b6ab2b41ae5369b8137cab68cd
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.3.1
+CurrentVersionCode: 12

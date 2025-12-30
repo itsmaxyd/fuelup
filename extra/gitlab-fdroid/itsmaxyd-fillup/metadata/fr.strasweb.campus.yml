@@ -1,0 +1,23 @@
+Categories:
+  - Navigation
+License: GPL-3.0-only
+WebSite: https://strasweb.fr/
+SourceCode: https://svn.strasweb.fr/listing.php?repname=StrasWeb&path=%2Fopendata%2Fapp%2F
+
+AutoName: Trouve ton campus
+Description: |-
+  HTML5 app that helps students in Strasbourg (France) find the best way to get to
+  their campus.
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 4
+    commit: '149'
+    target: android-17
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.0.1
+CurrentVersionCode: 4
+
+NoSourceSince: 1.0.1

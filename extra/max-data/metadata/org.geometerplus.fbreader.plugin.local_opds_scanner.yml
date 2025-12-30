@@ -1,0 +1,57 @@
+Categories:
+  - Reading
+License: GPL-2.0-or-later
+AuthorName: Nikolay Pultsin
+AuthorEmail: geometer@fbreader.org
+AuthorWebSite: https://fbreader.org/
+WebSite: https://fbreader.org/FBReaderJ
+SourceCode: https://github.com/geometer/FBReaderJ-plugin-local-opds-scanner
+IssueTracker: https://github.com/geometer/FBReaderJ-plugin-local-opds-scanner/issues
+Donate: https://fbreader.org/donation/make.php
+
+AutoName: FBReader Calibre connector
+Description: |-
+  Allows automatic discovery of opds shares made discoverable by zeroconf (avahi,
+  Bonjour). FBReader already allows you to add remote OPDS shares e.g.
+  <a href="https://m.gutenberg.org/">https://m.gutenberg.org/</a> or <a href="https://bookserver.revues.org/">https://bookserver.revues.org/</a>.
+
+RepoType: git
+Repo: https://github.com/geometer/FBReaderJ-plugin-local-opds-scanner.git
+
+Builds:
+  - versionName: 1.1-fd
+    versionCode: 101001
+    commit: 9a239a014a272d3b1d642
+    forceversion: true
+
+  - versionName: '1.2'
+    versionCode: 102000
+    commit: 98386fce88255f560a2d895a797bfdee2d92a7d4
+    srclibs:
+      - JmDNS@jmdns-3.4.1
+    rm:
+      - libs/*
+    prebuild:
+      - pushd $$JmDNS$$
+      - mvn package -DskipTests
+      - popd
+      - cp $$JmDNS$$/target/*jar libs/
+
+  - versionName: '1.2'
+    versionCode: 102001
+    commit: '1.2'
+    srclibs:
+      - JmDNS@jmdns-3.4.1
+    rm:
+      - libs/*
+    prebuild:
+      - pushd $$JmDNS$$
+      - mvn package -DskipTests
+      - popd
+      - cp $$JmDNS$$/target/*jar libs/
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.2'
+CurrentVersionCode: 102001

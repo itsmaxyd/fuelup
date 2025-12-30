@@ -1,0 +1,68 @@
+Categories:
+  - Development
+License: GPL-3.0-only
+WebSite: https://termux.com
+SourceCode: https://github.com/termux/termux-float
+IssueTracker: https://github.com/termux/termux-float/issues
+Changelog: https://github.com/termux/termux-float/releases
+Donate: https://termux.com/donate.html
+OpenCollective: Termux
+
+AutoName: Termux:Float
+Description: |-
+  This plugin for https://f-droid.org/packages/com.termux provides a floating terminal window which is
+  shown above other apps.
+
+  Long-press on the floating window to move or resize it and tap on the
+  notification to temporarily hide it.
+
+RepoType: git
+Repo: https://github.com/termux/termux-float
+
+Builds:
+  - versionName: '0.10'
+    versionCode: 10
+    commit: v0.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.11'
+    versionCode: 11
+    commit: v0.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.13'
+    versionCode: 13
+    commit: v0.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.14'
+    versionCode: 14
+    commit: v0.14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.15.0
+    versionCode: 15
+    commit: ef5ba3881d9f4c160539b102caaa849e70391e29
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.17.0
+    versionCode: 1001
+    commit: b435f4b671fd1702817e889ef680850a9934a05f
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v\d+\.\d+\.\d+$
+CurrentVersion: 0.17.0
+CurrentVersionCode: 1001

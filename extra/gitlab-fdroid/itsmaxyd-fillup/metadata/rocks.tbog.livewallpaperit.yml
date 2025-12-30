@@ -1,0 +1,47 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Rely on Reddit.
+Categories:
+  - System
+  - Theming
+  - Wallpaper
+License: GPL-3.0-only
+AuthorName: TBog
+SourceCode: https://github.com/TBog/live-wallpaper-it
+IssueTracker: https://github.com/TBog/live-wallpaper-it/issues
+
+AutoName: LiveWallpaperIt
+
+RepoType: git
+Repo: https://github.com/TBog/live-wallpaper-it.git
+Binaries: https://github.com/TBog/live-wallpaper-it/releases/download/v%v/app-fdroid-release.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 2
+    commit: 3a2747492f70d6bdad62ccb5e701bc3f6d5fdaac
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: '2.0'
+    versionCode: 3
+    commit: 5544b9467f52ec085a472444716cacf1c5387281
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+AllowedAPKSigningKeys: 7b932fa3589a5f30d51fe9e029bd98af1f7607084711e8134216f4d44b58c197
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[^-_]*$
+CurrentVersion: '2.0'
+CurrentVersionCode: 3

@@ -1,0 +1,44 @@
+Categories:
+  - Games
+License: GPL-2.0-or-later
+AuthorName: Kamikat
+AuthorEmail: kamikat@banana.moe
+AuthorWebSite: https://banana.moe/
+WebSite: https://onscripter.osdn.jp/android/android.html
+SourceCode: https://github.com/shinohane/onscripter
+IssueTracker: http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&action=top
+
+Name: ONScripter
+Description: |-
+  Only English ONScripter games are known to be supported. This port uses upstream
+  ONScripter engine, but any Android-specific issues should be reported to port
+  developer (see source code link).
+
+  <a href="http://narcissu.insani.org/">Narcissu</a> is a free English game; download the
+  linux edition and extract to the sdcard.
+
+RepoType: git
+Repo: https://github.com/shinohane/onscripter
+
+Builds:
+  - versionName: '20120310'
+    versionCode: 20120310
+    commit: eaf9848c79
+    init:
+      - echo "APP_CFLAGS += -DENABLE_1BYTE_CHAR -DFORCE_1BYTE_CHAR" > jni/Application.mk
+      - rm -r jni/sdl_ttf/VisualC*
+    patch:
+      - jpeg.patch
+    srclibs:
+      - ONScripter@28b4b185ba
+    prebuild: cp -r $$ONScripter$$ jni/application/onscripter-20120310
+    target: android-17
+    buildjni:
+      - yes
+    ndk: r12b
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '20120310'
+CurrentVersionCode: 20120310

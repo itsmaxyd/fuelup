@@ -1,0 +1,288 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Depends on wikipedia.org which is free and open source, but is not changeable
+      by a user.
+  Tracking:
+    en-US: Analytics can't be disabled.
+Categories:
+  - Connectivity
+  - Internet
+  - Reading
+  - Science & Education
+License: Apache-2.0
+SourceCode: https://codeberg.org/hicorenational/apps-android-wikipedia
+IssueTracker: https://codeberg.org/hicorenational/apps-android-wikipedia/issues
+Liberapay: SoliddBlock
+Bitcoin: 18Leu8F4tLuCaKfXjysVoYWzWRomXXKdug
+Litecoin: ltc1q8ls9ygtr2pkms8fav88ly4zz0rq9g6ck8g3z8c
+
+AutoName: Wikipedia
+
+RepoType: git
+Repo: https://codeberg.org/hicorenational/apps-android-wikipedia
+
+Builds:
+  - versionName: r/2.7.50524-r-2025-03-04
+    versionCode: 50524
+    commit: e43d975de2e614e5ae74d6ff303dac31dd496e90
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50528-r-2025-04-15
+    versionCode: 50528
+    commit: 24fdadb67d81478ec335df2f89a229966973a1b6
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50529-r-2025-04-21
+    versionCode: 50529
+    commit: 10abc702f0b679fc2ff39344f8c9cab1306054d0
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50530-r-2025-05-02
+    versionCode: 50530
+    commit: b6298669a0d558c665060e15d9b35fc74b58c088
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50532-r-2025-05-20
+    versionCode: 50532
+    commit: 63df1dcd74e4796a0bfcd06271b17fc370d3d1a9
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50535-r-2025-06-17
+    versionCode: 50535
+    commit: 0ab6032f5fa18205b8adc25ca116175af832bdf7
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50536-r-2025-06-18
+    versionCode: 50536
+    commit: 24222752383929587794072148bcd59d05169af1
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50538-r-2025-06-24
+    versionCode: 50538
+    commit: 3ea8e9f7349b246133f2a450810c8c8bd6d1394a
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50540-r-2025-07-08
+    versionCode: 50540
+    commit: 03a7e22aaa34feaf9b0465de1f14e4c371174af3
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50543-r-2025-07-31
+    versionCode: 50543
+    commit: 9066d028fb2076577c6a8e07c2830e672bbbcfc1
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50549-r-2025-09-17
+    versionCode: 50549
+    commit: b29c1a0ea4865abd9141ac6723d87dca8b2bbdbd
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i '/gradle/s/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: r/2.7.50550-r-2025-09-22
+    versionCode: 50550
+    commit: 437c1fe4a817c08630e4bd2be1cd064dce7e9387
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+      - sed -i '/gradle/s/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: r/2.7.50555-r-2025-11-03
+    versionCode: 50555
+    commit: 85b31b30f00f2973f8915970b61bbf01a066794b
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/2.7.50559-r-2025-11-24
+    versionCode: 50559
+    commit: 86f98a6f1896cc09329093d0a0d90a4d03a41cfd
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50561-r-2025-12-03
+    versionCode: 50561
+    commit: 2e532b69d431015dd4abfc248f9c899d5f5eba7e
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50562-r-2025-12-08
+    versionCode: 50562
+    commit: 53985b726bc578b0486783dd1c7fc156686bc233
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+  - versionName: r/50563-r-2025-12-11
+    versionCode: 50563
+    commit: 58cc9f665f5d0557895c57ff6407e80062ec7edf
+    subdir: apps-android-wikipedia/app
+    submodules: true
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - pushd ../
+      - bash ../patches/apply.sh
+      - popd
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/gms/d' build.gradle ../build.gradle.kts
+
+MaintainerNotes: '* See org.wikipedia.yml'
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^r
+UpdateCheckName: org.wikipedia
+CurrentVersion: r/50563-r-2025-12-11
+CurrentVersionCode: 50563

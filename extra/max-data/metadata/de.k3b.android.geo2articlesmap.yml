@@ -1,0 +1,41 @@
+Categories:
+  - Navigation
+  - Science & Education
+License: GPL-3.0-or-later
+AuthorName: k3b
+SourceCode: https://github.com/k3b/AndroidGeo2ArticlesMap
+IssueTracker: https://github.com/k3b/AndroidGeo2ArticlesMap/issues
+Changelog: https://github.com/k3b/AndroidGeo2ArticlesMap/releases
+Donate: https://donate.openstreetmap.org/
+
+AutoName: Show Articles in Map
+
+RepoType: git
+Repo: https://github.com/k3b/AndroidGeo2ArticlesMap
+
+Builds:
+  - versionName: v1.4
+    versionCode: 4
+    commit: v1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.5
+    versionCode: 5
+    commit: 4a46baed4e871409602e96a00c43c4e872fcecf5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.6
+    versionCode: 6
+    commit: 68b35f8d015f48bdbbab4f5cc2980ef272a79818
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v1.6
+CurrentVersionCode: 6

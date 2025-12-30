@@ -1,0 +1,34 @@
+Connectivity:
+  name: Sareak
+Development:
+  name: Garapena
+Games:
+  name: Jolasak
+Graphics:
+  name: Grafikoak
+Internet:
+  name: Internet
+Money:
+  name: Dirua
+Multimedia:
+  name: Multimedia
+Navigation:
+  name: Orientazioa
+Phone & SMS:
+  name: Telefonoa eta SMS
+Reading:
+  name: Irakurketa
+Science & Education:
+  name: Zientzia eta hezkuntza
+Security:
+  name: Segurtasuna
+Sports & Health:
+  name: Kirola eta osasuna
+System:
+  name: Sistema
+Theming:
+  name: Itxura
+Time:
+  name: Denbora
+Writing:
+  name: Idazketa

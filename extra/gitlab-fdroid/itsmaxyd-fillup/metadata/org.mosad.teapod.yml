@@ -1,0 +1,126 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App depends on anime-on-demand.de, which is not libre.
+Categories:
+  - Multimedia
+License: GPL-3.0-or-later
+AuthorName: mosad.xyz
+WebSite: https://www.mosad.xyz/
+SourceCode: https://git.mosad.xyz/Seil0/teapod
+IssueTracker: https://git.mosad.xyz/Seil0/teapod/issues
+Changelog: https://git.mosad.xyz/Seil0/teapod/releases
+
+AutoName: Teapod
+
+RepoType: git
+Repo: https://git.mosad.xyz/Seil0/teapod.git
+
+Builds:
+  - versionName: 0.2.1
+    versionCode: 2100
+    commit: 0.2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.0
+    versionCode: 3000
+    commit: 0.3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.0
+    versionCode: 4000
+    commit: 0.4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.1
+    versionCode: 4100
+    commit: 0.4.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.2
+    versionCode: 4200
+    commit: 19552d39509e03b4de3970b4024a3ab3f5d4021d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.0-beta1
+    versionCode: 9000
+    commit: 4a5a6c04ca1e493aa4d38a4596c666137aed3011
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.0-beta2
+    versionCode: 9010
+    commit: ad1e3068cdbd64b78723fd7193fc23ada31a63a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.0-beta3
+    versionCode: 9020
+    commit: e835715b9c2325be57428de1006abe4d7766bd53
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.0
+    versionCode: 100000
+    commit: d33de371d1d49031621f77df956b2397039afc84
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0-beta1
+    versionCode: 100990
+    commit: a13eb15adf565e10ba0083c53fc5f430ad9d9b8e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0-beta2
+    versionCode: 100991
+    commit: c89ae54929110bf8ed7469b6d1fd3f11077a500c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.0-beta3
+    versionCode: 100992
+    commit: 6515f657d06481ef0fd4222b3ddcd6c1aac64a8a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.0-beta3
+CurrentVersionCode: 100992

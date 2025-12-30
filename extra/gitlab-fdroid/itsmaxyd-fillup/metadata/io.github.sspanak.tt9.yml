@@ -1,0 +1,248 @@
+Categories:
+  - Keyboard & IME
+  - System
+License: Apache-2.0
+AuthorName: Dimo Karaivanov
+SourceCode: https://github.com/sspanak/tt9
+IssueTracker: https://github.com/sspanak/tt9/issues
+Changelog: https://github.com/sspanak/tt9/releases
+
+AutoName: Traditional T9
+
+RepoType: git
+Repo: https://github.com/sspanak/tt9
+Binaries: https://github.com/sspanak/tt9/releases/download/v%v/tt9-v%v.apk
+
+Builds:
+  - versionName: '28.0'
+    versionCode: 383
+    commit: e2409f43545938d3f1f80158514d19ba75fda647
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '29.0'
+    versionCode: 412
+    commit: ee3931cdc2ed89fb251fd39860ebac6c2abf4ac6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '30.0'
+    versionCode: 474
+    commit: 915b4d606349076c94a2431d2e98ab390bf19e9a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '31.0'
+    versionCode: 516
+    commit: 58ac84f31bb90f291b48219348edd420a17f4cae
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '32.0'
+    versionCode: 543
+    commit: ae116f80369c7e39c1afdb8a7f55efec043811c5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '33.0'
+    versionCode: 558
+    commit: 2962e22efafc98041ed9e37ce8ebbee50686f258
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '34.0'
+    versionCode: 573
+    commit: e61bf9b652fbc9b0b3d92b1743fc2b8aafb508d6
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '35.0'
+    versionCode: 599
+    commit: d468086950702fb34825752c189298aec1ac591f
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '36.0'
+    versionCode: 612
+    commit: 00680e804cef817944bc7e7efbb456eada529b80
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '37.0'
+    versionCode: 643
+    commit: 008880a6448dd8b15d301074409df45b1b063adc
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '38.0'
+    versionCode: 694
+    commit: e5b9beb84e2b5bd232286b1f9737c3e950ac7480
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '39.0'
+    versionCode: 743
+    commit: 22d0d73e2946eeffbf61a4f92b1edea8487d7b72
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '40.0'
+    versionCode: 774
+    commit: 56b355631a2a92d4755e08f9a29beb4b82ab122b
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '42.0'
+    versionCode: 827
+    commit: 0593cd239573d9a7425c0f82d1e4cec62553b12e
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '43.0'
+    versionCode: 845
+    commit: f20c49825244d72b722231166c91fb301935c23a
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '44.0'
+    versionCode: 859
+    commit: f9e020ee8ea6b3ea64a528a0fe59c3c254d7a8fa
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '45.0'
+    versionCode: 923
+    commit: 2229ddbc9d4faf1b2760e347d8b624b079395524
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '46.0'
+    versionCode: 953
+    commit: ef32d5adaa8acddb3478911bb89026087c5b2876
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '47.0'
+    versionCode: 977
+    commit: 04abac1bb52c7ba6449b58ee6bad61b486fadded
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '48.0'
+    versionCode: 988
+    commit: af55eff8109b9720a3123a1348fd15a20bffd9aa
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '49.0'
+    versionCode: 1027
+    commit: 75ebfc1f3bd5fb7301e9bde18801dc05d6191881
+    subdir: app
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e 's/Xmx6192m/Xmx9g/' ../gradle.properties
+      - gradle buildDictionaryDownloads || gradle buildDictionaryDownloads
+      - sed -i -e '/tasks.register("buildDictionaryDownloads")/,/^}/s/^\s.*//' build.gradle
+
+  - versionName: '50.0'
+    versionCode: 1146
+    commit: 2339aec1b6fb126b5c9a8b755c8532696a5efddf
+    subdir: app
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e 's/Xmx6192m/Xmx9g/' ../gradle.properties
+      - gradle buildDictionaryDownloads || gradle buildDictionaryDownloads
+      - sed -i -e '/tasks.register("buildDictionaryDownloads")/,/^}/s/^\s.*//' build.gradle
+
+  - versionName: '52.0'
+    versionCode: 1217
+    commit: 278853ca9a1d0ee3ff4fa906b9e737c16c1c7f14
+    subdir: app
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e 's/Xmx6192m/Xmx9g/' ../gradle.properties
+      - gradle buildDictionaryDownloads || gradle buildDictionaryDownloads
+      - sed -i -e '/tasks.register("buildDictionaryDownloads")/,/^}/s/^\s.*//' build.gradle
+
+  - versionName: '56.0'
+    versionCode: 1337
+    commit: eb6ee9cf80087f3d709329f9030419a6b26838ba
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e 's/Xmx6192m/Xmx9g/' ../gradle.properties
+      - gradle buildDictionaryDownloads || gradle buildDictionaryDownloads
+      - sed -i -e '/tasks.register("buildDictionaryDownloads")/,/^}/s/^\s.*//' build.gradle
+
+  - versionName: '57.0'
+    versionCode: 1381
+    commit: b81fc3b6b3a123ef712d8339290044dda5cf873f
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e 's/Xmx6192m/Xmx9g/' ../gradle.properties
+      - gradle buildDictionaryDownloads || gradle buildDictionaryDownloads
+      - sed -i -e '/tasks.register("buildDictionaryDownloads")/,/^}/s/^\s.*//' build.gradle
+
+  - versionName: '58.0'
+    versionCode: 1385
+    commit: ee64a0cc4eed7aa1c4d498dd57deacf91db9faf1
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e 's/Xmx6192m/Xmx9g/' ../gradle.properties
+      - gradle buildDictionaryDownloads || gradle buildDictionaryDownloads
+      - sed -i -e '/tasks.register("buildDictionaryDownloads")/,/^}/s/^\s.*//' build.gradle
+
+AllowedAPKSigningKeys: 57f09ab8dcfedbb63fa309362fedbbb0d8026cada8b2dc78ff00057f98c6020b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[a-z0-9.]*$
+UpdateCheckData: app/src/main/AndroidManifest.xml|versionCode="(\d+)"|.|versionName="(.+)"
+CurrentVersion: '58.0'
+CurrentVersionCode: 1385

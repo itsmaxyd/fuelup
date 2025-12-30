@@ -1,0 +1,1015 @@
+Categories:
+  - Games
+License: GPL-3.0-or-later
+AuthorName: MLM Games
+AuthorEmail: mlm.gamestudio@gmail.com
+AuthorWebSite: https://ragebreaker.itch.io/
+WebSite: https://ragebreaker.itch.io/pomodorot
+SourceCode: https://github.com/mlm-games/pomodorot
+IssueTracker: https://github.com/mlm-games/pomodorot/issues
+Changelog: https://github.com/mlm-games/pomodorot/blob/HEAD/CHANGELOG.md
+Donate: https://ko-fi.com/mlmgames
+Liberapay: mlm-games
+
+RepoType: git
+Repo: https://github.com/mlm-games/pomodorot.git
+
+Builds:
+  - versionName: 0.8.0
+    versionCode: 81
+    commit: 76b75fed0d2fe7b28eccd403ce92cbac5834974c
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.8.0
+    versionCode: 82
+    commit: 76b75fed0d2fe7b28eccd403ce92cbac5834974c
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.8.0
+    versionCode: 83
+    commit: 76b75fed0d2fe7b28eccd403ce92cbac5834974c
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86
+      - scons -j `nproc` platform=android target=template_release arch=x86_64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.8.1
+    versionCode: 91
+    commit: 178366422e73e50f924b9fa927f9dd6ebaf8c5ab
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.8.1
+    versionCode: 92
+    commit: 178366422e73e50f924b9fa927f9dd6ebaf8c5ab
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.8.1
+    versionCode: 93
+    commit: 178366422e73e50f924b9fa927f9dd6ebaf8c5ab
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86
+      - scons -j `nproc` platform=android target=template_release arch=x86_64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.9.0
+    versionCode: 101
+    commit: abd79252ed28b2e2f583393eb481f363031fc559
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.9.0
+    versionCode: 102
+    commit: abd79252ed28b2e2f583393eb481f363031fc559
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.9.0
+    versionCode: 103
+    commit: abd79252ed28b2e2f583393eb481f363031fc559
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86
+      - scons -j `nproc` platform=android target=template_release arch=x86_64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.10.1
+    versionCode: 121
+    commit: 5b26544bdc50a11e8ec02598d48fb906e05895f4
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.10.1
+    versionCode: 122
+    commit: 5b26544bdc50a11e8ec02598d48fb906e05895f4
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.10.1
+    versionCode: 123
+    commit: 5b26544bdc50a11e8ec02598d48fb906e05895f4
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86
+      - scons -j `nproc` platform=android target=template_release arch=x86_64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.10.2
+    versionCode: 131
+    commit: e3cebbad9b7f6827c0a3c8be0dfe38d066673741
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.10.2
+    versionCode: 132
+    commit: e3cebbad9b7f6827c0a3c8be0dfe38d066673741
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.10.2
+    versionCode: 133
+    commit: e3cebbad9b7f6827c0a3c8be0dfe38d066673741
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86
+      - scons -j `nproc` platform=android target=template_release arch=x86_64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.10.3
+    versionCode: 141
+    commit: 27f6bcec12303e7f3f997df616d63860eeb647f6
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.10.3
+    versionCode: 142
+    commit: 27f6bcec12303e7f3f997df616d63860eeb647f6
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.10.3
+    versionCode: 143
+    commit: 27f6bcec12303e7f3f997df616d63860eeb647f6
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86
+      - scons -j `nproc` platform=android target=template_release arch=x86_64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.11.0
+    versionCode: 151
+    commit: 7f3bc204ab67a0ccba663572858ed9a918bbeebf
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.11.0
+    versionCode: 152
+    commit: 7f3bc204ab67a0ccba663572858ed9a918bbeebf
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.11.0
+    versionCode: 153
+    commit: 7f3bc204ab67a0ccba663572858ed9a918bbeebf
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86
+      - scons -j `nproc` platform=android target=template_release arch=x86_64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.11.2
+    versionCode: 171
+    commit: 8960b7cf1894b0017815bfd27fa925284eda9cb0
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.11.2
+    versionCode: 172
+    commit: 8960b7cf1894b0017815bfd27fa925284eda9cb0
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.11.2
+    versionCode: 173
+    commit: 8960b7cf1894b0017815bfd27fa925284eda9cb0
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86
+      - scons -j `nproc` platform=android target=template_release arch=x86_64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.11.3
+    versionCode: 181
+    commit: d3ceeb7de03308e42bf17ac6b4d8015878ebc9d7
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.11.3
+    versionCode: 182
+    commit: d3ceeb7de03308e42bf17ac6b4d8015878ebc9d7
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.11.3
+    versionCode: 183
+    commit: d3ceeb7de03308e42bf17ac6b4d8015878ebc9d7
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.4-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86
+      - scons -j `nproc` platform=android target=template_release arch=x86_64
+      - cd platform/android/java
+      - gradle generateGodotTemplates
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 23.2.8568313
+
+  - versionName: 0.12.2
+    versionCode: 201
+    commit: cc8973bd7fa0f7f1703ea27b376c013042bfc750
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.5-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32 generate_apk=yes
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 28.1.13356709
+
+  - versionName: 0.12.2
+    versionCode: 202
+    commit: cc8973bd7fa0f7f1703ea27b376c013042bfc750
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.5-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64 generate_apk=yes
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 28.1.13356709
+
+  - versionName: 0.12.2
+    versionCode: 203
+    commit: cc8973bd7fa0f7f1703ea27b376c013042bfc750
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.5-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86_32
+      - scons -j `nproc` platform=android target=template_release arch=x86_64 generate_apk=yes
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 28.1.13356709
+
+  - versionName: 0.13.2
+    versionCode: 221
+    commit: ed5e4e767624b28a22d15a2729a6d44e0d4e0214
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.5-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm32 generate_apk=yes
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm32' pomodorot.apk
+    ndk: 28.1.13356709
+
+  - versionName: 0.13.2
+    versionCode: 222
+    commit: ed5e4e767624b28a22d15a2729a6d44e0d4e0214
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.5-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=arm64 generate_apk=yes
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        arm64' pomodorot.apk
+    ndk: 28.1.13356709
+
+  - versionName: 0.13.2
+    versionCode: 223
+    commit: ed5e4e767624b28a22d15a2729a6d44e0d4e0214
+    timeout: 10800
+    sudo:
+      - apt-get update
+      - apt-get install -y pkgconf scons
+    output: pomodorot.apk
+    srclibs:
+      - Godot@4.5-stable
+    build:
+      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+      - export ANDROID_SDK_ROOT=$$SDK$$
+      - pushd $$Godot$$
+      - scons -j `nproc` platform=linuxbsd target=editor
+      - scons -j `nproc` platform=android target=template_release arch=x86_32
+      - scons -j `nproc` platform=android target=template_release arch=x86_64 generate_apk=yes
+      - popd
+      - sed -i -e 's:\(^.*package/signed\)\s*=.*$:\1 = false:' export_presets.cfg
+      - sed -i -e '/custom_template\/release/s|=.*|="$$Godot$$/bin/android_release.apk"|'
+        export_presets.cfg
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --import
+      - export GODOT_CFG=$(ls ~/.config/godot/editor_settings-*.tres)
+      - sed -i -e "s:\(^.*java_sdk_path\)\s*=.*$:\1 = "$JAVA_HOME":" $GODOT_CFG
+      - sed -i -e 's:\(^.*android_sdk_path\)\s*=.*$:\1 = "$$SDK$$":' $GODOT_CFG
+      - $$Godot$$/bin/godot.linuxbsd.editor.x86_64 --headless --export-release 'Android
+        x86 and x86 64' pomodorot.apk
+    ndk: 28.1.13356709
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - '%c'
+  - '%c + 1'
+  - '%c + 2'
+UpdateCheckData: export_presets.cfg|version/code=(\d+)|.|version/name="([\d.]+)"
+CurrentVersion: 0.13.2
+CurrentVersionCode: 223

@@ -1,0 +1,241 @@
+Categories:
+  - Internet
+License: MIT
+AuthorName: Gotify
+AuthorEmail: gotify@protonmail.com
+WebSite: https://gotify.net/
+SourceCode: https://github.com/gotify/android
+IssueTracker: https://github.com/gotify/android/issues
+Changelog: https://github.com/gotify/android/releases
+
+AutoName: Gotify
+
+RepoType: git
+Repo: https://github.com/gotify/android.git
+
+Builds:
+  - versionName: 2.0.1
+    versionCode: 4
+    commit: v2.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.2
+    versionCode: 5
+    commit: v2.0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.3
+    versionCode: 6
+    commit: v2.0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.4
+    versionCode: 7
+    commit: v2.0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.5
+    versionCode: 8
+    commit: v2.0.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.6
+    versionCode: 9
+    commit: v2.0.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.7
+    versionCode: 10
+    commit: v2.0.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.8
+    versionCode: 11
+    commit: v2.0.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.9
+    versionCode: 12
+    commit: v2.0.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.10
+    versionCode: 13
+    commit: v2.0.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.11
+    versionCode: 14
+    commit: v2.0.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.12
+    versionCode: 15
+    commit: v2.0.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.13
+    versionCode: 16
+    commit: v2.0.13
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.1.0
+    versionCode: 18
+    commit: v2.1.0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.1.1
+    versionCode: 19
+    commit: v2.1.1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.1.2
+    versionCode: 20
+    commit: v2.1.2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.1.3
+    versionCode: 21
+    commit: f6ecfce5d459f21d8127796b2794f00c76fe4e37
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.2.0
+    versionCode: 22
+    commit: 530bc0305929fe65bb7a8670338c040259c35b8e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.3.1
+    versionCode: 24
+    commit: 8d36edc75e7e2795c6dbc8825253859548f995d6
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.3.3
+    versionCode: 25
+    commit: fff261c1fdfc4dcebfecdb44312f603dda64af6d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.4.0
+    versionCode: 26
+    commit: baa12eeb171019b4cf3e03ecd247ca13c3db8ad5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.5.1
+    versionCode: 27
+    commit: 62916215c82f4fa4dbb23cdc3e552403c61d8232
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.6.0
+    versionCode: 28
+    commit: 778f084f5d7aba468437919a1dc8ac419ae9a650
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.7.0
+    versionCode: 29
+    commit: 4aad74a5d2f2a91df08643dfb6d66223487032de
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.7.1
+    versionCode: 30
+    commit: 2082e6d46e2b78dd533ef655f4c88e8566d73108
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 31
+    commit: d1e1703d83259d0a5161e9b3592e3171f2f1cd3a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.1
+    versionCode: 32
+    commit: a50e63aafaa610e814998a5faf5c1ac3e85e0bcf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.2
+    versionCode: 33
+    commit: 20305cb601df6a5945ef50135ea9ef4f103a1f78
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/publishing {/,/^}/d' ../client/build.gradle
+
+  - versionName: 2.9.0
+    versionCode: 34
+    commit: 547d9fd943d7164edbfaf4bb93ebcc9c85ad55ce
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/publishing {/,/^}/d' ../client/build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+CurrentVersion: 2.9.0
+CurrentVersionCode: 34

@@ -1,0 +1,108 @@
+Categories:
+  - Theming
+License: Apache-2.0
+SourceCode: https://github.com/SpiritCroc/DarkCroc-Android-theme
+IssueTracker: https://github.com/SpiritCroc/DarkCroc-Android-theme/issues
+Changelog: https://github.com/SpiritCroc/DarkCroc-Android-theme/releases
+
+AutoName: DarkCroc Theme
+Description: |-
+  <b>IMPORTANT:</b> You need the Substratum theming platform working on your
+  device! Read the inbuilt information before reporting any issues!
+
+  Theme for Substratum, originally based on the default AOSP dark material
+  colors; then extended to provide more variants to allow configuration
+  according to the user's taste.
+
+  This is the successor theme of https://f-droid.org/packages/de.spiritcroc.defaultdarktheme_oms series
+  for newer Android versions, starting with Android 9.
+
+RepoType: git
+Repo: https://github.com/SpiritCroc/DarkCroc-Android-theme
+
+Builds:
+  - versionName: '1.1'
+    versionCode: 2
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+  - versionName: '1.3'
+    versionCode: 4
+    commit: v1.3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+  - versionName: '1.4'
+    versionCode: 5
+    commit: v1.4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+  - versionName: '1.5'
+    versionCode: 6
+    commit: v1.5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+  - versionName: '1.6'
+    versionCode: 7
+    commit: v1.6
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+  - versionName: '1.7'
+    versionCode: 8
+    commit: v1.7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+  - versionName: '1.8'
+    versionCode: 9
+    commit: v1.8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+  - versionName: '1.9'
+    versionCode: 10
+    commit: v1.9
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+  - versionName: '1.10'
+    versionCode: 11
+    commit: v1.10
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/\"generate_/\"\.\.\/generate_/g' build.gradle
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.10'
+CurrentVersionCode: 11

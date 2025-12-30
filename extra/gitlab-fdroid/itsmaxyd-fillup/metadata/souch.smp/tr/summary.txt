@@ -1,0 +1,1 @@
+Klasör tabanlı bir müzik çalar. Klasör sıralı düzenini gösterir ve izler.

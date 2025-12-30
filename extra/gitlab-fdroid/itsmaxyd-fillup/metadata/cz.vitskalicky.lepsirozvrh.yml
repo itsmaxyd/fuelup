@@ -1,0 +1,204 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Internet
+  - Science & Education
+License: GPL-3.0-only
+AuthorName: Vít Skalický
+AuthorEmail: vit.skalicky@email.cz
+WebSite: https://vitskalicky.gitlab.io/lepsi-rozvrh
+SourceCode: https://gitlab.com/vitSkalicky/lepsi-rozvrh
+IssueTracker: https://gitlab.com/vitSkalicky/lepsi-rozvrh/-/issues
+
+AutoName: Better schedule
+
+RepoType: git
+Repo: https://gitlab.com/vitSkalicky/lepsi-rozvrh.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.3
+    versionCode: 11
+    commit: v1.5.3
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: '1.6'
+    versionCode: 12
+    commit: v1.6
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.6.1
+    versionCode: 13
+    commit: v1.6.1
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: '1.7'
+    versionCode: 16
+    commit: v1.7
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.7.1
+    versionCode: 17
+    commit: v1.7.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.7.2
+    versionCode: 18
+    commit: v1.7.2
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.7.3
+    versionCode: 19
+    commit: v1.7.3
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '1.8'
+    versionCode: 25
+    commit: v1.8
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.1
+    versionCode: 26
+    commit: v1.8.1
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.2
+    versionCode: 27
+    commit: v1.8.2
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.3
+    versionCode: 28
+    commit: 4b69e7fff616e30bfe0b6cea71f7f73d85760465
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.4
+    versionCode: 29
+    commit: c6f8301b89ba5c56365e292e20ce4eb376f65b34
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.5rc1
+    versionCode: 30
+    commit: dd7a47b6b46fa653693200b4fff2677605be676d
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.5rc2
+    versionCode: 31
+    commit: 149279513be1ae77ce71e4935e94ae5ebfc9dc27
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.5rc3
+    versionCode: 32
+    commit: d9ed4e1654e0171c05c45d88594e4a413bc19dc0
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.8
+    versionCode: 36
+    commit: bd127846f8b52099f7837768406494b3a82c8b41
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.9
+    versionCode: 37
+    commit: 50d58fd3cd3ce8b0cef1d79c6b1eee42e9d94658
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.11
+    versionCode: 39
+    commit: bb51467daacb911c920d221161e6e48e42175b70
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 2.0-rc3
+    versionCode: 43
+    commit: 09653be6987098ddc67d6d12b51ef5eca1847a1d
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 2.0-rc4
+    versionCode: 44
+    commit: 758947d4cacbe026073908b231885ab4a0300958
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 2.0-rc5
+    versionCode: 45
+    commit: 75746afd3ff4d5815b6a1e2ed379fd9050d4698a
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: '2.0'
+    versionCode: 46
+    commit: 4e724dcde7d0a0952d1fbc564c1fad928cc2057c
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 2.0.1
+    versionCode: 47
+    commit: 3dfb181cf0319dd78c0d727aaee407396ad7bdbf
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 2.0.2
+    versionCode: 48
+    commit: 2c1ee3df5059c8aae08b5f86db6e7c957a6cc08a
+    subdir: app
+    gradle:
+      - official
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v.*$
+CurrentVersion: 2.0.2
+CurrentVersionCode: 48

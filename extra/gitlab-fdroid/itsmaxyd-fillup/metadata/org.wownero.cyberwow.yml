@@ -1,0 +1,96 @@
+Categories:
+  - Money
+License: GPL-3.0-or-later
+WebSite: https://wownero.org/
+SourceCode: https://github.com/wownero/cyberwow
+IssueTracker: https://github.com/wownero/cyberwow/issues
+
+AutoName: CyberWOW
+
+RepoType: git
+Repo: https://github.com/wownero/cyberwow
+
+Builds:
+  - versionName: 0.7.0.0-i
+    versionCode: 22
+    commit: v0.7.0.0-i
+    subdir: cyberwow
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential
+      - apt-get install -y -t stretch-backports cmake
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@stable
+    build:
+      - flutter_dir=$(realpath $$flutter$$/bin)
+      - $flutter_dir/flutter config --no-analytics
+      - cd ..
+      - PATH=$flutter_dir:$PATH ANDROID_NDK_ROOT=$$NDK$$ make wow
+    ndk: r20
+
+  - versionName: 0.7.0.0-k
+    versionCode: 24
+    commit: v0.7.0.0-k
+    subdir: cyberwow
+    sudo:
+      - echo "deb http://deb.debian.org/debian stretch-backports-sloppy main" > /etc/apt/sources.list.d/stretch-backports-sloppy.list
+      - apt-get update
+      - apt-get install -y build-essential
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@stable
+    build:
+      - flutter_dir=$(realpath $$flutter$$/bin)
+      - $flutter_dir/flutter config --no-analytics
+      - cd ..
+      - PATH=$flutter_dir:$PATH ANDROID_NDK_ROOT=$$NDK$$ make wow
+    ndk: r20b
+
+  - versionName: 0.7.0.0-l
+    versionCode: 25
+    commit: v0.7.0.0-l
+    subdir: cyberwow
+    sudo:
+      - echo "deb http://deb.debian.org/debian stretch-backports-sloppy main" > /etc/apt/sources.list.d/stretch-backports-sloppy.list
+      - apt-get update
+      - apt-get install -y build-essential
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@stable
+    build:
+      - flutter_dir=$(realpath $$flutter$$/bin)
+      - $flutter_dir/flutter config --no-analytics
+      - cd ..
+      - PATH=$flutter_dir:$PATH ANDROID_NDK_ROOT=$$NDK$$ make wow
+    ndk: r20b
+
+  - versionName: 0.8.0.0-a
+    versionCode: 27
+    commit: v0.8.0.0-a
+    subdir: cyberwow
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential
+      - apt-get install -y -t stretch-backports-sloppy libarchive13
+      - apt-get install -y -t stretch-backports cmake
+    output: build/app/outputs/apk/release/app-release.apk
+    srclibs:
+      - flutter@stable
+    build:
+      - flutter_dir=$(realpath $$flutter$$/bin)
+      - $flutter_dir/flutter config --no-analytics
+      - cd ..
+      - PATH=$flutter_dir:$PATH ANDROID_NDK_ROOT=$$NDK$$ make wow
+    ndk: r20b
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckIgnore: (alpha|beta|rc|RC|dev)
+CurrentVersion: 0.8.0.0-a
+CurrentVersionCode: 27

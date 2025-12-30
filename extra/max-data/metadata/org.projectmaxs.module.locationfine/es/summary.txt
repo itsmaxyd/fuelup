@@ -1,0 +1,1 @@
+Obtener una mejor ubicación del dispositivo (p, ej. con GPS) a través de MAXS

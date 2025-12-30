@@ -1,0 +1,1 @@
+Diverse funktionalitet för MAXS som inte kräver några tillstånd

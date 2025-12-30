@@ -1,0 +1,454 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Uploading to Strava and other services makes use of non free net services.
+Categories:
+  - Sports & Health
+  - Workout
+License: GPL-3.0-only
+WebSite: https://github.com/jonasoreland/runnerup/wiki
+SourceCode: https://github.com/jonasoreland/runnerup
+IssueTracker: https://github.com/jonasoreland/runnerup/issues
+Translation: https://explore.transifex.com/runner-up/runner-up-android/
+Changelog: https://htmlpreview.github.io/?https://raw.githubusercontent.com/jonasoreland/runnerup/blob/HEAD/app/assets/changes.html
+
+AutoName: RunnerUp
+
+RepoType: git
+Repo: https://github.com/jonasoreland/runnerup.git
+
+Builds:
+  - versionName: 2.0.2.1
+    versionCode: 14000203
+    commit: v2.0.2.1
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i "/play-services/d" build.gradle
+
+  - versionName: 2.0.3.0
+    versionCode: 14000205
+    commit: v2.0.3.0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild:
+      - sed -i -e 's/\r//' ../gradle/wrapper/gradle-wrapper.properties
+      - sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.0.5.1
+    versionCode: 14000208
+    commit: v2.0.5.1
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.0.5.2
+    versionCode: 14000209
+    commit: v2.0.5.2
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.0.6.1
+    versionCode: 14000211
+    commit: v2.0.6.1
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.0.6.2
+    versionCode: 14000212
+    commit: v2.0.6.2
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.0.6.3
+    versionCode: 14000213
+    commit: v2.0.6.3
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.1.0.0
+    versionCode: 14000240
+    commit: v2.1.0.0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.0.3
+    versionCode: 15000253
+    commit: v2.2.0.3
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.1.0
+    versionCode: 15000254
+    commit: v2.2.1.0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.2.2
+    versionCode: 15000262
+    commit: v2.2.2.2
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.2.4
+    versionCode: 15000264
+    commit: v2.2.2.4
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.3.0
+    versionCode: 15000270
+    commit: v2.2.3.0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.3.2
+    versionCode: 15000272
+    commit: v2.2.3.2
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.4.1
+    versionCode: 15000283
+    commit: v2.2.4.1
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.5.0
+    versionCode: 15000290
+    commit: v2.2.5.0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.6.0
+    versionCode: 15000292
+    commit: v2.2.6.0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.2.7.0
+    versionCode: 15000294
+    commit: v2.2.7.0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.3.0.0
+    versionCode: 15000297
+    commit: v2.3.0.0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.3.6.0
+    versionCode: 15000304
+    commit: v2.3.6.0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' build.gradle
+
+  - versionName: 2.4.0.0
+    versionCode: 15000306
+    commit: a4357460a8234b2ab704c1b4cf22c5954dc287f9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.4.1.0
+    versionCode: 15000307
+    commit: 69cbac1c88920ffd0d2deb6def18980d07353cce
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.4.3.1
+    versionCode: 15000310
+    commit: 96d63fa89559d0e4e77c22c601b0503a29ec364b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.4.4.0
+    versionCode: 15000311
+    commit: 90bffff3d6d9477cee76ab9b0c48fc8259243a30
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.4.5.0
+    versionCode: 15000312
+    commit: edd3ef90447925cc3dc4891d479e93d6588a33cb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.5.0.5
+    versionCode: 15000323
+    commit: 60d385f1f9331999e6607e9713068ba3819c46b9
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.5.0.6
+    versionCode: 15000324
+    commit: 5764fc9004be60dce3979d22de35eb1912b465c9
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.5.0.7
+    versionCode: 15000325
+    commit: 41a3e8f1a6022dd84ac934de98943bf76d938958
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.5.1.0
+    versionCode: 15000326
+    commit: d1a3aa0c8d081ee35f6ea66dfbce7ab0d30ebf9e
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.5.2.0
+    versionCode: 15000327
+    commit: e508b74a5f6cc97f555ad44aa522007efdf979ba
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.6.0.2
+    versionCode: 21000331
+    commit: 0d5e405acb180cdbae59da72e060c68531bb29aa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.7.0.0
+    versionCode: 21000335
+    commit: f693660dc016b0b3fbbe9fe6e10ebbea916b7196
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.7.0.1
+    versionCode: 21000337
+    commit: b5de26b5025b6d38ea54c531179fa637c9d28fd0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.8.0.0
+    versionCode: 21000340
+    commit: 9510c6866bf31d36457b1e358645b1ec9ac6c520
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.9.0.6
+    versionCode: 21000358
+    commit: 74af1e935057586753f8fb30e3d7d7e2b7be7023
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild:
+      - sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d' build.gradle
+      - sed -i -e '/wearable/d' ../common/build.gradle
+
+MaintainerNotes: This replaces RunnerUp 1.x https://f-droid.org/packages/org.runnerup
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]*_free$
+VercodeOperation:
+  - '%c + 21000000'
+CurrentVersion: 2.9.0.6
+CurrentVersionCode: 21000358

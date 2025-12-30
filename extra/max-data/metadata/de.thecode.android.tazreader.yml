@@ -1,0 +1,107 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App depends on taz.de, which is not libre.
+Categories:
+  - Internet
+  - Reading
+License: AGPL-3.0-or-later
+SourceCode: https://github.com/ctrlaltcoop/tazapp-android
+IssueTracker: https://github.com/ctrlaltcoop/tazapp-android/issues
+
+RepoType: git
+Repo: https://github.com/ctrlaltcoop/tazapp-android
+
+Builds:
+  - versionName: 3.9.1 universal
+    versionCode: 3090102
+    commit: 3.9.1.2-36-g4aeb163
+    subdir: tazapp
+    gradle:
+      - taz
+    output: ./build/outputs/apk/taz/release/tazapp-taz-universal-release-unsigned.apk
+    srclibs:
+      - MuPDF@1.10-114-g9d96d035
+    build:
+      - find $$MuPDF$$ -type f -name \*.[ch] | xargs perl -i -pe 's/com.artifex.mupdf(?!demo)/$&demo/g'
+      - perl -i -pe 's,^/\* (#define TOFU(?:_CJK)?) .*,$1,' $$MuPDF$$/include/mupdf/fitz/config.h
+      - make -j4 -C $$MuPDF$$ generate
+      - $$NDK$$/ndk-build -j4 -C $$MuPDF$$/platform/android/viewer/ APP_PLATFORM=android-16
+        APP_ABI="arm64-v8a armeabi-v7a x86 x86_64" APP_OPTIM=release
+      - mv $$MuPDF$$/platform/android/viewer/libs src/main/jniLibs
+
+  - versionName: 3.9.2 universal
+    versionCode: 3090202
+    commit: fdroid-3.9.2.2-fdroid
+    subdir: tazapp
+    gradle:
+      - taz
+    output: ./build/outputs/apk/taz/release/tazapp-taz-universal-release-unsigned.apk
+    srclibs:
+      - MuPDF@1.10-114-g9d96d035
+    build:
+      - find $$MuPDF$$ -type f -name \*.[ch] | xargs perl -i -pe 's/com.artifex.mupdf(?!demo)/$&demo/g'
+      - perl -i -pe 's,^/\* (#define TOFU(?:_CJK)?) .*,$1,' $$MuPDF$$/include/mupdf/fitz/config.h
+      - make -j`nproc` -C $$MuPDF$$ generate
+      - $$NDK$$/ndk-build -j`nproc` -C $$MuPDF$$/platform/android/viewer/ APP_PLATFORM=android-16
+        APP_ABI="arm64-v8a armeabi-v7a x86 x86_64" APP_OPTIM=release
+      - mv $$MuPDF$$/platform/android/viewer/libs src/main/jniLibs
+
+  - versionName: 3.9.2.3+fdroid+universal
+    versionCode: 3090203
+    commit: fdroid-3.9.2.3
+    subdir: tazapp
+    gradle:
+      - taz
+    output: ./build/outputs/apk/taz/release/tazapp-taz-universal-release-unsigned.apk
+    srclibs:
+      - MuPDF@1.10-114-g9d96d035
+    build:
+      - find $$MuPDF$$ -type f -name \*.[ch] | xargs perl -i -pe 's/com.artifex.mupdf(?!demo)/$&demo/g'
+      - perl -i -pe 's,^/\* (#define TOFU(?:_CJK)?) .*,$1,' $$MuPDF$$/include/mupdf/fitz/config.h
+      - make -j`nproc` -C $$MuPDF$$ generate
+      - $$NDK$$/ndk-build -j`nproc` -C $$MuPDF$$/platform/android/viewer/ APP_PLATFORM=android-16
+        APP_ABI="arm64-v8a armeabi-v7a x86 x86_64" APP_OPTIM=release
+      - mv $$MuPDF$$/platform/android/viewer/libs src/main/jniLibs
+
+  - versionName: 3.10.3.0+fdroid+universal
+    versionCode: 3100300
+    commit: fdroid-3.10.3.0
+    subdir: tazapp
+    gradle:
+      - taz
+    output: ./build/outputs/apk/taz/release/tazapp-taz-universal-release-unsigned.apk
+    srclibs:
+      - MuPDF@1.10-114-g9d96d035
+    build:
+      - find $$MuPDF$$ -type f -name \*.[ch] | xargs perl -i -pe 's/com.artifex.mupdf(?!demo)/$&demo/g'
+      - perl -i -pe 's,^/\* (#define TOFU(?:_CJK)?) .*,$1,' $$MuPDF$$/include/mupdf/fitz/config.h
+      - make -j`nproc` -C $$MuPDF$$ generate
+      - $$NDK$$/ndk-build -j`nproc` -C $$MuPDF$$/platform/android/viewer/ APP_PLATFORM=android-16
+        APP_ABI="arm64-v8a armeabi-v7a x86 x86_64" APP_OPTIM=release
+      - mv $$MuPDF$$/platform/android/viewer/libs src/main/jniLibs
+
+  - versionName: 3.14.0.0+fdroid+universal
+    versionCode: 3140000
+    commit: fdroid-3.14.0.0
+    subdir: tazapp
+    gradle:
+      - taz
+    output: ./build/outputs/apk/taz/release/tazapp-taz-universal-release-unsigned.apk
+    srclibs:
+      - MuPDF@1.10-114-g9d96d035
+    prebuild: echo -e '\n' 'org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError
+      -Dfile.encoding=UTF-8' >> ../gradle.properties
+    build:
+      - find $$MuPDF$$ -type f -name \*.[ch] | xargs perl -i -pe 's/com.artifex.mupdf(?!demo)/$&demo/g'
+      - perl -i -pe 's,^/\* (#define TOFU(?:_CJK)?) .*,$1,' $$MuPDF$$/include/mupdf/fitz/config.h
+      - make -j`nproc` -C $$MuPDF$$ generate
+      - $$NDK$$/ndk-build -j`nproc` -C $$MuPDF$$/platform/android/viewer/ APP_PLATFORM=android-16
+        APP_ABI="arm64-v8a armeabi-v7a x86 x86_64" APP_OPTIM=release
+      - mv $$MuPDF$$/platform/android/viewer/libs src/main/jniLibs
+    ndk: r23
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 3.14.0.0+fdroid+universal
+CurrentVersionCode: 3140000

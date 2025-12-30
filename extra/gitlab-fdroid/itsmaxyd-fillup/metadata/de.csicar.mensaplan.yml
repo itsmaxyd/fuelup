@@ -1,0 +1,46 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Cantine plans are downloaded from non-libre sources.
+Categories:
+  - Sports & Health
+License: GPL-2.0-only
+SourceCode: https://github.com/csicar/MensaPlan
+IssueTracker: https://github.com/csicar/MensaPlan/issues
+
+AutoName: MensaPlan
+Description: |-
+  <i>MensaPlan</i> versorgt Dich mit den Speiseplänen Deiner Kantine:
+
+  * Mensa Hochschule Pforzheim
+  * Mensa am Adenauer Ring
+  * Mensa Molkestraße
+  * Mensa Erzbergerstraße
+  * Mensa Schloss Gottesaue
+  * Mensa I Holzgarten (Stuttgart)
+
+  Neben der Auflistung der Gerichte und ihrer Preise ist es auch möglich,
+  selbige auf Allergene zu filtern.
+
+RepoType: git
+Repo: https://github.com/csicar/MensaPlan
+
+Builds:
+  - versionName: v0.4.0
+    versionCode: 3
+    commit: v0.4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.4.1
+    versionCode: 4
+    commit: v0.4.1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/4.10.1/5.1.1/' ../gradle/wrapper/gradle-wrapper.properties
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v0.4.1
+CurrentVersionCode: 4

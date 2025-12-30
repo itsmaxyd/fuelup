@@ -1,0 +1,32 @@
+Ads:
+  description: יישומון זה מכיל פרסום
+  name: פרסומות
+DisabledAlgorithm:
+  description: ליישומון זה יש חתימת אבטחה חלשה
+  name: חתום באמצעות אלגוריתם בלתי מאובטח
+KnownVuln:
+  description: יישומון זה מכיל חולשת אבטחה ידועה
+  name: חולשה מוכרת
+NSFW:
+  description: היישומון הזה מכיל תוכן שלא מיועד לכל קהל בכל מקום
+  name: NSFW
+NoSourceSince:
+  name: קוד המקור אינו זמין עוד, אין עדכונים.
+NonFreeAdd:
+  description: יישומון זה מקדם תוספים שאינם חופשיים
+  name: תוספים מוגבלים
+NonFreeAssets:
+  description: יישומון זה מכיל נכסים בלתי חופשיים
+  name: משאבים מוגבלים
+NonFreeDep:
+  description: יישומון זה תלוי ביישומונים אחרים שאינם חופשיים
+  name: תלויות מוגבלות
+NonFreeNet:
+  description: יישומון זה מקדם או תלוי בשירות רשת שאינו חופשי
+  name: שירותי רשת מוגבלים
+Tracking:
+  description: יישומון זה עוקב ומדווח על פעילותך
+  name: מעקב
+TetheredNet:
+  description: היישומון הזה תלוי לחלוטין בעותק מסוים של שירות מקוון
+  name: שירותי רשת קשורים

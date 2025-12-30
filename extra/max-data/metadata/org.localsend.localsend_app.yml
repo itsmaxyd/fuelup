@@ -1,0 +1,925 @@
+Categories:
+  - Connectivity
+  - File Transfer
+License: Apache-2.0
+AuthorName: Tien Do Nam
+AuthorWebSite: https://tienisto.com
+WebSite: https://localsend.org
+SourceCode: https://github.com/localsend/localsend
+IssueTracker: https://github.com/localsend/localsend/issues
+Translation: https://hosted.weblate.org/projects/localsend/app/
+Changelog: https://github.com/localsend/localsend/blob/HEAD/app/assets/CHANGELOG.md
+
+AutoName: LocalSend
+
+RepoType: git
+Repo: https://github.com/localsend/localsend.git
+Binaries: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v.apk
+
+Builds:
+  - versionName: 1.5.2
+    versionCode: 16
+    commit: v1.5.2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - macos
+      - linux
+      - windows
+      - web
+    prebuild:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run build_runner build -d
+      - submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.6.1
+    versionCode: 22
+    commit: 7c0b48f1668d35beb565381f0b629c8cb547e473
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - macos
+      - linux
+      - windows
+      - web
+    prebuild:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run build_runner build -d
+      - submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.6.2
+    versionCode: 23
+    commit: 804dbea3ec46506f069614939021ce5050f1d232
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - macos
+      - linux
+      - windows
+      - web
+    prebuild:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run build_runner build -d
+      - submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.7.0
+    versionCode: 26
+    commit: b3c7298ccfb6f5dfdf370955e79061a719e89a40
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - macos
+      - linux
+      - windows
+      - web
+    prebuild:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run build_runner build -d
+      - submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.8.0
+    versionCode: 27
+    commit: 7c43eb806258c9bf38f947a73df88da8b95d33a4
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - macos
+      - linux
+      - windows
+      - web
+    prebuild:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run build_runner build -d
+      - submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.9.0
+    versionCode: 30
+    commit: 6eecd4e35806cbd9671366d965b65e140e33a650
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - macos
+      - linux
+      - windows
+      - web
+    prebuild:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run build_runner build -d
+      - submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.10.0
+    versionCode: 32
+    commit: c1cb574ae2323be12bf621b3a87d9302596ecefa
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - macos
+      - linux
+      - windows
+      - web
+    prebuild:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run build_runner build -d
+      - submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.11.1
+    versionCode: 35
+    commit: a5c2f52ce6c8f1c6f07c9d70bcd9332fa2c28736
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - macos
+      - linux
+      - windows
+      - web
+    prebuild:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run build_runner build -d
+      - submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.12.0
+    versionCode: 38
+    commit: deb36ea5461d1217b60ebacf75c47bf7e8e7e9d4
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - app/.pub-cache
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter pub run build_runner build -d
+      - ../submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.13.1
+    versionCode: 42
+    commit: f2a18e4eb59022e241ef5de1ec07feb15e63746d
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter pub run build_runner build -d
+      - ../submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.14.0
+    versionCode: 45
+    commit: f64c9acb337f542d7c65d6699837ba9c19188459
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.15.0
+    versionCode: 48
+    commit: c2e769609bf8f503b15382bfd134c7387aa677ca
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter build apk
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.15.2
+    versionCode: 521
+    commit: a5d5d0a6f7871addc51808b1d4c3c7dafb34431a
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-x64.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.15.2
+    versionCode: 523
+    commit: a5d5d0a6f7871addc51808b1d4c3c7dafb34431a
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-arm64v8.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.15.3
+    versionCode: 531
+    commit: d38b0a72aa48406c1e8292302003ea49e539b2b0
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-x64.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.15.3
+    versionCode: 533
+    commit: d38b0a72aa48406c1e8292302003ea49e539b2b0
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-arm64v8.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.15.4
+    versionCode: 541
+    commit: fd8140b68813e968dc9253130a27abc1ff328fe5
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-x64.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-x64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.15.4
+    versionCode: 543
+    commit: fd8140b68813e968dc9253130a27abc1ff328fe5
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-arm64v8.apk
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+
+  - versionName: 1.16.1
+    versionCode: 561
+    commit: 216eb5e2ee0f3fc48b9d75ea5de9477c244dd520
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-x64.apk
+    srclibs:
+      - rustup@1.27.1
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0 --target x86_64-linux-android
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - sed -i -e "s/'stable'/'1.81.0'/" .pub-cache/hosted/pub.dev/rhttp-*/cargokit/build_tool/lib/src/builder.dart
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+      - common/pubspec.yaml
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - source $HOME/.cargo/env
+      - cargo install cargo-ndk@3.5.4 --locked
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - CARGO_ENCODED_RUSTFLAGS='--remap-path-prefix=/home/vagrant=/home/runner' ../submodules/flutter/bin/flutter
+        build apk --release --split-per-abi --target-platform="android-x64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    ndk: r23b
+
+  - versionName: 1.16.1
+    versionCode: 563
+    commit: 216eb5e2ee0f3fc48b9d75ea5de9477c244dd520
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-arm64v8.apk
+    srclibs:
+      - rustup@1.27.1
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.81.0 --target aarch64-linux-android
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - sed -i -e "s/'stable'/'1.81.0'/" .pub-cache/hosted/pub.dev/rhttp-*/cargokit/build_tool/lib/src/builder.dart
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+      - common/pubspec.yaml
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - source $HOME/.cargo/env
+      - cargo install cargo-ndk@3.5.4 --locked
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - CARGO_ENCODED_RUSTFLAGS='--remap-path-prefix=/home/vagrant=/home/runner' ../submodules/flutter/bin/flutter
+        build apk --release --split-per-abi --target-platform="android-arm64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    ndk: r23b
+
+  - versionName: 1.17.0
+    versionCode: 581
+    commit: 7f21d1f9082a43803e05c37f021912e012145aa5
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-x64.apk
+    srclibs:
+      - rustup@1.27.1
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - $$rustup$$/rustup-init.sh -y --default-toolchain none
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+      - common/pubspec.yaml
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - source $HOME/.cargo/env
+      - cargo install cargo-ndk@3.5.4 --locked
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - CARGO_ENCODED_RUSTFLAGS='--remap-path-prefix=/home/vagrant=/home/runner' ../submodules/flutter/bin/flutter
+        build apk --release --split-per-abi --target-platform="android-x64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    ndk: r23b
+
+  - versionName: 1.17.0
+    versionCode: 582
+    commit: 7f21d1f9082a43803e05c37f021912e012145aa5
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-arm32v7.apk
+    srclibs:
+      - rustup@1.27.1
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - $$rustup$$/rustup-init.sh -y --default-toolchain none
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+      - common/pubspec.yaml
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - source $HOME/.cargo/env
+      - cargo install cargo-ndk@3.5.4 --locked
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - CARGO_ENCODED_RUSTFLAGS='--remap-path-prefix=/home/vagrant=/home/runner' ../submodules/flutter/bin/flutter
+        build apk --release --split-per-abi --target-platform="android-arm"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    ndk: r23b
+
+  - versionName: 1.17.0
+    versionCode: 583
+    commit: 7f21d1f9082a43803e05c37f021912e012145aa5
+    subdir: app
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    binary: https://github.com/localsend/localsend/releases/download/v%v/LocalSend-%v-android-arm64v8.apk
+    srclibs:
+      - rustup@1.27.1
+    rm:
+      - app/ios
+      - app/macos
+      - app/linux
+      - app/windows
+      - app/web
+    prebuild:
+      - cd ..
+      - scripts/remove_proprietary_dependencies.sh
+      - cd ..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - $$rustup$$/rustup-init.sh -y --default-toolchain none
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../submodules/flutter/bin/flutter config --no-analytics
+      - ../submodules/flutter/bin/flutter pub get
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - app/.pub-cache
+      - submodules/flutter
+      - common/pubspec.yaml
+    build:
+      - cd ../..
+      - mv org.localsend.localsend_app /tmp/build
+      - pushd /tmp/build/app
+      - source $HOME/.cargo/env
+      - cargo install cargo-ndk@3.5.4 --locked
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - CARGO_ENCODED_RUSTFLAGS='--remap-path-prefix=/home/vagrant=/home/runner' ../submodules/flutter/bin/flutter
+        build apk --release --split-per-abi --target-platform="android-arm64"
+      - popd
+      - mv /tmp/build org.localsend.localsend_app
+    ndk: r23b
+
+AllowedAPKSigningKeys: 3220c353a73cfbd0c2f3052471c445324cf452bcba26de1c473a52fe5c44e1d6
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - 10*%c+1
+  - 10*%c+2
+  - 10*%c+3
+UpdateCheckData: app/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.17.0
+CurrentVersionCode: 583

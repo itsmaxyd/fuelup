@@ -1,0 +1,336 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Uses Github/Gitlab for dependency rules DB and Google API to get Android
+      versions for 1 chart
+Categories:
+  - System
+License: Apache-2.0
+AuthorName: Absinthe
+AuthorEmail: zhaobozhen2025@gmail.com
+AuthorWebSite: https://absinthe.life
+SourceCode: https://github.com/LibChecker/LibChecker
+IssueTracker: https://github.com/LibChecker/LibChecker/issues
+Changelog: https://github.com/LibChecker/LibChecker/releases
+
+AutoName: LibChecker
+
+RepoType: git
+Repo: https://github.com/LibChecker/LibChecker.git
+
+Builds:
+  - versionName: 2.3.0.dev.a32aba40
+    versionCode: 1300
+    commit: a32aba40d4f2f99a76dad2fbda501453af226807
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+
+  - versionName: 2.3.0.10a449fd
+    versionCode: 1341
+    commit: 10a449fd9923c6923355f5de2271b5943dbc036c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+
+  - versionName: 2.3.0.90c36232
+    versionCode: 1344
+    commit: 90c36232237e1570c883ced3f0b18b67004cc3c6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+
+  - versionName: 2.3.2.d08396fa
+    versionCode: 1403
+    commit: d08396faafa378e5b7ff239d150bb31d9c86d9c3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.3.4.7c927c8a
+    versionCode: 1448
+    commit: 7c927c8a4eeedb9378f5a1fd3effdba240714bdc
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.3.5
+    versionCode: 1465
+    commit: 2.3.5
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.3.6
+    versionCode: 1497
+    commit: 2.3.6
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.3.7
+    versionCode: 1532
+    commit: 2.3.7
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.3.9
+    versionCode: 1585
+    commit: 2.3.9
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.3.9
+    versionCode: 1587
+    commit: 2.3.9
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.4.0
+    versionCode: 1682
+    commit: 2.4.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.4.1
+    versionCode: 1749
+    commit: 2.4.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.4.2
+    versionCode: 1755
+    commit: 2.4.2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.4.3
+    versionCode: 1893
+    commit: 2.4.3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.4.4
+    versionCode: 1897
+    commit: 2.4.4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.5.0
+    versionCode: 2159
+    commit: 2.5.0
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild: sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.5.1
+    versionCode: 2343
+    commit: 2.5.1
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild:
+      - sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+      - sed -i -e '/configure<CrashlyticsExtension> {/,+2d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/crashlytics/d' {..,.}/build.gradle.kts
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.5.2
+    versionCode: 2441
+    commit: 2.5.2
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild:
+      - sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+      - sed -i -e '/configure<CrashlyticsExtension> {/,+2d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+      - sed -i -e '/agp/s/8.13.0/8.11.1/' ../gradle/libs.versions.toml
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.5.3
+    versionCode: 2515
+    commit: 2.5.3
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    rm:
+      - app/ohos
+    prebuild:
+      - sed -i -e '/versionName =/s/verName/"$$VERSION$$"/' ../build-logic/src/main/kotlin/Projects.kt
+      - sed -i -e '/configure<CrashlyticsExtension> {/,+2d' build.gradle.kts
+      - sed -i -e '/gms/d' -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/foojay/d' ../settings.gradle.kts
+    scanignore:
+      - app/src/main/assets/anim/*.json.zip
+    scandelete:
+      - build-logic/build
+
+AutoUpdateMode: Version %v
+UpdateCheckMode: HTTP
+UpdateCheckData: https://github.com/LibChecker/LibChecker/releases/latest/download/version_code.txt|versionCode=(\d+)|.|versionName=([\d.]+)\..+
+CurrentVersion: 2.5.3
+CurrentVersionCode: 2515

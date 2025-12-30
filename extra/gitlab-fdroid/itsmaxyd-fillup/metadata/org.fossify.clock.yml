@@ -1,0 +1,90 @@
+Categories:
+  - Clock
+  - Time
+License: GPL-3.0-only
+AuthorName: Fossify
+AuthorEmail: hello@fossify.org
+WebSite: https://www.fossify.org
+SourceCode: https://github.com/FossifyOrg/Clock
+IssueTracker: https://github.com/FossifyOrg/Clock/issues
+Translation: https://hosted.weblate.org/projects/fossify/clock/
+Changelog: https://github.com/FossifyOrg/Clock/releases
+Donate: https://www.fossify.org/donate
+Liberapay: naveensingh
+Bitcoin: bc1q5flmuh5f3canqza07cfekjn64p2aqvd2w7pnn3
+
+RepoType: git
+Repo: https://github.com/FossifyOrg/Clock.git
+Binaries: https://github.com/FossifyOrg/Clock/releases/download/%v/clock-%c-foss-release.apk
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: 5b599a70fb67fdc614634dc09fd951b506418a0b
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.1.0
+    versionCode: 2
+    commit: 9a13e2ef5304e77335130bcd159d928f1881fd3d
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.2.0
+    versionCode: 3
+    commit: f7ebacf119f8456d51995f22ad3818eb5196075b
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.2.1
+    versionCode: 4
+    commit: 816d67f1a816a91db768e662daf806f6a3f9e091
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.2.2
+    versionCode: 5
+    commit: 02a77a2f8d0d00da17e05e51b9e4bd19cc48beea
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.3.0
+    versionCode: 6
+    commit: 9b6795734707e6428075dedbf358ee462cdd7a35
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.3.1
+    versionCode: 7
+    commit: 03281beb02d3d4bd3a9fa155132101078fdef15b
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.0
+    versionCode: 8
+    commit: 3351205e6877a55c57b55fc4d0bd0d68bbed0baa
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.5.0
+    versionCode: 9
+    commit: d85eb996676e48edb1c503384b18d349150c6e8d
+    subdir: app
+    gradle:
+      - foss
+
+AllowedAPKSigningKeys: affdb124d3f4720c2f98dbca9eacba0514fba4306e20a2786c861c3c0d6ff292
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle.properties|VERSION_CODE=(\d+)|.|VERSION_NAME=(.*)
+CurrentVersion: 1.5.0
+CurrentVersionCode: 9

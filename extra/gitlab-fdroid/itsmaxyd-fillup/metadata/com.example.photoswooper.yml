@@ -1,0 +1,147 @@
+Categories:
+  - Gallery
+  - Graphics
+License: AGPL-3.0-only
+AuthorName: Loowiz
+AuthorEmail: loowiz@envs.net
+AuthorWebSite: https://loowiz.envs.net
+SourceCode: https://codeberg.org/Loowiz/PhotoSwooper
+IssueTracker: https://codeberg.org/Loowiz/PhotoSwooper/issues
+Liberapay: loowiz
+
+AutoName: PhotoSwooper
+
+RepoType: git
+Repo: https://codeberg.org/Loowiz/PhotoSwooper.git
+Binaries: https://codeberg.org/Loowiz/PhotoSwooper/releases/download/%v/photoswooper-release.apk
+
+Builds:
+  - versionName: 2025.8.3
+    versionCode: 9
+    commit: c8ce6db53a5bd6f809db193ea37fdd67a26e28d4
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 2025.10.4
+    versionCode: 13
+    commit: 7f005e52e43568acb49d5c1607d9d4bfdf88ceaf
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 2025.10.5
+    versionCode: 14
+    commit: cdcc1d62f1eb5f7f09148b67ab9bfb51dbc7eb17
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 2025.11.2
+    versionCode: 16
+    commit: 3e9b3fe3352fb8803620ca2cb891808e57e53d56
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 2025.11.3
+    versionCode: 17
+    commit: 85d2b09042627e4fdebd9c6fb8b8161f5601790c
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 2025.11.4
+    versionCode: 19
+    commit: 3158e468d1e34983ee466507b85912e0123d0da8
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    ndk: r27
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 2025.11.5
+    versionCode: 20
+    commit: f3764b2ffbc4b113699069510ca4d24e1e58a8b1
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    ndk: r27
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+AllowedAPKSigningKeys: fa90940dd5a6b6c5f729efd02ffca1da2413f4b30063f8cfd509b446305314b4
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2025.11.5
+CurrentVersionCode: 20

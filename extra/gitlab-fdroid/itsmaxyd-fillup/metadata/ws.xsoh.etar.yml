@@ -1,0 +1,407 @@
+Categories:
+  - Calendar & Agenda
+  - Time
+License: GPL-3.0-only
+SourceCode: https://github.com/Etar-Group/Etar-Calendar
+IssueTracker: https://github.com/Etar-Group/Etar-Calendar/issues
+Translation: https://hosted.weblate.org/projects/etar-calendar/strings/
+Changelog: https://github.com/Etar-Group/Etar-Calendar/releases
+
+AutoName: Etar
+
+RepoType: git
+Repo: https://github.com/Etar-Group/Etar-Calendar.git
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 5
+    commit: v1.0.1
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 6
+    commit: v1.0.2
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 7
+    commit: v1.0.3
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 8
+    commit: v1.0.4
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.6
+    versionCode: 9
+    commit: v1.0.6
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.7
+    versionCode: 10
+    commit: v1.0.7
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.8
+    versionCode: 11
+    commit: v1.0.8
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.9
+    versionCode: 12
+    commit: v1.0.9
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.10
+    versionCode: 13
+    commit: v1.0.10
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.12
+    versionCode: 14
+    commit: v1.0.12
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.13
+    versionCode: 15
+    commit: v1.0.13
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.14
+    versionCode: 16
+    commit: v1.0.14
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.15
+    versionCode: 17
+    commit: v1.0.15
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.16
+    versionCode: 18
+    commit: v1.0.16
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.17
+    versionCode: 19
+    commit: v1.0.17
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.18
+    versionCode: 20
+    commit: v1.0.18
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.19
+    versionCode: 21
+    commit: v1.0.19
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.20
+    versionCode: 22
+    commit: v1.0.20
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.21
+    versionCode: 23
+    commit: v1.0.21
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.22
+    versionCode: 24
+    commit: v1.0.22
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.23
+    versionCode: 25
+    commit: v1.0.23
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.24
+    versionCode: 26
+    commit: v1.0.24
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.25
+    versionCode: 27
+    commit: v1.0.25
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.26
+    versionCode: 28
+    commit: f9fef2a21cb09dd84d5132f79964cbb3a0985d95
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.27
+    versionCode: 29
+    commit: 651beaf4c497ffdbab45b201be517e45c96e3063
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.28
+    versionCode: 30
+    commit: 501271fa0a9370c14a8ca2e5a3fcd6c95f04d8c3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.29
+    versionCode: 31
+    commit: 618239e9be5d88713ca36d948f88ae258291b281
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.30
+    versionCode: 32
+    commit: 13b819a47a46b3f68fa1b2936931b190ac706601
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.33
+    versionCode: 33
+    commit: 4818eae502f5931229ea53d4de9d577110366035
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.34
+    versionCode: 34
+    commit: c84019592c85950adacb63250670e19ed4508f88
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.35
+    versionCode: 35
+    commit: 6dca08e2073ba17c2ff0e569f318f0b65b228b27
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.36
+    versionCode: 36
+    commit: dfb342446743ef7405fa079c819bf67dbe31317e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.37
+    versionCode: 37
+    commit: bbafe9563b6e496ffc3f4ff7e7e1e692f94d0421
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.38
+    versionCode: 38
+    commit: 74b31d4cda8a4e53163c08c25931da820c078415
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.39
+    versionCode: 39
+    commit: 498b098c8e3e8e11dc29fe84eb6dcdfa1f36fd48
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.41
+    versionCode: 41
+    commit: 417762943a084661f4a266928e82d660666d346c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.42
+    versionCode: 42
+    commit: f3139ce12ea0511172fbb2716b35789d79e403c8
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.45
+    versionCode: 45
+    commit: b3286f2a23e79cf2dc0d54d628fed4602957bce4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.46
+    versionCode: 46
+    commit: 0a00f538803a9680980a499a41b7a5b3b758fd62
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.47
+    versionCode: 47
+    commit: 2e936556a885c6ef5d81fcd1d5ece362e88fe75c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.48
+    versionCode: 48
+    commit: 77a9e422273d0e6f12cc9b74a3e4087a9ccbbd92
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.49
+    versionCode: 49
+    commit: 50beffc7dd13dc692466fd981b43bd86742aa352
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.50
+    versionCode: 50
+    commit: b428755a98ddd03e7ed87d3645faaa2486e03bf4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.51
+    versionCode: 51
+    commit: 4ad343e380ef76183e70720b080dcd07b53dabb5
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.52
+    versionCode: 52
+    commit: c0bdf06709c17f9fef9618248ce2073d403c1087
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.52
+CurrentVersionCode: 52

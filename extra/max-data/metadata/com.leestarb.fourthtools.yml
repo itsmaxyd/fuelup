@@ -1,0 +1,76 @@
+Categories:
+  - Calculator
+  - Internet
+  - Multimedia
+  - Science & Education
+  - Time
+License: GPL-3.0-or-later
+AuthorEmail: leestarb@proton.me
+SourceCode: https://gitlab.com/leestarb/fourthtools
+IssueTracker: https://gitlab.com/leestarb/fourthtools/issues
+
+AutoName: Fourth Tools
+
+RepoType: git
+Repo: https://gitlab.com/leestarb/fourthtools.git
+
+Builds:
+  - versionName: 3.1.1
+    versionCode: 311
+    commit: 91f0c7d9fb087978f720cda4806e09fde287b270
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 3.2.0
+    versionCode: 320
+    commit: 9bb8bda94a2caf81efc6ebe6c533ca9d2fb8cc3a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 3.3.0
+    versionCode: 330
+    commit: 5ef0afd577ae6c19bce1f37c4004530638e35686
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 3.3.1
+    versionCode: 331
+    commit: dcd31f843d832db6b292c57bb600d914904479b9
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      - NonFreeNet
+
+  - versionName: 3.4.1
+    versionCode: 341
+    commit: 0614ff629c759d1225761f2cd8e3f809db9915e9
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.4.1
+CurrentVersionCode: 341

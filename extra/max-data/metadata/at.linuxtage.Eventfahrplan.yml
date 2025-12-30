@@ -1,0 +1,128 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Tethered to the schedule site.
+Categories:
+  - Time
+License: Apache-2.0
+AuthorName: Grazer Linuxtage
+AuthorEmail: android@linuxtage.at
+WebSite: https://linuxtage.at
+SourceCode: https://github.com/linuxtage/EventFahrplan
+IssueTracker: https://github.com/linuxtage/EventFahrplan/issues
+Translation: https://crowdin.com/project/eventfahrplan
+
+AutoName: GLT EventFahrplan
+Description: |-
+  Schedule application for the event Grazer Linuxtage (GLT)
+
+  The Grazer Linuxtage is an annual two-day conference about open-source, hardware and software. The GLT offers workshops on Fridays and talks and info booths on Saturday on a multitude of topics.
+
+  <a href="https://linuxtage.at/">Grazer Linuxtage</a>
+
+  App features:
+  * Upcoming and live events
+  * View program by day and rooms (side by side)
+  * Custom grid layout for smartphones (try landscape mode) and tablets
+  * Read detailed descriptions (speaker names, start time, room name, links, ...) of events
+  * Search through all events
+  * Create your own customized schedule with favorites
+  * Share events by email, twitter, etc. with your colleagues and friends
+  * Reminder for your favorite talks
+  * Offline support (Download the program)
+  * Add events to your personal calendar
+  * Keep track of program changes
+  * Automatic program updates (configurable in settings)
+  * Vote and leave comments on talks and workshops
+
+  🔤 Supported languages:
+  (Event descriptions excluded)
+  * Danish
+  * Dutch
+  * English
+  * Finnish
+  * French
+  * German
+  * Italian
+  * Japanese
+  * Lithuanian
+  * Polish
+  * Portuguese (Brazil)
+  * Portuguese (Portugal)
+  * Russian
+  * Spanish
+  * Swedish
+  * Turkish
+
+  💡 Questions regarding the content can only be answered by the content team of the Grazer Linuxtage (GLT). This app simply offers a way to consume and personalize the conference schedule.
+
+  It's Open Source and available under the Apache-2.0 License.
+  <a href="https://github.com/linuxtage/EventFahrplan">https://github.com/linuxtage/EventFahrplan</a>
+
+  💣 Bug reports are very welcome. It would be awesome if you can describe how to reproduce the particular error. Please use the GitHub issue tracker <a href="https://github.com/linuxtage/EventFahrplan/issues">https://github.com/linuxtage/EventFahrplan/issues</a>
+
+  This App is based on the EventFahrplan: <a href="https://github.com/EventFahrplan/EventFahrplan">https://github.com/EventFahrplan/EventFahrplan</a>
+
+RepoType: git
+Repo: https://github.com/linuxtage/EventFahrplan.git
+
+Builds:
+  - versionName: 1.8.15-glt-Edition
+    versionCode: 1700015
+    commit: 347d41128d342944b138a87c665f3816aabd577a
+    subdir: app
+    gradle:
+      - glt22
+
+  - versionName: 1.8.16-glt-Edition
+    versionCode: 1700016
+    commit: 09e02623a84095026fe90caa110d12a9b1ed4585
+    subdir: app
+    gradle:
+      - glt22
+
+  - versionName: 1.8.20-glt-Edition
+    versionCode: 1700020
+    commit: 484900bcce61d8f6bf89ac6f42909c88a5fd53d2
+    subdir: app
+    gradle:
+      - glt22
+
+  - versionName: 1.8.21-glt-Edition
+    versionCode: 1700021
+    commit: 12366f001d23d207d70d798f76111a21b42d7b0f
+    subdir: app
+    gradle:
+      - glt22
+
+  - versionName: 1.8.22-glt-Edition
+    versionCode: 1700022
+    commit: e39f9d6b16d779881e48d8d781791e5b010e1287
+    subdir: app
+    gradle:
+      - glt22
+
+  - versionName: 1.8.23-glt-Edition
+    versionCode: 1700023
+    commit: 420bd45d1fe0b685076fad1c95fc90ced926977e
+    subdir: app
+    gradle:
+      - glt22
+
+  - versionName: 1.8.24-glt-Edition
+    versionCode: 1700024
+    commit: 151f2710f6e9692e2e85a64b6dddda215a564865
+    subdir: app
+    gradle:
+      - glt22
+
+  - versionName: 1.8.25-glt-Edition
+    versionCode: 1700025
+    commit: f3b357cfb70d4c177ef4161135c3966faf33abfc
+    subdir: app
+    gradle:
+      - glt22
+
+AutoUpdateMode: Version +-glt-Edition v%v
+UpdateCheckMode: Tags
+CurrentVersion: 1.8.25
+CurrentVersionCode: 1700025

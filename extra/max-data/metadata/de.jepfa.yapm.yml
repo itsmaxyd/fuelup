@@ -1,0 +1,266 @@
+Categories:
+  - Password & 2FA
+  - Security
+License: MIT
+AuthorName: Jens Pfahl
+AuthorWebSite: https://jepfa.de
+WebSite: https://anotherpass.jepfa.de
+SourceCode: https://github.com/jenspfahl/ANOTHERpass
+IssueTracker: https://github.com/jenspfahl/ANOTHERpass/issues
+Changelog: https://github.com/jenspfahl/ANOTHERpass/releases
+
+AutoName: ANOTHERpass
+
+RepoType: git
+Repo: https://github.com/jenspfahl/anotherpass
+
+Builds:
+  - versionName: 1.5.2
+    versionCode: 105002
+    commit: v1.5.2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.3
+    versionCode: 105003
+    commit: v1.5.3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 105004
+    commit: a5e9828f3b1ed36f293bdebae2e784365e067c62
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 106000
+    commit: 6e3735dfd5aebecb3fdb283e444cdab0247e511a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 106001
+    commit: ca8a97706623a5a33e89d3cecd9e99f3a8170f75
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 106002
+    commit: 02372c1ba1125f70c5456631fa0ae4d6c5be2284
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 107000
+    commit: fef4e4bebaf2b1e53044bce2f9b434c4bca17ac2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 107001
+    commit: 1dcea1a91381f26ae3fc3e556c4ff5b8d92254bf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.2
+    versionCode: 107002
+    commit: e67f0da1805c6f038d3751a0db2e9fcdfc3a3705
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.3
+    versionCode: 107003
+    commit: 209a132eedab347169aa40288b943b7857cc75c9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 108000
+    commit: 51d14877e8d305591ea0af3e7e25502dd7682464
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 108001
+    commit: 86445f62382854186919a6f13144505cfde8f6e1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.2
+    versionCode: 108002
+    commit: c6ba21faf623c1ba6c9b629bd17bdff3f34132cc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 109000
+    commit: 8614acd85e62b9969666b3051f04f9f03f1ec815
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.1
+    versionCode: 109001
+    commit: f813ee34e36bc8db4fe54047c31c7b68b70ef2aa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.2
+    versionCode: 109002
+    commit: 3c9078e1ad086cc94a4b4a6c4db7adf3a7f2da88
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.3
+    versionCode: 109003
+    commit: d4ff7b49bfcad92ca9d56ab8e077436cc0f93203
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.4
+    versionCode: 109004
+    commit: 21cb0e69cff2ac39b581116711dd090f5ccd4330
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.5
+    versionCode: 109005
+    commit: 7f32669bab7a7e41e77d448196e6712778f27af4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 200000
+    commit: 130a9bce093934e734d4ec6547308d44ee214933
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.2
+    versionCode: 200002
+    commit: f4b4a4d7d44d52de95fa5b9ce69d51709d735a4a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.3
+    versionCode: 200003
+    commit: e2cb83b15785a59a5770b994feda3e39a2785cc7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.4
+    versionCode: 200004
+    commit: 1172335811b29eb8be4f5e6ee0753a5f3a61c94f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 201000
+    commit: 834642c1e0169d0a6212ca392f75a53019213a15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 201001
+    commit: d33f7d586b674259b48ff0075573370df097374c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 202000
+    commit: c27496e02002caf50f5b6a6f61df48ba0bf826ea
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 202001
+    commit: 8c6ae2c1ae994112148fcbf83f7b00ac5b14119b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.2
+    versionCode: 202002
+    commit: 3288f18de43c6f68e70512826ecf42bad34b72ac
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.3
+    versionCode: 202003
+    commit: 49c63e66e5eb3469809e1835f4b266a2deb331fd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.4
+    versionCode: 202004
+    commit: 88705aea65d5259db843fb7a0429f494576a97c6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.5
+    versionCode: 202005
+    commit: f4a50e1ac1d4ffec98a0cafc460ae7f352a12153
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.2.5
+CurrentVersionCode: 202005

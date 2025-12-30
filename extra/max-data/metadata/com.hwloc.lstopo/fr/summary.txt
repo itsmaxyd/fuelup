@@ -1,0 +1,1 @@
+Montre la topologie de votre matériel avec hwloc et lstopo

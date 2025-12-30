@@ -1,0 +1,28 @@
+Categories:
+  - Sports & Health
+License: GPL-3.0-only
+AuthorName: Enjoying FOSS
+AuthorEmail: contact.mirek@protonmail.com
+SourceCode: https://gitlab.com/enjoyingfoss/om
+IssueTracker: https://gitlab.com/enjoyingfoss/om/issues
+
+AutoName: Om
+Description: |-
+  A simple meditation player including one guided mindfulness meditation and one
+  unguided one.
+
+RepoType: git
+Repo: https://gitlab.com/enjoyingfoss/om.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.0'
+CurrentVersionCode: 1

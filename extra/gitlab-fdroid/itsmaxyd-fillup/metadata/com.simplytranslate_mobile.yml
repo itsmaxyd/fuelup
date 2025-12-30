@@ -1,0 +1,226 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Google Translate and thus connects to it.
+Categories:
+  - Reading
+  - Science & Education
+License: GPL-3.0-or-later
+AuthorName: ManeraKai
+SourceCode: https://github.com/ManeraKai/simplytranslate_mobile
+IssueTracker: https://github.com/ManeraKai/simplytranslate_mobile/issues
+
+AutoName: SimplyTranslate Mobile
+
+RepoType: git
+Repo: https://github.com/ManeraKai/simplytranslate_mobile
+
+Builds:
+  - versionName: 1.1.1
+    versionCode: 3
+    commit: v1.1.1
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.5.1
+    rm:
+      - .vscode
+      - ios
+    prebuild: sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.1.2
+    versionCode: 4
+    commit: f9c60c962acb2bfe412bea52cf64d91509d1f470
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.5.1
+    rm:
+      - .vscode
+      - ios
+    prebuild: sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.1.3
+    versionCode: 5
+    commit: bc4eeab8afc93e9e5af2c967efe3e07692d6b154
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.5.1
+    rm:
+      - .vscode
+      - ios
+    prebuild: sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.1.4
+    versionCode: 6
+    commit: b7b7cb6eb5311a3a2c31b4452c0603ec7fb57871
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.10.0
+    rm:
+      - .vscode
+      - ios
+    prebuild: sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.2.0
+    versionCode: 7
+    commit: cec50849ee61177fea4fca23921685889e95d56d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.10.0
+    rm:
+      - .vscode
+      - ios
+    prebuild: sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.3.0
+    versionCode: 8
+    commit: 37fa53a171448c225a16cdff6552c1a62f3c9895
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@2.10.0
+    rm:
+      - .vscode
+      - ios
+    prebuild: sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.4.0
+    versionCode: 9
+    commit: 5b6b351a6d139bd9f73f2a00bb6c3df355b8702a
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.10.2
+    rm:
+      - .vscode
+    prebuild:
+      - sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.4.1
+    versionCode: 10
+    commit: ccde3bde32fda331a64d2575cacac18a895ea49e
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.10.2
+    rm:
+      - .vscode
+    prebuild:
+      - sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.4.2
+    versionCode: 11
+    commit: d06113c82050aeaab904bac19fc5ba8dcb8e3547
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.10.2
+    rm:
+      - .vscode
+    prebuild:
+      - sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.4.3
+    versionCode: 12
+    commit: 7ba2e22d3e0e155f1928edf150d697a150eaa3be
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.10.2
+    rm:
+      - .vscode
+    prebuild:
+      - sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+  - versionName: 1.4.4
+    versionCode: 13
+    commit: fbb76f92c6edcd2e7846aaf4d072d2666987c54b
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@3.10.2
+    rm:
+      - .vscode
+    prebuild:
+      - sed -i -e 's|git@github.com:|https://github.com/|' pubspec.lock pubspec.yaml
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor fdroid
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.4.4
+CurrentVersionCode: 13

@@ -1,0 +1,222 @@
+Categories:
+  - Local Media Player
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Andreas Kromke
+AuthorEmail: Andreas.Krom.ke+Support@gmail.com
+SourceCode: https://gitlab.com/AndreasK/classical-music-tagger
+IssueTracker: https://gitlab.com/AndreasK/classical-music-tagger/issues
+Changelog: https://gitlab.com/AndreasK/classical-music-tagger/-/releases
+
+AutoName: Classical Music Tagger
+
+RepoType: git
+Repo: https://gitlab.com/AndreasK/classical-music-tagger.git
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 9
+    commit: v1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 11
+    commit: v1.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 12
+    commit: v1.1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 13
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 14
+    commit: v1.2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 15
+    commit: v1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 16
+    commit: v1.3.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.2
+    versionCode: 17
+    commit: v1.3.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 18
+    commit: v1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 19
+    commit: v1.4.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 20
+    commit: v1.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 21
+    commit: v1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 22
+    commit: v1.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 23
+    commit: acea59c0f8663a2b73758627e6e3659170e83396
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 24
+    commit: 8bc499c793ab3ce9562fbc821e393cdc61d31fb8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 25
+    commit: 18fd1a6dc991ecfbda1b590727d5afeb1f63b72d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.9'
+    versionCode: 26
+    commit: a215aa443f73d7d167a497910f4f70c28427b3d8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.9.2
+    versionCode: 28
+    commit: 7c56f49627f8a2bdd61eeac71c38cee65986075d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.9.3
+    versionCode: 29
+    commit: da8538a8d943741381ef1a4b954dfc0c6335f47c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.9.4
+    versionCode: 30
+    commit: 08c90182f915f66a6da76bc83b2b4a65350e9c23
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.9.5
+    versionCode: 31
+    commit: a8aaf269920ca7e33fb65e8078576dc327a8a127
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.9.6
+    versionCode: 32
+    commit: 87310d1ef17b595fc3ef6308b291d0814f8b1fa8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 33
+    commit: 2745e60e46e3e22442cd43d80ead80a64689e305
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/8.12.2/8.11.1/' ../build.gradle
+      - sed -i -e '/compileSdk {/,+2c compileSdk 36' build.gradle
+
+  - versionName: '1.11'
+    versionCode: 34
+    commit: 9a40768523509f238f652ee8da099507d7b0db66
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/8.12.3/8.11.1/' ../build.gradle
+      - sed -i -e '/compileSdk {/,+2c compileSdk 36' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v
+CurrentVersion: '1.11'
+CurrentVersionCode: 34

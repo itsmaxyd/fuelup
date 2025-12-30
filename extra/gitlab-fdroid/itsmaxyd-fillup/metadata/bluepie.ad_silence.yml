@@ -1,0 +1,157 @@
+AntiFeatures:
+  NonFreeDep:
+    en-US: Only needed for/work with proprietary audio apps.
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: BluePie
+AuthorEmail: iambluepie@gmail.com
+AuthorWebSite: https://github.com/aghontpi
+WebSite: https://github.com/aghontpi/ad-silence
+SourceCode: https://github.com/aghontpi/ad-silence
+IssueTracker: https://github.com/aghontpi/ad-silence/issues
+
+AutoName: Ad-silence
+
+RepoType: git
+Repo: https://github.com/aghontpi/ad-silence.git
+
+Builds:
+  - versionName: 0.3.0
+    versionCode: 7
+    commit: a28e8eb5751431da5dcf22d185674073fc0e1f6f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.0
+    versionCode: 11
+    commit: 11f63efe95a71fa93770b23d98ae059e984b1e6b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.4.1
+    versionCode: 14
+    commit: 903c3d2c34262f51e218c9ae4eb3ef02d798cae1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.5.0
+    versionCode: 17
+    commit: 99854d443a1180373f0f5fb1742735c808d2bcaa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.5.1
+    versionCode: 20
+    commit: a221ffff5ab3c3446c0a64f6777d25a371a7bfd2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.5.2
+    versionCode: 23
+    commit: a0d6de9ef7746fe86c04a0c6c17b51de5662c8b1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.5.3
+    versionCode: 25
+    commit: ea9dd49bcb2bbbb4b9dce52ac7fb56e131ec5743
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.5.4
+    versionCode: 30
+    commit: b777e59fd6538de6b90d495f756e8eca7ade70e8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.5.5
+    versionCode: 40
+    commit: 24008f683990f002f1cce0374bb4830ab029a0e2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.6.0
+    versionCode: 42
+    commit: 51fb5782f711388c6632fa2d762b4beded3c9320
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.1-prod
+    versionCode: 49
+    commit: ee82c89d9dc70219f497910bb2af812d4a08254d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.2-prod
+    versionCode: 51
+    commit: 8e1c244ee192c1937d6ac8e785be23fe45f71510
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.7.0-prod
+    versionCode: 53
+    commit: 858677e78c634f4ab105c1ccfb75e3b0a095f4ee
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.7.1-prod
+    versionCode: 54
+    commit: 51f9a0ea49228b39f28e332b622230a4ab6c6ccf
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v0.7.1-prod
+CurrentVersionCode: 54

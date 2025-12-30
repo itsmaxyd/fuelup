@@ -1,0 +1,191 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-only
+AuthorName: Umer Farooq
+SourceCode: https://github.com/umer0586/DroidPad
+IssueTracker: https://github.com/umer0586/DroidPad/issues
+Changelog: https://github.com/umer0586/DroidPad/releases
+
+AutoName: Droid Pad
+
+RepoType: git
+Repo: https://github.com/umer0586/DroidPad.git
+
+Builds:
+  - versionName: 1.6.1
+    versionCode: 11
+    commit: eea6325873d4604eef70bf939dc112c1c66b6406
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 12
+    commit: 69367eea833c8194409baa22434ac8966882124c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 13
+    commit: f6855f810d7b8c34fedb2a01d1ac05bab34edc45
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 14
+    commit: 9051aa6757ed3f0296443b7940ed5bfc09391258
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.0
+    versionCode: 15
+    commit: f6887b678aa26345fc81df49c394e546742f3848
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 16
+    commit: 69f07350c9e741badf574a4ccd55ca99f5b69fd9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 18
+    commit: f2fc754105abd2aa2a32a975a080bf0d8ce278c9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 19
+    commit: 2f43849500f1dbefec03858654250d4e3d2034d5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.0
+    versionCode: 20
+    commit: 8ceb58a0c8ee5197f29f6d6927b4c9cd5cd8f50d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 21
+    commit: 35bf9b2fb2fb4753e9635cae84e873df646bb4e8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.0
+    versionCode: 22
+    commit: a83e4bfddc50876b91db9dc0d170f5f1412e3ed6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.6.0
+    versionCode: 23
+    commit: 93d8f9cdcf5c94ff7e9a1a2b50a26a47261421b4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.0
+    versionCode: 24
+    commit: d00b389a87f1301d7eefc33667eea0ae340af306
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 25
+    commit: 2f75b92a083692c804bc7b435181ab1109efc815
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.0
+    versionCode: 26
+    commit: a3d1479fbd796c7f7851d87a38f478cdf6a6b9da
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.1
+    versionCode: 27
+    commit: 4ee1f4628b48d8f421bedfc1299e807552462c3d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.0
+    versionCode: 28
+    commit: eb50d49b085b0c37d79dcf249361674c8484900b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/agp/s/8.12.1/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 3.1.0
+    versionCode: 29
+    commit: 9b9084f44c44e69b1fc7a15fff4847582e60cfd3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/agp/s/8.12.1/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 3.2.0
+    versionCode: 30
+    commit: 140bdbe81d649fd7a4b42fdb4ae91655844aa325
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/agp/s/8.12.1/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 3.3.0
+    versionCode: 31
+    commit: 9607885dc2fb6ace2f729591774c0486bcdddba0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/agp/s/8.12.1/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 3.3.1
+    versionCode: 32
+    commit: 609a4ae9e556d2d049eceeba29edebad4649b0c9
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/agp/s/8.12.1/8.11.1/' ../gradle/libs.versions.toml
+
+  - versionName: 3.4.0
+    versionCode: 33
+    commit: 2b171c4fdad5cd403ca8ca316b94f7420c03a604
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.5.0
+    versionCode: 34
+    commit: 4a3a214324e83a5ad505b256337e5d9b3d6bce00
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.5.2
+    versionCode: 36
+    commit: e45623ff83a93f09f6f5ff42d1f821faf4f59c1e
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.5.2
+CurrentVersionCode: 36

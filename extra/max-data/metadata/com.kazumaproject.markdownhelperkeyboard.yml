@@ -1,0 +1,263 @@
+Categories:
+  - Keyboard & IME
+License: MIT
+AuthorName: Kazuma Naka
+SourceCode: https://github.com/KazumaProject/JapaneseKeyboard
+IssueTracker: https://github.com/KazumaProject/JapaneseKeyboard/issues
+Changelog: https://github.com/KazumaProject/JapaneseKeyboard/releases
+Donate: https://github.com/sponsors/KazumaProject
+
+AutoName: Sumire
+
+RepoType: git
+Repo: https://github.com/KazumaProject/JapaneseKeyboard.git
+Binaries: https://github.com/KazumaProject/JapaneseKeyboard/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 1.4.386
+    versionCode: 507
+    commit: a0eb1fc289aeb1b7f15d16aa161a1048fa084e19
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.390
+    versionCode: 511
+    commit: 5bc8960ed764b80717b40895c4f29d59958d4ba4
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.394
+    versionCode: 515
+    commit: 6f4382434d6cf793616009095ff1e2b155900938
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.396
+    versionCode: 517
+    commit: b646e7ca96548518be01614afa1fef19418b9bcd
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.400
+    versionCode: 521
+    commit: 54aa8633820a8bc74597ab9fec3c2c406a9ab054
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.410
+    versionCode: 531
+    commit: d01eda992cc8e1ec45c5f87cf6416ef88b980521
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.412
+    versionCode: 533
+    commit: 21d524a8b3724e8f572e1e39b4ee179e985df4cc
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.436
+    versionCode: 557
+    commit: v1.4.436
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.438
+    versionCode: 559
+    commit: caef901bdae9561af4880021387819e9fcc1a786
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.439
+    versionCode: 560
+    commit: 32ebbcaefde58611cc539e857ebe060316d8888b
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.441
+    versionCode: 562
+    commit: 3870daa04372aab92475713f1caff19379dbcbfc
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.443
+    versionCode: 564
+    commit: 47c7eb15329b5317f587fcc7ce8c857ac1d1ed95
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.449
+    versionCode: 570
+    commit: 1f533948a279b315332d283bbd06a8c1215c903e
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.458
+    versionCode: 579
+    commit: 3642df01f424ed339c3197d897e3646a4f32502d
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.459
+    versionCode: 580
+    commit: 2e0da6b3cd91b91874ac5601fa087fdaf9953674
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.462
+    versionCode: 583
+    commit: 2ec8cb1295667d9c698c4e69c0bbc95d0309c088
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.463
+    versionCode: 584
+    commit: 6d2596166c9944377cdd8328247928af48595359
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.465
+    versionCode: 586
+    commit: ed015defd0e19fdbe81340c2c69f5d66a6a0e814
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.467
+    versionCode: 588
+    commit: 082547fc3638e42a6111b72665a194f2d66e5c24
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+  - versionName: 1.4.471
+    versionCode: 592
+    commit: f7ef26b82653e1bd74ca332bf37d68c073b7f2e2
+    subdir: app
+    sudo:
+      - export CPUS_MAX=16
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/*.dat.zip
+      - app/src/main/assets/*/*.dat.zip
+
+AllowedAPKSigningKeys: ec676c30f05f3947a1aec86d02ecead150f772790b35fcaf8af484c1dd5eb4c0
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.4.471
+CurrentVersionCode: 592

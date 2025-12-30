@@ -1,0 +1,157 @@
+Categories:
+  - Draw
+  - Graphics
+License: AGPL-3.0-or-later
+AuthorName: Catrobat
+AuthorEmail: contact@catrobat.org
+AuthorWebSite: https://www.catrobat.org
+SourceCode: https://github.com/Catrobat/Paintroid
+IssueTracker: https://jira.catrob.at/projects/PAINTROID/issues
+Changelog: https://github.com/Catrobat/Paintroid/releases
+
+AutoName: Paintroid
+Description: |-
+  Paintroid is a graphical paint editor App, that, among others, allows
+  setting parts of pictures to transparent, insert Text / Images, add Layers,
+  use Color filling and picking tools, rotate, resize and position
+  elements...
+
+  It is also known as Pocket Paint, it is associated to Catroid (which is
+  like Scratch but for Android).
+
+RepoType: git
+Repo: https://github.com/Catrobat/Paintroid.git
+
+Builds:
+  - versionName: 2.4.1
+    versionCode: 30
+    commit: v2.4.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.2
+    versionCode: 33
+    commit: v2.5.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.6.1
+    versionCode: 36
+    commit: v2.6.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.0
+    versionCode: 37
+    commit: v2.7.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.1
+    versionCode: 38
+    commit: 2.7.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.3
+    versionCode: 40
+    commit: v2.7.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.4
+    versionCode: 41
+    commit: 2e06cec260353a0603f3a8e2a3f2f334be3d172f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.5
+    versionCode: 42
+    commit: 163ae508b49ffcbd61a074c1aae965e419dafa26
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 43
+    commit: ca8ba23f462bb0426b16a057239ea5247dcbfdae
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.1
+    versionCode: 44
+    commit: 356677411cf3ece277c96685ffc67b4405f53cfc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.2
+    versionCode: 45
+    commit: 5cce665afdf4db9756554a7f161f15cf300eb4ed
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.3
+    versionCode: 46
+    commit: 4a4bee5772fde3daf0169b0b01e9aa91378b35ba
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.0
+    versionCode: 47
+    commit: e0df628917e39040f66f4226b1761ef792f780ce
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.1
+    versionCode: 48
+    commit: dae5e528bea8da30d62d6928378b4ae4332f95af
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.0
+    versionCode: 49
+    commit: 6c62260cbfe503247cb6df3c2a5e52265781d4d5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.1
+    versionCode: 50
+    commit: e39cee6d9571eab8b51b2c1c71cbf376434b665f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.0
+    versionCode: 51
+    commit: a8d0fd35e100ae878593114af9ec2bc2b02214f4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.12.0
+    versionCode: 52
+    commit: e656dab87cffa7111f91a8ffb1d88cd52bd0e60c
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v.*$
+UpdateCheckData: build.gradle|androidVersionCode = ([0-9]+)|.|androidVersionName =
+  '([0-9.]*)'
+CurrentVersion: 2.12.0
+CurrentVersionCode: 52

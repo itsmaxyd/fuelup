@@ -1,0 +1,201 @@
+Categories:
+  - Sports & Health
+License: GPL-3.0-or-later
+AuthorName: Faltenreich
+AuthorEmail: philipp.fahlteich@gmail.com
+AuthorWebSite: https://writingbits.de/
+WebSite: https://diaguard.wordpress.com/
+SourceCode: https://github.com/Faltenreich/Diaguard
+IssueTracker: https://github.com/Faltenreich/Diaguard/issues
+Changelog: https://github.com/Faltenreich/Diaguard/releases
+Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AM6HG633T4BWY&source=url
+
+AutoName: Diaguard
+
+RepoType: git
+Repo: https://github.com/Faltenreich/Diaguard
+
+Builds:
+  - versionName: 3.4.4
+    versionCode: 42
+    commit: version/3.4.4
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.5.1
+    versionCode: 43
+    commit: version/3.5.1
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.5.2
+    versionCode: 44
+    commit: version/3.5.2
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.6.1
+    versionCode: 46
+    commit: version/3.6.1
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.7.0
+    versionCode: 47
+    commit: version/3.7.0
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.7.1
+    versionCode: 48
+    commit: version/3.7.1
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.8.1
+    versionCode: 50
+    commit: version/3.8.1
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.8.2
+    versionCode: 51
+    commit: version/3.8.2
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.8.3
+    versionCode: 52
+    commit: version/3.8.3
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.8.4
+    versionCode: 53
+    commit: version/3.8.4
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.8.5
+    versionCode: 54
+    commit: 120688ab3e3cda34fbbb76f1f0f1f63016e5f3d0
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.9.0
+    versionCode: 55
+    commit: 387d7522ed0b7720396b9a3ae9788cd3c4ae4bbb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - store
+
+  - versionName: 3.10.0
+    versionCode: 56
+    commit: 96c24c9f1b47c2deabdcaa4d704cbd8b2eb594ca
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - store
+
+  - versionName: 3.11.0
+    versionCode: 57
+    commit: ffd4129ba886e045736914d2c93c04e239dd3b1b
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.11.1
+    versionCode: 58
+    commit: d4967edeeddbddc1a3a55e5ca2de56530d52a4e5
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.12.1
+    versionCode: 60
+    commit: 7ed6540465ee218f966d9bd58d8897d445e7905c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - store
+
+  - versionName: 3.12.2
+    versionCode: 61
+    commit: 60e486023c877ff87d90def5ddf2828818fd1cdb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - store
+
+  - versionName: 3.13.0
+    versionCode: 62
+    commit: bba9e167121488f1c8ba0a34b982710321b79c5d
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.13.2
+    versionCode: 64
+    commit: d5da636394552d14a7d19e23417043a863595d27
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.13.3
+    versionCode: 65
+    commit: 986f6249aff5fafcb865c9ef288ed1259c265f59
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.14.0
+    versionCode: 66
+    commit: ae071ce1a04de7135224e1c841a606d0eea5021f
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.15.0
+    versionCode: 67
+    commit: 7aedb3d8fe3e067df3d1bd6ea7aeb70ef94baae5
+    subdir: app
+    gradle:
+      - store
+    prebuild: sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+
+  - versionName: 3.15.1
+    versionCode: 68
+    commit: 1335470aec71000356563b5c4db29d5eeb6746db
+    subdir: app
+    gradle:
+      - store
+    prebuild: sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.15.1
+CurrentVersionCode: 68

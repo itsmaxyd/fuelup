@@ -1,0 +1,33 @@
+Ads:
+  description: Þetta forrit inniheldur auglýsingar
+  name: Auglýsingar
+DisabledAlgorithm:
+  description: Þetta forrit er með veika öryggisundirritun
+  name: Undirritað með óöruggu reikniriti
+KnownVuln:
+  description: Þetta forrit inniheldur þekktan öryggisveikleika
+  name: Þekktir veikleikar
+NSFW:
+  description: Þetta forrit inniheldur efni sem ekki ætti að gefa út eða birta opinberlega
+  name: NSFW
+NoSourceSince:
+  name: Enginn grunnkóði síðan
+  description: Grunnkóðinn er ekki lengur tiltækur, engar uppfærslur eru mögulegar
+NonFreeAdd:
+  description: Þetta forrit ýtir undir notkun ófrjálsra viðbóta
+  name: Ófrjálsar viðbætur
+NonFreeAssets:
+  description: Þetta forrit inniheldur ófrjáls tilföng
+  name: Ófrjáls tilföng
+NonFreeDep:
+  description: Þetta forrit er háð öðrum ófrjálsum forritum
+  name: Ófrjálsar kerfiskröfur
+NonFreeNet:
+  description: Þetta forrit ýtir undir notkun ófrjálsrar þjónustu
+  name: Ófrjálsar netþjónustur
+Tracking:
+  description: Þetta forrit fylgist með og gefur skýrslu um hegðun þína
+  name: Eftirlit
+TetheredNet:
+  description: Þetta forrit er alfarið háð tilteknum netþjóni í netþjónustu
+  name: Samnýttar (tethered) netþjónustur

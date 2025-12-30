@@ -1,0 +1,114 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Odysee website itself is not libre.
+  Tracking:
+    en-US: Odysee website collects user data, partly used for for marketing, advertising
+      etc.
+Categories:
+  - Internet
+License: MIT
+WebSite: https://odysee.com/
+SourceCode: https://github.com/OdyseeTeam/odysee-android-floss
+IssueTracker: https://github.com/OdyseeTeam/odysee-android-floss/issues
+
+AutoName: Odysee
+
+RepoType: git
+Repo: https://github.com/OdyseeTeam/odysee-android-floss
+
+Builds:
+  - versionName: 0.0.47
+    versionCode: 47
+    commit: 44c08f6a6f3df02b2167f48c4688634861ba202b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    scandelete:
+      - app/src/main/assets/www/js/videojs-chromecast/node_modules/video.js/dist/video-js-5.20.5.zip
+
+  - versionName: 0.0.50
+    versionCode: 50
+    commit: 4459fff733a04341601f2291b4686b93cfa7050d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    scandelete:
+      - app/src/main/assets/www/js/videojs-chromecast/node_modules/video.js/dist/video-js-5.20.5.zip
+
+  - versionName: 0.0.51
+    versionCode: 51
+    commit: 0657731ae57aaa3754ca08d81f7711082b687a88
+    subdir: app
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    scandelete:
+      - app/src/main/assets/www/js/videojs-chromecast/node_modules/video.js/dist/video-js-5.20.5.zip
+
+  - versionName: 0.0.52
+    versionCode: 52
+    commit: 4dd9160f67c53a02cd1a5d6586a7b705cd981681
+    subdir: app
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    scandelete:
+      - app/src/main/assets/www/js/videojs-chromecast/node_modules/video.js/dist/video-js-5.20.5.zip
+
+  - versionName: 0.0.53
+    versionCode: 53
+    commit: db1615f9a085e3eb0099513c7ffb06436f57bbbf
+    subdir: app
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    scandelete:
+      - app/src/main/assets/www/js/videojs-chromecast/node_modules/video.js/dist/video-js-5.20.5.zip
+
+  - versionName: 0.0.54
+    versionCode: 54
+    commit: 988c9fd6365fc46d5a813e65c1a00f187c8689aa
+    subdir: app
+    gradle:
+      - yes
+    prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    scandelete:
+      - app/src/main/assets/www/js/videojs-chromecast/node_modules/video.js/dist/video-js-5.20.5.zip
+
+  - versionName: 0.0.65
+    versionCode: 65
+    commit: 4af9eb360b1f8b92eeff71e60d8d58c4f39cdefc
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    scandelete:
+      - app/src/main/assets/www/js/videojs-chromecast/node_modules/video.js/dist/video-js-5.20.5.zip
+
+  - versionName: 0.0.69
+    versionCode: 69
+    commit: 38d875b531bebff3e780a1aa288e46b1b92ebd90
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'platforms;android-30' 'build-tools;30.0.3'
+    scandelete:
+      - app/src/main/assets/www/js/videojs-chromecast/node_modules/video.js/dist/video-js-5.20.5.zip
+
+  - versionName: 0.0.83
+    versionCode: 83
+    commit: ce39a0595e84ace42b5c21cf74a1e14b97fd6887
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+      - sed -i -e '/signingConfigs./d' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/src/main/AndroidManifest.xml|versionCode="(\d+)"|.|versionName="([\d.]+)"
+CurrentVersion: 0.0.83
+CurrentVersionCode: 83

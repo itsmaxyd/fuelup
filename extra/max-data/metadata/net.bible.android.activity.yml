@@ -1,0 +1,1908 @@
+Categories:
+  - Reading
+  - Religion
+License: GPL-3.0-or-later
+AuthorName: And Bible Open Source Project
+AuthorEmail: help.andbible@gmail.com
+WebSite: https://andbible.github.io/
+SourceCode: https://github.com/AndBible/and-bible
+IssueTracker: https://github.com/AndBible/and-bible/issues
+Translation: https://www.transifex.com/mjdenham/andbible/
+
+AutoName: Bible Study
+
+RepoType: git
+Repo: https://github.com/AndBible/and-bible.git
+
+Builds:
+  - versionName: 1.5.5
+    versionCode: 79
+    commit: 7d7e23e88da2ea9ce598fc6c454e52b508d70c48
+    subdir: AndBible
+    target: android-8
+
+  - versionName: 1.6.0
+    versionCode: 83
+    commit: 5aad7e0ec7793a23296a8c7257687550ff6bca81
+    subdir: AndBible
+    target: android-8
+
+  - versionName: 1.7.3
+    versionCode: 93
+    commit: build-01.07.03
+    subdir: AndBible
+    init: rm -f build.xml
+
+  - versionName: 1.8.1
+    versionCode: 100
+    commit: build-01.08.01
+    subdir: AndBible
+    target: android-10
+
+  - versionName: 1.9.0
+    versionCode: 107
+    commit: 74c888f4ce77ee6dd00612fe7b9df46899bda990
+    subdir: AndBible
+    target: android-10
+
+  - versionName: 2.1.1
+    versionCode: 138
+    commit: d5f6a1534cae65ff6d7eaf1d89f
+    subdir: AndBible
+    srclibs:
+      - appcompat@android-4.4.3_r1
+    extlibs:
+      - android/android-support-v4.jar
+    prebuild:
+      - mv libs/android-support-v4.jar $$Support$$/libs
+      - rm build.xml
+
+  - versionName: 2.2.2
+    versionCode: 166
+    commit: build-02.02.02
+    subdir: AndBible
+    init: sed -i "/android {/a compileOptions {\nsourceCompatibility JavaVersion.VERSION_1_7\ntargetCompatibility
+      JavaVersion.VERSION_1_7\n}" build.gradle
+    gradle:
+      - yes
+    srclibs:
+      - JSword@d7ad5ef
+    rm:
+      - Andbible/libs/*
+      - AndBible/libs
+      - AndBible/libs-src
+    prebuild:
+      - cp -r ../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.2.3
+    versionCode: 168
+    commit: build-02.02.03
+    subdir: AndBible
+    init: sed -i "/android {/a compileOptions {\nsourceCompatibility JavaVersion.VERSION_1_7\ntargetCompatibility
+      JavaVersion.VERSION_1_7\n}" build.gradle
+    gradle:
+      - yes
+    srclibs:
+      - JSword@d7ad5ef
+    rm:
+      - Andbible/libs/*
+      - AndBible/libs
+      - AndBible/libs-src
+    prebuild:
+      - cp -r ../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.5.0
+    versionCode: 192
+    commit: build-02.05.00
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@8fe1d0a
+    rm:
+      - IgnoreAndBibleExperiments
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+      - AndBibleTest/libs
+      - tests/TableKeyboard/libs
+      - AndBackendTest/libs
+    prebuild:
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.5.1
+    versionCode: 194
+    commit: build-02.05.01
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@8fe1d0a
+    rm:
+      - IgnoreAndBibleExperiments
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+      - AndBibleTest/libs
+      - tests/TableKeyboard/libs
+      - AndBackendTest/libs
+    prebuild:
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.7.0
+    versionCode: 209
+    commit: build-02.07.00
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@8fe1d0a
+    rm:
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+    prebuild:
+      - sed -i "/mmseg4j/d" build.gradle
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.7.1
+    versionCode: 211
+    commit: build-02.07.01
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@8fe1d0a
+    rm:
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+    prebuild:
+      - sed -i "/mmseg4j/d" build.gradle
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.8.0
+    versionCode: 214
+    commit: build-02.08.00
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@8fe1d0a
+    rm:
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+    prebuild:
+      - sed -i "/mmseg4j/d" build.gradle
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.8.1
+    versionCode: 216
+    commit: build-02.08.01
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@8fe1d0a
+    rm:
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+    prebuild:
+      - sed -i "/mmseg4j/d" build.gradle
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.8.2
+    versionCode: 219
+    commit: build-02.08.02
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@fa6a44d05982a67f0122ffdd7b522d8ebcf43824
+    rm:
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+    prebuild:
+      - sed -i "/mmseg4j/d" build.gradle
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.8.3
+    versionCode: 221
+    commit: build-02.08.03
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@fa6a44d05982a67f0122ffdd7b522d8ebcf43824
+    rm:
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+    prebuild:
+      - sed -i "/mmseg4j/d" build.gradle
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.8.4
+    versionCode: 224
+    commit: build-02.08.04
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@fa6a44d05982a67f0122ffdd7b522d8ebcf43824
+    rm:
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+    prebuild:
+      - sed -i "/mmseg4j/d" build.gradle
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+
+  - versionName: 2.11.1.246
+    versionCode: 246
+    commit: build-02.11.01
+    subdir: and-bible/app
+    gradle:
+      - yes
+    srclibs:
+      - JSword@fa6a44d05982a67f0122ffdd7b522d8ebcf43824
+    rm:
+      - and-bible/app/libs/*
+      - and-bible/libs-src
+      - ReadingPlanCreator/libs
+      - jsword-tweaks/libs
+    prebuild:
+      - sed -i "/mmseg4j/d" build.gradle
+      - cp -r ../../jsword-tweaks/src/main/. $$JSword$$/src/main
+      - sed -i "/<repositories>/,/<\/repositories>/d" $$JSword$$/pom.xml
+      - rm -rf $$JSword$$/src/main/java/org/crosswire/jsword/examples
+      - rm $$JSword$$/src/main/java/org/crosswire/jsword/book/install/sword/FTPExample.java
+      - sed -i "/<dependencies>/a <dependency><groupId>com.chenlb.mmseg4j</groupId><artifactId>mmseg4j-all</artifactId><version>1.8.6</version></dependency>"
+        $$JSword$$/pom.xml
+    build:
+      - pushd $$JSword$$
+      - mvn package -Dmaven.test.skip=true
+      - popd
+      - cp $$JSword$$/target/jsword-*.jar libs/jsword.jar
+      - echo "-dontwarn com.chenlb.mmseg4j.**" >> proguard-rules.pro
+
+  - versionName: 3.1.319.4-beta
+    versionCode: 319
+    commit: build-319.4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@build-2
+      - AndBibleJSwordTweaks@v0.1.3
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.2.340
+    versionCode: 340
+    commit: v3.2.340-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@build-2
+      - AndBibleJSwordTweaks@v0.1.3
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.2.343
+    versionCode: 343
+    commit: v3.2.343
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.379
+    versionCode: 379
+    commit: v3.3.379-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.380
+    versionCode: 380
+    commit: v3.3.380-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.381
+    versionCode: 381
+    commit: v3.3.381-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.382
+    versionCode: 382
+    commit: v3.3.382-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.385
+    versionCode: 385
+    commit: v3.3.385-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.386
+    versionCode: 386
+    commit: v3.3.386-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.387
+    versionCode: 387
+    commit: v3.3.387-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.388
+    versionCode: 388
+    commit: v3.3.388-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.389
+    versionCode: 389
+    commit: v3.3.389-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.390
+    versionCode: 390
+    commit: v3.3.390-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.391
+    versionCode: 391
+    commit: v3.3.391-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+    srclibs:
+      - AndBibleJSword@andbible-fdroid
+      - AndBibleJSwordTweaks@andbible-fdroid
+    rm:
+      - app/libs/*
+    build:
+      - cd $$AndBibleJSwordTweaks$$
+      - TARGET_DIR="." JSWORD_PATH=$$AndBibleJSword$$ gradle install
+      - cd -
+      - cp $$AndBibleJSwordTweaks$$/jsword.jar libs/jsword.jar
+
+  - versionName: 3.3.392
+    versionCode: 392
+    commit: v3.3.392-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+
+  - versionName: 3.3.393
+    versionCode: 393
+    commit: v3.3.393-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+
+  - versionName: 3.3.395
+    versionCode: 395
+    commit: v3.3.395-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+
+  - versionName: 3.3.397
+    versionCode: 397
+    commit: v3.3.397-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+
+  - versionName: 3.3.398
+    versionCode: 398
+    commit: v3.3.398-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+
+  - versionName: 3.3.399
+    versionCode: 399
+    commit: v3.3.399-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm g++ build-essential
+    gradle:
+      - yes
+
+  - versionName: 3.3.400
+    versionCode: 400
+    commit: v3.3.400-fdroid
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - yes
+
+  - versionName: 4.0.601
+    versionCode: 601
+    commit: 99e65d7c96bf7150ac080bf6f5a5d45ff68080bc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - yes
+
+  - versionName: 4.0.602
+    versionCode: 602
+    commit: a5b97119b211bbfdc1da8b0a9273cb369c7836b1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - yes
+
+  - versionName: 4.0.604
+    versionCode: 604
+    commit: fa107c426147b60444f115ea3d7e85222745c975
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - yes
+
+  - versionName: 4.0.605
+    versionCode: 605
+    commit: 284ce3816f640495f2d9c928d2437f72c82f5eea
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - yes
+
+  - versionName: 4.0.610
+    versionCode: 610
+    commit: db3c134ee297ed7d6ea077739c08dbfb695967e7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - yes
+
+  - versionName: 4.0.611
+    versionCode: 611
+    commit: 6d969b202dfb80b5117e7ef8cca1e230cc1852c5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - yes
+
+  - versionName: 4.0.612
+    versionCode: 612
+    commit: 78f0e5e4ef986342368320edca575cd18e3bd422
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - yes
+
+  - versionName: 4.0.613
+    versionCode: 613
+    commit: bec7aa116230708f7fbdf6b6ab29543904806f08
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.614
+    versionCode: 614
+    commit: 9d1ba31f5e56299992640b089895c98cc20f30a6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.615
+    versionCode: 615
+    commit: 80fda8474e68eaebb2121cbe49be79b499896cc4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.617
+    versionCode: 617
+    commit: b254877359d7cad02f994c35da7eef3174f08fcb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.620
+    versionCode: 620
+    commit: 45ec2a25cc9cd02ab9558820a72a1f9f69144d69
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.622
+    versionCode: 622
+    commit: 4335f47a1a95dd0c1d6cccaf200fa30d3f11b66a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.628
+    versionCode: 628
+    commit: 7989284a7201f01c3d11eb0639cd9a2e97286ec6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.630
+    versionCode: 630
+    commit: aec329216305e59ae2672598f152c51832d2c29e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.635
+    versionCode: 635
+    commit: 20f1cefb987a28a9b8ba7e572b7f84b72289ac86
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.636
+    versionCode: 636
+    commit: 6c14109712cde28961d61093559da241a73b0af7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.638
+    versionCode: 638
+    commit: d364abc89db2adcd6226ced8a398ac3d737ad44d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.640
+    versionCode: 640
+    commit: 83d10bfc76e0a092419596cb8510c71221d7d5fc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.641
+    versionCode: 641
+    commit: 8bc1a04525350073173cf6ff42082d481ea3da71
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.642
+    versionCode: 642
+    commit: c2834486187c6cb0e8bb642e7785f9acfa1fd92a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.643
+    versionCode: 643
+    commit: fa0aa5137738cf87885f3b38d15f8d89c9f5adce
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.645
+    versionCode: 645
+    commit: 8b6e3982ee5ca7f34c19dafa5812cc8387006a6d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.648
+    versionCode: 648
+    commit: 5cc69995784ec50054b1bc6e5ad5a9533a5a4ece
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.649
+    versionCode: 649
+    commit: b44f16dce747c9b0c80efed52452f781e86df2cf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.651
+    versionCode: 651
+    commit: 6c680caf17b230362e0dbeb198e4efdd8ffcbd35
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports g++ build-essential
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.660
+    versionCode: 660
+    commit: c9a33c996debe67e167067f71bf2b5a23edf067d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.661
+    versionCode: 661
+    commit: e335a6f57add88d6ab321655848be412cf711136
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.664
+    versionCode: 664
+    commit: 66e7cb606a3174529832dff48a4231e09aae91d6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.667
+    versionCode: 667
+    commit: a2f974b88125c54d81ae4a8cac02a21aa9a67f7c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.669
+    versionCode: 669
+    commit: 5bed282895677b20a17b111226d307d83ee869fe
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.670
+    versionCode: 670
+    commit: 60d3270028ef040ad7bcb8c9059f97c9a2188d62
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.673
+    versionCode: 673
+    commit: 5146790666e6e2c813de899ffaf90ff9f2698659
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.674
+    versionCode: 674
+    commit: 296ba4702035945a0d57bb0d77b0f82dc4f76fa6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.679
+    versionCode: 679
+    commit: 3339e068ac99c5046331fb115c152e3b60f9794c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.681
+    versionCode: 681
+    commit: c4b05b38c710d4ba30e9a8cea4b11b4751ec1dc9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.683
+    versionCode: 683
+    commit: 398124562eafee2e2fb9c5010df19bfb80cc6055
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.685
+    versionCode: 685
+    commit: c14aa6d5e565ac82ed5ded42abf84169abb34a9b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.686
+    versionCode: 686
+    commit: 1b699d8fc0545d672fbaf994e880ce2ba0cc9788
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.687
+    versionCode: 687
+    commit: c1471301487d46bc12471dfbb5e69b69ee73eb86
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ build-essential
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.gz
+      - echo "7212031d7468718d7c8f5e1766380daaabe09d54611675338e7a88a97c3e31b6 node.tar.gz"
+        | sha256sum -c -
+      - tar xf node.tar.gz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+    gradle:
+      - fdroid
+
+  - versionName: 5.0.741
+    versionCode: 741
+    commit: a61be8e0592d7e587f125e59011f9bb6b136feee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.742
+    versionCode: 742
+    commit: 39a4e40355a5f6d95f0a85cf89d49fd2faebd0fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.754
+    versionCode: 754
+    commit: 0a27226352502824aca3dcb7833909502e42de3e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.755
+    versionCode: 755
+    commit: 27acfd2f5a290516b4daf77766583f4aff93b9c8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.762
+    versionCode: 762
+    commit: eedd0c1d45c5c0990a54f76b97f74f8762ddb717
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.771
+    versionCode: 771
+    commit: 5578074e84252bce698eda9e01fae615c6741c4a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.781
+    versionCode: 781
+    commit: ad34d14fc912886618728611e235c9819d56fbc0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.792
+    versionCode: 792
+    commit: 65e87383647650d7055582dbb39baad30318391a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.793
+    versionCode: 793
+    commit: b51a161d1db80fce1b29ed4326a62a4977d5d26f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.794
+    versionCode: 794
+    commit: a49625a9a0b5337a7946b2e0d96aad4b86b83f8e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.801
+    versionCode: 801
+    commit: 4d55ee7c69a339ad14b182923ebdedfd7ccdf2f3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.803
+    versionCode: 803
+    commit: 72e3197063068bc7f4382a95811ccfabbcb60980
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz
+      - echo "f0919f092fbf74544438907fa083c21e76b2d7a4bc287f0607ada1553ef16f60 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.804
+    versionCode: 804
+    commit: b39a15e79d19b2cc77625075e57b6dd3611fd690
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.805
+    versionCode: 805
+    commit: ede43af3585d4b4c6a56d5c0bb45e907d2c5b651
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.806
+    versionCode: 806
+    commit: a303445b01b4b6915b08be48db9fce5f373a44a0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.807
+    versionCode: 807
+    commit: 0dd4475693eeca02f86219a188241d4078c9a52b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.809
+    versionCode: 809
+    commit: 4ea6430b1de9390104d1764a1dd892a2e549928a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.827
+    versionCode: 827
+    commit: a0f61dbc422ef5e2a4acf9ff526978b6a5198b30
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.828
+    versionCode: 828
+    commit: 2e1582ad58b6140b3cf55c6249b5962d3206a2ee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.831
+    versionCode: 831
+    commit: 2f3b3f932f88f77f6a1a0fe38908678dbceaba45
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.832
+    versionCode: 832
+    commit: 17fb1509049f241ba98a46a0622ddaf22230c7f2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.833
+    versionCode: 833
+    commit: 9f1ca3cdb9b03d03d8d3133f3e301ed17b59b9a0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.834
+    versionCode: 834
+    commit: e9ecf07182bf26e12cf7698cab3349c6dfd6f18a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.835
+    versionCode: 835
+    commit: 9ab6d3c36d0645b62b5c901c319f2d6010371e9a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.840
+    versionCode: 840
+    commit: e5279fa45c8317b38d62fc32a98a742b60eb4392
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.841
+    versionCode: 841
+    commit: 873f87aa9bd34571da7473e848410dea9238be38
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.846
+    versionCode: 846
+    commit: 4f7c1fcce21d23494dac0916f48a84424937bae4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.847
+    versionCode: 847
+    commit: 176a7d8e2ead35217ba4bc5e96b15421add8b0b6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.857
+    versionCode: 857
+    commit: 44fc8df8a0a3c74c42b49a7295b7dfae5ff7e6a2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.873
+    versionCode: 873
+    commit: 9da40313c8fc2885680a0fc209aacc803c6a4ab3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.874
+    versionCode: 874
+    commit: 75f838610aee6aaba0b24538f29ae51380749fca
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.875
+    versionCode: 875
+    commit: 5769e4506f89247b73111401137aa66d250ecc76
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.883
+    versionCode: 883
+    commit: 19e814243e592ab77bf425b792abc85e13f96197
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.887
+    versionCode: 887
+    commit: 4471e647401270ec9d2a1a84e675d414d47eb1d4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.888
+    versionCode: 888
+    commit: 3949112a953f2f83dd2c3fb5bac901ac33122b48
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.891
+    versionCode: 891
+    commit: 834cf2a6258af59815245c7bc7ae4c9d80452d3d
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild:
+      - sed -i -e '/boox/d' build.gradle.kts
+      - sed -i -e 's/8.12.1/8.11.1/' ../build.gradle.kts
+
+  - versionName: 5.0.892
+    versionCode: 892
+    commit: 7849d2d632ca00206ab2ae44a638f70291eecbfc
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild:
+      - sed -i -e '/boox/d' build.gradle.kts
+      - sed -i -e 's/8.12.1/8.11.1/' ../build.gradle.kts
+
+  - versionName: 5.0.900
+    versionCode: 900
+    commit: bcae60785f329c481e139569947e56bb29a8dce8
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/bundletool {/,/^}/d' -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.901
+    versionCode: 901
+    commit: b8979390d0b404dd53b928e11c7d6078f4488c48
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/bundletool {/,/^}/d' -e '/boox/d' build.gradle.kts
+
+  - versionName: 5.0.902
+    versionCode: 902
+    commit: 83335ce897a5bcf67a59783e29943c9ee54cc37d
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie npm
+    gradle:
+      - standard
+      - fdroid
+    prebuild: sed -i -e '/bundletool {/,/^}/d' -e '/boox/d' build.gradle.kts
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+-fdroid$
+CurrentVersion: 5.0.902
+CurrentVersionCode: 902

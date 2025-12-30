@@ -1,0 +1,54 @@
+Categories:
+  - Connectivity
+License: Apache-2.0
+AuthorName: Parvesh Monu
+AuthorEmail: monu.parveshdhull@gmail.com
+SourceCode: https://github.com/Parveshdhull/Android-JioFi-Battery-Notifier
+IssueTracker: https://github.com/Parveshdhull/Android-JioFi-Battery-Notifier/issues
+Donate: https://www.buymeacoffee.com/parveshmonu
+
+AutoName: JioFi Battery Notifier
+
+RepoType: git
+Repo: https://github.com/Parveshdhull/Android-JioFi-Battery-Notifier
+
+Builds:
+  - versionName: '1.5'
+    versionCode: 5
+    commit: v1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 6
+    commit: v1.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 7
+    commit: v1.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 8
+    commit: c0099ed236f6c3750089a3ffdcb7fafae7441907
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.9'
+    versionCode: 9
+    commit: d0a239fb16f4d6157c8ac024e9359e5a9acd9017
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.9'
+CurrentVersionCode: 9

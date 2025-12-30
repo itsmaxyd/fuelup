@@ -1,0 +1,37 @@
+Categories:
+  - Icon Pack
+  - Theming
+License: GPL-3.0-only
+AuthorName: iAcn
+AuthorEmail: iacnlyx@gmail.com
+AuthorWebSite: https://iacn.me/
+SourceCode: https://github.com/iAcn/MBEStyle
+IssueTracker: https://github.com/iAcn/MBEStyle/issues
+Changelog: https://github.com/iAcn/MBEStyle/releases
+
+AutoName: MBE Style
+Description: This is a cute icon pack compatible with thirdparty launchers like https://f-droid.org/packages/ch.deletescape.lawnchair.plah
+  or https://f-droid.org/packages/com.benny.openlauncher.
+
+RepoType: git
+Repo: https://github.com/iAcn/MBEStyle
+
+Builds:
+  - versionName: 1.7.3
+    versionCode: 26
+    commit: v1.7.3
+    subdir: app/
+    gradle:
+      - yes
+
+  - versionName: 1.7.6
+    versionCode: 27
+    commit: v1.7.6
+    subdir: app/
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.7.6
+CurrentVersionCode: 27

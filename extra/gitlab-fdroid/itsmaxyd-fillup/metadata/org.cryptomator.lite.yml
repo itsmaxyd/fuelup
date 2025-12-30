@@ -1,0 +1,165 @@
+Categories:
+  - Cloud Storage & File Sync
+  - File Encryption & Vault
+  - Internet
+  - Security
+License: GPL-3.0-only
+AuthorName: Skymatic GmbH
+WebSite: https://cryptomator.org/
+SourceCode: https://github.com/cryptomator/android
+IssueTracker: https://github.com/cryptomator/android/issues
+Translation: https://translate.cryptomator.org/
+Changelog: https://github.com/cryptomator/android/releases
+Donate: https://cryptomator.org/donate/
+
+RepoType: git
+Repo: https://github.com/cryptomator/android.git
+Binaries: https://github.com/cryptomator/android/releases/download/%v/Cryptomator-%v_lite_signed.apk
+
+Builds:
+  - versionName: 1.9.0
+    versionCode: 2797
+    commit: 227f5058c26a6f6b896b26b862d0774e6aaa0cd8
+    subdir: presentation
+    submodules: true
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/exclusiveContent/,+11d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+    scandelete:
+      - lib
+    ndk: r23b
+
+  - versionName: 1.9.1
+    versionCode: 2807
+    commit: 3dbfc5d4f05534b2866b055030b70e9757b30e25
+    subdir: presentation
+    submodules: true
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/exclusiveContent/,+11d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+    scandelete:
+      - lib
+    ndk: r23b
+
+  - versionName: 1.10.0
+    versionCode: 2824
+    commit: 825b0ee9e151212def61aef65d7b84c10e54d634
+    subdir: presentation
+    submodules: true
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/exclusiveContent/,+11d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+    scandelete:
+      - lib
+    ndk: r23b
+
+  - versionName: 1.10.1
+    versionCode: 2897
+    commit: d94b3f45c29953ff069c575cb1cb1a112915b5b0
+    subdir: presentation
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/\/\/ needed for '\''com.microsoft.device.display'\'' required
+        by '\''com.microsoft.graph:microsoft-graph'\''/,+12d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+
+  - versionName: 1.10.2
+    versionCode: 2904
+    commit: 43d82c852f0010ff780d3d333bd417bb056e8b3b
+    subdir: presentation
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/\/\/ needed for '\''com.microsoft.device.display'\'' required
+        by '\''com.microsoft.graph:microsoft-graph'\''/,+12d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+
+  - versionName: 1.10.3
+    versionCode: 2939
+    commit: 9c5afb43d8cf46f7775b246de70c58ba0400385e
+    subdir: presentation
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/\/\/ needed for '\''com.microsoft.device.display'\'' required
+        by '\''com.microsoft.graph:microsoft-graph'\''/,+12d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+
+  - versionName: 1.10.4
+    versionCode: 2971
+    commit: 58e97cbf30c0c5bd822fa64252070b2f0c6fccb0
+    subdir: presentation
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/\/\/ needed for '\''com.microsoft.device.display'\'' required
+        by '\''com.microsoft.graph:microsoft-graph'\''/,+12d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+
+  - versionName: 1.11.1
+    versionCode: 2991
+    commit: e4775e3d729eca232d6c9964f3374794143c85f5
+    subdir: presentation
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/\/\/ needed for '\''com.microsoft.device.display'\'' required
+        by '\''com.microsoft.graph:microsoft-graph'\''/,+12d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+
+  - versionName: 1.12.1
+    versionCode: 3016
+    commit: 53c10af67d3c714987885caafef2077d73eaf664
+    subdir: presentation
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/\/\/ needed for '\''com.microsoft.device.display'\'' required
+        by '\''com.microsoft.graph:microsoft-graph'\''/,+12d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+
+  - versionName: 1.12.2
+    versionCode: 3020
+    commit: 5a3aa1c1340d9a04fb2294503077399ff9dc24e2
+    subdir: presentation
+    gradle:
+      - lite
+    prebuild:
+      - sed -i -e '/dependencies.googlePlayServicesAuth/,+41d' -e '/msgraphAuth/,+5d'
+        ../data/build.gradle
+      - sed -i -e '/\/\/ needed for '\''com.microsoft.device.display'\'' required
+        by '\''com.microsoft.graph:microsoft-graph'\''/,+12d' ../buildsystem/dependencies.gradle
+      - sed -i -e '/prebuild.gradle/d' -e '/msgraphAuth/,+5d' build.gradle
+
+AllowedAPKSigningKeys: f7c3ec3b0d588d3cb52983e9eb1a7421c93d4339a286398e71d7b651e8d8ecdd
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[\d.]+$
+UpdateCheckData: build.gradle|androidVersionCode\s=\s(\d+)|.|androidVersionName\s=\s'(.+)'
+CurrentVersion: 1.12.2
+CurrentVersionCode: 3020

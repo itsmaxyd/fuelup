@@ -1,0 +1,399 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Rely on OpenStreetMap
+Categories:
+  - Location Tracker & Sharer
+License: MIT
+AuthorName: y20k
+WebSite: https://codeberg.org/y20k/trackbook
+SourceCode: https://codeberg.org/y20k/trackbook
+Translation: https://hosted.weblate.org/projects/trackbook/strings/
+Changelog: https://codeberg.org/y20k/trackbook/releases
+
+AutoName: Trackbook
+Description: |-
+  Trackbook is a bare bones app for recording your movements. Trackbook is great
+  for hiking, vacation or workout. Once started it traces your movements on a map.
+  The map data is provided by OpenStreetMap (OSM).
+
+RepoType: git
+Repo: https://codeberg.org/y20k/trackbook.git
+
+Builds:
+  - versionName: 0.9.1 (The Great Gig in the Sky)
+    versionCode: 2
+    commit: 0.9.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.2 (The Great Gig in the Sky)
+    versionCode: 3
+    commit: 0.9.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.3 (The Great Gig in the Sky)
+    versionCode: 4
+    commit: 0.9.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.4 (The Great Gig in the Sky)
+    versionCode: 5
+    commit: 0.9.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.5 (The Great Gig in the Sky)
+    versionCode: 6
+    commit: 0.9.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.0 (Astronomy Domine)
+    versionCode: 7
+    commit: 1.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1 (Astronomy Domine)
+    versionCode: 8
+    commit: 1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.2 (Astronomy Domine)
+    versionCode: 9
+    commit: v1.0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.3 (Astronomy Domine)
+    versionCode: 10
+    commit: v1.0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.4 (Astronomy Domine)
+    versionCode: 11
+    commit: v1.0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.5 (Astronomy Domine)
+    versionCode: 12
+    commit: v1.0.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.6 (Astronomy Domine)
+    versionCode: 13
+    commit: v1.0.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.7
+    versionCode: 14
+    commit: v1.0.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.8
+    versionCode: 15
+    commit: v1.0.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 19
+    commit: v1.1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.4
+    versionCode: 20
+    commit: v1.1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.5
+    versionCode: 21
+    commit: v1.1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.6
+    versionCode: 22
+    commit: v1.1.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.7
+    versionCode: 23
+    commit: v1.1.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.8
+    versionCode: 24
+    commit: v1.1.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.9
+    versionCode: 25
+    commit: v1.1.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.10
+    versionCode: 26
+    commit: v1.1.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.11
+    versionCode: 27
+    commit: v1.1.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.13
+    versionCode: 29
+    commit: v1.1.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.14
+    versionCode: 30
+    commit: v1.1.14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.15
+    versionCode: 31
+    commit: v1.1.15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.16
+    versionCode: 32
+    commit: v1.1.16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.17
+    versionCode: 33
+    commit: v1.1.17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 34
+    commit: v1.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 36
+    commit: v1.2.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 38
+    commit: v2.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.2
+    versionCode: 39
+    commit: v2.0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.3
+    versionCode: 40
+    commit: v2.0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.4
+    versionCode: 41
+    commit: v2.0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.5
+    versionCode: 42
+    commit: v2.0.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.6
+    versionCode: 43
+    commit: v2.0.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.7
+    versionCode: 44
+    commit: v2.0.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.8
+    versionCode: 45
+    commit: v2.0.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.9
+    versionCode: 46
+    commit: v2.0.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.10
+    versionCode: 47
+    commit: v2.0.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 48
+    commit: 04f82f42bf921d59a8e9b06badc93d6d9391ebe6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 49
+    commit: 6798e6707d33ee5e93c7062e6b1c6c157c48627b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.1.2
+    versionCode: 50
+    commit: 467918c171c20d1318cc4a2564e497947fd52978
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 51
+    commit: 9658aa47dd63a35776de3c2cda24d04a4cec3f9f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 52
+    commit: d5f8ccfeaf5009dbaf9dc04b3e4a7327f145ee44
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.2
+    versionCode: 53
+    commit: 7d15292ad07a8e2af566b663179de95dbde0024e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.3
+    versionCode: 54
+    commit: 79d75e0f3f3d6810e23e8c8d9eed32221eb3d33b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.4
+    versionCode: 55
+    commit: 6d0ff686f38b73d5ac8df4ddf82fc4fb95386715
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.5
+    versionCode: 56
+    commit: 452aa1713451269dc6aece60c3821b2cf619fc83
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.6
+    versionCode: 57
+    commit: 08566079f68f31c12dc4452304461668ca1693cb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.7
+    versionCode: 58
+    commit: a0b2da242b3dc9d8b97c9f80bc41041dc90af539
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.2.7
+CurrentVersionCode: 58

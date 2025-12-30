@@ -1,0 +1,87 @@
+Categories:
+  - Navigation
+License: GPL-3.0-or-later
+WebSite: https://ruleant.github.io/getback_gps
+SourceCode: https://github.com/ruleant/getback_gps
+IssueTracker: https://github.com/ruleant/getback_gps/issues
+Translation: https://hosted.weblate.org/engage/getback_gps/
+Changelog: https://github.com/ruleant/getback_gps/blob/HEAD/ChangeLog
+
+AutoName: GetBack GPS
+
+RepoType: git
+Repo: https://github.com/ruleant/getback_gps.git
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 11
+    commit: v0.1
+    maven: yes
+    prebuild: sed -i 's/3.8.0/3.6.1/g' pom.xml
+
+  - versionName: 0.1.1
+    versionCode: 12
+    commit: v0.1.1
+    maven: yes
+    prebuild: sed -i 's/3.8.0/3.6.1/g' pom.xml
+
+  - versionName: '0.3'
+    versionCode: 30
+    commit: v0.3
+    gradle:
+      - yes
+    prebuild: .utility/remove-incomplete-translations
+
+  - versionName: '0.4'
+    versionCode: 40
+    commit: v0.4
+    gradle:
+      - yes
+    prebuild: .utility/remove-incomplete-translations
+
+  - versionName: 0.4.1
+    versionCode: 41
+    commit: v0.4.1
+    gradle:
+      - yes
+    prebuild: .utility/remove-incomplete-translations
+
+  - versionName: '0.5'
+    versionCode: 50
+    commit: v0.5
+    gradle:
+      - yes
+    prebuild: .utility/remove-incomplete-translations
+
+  - versionName: 0.5.1
+    versionCode: 51
+    commit: v0.5.1
+    gradle:
+      - yes
+    prebuild: .utility/remove-incomplete-translations
+
+  - versionName: '0.6'
+    versionCode: 60
+    commit: v0.6
+    gradle:
+      - yes
+    prebuild: .utility/remove-incomplete-translations
+
+  - versionName: '0.7'
+    versionCode: 70
+    commit: v0.7
+    gradle:
+      - yes
+    prebuild: .utility/remove-incomplete-translations
+
+  - versionName: '0.8'
+    versionCode: 80
+    commit: 6b11bead55d0e3b480185cdc236f101f314d9988
+    gradle:
+      - yes
+    prebuild: .utility/remove-incomplete-translations
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '0.8'
+CurrentVersionCode: 80

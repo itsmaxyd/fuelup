@@ -1,0 +1,72 @@
+Categories:
+  - Navigation
+License: GPL-3.0-or-later
+SourceCode: https://github.com/cgeo/WhereYouGo
+IssueTracker: https://github.com/cgeo/WhereYouGo/issues
+Translation: https://github.com/cgeo/WhereYouGo#translation
+Changelog: https://github.com/cgeo/WhereYouGo/releases
+
+AutoName: WhereYouGo
+Description: |-
+  WhereYouGo is an unofficial client for Wherigo Geocaching.
+  It supports playing Wherigo cartridges, which is an interactive location based geocaching game.
+  You can load, play and save the current state of your Wherigo game. Compass and online or offline maps can be used to navigate, alternatively Locus can be used to display maps.
+  Cartridges for usage with WhereYouGo can be downloaded from https://www.wherigo.com and other services.
+
+  <b>Main features:</b>
+  * Automatic download of cartridges from wherigo.com (can be triggered from your browser by opening a listing page on wherigo.com or from other geocaching apps like c:geo)
+  * Use compass to navigate to the next game zone or location
+  * View game zones and locations on a map
+  * Uses online maps from various sources
+  * Supports offline map files (only Mapsforge v0.3 format at this moment)
+  * Seamless interworking with Locus to display maps (alternatively to internal maps)
+  * Several save game slots per cartridge
+  * Automatic game saving when switching to another app
+  * Integrated QR-code reader
+
+RepoType: git
+Repo: https://github.com/cgeo/WhereYouGo
+
+Builds:
+  - versionName: 2020.08.21
+    versionCode: 20200821
+    commit: 2020.08.21
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/versionName .*/versionName = "$$VERSION$$"/g' build.gradle
+      - export APP_VERSION="$$VERSION$$"
+      - export APP_CODE=${APP_VERSION//./}
+      - sed -i -e 's/versionCode .*/versionCode = '"$APP_CODE"'/g' build.gradle
+      - sed -i -e 's/21.0.6113669/21.3.6528147/' build.gradle
+    ndk: r21d
+
+  - versionName: 2022.01.14
+    versionCode: 20220114
+    commit: 2022.01.14
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/versionName .*/versionName = "$$VERSION$$"/g' build.gradle
+      - export APP_VERSION="$$VERSION$$"
+      - export APP_CODE=${APP_VERSION//./}
+      - sed -i -e 's/versionCode .*/versionCode = '"$APP_CODE"'/g' build.gradle
+    ndk: r21
+
+  - versionName: 2023.02.22
+    versionCode: 20230222
+    commit: 568ecf00bf3eca3c98059c6a8243c78b16bbff99
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/versionName .*/versionName = "$$VERSION$$"/g' build.gradle
+      - export APP_VERSION="$$VERSION$$"
+      - export APP_CODE=${APP_VERSION//./}
+      - sed -i -e 's/versionCode .*/versionCode = '"$APP_CODE"'/g' build.gradle
+    ndk: r21
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: src/main/assets/news.xml|id="(\d+)"|.|name="([^"]*)"
+CurrentVersion: 2023.02.22
+CurrentVersionCode: 20230222

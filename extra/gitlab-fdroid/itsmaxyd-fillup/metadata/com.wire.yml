@@ -1,0 +1,396 @@
+AntiFeatures:
+  - NonFreeAssets
+Categories:
+  - Internet
+  - Messaging
+  - Phone & SMS
+  - Voice & Video Chat
+License: GPL-3.0-or-later
+SourceCode: https://github.com/wireapp/wire-android
+IssueTracker: https://github.com/wireapp/wire/issues
+Translation: https://crowdin.com/projects/wire
+Changelog: https://github.com/wireapp/wire-android/releases
+
+AutoName: Wire
+
+RepoType: git
+Repo: https://github.com/wireapp/wire-android.git
+
+Builds:
+  - versionName: 4.8.4-20981-fdroid
+    versionCode: 100020981
+    commit: v4.8.4
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+
+  - versionName: 4.8.5-29411-fdroid
+    versionCode: 100029411
+    commit: d2206c59a3926a4ba023f3a180ab8a017ba19859
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+
+  - versionName: 4.9.0-42652
+    versionCode: 100042652
+    commit: fa507ac3653d1f9778e7d1f594ed768277dd6156
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+
+  - versionName: 4.9.1
+    versionCode: 100048719
+    commit: v4.9.1
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.10.0
+    versionCode: 100058708
+    commit: v4.10.0
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.10.2
+    versionCode: 100073485
+    commit: v4.10.2
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.11.0
+    versionCode: 100083279
+    commit: v4.11.0
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.12.1
+    versionCode: 100087596
+    commit: v4.12.1
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.12.2
+    versionCode: 100089904
+    commit: v4.12.2
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.13.0
+    versionCode: 100095358
+    commit: v4.13.0
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.14.0
+    versionCode: 100113463
+    commit: v4.14.0
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' kalium/build.gradle.kts
+      - sed -i -e '/githubusercontent/d' kalium/settings.gradle.kts
+      - sed -i -e '/useVersion("3.0.1-fix")/d' kalium/settings.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+      - echo 'android { dependenciesInfo { includeInApk = false; includeInBundle =
+        false } }' >> app/build.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.15.0
+    versionCode: 100130498
+    commit: v4.15.0
+    timeout: 14400
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' kalium/build.gradle.kts
+      - sed -i -e '/githubusercontent/d' kalium/settings.gradle.kts
+      - sed -i -e '/useVersion("3.0.1-fix")/d' kalium/settings.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+      - echo 'android { dependenciesInfo { includeInApk = false; includeInBundle =
+        false } }' >> app/build.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.15.2
+    versionCode: 100134242
+    commit: v4.15.2
+    timeout: 14400
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' build.gradle.kts kalium/{settings,build}.gradle.kts
+      - sed -i -e '/useVersion("3.0.1-fix")/d' kalium/settings.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+      - sed -i -e 's/signingConfigs.getByName("debug")/null/' buildSrc/src/main/kotlin/scripts/variants.gradle.kts
+      - sed -i -e '1i rootProject.name = "wire-android"' settings.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.15.4
+    versionCode: 100138198
+    commit: v4.15.4
+    timeout: 14400
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' build.gradle.kts kalium/{settings,build}.gradle.kts
+      - sed -i -e '/useVersion("3.0.1-fix")/d' kalium/settings.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+      - sed -i -e 's/signingConfigs.getByName("debug")/null/' buildSrc/src/main/kotlin/scripts/variants.gradle.kts
+      - sed -i -e '1i rootProject.name = "wire-android"' settings.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.16.0
+    versionCode: 100142045
+    commit: v4.16.0
+    timeout: 14400
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' build.gradle.kts kalium/{settings,build}.gradle.kts
+      - sed -i -e '/useVersion("3.0.1-fix")/d' kalium/settings.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+      - sed -i -e 's/signingConfigs.getByName("debug")/null/' buildSrc/src/main/kotlin/scripts/variants.gradle.kts
+      - sed -i -e '1i rootProject.name = "wire-android"' settings.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.16.1
+    versionCode: 100144071
+    commit: v4.16.1
+    timeout: 14400
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' build.gradle.kts kalium/{settings,build}.gradle.kts
+      - sed -i -e '/useVersion("3.0.1-fix")/d' kalium/settings.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+      - sed -i -e 's/signingConfigs.getByName("debug")/null/' buildSrc/src/main/kotlin/scripts/variants.gradle.kts
+      - sed -i -e '1i rootProject.name = "wire-android"' settings.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.16.2
+    versionCode: 100146062
+    commit: v4.16.2
+    timeout: 14400
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' build.gradle.kts kalium/{settings,build}.gradle.kts
+      - sed -i -e '/useVersion("3.0.1-fix")/d' kalium/settings.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+      - sed -i -e 's/signingConfigs.getByName("debug")/null/' buildSrc/src/main/kotlin/scripts/variants.gradle.kts
+      - sed -i -e '1i rootProject.name = "wire-android"' settings.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.17.0
+    versionCode: 100150081
+    commit: v4.17.0
+    timeout: 14400
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' build.gradle.kts kalium/{settings,build}.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+      - sed -i -e '/useVersion("3.0.1-fix")/d' kalium/settings.gradle.kts
+      - sed -i -e 's/signingConfigs.getByName("debug")/null/' buildSrc/src/main/kotlin/scripts/variants.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+  - versionName: 4.17.2
+    versionCode: 100156346
+    commit: v4.17.2
+    timeout: 14400
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - cd ..
+      - sed -i -e '/googleGms/d' build.gradle.kts
+      - sed -i -e '/githubusercontent/d' build.gradle.kts kalium/{settings,build}.gradle.kts
+      - 'printf "VersionCode: $$VERCODE$$\nVersionName: $$VERSION$$\n" > app/version.txt'
+      - sed -i -e '/foojay/d' kalium/settings.gradle.kts
+      - sed -i -e '/useVersion("3.0.1-fix")/d' kalium/settings.gradle.kts
+      - sed -i -e 's/signingConfigs.getByName("debug")/null/' buildSrc/src/main/kotlin/scripts/variants.gradle.kts
+    scandelete:
+      - build-logic/plugins/build
+    ndk: r25b
+    gradleprops:
+      - isFDroidRelease=true
+
+AutoUpdateMode: Version v%v
+UpdateCheckMode: HTTP
+UpdateCheckData: https://github.com/wireapp/wire-android/releases/latest/download/version.txt|VersionCode:\s(\d+)|.|VersionName:\s(.*)
+CurrentVersion: 4.17.2
+CurrentVersionCode: 100156346

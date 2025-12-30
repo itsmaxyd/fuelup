@@ -1,0 +1,73 @@
+Categories:
+  - Science & Education
+License: Apache-2.0
+WebSite: https://cetoolbox.github.io
+SourceCode: https://github.com/cetoolbox/cetoolbox
+IssueTracker: https://github.com/cetoolbox/cetoolbox/issues
+
+AutoName: CEToolbox
+Description: |-
+  The CEToolbox project aims to provide a convenient tool for computing Capillary
+  Electrophoresis parameters.
+
+RepoType: git
+Repo: https://github.com/cetoolbox/cetoolbox.git
+
+Builds:
+  - versionName: '1.3'
+    versionCode: 5
+    commit: v1.3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 10
+    commit: 1.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 11
+    commit: 1.4.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.5
+    versionCode: 13
+    commit: 1.4.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 15
+    commit: 01df9bb0060f2cea24d0ca70c2811d8d36c0fefa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 16
+    commit: 9fc646690d9270ea452b72601143dc078511b627
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 17
+    commit: 3a5ae52630d3394180894cfc157f41cf659c365b
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.6.1
+CurrentVersionCode: 17

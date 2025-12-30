@@ -1,0 +1,66 @@
+Categories:
+  - Development
+License: GPL-3.0-only
+WebSite: https://frankmorgner.github.io/vsmartcard/ACardEmulator/README.html
+SourceCode: https://github.com/frankmorgner/vsmartcard/tree/HEAD/ACardEmulator
+IssueTracker: https://github.com/frankmorgner/vsmartcard/issues
+
+AutoName: Smart Card Emulator
+Description: |-
+  The Android Smart Card Emulator allows the emulation of a contact-less smart
+  card. The emulator uses Android's HCE to fetch process APDUs from a NFC reader.
+
+RepoType: git
+Repo: https://github.com/frankmorgner/vsmartcard.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: e52a9a5bbc59725af720106983ffea48e6b01407
+    subdir: ACardEmulator/app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 2
+    commit: 30647f2c36144d2de5462c8543b957a28a732528
+    subdir: ACardEmulator/app
+    submodules: true
+    gradle:
+      - yes
+    scandelete:
+      - virtualsmartcard/npa-example-data
+      - npa/src/opensc/src/tests
+      - ACardEmulator/app/src/main/external/ykneo-oath/build.gradle
+
+  - versionName: '3.5'
+    versionCode: 8
+    commit: 84ed47b4626977a996a34971ba565c0941913326
+    subdir: ACardEmulator/app
+    init:
+      - git clean -xfd
+      - git submodule foreach --recursive git clean -xfd
+      - git reset --hard
+      - git submodule foreach --recursive git reset --hard
+      - git submodule update --init --recursive
+    gradle:
+      - fdroid
+    rm:
+      - TCardEmulator
+      - android-ssl1
+      - ccid
+      - eID_gui
+      - npa
+      - pcsc-relay
+      - remote-reader
+      - virtualsmartcard
+      - ACardEmulator/app/libs
+    prebuild: sed -i -e '/applicationIdSuffix/d' -e '/libs\/sdk/d' build.gradle
+    scandelete:
+      - ACardEmulator/app/src/main/external/
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^ACardEmulator-\d\.\d$
+CurrentVersion: '3.5'
+CurrentVersionCode: 8

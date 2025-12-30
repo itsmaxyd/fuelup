@@ -1,0 +1,206 @@
+Categories:
+  - Connectivity
+  - Network Analyzer
+License: Apache-2.0
+AuthorName: Christian Rowlands
+AuthorEmail: craxiomdev@gmail.com
+WebSite: https://www.networksurvey.app/
+SourceCode: https://github.com/christianrowlands/android-network-survey
+IssueTracker: https://github.com/christianrowlands/android-network-survey/issues
+Changelog: https://github.com/christianrowlands/android-network-survey/blob/develop/CHANGELOG.md
+
+AutoName: Network Survey
+
+RepoType: git
+Repo: https://github.com/christianrowlands/android-network-survey.git
+Binaries: https://github.com/christianrowlands/android-network-survey/releases/download/v%v/networksurvey-%v-cdr-release.apk
+
+Builds:
+  - versionName: 1.30.2
+    versionCode: 85
+    commit: v1.30.2
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+
+  - versionName: '1.31'
+    versionCode: 86
+    commit: 4b697d4274f3ec3f59bcfb0715c0d245d09438c0
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+
+  - versionName: '1.32'
+    versionCode: 87
+    commit: fb2e0f3d8b4a1f2d94dc8b7643e9dd548317741b
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+
+  - versionName: '1.33'
+    versionCode: 88
+    commit: ba9959db5542fe46bdc7c137c2f2f9a51f77125f
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.34'
+    versionCode: 89
+    commit: fb9e57e64a01b15608abdf464302fe854f15923e
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.35'
+    versionCode: 90
+    commit: 065484fcf089b09ef0afc3e533da120bf944152f
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.36'
+    versionCode: 91
+    commit: 3ddfa007c17cc41d7b8ebaf39585dc1ac6bf4c0c
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.37'
+    versionCode: 92
+    commit: 5c95e11c4c5c8ecd2e2c79a7687b542a8d81450c
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.38'
+    versionCode: 93
+    commit: 4e70ee55cf584c983e0e27f47d7044f7f7a44c8c
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.39'
+    versionCode: 94
+    commit: 3f5eb153b48b9a8907399dd73fc65247fb1f1e4e
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.40'
+    versionCode: 95
+    commit: 42f92697eae33fd67bebe10669397b5dc5769f20
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.42'
+    versionCode: 97
+    commit: 62cbb7f809c7a6a4380083306707bbebc4037b2f
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: 1.44.1
+    versionCode: 100
+    commit: 11ddb161f0aba9552b19d19497eae0ee824dd109
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    scandelete:
+      - networksurvey/libs
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.45'
+    versionCode: 102
+    commit: e8e5181d12209caccf96adc575b4c760be603f74
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    scandelete:
+      - networksurvey/libs
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.46'
+    versionCode: 103
+    commit: 97a68605e180c8ca6a194208e30ad2ae79dab03a
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    scandelete:
+      - networksurvey/libs
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+  - versionName: '1.47'
+    versionCode: 104
+    commit: 81e71460ea1ae1c226f3b4876ca7f26bef7a8e93
+    subdir: networksurvey
+    gradle:
+      - cdr
+    prebuild: sed -i -e "/gms/d" -e "/firebase/d" ../build.gradle
+    scandelete:
+      - networksurvey/libs
+    gradleprops:
+      - nsApiKey=AIzaSyCLejWwbFEkWoUIoTwOtN20_0VlM8xw6i0
+      - ocidApiKey=pk.bf23b10f0b49b9b4d570cfb87489227e
+
+AllowedAPKSigningKeys: abf5ad2911fe31916f4e255c1733a3f6bc2cab2f2816c9587de11a415871af07
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags v
+UpdateCheckData: networksurvey/build.gradle|versionCode (\d+)|.|appVersion = "(.+)"
+CurrentVersion: '1.47'
+CurrentVersionCode: 104

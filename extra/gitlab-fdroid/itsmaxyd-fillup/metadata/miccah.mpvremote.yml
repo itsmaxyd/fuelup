@@ -1,0 +1,35 @@
+Categories:
+  - Connectivity
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Miccah
+SourceCode: https://github.com/mcastorina/mpv-remote-app
+IssueTracker: https://github.com/mcastorina/mpv-remote-app/issues
+
+AutoName: mpv remote
+
+RepoType: git
+Repo: https://github.com/mcastorina/mpv-remote-app
+
+Builds:
+  - versionName: 0.0.3
+    versionCode: 1
+    commit: v0.0.3
+    subdir: MpvRemote/app
+    gradle:
+      - yes
+
+  - versionName: 0.0.5
+    versionCode: 2
+    commit: 7e777fd0de228384368def07de2e5a342f863739
+    subdir: MpvRemote/app
+    gradle:
+      - yes
+    rm:
+      - MpvRemote/gradle.properties
+    prebuild: echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.0.5
+CurrentVersionCode: 2

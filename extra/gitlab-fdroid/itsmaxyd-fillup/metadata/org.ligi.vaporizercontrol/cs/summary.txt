@@ -1,0 +1,1 @@
+Ovládání vaporizérů přes BLE

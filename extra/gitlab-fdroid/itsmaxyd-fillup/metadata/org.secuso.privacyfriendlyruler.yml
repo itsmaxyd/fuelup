@@ -1,0 +1,78 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: SECUSO - Security Usability Society
+AuthorEmail: contact@secuso.org
+AuthorWebSite: https://secuso.aifb.kit.edu/english/105.php
+WebSite: https://secuso.aifb.kit.edu/english/Tape_Measure_and_Ruler.php
+SourceCode: https://github.com/SecUSo/privacy-friendly-ruler
+IssueTracker: https://github.com/SecUSo/privacy-friendly-ruler/issues
+Changelog: https://github.com/SecUSo/privacy-friendly-ruler/blob/HEAD/CHANGELOG.md
+
+AutoName: Ruler
+
+RepoType: git
+Repo: https://github.com/SecUSo/privacy-friendly-ruler
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: v1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 3
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 4
+    commit: e89615b60841bbda92fee7164b03ac3d7abdda4b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/privacyfriendlyrulerapp/privacyfriendlyruler/' build.gradle
+
+  - versionName: 1.1.2
+    versionCode: 5
+    commit: b669ac46488c3f7834a8c674007222d75ccfbc56
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationId/s/privacyfriendlyrulerapp/privacyfriendlyruler/'
+      build.gradle
+
+  - versionName: 1.1.3
+    versionCode: 6
+    commit: c9147c79f0024068b2fd0c838f4f3b11f06574f4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationId/s/privacyfriendlyrulerapp/privacyfriendlyruler/'
+      build.gradle
+
+  - versionName: 1.1.4
+    versionCode: 100
+    commit: 0365dd8ea6e5929cf7d595394c0cb9a1a08f31e8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationId/s/privacyfriendlyrulerapp/privacyfriendlyruler/'
+      build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckName: org.secuso.privacyfriendlyrulerapp
+CurrentVersion: 1.1.4
+CurrentVersionCode: 100

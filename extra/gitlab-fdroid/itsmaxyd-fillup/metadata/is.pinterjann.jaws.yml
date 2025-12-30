@@ -1,0 +1,61 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-or-later
+AuthorName: Jannis Pinter
+AuthorWebSite: https://blog.pinterjann.is/
+SourceCode: https://github.com/jannispinter/jaws
+IssueTracker: https://github.com/jannispinter/jaws/issues
+Changelog: https://github.com/jannispinter/jaws/blob/HEAD/CHANGELOG.md
+
+AutoName: JAWS
+Description: |-
+  <b>NOTE:</b> This app currently (v0.5) does <i>NOT</i> work on Android 9+.
+  Furthermore, the app seems to be unmaintained (last activity in 2016).
+
+  A simple wifi scanner that supports real time scans of nearby networks. It
+  displays a list of nearby wifi networks ordered by signal strength and
+  periodically rescans for new networks.
+
+  <b>Features:</b>
+
+  * Display a list of nearby wifi networks ordered by signal strength
+  * Display SSID, BSSID, Channel, Capabilities and the signal strength of each network
+  * Periodically rescan for new networks
+
+RepoType: git
+Repo: https://github.com/jannispinter/jaws
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 1
+    commit: v0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.3'
+    versionCode: 4
+    commit: v0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.4'
+    versionCode: 5
+    commit: v0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.5'
+    versionCode: 7
+    commit: v0.5
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '0.5'
+CurrentVersionCode: 7

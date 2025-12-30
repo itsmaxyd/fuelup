@@ -1,0 +1,66 @@
+Categories:
+  - Internet
+License: GPL-3.0-only
+SourceCode: https://archive.softwareheritage.org/browse/origin/http://zirco-browser.googlecode.com/svn//directory/
+
+AutoName: Zirco Browser
+Description: |-
+  A web browser featuring:
+
+  * Basic browser features (bookmarks, history, downloads...);
+  * Unlimited tabs;
+  * Easy bookmarks access;
+  * Easy tabs opening and closing;
+  * Bookmarks import from legacy Android browser;
+  * Can be set as default browser;
+  * Ad-blocker
+
+  Despite having seen no updates since 2012, the app still works (2023) but for full functionality requires a (physical) menu button.
+
+  Similar apps:
+
+  * https://f-droid.org/packages/org.tint (Android 4.0+)
+
+Builds:
+  - versionName: 0.3.6
+    versionCode: 10
+    commit: '315'
+
+  - versionName: 0.3.7
+    versionCode: 11
+    commit: '329'
+
+  - versionName: 0.3.8
+    versionCode: 12
+    commit: '339'
+
+  - versionName: 0.3.9
+    versionCode: 13
+    commit: '367'
+
+  - versionName: 0.4.1
+    versionCode: 15
+    commit: '407'
+
+  - versionName: 0.4.2
+    versionCode: 16
+    commit: '438'
+    target: android-10
+
+  - versionName: 0.4.3
+    versionCode: 17
+    commit: '443'
+    target: android-10
+
+  - versionName: 0.4.4
+    versionCode: 18
+    commit: 0.4.4
+    target: android-10
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 0.4.4
+CurrentVersionCode: 18
+
+NoSourceSince: 0.4.4

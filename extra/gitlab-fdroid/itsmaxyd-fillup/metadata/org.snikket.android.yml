@@ -1,0 +1,161 @@
+Categories:
+  - Internet
+  - Messaging
+  - Voice & Video Chat
+License: GPL-3.0-only
+AuthorName: Matthew Wild
+WebSite: https://snikket.org/
+SourceCode: https://github.com/snikket-im/snikket-android
+IssueTracker: https://github.com/snikket-im/snikket-android/issues
+Translation: https://www.transifex.com/siacs/conversations/
+Changelog: https://github.com/snikket-im/snikket-android/blob/HEAD/CHANGELOG.md
+
+AutoName: Snikket
+
+RepoType: git
+Repo: https://github.com/snikket-im/snikket-android.git
+
+Builds:
+  - versionName: 2.6.3+fcr
+    versionCode: 360
+    commit: 2.6.3
+    gradle:
+      - conversationsFreeCompat
+    prebuild: sed -i -e 's/targetSdkVersion 28/targetSdkVersion 25/' -e '/ExtraTranslation/a\
+      \ \ \ \ \ \ \ abortOnError\ false' build.gradle
+
+  - versionName: 2.8.3+fcr
+    versionCode: 383
+    commit: 2.8.3
+    gradle:
+      - conversationsFreeCompat
+    prebuild: sed -i -e '/ExtraTranslation/aabortOnError\ false' -e '/libwebrtc/d'
+      -e "/phonenumber/aimplementation 'org.webrtc:google-webrtc:1.0.30039'" -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21
+
+  - versionName: 2.9.0+fcr
+    versionCode: 398
+    commit: 2.9.0
+    gradle:
+      - conversationsFreeCompat
+    prebuild: sed -i -e '/ExtraTranslation/aabortOnError\ false' -e '/libwebrtc/d'
+      -e "/phonenumber/aimplementation 'org.webrtc:google-webrtc:1.0.30039'" -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.9.7+fcr
+    versionCode: 410
+    commit: 2.9.7
+    gradle:
+      - conversationsFreeCompat
+    prebuild: sed -i -e '/ExtraTranslation/aabortOnError\ false' -e '/libwebrtc/d'
+      -e "/phonenumber/aimplementation 'org.webrtc:google-webrtc:1.0.30039'" -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21d
+
+  - versionName: 2.10.2+fcr
+    versionCode: 42024
+    commit: 8ea86b52f9086744a8f1afb79cc6667b6c79d650
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - conversationsFreeCompat
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/libwebrtc/d'
+      -e "/phonenumber/aimplementation 'org.webrtc:google-webrtc:1.0.32006'" -e '/splits/,+5d'
+      -e '/Variants.all/,+8d' build.gradle
+    ndk: r21e
+    antifeatures:
+      - KnownVuln
+
+  - versionName: 2.10.3+fcr
+    versionCode: 42025
+    commit: a0b9ac103e186ad173165a91e6399262d2b7a695
+    gradle:
+      - conversationsFreeCompat
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+8d' build.gradle
+
+  - versionName: 2.12.2+free
+    versionCode: 4205001
+    commit: bc54fed0c8a234de441fe08387e50a609ef547f8
+    gradle:
+      - conversationsFree
+    output: build/outputs/apk/conversationsFree/release/Snikket-*-conversations-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.2+free
+    versionCode: 4205002
+    commit: bc54fed0c8a234de441fe08387e50a609ef547f8
+    gradle:
+      - conversationsFree
+    output: build/outputs/apk/conversationsFree/release/Snikket-*-conversations-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.2+free
+    versionCode: 4205003
+    commit: bc54fed0c8a234de441fe08387e50a609ef547f8
+    gradle:
+      - conversationsFree
+    output: build/outputs/apk/conversationsFree/release/Snikket-*-conversations-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.2+free
+    versionCode: 4205004
+    commit: bc54fed0c8a234de441fe08387e50a609ef547f8
+    gradle:
+      - conversationsFree
+    output: build/outputs/apk/conversationsFree/release/Snikket-*-conversations-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.4-2+free
+    versionCode: 4209501
+    commit: e4f2d2fc62edd8ce9783a9c9324d35a1efd98e4f
+    gradle:
+      - conversationsFree
+    output: build/outputs/apk/conversationsFree/release/Snikket-*-conversations-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.4-2+free
+    versionCode: 4209502
+    commit: e4f2d2fc62edd8ce9783a9c9324d35a1efd98e4f
+    gradle:
+      - conversationsFree
+    output: build/outputs/apk/conversationsFree/release/Snikket-*-conversations-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.4-2+free
+    versionCode: 4209503
+    commit: e4f2d2fc62edd8ce9783a9c9324d35a1efd98e4f
+    gradle:
+      - conversationsFree
+    output: build/outputs/apk/conversationsFree/release/Snikket-*-conversations-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.4-2+free
+    versionCode: 4209504
+    commit: e4f2d2fc62edd8ce9783a9c9324d35a1efd98e4f
+    gradle:
+      - conversationsFree
+    output: build/outputs/apk/conversationsFree/release/Snikket-*-conversations-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+AutoUpdateMode: Version ++free %v
+UpdateCheckMode: Tags
+VercodeOperation:
+  - 100 * %c + 1
+  - 100 * %c + 2
+  - 100 * %c + 3
+  - 100 * %c + 4
+CurrentVersion: 2.13.4-2
+CurrentVersionCode: 4209504

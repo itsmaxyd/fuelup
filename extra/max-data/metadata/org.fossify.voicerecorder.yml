@@ -1,0 +1,121 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Fossify
+AuthorEmail: hello@fossify.org
+WebSite: https://www.fossify.org
+SourceCode: https://github.com/FossifyOrg/Voice-Recorder
+IssueTracker: https://github.com/FossifyOrg/Voice-Recorder/issues
+Translation: https://hosted.weblate.org/projects/fossify/voice-recorder/
+Changelog: https://github.com/FossifyOrg/Voice-Recorder/releases
+Donate: https://www.fossify.org/donate
+Liberapay: naveensingh
+Bitcoin: bc1q5flmuh5f3canqza07cfekjn64p2aqvd2w7pnn3
+
+RepoType: git
+Repo: https://github.com/FossifyOrg/Voice-Recorder.git
+Binaries: https://github.com/FossifyOrg/Voice-Recorder/releases/download/%v/voicerecorder-%c-foss-release.apk
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: f2eddeb538e0637777f0b96b4d1b80c9741afdf2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+
+  - versionName: 1.1.0
+    versionCode: 2
+    commit: 006953f819271d9ebe1d5e1958da7f4a1bec1e76
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.1.3
+    versionCode: 5
+    commit: f06bd0a46cd9546fef1f28f25ff09e2721f43a5b
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.2.0
+    versionCode: 6
+    commit: dd7bef7e919ca2800ac534dde4d61d62b936b0dd
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.3.1
+    versionCode: 8
+    commit: 8f3f819a2ebcd6fd747f44c4c361d41469e6cba0
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.3.2
+    versionCode: 9
+    commit: cb02e8011e8085edb9233d57212a2c1d80a2a59c
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.3.3
+    versionCode: 10
+    commit: 21fa214cb4b87777abcc8b32e11148dc713d3680
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.3.4
+    versionCode: 11
+    commit: 7e103a21f22cb4d6ea5532171c6de52b7dbc3c93
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.3.5
+    versionCode: 12
+    commit: 77f47a917088536afa93eb07b02e4bfb4d179b4a
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.0
+    versionCode: 13
+    commit: 2efb999bc859525d9c1688323e4a3b3a89034dee
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.5.0
+    versionCode: 14
+    commit: 3e0a7405a4c0c990978ab29df6b591b6c577ad24
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.5.1
+    versionCode: 15
+    commit: 6ef2b66d0777efb87d420dd1ce4773d8c3ffab53
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.6.0
+    versionCode: 16
+    commit: 8de303d057ac79f1774726da08382ac01b5c7a8b
+    subdir: app
+    gradle:
+      - foss
+
+AllowedAPKSigningKeys: affdb124d3f4720c2f98dbca9eacba0514fba4306e20a2786c861c3c0d6ff292
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle.properties|VERSION_CODE=(\d+)|.|VERSION_NAME=(.*)
+CurrentVersion: 1.6.0
+CurrentVersionCode: 16

@@ -1,0 +1,706 @@
+Categories:
+  - Finance Manager
+  - Money
+License: GPL-3.0-or-later
+WebSite: http://android.moneymanagerex.org/
+SourceCode: https://github.com/moneymanagerex/android-money-manager-ex
+IssueTracker: https://github.com/moneymanagerex/android-money-manager-ex/issues
+Translation: https://crowdin.com/project/android-money-manager-ex
+Changelog: https://github.com/moneymanagerex/android-money-manager-ex/milestones?state=closed
+
+AutoName: Money Manager Ex
+
+RepoType: git
+Repo: https://github.com/moneymanagerex/android-money-manager-ex.git
+
+Builds:
+  - versionName: 2024.01.13
+    versionCode: 1013
+    commit: 2024.01.13.1013
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.01.23
+    versionCode: 1016
+    commit: 3476b9aa9288a89fd42dd46e1ab0b9e2b2fbd29c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.02.02
+    versionCode: 1017
+    commit: 99a335f4f6000d09729ce85a8093a014004e4735
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.02.08
+    versionCode: 1018
+    commit: 6c0b78e7a30cc3b283f262831152b31167a32f5b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.02.15
+    versionCode: 1019
+    commit: f3d38c0ed20742d4b44e8e6a71a2c2dc31b92c75
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.02.26
+    versionCode: 1020
+    commit: 2243c5fa0118ca91b7e564a886b755e77657ddbd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.03.07
+    versionCode: 1021
+    commit: 7f0436ca52aa7b2d8af15a807249dad5e327fd7f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.03.19
+    versionCode: 1023
+    commit: 1f12e98ebab241687ae8f6f98a6ee9c96a00a4c9
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.03.24
+    versionCode: 1024
+    commit: f75152f18d7430e2a287525e4b960c75487094c2
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.03.26
+    versionCode: 1025
+    commit: ebc8c5654c877012d7d0e9c5226cf9f42f2e6da4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.01
+    versionCode: 1026
+    commit: 19481714d11bf5aba622161181717ec02ff3ce9a
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.15
+    versionCode: 1027
+    commit: c5c86daaa2bae57b45b25f5705ebab97f3a440d6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.16
+    versionCode: 1028
+    commit: c1bbbef9b1e6dd770adc20efdec71a23b05bec1b
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.21
+    versionCode: 1029
+    commit: 4315d721b64307cc164c132a49cb9b2723867cd6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.29
+    versionCode: 1030
+    commit: 3c98b92d34d9fe69ad7fce2300f600fbac2c4295
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.05.02
+    versionCode: 1031
+    commit: b36d937ce67740fbc36165d845112fee34f646e3
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.05.09
+    versionCode: 1032
+    commit: f551406664bc992edecde10d6efec106c2cea120
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.06.14
+    versionCode: 1033
+    commit: f6e8d005340b7f462e441e97f195f4e3c5ab99ce
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.06.25
+    versionCode: 1034
+    commit: 336db174cf9f4dc265141abb432b3d43cc966311
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.07.04
+    versionCode: 1035
+    commit: 0f412c9441326751622926ea4a3ba69e4cebbb50
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.08.01
+    versionCode: 1036
+    commit: f1e1e38c93efc6b93268ef766b6cc2fba4cfd069
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.08.13
+    versionCode: 1037
+    commit: 5733fd0db61e941214fb18d8589abce7a863c803
+    subdir: app
+    gradle:
+      - yes
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.08.25
+    versionCode: 1038
+    commit: bf3ff6d0d411b3a323a79c81612f64294fb523e5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.09.11
+    versionCode: 1039
+    commit: 0f9ca0a14a89e09f7bf02c39dfae6c441cbfa30f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - scripts
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.09.18
+    versionCode: 1040
+    commit: 7565ebeb20114c9ced9f84af20d7c584314b749e
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - scripts
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.09.21
+    versionCode: 1041
+    commit: b20078373d96df1cda62861451b8a42312e7dd88
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - scripts
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.10.19
+    versionCode: 1042
+    commit: efe28c5f76965171a42d58db2cd98e826bf863ac
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - scripts
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.11.01
+    versionCode: 1043
+    commit: 11e34ce126c9812e90593f09e92ecf8eca01b30d
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.11.10
+    versionCode: 1044
+    commit: fb8335387e5898ef2a44e54217d023dacfb7d40b
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.11.19
+    versionCode: 1045
+    commit: 7c142d191405815dc633f0a799cd145be79f7856
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.11.20
+    versionCode: 1046
+    commit: 2f994cc15ce8ea65d251ae3d8fc9b4378a0abb89
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.11.22
+    versionCode: 1048
+    commit: 97b83469e9bb806e9a490846d0195b7f94f9715d
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.11.25
+    versionCode: 1049
+    commit: 66f3075ad41105930aa7b80626348092ba08301e
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.11.30
+    versionCode: 1050
+    commit: f8f44b2da8fc8d75d64451ea47e4c82312d4f46d
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.12.08
+    versionCode: 1051
+    commit: 9e00b744ef554693d72a0af5d32b9070ba6b1bb8
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.12.10
+    versionCode: 1052
+    commit: a0a61add011252ff90e1b96fa4bfb4feffcf5a89
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.12.19
+    versionCode: 1053
+    commit: ec820a4f4f61feed1c6aa2934488a3392dcf1317
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 2024.12.27
+    versionCode: 1056
+    commit: b8a65ab68f3a8f70b061c8ec44d1ae6182406d0b
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2024.12.31
+    versionCode: 1057
+    commit: 8d391e3a78f72eb5cd97e5f1a0cff51059e29649
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2025.01.03
+    versionCode: 1058
+    commit: a7a8deaaccc445f62d13c467da7621c5c47b29d6
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2025.01.10
+    versionCode: 1059
+    commit: bd8384411dc34bf3a6e0c53ddb2d88dc48e5aa62
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2025.01.14
+    versionCode: 1061
+    commit: 96c3c69615e9163481cfda58f3e4ee1590ffb13d
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2025.01.24
+    versionCode: 1064
+    commit: c292d184e3b35ae35695033457639e5ca14b8391
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2025.01.27
+    versionCode: 1065
+    commit: 79c2d82dd30fcbf0801171a51d18825d37992d95
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2025.01.31
+    versionCode: 1066
+    commit: 9f682c706eea914d5e2ffbc66ac7e71d2f5155d7
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2025.02.02
+    versionCode: 1067
+    commit: d485eabc144dc5c06b029f471ef990ed4cd97b48
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2025.02.07
+    versionCode: 1070
+    commit: afc5d5c94e086f4a5e0222a5cf7b84f16b6ab897
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 2025.02.14
+    versionCode: 1071
+    commit: b42228e1fe112e64ab682a3994e1b01e098f1fd1
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.1.1
+    versionCode: 1073
+    commit: f336654b891141a77ede6cd8cb2a4f3a8ce893b7
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.1.3
+    versionCode: 1075
+    commit: e27651257fed2ec9694d060a4f5d7f579a7d701e
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.1.4
+    versionCode: 1076
+    commit: a3032235b4688c38b23cfae51c6617c503a1a0c3
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: '5.2'
+    versionCode: 1077
+    commit: b6470a47a8b7a0c7e561378cb66a0bec6d2c720f
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.2.1
+    versionCode: 1078
+    commit: 20af91688ec515dc28d1262b83c739ddb11c5dc2
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.2.3
+    versionCode: 1080
+    commit: 397f6a469a296c690b972c343b69b7b39b357b56
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.2.4
+    versionCode: 1081
+    commit: c98a87d52b519f8b74ed3af0fc8772b3db4d6d3e
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: '5.3'
+    versionCode: 1082
+    commit: 879f58bb4da2e25ed5a34d8f39d27fb161d68e44
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.3.2
+    versionCode: 1084
+    commit: e4faeb28006bb5f3a1a9391d7aafd0e578b49092
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.3.3
+    versionCode: 1085
+    commit: 2a09127127254ff13a9f243c0ac9793b18fd96b5
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.3.4
+    versionCode: 1086
+    commit: 7c96b04be291802c2598a1ab6548f8af746646ff
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.4.1
+    versionCode: 1088
+    commit: 20a2afbac304c8a186501393c2a2e65aa22f12ec
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+      - app/sqlite3mc
+
+  - versionName: 5.4.4
+    versionCode: 1091
+    commit: d7f57073eb4309b4978659dcf6d0d01e7d3fa167
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 5.4.6
+    versionCode: 1093
+    commit: a9d6ac6a60dc1cb6319541596952217c16372195
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 5.4.7
+    versionCode: 1094
+    commit: 357259104f8e9e911de0d3920c4d887597aed97a
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 5.4.8
+    versionCode: 1095
+    commit: 02ddeb33d3fff6b7941e506dd374a584c9bd0e5c
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 5.4.9
+    versionCode: 1099
+    commit: 9fbec4642cbc7c4d8b7a7eab1ecb95801f272ba9
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 5.4.10
+    versionCode: 1100
+    commit: ba1fdb9bf851dc5296c25dc6815f6d4ee60aebe3
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 5.4.11
+    versionCode: 1101
+    commit: 2a72389e020bba657c11cef5b50b7cc1bfd4b9e3
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 5.4.12
+    versionCode: 1102
+    commit: 1f9d59eab788b90bdfce1193adb30e8785d01d86
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+  - versionName: 5.4.13
+    versionCode: 1103
+    commit: d08c5c46d04096ec711cb72f9220e18c9fbfaf68
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[0-9.]*$
+CurrentVersion: 5.4.13
+CurrentVersionCode: 1103

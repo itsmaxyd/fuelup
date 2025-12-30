@@ -1,0 +1,131 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-or-later
+AuthorName: Twinone
+AuthorWebSite: https://divestos.org
+SourceCode: https://gitlab.com/divested-mobile/irremote
+IssueTracker: https://gitlab.com/divested-mobile/irremote/issues
+Translation: https://hosted.weblate.org/projects/divestos/irremote/
+
+AutoName: IR Remote
+
+RepoType: git
+Repo: https://gitlab.com/divested-mobile/irremote.git
+
+Builds:
+  - versionName: 1.5.4
+    versionCode: 1544
+    commit: v1.5.4-1544
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 1545
+    commit: 38e3ff6bfc2ae44302ee9880e22b151d32b24a2d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 1546
+    commit: 37a1c50450d6c8ea139d3b40901869dda2e4d039
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 1547
+    commit: 5a3b1edaa99aac7dba41b08238c5e2c859088254
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 1548
+    commit: 8eb6fbc182b0f0150a3aad8516aac411a24a733f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 1549
+    commit: b8123eed193a97de30eeb7ceb49e8687151ba1f5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.5
+    versionCode: 1550
+    commit: 2f87412c9cd82957938f85a807bca2b689b6767b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.5
+    versionCode: 1551
+    commit: ca5369f5c1a01828f345cb48b29c2a65be75c593
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.5
+    versionCode: 1552
+    commit: 01a4ec310da70cf249ad4574a8de1066c14f6d76
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.5
+    versionCode: 1553
+    commit: 9c13c871bec4541dbacc41dbd25f361cbcee1393
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.6
+    versionCode: 1560
+    commit: 265a7bfb45a6e06a3a347ebc47e2392e25dd3f59
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 1600
+    commit: ddf76c322d95c6e258754d519a91b8da204c4065
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 1610
+    commit: b83a5fb75a5e11505ebfc70375b12d2e0b21bc9c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 1620
+    commit: b3ea01fa6079378752806321108764a519204558
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 1700
+    commit: 22319f96469949d21f07825faa29dd6547dae994
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 1710
+    commit: 9ce309eb92ba8049ecb8122d10d2e4c6acc89573
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.7.1
+CurrentVersionCode: 1710

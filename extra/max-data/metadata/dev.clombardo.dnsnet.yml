@@ -1,0 +1,300 @@
+Categories:
+  - Connectivity
+  - DNS & Hosts
+  - Internet
+License: GPL-3.0-or-later
+AuthorName: Charles Lombardo
+AuthorEmail: clombardo169@gmail.com
+SourceCode: https://github.com/t895/DNSNet
+IssueTracker: https://github.com/t895/DNSNet/issues
+Translation: https://hosted.weblate.org/engage/dnsnet/
+Changelog: https://github.com/t895/DNSNet/releases
+
+AutoName: DNSNet
+
+RepoType: git
+Repo: https://github.com/t895/DNSNet.git
+Binaries: https://github.com/t895/DNSNet/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 1.0.14
+    versionCode: 28
+    commit: 1.0.14
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+
+  - versionName: 1.0.15
+    versionCode: 29
+    commit: 04161306aa5bdadb498d3bdfc96cbdc6910c26b8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+
+  - versionName: 1.0.16
+    versionCode: 30
+    commit: d0ed2f93daa5a1df992106e2f94be80074638026
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+
+  - versionName: 1.0.17
+    versionCode: 31
+    commit: ac3ca0c7313d201eccf5a7a5212c15898efb6bc7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+
+  - versionName: 1.0.18
+    versionCode: 32
+    commit: 57330d1ac49e39d0d791da1063fc167c1216545b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+
+  - versionName: 1.0.19
+    versionCode: 33
+    commit: 960bff173c93fe7b17d26df87cbcca1386b46b13
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+
+  - versionName: 1.1.7
+    versionCode: 41
+    commit: ab4fcdec32c25fdcac8e7c392664cd2109b6e7bc
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.28.0
+    prebuild:
+      - sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $(sed -n -E 's/channel =
+        "(.*)"/\1/p' ../rust-toolchain.toml)
+      - source $HOME/.cargo/env
+      - rustup target add x86_64-linux-android i686-linux-android aarch64-linux-android
+        armv7-linux-androideabi
+      - echo -e "rust.rustcCommand=$(which rustc)\nrust.cargoCommand=$(which cargo)"
+        >> ../local.properties
+      - sed -i -e "s|\"cargo\",|\"$(which cargo)\",|" -e '/cargo {/a extraCargoBuildArguments
+        = remapCargo' build.gradle.kts
+    ndk: r28
+
+  - versionName: 1.1.8
+    versionCode: 42
+    commit: eebcc547494136d575b17ce352ee6ecb44865ead
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.28.0
+    prebuild:
+      - sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $(sed -n -E 's/channel =
+        "(.*)"/\1/p' ../rust-toolchain.toml)
+      - source $HOME/.cargo/env
+      - rustup target add x86_64-linux-android i686-linux-android aarch64-linux-android
+        armv7-linux-androideabi
+      - echo -e "rust.rustcCommand=$(which rustc)\nrust.cargoCommand=$(which cargo)"
+        >> ../local.properties
+      - sed -i -e "s|\"cargo\",|\"$(which cargo)\",|" -e '/cargo {/a extraCargoBuildArguments
+        = remapCargo' build.gradle.kts
+    ndk: r28
+
+  - versionName: 1.1.12
+    versionCode: 46
+    commit: 39919c021c385a53b6760f72d2ed5a69c8ccaf21
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.28.0
+    prebuild:
+      - sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $(sed -n -E 's/channel =
+        "(.*)"/\1/p' ../rust-toolchain.toml)
+      - source $HOME/.cargo/env
+      - rustup target add x86_64-linux-android i686-linux-android aarch64-linux-android
+        armv7-linux-androideabi
+      - echo -e "rust.rustcCommand=$(which rustc)\nrust.cargoCommand=$(which cargo)"
+        >> ../local.properties
+      - sed -i -e "s|\"cargo\",|\"$(which cargo)\",|" -e '/cargo {/a extraCargoBuildArguments
+        = remapCargo' build.gradle.kts
+    ndk: r28
+
+  - versionName: 1.1.13
+    versionCode: 47
+    commit: 89d99d9f8a6c52cc04b143b28d241179f8920be6
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.28.0
+    prebuild:
+      - sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $(sed -n -E 's/channel =
+        "(.*)"/\1/p' ../rust-toolchain.toml)
+      - source $HOME/.cargo/env
+      - rustup target add x86_64-linux-android i686-linux-android aarch64-linux-android
+        armv7-linux-androideabi
+      - echo -e "rust.rustcCommand=$(which rustc)\nrust.cargoCommand=$(which cargo)"
+        >> ../local.properties
+      - sed -i -e "s|\"cargo\",|\"$(which cargo)\",|" -e '/cargo {/a extraCargoBuildArguments
+        = remapCargo' ../service/build.gradle.kts
+    ndk: r28
+
+  - versionName: 1.1.16
+    versionCode: 50
+    commit: b6cb8804953b4f88e8cc330ec75ca2ec64e2c94d
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.28.0
+    prebuild:
+      - sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $(sed -n -E 's/channel =
+        "(.*)"/\1/p' ../rust-toolchain.toml)
+      - source $HOME/.cargo/env
+      - rustup target add x86_64-linux-android i686-linux-android aarch64-linux-android
+        armv7-linux-androideabi
+      - echo -e "rust.rustcCommand=$(which rustc)\nrust.cargoCommand=$(which cargo)"
+        >> ../local.properties
+      - sed -i -e "s|\"cargo\",|\"$(which cargo)\",|" -e '/cargo {/a extraCargoBuildArguments
+        = remapCargo' ../service/build.gradle.kts
+    ndk: r28
+
+  - versionName: 1.2.6
+    versionCode: 58
+    commit: 1.2.6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/outputs/apk/release/*.apk
+    srclibs:
+      - rustup@1.28.0
+    prebuild:
+      - sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+      - export CARGO_HOME=/home/runner/.cargo
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $(sed -n -E 's/channel =
+        "(.*)"/\1/p' ../rust-toolchain.toml)
+      - source $CARGO_HOME/env
+      - rustup target add x86_64-linux-android aarch64-linux-android armv7-linux-androideabi
+      - echo -e "rust.rustcCommand=$(which rustc)\nrust.cargoCommand=$(which cargo)"
+        >> ../local.properties
+      - sed -i -e "s|\"cargo\",|\"$(which cargo)\",|" -e '/cargo {/a extraCargoBuildArguments
+        = remapCargo' ../service/build.gradle.kts
+      - gradle clean
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - source $CARGO_HOME/env
+      - gradle assembleRelease
+    ndk: r28
+
+  - versionName: 1.3.0
+    versionCode: 59
+    commit: 92bae7b84ba7a19ffa9d450621d04fa2d9383c79
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/outputs/apk/release/*.apk
+    srclibs:
+      - rustup@1.28.0
+    prebuild:
+      - sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+      - export CARGO_HOME=/home/runner/.cargo
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $(sed -n -E 's/channel =
+        "(.*)"/\1/p' ../rust-toolchain.toml)
+      - source $CARGO_HOME/env
+      - rustup target add x86_64-linux-android aarch64-linux-android armv7-linux-androideabi
+      - echo -e "rust.rustcCommand=$(which rustc)\nrust.cargoCommand=$(which cargo)"
+        >> ../local.properties
+      - sed -i -e "s|\"cargo\",|\"$(which cargo)\",|" -e '/cargo {/a extraCargoBuildArguments
+        = remapCargo' ../service/build.gradle.kts
+      - gradle clean
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - source $CARGO_HOME/env
+      - gradle assembleRelease
+    ndk: r28
+
+  - versionName: 1.3.1
+    versionCode: 60
+    commit: c5ed5e77cb749ddc296b9e8ae1dc93b41429cd6f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/outputs/apk/release/*.apk
+    srclibs:
+      - rustup@1.28.0
+    prebuild:
+      - sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+      - export CARGO_HOME=/home/runner/.cargo
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $(sed -n -E 's/channel =
+        "(.*)"/\1/p' ../rust-toolchain.toml)
+      - source $CARGO_HOME/env
+      - rustup target add x86_64-linux-android aarch64-linux-android armv7-linux-androideabi
+      - echo -e "rust.rustcCommand=$(which rustc)\nrust.cargoCommand=$(which cargo)"
+        >> ../local.properties
+      - sed -i -e "s|\"cargo\",|\"$(which cargo)\",|" -e '/cargo {/a extraCargoBuildArguments
+        = remapCargo' ../service/build.gradle.kts
+      - gradle clean
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - source $CARGO_HOME/env
+      - gradle assembleRelease
+    ndk: r28
+
+  - versionName: 1.3.4
+    versionCode: 63
+    commit: 1319913f87996a77b9697a7eb3cc2c5cbef9d20f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+    output: build/outputs/apk/release/*.apk
+    srclibs:
+      - rustup@1.28.0
+    prebuild:
+      - sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+      - export CARGO_HOME=/home/runner/.cargo
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $(sed -n -E 's/channel =
+        "(.*)"/\1/p' ../rust-toolchain.toml)
+      - source $CARGO_HOME/env
+      - rustup target add x86_64-linux-android aarch64-linux-android armv7-linux-androideabi
+      - echo -e "rust.rustcCommand=$(which rustc)\nrust.cargoCommand=$(which cargo)"
+        >> ../local.properties
+      - sed -i -e "s|\"cargo\",|\"$(which cargo)\",|" -e '/cargo {/a extraCargoBuildArguments
+        = remapCargo' ../service/build.gradle.kts
+    build:
+      - export CARGO_HOME=/home/runner/.cargo
+      - source $CARGO_HOME/env
+      - gradle assembleRelease
+    ndk: r28
+
+AllowedAPKSigningKeys: d76f6207d8182cdc1ee2dcbfe74db2edf37f36b82d084b017f79fe9f067121e4
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: build.gradle.kts|versionCode by extra { (\d+) }|.|versionName by
+  extra { "([\d.]+)" }
+CurrentVersion: 1.3.4
+CurrentVersionCode: 63

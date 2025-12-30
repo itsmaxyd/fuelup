@@ -1,0 +1,521 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorEmail: juam+scrambled@posteo.net
+SourceCode: https://gitlab.com/juanitobananas/scrambled-exif/tree/HEAD
+IssueTracker: https://gitlab.com/juanitobananas/scrambled-exif/issues
+Translation: https://www.transifex.com/juanitobananas/scrambled-exif/
+Changelog: https://gitlab.com/juanitobananas/scrambled-exif/blob/HEAD/CHANGELOG.md
+Liberapay: juanitobananas
+Bitcoin: bc1qagv574q7k66nwmtef8gxmjge4ekvnjxfytxp5e
+
+AutoName: Scrambled Exif
+
+RepoType: git
+Repo: https://gitlab.com/juanitobananas/scrambled-exif.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1b
+    versionCode: 4
+    commit: v1.0.1b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 5
+    commit: v1.0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 6
+    commit: v1.0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 7
+    commit: v1.0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 8
+    commit: v1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 9
+    commit: v1.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 10
+    commit: v1.1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 11
+    commit: v1.1.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 12
+    commit: v1.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 13
+    commit: v1.2.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 14
+    commit: v1.2.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.4
+    versionCode: 16
+    commit: v1.2.4
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.2.5
+    versionCode: 17
+    commit: v1.2.5
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.2.5b
+    versionCode: 19
+    commit: v1.2.5b
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.3.0
+    versionCode: 20
+    commit: v1.3.0
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.3.1
+    versionCode: 21
+    commit: v1.3.1
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.3.2
+    versionCode: 22
+    commit: v1.3.2
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.3.3
+    versionCode: 23
+    commit: v1.3.3
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.3.4
+    versionCode: 24
+    commit: v1.3.4
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.3.5
+    versionCode: 25
+    commit: v1.3.5
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.3.6
+    versionCode: 26
+    commit: v1.3.6
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.4.0
+    versionCode: 27
+    commit: v1.4.0
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.4.1
+    versionCode: 28
+    commit: v1.4.1
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.4.2
+    versionCode: 29
+    commit: v1.4.2
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.4.3
+    versionCode: 30
+    commit: v1.4.3
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.4.4
+    versionCode: 31
+    commit: v1.4.4
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.4.5
+    versionCode: 32
+    commit: v1.4.5
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.4.6
+    versionCode: 33
+    commit: v1.4.6
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.4.7
+    versionCode: 34
+    commit: v1.4.7
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.5.0-beta
+    versionCode: 36
+    commit: v1.5.0-beta
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.4
+    versionCode: 41
+    commit: v1.6.4
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.6
+    versionCode: 43
+    commit: v1.6.6
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.7
+    versionCode: 46
+    commit: v1.6.7
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.8
+    versionCode: 47
+    commit: v1.6.8
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.10
+    versionCode: 49
+    commit: v1.6.10
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.11
+    versionCode: 50
+    commit: v1.6.11
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.12
+    versionCode: 51
+    commit: v1.6.12
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.13
+    versionCode: 52
+    commit: v1.6.13
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.14
+    versionCode: 53
+    commit: v1.6.14
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.15
+    versionCode: 54
+    commit: v1.6.15
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.16
+    versionCode: 55
+    commit: v1.6.16
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.17
+    versionCode: 56
+    commit: v1.6.17
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.18
+    versionCode: 57
+    commit: v1.6.18
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.19
+    versionCode: 58
+    commit: v1.6.19
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.20
+    versionCode: 59
+    commit: v1.6.20
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.21
+    versionCode: 60
+    commit: v1.6.21
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.6.22
+    versionCode: 61
+    commit: v1.6.22
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: '1.7'
+    versionCode: 62
+    commit: v1.7
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.7.1
+    versionCode: 63
+    commit: v1.7.1
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.7.3
+    versionCode: 66
+    commit: v1.7.3
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.7.4
+    versionCode: 67
+    commit: 2491040a256f5962f0d009ed22e996866de5861e
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.7.5
+    versionCode: 68
+    commit: bbfe5dc187aaaa43c47af974f88b097013f1b747
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.7.7
+    versionCode: 70
+    commit: 1cedca128f649b1ee293912c21346908a7c60f55
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - standard
+
+  - versionName: 1.7.8
+    versionCode: 71
+    commit: 6155c49b92c167f0b0578fce38c6b7fcc5d0ea01
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - standard
+
+  - versionName: 1.7.9
+    versionCode: 72
+    commit: c622e6166a67dd714825ca80be58977491eb664b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - standard
+
+  - versionName: 1.7.10
+    versionCode: 73
+    commit: b23183650d32b631100ab8bb1eaee606d8a4fc98
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - standard
+
+  - versionName: 1.7.11
+    versionCode: 74
+    commit: 42b5b9414aeba3159ec7b00f0aed05dd16f29105
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.7.12
+    versionCode: 75
+    commit: 742ae9279e497cb7869872ad10db9aac4f7f0e26
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - standard
+
+  - versionName: 1.7.13
+    versionCode: 76
+    commit: 931055c2e7bbb804417aac7c0ef89b67fb44c340
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 1.7.14
+    versionCode: 77
+    commit: 2c71ad3fcff19f07f440a8daac8f0d72d7d67d3a
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]+$
+CurrentVersion: 1.7.14
+CurrentVersionCode: 77

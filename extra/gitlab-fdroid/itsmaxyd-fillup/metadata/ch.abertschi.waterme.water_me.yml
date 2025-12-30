@@ -1,0 +1,73 @@
+Categories:
+  - Internet
+  - Sports & Health
+License: GPL-3.0-only
+AuthorName: Andrin Bertschi
+AuthorEmail: apps@abertschi.ch
+SourceCode: https://github.com/abertschi/water-me
+IssueTracker: https://github.com/abertschi/water-me/issues
+Changelog: https://github.com/abertschi/water-me/blob/HEAD/CHANGELOG
+
+AutoName: Water Me
+
+RepoType: git
+Repo: https://github.com/abertschi/water-me
+
+Builds:
+  - versionName: 1.0.5
+    versionCode: 5
+    commit: v1.0.5
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@3.0.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.6
+    versionCode: 6
+    commit: 655875f26e28a72a97a22c886f4715bc8ce174f2
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@3.0.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.7
+    versionCode: 7
+    commit: ea41e72b8d08ee47bd3a928bf8e20252030b0f68
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@3.0.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 1.0.8
+    versionCode: 8
+    commit: 188fa5378cc2eed2a0da594de94a850be4ff07ab
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@3.0.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - $$flutter$$/bin/flutter build apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags .*[0-9]$
+UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.0.8
+CurrentVersionCode: 8

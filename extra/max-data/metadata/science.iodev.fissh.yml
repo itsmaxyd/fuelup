@@ -1,0 +1,69 @@
+Categories:
+  - Security
+License: MIT
+AuthorName: IODev
+AuthorEmail: ioan@ioanm.ro
+WebSite: https://www.ioanm.ro/
+SourceCode: https://gitlab.com/ioanm/FiSSH-App
+IssueTracker: https://gitlab.com/ioanm/fissh-app/issues
+
+AutoName: FiSSH
+Description: |-
+  [Note: The app is now developed under a new appID as <a href="https://f-droid.org/packages/ro.ioanm.fissh">FiSSH</a>]
+
+  This Android app stores your SSH key phrase and sends it to your PC securely via the LAN when an authorized fingerprint is detected by the Android fingerprint scanner.
+
+  * The PC must run Linux and have FiSSH desktop installed - see <a href="https://gitlab.com/ioanm/fissh-desktop/blob/master/INSTALL.md">INSTALL.md here</a>
+  * The PC app then returns the received passphrase to OpenSSH and the standard ssh binary completes the login process.
+  * It is important to note that none of the FiSSH apps have access to private key file and that FiSSH uses TLS sockets with certificate validation to prevent man-in-the-middle attacks!
+
+Builds:
+  - versionName: '2.5'
+    versionCode: 25
+    commit: '2.5'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 26
+    commit: '2.6'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 27
+    commit: '2.7'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 28
+    commit: '2.8'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.9'
+    versionCode: 29
+    commit: '2.9'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 30
+    commit: '3.0'
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '3.0'
+CurrentVersionCode: 30
+
+NoSourceSince: '3.0'

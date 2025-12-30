@@ -1,0 +1,70 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Rely on sedeaplicaciones.minetur.gob.es
+Categories:
+  - Navigation
+License: AGPL-3.0-or-later
+AuthorName: David García Gazón
+AuthorEmail: voki@canvoki.net
+AuthorWebSite: https://canvoki.net/coder
+SourceCode: https://github.com/vokimon/carburoid
+IssueTracker: https://github.com/vokimon/carburoid/issues
+Translation: https://hosted.weblate.org/projects/carburoid/
+Changelog: https://github.com/vokimon/carburoid/blob/HEAD/CHANGES.md
+
+AutoName: Carburoid
+
+RepoType: git
+Repo: https://github.com/vokimon/carburoid.git
+Binaries: https://github.com/vokimon/carburoid/releases/download/carburoid-%v/net.canvoki.carburoid-floss-%v-release.apk
+
+Builds:
+  - versionName: 1.2.0
+    versionCode: 1020000
+    commit: 767ddb0cbfa1e8ed10a8ad35c864e6c8a421a503
+    subdir: app
+    gradle:
+      - floss
+
+  - versionName: 1.2.1
+    versionCode: 1020100
+    commit: d8125a7bc3d479a6e9f22154c42cadd457b8abf8
+    subdir: app
+    gradle:
+      - floss
+
+  - versionName: 1.2.2
+    versionCode: 1020200
+    commit: c4100245b84ec83c63d8a0550f47bf7091fcb031
+    subdir: app
+    gradle:
+      - floss
+
+  - versionName: 1.2.3
+    versionCode: 1020300
+    commit: d0e4503f7a86f1a68578cb096751f7dc93b22a90
+    subdir: app
+    gradle:
+      - floss
+
+  - versionName: 1.3.0
+    versionCode: 1030000
+    commit: 318d070568bc1b0164af18baea7582af80d0f423
+    subdir: app
+    gradle:
+      - floss
+
+  - versionName: 1.3.2
+    versionCode: 1030200
+    commit: 804cff68a60d984c55ab8f61ba9c3bafafffaa8e
+    subdir: app
+    gradle:
+      - floss
+
+AllowedAPKSigningKeys: 8cdfd389b1a7979943201321188a416ed54dbdf1c432ed07e2bb44b5b3cea722
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags carburoid-([\d.]+)
+UpdateCheckData: version.properties|versionCode=(\d+)|.|versionName=([\d.]+)
+CurrentVersion: 1.3.2
+CurrentVersionCode: 1030200

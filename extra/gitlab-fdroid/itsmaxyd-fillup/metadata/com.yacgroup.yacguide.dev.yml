@@ -1,0 +1,239 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App connects to kasserver.com.
+Categories:
+  - Sports & Health
+License: GPL-3.0-only
+WebSite: https://github.com/yacgroup/yacguide
+SourceCode: https://github.com/yacgroup/yacguide
+IssueTracker: https://github.com/yacgroup/yacguide/issues
+
+AutoName: YacGuide
+
+RepoType: git
+Repo: https://github.com/yacgroup/yacguide
+
+Builds:
+  - versionName: '20200222'
+    versionCode: 20200222
+    commit: dev-20200222
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20200428'
+    versionCode: 20200428
+    commit: dev-20200428
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20200527'
+    versionCode: 20200527
+    commit: dev-20200527
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20200612'
+    versionCode: 20200612
+    commit: dev-20200612
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20200622'
+    versionCode: 20200622
+    commit: dev-20200622
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20200928'
+    versionCode: 20200928
+    commit: dev-20200928
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20201003'
+    versionCode: 20201003
+    commit: dev-20201003
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20201013'
+    versionCode: 20201013
+    commit: dev-20201013
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20210130'
+    versionCode: 20210130
+    commit: dev-20210130
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20210311'
+    versionCode: 20210311
+    commit: dev-20210311
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20210315'
+    versionCode: 20210315
+    commit: dev-20210315
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20210415'
+    versionCode: 20210415
+    commit: dev-20210415
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20210418'
+    versionCode: 20210418
+    commit: dev-20210418
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20210518'
+    versionCode: 20210518
+    commit: dev-20210518
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20211123'
+    versionCode: 20211123
+    commit: 1b988cef4122c4388ccb34ec3bf96afb2a06ed85
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - dev
+
+  - versionName: '20220106'
+    versionCode: 20220106
+    commit: 11d3b7c97b1e33e12488aecf125c0b73c33ead7a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - dev
+
+  - versionName: '20220317'
+    versionCode: 20220317
+    commit: 96f4a6dd66e66b310cc8a1c35c47e270f9cc64bd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - dev
+
+  - versionName: '20220317'
+    versionCode: 20230201
+    commit: bc1c9b6b1953d79742d8e837b3ff5539cfe26e3a
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20230225'
+    versionCode: 20230225
+    commit: 8b7c27761c16d220841dadff0ede797b68767edb
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20230409'
+    versionCode: 20230409
+    commit: d9b2a6f4ca569b51eb283ddf50e112aaf9b7cbe8
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20240326'
+    versionCode: 20240326
+    commit: 175b25dd527f74954346386fc20fdc5271d311f5
+    subdir: app
+    gradle:
+      - dev
+
+  - versionName: '20250209'
+    versionCode: 20250209
+    commit: 487914c0eae0c4fafce948a091c28315bf138201
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - dev
+
+  - versionName: '20250304'
+    versionCode: 20250304
+    commit: f266c7456025aeb06d531cdf98529781a6bb5146
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - dev
+
+  - versionName: '20250325'
+    versionCode: 20250325
+    commit: 5b71909f7666efd7534fe50cf6797ea07f7716e0
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - dev
+
+  - versionName: '20250327'
+    versionCode: 20250327
+    commit: 04545003925190017cb2b21c9b3bbccf68cab422
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - dev
+
+  - versionName: '20251204'
+    versionCode: 20251204
+    commit: 8221e8b9073049c26b904003970397559e02ca05
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - dev
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^dev
+CurrentVersion: '20251204'
+CurrentVersionCode: 20251204

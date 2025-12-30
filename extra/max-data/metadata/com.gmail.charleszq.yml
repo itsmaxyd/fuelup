@@ -1,0 +1,24 @@
+AntiFeatures:
+  - NonFreeDep
+Categories:
+  - Multimedia
+License: Apache-2.0
+WebSite: https://code.google.com/p/flickr-viewer-for-honeycomb/wiki/FeatureGuide
+SourceCode: https://code.google.com/p/flickr-viewer-for-honeycomb/source
+
+AutoName: Flickr Viewer HD
+Description: N.B. It isn't possible to run this without properitary Google Maps installed.
+
+Builds:
+  - versionName: 1.2.8
+    versionCode: 19
+    commit: '402'
+    target: Google Inc.:Google APIs:16
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.2.8
+CurrentVersionCode: 19
+
+NoSourceSince: 1.2.8

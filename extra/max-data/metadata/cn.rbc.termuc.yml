@@ -1,0 +1,89 @@
+Categories:
+  - Development
+License: GPL-3.0-or-later
+AuthorName: RainbowC0
+AuthorEmail: zhon1472580369@163.com
+SourceCode: https://github.com/RainbowC0/TermuC
+IssueTracker: https://github.com/RainbowC0/TermuC/issues
+Changelog: https://github.com/RainbowC0/TermuC/releases
+
+AutoName: TermuC
+
+RepoType: git
+Repo: https://github.com/RainbowC0/TermuC.git
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 1
+    commit: 9ee1540893c9ac8caec8d4fcd888997c5a3d2323
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.1
+    versionCode: 2
+    commit: c616d9c73f624ae779334126e03fde8a859cb959
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.2
+    versionCode: 3
+    commit: 46dfc25c0dd142ec7368760f9ac5aa465a9b824f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.3
+    versionCode: 4
+    commit: c7a5d7c2bf21a97913e283639f5b92469e48ecad
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.4
+    versionCode: 5
+    commit: 2eb264aabd2c357cd4a780c49ba1fa9bfa680d81
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.5
+    versionCode: 6
+    commit: f2fa0bc870364dcb4dff13dcc93c99c8210619f0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.6
+    versionCode: 7
+    commit: 7740e34999d846fdb6e9da23417756af292e3d34
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.7
+    versionCode: 8
+    commit: a6179c86198379b1e49cc318b21de8ce63cc36df
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.0
+    versionCode: 9
+    commit: c8d7ec2bba1fcc1e88401d1b822f6c9d38095d07
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.1
+    versionCode: 10
+    commit: 23eecccfc74a648f547438777eb9ba978c6e5565
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.2.1
+CurrentVersionCode: 10

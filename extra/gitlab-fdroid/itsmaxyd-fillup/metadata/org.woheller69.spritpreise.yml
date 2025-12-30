@@ -1,0 +1,237 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Tankerkönig service itself is not open source
+Categories:
+  - Navigation
+License: GPL-3.0-only
+AuthorName: woheller69
+SourceCode: https://github.com/woheller69/spritpreise
+IssueTracker: https://github.com/woheller69/spritpreise/issues
+
+AutoName: Gas Prices
+
+RepoType: git
+Repo: https://github.com/woheller69/Spritpreise
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 10
+    commit: V1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 11
+    commit: 19a9b65beacf216ee824b376e2297da44c832b47
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 12
+    commit: d077cf20281df22e29f9750b20c5caa545f75377
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 13
+    commit: 43f6e34f86823a1f0b2dedcf25c3e1e4b9741035
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 14
+    commit: bcc41f1dd5709b3065ece2d27e93e59f499ca039
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 15
+    commit: 40bf970e85b3c966e2d7243495de460ed388aea0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '1.6'
+    versionCode: 16
+    commit: 26721a196c3b596ce5f8ce240766189e37714190
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '1.7'
+    versionCode: 17
+    commit: 670d96a2d3f14f04a99db5b69ae1ea9f266bb3e6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '1.8'
+    versionCode: 18
+    commit: e2849f46853c05f55c6e1247bb24d4db6249cd28
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '1.9'
+    versionCode: 19
+    commit: 403cc518d5907a387fe5d4c20afd48df234b9ae8
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.0'
+    versionCode: 20
+    commit: ba394b7e3a84e94490a930959dc12d457466c34a
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.1'
+    versionCode: 21
+    commit: 1d611e1c0ff204651e0630924875d8e355750a9b
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.2'
+    versionCode: 22
+    commit: 491be700213ad3e782a224dd786fa1604aedeef9
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.3'
+    versionCode: 23
+    commit: a9351f68f9141e4655f7d46fb57be61895b65dac
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.4'
+    versionCode: 24
+    commit: 50b418bab848469beac2aa1e5aea2cb6ecc2c458
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.5'
+    versionCode: 25
+    commit: d58d968cef168e66f69754f7cbd7d24d3843b96d
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.6'
+    versionCode: 26
+    commit: f6c75a4468e7920c5d0599fe0ba98b6397394e72
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.7'
+    versionCode: 27
+    commit: 63ea4dcb8d0066351ecee9ad1b3f5b78a39031ce
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.8'
+    versionCode: 28
+    commit: 1e752d920f569b6b66069015c9ede2709880b7da
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.9'
+    versionCode: 29
+    commit: 6f2d84804b67f3bf8b32a184bbd79d459898a907
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '3.0'
+    versionCode: 30
+    commit: f8e2bddd0b0c40895c602b9aebaf2534e9d45e22
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '3.1'
+    versionCode: 31
+    commit: f3b1fc71dd97a939dee641bdfbeaabcc728a9d88
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '3.2'
+    versionCode: 32
+    commit: f3dc2ad263a8a73532396ce23ec51bf33b65b7e8
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '3.2'
+CurrentVersionCode: 32

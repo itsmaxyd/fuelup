@@ -1,0 +1,239 @@
+Categories:
+  - Local Media Player
+  - Multimedia
+License: GPL-3.0-or-later
+AuthorName: nuclearfog
+SourceCode: https://codeberg.org/nuclearfog/Apollo
+IssueTracker: https://codeberg.org/nuclearfog/Apollo/issues
+Changelog: https://codeberg.org/nuclearfog/Apollo/releases
+
+AutoName: Apollo
+
+RepoType: git
+Repo: https://codeberg.org/nuclearfog/Apollo.git
+Binaries: https://codeberg.org/nuclearfog/Apollo/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 1.4.3
+    versionCode: 33
+    commit: 2516e82e0ab46eb8dfceedceb1ec257514643d89
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 34
+    commit: 2a25b461c31dc926ca2c3ccbeef51a8ec65832ec
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.5
+    versionCode: 35
+    commit: fab49040f33d3fb1ff336472de4a73d6cd13c014
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.6
+    versionCode: 36
+    commit: 413c92f96b06a15f62a52a8e70da62c27c6c2ab4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.7
+    versionCode: 37
+    commit: 1f76559c75bdd83b8fdf24ec419680b0dbb7a4e1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.8
+    versionCode: 38
+    commit: ce15c0adf0c2feb722a65689f6b6aeb8238d3e0b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.9
+    versionCode: 39
+    commit: 9fc80ca74d58a4a2e33c99b0c0f76a4a266f6b33
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 40
+    commit: 61101fe941f73567f510ae407fc2833e0fa96a52
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 41
+    commit: f8225c238ba46877930e27a26ed3187e260eddbd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 42
+    commit: bec313c08148deb02fe7b05a69ec1ed218aacca1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.5
+    versionCode: 45
+    commit: 17cc2744c231f83ac906bb5c0aaaf1fe54716da1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.6
+    versionCode: 46
+    commit: 3a08f7921e20e597a9d94a59e542ebdee354f7bf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.7
+    versionCode: 47
+    commit: bbd765361bde2a506c340b031363033ad8dbe825
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.8
+    versionCode: 48
+    commit: 283dd88bab56e62c35f86799d060a04411a38de4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.9
+    versionCode: 49
+    commit: 06d6230a5b9a0af93ac5b1564b852db38eae85cd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.10
+    versionCode: 50
+    commit: 2087c98db5e6f57340725bb52a00475c956cf331
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.11
+    versionCode: 51
+    commit: c0fbb8aec774d81d9c7576001b89d166b33e62b9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.12
+    versionCode: 52
+    commit: 7e7a1984b1f775b1046e1528ebab072a97b457e2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.13
+    versionCode: 53
+    commit: de71ce78af5a9eef57e26617120cd8c5de796cc0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.14
+    versionCode: 54
+    commit: 33d10507fcfae6aacf45ff4dbba67292079c4143
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.15
+    versionCode: 55
+    commit: dcf331a7b6749dc4da223d32861898fb0455b45d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 57
+    commit: 5e55b8cf4d30fe90b183ca9eb876f46a3fe39124
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 58
+    commit: f941aac718592df09aed43e0ace331dac4002e41
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 59
+    commit: 095d4471ebf419413abf66c791ce38f63575da34
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 60
+    commit: a983f95be0a30f5a99b6fd57c3a95bbf72a5e9e8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.5
+    versionCode: 61
+    commit: 3758f582dc0ee73ed8ca6f01c3e955278ebdb8a9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.6
+    versionCode: 62
+    commit: 00b526cc31e47afecefeb67a4873bbd45d1a118b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.7
+    versionCode: 63
+    commit: af8703e933db5c10257e81751b3dbab56f45741d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.8
+    versionCode: 64
+    commit: e158de98a4c6bed82de93eb0687e8cc77c19e06d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.9
+    versionCode: 65
+    commit: fd8245d8c4cd167174fd9a67132f2ddebacafd88
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.10
+    versionCode: 66
+    commit: 584999f760c463f36a717e635f587a9b6005394e
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: e1a418c51baa829917daa2e86d7509a8a10470e44280c20146b70ea550bfe1ab
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.6.10
+CurrentVersionCode: 66

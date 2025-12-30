@@ -1,0 +1,87 @@
+Categories:
+  - Phone & SMS
+  - Voice & Video Chat
+License: GPL-3.0-only
+WebSite: http://sipdroid.org
+SourceCode: https://github.com/i-p-tel/sipdroid
+IssueTracker: https://github.com/i-p-tel/sipdroid/issues
+Changelog: http://sipdroid.org/
+
+AutoName: Sipdroid
+Description: |-
+  A SIP (VOIP) client with video calling capabilities. Visit the website for more
+  info. For optimal battery usage reserve a free VoIP PBX on pbxes.org, and manage
+  your SIP trunks using a web browser.
+
+RepoType: git
+Repo: https://github.com/i-p-tel/sipdroid
+
+Builds:
+  - versionName: 3.4 beta
+    versionCode: 97
+    commit: '675'
+    target: android-17
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 3.5 beta
+    versionCode: 98
+    commit: '680'
+    target: android-17
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 3.6 beta
+    versionCode: 99
+    commit: '683'
+    target: android-17
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 3.9 beta
+    versionCode: 104
+    commit: 18e3f5a541a6c4a92ec3ace6fbdcbe034796f451
+    target: android-17
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 4.2 beta
+    versionCode: 107
+    commit: b27cd6c4dbbb6939ded6de61bb0f212f3a7d4b45
+    target: android-27
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 4.4 beta
+    versionCode: 115
+    commit: 8ddfd912d4f4bbfb6b4d9366604e5696ae3bd0cb
+    target: android-27
+    buildjni:
+      - yes
+    ndk: r12b
+
+  - versionName: 6.3 beta
+    versionCode: 134
+    commit: 0013fc8355fbd96279df39a30fbd001e9477ff77
+    subdir: app
+    gradle:
+      - yes
+    ndk: r25b
+
+  - versionName: '6.5'
+    versionCode: 146
+    commit: 72b25238a51f5dba6a7a8fd769e0c233ef5da1cb
+    subdir: app
+    gradle:
+      - yes
+    ndk: r25b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '6.5'
+CurrentVersionCode: 146

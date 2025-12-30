@@ -1,0 +1,470 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Email
+  - Internet
+License: AGPL-3.0-only
+AuthorName: Leander Beernaert
+SourceCode: https://github.com/LeanderBB/you-have-mail
+IssueTracker: https://github.com/LeanderBB/you-have-mail/issues
+Changelog: https://github.com/LeanderBB/you-have-mail/releases
+
+Name: You Have Mail
+AutoName: You Have Mail
+
+RepoType: git
+Repo: https://github.com/LeanderBB/you-have-mail.git
+Binaries: https://github.com/LeanderBB/you-have-mail/releases/download/v%v/you-have-mail-v%v.apk
+
+Builds:
+  - versionName: 0.7.2
+    versionCode: 20
+    commit: a5e28962ed91ced8d74b8624b319dca9630bdbed
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y
+      - source $HOME/.cargo/env
+      - rustup install 1.69.0
+      - rustup default 1.69.0
+      - rustup target add x86_64-linux-android
+      - rustup target add aarch64-linux-android
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.8.0
+    versionCode: 21
+    commit: fa51b79398d1e5b09a12781259b0cc6a77e2ae5a
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.69.0 --target x86_64-linux-android
+        aarch64-linux-android
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.9.0
+    versionCode: 22
+    commit: 1c114307e11827fc59084c7fa779148112bfe799
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.69.0 --target x86_64-linux-android
+        aarch64-linux-android
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.10.0
+    versionCode: 23
+    commit: e16ca1c50946c2649264b41bb71dde0d5da45f55
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.69.0 --target x86_64-linux-android
+        aarch64-linux-android
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.10.1
+    versionCode: 24
+    commit: 12697ada0b9072df32d9789e57f6cea55d115b96
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.69.0 --target x86_64-linux-android
+        aarch64-linux-android
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.11.0
+    versionCode: 25
+    commit: 946cc8a498d47a4f5df2d4c8449246b007eb91e0
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.69.0 --target x86_64-linux-android
+        aarch64-linux-android
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.11.1
+    versionCode: 26
+    commit: d93690a923e8760d000304ab8c815a57d1773103
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.69.0 --target x86_64-linux-android
+        aarch64-linux-android
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.12.0
+    versionCode: 27
+    commit: e70a15f7750c02ea20c69cfbdd285b5989702df8
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.69.0 --target x86_64-linux-android
+        aarch64-linux-android
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.13.0
+    versionCode: 28
+    commit: 9185c332b58ee2280917bdd1724d96bc4696275e
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.69.0 --target x86_64-linux-android
+        aarch64-linux-android
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.14.0
+    versionCode: 29
+    commit: b4e3e78b2ff7dbfc5b025a340bfbe5b10d48541f
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.72.0 --target x86_64-linux-android
+        aarch64-linux-android armv7-linux-androideabi
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.14.1
+    versionCode: 30
+    commit: d9b790bf89eea384b822f5ec65b34741efd09bd8
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.72.0 --target x86_64-linux-android
+        aarch64-linux-android armv7-linux-androideabi
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.15.0
+    versionCode: 31
+    commit: e0a92eca55958a1ee609c9ca7eb6f2b3b60e9eff
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang-11 gcc-multilib libclang-11-dev libtool
+        make pkg-config python-is-python3
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - curl -Lso go.tar.gz https://go.dev/dl/go1.20.4.linux-amd64.tar.gz
+      - echo "698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.26.0
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.72.0 --target x86_64-linux-android
+        aarch64-linux-android armv7-linux-androideabi
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.16.1
+    versionCode: 33
+    commit: 8f595ae665232feddd1e45d2f09397a86cd04d55
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang gcc-multilib libclang-dev libtool make pkg-config
+        python-is-python3
+      - apt-get install -t bookworm-backports golang-go
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.80.0 --target x86_64-linux-android
+        aarch64-linux-android armv7-linux-androideabi
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.16.3
+    versionCode: 35
+    commit: 88d429a22bafce75e0f71c48aaef5387d3043ea3
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang gcc-multilib libclang-dev libtool make pkg-config
+        python-is-python3
+      - apt-get install -t bookworm-backports golang-go
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.80.0 --target x86_64-linux-android
+        aarch64-linux-android armv7-linux-androideabi
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.16.4
+    versionCode: 36
+    commit: f5501d54779d42502a2b98d2ec1f7b564bfcee50
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang gcc-multilib libclang-dev libtool make pkg-config
+        python-is-python3
+      - apt-get install -t bookworm-backports golang-go
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.80.0 --target x86_64-linux-android
+        aarch64-linux-android armv7-linux-androideabi
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.18.2
+    versionCode: 39
+    commit: 8312444c8b9f1559d553265028ee8a68a79e0c12
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang gcc-multilib libclang-dev libtool make pkg-config
+        python-is-python3
+      - apt-get install -t bookworm-backports golang-go
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.83.0
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.19.0
+    versionCode: 40
+    commit: 0669c4900da4a00a738bccb949c81357c99135ef
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang gcc-multilib libclang-dev libtool make pkg-config
+        python-is-python3
+      - apt-get install -t bookworm-backports golang-go
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.27.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.83.0
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: 25.2.9519653
+
+  - versionName: 0.19.1
+    versionCode: 41
+    commit: 0c9933352c899a80957ec512299c52afab5b5f7d
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang gcc-multilib libclang-dev libtool make pkg-config
+        python-is-python3
+      - apt-get install -t bookworm-backports golang-go
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.27.1
+      - go@go1.22.9
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.83.0
+      - source $HOME/.cargo/env
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - gradle assembleRelease
+    ndk: r25c
+
+  - versionName: 0.20.0
+    versionCode: 42
+    commit: 07c531c356f23ca3e1e4f377592844b11f9b138c
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang gcc-multilib libclang-dev libtool make pkg-config
+        python-is-python3
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.28.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.85.0
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: r25c
+
+  - versionName: 0.21.0
+    versionCode: 43
+    commit: 4ff74c4e8e9aef10c93bac866183fbc735391dca
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang gcc-multilib libclang-dev libtool make pkg-config
+        python-is-python3
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.28.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.85.0
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: r25c
+
+  - versionName: 0.21.1
+    versionCode: 44
+    commit: 4bd2a0465c4a6a2d288a71cc38caf2c7e0318d82
+    subdir: you-have-mail-android
+    sudo:
+      - apt-get update
+      - apt-get install -y automake clang gcc-multilib libclang-dev libtool make pkg-config
+        python-is-python3
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - rustup@1.28.1
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.88.0
+      - source $HOME/.cargo/env
+      - gradle assembleRelease
+    ndk: r28c
+
+AllowedAPKSigningKeys: 1bb4b343aa705f49b73b3ef489c987dd2e2f684cc1b6eb49f625bcbf6c8f01ee
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.21.1
+CurrentVersionCode: 44

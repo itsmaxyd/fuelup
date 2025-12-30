@@ -1,0 +1,49 @@
+AntiFeatures:
+  - Ads
+Categories:
+  - Games
+License: GPL-3.0-only
+AuthorName: Velbazhd Software LLC
+SourceCode: https://github.com/VelbazhdSoftwareLLC/FishRingsForAndroid
+IssueTracker: https://github.com/VelbazhdSoftwareLLC/FishRingsForAndroid/issues
+
+AutoName: Fish Rings for Android
+Description: |-
+  The puzzle consist of three rings, which can be rotated in both directions. The
+  goal of the puzzle is to solve it as it was in the initial stage.
+
+RepoType: git
+Repo: https://github.com/VelbazhdSoftwareLLC/FishRingsForAndroid
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 0a163981ff916d2f7475a9ea3aee6adf1f63a239
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: 2cc726349cf7c68f5add259d1053cf3a4961cd11
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: 1d7cd5b7b04fa178a6d51d4b888bcc0fcac1a675
+
+  - versionName: '1.21'
+    versionCode: 4
+    commit: 28eef0cf50fe1ef89a4801ae4abcc96b8ab15e80
+    subdir: FishRingsForAndroid
+    gradle:
+      - yes
+
+  - versionName: '1.22'
+    versionCode: 5
+    commit: 10eeefd6881cc35fd36cc6cd8e55c2a28416c4f5
+    subdir: FishRingsForAndroid
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.12.2/8.11.1/' ../build.gradle
+
+AutoUpdateMode: None
+UpdateCheckMode: RepoManifest
+CurrentVersion: '1.22'
+CurrentVersionCode: 5

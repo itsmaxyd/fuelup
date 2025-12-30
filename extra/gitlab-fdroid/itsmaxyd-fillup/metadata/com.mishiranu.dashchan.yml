@@ -1,0 +1,45 @@
+Categories:
+  - Forum
+  - Internet
+License: GPL-3.0-or-later
+AuthorName: Fukurou Mishiranu
+AuthorEmail: fukurou.mishiranu@gmail.com
+AuthorWebSite: https://mishiranu.github.io
+SourceCode: https://github.com/Mishiranu/Dashchan
+IssueTracker: https://github.com/Mishiranu/Dashchan/issues
+Bitcoin: bc1quuggny8wr2pa3526xcstlue9v2qzqp6py4rlkh
+
+AutoName: Dashchan
+
+RepoType: git
+Repo: https://github.com/Mishiranu/Dashchan
+Binaries: https://github.com/Mishiranu/Dashchan/releases/download/%v/Dashchan.apk
+
+Builds:
+  - versionName: 3.1.2
+    versionCode: 1041
+    commit: 3.1.2
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 3.1.3
+    versionCode: 1042
+    commit: 3.1.3
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: 3.1.4
+    versionCode: 1043
+    commit: 9cb7bc3b4fdec3aa06fbc6dd9496efcfbe6ad03e
+    gradle:
+      - yes
+    ndk: r21e
+
+AllowedAPKSigningKeys: 5a4f61fa86c364347081a8b3184953defccd11372e93599389d61382b47e82d3
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[0-9.]+$
+CurrentVersion: 3.1.4
+CurrentVersionCode: 1043

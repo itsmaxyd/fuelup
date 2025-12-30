@@ -1,0 +1,322 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Facebook.
+Categories:
+  - Internet
+License: GPL-2.0-or-later
+AuthorName: Leonardo Rignanese
+AuthorEmail: dev.rignaneseleo@gmail.com
+SourceCode: https://github.com/rignaneseleo/SlimSocial-for-Facebook
+IssueTracker: https://github.com/rignaneseleo/SlimSocial-for-Facebook/issues
+Changelog: https://github.com/rignaneseleo/SlimSocial-for-Facebook/blob/HEAD/Changelog.txt
+Donate: https://www.paypal.me/LeonardoRignanese
+
+AutoName: SlimSocial for Facebook
+Description: |-
+  Wrapper around Facebook's mobile website and APIs.
+
+  * It is lightweight: it weighs less than 100 Kb
+  * It has simple, modern design: there is only what you need
+  * It is Open source: the code of this app is online on GitHub, anyone can verify the authenticity of the app and contribute to its development.
+  * It is free and without ads
+  * it is not intrusive
+  * It respect your privacy: this app doesn't require special permits. Without consensus Facebook can not access to any data of your mobile phone
+
+RepoType: git
+Repo: https://github.com/rignaneseleo/SlimSocial-for-Facebook
+
+Builds:
+  - versionName: 3.5.6
+    versionCode: 40
+    commit: 346a23d2ad0d0aa50bdf495b63a01ff0b01d7d86
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 3.6.2
+    versionCode: 43
+    commit: v3.6.2
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 3.6.5
+    versionCode: 44
+    commit: v3.6.5
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 3.6.6
+    versionCode: 45
+    commit: v3.6.6
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 3.6.7
+    versionCode: 46
+    commit: v3.6.7
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 3.6.8
+    versionCode: 47
+    commit: v3.6.8
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 3.7.1
+    versionCode: 49
+    commit: v3.7.1
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 3.8.0
+    versionCode: 54
+    commit: v3.8.0
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 3.8.3
+    versionCode: 57
+    commit: v3.8.3
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 3.8.4
+    versionCode: 58
+    commit: v3.8.4
+    subdir: SlimFacebook/app
+    gradle:
+      - yes
+
+  - versionName: 10.0.1
+    versionCode: 101
+    commit: d8e108f296dcc1753059b02ddac7259dcc02f6be
+    subdir: SlimSocial_for_Facebook
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - _old
+      - SlimSocial_for_Facebook/ios
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/^  in_app/,/^    version/d' pubspec.lock
+      - sed -i -e '/in_app/d' -e '/contribute/,/SettingsSection/d' -e '/Future buildPaymentWidget/,/^  }/d'
+        -e '/_paymentSubscription/d' lib/screens/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - SlimSocial_for_Facebook/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 10.0.2
+    versionCode: 102
+    commit: 5762ac96b5f495776e076141a9628d5533a487dc
+    subdir: SlimSocial_for_Facebook
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - _old
+      - SlimSocial_for_Facebook/ios
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/^  in_app/,/^    version/d' pubspec.lock
+      - sed -i -e '/in_app/d' -e '/contribute/,/SettingsSection/d' -e '/Future buildPaymentWidget/,/^  }/d'
+        -e '/_paymentSubscription/d' lib/screens/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - SlimSocial_for_Facebook/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 10.0.8
+    versionCode: 108
+    commit: aa44d53034862c299a78cac649f0fa092964cb6c
+    subdir: SlimSocial_for_Facebook
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - _old
+      - SlimSocial_for_Facebook/ios
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/^  in_app/,/^    version/d' pubspec.lock
+      - sed -i -e '/in_app/d' -e '/contribute/,/SettingsSection/d' -e '/Future buildPaymentWidget/,/^  }/d'
+        -e '/_paymentSubscription/d' -e '/buildPaymentWidget/d' lib/screens/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - SlimSocial_for_Facebook/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 10.0.9
+    versionCode: 109
+    commit: b5a3cbb03a4f3d043d52cf1b42482b08f5efd6fc
+    subdir: SlimSocial_for_Facebook
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - _old
+      - SlimSocial_for_Facebook/ios
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/^  in_app/,/^    version/d' pubspec.lock
+      - sed -i -e '/in_app/d' -e '/contribute/,/SettingsSection/d' -e '/Future buildPaymentWidget/,/^  }/d'
+        -e '/_paymentSubscription/d' -e '/buildPaymentWidget/d' lib/screens/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - SlimSocial_for_Facebook/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 10.0.10
+    versionCode: 110
+    commit: 99f01ce649335ee1e1e04eea695d7e4dfe4536e0
+    subdir: SlimSocial_for_Facebook
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - _old
+      - SlimSocial_for_Facebook/ios
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/^  in_app/,/^    version/d' pubspec.lock
+      - sed -i -e '/in_app/d' -e '/contribute/,/SettingsSection/d' -e '/Future buildPaymentWidget/,/^  }/d'
+        -e '/_paymentSubscription/d' -e '/buildPaymentWidget/d' lib/screens/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - SlimSocial_for_Facebook/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 10.0.11
+    versionCode: 111
+    commit: 49525159947e9aa49234212650bfaeec3ff2004c
+    subdir: SlimSocial_for_Facebook
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - _old
+      - SlimSocial_for_Facebook/ios
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/^  in_app/,/^    version/d' pubspec.lock
+      - sed -i -e '/in_app/d' -e '/contribute/,/SettingsSection/d' -e '/Future buildPaymentWidget/,/^  }/d'
+        -e '/_paymentSubscription/d' -e '/buildPaymentWidget/d' lib/screens/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - SlimSocial_for_Facebook/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 10.0.12
+    versionCode: 112
+    commit: 36b8615148392f6c933ce01b38edaf27c4ff0591
+    subdir: SlimSocial_for_Facebook
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.12
+    rm:
+      - _old
+      - SlimSocial_for_Facebook/ios
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/^  in_app/,/^    version/d' pubspec.lock
+      - sed -i -e '/in_app/d' -e '/contribute/,/SettingsSection/d' -e '/Future buildPaymentWidget/,/^  }/d'
+        -e '/_paymentSubscription/d' -e '/buildPaymentWidget/d' lib/screens/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - SlimSocial_for_Facebook/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 10.1.1
+    versionCode: 115
+    commit: 50cdb46a56f42f84da7a7e2c3713c07886f928f4
+    subdir: SlimSocial_for_Facebook
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.24.3
+    rm:
+      - _old
+      - SlimSocial_for_Facebook/ios
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/^  in_app/,/^    version/d' pubspec.lock
+      - sed -i -e '/in_app/d' -e '/contribute/,/SettingsSection/d' -e '/Future buildPaymentWidget/,/^  }/d'
+        -e '/_paymentSubscription/d' -e '/buildPaymentWidget/d' lib/screens/settings_page.dart
+      - sed -i -e '8a subprojects { afterEvaluate { android { compileSdkVersion 34
+        } } }' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - SlimSocial_for_Facebook/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 25.04.06
+    versionCode: 116
+    commit: 3f9f2aaea572582a1ddc600186256da5b7c7b02e
+    subdir: SlimSocial_for_Facebook
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.29.2
+    rm:
+      - _old
+      - SlimSocial_for_Facebook/ios
+    prebuild:
+      - sed -i -e '/in_app_review/d' -e '/in_app_purchase/d' pubspec.yaml
+      - sed -i -e '/^  in_app/,/^    version/d' pubspec.lock
+      - sed -i -e '/in_app/d' -e '/contribute/,/SettingsSection/d' -e '/Future<void>
+        buildPaymentWidget/,/^  }/d' -e '/_paymentSubscription/d' -e '/buildPaymentWidget/d'
+        lib/screens/settings_page.dart
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - SlimSocial_for_Facebook/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: SlimSocial_for_Facebook/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 25.04.06
+CurrentVersionCode: 116

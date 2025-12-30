@@ -1,0 +1,356 @@
+Categories:
+  - Phone & SMS
+License: MIT
+AuthorName: aj3423
+SourceCode: https://github.com/aj3423/SpamBlocker
+IssueTracker: https://github.com/aj3423/SpamBlocker/issues
+
+AutoName: SpamBlocker
+
+RepoType: git
+Repo: https://github.com/aj3423/SpamBlocker.git
+Binaries: https://github.com/aj3423/SpamBlocker/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 12
+    commit: 9eef1e9aa5a91a4af4eab0c437c1a69edf3093c1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 14
+    commit: 37dbf6e2f8b4ce815a8f9c3dc748b9642cce65be
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 15
+    commit: 0b1392e9d5a588bb3bfc3ce932ef30b0d92279cb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 16
+    commit: 37034446ecadbb56d87ddf611dcb237c7fb4ffc3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 17
+    commit: 6cacc9b95a89d03461ae17a0e8fa87d141a35e84
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 18
+    commit: 31fd319c5d7e2af1a8097d9efc28b53f74b76420
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.9'
+    versionCode: 19
+    commit: 2cb775930a7f0e6b22361c31735c324642491d61
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.12'
+    versionCode: 112
+    commit: d94057e2df02f62a3fde8cf8e1885707fd024c21
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.13'
+    versionCode: 113
+    commit: bd15bb0cea45d19c75db061a3a803cbb04fcc147
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.14'
+    versionCode: 114
+    commit: c965adf2d1c6fb96317e77eb2ca12c5b0e6dfd3e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.15'
+    versionCode: 115
+    commit: 340328efc2e3286fe8391b66ced9ca76be87c88a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.16'
+    versionCode: 116
+    commit: 1ca68040ab5031dbe05d2c656d8f6f0d71de5c88
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.17'
+    versionCode: 117
+    commit: a4a3bdbf45368e21394fbd0d9f168d40d3656189
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.18'
+    versionCode: 118
+    commit: da8100ed6d1aa024df2a4d56a7c47376ce93652d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.19'
+    versionCode: 119
+    commit: 7a4cb95db51b39e0b397f011612ba61010733c13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.20'
+    versionCode: 120
+    commit: 914d5aa83a3a4648a94e1ad9a2a9a04e16bdeddc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 200
+    commit: f40a65754d282fd1e164d9ca52a7122827582bd4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 201
+    commit: 1026de5b59e997bf3b25262502110e8f3d9381dd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 202
+    commit: ec957e401e345d9c336348474d171e3fec918848
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 300
+    commit: 7195ae496640000b737fd37d32f2aa74cc2960e8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.2'
+    versionCode: 302
+    commit: 19f1ec3a5cee938bf437634ebb1646b3fcc2d31f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.3'
+    versionCode: 303
+    commit: 5b31ef8c4941c4c1a925f6fd2be98bea4ab3e362
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.4'
+    versionCode: 304
+    commit: c0c3c7a360b2f902bbf83bd949e29edfdebdf0d6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.5'
+    versionCode: 305
+    commit: 2bc1c24bf6c0ed33eae86ca3b8a4de98f499519a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.0'
+    versionCode: 400
+    commit: baf34c16bd3c3243ebd797a467c437b0b1e09740
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.1'
+    versionCode: 401
+    commit: cb46677b450ec3f04634b6a11b6ac3e2a1838e21
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.2'
+    versionCode: 402
+    commit: 9703e35fd73bec54c891daa81f65949c3e4a6bf8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.3'
+    versionCode: 403
+    commit: 2b7b29b098edd9b80f59068c93fe618bc3adfd5f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.4'
+    versionCode: 404
+    commit: e75c0aa725f660fd279bbdc3e952e598757c352a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.5'
+    versionCode: 405
+    commit: b482ba794b09f00436732b9ca75e0db552052b5a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.6'
+    versionCode: 406
+    commit: 2982123ec8931975b9448237f1b266193ef4cb02
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.7'
+    versionCode: 407
+    commit: e1874028074a950850d18325bab9a6ce97b23320
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.8'
+    versionCode: 408
+    commit: 7aec051ec3e595091f117588161928bfb7b35503
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.9'
+    versionCode: 409
+    commit: 419c6e10fea1c662146efb9d56f182fe423e4f09
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.10'
+    versionCode: 410
+    commit: 2e580eec454f83aea39f040944f26e459f86fe0d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.11'
+    versionCode: 411
+    commit: 9eab44aeeac60ed1774a8a620d0b60b82ce6c571
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.12'
+    versionCode: 412
+    commit: a388a06fe8a192d6efaa3629621f030b0d129330
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.13'
+    versionCode: 413
+    commit: 140d40bb34a64e730b0b084e9a8a47893fddbbc2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.14'
+    versionCode: 414
+    commit: f16e9b195b8434c4e41e985c6b9340dc3f073baf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.15'
+    versionCode: 415
+    commit: cd01ada68d617b62c5710b0e0be43bad8315f3ab
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.16'
+    versionCode: 416
+    commit: d807ee56ae08c794077b0d11940fdeed97ce9c58
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.17'
+    versionCode: 417
+    commit: 197cb86639f074906380cca02289d4dd86ac00ca
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.18'
+    versionCode: 418
+    commit: e073b952fef3343410ed161820f6d803aa9051b7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.19'
+    versionCode: 419
+    commit: e8b32941077f9aeb3392ef3e784965f22ace34a2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.20'
+    versionCode: 420
+    commit: e862b05c9d5c07802191d0e3e3a7933fae7fc65a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.21'
+    versionCode: 421
+    commit: 9d1d951af1d716e68333d48a482197bfb0d01244
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 500
+    commit: 897f702b9135043dcc95b0409544d7008e2f45d1
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 7b1ce727856f3427eab1fadfad6c9730cd4e6ba201661547f009206377dffb58
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '5.0'
+CurrentVersionCode: 500

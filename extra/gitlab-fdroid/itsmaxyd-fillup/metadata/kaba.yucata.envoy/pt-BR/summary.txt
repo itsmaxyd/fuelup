@@ -1,0 +1,1 @@
+Exibe quantos jogos em Yucata estão esperando que o usuário faça uma jogada

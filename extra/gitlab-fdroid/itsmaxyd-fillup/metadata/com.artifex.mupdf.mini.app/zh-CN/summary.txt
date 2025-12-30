@@ -1,0 +1,1 @@
+极简文档查看器，支持 PDF，XPS，CBZ，无保护 EPUB 和 FB2 格式

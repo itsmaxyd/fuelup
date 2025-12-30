@@ -1,0 +1,477 @@
+AntiFeatures:
+  NonFreeAssets:
+    en-US: Some graphics used are CC BY-NC-SA and thus not libre.
+  TetheredNet:
+    en-US: Relies on lichess.org
+Categories:
+  - Games
+License: GPL-3.0-or-later
+AuthorName: vovagorodok
+SourceCode: https://github.com/vovagorodok/blichess/
+IssueTracker: https://github.com/vovagorodok/blichess/issues
+Translation: https://crowdin.com/project/lichess
+Changelog: https://github.com/vovagorodok/blichess/releases
+Donate: https://lichess.org/patron
+
+AutoName: Blichess
+
+RepoType: git
+Repo: https://github.com/vovagorodok/blichess
+
+Builds:
+  - versionName: 8.0.0+ble1.0.0
+    versionCode: 3
+    commit: 2873b71bc171fa3a8d5fb6f14f920a0c1c223aa5
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble1.0.1
+    versionCode: 5
+    commit: 3c592a9b3dbbda92e0361760a7f09be97bf199ba
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble1.0.2
+    versionCode: 6
+    commit: 243ecd0c7b0aee13c3a29c7b16a0ba685bdcb1cb
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble1.0.3
+    versionCode: 8
+    commit: 464ef1746eee20d24d712247ccea8ce3e9ccde0b
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble1.0.4
+    versionCode: 9
+    commit: 0aae4c3bce25ce63f3b599e49de95b719bfb6bd3
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble1.1.0
+    versionCode: 10
+    commit: caa5c8c973b133d335f6e216edd3ec95b1e73ef0
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble1.1.1
+    versionCode: 11
+    commit: 755d95b156e7eda914ae7a5edeede242228e7a15
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble1.1.2
+    versionCode: 12
+    commit: eaf15a9200e8250bd087119eec90b2f29f38ca27
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.0.4
+    versionCode: 17
+    commit: 8b86c34f5da0ab85c2c5e1354e6c001e843c65d7
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.0.5
+    versionCode: 18
+    commit: 0b380d812775de33800ce3ef7b155cb6e4121a4d
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.1.0
+    versionCode: 19
+    commit: 12450abdec0aaf9ce79cdb553650fac747d1d46d
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.1.1
+    versionCode: 20
+    commit: 2c587035003670ff4c73b0aa0dab2ddede5cf8e8
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.1.2
+    versionCode: 21
+    commit: a3aa8fd8137cbb4aac54cf3843361fe517b4bdb3
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make npm
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.2.0
+    versionCode: 22
+    commit: 01776ec0b4789f657d4b6cff1f204d15c721dd3a
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless npm
+      - update-alternatives --auto java
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.2.1
+    versionCode: 23
+    commit: 039e88e04254a921fbdcab48110f2ea9f0daaf23
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless npm
+      - update-alternatives --auto java
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.3.0
+    versionCode: 24
+    commit: 81811ec17d349240a8b3d15887a080d81d42ee93
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless npm
+      - update-alternatives --auto java
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.3.1
+    versionCode: 25
+    commit: e6e2a81a1952b1fe27f9ab922be5bce2d4021df3
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless npm
+      - update-alternatives --auto java
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+  - versionName: 8.0.0+ble2.4.0
+    versionCode: 26
+    commit: e78312f2c67ff1166769d45127848a7acca4fad3
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ make
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless npm
+      - update-alternatives --auto java
+    init:
+      - pushd ../..
+      - npm install
+      - touch www/index.html
+      - npx cap update android
+      - npm run fetch-nnue
+      - sed 's/lichess\.dev/lichess.org/g' appconfig.dev.json > appconfig.prod.json
+    gradle:
+      - yes
+    rm:
+      - ios/
+    scandelete:
+      - node_modules/
+    build:
+      - pushd ../..
+      - APP_MODE=release APP_CONFIG=prod npm run build
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 8.0.0+ble2.4.0
+CurrentVersionCode: 26

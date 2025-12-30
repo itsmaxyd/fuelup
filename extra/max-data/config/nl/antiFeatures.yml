@@ -1,0 +1,32 @@
+Ads:
+  description: Deze app bevat advertenties
+  name: Advertenties
+DisabledAlgorithm:
+  description: Deze app heeft een zwakke beveiligingshandtekening
+  name: Ondertekend met een onveilige sleutel
+KnownVuln:
+  description: Deze app bevat een bekend probleem in de beveiliging
+  name: Bekende Kwetsbaarheid
+NSFW:
+  description: Deze app bevat gegevens die niet overal mag worden gepubliceerd of zichtbaar is
+  name: NSFW
+NoSourceSince:
+  name: De broncode is niet meer beschikbaar, updates zijn niet mogelijk.
+NonFreeAdd:
+  description: Deze app promoot niet-vrije add-ons
+  name: Niet-vrije uitbreidingen
+NonFreeAssets:
+  description: Deze app bevat niet-vrije elementen
+  name: Niet-vrije onderdelen
+NonFreeDep:
+  description: Deze app vereist andere niet-vrije apps
+  name: Niet-vrije afhankelijkheden
+NonFreeNet:
+  description: Deze app promoot niet-vrije netwerkdiensten
+  name: Niet-vrije netwerkdiensten
+Tracking:
+  description: Deze app houdt je activiteiten bij en rapporteert ze
+  name: Tracering
+TetheredNet:
+  description: Deze app promoot is volledig afhankelijk van een bepaalde netwerk dienst.
+  name: Gekoppelde Netwerk Diensten

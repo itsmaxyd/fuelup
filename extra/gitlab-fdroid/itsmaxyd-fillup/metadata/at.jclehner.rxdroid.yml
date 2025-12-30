@@ -1,0 +1,113 @@
+AntiFeatures:
+  NonFreeAssets:
+    en-US: App contains CC non-commercial licensed artwork.
+Categories:
+  - Sports & Health
+  - Time
+License: GPL-3.0-or-later
+WebSite: https://github.com/jclehner/rxdroid
+SourceCode: https://github.com/jclehner/rxdroid
+IssueTracker: https://github.com/jclehner/rxdroid/issues
+Translation: https://crowdin.com/project/rxdroid
+Changelog: https://github.com/jclehner/rxdroid/blob/HEAD/ChangeLog.md
+
+Description: |-
+  A simple medication reminder. Also keeps track of your pill count and required
+  refills.
+
+  Help with translating RxDroid to your language at
+  <a href="https://crowdin.com/project/rxdroid">crowdin.com</a>!
+
+RepoType: git
+Repo: https://github.com/jclehner/rxdroid.git
+
+Builds:
+  - versionName: 0.9.32.2
+    versionCode: 9322
+    commit: v0.9.32.2
+    gradle:
+      - yes
+    srclibs:
+      - ShowCase-jclehner@fd3318b6a27f13159b57efa0c56d1c1e9d793c60
+    rm:
+      - .m2repo/
+    prebuild:
+      - sed -i -e 's#file://$pwd/.m2repo#https://jitpack.io#' -e "s/warning 'MissingTranslation'/checkReleaseBuilds
+        false/" -e "s/'at.jclehner.rxdroid.localmaven:ShowcaseView:9999'/(name:'ShowcaseView',
+        ext:'aar')/" -e '/theTask.dependsOn/d' build.gradle
+      - mkdir libs/
+      - echo "repositories { flatDir { dirs 'libs' } }" >> build.gradle
+    build:
+      - pushd $$ShowCase-jclehner$$
+      - gradle assembleRelease
+      - popd
+      - mv $$ShowCase-jclehner$$/library/build/libs/library.aar libs/ShowcaseView.aar
+
+  - versionName: 0.9.33.1
+    versionCode: 9331
+    commit: v0.9.33.1
+    gradle:
+      - yes
+
+  - versionName: 0.9.33.2
+    versionCode: 9332
+    commit: v0.9.33.2
+    gradle:
+      - yes
+
+  - versionName: 0.9.34
+    versionCode: 9340
+    commit: v0.9.34
+    gradle:
+      - yes
+
+  - versionName: 0.9.34.2
+    versionCode: 9342
+    commit: daf68a02116f854d0ec10053752667ce8a5f7072
+    gradle:
+      - yes
+
+  - versionName: 0.9.35
+    versionCode: 9350
+    commit: 6291ea4701c6fe088bb2d7879875f13a73e863e8
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.9.36
+    versionCode: 9360
+    commit: 621235437cd225651a4d7031618746e3f3f8f5cf
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.9.37
+    versionCode: 9370
+    commit: 6a84a4fe009d54dd2fe3e9f48ca1298c0c337d40
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.9.38
+    versionCode: 9380
+    commit: bed18eece5564714f4752c8e792f2d739775656d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.9.38
+CurrentVersionCode: 9380

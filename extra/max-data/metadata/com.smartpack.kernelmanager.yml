@@ -1,0 +1,215 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Uses integrated update checker.
+Categories:
+  - System
+License: GPL-3.0-or-later
+AuthorName: sunilpaulmathew
+AuthorEmail: smartpack.org@gmail.com
+AuthorWebSite: https://smartpack.github.io/
+WebSite: https://smartpack.github.io/spkm/
+SourceCode: https://github.com/SmartPack/SmartPack-Kernel-Manager
+IssueTracker: https://github.com/SmartPack/SmartPack-Kernel-Manager/issues
+Translation: https://poeditor.com/join/project?hash=qWFlVfAlp5
+Changelog: https://github.com/SmartPack/SmartPack-Kernel-Manager/releases
+Donate: https://smartpack.github.io/donation
+Liberapay: sunilpaulmathew
+
+AutoName: SmartPack-Kernel Manager
+
+RepoType: git
+Repo: https://github.com/SmartPack/SmartPack-Kernel-Manager
+
+Builds:
+  - versionName: '14.8'
+    versionCode: 148
+    commit: v14.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '15.2'
+    versionCode: 152
+    commit: v15.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '15.4'
+    versionCode: 154
+    commit: v15.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '15.5'
+    versionCode: 155
+    commit: v15.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '15.6'
+    versionCode: 156
+    commit: v15.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '15.8'
+    versionCode: 158
+    commit: v15.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '15.9'
+    versionCode: 159
+    commit: v15.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '16.1'
+    versionCode: 161
+    commit: v16.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v16.3
+    versionCode: 163
+    commit: v16.3
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v16.4
+    versionCode: 164
+    commit: v16.4
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v16.5
+    versionCode: 165
+    commit: v16.5
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v16.6
+    versionCode: 166
+    commit: v16.6
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v16.7
+    versionCode: 167
+    commit: v16.7
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v16.8
+    versionCode: 168
+    commit: 748d681ab3fb577dce0118e9cfb04fd3de05cbe0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v16.9
+    versionCode: 169
+    commit: a9cee22893d1993a557492cb3c2ed202c97eec04
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v17.0
+    versionCode: 170
+    commit: f263020a0b6cad6daccbb8089e6ebc29dd9289c0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v17.1
+    versionCode: 171
+    commit: d2737c316a3121f888fc99ecffbf7b690fa3f864
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v17.2
+    versionCode: 172
+    commit: a805463ba76eea4aa93fa17cfa2a2294a3594e89
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v17.3
+    versionCode: 173
+    commit: 33ea333d823d4fc2df714052755269d5441b6aa2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: v17.4
+    versionCode: 174
+    commit: 6e9b3929c3f1b0c13d54cbac70cf0e2d922f46c1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v17.5
+    versionCode: 175
+    commit: 0f09edea6a15116f013efe1729da2fa5beea8b71
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v17.6
+    versionCode: 176
+    commit: b1df35b34d827c39102d89a658377056b6a1fb90
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v17.7
+    versionCode: 177
+    commit: c886fc8eae90e74fcc6784813be28feca5b54080
+    subdir: app
+    gradle:
+      - fdroid
+
+MaintainerNotes: app seems to have internal auto-updater (hence NonFreeNet+NonFreeAdd
+  until disabled)
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v17.7
+CurrentVersionCode: 177

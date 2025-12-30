@@ -1,0 +1,42 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-or-later
+SourceCode: https://notabug.org/wael/Metronome
+IssueTracker: https://notabug.org/wael/Metronome/issues
+
+AutoName: Metronome
+Description: |-
+  Simple metronome app for musicians.
+
+  This program was born out of my frustration to find a simple, elegant and useful
+  metronome app, so my solution was simple: make what I want!
+
+  In addition to being a simple BPM-based metronome, the program offers the
+  ability to manually tap in a tempo and it also offers the option to save and
+  restore presets.
+
+RepoType: git
+Repo: https://notabug.org/wael/Metronome
+
+Builds:
+  - versionName: NKT275
+    versionCode: 3
+    commit: 6d9a6be6955c2ddba95cddccb811c7d0046b9ec6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: Thorium
+    versionCode: 5
+    commit: a174dbf3ad9001eb44084db723ca9b15f7a73862
+    subdir: app
+    gradle:
+      - yes
+
+MaintainerNotes: app id changed to tech.waelk.radioactive.metronome
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: Thorium
+CurrentVersionCode: 5

@@ -1,0 +1,127 @@
+Categories:
+  - Multimedia
+  - Music Practice Tool
+  - Science & Education
+License: GPL-3.0-or-later
+AuthorName: Remy Malmartel
+SourceCode: https://github.com/grizzlyfute/Diatronome
+Donate: https://www.paypal.com/donate/?hosted_button_id=SJJNG9XBY59W4
+Liberapay: grizzlyfute
+
+Name: Diatronome
+AutoName: Diatronome
+
+RepoType: git
+Repo: https://github.com/grizzlyfute/Diatronome.git
+Binaries: https://github.com/grizzlyfute/Diatronome/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 1.0.2
+    versionCode: 3
+    commit: 1.0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 4
+    commit: 0122133578e0c05437f02cd9a7981f599257cef8
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 5
+    commit: 500a9b97b61ecfd65c0bd26b86ff7b71b4480a64
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.6
+    versionCode: 6
+    commit: 7114f4592ce0da5fad44efff78e9a632690259e5
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.7
+    versionCode: 7
+    commit: beb4790f0327109da660f019fea1c8f65878e377
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.8
+    versionCode: 8
+    commit: dbf0d5c0cd4269f945bcb376c464bde759c5b233
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.9
+    versionCode: 9
+    commit: 3a7976d05b39875f01e5a5a63c03f46979985265
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.10
+    versionCode: 10
+    commit: 43f52f63beaa8bcbee3d64a33cd3558a44fd7b09
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.11
+    versionCode: 11
+    commit: 1776f43fd98ccd24a4a1e57411a26fd04f8fe747
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 13ddc06feb35a218ff0d2cf8374fe8ab29b97a3cd66305eed420f4c1b532958e
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.11
+CurrentVersionCode: 11

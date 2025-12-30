@@ -1,0 +1,29 @@
+Categories:
+  - Note
+  - Writing
+License: Apache-2.0
+AuthorName: Kyakujin
+AuthorEmail: kyakujin.app@gmail.com
+SourceCode: https://archive.softwareheritage.org/browse/origin/https://github.com/Kyakujin/TagNotepad/directory/
+IssueTracker: https://github.com/Kyakujin/TagNotepad/issues
+
+AutoName: TAG Notepad
+Description: Take notes and assign tags to them, making them easier to find, group
+  and use.
+
+RepoType: git
+Repo: https://github.com/Kyakujin/TagNotepad.git
+
+Builds:
+  - versionName: 1.0.2
+    versionCode: 3
+    commit: 5f68
+    srclibs:
+      - ActionBarSherlock@4.4.0
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.0.2
+CurrentVersionCode: 3
+
+NoSourceSince: 1.0.2

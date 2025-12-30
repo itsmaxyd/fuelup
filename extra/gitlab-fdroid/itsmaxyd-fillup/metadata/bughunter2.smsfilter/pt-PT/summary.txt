@@ -1,0 +1,1 @@
+Filtrar mensagens de texto por palavra-chave ou endereço

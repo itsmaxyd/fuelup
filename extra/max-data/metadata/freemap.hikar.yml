@@ -1,0 +1,31 @@
+Categories:
+  - Navigation
+License: GPL-3.0-only
+AuthorName: Nick Whitelegg
+SourceCode: https://gitlab.com/nickw1/Hikar
+IssueTracker: https://gitlab.com/nickw1/Hikar/issues
+
+AutoName: Hikar
+
+RepoType: git
+Repo: https://gitlab.com/nickw1/Hikar.git
+
+Builds:
+  - versionName: 0.3.1
+    versionCode: 15
+    commit: 0.3.1f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.2
+    versionCode: 16
+    commit: ccf690963fbb20e4504335a43ae3e9c97cffdc5e
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.3.2
+CurrentVersionCode: 16

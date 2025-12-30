@@ -1,0 +1,52 @@
+Connectivity:
+  name: Conectividade
+Development:
+  name: Desenvolvemento
+Games:
+  name: Xogos
+Graphics:
+  name: Gráficas
+Internet:
+  name: Internet
+Money:
+  name: Diñeiro
+Multimedia:
+  name: Multimedia
+Navigation:
+  name: Navigación
+Phone & SMS:
+  name: Teléfono móbil e SMS
+Reading:
+  name: Lectura
+Science & Education:
+  name: Ciencia e educación
+Security:
+  name: Seguranza
+Sports & Health:
+  name: Deportes e saúde
+System:
+  name: Sistema
+Theming:
+  name: Aparencia
+Time:
+  name: Tempo
+Writing:
+  name: Escrita
+App Store & Updater:
+  name: Tenda de aplicacións e actualizador
+Bookmark:
+  name: Marcadores
+Browser:
+  name: Navegador
+Calculator:
+  name: Calculadora
+Calendar & Agenda:
+  name: Calendario e axenda
+Cloud Storage & File Sync:
+  name: Almacenamento na nube e sincronización
+Draw:
+  name: Debuxo
+Ebook Reader:
+  name: Lector de libros electrónicos
+Email:
+  name: Correo electrónico

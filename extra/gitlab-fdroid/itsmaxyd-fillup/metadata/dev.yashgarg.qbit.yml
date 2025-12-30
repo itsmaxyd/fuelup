@@ -1,0 +1,97 @@
+Categories:
+  - Development
+  - Internet
+License: GPL-3.0-only
+AuthorName: Yash Garg
+AuthorEmail: me@yashgarg.dev
+AuthorWebSite: https://yashgarg.dev
+WebSite: https://github.com/Yash-Garg/qBittorrent-Manager
+SourceCode: https://github.com/Yash-Garg/qBittorrent-Manager
+IssueTracker: https://github.com/Yash-Garg/qBittorrent-Manager/issues
+Donate: https://github.com/sponsors/Yash-Garg
+
+AutoName: qBittorrent Manager
+
+RepoType: git
+Repo: https://github.com/Yash-Garg/qBittorrent-Manager.git
+Binaries: https://github.com/Yash-Garg/qBittorrent-Manager/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: v0.1.7-d6feeee-release
+    versionCode: 7
+    commit: v0.1.7-d6feeee-release
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/automation-plugins/build/
+      - build-logic/kotlin-plugins/build/
+
+  - versionName: v0.1.8-fce71ed-release
+    versionCode: 8
+    commit: fce71edb02f1a32664dfab938bec8dba4f0dfbe5
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/automation-plugins/build/
+      - build-logic/kotlin-plugins/build/
+
+  - versionName: v0.1.9-ec3703f-release
+    versionCode: 9
+    commit: ec3703f8da4c05278d7d2b95da158b24b49e40d4
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: v0.2.3-eadcb6f-release
+    versionCode: 15
+    commit: eadcb6f9759af1e8b1a7f56515f847483ac0428b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild: sed -i -e '/sonatype/d' ../settings.gradle.kts
+    scandelete:
+      - build-logic
+
+  - versionName: v0.2.4-3804811-release
+    versionCode: 16
+    commit: 3804811bd1e5f7cb6993b361f30757be1fdd1bc2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild: sed -i -e '/sonatype/d' ../settings.gradle.kts
+    scandelete:
+      - build-logic
+
+  - versionName: v0.2.5-f1a530c-release
+    versionCode: 17
+    commit: f1a530cee781bf67c48bedbc7f073f8ee10d864f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild: sed -i -e '/sonatype/d' ../settings.gradle.kts
+    scandelete:
+      - build-logic
+
+AllowedAPKSigningKeys: d9249f33f26f9f579f9e0ac8d30186721c48655ad206c90ba1a9a1cf0023ce97
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)||
+CurrentVersion: v0.2.5-f1a530c-release
+CurrentVersionCode: 17

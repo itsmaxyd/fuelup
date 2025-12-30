@@ -1,0 +1,33 @@
+Ads:
+  description: このアプリは広告を表示します
+  name: 広告
+DisabledAlgorithm:
+  description: このアプリは弱いセキュリティ署名を使用しています
+  name: 安全でないアルゴリズムで署名されました
+KnownVuln:
+  description: このアプリは既知のセキュリティ脆弱性が含まれています
+  name: 既知の脆弱性
+NSFW:
+  description: このアプリにはあらゆる場所に公開できるわけではないコンテンツが含まれている
+  name: NSFW
+NoSourceSince:
+  name: 出典がありません
+  description: ソースコードが現在入手不可能で、更新出来ません
+NonFreeAdd:
+  description: このアプリは不自由なアドオンを推奨します
+  name: 不自由なアドオン
+NonFreeAssets:
+  description: このアプリには不自由なアセットが含まれています
+  name: 不自由なアセット
+NonFreeDep:
+  description: このアプリは他の不自由なアプリに依存します
+  name: 非フリーの依存パッケージ
+NonFreeNet:
+  description: このアプリは不自由なネットワークサービスを推奨します
+  name: 不自由なネットワークサービス
+Tracking:
+  description: このアプリはあなたの操作を記録し報告します
+  name: 追跡
+TetheredNet:
+  description: このアプリはネットワークサービスの特定のインスタンスに完全に依存します
+  name: テザードネットワークサービス

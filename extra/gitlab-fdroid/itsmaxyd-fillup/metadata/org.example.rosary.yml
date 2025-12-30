@@ -1,0 +1,41 @@
+Categories:
+  - Reading
+License: GPL-3.0-only
+AuthorName: JF
+SourceCode: https://github.com/jfcolom/rosary
+IssueTracker: https://github.com/jfcolom/rosary/issues
+
+AutoName: Rosary
+Description: This is a very simple app helping christian users to pray the Rosary.
+  It basically shows biblical texts for the mysteries in an ordered way, and simulate
+  beads to count Hail Mary prayers.
+
+RepoType: git
+Repo: https://github.com/jfcolom/rosary
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 1
+    commit: v0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.2'
+    versionCode: 2
+    commit: v0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.1
+    versionCode: 3
+    commit: v0.2.1
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.2.1
+CurrentVersionCode: 3

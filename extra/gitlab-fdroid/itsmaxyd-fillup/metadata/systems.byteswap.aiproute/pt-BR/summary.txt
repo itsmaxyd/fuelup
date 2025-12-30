@@ -1,0 +1,1 @@
+Mude as rotas de IP para a interface Wi-Fi

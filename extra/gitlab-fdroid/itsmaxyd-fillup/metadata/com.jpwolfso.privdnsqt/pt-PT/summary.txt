@@ -1,0 +1,1 @@
+Alternar e configurar rapidamente o DNS Privado introduzido no Android 9.0

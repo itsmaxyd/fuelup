@@ -1,0 +1,286 @@
+Categories:
+  - Launcher
+  - System
+License: GPL-3.0-only
+SourceCode: https://github.com/JackEblan/EinsteinLauncher
+IssueTracker: https://github.com/JackEblan/EinsteinLauncher/issues
+Changelog: https://github.com/JackEblan/EinsteinLauncher/releases
+
+AutoName: Einstein Launcher
+
+RepoType: git
+Repo: https://github.com/JackEblan/EinsteinLauncher.git
+Binaries: https://github.com/JackEblan/EinsteinLauncher/releases/download/v%v/EinsteinLauncher-v%v.apk
+
+Builds:
+  - versionName: 0.1.0-alpha9
+    versionCode: 9
+    commit: v0.1.0-alpha9
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.1.1-alpha
+    versionCode: 11
+    commit: 34435125e6de0b42cc3a46337bc4b459aad2e1cc
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.1.2-alpha
+    versionCode: 12
+    commit: f33a5103b10cfa5aff55041d3f07e376ef676cea
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.1.3-alpha
+    versionCode: 13
+    commit: fc5a3d684f47769c484ad7a847716ba17752f5fc
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.1.4-alpha
+    versionCode: 14
+    commit: a3624359b97c62ba42197d18f79500fed983fe64
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.1.5-alpha
+    versionCode: 15
+    commit: f850add274f85b200fcbd2f95bd64d4f4c215161
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.1.7-alpha
+    versionCode: 17
+    commit: 95ee07e33822560ace56bc61638e3fed1e4cf077
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.1.8-alpha
+    versionCode: 18
+    commit: 10cda7fabf5a7ad14155fb3eb172b467320d893d
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.1.9-alpha
+    versionCode: 19
+    commit: 8fb6a352aad0b7a6d78b65b4086c1b3fe37cbc0d
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.2.0-alpha
+    versionCode: 20
+    commit: 4615be61390775c7b975c9340ba6638def779229
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.2.2-alpha
+    versionCode: 22
+    commit: 21a5c73b243b2eb2d08c4d5a2d07d4484b750613
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.2.3-alpha
+    versionCode: 23
+    commit: 1d07a12c04e95cbcbc25aa67cc04abd4e78b5828
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.2.4-alpha
+    versionCode: 24
+    commit: f71fa99470319c7a53ae80772059ad177c4bd6b2
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.2.5-alpha
+    versionCode: 25
+    commit: 93cb3d3ce71a014d682699cee0f00104859549d6
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.2.7-alpha
+    versionCode: 27
+    commit: 5868281931a775f873d76723328f7402d64d27bf
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.2.8-alpha
+    versionCode: 28
+    commit: 2ad4ad9612e882924ad399f5ee55ea53c0e209cc
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.2.9-alpha
+    versionCode: 29
+    commit: fc88c1564633cd17c87fb10517e5efed13bd2eca
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.3.0-alpha
+    versionCode: 30
+    commit: 876824df3e2202eac7bfb661454d29d07bc355ca
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.3.1-alpha
+    versionCode: 31
+    commit: b63ef854982be946525001cb01e42426a75d94ef
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.3.2-alpha
+    versionCode: 32
+    commit: 41d2ef378596a0c756e24cd310750839fbbb38b5
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+AllowedAPKSigningKeys: 1eaea35caae68379f7d4617f283a33805afecec36ab484174562731f756d5d49
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.3.2-alpha
+CurrentVersionCode: 32

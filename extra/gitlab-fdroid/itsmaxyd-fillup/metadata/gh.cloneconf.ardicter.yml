@@ -1,0 +1,61 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Internet
+  - Reading
+  - Science & Education
+License: MIT
+AuthorName: Clone Conflict
+AuthorEmail: cloneconf@gmail.com
+SourceCode: https://codeberg.org/cloneconf/Ardicter
+IssueTracker: https://codeberg.org/cloneconf/Ardicter/issues
+
+Name: Ardicter
+
+RepoType: git
+Repo: https://codeberg.org/cloneconf/Ardicter
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 2
+    commit: 35af9a9b2aff51f059e5b022346d59bb36010c9f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 3
+    commit: 678d70b1601d9ecb79b64200b959b860d54fad2e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+MaintainerNotes: Developer overwrote upstream repo with a single broken "Endgame"
+  commit.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '3.0'
+CurrentVersionCode: 3
+
+NoSourceSince: '3.0'

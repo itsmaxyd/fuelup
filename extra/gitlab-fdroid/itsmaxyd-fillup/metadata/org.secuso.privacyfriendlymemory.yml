@@ -1,0 +1,78 @@
+Categories:
+  - Games
+License: GPL-3.0-only
+AuthorName: SECUSO - Security Usability Society
+AuthorEmail: contact@secuso.org
+AuthorWebSite: https://secuso.aifb.kit.edu/english/105.php
+WebSite: https://secuso.aifb.kit.edu/english/Memo_Game.php
+SourceCode: https://github.com/SecUSo/privacy-friendly-memo-game
+IssueTracker: https://github.com/SecUSo/privacy-friendly-memo-game/issues
+Changelog: https://github.com/SecUSo/privacy-friendly-memo-game/blob/HEAD/CHANGELOG.md
+
+AutoName: Memo Game
+
+RepoType: git
+Repo: https://github.com/SecUSo/privacy-friendly-memo-game
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: v.1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 3
+    commit: v1.0.2
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - gradle
+
+  - versionName: 1.0.5
+    versionCode: 6
+    commit: v1.0.5
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - gradle
+
+  - versionName: '1.1'
+    versionCode: 7
+    commit: 4d262cffecebe110747d7b8a4cd4ba8af7a9af27
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 8
+    commit: ff4db2893a15588a61b3c157281159e801705dcd
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 9
+    commit: c884b73d3762d0e990a251b19f7ef2bb451cb906
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.1.3-google
+    versionCode: 100
+    commit: 81d884fb0dcc74a13d280c938b657efb893d905e
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.3-google
+CurrentVersionCode: 100

@@ -1,0 +1,435 @@
+Categories:
+  - Calendar & Agenda
+  - Note
+  - Task
+  - Writing
+License: GPL-3.0-or-later
+WebSite: https://orgzlyrevived.com/
+SourceCode: https://github.com/orgzly-revived/orgzly-android-revived
+IssueTracker: https://github.com/orgzly-revived/orgzly-android-revived/issues
+Translation: https://toolate.othing.xyz/projects/orgzly-revived/
+
+AutoName: Orgzly Revived
+
+RepoType: git
+Repo: https://github.com/orgzly-revived/orgzly-android-revived.git
+Binaries: https://github.com/orgzly-revived/orgzly-android-revived/releases/download/v%v/orgzly-revived-fdroid-%v.apk
+
+Builds:
+  - versionName: 1.8.12
+    versionCode: 177
+    commit: 8ab66990b29ce9f9401db4cdaeb1aa8190f140a9
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.14
+    versionCode: 183
+    commit: aa9a8ff59a42877fed2b69ea489c87fe17ddb557
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.16
+    versionCode: 191
+    commit: 91a47724821a2c4bd92c0e6f529ed268396edc9b
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.17
+    versionCode: 194
+    commit: dc4e729d3d3eaf66b3e56e1b776af17fc14e96cf
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.18
+    versionCode: 196
+    commit: 8ad1280c6edb61335bf489aa286e96276a1abab1
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.19
+    versionCode: 198
+    commit: 170436f178cc48622d8763fb7550e0953ad83f6a
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.21
+    versionCode: 202
+    commit: 5b64921eb769c8f156843344f65f59a086138414
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.22
+    versionCode: 208
+    commit: ec740101639974849ecdab2010e683446956f2df
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.23
+    versionCode: 210
+    commit: 6eff256f83e1961a05b1b8e5aef5eabb1e186ee0
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.24
+    versionCode: 212
+    commit: 201a086b123a24e7e0e3909091fe4d4c7b766c37
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@719c3471fd1bcb807510dc8e035a69e395ca37f4
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.25
+    versionCode: 214
+    commit: 33d1f7bc88cbd1b8bd102e1fd382d33dd8fd30a1
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@719c3471fd1bcb807510dc8e035a69e395ca37f4
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.26
+    versionCode: 217
+    commit: 838dcd6fe9796ac662bfda39542ad9b9aaf208a4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@719c3471fd1bcb807510dc8e035a69e395ca37f4
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.27
+    versionCode: 221
+    commit: fd27c422419532427152507288006d01919f6d9b
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.28
+    versionCode: 223
+    commit: 3726d86b55261ed7ae6e02f5c399c852012fea7d
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.29
+    versionCode: 225
+    commit: cdb42c167671d4aaa254cf2aabd71a02e01c6b4b
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.30
+    versionCode: 227
+    commit: 6b05513200d75828712a81567d2bb0d450b413cd
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.31
+    versionCode: 228
+    commit: 83e797101f525ed03432d7ba93b8096431561de7
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.32
+    versionCode: 230
+    commit: 3337cd96420b3f07b62a7ac0afed2d28889ab784
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.33
+    versionCode: 232
+    commit: 9fd4718ee4bc9b58fa92827be05039c7c940ae95
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.34
+    versionCode: 234
+    commit: 26a0a06865735309bde164b43db055598b7b8515
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.35
+    versionCode: 236
+    commit: 6632ecbd26eb2aedb71d0e94493ab8b5c4134189
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.36
+    versionCode: 238
+    commit: 6bc552201cb99866d2391099d3247ac59fb90027
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.37
+    versionCode: 240
+    commit: ac78764b99e8730ab4c9cf11e8c8038f1d75a0db
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.8.38
+    versionCode: 244
+    commit: a0da89d958cfaf8dbf0782d0eca47643b6b9f6c1
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.9.0
+    versionCode: 247
+    commit: 6c9baf6c1dd007b3fe4f734611516319bafdc6ec
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.10.0
+    versionCode: 251
+    commit: 1ea23047501228d8f1c4bd7e2229dfb12a6576c0
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.11.0
+    versionCode: 256
+    commit: 8c47de755d6388d73b6c09f8f176f889217744a4
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.12.0
+    versionCode: 261
+    commit: 984d2df68110164bbe19e1f10d794cc96504d1a4
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.12.1
+    versionCode: 263
+    commit: 4407ea3013eeeddd4740d578923f10854495ba7a
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.13.1
+    versionCode: 266
+    commit: b55a0230f41202686bfa278844e8dc2e71a4d70f
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: 1.14.0
+    versionCode: 268
+    commit: 1097b592ff70e00d99f250d3c254e2185940c149
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+AllowedAPKSigningKeys: 6fc9c2e22d07d25ce77e2e963455053c38b8318a1a2491b3ed95d50cba85493d
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9\.]+$
+CurrentVersion: 1.14.0
+CurrentVersionCode: 268

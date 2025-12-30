@@ -1,0 +1,298 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Twitch itself is not libre.
+Categories:
+  - Internet
+  - Multimedia
+License: GPL-3.0-only
+SourceCode: https://github.com/twireapp/Twire
+IssueTracker: https://github.com/twireapp/Twire/issues
+Translation: https://hosted.weblate.org/engage/twire
+Changelog: https://github.com/twireapp/Twire/releases
+
+AutoName: Twire
+Description: |-
+  Twire is an open source, ad free Twitch browser and stream player for Android.
+  You can select multiple themes and also login with your twitch account.
+  You can also follow and unfollow streamers through the app.
+
+  Please note that the chat is only available if you login to your account.
+
+RepoType: git
+Repo: https://github.com/twireapp/Twire.git
+
+Builds:
+  - versionName: 1.9.2
+    versionCode: 502
+    commit: v1.9.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.6
+    versionCode: 506
+    commit: v1.9.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.7
+    versionCode: 507
+    commit: v1.9.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.8
+    versionCode: 508
+    commit: v1.9.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.9
+    versionCode: 509
+    commit: v1.9.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 510
+    commit: v2.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 511
+    commit: v2.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.512'
+    versionCode: 512
+    commit: v2.512
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.513'
+    versionCode: 513
+    commit: v2.513
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.514'
+    versionCode: 514
+    commit: v2.514
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.515'
+    versionCode: 515
+    commit: v2.515
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.516'
+    versionCode: 516
+    commit: v2.516
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.517'
+    versionCode: 517
+    commit: v2.517
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.518'
+    versionCode: 518
+    commit: v2.518
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.519'
+    versionCode: 519
+    commit: v2.519
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.0
+    versionCode: 520
+    commit: v2.9.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.1
+    versionCode: 521
+    commit: v2.9.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.2
+    versionCode: 522
+    commit: v2.9.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.3
+    versionCode: 523
+    commit: v2.9.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.0
+    versionCode: 524
+    commit: f17e954b227b3f66c8f4747bb4e7fa9d5b68267a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.10.1
+    versionCode: 525
+    commit: 8043c8b5eacb75e4107644eae9c4bf05424108d1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.10.2
+    versionCode: 526
+    commit: db59e1f60fa68e73794d602dac458e8c17c0b110
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.10.3
+    versionCode: 527
+    commit: dd882e0f0ed9a2f58ceca29db075953e0c376bb4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.10.4
+    versionCode: 528
+    commit: 039449aa13357e52bc73b8405510c19f47c36a7e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.10.5
+    versionCode: 529
+    commit: 86caaed5fe6bef6bb8e06dadd1ac8a05d7daf365
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.6
+    versionCode: 530
+    commit: 1a51815be9fdc12c7c4a2332d304fec8127b5b5b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.7
+    versionCode: 531
+    commit: 2782274b6fcd6ae7b9a94b0edc2c824d33840dba
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.8
+    versionCode: 532
+    commit: bd9adfa0e5baa33a7301f66f3169ebe49d9f7ad1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.10.9
+    versionCode: 533
+    commit: bf9b31412697eeebdd7db0d4ba973d22967d84e2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.11.0
+    versionCode: 534
+    commit: 43572429e82bab7fa3f7de0bbbb2990dd2874b85
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.12.0
+    versionCode: 535
+    commit: 5bf1776425ec0e3659c3b82b74b987d3815c7f56
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/i sentry { autoUploadProguardMapping = false }'
+      build.gradle
+
+  - versionName: 2.12.1
+    versionCode: 536
+    commit: cb64fbc5b9363f2e2ed1ed2b10b666e21b82bf73
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/i sentry { autoUploadProguardMapping = false }'
+      build.gradle
+
+  - versionName: 2.12.2
+    versionCode: 537
+    commit: deb5232296ca0e10904c7a377e4b13afc189c458
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.12.3
+    versionCode: 538
+    commit: ae1639b12adf71141e9eff507888c5125e129a61
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.12.3
+CurrentVersionCode: 538

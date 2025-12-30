@@ -1,0 +1,326 @@
+Categories:
+  - Games
+License: GPL-3.0-only
+AuthorName: Simon Steinmann
+SourceCode: https://github.com/simonste/jasstafel
+IssueTracker: https://github.com/simonste/jasstafel/issues
+
+AutoName: Jasstafel
+
+RepoType: git
+Repo: https://github.com/simonste/jasstafel.git
+
+Builds:
+  - versionName: 4.0.2
+    versionCode: 59
+    commit: v4.0.2
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.0.3
+    versionCode: 60
+    commit: 0cafc9379fde82290c4ce702608eb20f00f0266c
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.1.0
+    versionCode: 61
+    commit: fac36cfe7cce575bcce89fa0b83ab786fb08bace
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.1.1
+    versionCode: 62
+    commit: 190e65e3d1e7d87039a39bb5be250a582c0d242a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.1.2
+    versionCode: 63
+    commit: 2ae235fd1a3e2cc9ec2aaecf52058b08c94913a4
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.1.3
+    versionCode: 64
+    commit: 84b66c29a57013c66949558b722bd1fa9d22e727
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.1.4
+    versionCode: 65
+    commit: 9e31029bb6e043487673d19314f1899747b6f66a
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.1.5
+    versionCode: 67
+    commit: c93a12d10ec0a196bc3e5effa8f7a33942eb5e45
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.1.6
+    versionCode: 68
+    commit: f549793737a88c3dbfc870227256ccee14bb4832
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.1.7
+    versionCode: 69
+    commit: b764c5b78d02b303456edf1330ad53d202276f43
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+  - versionName: 4.1.8
+    versionCode: 70
+    commit: 0713046fd9b483152d7a5dd98b8e44d5e7348901
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter config --no-analytics
+      - flutter/bin/flutter pub get
+      - sed -i -e '/ios/s/true/false/' pubspec.yaml
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - flutter/bin/flutter pub run flutter_launcher_icons
+      - flutter/bin/flutter gen-l10n
+      - flutter/bin/flutter packages pub run build_runner build --delete-conflicting-outputs
+      - flutter/bin/flutter build apk --release
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.*\+(\d+)|.|version:\s(.*)\+
+CurrentVersion: 4.1.8
+CurrentVersionCode: 70

@@ -1,0 +1,96 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Rely on OpenStreetMap
+Categories:
+  - Location Tracker & Sharer
+License: GPL-2.0-or-later
+AuthorName: GDR!
+AuthorEmail: gdr@gdr.name
+AuthorWebSite: https://gdr.name/
+SourceCode: https://github.com/gjedeer/mylocation
+IssueTracker: https://github.com/gjedeer/mylocation/issues
+Changelog: https://github.com/gjedeer/mylocation/releases
+
+AutoName: My Position
+Description: |-
+  Share your location, easily and lightly. Supports plain coordinates, geo:-URI,
+  OpenStreetMap- and GoogleMaps-Links.
+
+RepoType: git
+Repo: https://github.com/gjedeer/mylocation
+
+Builds:
+  - versionName: 1.2.1
+    versionCode: 8
+    commit: 1928c284570bdee12ce3a4b7f44a7118e20a30b4
+    target: android-23
+
+  - versionName: 1.2.2
+    versionCode: 9
+    commit: 9eeb159ffcbc337e16335ea269a0e4f65c71e4b0
+    target: android-23
+
+  - versionName: 1.2.3
+    versionCode: 10
+    commit: 1.2.3
+    target: android-23
+
+  - versionName: 1.2.4
+    versionCode: 11
+    commit: 1.2.4
+    target: android-23
+
+  - versionName: 1.2.5
+    versionCode: 12
+    commit: 1.2.5
+    subdir: app
+    gradle:
+      - yes
+    target: android-25
+
+  - versionName: 1.3.0
+    versionCode: 13
+    commit: 1.3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 14
+    commit: 1.3.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.2
+    versionCode: 15
+    commit: 1.3.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.3
+    versionCode: 16
+    commit: 1.3.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.5
+    versionCode: 18
+    commit: d3a78056923823725ba276991df349cad951419d
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - gradle
+      - app/libs
+    prebuild:
+      - sed -i -e 's/2.3.0+/7.4.0/' -e '/task wrapper/,/^}/d' -e '/repositories {/a
+        google()' ../build.gradle
+      - sed -i -e 's/compile /implementation /g' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.3.5
+CurrentVersionCode: 18

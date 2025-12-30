@@ -1,0 +1,22 @@
+Categories:
+  - Writing
+License: Apache-2.0
+WebSite: https://code.google.com/p/android-traditional-chinese-ime
+SourceCode: https://code.google.com/p/android-traditional-chinese-ime/source
+
+AutoName: 注音倉頡輸入法
+Description: See the website for a visual guide to setting it up.
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 113
+    commit: '13'
+    target: android-4
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.0'
+CurrentVersionCode: 113
+
+NoSourceSince: '1.0'

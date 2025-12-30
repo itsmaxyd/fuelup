@@ -1,0 +1,2288 @@
+Categories:
+  - Internet
+  - Messaging
+  - Voice & Video Chat
+License: GPL-3.0-only
+AuthorName: Arne-Brün Vogelsang
+AuthorEmail: arne@monocles.de
+WebSite: https://monocles.de/more/
+SourceCode: https://codeberg.org/monocles/monocles_chat
+IssueTracker: https://codeberg.org/monocles/monocles_chat/issues
+Translation: https://translate.codeberg.org/projects/monocles_chat/monocles_chat
+Donate: https://monocles.de/more/#donation-section
+
+AutoName: monocles chat
+
+RepoType: git
+Repo: https://codeberg.org/monocles/monocles_chat.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 100
+    commit: v1.0
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' build.gradle
+      - sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
+        build.gradle
+
+  - versionName: '1.1'
+    versionCode: 101
+    commit: v1.1
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' build.gradle
+      - sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
+        build.gradle
+
+  - versionName: '1.2'
+    versionCode: 102
+    commit: 84ecbb38d0c55cc638ed8201101ea3c3f6e37ee1
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' build.gradle
+      - sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
+        build.gradle
+
+  - versionName: '1.3'
+    versionCode: 103
+    commit: d32fc95ad48f496e3071096ce01a96bc29941e6b
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' build.gradle
+      - sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
+        build.gradle
+
+  - versionName: 1.3.1
+    versionCode: 104
+    commit: a962984760be038f4a957acc667b2ed61df52c8e
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' build.gradle
+      - sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
+        build.gradle
+
+  - versionName: 1.3.2
+    versionCode: 105
+    commit: b9578c21be82ac85116f877ca00c06a9a3383c70
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' build.gradle
+      - sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
+        build.gradle
+
+  - versionName: '1.4'
+    versionCode: 106
+    commit: 94783aeff0e2e7e2e8d15c6a5a81aba91936be2f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' build.gradle
+      - sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
+        build.gradle
+
+  - versionName: 1.4.1
+    versionCode: 107
+    commit: 8c659e4c5efdc6f909ade6bb5765d753df0f9cd1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' build.gradle
+      - sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
+        build.gradle
+
+  - versionName: 1.4.2
+    versionCode: 108
+    commit: 0bbf2f2b758547a6825267d2d6b092232da48d84
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' build.gradle
+      - sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
+        build.gradle
+
+  - versionName: 1.5.1
+    versionCode: 112
+    commit: df79495cf8ccb4ce4a38e61c00512b1396f1eeb4
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' build.gradle
+
+  - versionName: 1.5.10
+    versionCode: 121
+    commit: 8a14a7aea7b809933886864bfb58431324ab22b2
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' build.gradle
+
+  - versionName: 1.5.11
+    versionCode: 122
+    commit: 1d5508acbf8f9271a1cff612790ea6dce7f6e5b1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' build.gradle
+
+  - versionName: 1.5.13
+    versionCode: 124
+    commit: 6010c46b79e2a459c22537db72cf74b2a9c9e72b
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' build.gradle
+
+  - versionName: 1.5.15
+    versionCode: 126
+    commit: 8b592378587cb7a84bfbe5604f90e2a9d5e94ad9
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' build.gradle
+
+  - versionName: 1.6.1
+    versionCode: 128
+    commit: bf56eac8c233853bc480b950deea18217e850442
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' build.gradle
+
+  - versionName: 1.6.2
+    versionCode: 12901
+    commit: 39cf4a48cc141fe5a739117a4aa99610d5d9b9f2
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.6.2
+    versionCode: 12902
+    commit: 39cf4a48cc141fe5a739117a4aa99610d5d9b9f2
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86"/' build.gradle
+
+  - versionName: 1.6.2
+    versionCode: 12903
+    commit: 39cf4a48cc141fe5a739117a4aa99610d5d9b9f2
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86_64"/' build.gradle
+
+  - versionName: 1.6.2
+    versionCode: 12904
+    commit: 39cf4a48cc141fe5a739117a4aa99610d5d9b9f2
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "arm64-v8a"/' build.gradle
+
+  - versionName: 1.6.4
+    versionCode: 13101
+    commit: 05790e212eb89a2397d02a49c9b4b109b46a241c
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.6.4
+    versionCode: 13102
+    commit: 05790e212eb89a2397d02a49c9b4b109b46a241c
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86"/' build.gradle
+
+  - versionName: 1.6.4
+    versionCode: 13103
+    commit: 05790e212eb89a2397d02a49c9b4b109b46a241c
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86_64"/' build.gradle
+
+  - versionName: 1.6.4
+    versionCode: 13104
+    commit: 05790e212eb89a2397d02a49c9b4b109b46a241c
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "arm64-v8a"/' build.gradle
+
+  - versionName: '1.7'
+    versionCode: 13201
+    commit: 3d24489c2515ac3f19513f9624853811b2ed3379
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "armeabi-v7a"/' build.gradle
+
+  - versionName: '1.7'
+    versionCode: 13202
+    commit: 3d24489c2515ac3f19513f9624853811b2ed3379
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86"/' build.gradle
+
+  - versionName: '1.7'
+    versionCode: 13203
+    commit: 3d24489c2515ac3f19513f9624853811b2ed3379
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86_64"/' build.gradle
+
+  - versionName: '1.7'
+    versionCode: 13204
+    commit: 3d24489c2515ac3f19513f9624853811b2ed3379
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "arm64-v8a"/' build.gradle
+
+  - versionName: 1.7.1
+    versionCode: 13301
+    commit: 8123dda1ba5f462a9b4203bd1ecaa93f87e5b89a
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.7.1
+    versionCode: 13302
+    commit: 8123dda1ba5f462a9b4203bd1ecaa93f87e5b89a
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86"/' build.gradle
+
+  - versionName: 1.7.1
+    versionCode: 13303
+    commit: 8123dda1ba5f462a9b4203bd1ecaa93f87e5b89a
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86_64"/' build.gradle
+
+  - versionName: 1.7.1
+    versionCode: 13304
+    commit: 8123dda1ba5f462a9b4203bd1ecaa93f87e5b89a
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "arm64-v8a"/' build.gradle
+
+  - versionName: 1.7.2
+    versionCode: 13401
+    commit: 460e1dedfd541e33dbd25757e8206eb0d5447b17
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.7.2
+    versionCode: 13402
+    commit: 460e1dedfd541e33dbd25757e8206eb0d5447b17
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86"/' build.gradle
+
+  - versionName: 1.7.2
+    versionCode: 13403
+    commit: 460e1dedfd541e33dbd25757e8206eb0d5447b17
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86_64"/' build.gradle
+
+  - versionName: 1.7.2
+    versionCode: 13404
+    commit: 460e1dedfd541e33dbd25757e8206eb0d5447b17
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "arm64-v8a"/' build.gradle
+
+  - versionName: 1.7.3
+    versionCode: 13501
+    commit: baab0dd103d8fc7ed5c1203ea77ed98f7bcf9319
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.7.3
+    versionCode: 13502
+    commit: baab0dd103d8fc7ed5c1203ea77ed98f7bcf9319
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86"/' build.gradle
+
+  - versionName: 1.7.3
+    versionCode: 13503
+    commit: baab0dd103d8fc7ed5c1203ea77ed98f7bcf9319
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "x86_64"/' build.gradle
+
+  - versionName: 1.7.3
+    versionCode: 13504
+    commit: baab0dd103d8fc7ed5c1203ea77ed98f7bcf9319
+    gradle:
+      - git
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+      "arm64-v8a"/' build.gradle
+
+  - versionName: 1.7.4
+    versionCode: 13601
+    commit: 958c90b91289eeb8520bafc364014a80d997926e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+        "armeabi-v7a"/' -e '/bintray-release/d' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m//' gradle.properties
+
+  - versionName: 1.7.4
+    versionCode: 13602
+    commit: 958c90b91289eeb8520bafc364014a80d997926e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+        "x86"/' -e '/bintray-release/d' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m//' gradle.properties
+
+  - versionName: 1.7.4
+    versionCode: 13603
+    commit: 958c90b91289eeb8520bafc364014a80d997926e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+        "x86_64"/' -e '/bintray-release/d' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m//' gradle.properties
+
+  - versionName: 1.7.4
+    versionCode: 13604
+    commit: 958c90b91289eeb8520bafc364014a80d997926e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+        "arm64-v8a"/' -e '/bintray-release/d' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m//' gradle.properties
+
+  - versionName: 1.7.5
+    versionCode: 13701
+    commit: 2063fb2092270e1880a33b6fc393b6f492fc0735
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+        "armeabi-v7a"/' -e '/bintray-release/d' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m//' gradle.properties
+
+  - versionName: 1.7.5
+    versionCode: 13702
+    commit: 2063fb2092270e1880a33b6fc393b6f492fc0735
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+        "x86"/' -e '/bintray-release/d' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m//' gradle.properties
+
+  - versionName: 1.7.5
+    versionCode: 13703
+    commit: 2063fb2092270e1880a33b6fc393b6f492fc0735
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+        "x86_64"/' -e '/bintray-release/d' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m//' gradle.properties
+
+  - versionName: 1.7.5
+    versionCode: 13704
+    commit: 2063fb2092270e1880a33b6fc393b6f492fc0735
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    prebuild:
+      - sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/universalApk true/reset()\ninclude
+        "arm64-v8a"/' -e '/bintray-release/d' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m//' gradle.properties
+
+  - versionName: 1.7.7.2
+    versionCode: 14701
+    commit: 95aa9853c94452e34f3d084e0142eac87c7b457f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.2
+    versionCode: 14702
+    commit: 95aa9853c94452e34f3d084e0142eac87c7b457f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.2
+    versionCode: 14703
+    commit: 95aa9853c94452e34f3d084e0142eac87c7b457f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.2
+    versionCode: 14704
+    commit: 95aa9853c94452e34f3d084e0142eac87c7b457f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.3
+    versionCode: 14801
+    commit: 986f57801b99ccb789d8ac2cfe98391604151034
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.3
+    versionCode: 14802
+    commit: 986f57801b99ccb789d8ac2cfe98391604151034
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.3
+    versionCode: 14803
+    commit: 986f57801b99ccb789d8ac2cfe98391604151034
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.3
+    versionCode: 14804
+    commit: 986f57801b99ccb789d8ac2cfe98391604151034
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.4
+    versionCode: 14901
+    commit: 4db88696943eea3d89f1ebf14048e3e6d2b442a3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.4
+    versionCode: 14902
+    commit: 4db88696943eea3d89f1ebf14048e3e6d2b442a3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.4
+    versionCode: 14903
+    commit: 4db88696943eea3d89f1ebf14048e3e6d2b442a3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.4
+    versionCode: 14904
+    commit: 4db88696943eea3d89f1ebf14048e3e6d2b442a3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.5
+    versionCode: 15001
+    commit: b707f48e9b3c1b61971963ad87452c9696818b1f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.5
+    versionCode: 15002
+    commit: b707f48e9b3c1b61971963ad87452c9696818b1f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.5
+    versionCode: 15003
+    commit: b707f48e9b3c1b61971963ad87452c9696818b1f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.7.5
+    versionCode: 15004
+    commit: b707f48e9b3c1b61971963ad87452c9696818b1f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8
+    versionCode: 15101
+    commit: ef29ddfa11fd91340d2d76cb18f5c8cc678a4121
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8
+    versionCode: 15102
+    commit: ef29ddfa11fd91340d2d76cb18f5c8cc678a4121
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8
+    versionCode: 15103
+    commit: ef29ddfa11fd91340d2d76cb18f5c8cc678a4121
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8
+    versionCode: 15104
+    commit: ef29ddfa11fd91340d2d76cb18f5c8cc678a4121
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.2
+    versionCode: 15301
+    commit: 33c0afbab1c7a4b5419c2b01d67cbec8b475ea00
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.2
+    versionCode: 15302
+    commit: 33c0afbab1c7a4b5419c2b01d67cbec8b475ea00
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.2
+    versionCode: 15303
+    commit: 33c0afbab1c7a4b5419c2b01d67cbec8b475ea00
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.2
+    versionCode: 15304
+    commit: 33c0afbab1c7a4b5419c2b01d67cbec8b475ea00
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.3
+    versionCode: 15401
+    commit: 9f87e91d3a441c2f8938aca84dfb16d849eec13f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.3
+    versionCode: 15402
+    commit: 9f87e91d3a441c2f8938aca84dfb16d849eec13f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.3
+    versionCode: 15403
+    commit: 9f87e91d3a441c2f8938aca84dfb16d849eec13f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.3
+    versionCode: 15404
+    commit: 9f87e91d3a441c2f8938aca84dfb16d849eec13f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.4
+    versionCode: 15501
+    commit: b6f3989fb33653f073c08c8531cd5dbdf883fdc4
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.4
+    versionCode: 15502
+    commit: b6f3989fb33653f073c08c8531cd5dbdf883fdc4
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.4
+    versionCode: 15503
+    commit: b6f3989fb33653f073c08c8531cd5dbdf883fdc4
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.4
+    versionCode: 15504
+    commit: b6f3989fb33653f073c08c8531cd5dbdf883fdc4
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.5
+    versionCode: 15601
+    commit: 1491f801c3c23224d9dc0e0a811caff59bee6fbb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.5
+    versionCode: 15602
+    commit: 1491f801c3c23224d9dc0e0a811caff59bee6fbb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.5
+    versionCode: 15603
+    commit: 1491f801c3c23224d9dc0e0a811caff59bee6fbb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.5
+    versionCode: 15604
+    commit: 1491f801c3c23224d9dc0e0a811caff59bee6fbb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.6
+    versionCode: 15701
+    commit: 86219beead8e070fbb15458211de9799aef31d5a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.6
+    versionCode: 15702
+    commit: 86219beead8e070fbb15458211de9799aef31d5a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.6
+    versionCode: 15703
+    commit: 86219beead8e070fbb15458211de9799aef31d5a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.6
+    versionCode: 15704
+    commit: 86219beead8e070fbb15458211de9799aef31d5a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.7
+    versionCode: 15801
+    commit: b79129cc3ff03195a513b88aabedc02731c89d26
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.7
+    versionCode: 15802
+    commit: b79129cc3ff03195a513b88aabedc02731c89d26
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.7
+    versionCode: 15803
+    commit: b79129cc3ff03195a513b88aabedc02731c89d26
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.7
+    versionCode: 15804
+    commit: b79129cc3ff03195a513b88aabedc02731c89d26
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.8
+    versionCode: 15901
+    commit: 3a613b15e6eadc6121e5f7e3885c638982114394
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.8
+    versionCode: 15902
+    commit: 3a613b15e6eadc6121e5f7e3885c638982114394
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.8
+    versionCode: 15903
+    commit: 3a613b15e6eadc6121e5f7e3885c638982114394
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.8.8
+    versionCode: 15904
+    commit: 3a613b15e6eadc6121e5f7e3885c638982114394
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9
+    versionCode: 16101
+    commit: f893bb7d6dc00287c0fef5977003d606d1123c6e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9
+    versionCode: 16102
+    commit: f893bb7d6dc00287c0fef5977003d606d1123c6e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9
+    versionCode: 16103
+    commit: f893bb7d6dc00287c0fef5977003d606d1123c6e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9
+    versionCode: 16104
+    commit: f893bb7d6dc00287c0fef5977003d606d1123c6e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.1
+    versionCode: 16201
+    commit: d40d9448825db07a426f99f53771d330c8c7d6cb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.1
+    versionCode: 16202
+    commit: d40d9448825db07a426f99f53771d330c8c7d6cb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.1
+    versionCode: 16203
+    commit: d40d9448825db07a426f99f53771d330c8c7d6cb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.1
+    versionCode: 16204
+    commit: d40d9448825db07a426f99f53771d330c8c7d6cb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.2
+    versionCode: 16301
+    commit: d5440b1426184f6c478aa670ad9f358dbd98ff79
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.2
+    versionCode: 16302
+    commit: d5440b1426184f6c478aa670ad9f358dbd98ff79
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.2
+    versionCode: 16303
+    commit: d5440b1426184f6c478aa670ad9f358dbd98ff79
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.2
+    versionCode: 16304
+    commit: d5440b1426184f6c478aa670ad9f358dbd98ff79
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.3
+    versionCode: 16401
+    commit: 24fdc099f08709eed9feba2721fda8abc8c5889d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.3
+    versionCode: 16402
+    commit: 24fdc099f08709eed9feba2721fda8abc8c5889d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.3
+    versionCode: 16403
+    commit: 24fdc099f08709eed9feba2721fda8abc8c5889d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.3
+    versionCode: 16404
+    commit: 24fdc099f08709eed9feba2721fda8abc8c5889d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.4
+    versionCode: 16501
+    commit: c215104845468f789d70153342d217dcf1d8f97d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.4
+    versionCode: 16502
+    commit: c215104845468f789d70153342d217dcf1d8f97d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.4
+    versionCode: 16503
+    commit: c215104845468f789d70153342d217dcf1d8f97d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.4
+    versionCode: 16504
+    commit: c215104845468f789d70153342d217dcf1d8f97d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5
+    versionCode: 16801
+    commit: 8bd119170612c37f1addb080402403e8a3807f61
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5
+    versionCode: 16802
+    commit: 8bd119170612c37f1addb080402403e8a3807f61
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5
+    versionCode: 16803
+    commit: 8bd119170612c37f1addb080402403e8a3807f61
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5
+    versionCode: 16804
+    commit: 8bd119170612c37f1addb080402403e8a3807f61
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.1
+    versionCode: 16901
+    commit: f66793a79b60b7d68c4c672889ef1d5af60cc8f9
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.1
+    versionCode: 16902
+    commit: f66793a79b60b7d68c4c672889ef1d5af60cc8f9
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.1
+    versionCode: 16903
+    commit: f66793a79b60b7d68c4c672889ef1d5af60cc8f9
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.1
+    versionCode: 16904
+    commit: f66793a79b60b7d68c4c672889ef1d5af60cc8f9
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.2
+    versionCode: 17001
+    commit: e4a861ffc51759f5cc5f587c4d45daddf155d052
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.2
+    versionCode: 17002
+    commit: e4a861ffc51759f5cc5f587c4d45daddf155d052
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.2
+    versionCode: 17003
+    commit: e4a861ffc51759f5cc5f587c4d45daddf155d052
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.2
+    versionCode: 17004
+    commit: e4a861ffc51759f5cc5f587c4d45daddf155d052
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.3
+    versionCode: 17101
+    commit: 31c873cc6d735358e364efbf5f6d27ddd6d94851
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.3
+    versionCode: 17102
+    commit: 31c873cc6d735358e364efbf5f6d27ddd6d94851
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.3
+    versionCode: 17103
+    commit: 31c873cc6d735358e364efbf5f6d27ddd6d94851
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.5.3
+    versionCode: 17104
+    commit: 31c873cc6d735358e364efbf5f6d27ddd6d94851
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.6
+    versionCode: 17201
+    commit: 455e6a2409cfbac4f5b503faffce5f7923b7417d
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.6
+    versionCode: 17202
+    commit: 455e6a2409cfbac4f5b503faffce5f7923b7417d
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.6
+    versionCode: 17203
+    commit: 455e6a2409cfbac4f5b503faffce5f7923b7417d
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.9.6
+    versionCode: 17204
+    commit: 455e6a2409cfbac4f5b503faffce5f7923b7417d
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.11
+    versionCode: 17401
+    commit: 29082ff7d410517f43582426c27c5559849f3bbd
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.11
+    versionCode: 17402
+    commit: 29082ff7d410517f43582426c27c5559849f3bbd
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.11
+    versionCode: 17403
+    commit: 29082ff7d410517f43582426c27c5559849f3bbd
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 1.7.11
+    versionCode: 17404
+    commit: 29082ff7d410517f43582426c27c5559849f3bbd
+    gradle:
+      - git
+    output: build/outputs/apk/git/release/monocles*-*-git-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/signingConfigs./d' -e '/grgit/d' -e 's/Apk true/Apk false/'
+      -e '/bintray-release/d' build.gradle
+
+  - versionName: 2.0.1+free
+    versionCode: 17801
+    commit: 8864338773d576eb14ff086d1b2e379919ba79ec
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.1+free
+    versionCode: 17802
+    commit: 8864338773d576eb14ff086d1b2e379919ba79ec
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.1+free
+    versionCode: 17803
+    commit: 8864338773d576eb14ff086d1b2e379919ba79ec
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.1+free
+    versionCode: 17804
+    commit: 8864338773d576eb14ff086d1b2e379919ba79ec
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.2+free
+    versionCode: 17901
+    commit: 600260273e7f0d9d404bffeb61e37528782add74
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.2+free
+    versionCode: 17902
+    commit: 600260273e7f0d9d404bffeb61e37528782add74
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.2+free
+    versionCode: 17903
+    commit: 600260273e7f0d9d404bffeb61e37528782add74
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.2+free
+    versionCode: 17904
+    commit: 600260273e7f0d9d404bffeb61e37528782add74
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.3+free
+    versionCode: 18001
+    commit: 42f325efb864db404ae2a2c01c2e40b0a603a381
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.3+free
+    versionCode: 18002
+    commit: 42f325efb864db404ae2a2c01c2e40b0a603a381
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.3+free
+    versionCode: 18003
+    commit: 42f325efb864db404ae2a2c01c2e40b0a603a381
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.3+free
+    versionCode: 18004
+    commit: 42f325efb864db404ae2a2c01c2e40b0a603a381
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.4+free
+    versionCode: 18101
+    commit: b6efe3263c3d4fb5b0c899b7f30a34982c2d32e0
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.4+free
+    versionCode: 18102
+    commit: b6efe3263c3d4fb5b0c899b7f30a34982c2d32e0
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.4+free
+    versionCode: 18103
+    commit: b6efe3263c3d4fb5b0c899b7f30a34982c2d32e0
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.4+free
+    versionCode: 18104
+    commit: b6efe3263c3d4fb5b0c899b7f30a34982c2d32e0
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.5+free
+    versionCode: 18201
+    commit: 906a95514f1eb5e4b990145e4e49bbf163643876
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.5+free
+    versionCode: 18202
+    commit: 906a95514f1eb5e4b990145e4e49bbf163643876
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.5+free
+    versionCode: 18203
+    commit: 906a95514f1eb5e4b990145e4e49bbf163643876
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.5+free
+    versionCode: 18204
+    commit: 906a95514f1eb5e4b990145e4e49bbf163643876
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.6+free
+    versionCode: 18301
+    commit: cd8bd2038bb19b4f49c7025b23052f4ad5102ad7
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.6+free
+    versionCode: 18302
+    commit: cd8bd2038bb19b4f49c7025b23052f4ad5102ad7
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.6+free
+    versionCode: 18303
+    commit: cd8bd2038bb19b4f49c7025b23052f4ad5102ad7
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.6+free
+    versionCode: 18304
+    commit: cd8bd2038bb19b4f49c7025b23052f4ad5102ad7
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.9+free
+    versionCode: 18601
+    commit: b49edf92da8e06f7034069eeb3f2a2b799900e29
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.9+free
+    versionCode: 18602
+    commit: b49edf92da8e06f7034069eeb3f2a2b799900e29
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.9+free
+    versionCode: 18603
+    commit: b49edf92da8e06f7034069eeb3f2a2b799900e29
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.9+free
+    versionCode: 18604
+    commit: b49edf92da8e06f7034069eeb3f2a2b799900e29
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.10+free
+    versionCode: 18701
+    commit: 123a796c38e7af9fb83cb897d621c35879619b16
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.10+free
+    versionCode: 18702
+    commit: 123a796c38e7af9fb83cb897d621c35879619b16
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.10+free
+    versionCode: 18703
+    commit: 123a796c38e7af9fb83cb897d621c35879619b16
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.10+free
+    versionCode: 18704
+    commit: 123a796c38e7af9fb83cb897d621c35879619b16
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.11+free
+    versionCode: 18801
+    commit: 53f396c97ee4238e54500982a1f7a360682111d2
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.11+free
+    versionCode: 18802
+    commit: 53f396c97ee4238e54500982a1f7a360682111d2
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.11+free
+    versionCode: 18803
+    commit: 53f396c97ee4238e54500982a1f7a360682111d2
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.11+free
+    versionCode: 18804
+    commit: 53f396c97ee4238e54500982a1f7a360682111d2
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.12+free
+    versionCode: 18901
+    commit: 03428ba3623621ea9e9800a0fd3b1233b295dca9
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.12+free
+    versionCode: 18902
+    commit: 03428ba3623621ea9e9800a0fd3b1233b295dca9
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.12+free
+    versionCode: 18903
+    commit: 03428ba3623621ea9e9800a0fd3b1233b295dca9
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.12+free
+    versionCode: 18904
+    commit: 03428ba3623621ea9e9800a0fd3b1233b295dca9
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.13+free
+    versionCode: 19001
+    commit: ed9ae00e6a5c3c2a0d67577b0bffc5aeb842d02c
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.13+free
+    versionCode: 19002
+    commit: ed9ae00e6a5c3c2a0d67577b0bffc5aeb842d02c
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.13+free
+    versionCode: 19003
+    commit: ed9ae00e6a5c3c2a0d67577b0bffc5aeb842d02c
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.13+free
+    versionCode: 19004
+    commit: ed9ae00e6a5c3c2a0d67577b0bffc5aeb842d02c
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.0.15+free
+    versionCode: 19201
+    commit: bcefa7c7fffcc590427d5a94cf7c3508991580b9
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' -e 's/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 2.0.15+free
+    versionCode: 19202
+    commit: bcefa7c7fffcc590427d5a94cf7c3508991580b9
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' -e 's/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 2.0.15+free
+    versionCode: 19203
+    commit: bcefa7c7fffcc590427d5a94cf7c3508991580b9
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' -e 's/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 2.0.15+free
+    versionCode: 19204
+    commit: bcefa7c7fffcc590427d5a94cf7c3508991580b9
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' -e 's/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 2.0.16
+    versionCode: 19301
+    commit: 23a1887c977ba7816c9e22cb9f156ee6d2e59c83
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' -e 's/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 2.0.16
+    versionCode: 19302
+    commit: 23a1887c977ba7816c9e22cb9f156ee6d2e59c83
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' -e 's/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 2.0.16
+    versionCode: 19303
+    commit: 23a1887c977ba7816c9e22cb9f156ee6d2e59c83
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' -e 's/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 2.0.16
+    versionCode: 19304
+    commit: 23a1887c977ba7816c9e22cb9f156ee6d2e59c83
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' -e 's/8.12.0/8.11.1/' build.gradle
+
+  - versionName: 2.0.17
+    versionCode: 19401
+    commit: 338ab51eb6d1239e0d109653308a3967b2c1a8b3
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+
+  - versionName: 2.0.17
+    versionCode: 19402
+    commit: 338ab51eb6d1239e0d109653308a3967b2c1a8b3
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+
+  - versionName: 2.0.17
+    versionCode: 19403
+    commit: 338ab51eb6d1239e0d109653308a3967b2c1a8b3
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+
+  - versionName: 2.0.17
+    versionCode: 19404
+    commit: 338ab51eb6d1239e0d109653308a3967b2c1a8b3
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+
+  - versionName: 2.0.18
+    versionCode: 19501
+    commit: e7fa3564e9399b8601a4bc76b57aa754345e40da
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-armeabi-v7a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+
+  - versionName: 2.0.18
+    versionCode: 19502
+    commit: e7fa3564e9399b8601a4bc76b57aa754345e40da
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+
+  - versionName: 2.0.18
+    versionCode: 19503
+    commit: e7fa3564e9399b8601a4bc76b57aa754345e40da
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-x86_64-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+
+  - versionName: 2.0.18
+    versionCode: 19504
+    commit: e7fa3564e9399b8601a4bc76b57aa754345e40da
+    gradle:
+      - monocleschat
+      - free
+    output: build/outputs/apk/monocleschatFree/release/Conversations-*-arm64-v8a-release-unsigned.apk
+    rm:
+      - src/main/groovy/org.minidns.java-conventions.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+VercodeOperation:
+  - 100 * %c + 1
+  - 100 * %c + 2
+  - 100 * %c + 3
+  - 100 * %c + 4
+CurrentVersion: 2.0.18
+CurrentVersionCode: 19504

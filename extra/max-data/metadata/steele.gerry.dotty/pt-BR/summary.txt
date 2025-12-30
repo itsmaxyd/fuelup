@@ -1,0 +1,1 @@
+É um aplicativo de demonstração multi-toque de código aberto e depurador.

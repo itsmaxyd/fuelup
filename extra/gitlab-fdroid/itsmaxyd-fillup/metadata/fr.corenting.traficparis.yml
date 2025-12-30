@@ -1,0 +1,148 @@
+Categories:
+  - Navigation
+  - Public Transport
+License: MIT
+AuthorName: corenting
+AuthorEmail: corenting@gmail.com
+SourceCode: https://github.com/corenting/ParisTransportTraffic
+IssueTracker: https://github.com/corenting/ParisTransportTraffic/issues
+Changelog: https://github.com/corenting/ParisTransportTraffic/releases
+
+AutoName: Paris transport traffic
+
+RepoType: git
+Repo: https://github.com/corenting/ParisTransportTraffic.git
+
+Builds:
+  - versionName: 4.3.1.1
+    versionCode: 17
+    commit: v4.3.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.2
+    versionCode: 19
+    commit: v4.3.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.3
+    versionCode: 20
+    commit: v4.3.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.4
+    versionCode: 21
+    commit: v4.3.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.4'
+    versionCode: 22
+    commit: v4.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.5'
+    versionCode: 23
+    commit: v4.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.6'
+    versionCode: 24
+    commit: v4.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.7'
+    versionCode: 25
+    commit: 56a5750750f9fd0641b59d9bd73eddc6bd0d8005
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 26
+    commit: ef509986bafe50c0e2e2a99bae7f24ecdd69f044
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '5.1'
+    versionCode: 27
+    commit: a5cb701a92a7467db8c57f685747ade129ff44e4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 5.1.1
+    versionCode: 28
+    commit: eb98aa96ce5cbc51f6a01bf5b4d7ad7eb5a9494a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.2'
+    versionCode: 29
+    commit: 9b46c7d10867ec0cc07680d069d5fdc6ac37f0e4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.3'
+    versionCode: 30
+    commit: 3d6834443adb00f0092bf01cab43e319aa61ee26
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '5.4'
+    versionCode: 31
+    commit: 09961013cb78ec887dc17146fda912e166c7b54c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.5'
+    versionCode: 32
+    commit: f7916abbb551ffb08302090fe921b416f6f08b20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.6'
+    versionCode: 33
+    commit: 0ea9fd193bec396785851c0d3efd5d6d930a5fff
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '5.6'
+CurrentVersionCode: 33

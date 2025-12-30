@@ -1,0 +1,79 @@
+AntiFeatures:
+  Ads:
+    en-US: contains self-served ads
+  NonFreeNet:
+    en-US: connections to Google (Fonts) and Youtube caused by the ads
+Categories:
+  - Games
+License: GPL-2.0-only
+AuthorName: Krasimir Topchiyski
+AuthorEmail: k_topchiyski@yahoo.com
+AuthorWebSite: https://metatransapps.com/
+WebSite: https://metatransapps.com/non-stop-balloons-shooter-for-kids-and-adults/
+SourceCode: https://github.com/MetatransApps/Android_APK_2DBalloons
+IssueTracker: https://github.com/MetatransApps/Android_APK_2DBalloons/issues
+
+AutoName: 'Non Stop Balloons: Shooter for Kids and Adults'
+
+RepoType: git
+Repo: https://github.com/MetatransApps/Android_APK_2DBalloons
+
+Builds:
+  - versionName: 1.0.5
+    versionCode: 105
+    commit: 105-fdroid-import-request
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd ../../
+      - git clone https://github.com/MetatransApps/Android_LIB_Commons.git
+      - git clone https://github.com/MetatransApps/Android_LIB_CommonsAds.git
+      - git clone https://github.com/MetatransApps/Android_LIB_Commons2D.git
+      - git clone https://github.com/MetatransApps/Android_APP_2DBalloons.git
+
+  - versionName: 1.0.8
+    versionCode: 108
+    commit: 14eb36673e8972358796583402c148e484052ef2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd ../../
+      - git clone https://github.com/MetatransApps/Android_LIB_Commons.git
+      - git clone https://github.com/MetatransApps/Android_LIB_CommonsAds.git
+      - git clone https://github.com/MetatransApps/Android_LIB_Commons2D.git
+      - git clone https://github.com/MetatransApps/Android_APP_2DBalloons.git
+
+  - versionName: 1.1.4
+    versionCode: 114
+    commit: 88aab07f5b39174b5cbc9d31f6f477b700d19448
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 120
+    commit: f4610b279fad2813ceb824cd45ff1c0970e406c6
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+MaintainerNotes: |-
+  * Ads: contains self-served ads
+  * NonFreeNet: connections to Google (Fonts) and Youtube caused by the ads
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.2.0
+CurrentVersionCode: 120

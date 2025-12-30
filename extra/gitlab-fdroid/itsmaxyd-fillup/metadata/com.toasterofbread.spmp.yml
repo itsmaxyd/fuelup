@@ -1,0 +1,126 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Multimedia
+  - Online Media Player
+License: GPL-3.0-only
+AuthorName: toasterofbread
+AuthorWebSite: https://github.com/toasterofbread
+WebSite: https://spmp.toastbits.dev
+SourceCode: https://github.com/toasterofbread/spmp
+IssueTracker: https://github.com/toasterofbread/spmp/issues
+Translation: https://github.com/toasterofbread/spmp/wiki/App-localisation
+Changelog: https://github.com/toasterofbread/spmp/releases
+Donate: https://ko-fi.com/toasterofbread
+
+RepoType: git
+Repo: https://github.com/toasterofbread/spmp.git
+Binaries: https://github.com/toasterofbread/spmp/releases/download/v%v/spmp-v%v-android-universal.apk
+
+Builds:
+  - versionName: 0.2.3
+    versionCode: 9
+    commit: v0.2.3
+    subdir: androidApp
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://github.com/toasterofbread/spmp/releases/download/v0.2.3/androidApp-universal-release.apk
+
+  - versionName: 0.2.4
+    versionCode: 10
+    commit: v0.2.4
+    subdir: androidApp
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://github.com/toasterofbread/spmp/releases/download/v0.2.4/androidApp-universal-release.apk
+
+  - versionName: 0.3.0
+    versionCode: 11
+    commit: v0.3.0
+    subdir: androidApp
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 0.3.1
+    versionCode: 12
+    commit: d935b6eaa00d15d89b3675f2e3735d76b94b765a
+    subdir: androidApp
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.3.2
+    versionCode: 13
+    commit: 13b2db502227d4a92747dab35564cf5f64c3c433
+    subdir: androidApp
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 0.4.0
+    versionCode: 20
+    commit: d00804090eaa3f9aaae7ece376bc8189136a17a1
+    subdir: androidApp
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y -t sid openjdk-22-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - desktopApp/build.gradle.kts
+
+  - versionName: 0.4.1
+    versionCode: 21
+    commit: 9654fa8983887d8444ff4132195285ac7976b214
+    subdir: androidApp
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y -t sid openjdk-22-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - desktopApp/build.gradle.kts
+
+  - versionName: 0.4.2
+    versionCode: 22
+    commit: 2eb375c051deaff65129c5d76679282047cb7353
+    subdir: androidApp
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list
+      - apt-get update
+      - apt-get install -y -t sid openjdk-22-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - desktopApp/build.gradle.kts
+
+AllowedAPKSigningKeys: 38d400eb7d8fdc34895598e0f6ee6062762b747c1e8b54370b04e6dd20c337ad
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^(?!.*-).*$
+UpdateCheckData: shared/src/commonMain/resources/assets/values/strings.xml|version_code.+>(\d+)<.+|shared/src/commonMain/resources/assets/values/strings.xml|version_string.+>(.*)<.+
+CurrentVersion: 0.4.2
+CurrentVersionCode: 22

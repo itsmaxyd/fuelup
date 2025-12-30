@@ -1,0 +1,140 @@
+Categories:
+  - Internet
+  - News
+  - Reading
+License: GPL-3.0-only
+SourceCode: https://github.com/readrops/Readrops
+IssueTracker: https://github.com/readrops/Readrops/issues
+Changelog: https://github.com/readrops/Readrops/blob/HEAD/CHANGELOG.md
+Bitcoin: bc1qlkzlcsvvtn3y6mek5umv5tc4ln09l64x6y42hr
+Litecoin: MTuf45ZvxhMWWo4v8YBbFDTLsFcGtpcPNT
+
+AutoName: Readrops
+
+RepoType: git
+Repo: https://github.com/readrops/Readrops
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 2
+    commit: v1.0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 7
+    commit: v1.1.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 8
+    commit: v1.1.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 9
+    commit: v1.1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.4
+    versionCode: 10
+    commit: v1.1.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 11
+    commit: v1.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 12
+    commit: v1.2.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 13
+    commit: fb069901162d3cddc8197ee3630922b825c3f91a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 14
+    commit: 7feb54f44ac7c65f2cef5dc9921c6b008268bba3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0-beta01
+    versionCode: 15
+    commit: 6e2051b4258ff6bf269d66aefd0761ce804c8f91
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0-beta02
+    versionCode: 16
+    commit: cddca8f853469a68b78f81443b350d7993b14a87
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 17
+    commit: 377ab70a27ca901ddb819da065e24003ff1d376f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 18
+    commit: c88c175596fa73b8c196df883ce3bdd486e667be
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.2
+    versionCode: 19
+    commit: 383aea0775198c71832c98b458b5e2ef16c2d51d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.3
+    versionCode: 20
+    commit: 1b54518c959e69e04609388e6ed0e77aefd43cfb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 21
+    commit: 8edecc0a3132e2fb1cb09e62fbad3cd572b39eb3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 22
+    commit: dcd7a9f31f0ad38517616538ce45a10256ddd039
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ((?!alpha|beta|rc).)*$
+CurrentVersion: 2.1.1
+CurrentVersionCode: 22

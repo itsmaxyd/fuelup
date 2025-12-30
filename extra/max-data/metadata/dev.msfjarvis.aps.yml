@@ -1,0 +1,140 @@
+Categories:
+  - Internet
+  - Science & Education
+License: GPL-3.0-only
+WebSite: https://github.com/android-password-store/Android-Password-Store/wiki
+SourceCode: https://github.com/android-password-store/Android-Password-Store
+IssueTracker: https://github.com/android-password-store/Android-Password-Store/issues
+Translation: https://www.transifex.com/android-password-store/android-password-store/
+Changelog: https://github.com/android-password-store/Android-Password-Store/releases
+OpenCollective: Android-Password-Store
+
+AutoName: Password Store
+
+RepoType: git
+Repo: https://github.com/android-password-store/Android-Password-Store
+
+Builds:
+  - versionName: 1.8.1
+    versionCode: 10801
+    commit: v1.8.1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/publicsuffixes
+
+  - versionName: 1.9.0
+    versionCode: 10900
+    commit: v1.9.0
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo "org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        -Dfile.encoding=UTF-8" >> $HOME/.gradle/gradle.properties
+    scanignore:
+      - app/src/main/assets/publicsuffixes
+
+  - versionName: 1.9.1
+    versionCode: 10910
+    commit: v1.9.1
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo "org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        -Dfile.encoding=UTF-8" >> $HOME/.gradle/gradle.properties
+    scanignore:
+      - app/src/main/assets/publicsuffixes
+
+  - versionName: 1.9.2
+    versionCode: 10920
+    commit: v1.9.2
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo "org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        -Dfile.encoding=UTF-8" >> $HOME/.gradle/gradle.properties
+    scanignore:
+      - app/src/main/assets/publicsuffixes
+
+  - versionName: 1.11.3
+    versionCode: 11130
+    commit: v1.11.3
+    subdir: app
+    gradle:
+      - free
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo "org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        -Dfile.encoding=UTF-8" >> $HOME/.gradle/gradle.properties
+    scanignore:
+      - app/src/main/assets/publicsuffixes
+
+  - versionName: 1.13.1
+    versionCode: 11310
+    commit: v1.13.1
+    subdir: app
+    gradle:
+      - free
+    prebuild: echo "org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m" >> ../gradle.properties
+    scanignore:
+      - autofill-parser/src/main/assets/publicsuffixes
+
+  - versionName: 1.13.2
+    versionCode: 11320
+    commit: v1.13.2
+    subdir: app
+    gradle:
+      - free
+    prebuild: echo "org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m" >> ../gradle.properties
+    scanignore:
+      - autofill-parser/src/main/assets/publicsuffixes
+
+  - versionName: 1.13.3
+    versionCode: 11330
+    commit: v1.13.3
+    subdir: app
+    gradle:
+      - free
+    prebuild: echo "org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m" >> ../gradle.properties
+    scanignore:
+      - autofill-parser/src/main/assets/publicsuffixes
+
+  - versionName: 1.13.4
+    versionCode: 11340
+    commit: v1.13.4
+    subdir: app
+    gradle:
+      - free
+    prebuild: echo "org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m" >> ../gradle.properties
+    scanignore:
+      - autofill-parser/src/main/assets/publicsuffixes
+
+  - versionName: 1.13.5
+    versionCode: 11350
+    commit: ebddce11fca7a64c2d0ec7682f851e09f58db1ac
+    subdir: app
+    gradle:
+      - free
+    prebuild: echo "org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m" >> ../gradle.properties
+    scanignore:
+      - autofill-parser/src/main/assets/publicsuffixes
+
+MaintainerNotes: |-
+  The file at `autofill-parser/src/main/assets/publicsuffixes` is a version
+  of the Public Suffix List (https://publicsuffix.org/) that has been
+  sorted and stripped of all comments. It is identified as a binary files
+  because it contains two 4-byte length fields, one right at the beginning,
+  but is otherwise plaintext.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.13.5
+CurrentVersionCode: 11350

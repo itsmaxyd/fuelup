@@ -1,0 +1,315 @@
+Categories:
+  - Shopping List
+  - Sports & Health
+License: GPL-3.0-only
+AuthorName: Patrick Zedler
+AuthorEmail: patrick@zedler.xyz
+WebSite: https://grocy.info/
+SourceCode: https://github.com/patzly/grocy-android
+IssueTracker: https://github.com/patzly/grocy-android/issues
+Changelog: https://github.com/patzly/grocy-android/releases
+
+AutoName: Grocy
+
+RepoType: git
+Repo: https://github.com/patzly/grocy-android.git
+
+Builds:
+  - versionName: 1.8.7
+    versionCode: 21
+    commit: v1.8.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 22
+    commit: v1.9.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.0
+    versionCode: 23
+    commit: v1.10.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.1
+    versionCode: 24
+    commit: v1.10.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0-beta01
+    versionCode: 32
+    commit: v2.0.0-beta1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0-beta02
+    versionCode: 33
+    commit: v2.0.0-beta2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0-beta03
+    versionCode: 34
+    commit: e0c83f737dff0d15f7b2c439e6587627eb0ff169
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.0.0-beta04
+    versionCode: 35
+    commit: 186d0c29f5dbd5bb141043e8b4a2b1850f12c703
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.0.0-beta05
+    versionCode: 36
+    commit: 8c76c483d84ee88f824215ab0e41478b80a2be65
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 37
+    commit: bccab898d57f0bdc10aa06df08ba24907e98cde7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 38
+    commit: a08c5a4b86424043a02f5edb7cff96a688ea995b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 39
+    commit: 2d3cdeffb167ee66832016b060a6bb4b500c9588
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 40
+    commit: 29242d52b5731505723327090e021cf94d87d04f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 41
+    commit: c248d3239daebe5f6cbcd3a8169e65d51d601e9b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 3.0.0
+    versionCode: 43
+    commit: 3398a4ef1c4ce65e57f4695d5aab6412ee1f810d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../build.gradle
+
+  - versionName: 3.1.0
+    versionCode: 44
+    commit: 6b6f7f550abc33f1955b541dc77641446c78f1aa
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../build.gradle
+
+  - versionName: 3.1.1
+    versionCode: 45
+    commit: 610d6f51fbdcf1bdff9e74916029f0a7ff765c54
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../build.gradle
+
+  - versionName: 3.2.1
+    versionCode: 47
+    commit: 2e10d5d292e7b17d07f26d2fbb6d75dbe60d7bed
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../build.gradle
+
+  - versionName: 3.3.0
+    versionCode: 48
+    commit: 49785bfbf5cbf95de8ebb1e4abf6fa28e35bcfa7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../build.gradle
+
+  - versionName: 3.3.1
+    versionCode: 49
+    commit: c66d8f45819ed8ad8f43cfa898823c3a125cd87b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../build.gradle
+
+  - versionName: 3.3.2
+    versionCode: 50
+    commit: 1f0ce26070ae1b0f7770a3bbf0a51db9d67ea057
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+  - versionName: 3.4.1
+    versionCode: 52
+    commit: 6bdd78d962f3de816fcce095e233c52059333ae7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+  - versionName: 3.4.2
+    versionCode: 53
+    commit: 6df7fce02c744ddee30890c7e6723ec45c85a413
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+  - versionName: 3.5.0
+    versionCode: 54
+    commit: e23c8408d335ec74f9758207d098b00fe826eaac
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+  - versionName: 3.5.1
+    versionCode: 55
+    commit: c50e0419faec82218f4b9082908a2ddf19be6ec0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+  - versionName: 3.5.2
+    versionCode: 56
+    commit: fb9c8ef6ca4eaf492f62c24db8b6536e4506b26e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+  - versionName: 3.6.0
+    versionCode: 58
+    commit: fda587dc5f77b3407cca6d96627906fe689d1534
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+  - versionName: 3.7.0
+    versionCode: 59
+    commit: ebae835da74db1a85c778ce071cde8e61e87251b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+  - versionName: 3.8.0
+    versionCode: 60
+    commit: 2972e3e950fbde6abe4e090c177c35aad8213d94
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+  - versionName: 3.8.1
+    versionCode: 61
+    commit: 8be08c9447805cdb01549749f644ab75b68e958b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/a8c-libs/d' ../settings.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+CurrentVersion: 3.8.1
+CurrentVersionCode: 61

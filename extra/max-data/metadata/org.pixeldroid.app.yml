@@ -1,0 +1,642 @@
+Categories:
+  - Internet
+  - Social Network
+License: GPL-3.0-or-later
+AuthorName: PixelDroid team
+AuthorEmail: contact@pixeldroid.org
+WebSite: https://pixeldroid.org/
+SourceCode: https://gitlab.shinice.net/pixeldroid/PixelDroid
+IssueTracker: https://gitlab.shinice.net/pixeldroid/PixelDroid/issues
+Translation: https://weblate.pixeldroid.org/projects/pixeldroid/
+Changelog: https://gitlab.shinice.net/pixeldroid/PixelDroid/-/releases
+Liberapay: PixelDroid
+
+AutoName: PixelDroid
+
+RepoType: git
+Repo: https://gitlab.shinice.net/pixeldroid/PixelDroid.git
+
+Builds:
+  - versionName: 1.0.beta1
+    versionCode: 1
+    commit: 1.0.beta1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta2
+    versionCode: 2
+    commit: 80cdd54d518afbd4285cee353bf5c71aed05991b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta3
+    versionCode: 3
+    commit: bf7c09bbdeabe130f31874de0eab8989ca24c7b5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta4
+    versionCode: 4
+    commit: c7268e3ec5b068492a14cf2065dce24286b98d58
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta5
+    versionCode: 5
+    commit: 12ec0cc2aaf5599d37ca3c48453625487521c4a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta6
+    versionCode: 6
+    commit: f108c3cf6c40aac4c131c28da5fa2a0456fbc7f5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta7
+    versionCode: 7
+    commit: 0f71f939cd5c8b73279cfd43c55a9fd96fe3866c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta8
+    versionCode: 8
+    commit: ec2dc5f02da481d8ccbdfa15457545c7d59d7d07
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta10
+    versionCode: 10
+    commit: f08bec487bf2b41e7521fc82bb785e85ea00e63b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta11
+    versionCode: 11
+    commit: a433d9431af6f6cd45d1bb9884277f0643d40f03
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta12
+    versionCode: 12
+    commit: e2cdbb5717b49b141ad8d9fcd23e04bcb98e1594
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta13
+    versionCode: 13
+    commit: dc13fb092e2be0ffd54c9935b39fb5fa880031a4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta14
+    versionCode: 14
+    commit: e704d023a9947e77ce70928cc600e2165419e36b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta15
+    versionCode: 15
+    commit: ebc07e3a3e4bdf60a4751fd4f427bf97da6613c6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta16
+    versionCode: 16
+    commit: c0449f9adf25584da3a87bb1fbeab96d22b4cd4c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta17
+    versionCode: 17
+    commit: e7b6952c6a3cdd89974d5480d1aaeba940aa5b4c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta18
+    versionCode: 18
+    commit: d240d64966762a41034ead31e87948e59e0e600f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta20
+    versionCode: 20
+    commit: 5b224976ccb5d282f0da959ad1f7b5953e71dc0e
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta21
+    versionCode: 21
+    commit: f288474dce945cd75f494e16f15c91fb49ef9595
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta23
+    versionCode: 23
+    commit: a777fe433735c184f254ad75f66ea3d5ae769f81
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta24
+    versionCode: 24
+    commit: 55a0aaa3946ed6ece34334ca64729244a613ab98
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.beta25
+    versionCode: 25
+    commit: 5149150f27f3b549141e6ef284a5bf36a4179a3f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd ..
+      - sed -i -e 's|git@gitlab.shinice.net:|https://gitlab.shinice.net/|g' .gitmodules
+      - git submodule update --init --recursive
+
+  - versionName: 1.0.beta26
+    versionCode: 26
+    commit: e108d08916d86712bb6cdb83b1da841b513c8b26
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd ..
+      - sed -i -e 's|git@gitlab.shinice.net:|https://gitlab.shinice.net/|g' .gitmodules
+      - git submodule update --init --recursive
+
+  - versionName: 1.0.beta27
+    versionCode: 27
+    commit: 370aeda4a67ed4b8f7948e2910bc89ebdd2b8daf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd ..
+      - sed -i -e 's|git@gitlab.shinice.net:|https://gitlab.shinice.net/|g' .gitmodules
+      - git submodule update --init --recursive
+
+  - versionName: 1.0.beta29
+    versionCode: 29
+    commit: 905c1c2d669e14cbe53af85b6d948c6a956e7fe6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd ..
+      - sed -i -e 's|git@gitlab.shinice.net:|https://gitlab.shinice.net/|g' .gitmodules
+      - git submodule update --init --recursive
+
+  - versionName: 1.0.beta30
+    versionCode: 30
+    commit: afe6f711526b8fa9787c5abd794fcb91b35d0cbc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd ..
+      - sed -i -e 's|git@gitlab.shinice.net:|https://gitlab.shinice.net/|g' .gitmodules
+      - git submodule update --init --recursive
+
+  - versionName: 1.0.beta31
+    versionCode: 31
+    commit: 37b83f5ae2b859623eba0a297ab98452ef5e6781
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - cd ..
+      - sed -i -e 's|git@gitlab.shinice.net:|https://gitlab.shinice.net/|g' .gitmodules
+      - git submodule update --init --recursive
+
+  - versionName: 1.0.beta32
+    versionCode: 32
+    commit: 2b915431371d97e16b3e72d63c34ff38d20c4533
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - cd ..
+      - sed -i -e 's|git@gitlab.shinice.net:|https://gitlab.shinice.net/|g' .gitmodules
+      - git submodule update --init --recursive
+
+  - versionName: 1.0.beta33
+    versionCode: 3301
+    commit: f27ae611be330c1b5211a025a2f6d9cf18723ffe
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.0.beta33
+    versionCode: 3302
+    commit: f27ae611be330c1b5211a025a2f6d9cf18723ffe
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "arm64-v8a"/' build.gradle
+
+  - versionName: 1.0.beta33
+    versionCode: 3303
+    commit: f27ae611be330c1b5211a025a2f6d9cf18723ffe
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86"/' build.gradle
+
+  - versionName: 1.0.beta33
+    versionCode: 3304
+    commit: f27ae611be330c1b5211a025a2f6d9cf18723ffe
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86_64"/' build.gradle
+
+  - versionName: 1.0.beta34
+    versionCode: 3401
+    commit: 579c75417d987d7345451a60db08b6e8cbcb3c44
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.0.beta34
+    versionCode: 3402
+    commit: 579c75417d987d7345451a60db08b6e8cbcb3c44
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "arm64-v8a"/' build.gradle
+
+  - versionName: 1.0.beta34
+    versionCode: 3403
+    commit: 579c75417d987d7345451a60db08b6e8cbcb3c44
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86"/' build.gradle
+
+  - versionName: 1.0.beta34
+    versionCode: 3404
+    commit: 579c75417d987d7345451a60db08b6e8cbcb3c44
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86_64"/' build.gradle
+
+  - versionName: 1.0.beta35
+    versionCode: 3501
+    commit: 5a10a2bae41dd13769086442f3e77d11f24ee485
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.0.beta35
+    versionCode: 3502
+    commit: 5a10a2bae41dd13769086442f3e77d11f24ee485
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "arm64-v8a"/' build.gradle
+
+  - versionName: 1.0.beta35
+    versionCode: 3503
+    commit: 5a10a2bae41dd13769086442f3e77d11f24ee485
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86"/' build.gradle
+
+  - versionName: 1.0.beta35
+    versionCode: 3504
+    commit: 5a10a2bae41dd13769086442f3e77d11f24ee485
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86_64"/' build.gradle
+
+  - versionName: 1.0.beta36
+    versionCode: 3601
+    commit: a103954bebcbf65ef42a1c5a23f9e287bb1398b0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.0.beta36
+    versionCode: 3602
+    commit: a103954bebcbf65ef42a1c5a23f9e287bb1398b0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "arm64-v8a"/' build.gradle
+
+  - versionName: 1.0.beta36
+    versionCode: 3603
+    commit: a103954bebcbf65ef42a1c5a23f9e287bb1398b0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86"/' build.gradle
+
+  - versionName: 1.0.beta36
+    versionCode: 3604
+    commit: a103954bebcbf65ef42a1c5a23f9e287bb1398b0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86_64"/' build.gradle
+
+  - versionName: 1.0.beta38
+    versionCode: 3801
+    commit: 8e6df0d9d48f38b01fc794b98ead6b4b478f4f2b
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.0.beta38
+    versionCode: 3802
+    commit: 8e6df0d9d48f38b01fc794b98ead6b4b478f4f2b
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "arm64-v8a"/' build.gradle
+
+  - versionName: 1.0.beta38
+    versionCode: 3803
+    commit: 8e6df0d9d48f38b01fc794b98ead6b4b478f4f2b
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86"/' build.gradle
+
+  - versionName: 1.0.beta38
+    versionCode: 3804
+    commit: 8e6df0d9d48f38b01fc794b98ead6b4b478f4f2b
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86_64"/' build.gradle
+
+  - versionName: 1.0.beta39
+    versionCode: 3901
+    commit: 93f1a83c739465c8f6753c79eff608530c3ec38d
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.0.beta39
+    versionCode: 3902
+    commit: 93f1a83c739465c8f6753c79eff608530c3ec38d
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "arm64-v8a"/' build.gradle
+
+  - versionName: 1.0.beta39
+    versionCode: 3903
+    commit: 93f1a83c739465c8f6753c79eff608530c3ec38d
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86"/' build.gradle
+
+  - versionName: 1.0.beta39
+    versionCode: 3904
+    commit: 93f1a83c739465c8f6753c79eff608530c3ec38d
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86_64"/' build.gradle
+
+  - versionName: 1.0.beta40
+    versionCode: 4001
+    commit: c4d935eaa27ad08e0a8bb22813bea75b9abac93c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "armeabi-v7a"/' build.gradle
+
+  - versionName: 1.0.beta40
+    versionCode: 4002
+    commit: c4d935eaa27ad08e0a8bb22813bea75b9abac93c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "arm64-v8a"/' build.gradle
+
+  - versionName: 1.0.beta40
+    versionCode: 4003
+    commit: c4d935eaa27ad08e0a8bb22813bea75b9abac93c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86"/' build.gradle
+
+  - versionName: 1.0.beta40
+    versionCode: 4004
+    commit: c4d935eaa27ad08e0a8bb22813bea75b9abac93c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/include project.*/include "x86_64"/' build.gradle
+
+  - versionName: 1.0.beta41
+    versionCode: 4101
+    commit: d981be26a18e387d45da8dd19c49ef5b0b5559d0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/include project.*/include "armeabi-v7a"/' build.gradle
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+
+  - versionName: 1.0.beta41
+    versionCode: 4102
+    commit: d981be26a18e387d45da8dd19c49ef5b0b5559d0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/include project.*/include "arm64-v8a"/' build.gradle
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+
+  - versionName: 1.0.beta41
+    versionCode: 4103
+    commit: d981be26a18e387d45da8dd19c49ef5b0b5559d0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/include project.*/include "x86"/' build.gradle
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+
+  - versionName: 1.0.beta41
+    versionCode: 4104
+    commit: d981be26a18e387d45da8dd19c49ef5b0b5559d0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/include project.*/include "x86_64"/' build.gradle
+      - sed -i -e 's/8.13.0/8.11.1/' ../build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - 100 * %c + 1
+  - 100 * %c + 2
+  - 100 * %c + 3
+  - 100 * %c + 4
+UpdateCheckData: app/build.gradle|versionCode\s(\d+)||(.*)
+CurrentVersion: 1.0.beta41
+CurrentVersionCode: 4104

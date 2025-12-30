@@ -1,0 +1,57 @@
+Categories:
+  - Reading
+  - Science & Education
+License: GPL-3.0-only
+AuthorName: Lukas Sökefeld
+AuthorWebSite: https://gitlab.com/LukeSoftware/kfz-kennzeichen
+WebSite: https://gitlab.com/LukeSoftware/kfz-kennzeichen
+SourceCode: https://gitlab.com/LukeSoftware/kfz-kennzeichen
+IssueTracker: https://gitlab.com/LukeSoftware/kfz-kennzeichen/issues
+
+AutoName: KFZ-Kennzeichen
+
+RepoType: git
+Repo: https://gitlab.com/LukeSoftware/kfz-kennzeichen.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 10000
+    commit: v1.0.0
+    subdir: platforms/android/app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 10001
+    commit: v1.0.1
+    subdir: platforms/android/app
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 10002
+    commit: 5acd5e4b742f3b0f066fd2e5b1ae9541f9761e1c
+    subdir: platforms/android/app
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 10003
+    commit: 2e453e0d096eceb585d638b87a1e602291ec54b6
+    subdir: platforms/android/app
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 10004
+    commit: 3fe62381d11df9c5c3088ec8094ced582ff73e1c
+    subdir: platforms/android/app
+    gradle:
+      - yes
+
+MaintainerNotes: This is a Cordova app, built from source.
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags v.*[0-9]$
+CurrentVersion: 1.0.4
+CurrentVersionCode: 10004

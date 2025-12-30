@@ -1,0 +1,55 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Connects to funds.p-rapidapi.com which is not libre.
+Categories:
+  - Money
+License: GPL-3.0-only
+AuthorName: Webierta
+AuthorWebSite: https://webierta.github.io/
+SourceCode: https://github.com/Webierta/carfoin
+IssueTracker: https://github.com/Webierta/carfoin/issues
+Changelog: https://github.com/Webierta/carfoin/releases
+
+AutoName: Carfoin
+
+RepoType: git
+Repo: https://github.com/Webierta/carfoin
+
+Builds:
+  - versionName: 2.0.3
+    versionCode: 18
+    commit: 6fd6e64dbff87d723b6cd205e3edc1f0e9e7cbe1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.4
+    rm:
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.0.4
+    versionCode: 19
+    commit: 534e1f2613c2bc2ab0004a4dd4f20eabcf30648a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.4
+    rm:
+      - test
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+MaintainerNotes: moved to archive on request of author (API no longer working; RFP#2228)
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2.0.4
+CurrentVersionCode: 19

@@ -1,0 +1,466 @@
+Categories:
+  - Connectivity
+  - Internet
+License: MIT
+AuthorName: Jaakko Malkki
+AuthorWebSite: https://malkki.xyz/
+WebSite: https://neostumbler.malkki.xyz/
+SourceCode: https://github.com/mjaakko/NeoStumbler
+IssueTracker: https://github.com/mjaakko/NeoStumbler/issues
+Translation: https://hosted.weblate.org/projects/neostumbler/
+Changelog: https://github.com/mjaakko/NeoStumbler/releases
+
+AutoName: NeoStumbler
+
+RepoType: git
+Repo: https://github.com/mjaakko/NeoStumbler.git
+Binaries: https://github.com/mjaakko/NeoStumbler/releases/download/%v/app-fdroid-release.apk
+
+Builds:
+  - versionName: 1.1.3
+    versionCode: 6
+    commit: 0e41b1b37d766f2195c329bf418c74ce3ec16d30
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Sends data collected by the user to Mozilla Location Services (location.services.mozilla.com)
+
+  - versionName: 1.2.0
+    versionCode: 7
+    commit: 3a42a6f58fe59231ef80ecac3a0a9940a869a1ec
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.2.1
+    versionCode: 8
+    commit: c0d91988799894bfc7e94ad96a44dd715cd17ae6
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.2.2
+    versionCode: 9
+    commit: 8682067fea75c2f19bd2c26498d1b26d2adf004f
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.2.3
+    versionCode: 10
+    commit: c727cd2becdefa76e9a6d95531e709fc088ab6eb
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.0
+    versionCode: 11
+    commit: 469aee7cea8e2af53cf5b9ffc47ed6dfb579718c
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.1
+    versionCode: 12
+    commit: 54df6379de8028d8a5bcd2c2f6a44581446f64f0
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.2
+    versionCode: 15
+    commit: dc83497e52c752af97fe1387765a9431e4831017
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.0
+    versionCode: 18
+    commit: aaea1e2f989e8b65153ad299442aff197c94fe0a
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.1
+    versionCode: 19
+    commit: 4c3e96fcf3514869708ad7b4e72bd2231ef23a07
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+
+  - versionName: 1.4.2
+    versionCode: 20
+    commit: 96b02751c073f78785733fc6169bc603693b28f9
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+
+  - versionName: 1.4.3
+    versionCode: 21
+    commit: 14ace0df46426776ca81c4a258849adf952e7aad
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+
+  - versionName: 1.5.0
+    versionCode: 25
+    commit: 22860a4f98cc40f06884d8b3fd4a84909d2e8d20
+    subdir: app
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/mjaakko/NeoStumbler/releases/download/$$VERSION$$/app-fdroid-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFdroidRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
+  - versionName: 1.5.1
+    versionCode: 26
+    commit: b8752ed54c6069d6496ae0b357585796f578b057
+    subdir: app
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/mjaakko/NeoStumbler/releases/download/$$VERSION$$/app-fdroid-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFdroidRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
+  - versionName: 1.5.2
+    versionCode: 27
+    commit: 47767ea1cd5d4a265b290220ea42773682cc6be3
+    subdir: app
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/mjaakko/NeoStumbler/releases/download/$$VERSION$$/app-fdroid-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFdroidRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
+  - versionName: 1.5.3
+    versionCode: 28
+    commit: 54875476c4cdb1b8a6d593406aa360c298e3b11e
+    subdir: app
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/mjaakko/NeoStumbler/releases/download/$$VERSION$$/app-fdroid-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFdroidRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
+  - versionName: 1.5.4
+    versionCode: 29
+    commit: acf056d53eb824e71b6f2c73203d1319ce8013ec
+    subdir: app
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/mjaakko/NeoStumbler/releases/download/$$VERSION$$/app-fdroid-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFdroidRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
+  - versionName: 1.5.5
+    versionCode: 30
+    commit: 2e530c14cd56c1af60c6fb3f740528ac49e44aa5
+    subdir: app
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/mjaakko/NeoStumbler/releases/download/$$VERSION$$/app-fdroid-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFdroidRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.0.0
+    versionCode: 34
+    commit: a24b3900ca0b36efb02de9cd98a14b0e116f8491
+    subdir: app
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/mjaakko/NeoStumbler/releases/download/$$VERSION$$/app-fdroid-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFdroidRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.1.0
+    versionCode: 36
+    commit: 94b7181562fbbdc44e809f5cb761797dd3c4df2b
+    subdir: app
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/mjaakko/NeoStumbler/releases/download/$$VERSION$$/app-fdroid-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFdroidRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.1.1
+    versionCode: 37
+    commit: 793767750573debd5920c251ca2bd62d7b52f113
+    subdir: app
+    output: build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/mjaakko/NeoStumbler/releases/download/$$VERSION$$/app-fdroid-release.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFdroidRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/fdroid/release/app-fdroid-release-unsigned.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
+  - versionName: 2.1.2
+    versionCode: 38
+    commit: 66d5c708395ba2957a63399475df31bd72a86faa
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+
+  - versionName: 2.1.3
+    versionCode: 39
+    commit: 48e23b25fd69198c423a4b4195b16af41aa8942e
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle.kts
+    scanignore:
+      - app/src/androidTest/assets/valid_reports.db.gz
+
+  - versionName: 2.1.5
+    versionCode: 41
+    commit: 0ef92021da48f5e51e0da2af8f98e3ca5bc256db
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+    rm:
+      - app/data/reports/room/src/androidTest/assets/valid_reports.db.gz
+      - app/data/location/googleplay/build.gradle.kts
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle.kts
+
+  - versionName: 2.1.6
+    versionCode: 42
+    commit: 9b4639c768a45e36a9f1d53adaf7f439db8f4997
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+    rm:
+      - app/data/reports/room/src/androidTest/assets/valid_reports.db.gz
+      - app/data/location/googleplay/build.gradle.kts
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle.kts
+
+  - versionName: 2.1.7
+    versionCode: 43
+    commit: b82df67545a7c992f76cbaa2e6039214e1c39602
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+    rm:
+      - app/data/reports/room/src/androidTest/assets/valid_reports.db.gz
+      - app/data/location/googleplay/build.gradle.kts
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle.kts
+
+  - versionName: 2.1.8
+    versionCode: 44
+    commit: 5d19855fef7409e6f2f9d725d66918fe673d57e6
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+    rm:
+      - app/data/reports/room/src/androidTest/assets/valid_reports.db.gz
+      - app/data/location/googleplay/build.gradle.kts
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle.kts
+
+  - versionName: 2.1.9
+    versionCode: 48
+    commit: 038071ce3e4ba9183c66df7e055e1a63a0f3d362
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+      - default
+    binary: https://github.com/mjaakko/NeoStumbler/releases/download/%v/app-fdroid-default-release.apk
+    rm:
+      - app/data/reports/room/src/androidTest/assets/valid_reports.db.gz
+      - app/data/location/googleplay/build.gradle.kts
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle.kts
+
+  - versionName: 2.1.10
+    versionCode: 49
+    commit: 45bbc0f463aab70fc5624f2c431ebf483b26cde7
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+      - default
+    binary: https://github.com/mjaakko/NeoStumbler/releases/download/%v/app-fdroid-default-release.apk
+    rm:
+      - app/data/reports/room/src/androidTest/assets/valid_reports.db.gz
+      - app/data/location/googleplay/build.gradle.kts
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle.kts
+
+  - versionName: 2.2.0
+    versionCode: 52
+    commit: fc85d078bcb84accd1f66bf8e968c6686a356abb
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+      - default
+    binary: https://github.com/mjaakko/NeoStumbler/releases/download/%v/app-fdroid-default-release.apk
+    rm:
+      - app/data/reports/room/src/androidTest/assets/valid_reports.db.gz
+      - app/data/location/googleplay/build.gradle.kts
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle.kts
+
+  - versionName: 2.2.1
+    versionCode: 53
+    commit: 987f6946e3974a21eb6ff55014f4a769eda1111b
+    subdir: app
+    sudo:
+      - export CPUS_MAX=4
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - fdroid
+      - default
+    binary: https://github.com/mjaakko/NeoStumbler/releases/download/%v/app-fdroid-default-release.apk
+    rm:
+      - app/data/reports/room/src/androidTest/assets/valid_reports.db.gz
+      - app/data/location/googleplay/build.gradle.kts
+    prebuild: sed -i -e '/bundletool {/,/^}/d' build.gradle.kts
+
+AllowedAPKSigningKeys: 7f839ac7afc4ff6f1c7fb1348ac10de2f17de8a78d0d812c1f43ae835a5111df
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[\d.]+$
+UpdateCheckName: xyz.malkki.neostumbler
+CurrentVersion: 2.2.1
+CurrentVersionCode: 53

@@ -1,0 +1,78 @@
+Categories:
+  - Science & Education
+License: MIT
+AuthorEmail: ecwt@eoinrul.es
+SourceCode: https://github.com/eoineoineoin/ecwt
+IssueTracker: https://github.com/eoineoineoin/ecwt/issues
+
+AutoName: MorseTrainer
+Description: |-
+  Use the Koch method to learn morse code. Each session, the app will play
+  random morse code characters, and score you based on how accurately you
+  transcribe them. The first lesson starts with only two letters, with each
+  new lesson adding an extra character.
+
+RepoType: git
+Repo: https://github.com/eoineoineoin/ecwt
+
+Builds:
+  - versionName: '3.0'
+    versionCode: 3
+    commit: release_3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.0'
+    versionCode: 4
+    commit: 15238ebecc9d4fb7f708b1a4e5bbed7a9b4a5720
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.1'
+    versionCode: 41
+    commit: 94218f6705b880ae1526f1ad94708ba221ad1afe
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.2'
+    versionCode: 42
+    commit: f149ad805ab3bde821487cc03fcc0bd5cc76f774
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.3'
+    versionCode: 43
+    commit: 6cbfc379e708fc6d7691de3941cf57df7c36c94d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.4'
+    versionCode: 44
+    commit: 52157971a580949c2cedf47c54e373a849c12153
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.5'
+    versionCode: 45
+    commit: 175efbe96dbed5034903f0c3988cd7849699a7d5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '4.6'
+    versionCode: 46
+    commit: c63a70a332c4ad66615fc98d7fe8551144b39cef
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '4.6'
+CurrentVersionCode: 46

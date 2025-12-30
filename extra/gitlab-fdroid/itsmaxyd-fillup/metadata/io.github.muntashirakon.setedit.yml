@@ -1,0 +1,73 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: Muntashir Al-Islam
+AuthorEmail: muntashirakon@riseup.net
+SourceCode: https://github.com/MuntashirAkon/SetEdit
+IssueTracker: https://github.com/MuntashirAkon/SetEdit/issues
+Changelog: https://github.com/MuntashirAkon/SetEdit/releases
+
+AutoName: Settings Database Editor
+
+RepoType: git
+Repo: https://github.com/MuntashirAkon/SetEdit.git
+
+Builds:
+  - versionName: '1.2'
+    versionCode: 4
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: '2.0'
+    versionCode: 5
+    commit: v2.0
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: '2.1'
+    versionCode: 6
+    commit: v2.1
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: '2.2'
+    versionCode: 7
+    commit: c6908b43c656d5e3d6ae0d654cbabb727619be71
+    subdir: app
+    gradle:
+      - yes
+    ndk: r21d
+
+  - versionName: '2.3'
+    versionCode: 8
+    commit: 376abc1277b016bb58eed7e52920e23f47733ec2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r21d
+
+  - versionName: 3.0-rc01
+    versionCode: 9
+    commit: 530405f9d5159d3fa9145b9822f8a2b695e73c83
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: 25.1.8937393
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.0-rc01
+CurrentVersionCode: 9

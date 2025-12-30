@@ -1,0 +1,21 @@
+Categories:
+  - Theming
+License: GPL-3.0-only
+WebSite: https://code.google.com/p/faenza-adw-theme
+SourceCode: https://code.google.com/p/faenza-adw-theme/source
+
+AutoName: Faenza ADW Theme
+Description: Theme based on the Faenza set
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: '1'
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.0'
+CurrentVersionCode: 1
+
+NoSourceSince: '1.0'

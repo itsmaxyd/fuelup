@@ -1,0 +1,84 @@
+Categories:
+  - Money
+  - Time
+License: GPL-3.0-or-later
+SourceCode: https://gitlab.com/Askanimus/arbeitszeitkonto
+IssueTracker: https://gitlab.com/Askanimus/arbeitszeitkonto/issues
+
+AutoName: Working Time Account
+
+RepoType: git
+Repo: https://gitlab.com/Askanimus/arbeitszeitkonto.git
+Binaries: https://gitlab.com/Askanimus/arbeitszeitkonto/-/releases/%v/downloads/app-release.apk
+
+Builds:
+  - versionName: 2.10.009
+    versionCode: 210009
+    commit: 00e004afe118501584672b51cf1616d12411cb17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.011
+    versionCode: 210011
+    commit: 10bb0c87bee3e85912414bcf445c2ad340ca8ce5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.000
+    versionCode: 211000
+    commit: 8a4968aa9c56812a0065e84904eddd347209f727
+    subdir: app
+    gradle:
+      - yes
+    prebuild: git reset --soft a2490c61d9ff277adbda9dc3208e2c90004de21e
+
+  - versionName: 2.11.001
+    versionCode: 211001
+    commit: af3586f297beabe249dd8239627a0fe91bd8777b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.002
+    versionCode: 211002
+    commit: 614cd8a5a2fe9526acd2aa4c24df65c214ae537c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.003
+    versionCode: 211003
+    commit: 79c8477e5592d813702b3a8241cc9278baa39e07
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.006
+    versionCode: 211006
+    commit: 4c3c14117d1245572a3ed7cd84816d12822c6fdf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.007
+    versionCode: 211007
+    commit: d89bf0f863d0afbbab30f2e173863ebe27a13988
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.008
+    versionCode: 211008
+    commit: 8f6d91872d19371439190c14ec207259a7f2a3e0
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: ee6c8949703d230e4ee54e7dd3b938e891eb7c7821f86e83f22fbc8175be2483
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.11.008
+CurrentVersionCode: 211008

@@ -1,0 +1,334 @@
+Categories:
+  - System
+License: Apache-2.0
+SourceCode: https://github.com/mueller-ma/PrepaidBalance
+IssueTracker: https://github.com/mueller-ma/PrepaidBalance/issues
+Translation: https://crowdin.com/project/prepaidbalance
+Changelog: https://github.com/mueller-ma/PrepaidBalance/releases
+
+AutoName: Prepaid Balance
+
+RepoType: git
+Repo: https://github.com/mueller-ma/PrepaidBalance.git
+
+Builds:
+  - versionName: '0.2'
+    versionCode: 3
+    commit: '0.2'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.4'
+    versionCode: 5
+    commit: '0.4'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.5'
+    versionCode: 6
+    commit: '0.5'
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.6'
+    versionCode: 7
+    commit: 5923c065d4a926cc5eda9548a8a037b59dacc5c7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.0'
+    versionCode: 8
+    commit: 9b20a39c6f47c40c0f8579a6641605f8b8dec3db
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 9
+    commit: ceb1fcd149ce5c39dae7f3fa9871627e5f8aeba8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 10
+    commit: d824aa924d89cd0f6f773728a5bfc8f0a4a30189
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 11
+    commit: a039558cbe0947028a36cb41687172cabe081cff
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 12
+    commit: a06ec475ce943b579ce1d6d70af3ba377c137143
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 13
+    commit: 9d811e8165722c2624b284355638f8354b8066b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 14
+    commit: d7a4f32478afb057f8ff00dc4a9d2ccc863edf25
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 15
+    commit: a29aadee6ba775da7bde3d029e1b9db3f693b556
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 16
+    commit: 48c64f6b88a804ebf885d8a2cdff4ef99b473efb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.9'
+    versionCode: 17
+    commit: 66978977c49b165d7ccce3ca5214ca2878a5c18a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 18
+    commit: 593161e76f69f3e4b27542575a1395919b3ba4a9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 19
+    commit: b10d74f589a5500cd1371504a7fa0f672b0bb627
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.12'
+    versionCode: 20
+    commit: ca7c48253ae36ab3d8236a971adf1c47d77ad112
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.13'
+    versionCode: 21
+    commit: 59cf4b3b9fcd0f4c14fce002631a49e5ba7bd297
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.14'
+    versionCode: 22
+    commit: 4bf672822cbedb6d573e20539b350f6a4a237f2a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.15'
+    versionCode: 23
+    commit: a6895757d56199dc19ccf8b4c6ec7ed5ea67519b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.16'
+    versionCode: 24
+    commit: b7136b775f4ff083ea75e86f05bb16bb5c0da66c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.17'
+    versionCode: 25
+    commit: 7ce9c9671d0f26fb67d37ea98e55c1a11a5cb7ce
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.18'
+    versionCode: 26
+    commit: eb0e4692ee9fe92d14cec22af940a35472438531
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.19'
+    versionCode: 27
+    commit: be3e2a0cd8259b22f756785bb1e9b863f42683d2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.20'
+    versionCode: 28
+    commit: 3a1c465ac06bf1b06cd2b7523ae776baa055fdcb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 30
+    commit: e2f27388e567e2090fd6e10dd0b3fc168c5cd50f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 31
+    commit: 3343c44605a47c56c4e3bcceb71663801b5eb2b4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 32
+    commit: 97a8453a99ddde24b41afca97fcc0f1004adadac
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 33
+    commit: 3267b9e6df5a3c1fabf071dfe409c35564a43320
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 34
+    commit: 158096b6e4caa66f4f314e21bdc7984779311269
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 35
+    commit: d2d5940ec783d4ee96102da0c879f2821f105881
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 36
+    commit: f3e56a91bdbbf0ddc9dcc27a732af2be6a397a7e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 37
+    commit: 1f2edc1de8446e4bf34bd25004670bde3023b2fe
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.9'
+    versionCode: 38
+    commit: 2b866e6ee7d5e275ab52f23efb2a2d1877ee8d60
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.10'
+    versionCode: 39
+    commit: 8426db982b6c7c33ed83bcd0bb145fb31e55024a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.11'
+    versionCode: 40
+    commit: 43ac3c00b7396bd3f652b8fe1ff4e6dc70a61a67
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '2.11'
+CurrentVersionCode: 40

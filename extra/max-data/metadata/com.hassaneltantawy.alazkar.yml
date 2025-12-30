@@ -1,0 +1,92 @@
+Categories:
+  - Reading
+License: GPL-3.0-only
+AuthorName: Hassan Eltantawy
+SourceCode: https://github.com/muslimpack/Al-Azkar
+IssueTracker: https://github.com/muslimpack/Al-Azkar/issues
+Changelog: https://github.com/muslimpack/Al-Azkar/releases
+
+AutoName: الأذكار النووية
+
+RepoType: git
+Repo: https://github.com/muslimpack/Al-Azkar.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 12
+    commit: 1627b06afe8f22681eaf44e936bd82ca8c00caa2
+    subdir: alazkar
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - dll
+      - alazkar/ios
+    prebuild:
+      - export flutterVersion=$(sed -n -E "s/.*flutter:\s\"([0-9.]+)\"/\1/p" pubspec.yaml)
+      - '[[ $flutterVersion ]] || exit 1'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - alazkar/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 1.1.0
+    versionCode: 13
+    commit: 07d6ea88dccab588565afd69b88c7a30ca001132
+    subdir: alazkar
+    output: build/app/outputs/flutter-apk/app-prod-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - dll
+      - alazkar/ios
+    prebuild:
+      - sed -i -e 's/-Xmx1536M/-Xmx4g/' android/gradle.properties
+      - export flutterVersion=$(sed -n -E "s/.*flutter:\s\"([0-9.]+)\"/\1/p" pubspec.yaml)
+      - '[[ $flutterVersion ]] || exit 1'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - alazkar/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --flavor prod
+
+  - versionName: 1.1.01
+    versionCode: 14
+    commit: 7817a851f237eed6b74d1e5aa1c371fe8223cfbf
+    subdir: alazkar
+    output: build/app/outputs/flutter-apk/app-prod-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - dll
+      - alazkar/ios
+    prebuild:
+      - sed -i -e 's/-Xmx1536M/-Xmx4g/' android/gradle.properties
+      - export flutterVersion=$(sed -n -E "s/.*flutter:\s\"([0-9.]+)\"/\1/p" pubspec.yaml)
+      - '[[ $flutterVersion ]] || exit 1'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+      - sed -i -e 's/8.12.1/8.11.1/' .pub-cache/hosted/pub.dev/share_plus-*/android/build.gradle
+      - sed -i -e 's/8.13.0/8.11.1/' .pub-cache/hosted/pub.dev/fluttertoast-*/android/build.gradle
+    scandelete:
+      - alazkar/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release --flavor prod
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: alazkar/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 1.1.01
+CurrentVersionCode: 14

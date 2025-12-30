@@ -1,0 +1,30 @@
+/unsigned/
+/repo/*
+/archive/
+/binary_transparency/
+/logs/
+/tmp/
+/builder/
+*~
+*.swp
+*.swo
+*.pyc
+.fdroid*
+*.apk
+*.jks
+/metadata/dump_*
+/build/*/
+!/build/extlib/
+/build/.fdroidvcs-*
+
+# used in fdroidserver's ./jenkins-test
+keystore.jks
+keystore.p12
+
+# the instructions page to be displayed on mirrors
+!/repo/index.css
+!/repo/index.html
+!/repo/index.png
+
+# source of env vars to store secrets for config.yml
+/variables

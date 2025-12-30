@@ -1,0 +1,361 @@
+Categories:
+  - Voice & Video Chat
+License: GPL-3.0-or-later
+SourceCode: https://github.com/meshenger-app/meshenger-android
+IssueTracker: https://github.com/meshenger-app/meshenger-android/issues
+Translation: https://hosted.weblate.org/engage/meshenger/
+Changelog: https://github.com/meshenger-app/meshenger-android/releases
+
+AutoName: Meshenger
+
+RepoType: git
+Repo: https://github.com/meshenger-app/meshenger-android
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: 28b55f7e69d92bbb6c8f34a64be7822cf48b1473
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 2
+    commit: 1.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 200
+    commit: v2.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 210
+    commit: v2.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.3
+    versionCode: 303
+    commit: v3.0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.0.0
+    versionCode: 400
+    commit: e6caf23a0a18856dac59ad5ea50069fca27e574a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.0.1
+    versionCode: 401
+    commit: 9176ce85d1df50dae4c1d89222b977be17367514
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.2
+    versionCode: 402
+    commit: 693cf7210de4db7504833bc59fedb943718f3fa4
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.3
+    versionCode: 403
+    commit: dec05972144d8180639dfb06dcdcef9dc3b62d50
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.4
+    versionCode: 404
+    commit: 54eda1ed5183416234fea2251242efed4e81a6d3
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.5
+    versionCode: 405
+    commit: 264b59e81e64e9e7806bb54232325d6fc68cec30
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.6
+    versionCode: 406
+    commit: 3be12c478a4075c9a66f086443eaf962b3d27b53
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.7
+    versionCode: 407
+    commit: 3d028a326001742f4c930789b55798780bed9c6e
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.9
+    versionCode: 409
+    commit: fb94a27afd4b86608c79325af2c09561c338a3f9
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.0
+    versionCode: 410
+    commit: 51e88187134e5224fe683a4dc9a497d18affb1f8
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.1
+    versionCode: 411
+    commit: d5ea712fac373cc02f765cec6ac6e21b6b02441b
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.2
+    versionCode: 412
+    commit: 978580768cb8784f7909bd4767e88282a9346769
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.3
+    versionCode: 413
+    commit: fb1dfe9f4cf2d8dd4f8f8608062dafb60d4926fe
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.4
+    versionCode: 414
+    commit: 8799a1916bd6893076e1eaea54a1f0798f28917e
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.5
+    versionCode: 415
+    commit: fc4ede0bd96d63857dae53272a18ac1062634f35
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.6
+    versionCode: 416
+    commit: d03cb8fa15363eef0ec2dfa5869ea63b3d18a7e9
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.7
+    versionCode: 417
+    commit: 685ff93fd526029e25ed13e4d7cf7e76e70e47df
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.8
+    versionCode: 418
+    commit: dfa9d17bf56b21b13906ca1869c5a90a2daaf7d5
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.9
+    versionCode: 419
+    commit: ad6504fd9b3e43346370ad0db1b6b78253cada5c
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.0
+    versionCode: 420
+    commit: c4b634b624c49238fd7c41dcf58fd4e79947ce49
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.1
+    versionCode: 421
+    commit: 5a0b45c9053650d5f16f5ec697f6fd335c726c67
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.2
+    versionCode: 422
+    commit: 86bc4f273fb0da1e470e5a0cdb62798000bb9e06
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.3
+    versionCode: 423
+    commit: 98715740fcd278b5990583a3f4facf5cb153a876
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.4
+    versionCode: 424
+    commit: 0e7e513ac52bfa0bd9c9c2d3a26ca79202bc1990
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.5
+    versionCode: 425
+    commit: a67d13b4ac303a8a35bd834a78881df060239ff4
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.6
+    versionCode: 426
+    commit: 657205cb15042291566944e53b0aecffee7291c8
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.7
+    versionCode: 427
+    commit: 3ec4408fd97ac4cc8529282b2547413e1b122184
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.8
+    versionCode: 428
+    commit: 406ca380016c3d11628ce8b9c58310908f634964
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.0
+    versionCode: 430
+    commit: f5ec7d90d5ec2c97d5954bda9682d930d2f77125
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.3
+    versionCode: 433
+    commit: 5599f241e1cd17e1a1e27de3d7529d4d2c3f84b9
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.5
+    versionCode: 435
+    commit: 8aa23fd54d1cffe9662c14808516ca872a84be68
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.6
+    versionCode: 436
+    commit: ac9b426a347fd72d68bd9d0cb53d2b87768b3f35
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.7
+    versionCode: 437
+    commit: 588e1b8092a31d2313ca0485de68a2cfab314a7f
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.8
+    versionCode: 438
+    commit: a8195252630417a84abd5c5d1ec81dfb048034f3
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.9
+    versionCode: 439
+    commit: c0039fc8981ce1cc922ca404c95e78067309bb32
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.4.0
+    versionCode: 440
+    commit: d8ae48aec83aa301c03eedce6c3d8f76956be307
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.4.1
+    versionCode: 441
+    commit: bb96251038f116d861f1d91f6a1a0a68156c89b6
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.4.2
+    versionCode: 442
+    commit: d3ee6827525f209336a17245f2f30ac53540524b
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.4.3
+    versionCode: 443
+    commit: 994e49f56a77939c2ae8655ce5efcd24529b6d48
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.4.4
+    versionCode: 444
+    commit: e2510835f529d88de342b1c126bed05e252e4f0b
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.4.5
+    versionCode: 445
+    commit: ece64a25aa45224d005969606983b9299c9f3e9a
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.4.6
+    versionCode: 446
+    commit: 8ddc715b3c0b5142bcf9de84634755659f89f657
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.4.7
+    versionCode: 447
+    commit: 73c2d16a1cd74d8f96b32bc5e8f16c2126e2a489
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.4.8
+    versionCode: 448
+    commit: fe4e5567d16fdda8c3126cbd7a9dea796216fc79
+    subdir: app
+    gradle:
+      - fdroid
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 4.4.8
+CurrentVersionCode: 448

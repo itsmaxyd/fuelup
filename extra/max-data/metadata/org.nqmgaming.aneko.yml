@@ -1,0 +1,100 @@
+Categories:
+  - Multimedia
+License: LGPL-2.1-only
+AuthorName: Nguyen Quang Minh (NQM)
+AuthorEmail: nguyenquangminh570@gmail.com
+SourceCode: https://github.com/pass-with-high-score/ANeko
+IssueTracker: https://github.com/pass-with-high-score/ANeko/issues
+Changelog: https://github.com/pass-with-high-score/ANeko/releases
+
+AutoName: ANeko
+
+RepoType: git
+Repo: https://github.com/pass-with-high-score/ANeko.git
+Binaries: https://github.com/pass-with-high-score/ANeko/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 4
+    commit: dd1491e9352ed345aaf563cc970c9a39f5601dbf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 5
+    commit: cfab488ec2f3e1519a06925940cc2ee0b5719563
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 6
+    commit: 549716ad3ee31fde62df86de7d1323a55f477e64
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 7
+    commit: 70903c44786828dd9d639a8a008035a6d408aafd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 9
+    commit: 1d0a0d154f502998d0281bdbfe2aac3583b68777
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 10
+    commit: e00a74ad3494b960600dd3bf1d7fd0eb3e104718
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.3
+    versionCode: 11
+    commit: 21467b4a1d85e97e2641aaa55327d5f1ca2c4ee7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.2
+    versionCode: 14
+    commit: 58f2396d5fd4d4478f00ce9f8816b5ac12f6d9ea
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.3
+    versionCode: 15
+    commit: 380a87227bfbacd0bd34a18503b256e159217230
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.4+1
+    versionCode: 17
+    commit: 2df8d1c590038557b9594f81e4e6e7f233caa223
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.5
+    versionCode: 18
+    commit: 9da86181e3700c15fe68d1518baf01e74cb59549
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 7e54674582b3da8a2c0fb5581006e61c252e1024028fc6ab609c28a4c383d808
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle/libs.versions.toml|versionCode = "(\d+)"|.|versionName = "(.+)"
+CurrentVersion: 1.3.5
+CurrentVersionCode: 18

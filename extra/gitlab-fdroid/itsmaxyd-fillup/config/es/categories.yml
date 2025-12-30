@@ -1,0 +1,126 @@
+Connectivity:
+  name: Conectividad
+Development:
+  name: Desarrollo
+Games:
+  name: Juegos
+Graphics:
+  name: Gráficos
+Internet:
+  name: Internet
+Money:
+  name: Dinero
+Multimedia:
+  name: Multimedia
+Navigation:
+  name: Navegación
+Phone & SMS:
+  name: Llamadas de teléfono y SMS
+Reading:
+  name: Lectura
+Science & Education:
+  name: Ciencia y educación
+Security:
+  name: Seguridad
+Sports & Health:
+  name: Deportes y salud
+System:
+  name: Sistema
+Theming:
+  name: Colores e interfaz
+Time:
+  name: Hora, gestión del tiempo
+Writing:
+  name: Escritura
+Email:
+  name: Correo electrónico
+VPN & Proxy:
+  name: Redes privadas (VPN) y proxies
+DNS & Hosts:
+  name: DNS y bloqueos de red
+File Transfer:
+  name: Transferencia de archivos
+Messaging:
+  name: Mensajería
+File Encryption & Vault:
+  name: Cifrado de archivos y bóvedas
+Password & 2FA:
+  name: Contraseñas y segundo factor de autenticación
+Browser:
+  name: Navegador
+App Store & Updater:
+  name: Tienda de aplicaciones y actualizadores
+News:
+  name: Noticias
+Local Media Player:
+  name: Reproductor local
+Keyboard & IME:
+  name: Teclado y métodos de entrada (IME)
+Social Network:
+  name: Redes sociales
+Podcast:
+  name: Pódcast
+Weather:
+  name: El tiempo y previsiones
+Online Media Player:
+  name: Reproductor en línea
+Workout:
+  name: Ejercicio físico
+Wallpaper:
+  name: Fondos de pantalla
+Wallet:
+  name: Cartera
+Voice & Video Chat:
+  name: Chat de vídeo y voz
+Unit Convertor:
+  name: Conversión de unidades
+Translation & Dictionary:
+  name: Traducción y diccionarios
+Text Editor:
+  name: Editor de textos
+Bookmark:
+  name: Marcadores
+Calculator:
+  name: Calculadora
+Calendar & Agenda:
+  name: Calendarios y agendas
+Cloud Storage & File Sync:
+  name: Subir y sincronizar archivos
+Draw:
+  name: Dibujo
+Ebook Reader:
+  name: Lector de libros electrónicos
+Finance Manager:
+  name: Contabilidad y finanzas
+Gallery:
+  name: Galería
+Icon Pack:
+  name: Paquete de iconos
+Launcher:
+  name: Lanzador de aplicaciones
+Note:
+  name: Notas
+Pass Wallet:
+  name: Billetes de transporte y entradas
+Recipe Manager:
+  name: Recetas de cocina
+Public Transport:
+  name: Transporte público
+Shopping List:
+  name: Lista de la compra
+Task:
+  name: Tareas
+Forum:
+  name: Foros
+Habit Tracker:
+  name: Seguimiento de hábitos
+Location Tracker & Sharer:
+  name: Seguir y compartir mi ubicación
+Music Practice Tool:
+  name: Práctica musical
+AI Chat:
+  name: Chat de IA
+App Manager:
+  name: Gestor de aplicaciones
+Religion:
+  name: Religión

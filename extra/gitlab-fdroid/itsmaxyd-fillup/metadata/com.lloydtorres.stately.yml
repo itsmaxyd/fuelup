@@ -1,0 +1,66 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App depends on a non-libre website.
+  Tracking:
+    en-US: Account creation requires website using Google Analytics.
+Categories:
+  - Games
+License: Apache-2.0
+AuthorName: Lloyd Torres
+AuthorWebSite: https://lloydtorres.com
+SourceCode: https://github.com/lloydtorres/stately
+IssueTracker: https://github.com/lloydtorres/stately/issues
+Changelog: https://github.com/lloydtorres/stately#revision-history
+
+AutoName: Stately
+
+RepoType: git
+Repo: https://github.com/lloydtorres/stately.git
+
+Builds:
+  - versionName: 1.10.5
+    versionCode: 47
+    commit: 1.10.5
+    subdir: Stately/app
+    gradle:
+      - yes
+
+  - versionName: 1.11.0
+    versionCode: 49
+    commit: f7cb181119e185088c4002c261bf1cdabffd9d6d
+    subdir: Stately/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.1
+    versionCode: 50
+    commit: 3acdfefd3dd2e8440431c978f50f972b4220c1b6
+    subdir: Stately/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.2
+    versionCode: 51
+    commit: 3816f980af0e04e278e76bbffcc2b5509ce158d7
+    subdir: Stately/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+MaintainerNotes: account creation requires website using Google Analytics (Tracking)
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.11.2
+CurrentVersionCode: 51

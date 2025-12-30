@@ -1,0 +1,67 @@
+Categories:
+  - Money
+License: MIT
+AuthorName: Aniruddha Adhikary (Ani)
+AuthorWebSite: https://www.adhikary.net/
+WebSite: https://mrtbuddy.com
+SourceCode: https://github.com/aniruddha-adhikary/mrt-buddy
+IssueTracker: https://github.com/aniruddha-adhikary/mrt-buddy/issues
+
+AutoName: MRT Buddy
+
+RepoType: git
+Repo: https://github.com/aniruddha-adhikary/mrt-buddy.git
+Binaries: https://github.com/aniruddha-adhikary/mrt-buddy/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 0.0.15
+    versionCode: 15
+    commit: 0735d4bee4feb647eb1518a0fe0b8c287b586d75
+    subdir: composeApp
+    gradle:
+      - yes
+    rm:
+      - iosApp
+
+  - versionName: 0.0.20
+    versionCode: 20
+    commit: 0abd21a437d3c53055bd897326216e9c9fb67081
+    subdir: composeApp
+    gradle:
+      - yes
+    rm:
+      - iosApp
+
+  - versionName: 0.0.21
+    versionCode: 21
+    commit: bc4778e4a6bc9a4c78b94677922db964616e3a4f
+    subdir: composeApp
+    gradle:
+      - yes
+    rm:
+      - iosApp
+
+  - versionName: 0.0.22
+    versionCode: 22
+    commit: bd2308661b636a17aec9bb3e856b5e9860f4ed1c
+    subdir: composeApp
+    gradle:
+      - yes
+    rm:
+      - iosApp
+
+  - versionName: 0.0.24
+    versionCode: 24
+    commit: 680aa77d4edd4d5c870a880fc552cdcf146c1514
+    subdir: composeApp
+    gradle:
+      - yes
+    rm:
+      - iosApp
+
+AllowedAPKSigningKeys: c8e429053cbaaef66173725cac7e7a88fcc717d79f26569edeca09bcb7e97891
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.0.24
+CurrentVersionCode: 24

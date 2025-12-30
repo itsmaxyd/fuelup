@@ -1,0 +1,226 @@
+Categories:
+  - Internet
+License: Apache-2.0
+AuthorName: moko256.lab
+AuthorEmail: moko256.lab@gmail.com
+SourceCode: https://github.com/moko256/twitlatte
+IssueTracker: https://github.com/moko256/twitlatte/issues
+Changelog: https://github.com/moko256/twitlatte/blob/HEAD/CHANGELOG.md
+
+AutoName: twitlatte
+Description: |-
+  SNS client specialized to read in chronorogical order. You can access
+  Twitter, Mastodon and Pleroma with API. <i>Twitlatte</i> supports multiple
+  accounts.
+
+  <b>NOTE:</b> Twitter has
+  <a href="https://github.com/moko256/twitlatte/issues/54#issuecomment-574955039
+  permanently">suspended this app</a> – so it's unlikely Twitlatte will be able
+  to support Twitter in the foreseeable future.
+
+RepoType: git
+Repo: https://github.com/moko256/twitlatte
+
+Builds:
+  - versionName: 1.1.0
+    versionCode: 4
+    commit: v1.1.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - twitter4j/..git
+      - twitter4j/twitter4j-core/build
+      - twitter4j/twitter4j-http2-support/build
+    prebuild: sed -i -e '/versionNameSuffix/d' build.gradle
+
+  - versionName: 1.1.1
+    versionCode: 5
+    commit: v1.1.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 6
+    commit: v1.2.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 7
+    commit: v1.2.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 8
+    commit: v1.2.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.2.3
+    versionCode: 9
+    commit: v1.2.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 10
+    commit: v1.3.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 11
+    commit: v1.3.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 13
+    commit: v1.4.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 14
+    commit: v1.5.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 16
+    commit: v1.5.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 17
+    commit: v1.6.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 18
+    commit: v1.6.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 20
+    commit: v1.6.3
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 21
+    commit: v1.6.4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.6.5
+    versionCode: 22
+    commit: v1.6.5
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 23
+    commit: v1.7.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 24
+    commit: v1.8.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 25
+    commit: v1.8.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 26
+    commit: v1.9.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.9.2
+    versionCode: 28
+    commit: v1.9.2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.10.0
+    versionCode: 29
+    commit: v1.10.0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.10.1
+    versionCode: 30
+    commit: v1.10.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.11.1
+    versionCode: 32
+    commit: v1.11.1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.11.1
+CurrentVersionCode: 32

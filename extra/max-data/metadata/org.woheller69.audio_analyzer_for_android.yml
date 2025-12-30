@@ -1,0 +1,130 @@
+Categories:
+  - Multimedia
+License: Apache-2.0
+AuthorName: woheller69
+SourceCode: https://github.com/woheller69/audio-analyzer-for-android
+IssueTracker: https://github.com/woheller69/audio-analyzer-for-android/issues
+
+AutoName: Audio Spectrum Analyzer
+
+RepoType: git
+Repo: https://github.com/woheller69/audio-analyzer-for-android
+
+Builds:
+  - versionName: '1.7'
+    versionCode: 170
+    commit: V1.7
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 180
+    commit: ace3d428f9aa3c7d4e310b8202c50a066a16aff3
+    subdir: audioSpectrumAnalyzer
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '1.9'
+    versionCode: 190
+    commit: 72f57f6d42de7307edd861d7c539c4d7c7b6fc8e
+    subdir: audioSpectrumAnalyzer
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 200
+    commit: 3578553529abc2defe4196b5bb05de08d63a62a9
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 210
+    commit: d017ab940185a1285eb585f17b147ca0f42db05d
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 220
+    commit: 105ed45140d99014df76bfb4ed18443840f1a09b
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 230
+    commit: f0e266a28db4c104b7495aee126d09babbbc884b
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 240
+    commit: 97307dddc8ab2c54317edf6a97bc0180c11b3a79
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 250
+    commit: d80d949adf85ed5a7b0fe3b5eafcce5c4cf497e6
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 260
+    commit: 27409c0df6a9e43b0b89f01c601c5245ff5695f6
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 270
+    commit: a38a96cc36971b4e7713c11ff622053b662c85a6
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 280
+    commit: d4ffc559e025a68dde9bda029dcba3b08917cbb5
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.9'
+    versionCode: 290
+    commit: f4884172210a6b919b63c92b05d239eaf2761cd0
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 300
+    commit: 0b7f8fa195e25695fefb80818f99e5e2659d5f81
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '3.1'
+    versionCode: 310
+    commit: 6c03369ff6815f43025beb883922bd7441d5a0e3
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '3.1'
+CurrentVersionCode: 310

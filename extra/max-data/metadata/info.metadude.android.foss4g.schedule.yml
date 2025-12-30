@@ -1,0 +1,156 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Tethered to the schedule site.
+Categories:
+  - Time
+License: Apache-2.0
+AuthorName: Tobias Preuss
+AuthorEmail: tobias.preuss+foss4ge@googlemail.com
+SourceCode: https://github.com/johnjohndoe/CampFahrplan
+IssueTracker: https://github.com/EventFahrplan/EventFahrplan/issues
+Translation: https://crowdin.com/project/eventfahrplan
+Liberapay: EventFahrplan
+
+AutoName: FOSS4G Europe Mostar 2025 Schedule
+Description: |
+  Conference program app for the FOSS4G Europe 2025 conference in Mostar, Bosnia-Herzegovina
+
+  https://2025.europe.foss4g.org
+
+  <b>About FOSS4G</b>
+  The Free and Open Source Software for Geospatial Europe (FOSS4GE)
+  conference is the European branch event of the Open Source Geospatial
+  Foundation (OSGeo) annual conference.
+
+  OSGeo is the largest and most important international organization
+  that unites the community of developers, users, and advocates of
+  free and open source in geospatial.
+
+  The main focus of the organization is fostering the development,
+  maintenance, and use of free and open source software for geospatial,
+  open standards, and open data. The democratizing nature of the field
+  creates a basis for sharing geographic data, promotes cooperation
+  between organizations and individuals, and enables the application of
+  data in solving the most diverse everyday problems, being the basis
+  for such fields as map applications, logistics, transport, infrastructure
+  planning, organizing rescue work in disaster areas, etc.
+
+  FOSS4G is a community event organized by volunteers, with a focus on
+  building a diverse and sustainable open community, sharing our own
+  experiences, and learning from others. Although it is software that
+  brings us together, it’s the deep care for the society and the
+  environment that surrounds us, helping solve the World’s problems
+  one bit at a time, that connects us.
+
+  <b>Features</b>
+  * View program by day and rooms (side by side)
+  * Custom grid layout for smartphones (try landscape mode 🙃) and tablets
+  * Read detailed descriptions (speaker names, start time, room name, links, ...) of sessions
+  * Search through all sessions
+  * Add sessions to favorites list
+  * Export favorites list
+  * Setup alarms for individual sessions
+  * Add sessions to your personal calendar
+  * Share a website link to an session with others
+  * Keep track of program changes
+  * Automatic program updates (configurable in settings)
+  * Vote and leave comments on talks and workshops
+
+
+  🔤 <b>Supported languages</b>
+  (Session descriptions excluded)
+  * Danish
+  * Dutch
+  * English
+  * Finnish
+  * French
+  * German
+  * Italian
+  * Japanese
+  * Lithuanian
+  * Polish
+  * Portuguese (Brazil)
+  * Portuguese (Portugal)
+  * Russian
+  * Spanish
+  * Swedish
+  * Turkish
+
+  💡 Questions regarding the content can only be answered by the
+  FOSS4G content team. This app simply offers a way to consume and
+  personalize the conference schedule.
+
+  💣 Bug reports are very welcome. It would be awesome if you
+  can describe how to reproduce the particular error in the
+  issue tracker at https://github.com/EventFahrplan/EventFahrplan/issues.
+
+  🏆 The app is based on the EventFahrplan app
+  which was initially built for the camp and annual congress of
+  the Chaos Computer Club. The source code of the app is publicly
+  available on GitHub at:
+  https://github.com/johnjohndoe/CampFahrplan/tree/foss4g-2025.
+
+  🎨 FOSS4G Europe Mostar 2025 logo: Creative Commons, CC-0.
+
+RepoType: git
+Repo: https://github.com/johnjohndoe/CampFahrplan.git
+
+Builds:
+  - versionName: 1.52.1-FOSS4G-Edition
+    versionCode: 86
+    commit: v.1.52.1-FOSS4G-Edition
+    subdir: app
+    gradle:
+      - foss4g2021
+    prebuild: cp local.properties gradle.properties
+
+  - versionName: 1.58.0-FOSS4G-Edition
+    versionCode: 93
+    commit: v.1.58.0-FOSS4G-Edition
+    subdir: app
+    gradle:
+      - foss4g2023
+    prebuild: cp local.properties gradle.properties
+
+  - versionName: 1.58.1-FOSS4G-Edition
+    versionCode: 94
+    commit: v.1.58.1-FOSS4G-Edition
+    subdir: app
+    gradle:
+      - foss4g2023
+    prebuild: cp local.properties gradle.properties
+
+  - versionName: 1.58.2-FOSS4G-Edition
+    versionCode: 95
+    commit: v.1.58.2-FOSS4G-Edition
+    subdir: app
+    gradle:
+      - foss4g2023
+    prebuild: cp local.properties gradle.properties
+
+  - versionName: 1.64.2-FOSS4G-Edition
+    versionCode: 103
+    commit: v.1.64.2-FOSS4G-Edition
+    subdir: app
+    gradle:
+      - foss4g2024
+    prebuild: cp local.properties gradle.properties
+
+  - versionName: 1.71.0-FOSS4G-Europe-Edition
+    versionCode: 109
+    commit: v.1.71.0-FOSS4G-Europe-Edition
+    subdir: app
+    gradle:
+      - foss4g2025
+    prebuild: cp local.properties gradle.properties
+
+MaintainerNotes: |
+  The branch for FOSS4G 2025 is maintained in a separate fork
+  of the main repository on purpose in order to keep the latter
+  well organized and less complex.
+
+ArchivePolicy: 1
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.71.0-FOSS4G-Europe-Edition
+CurrentVersionCode: 109

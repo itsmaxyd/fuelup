@@ -1,0 +1,58 @@
+Categories:
+  - Phone & SMS
+License: GPL-3.0-only
+AuthorName: msusman1
+AuthorEmail: msusman97@gmail.com
+AuthorWebSite: https://msusman1.github.io/
+SourceCode: https://github.com/msusman1/Amadz
+IssueTracker: https://github.com/msusman1/Amadz/issues
+Changelog: https://github.com/msusman1/Amadz/releases
+
+AutoName: Amadz
+
+RepoType: git
+Repo: https://github.com/msusman1/Amadz.git
+Binaries: https://github.com/msusman1/Amadz/releases/download/%v/amadz.apk
+
+Builds:
+  - versionName: 1.0.5
+    versionCode: 5
+    commit: b10c4502d4e5827626d956513f1bb5cf75d34234
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.6
+    versionCode: 6
+    commit: 36b2d6695317054a9ca9e075875fb0f7c34ec376
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.8
+    versionCode: 8
+    commit: 47d6261929ac677f3650e44336fb99dae3dda832
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.9
+    versionCode: 9
+    commit: 916fed1fa8c34ade3c436a57e2451c1ffd7437d9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 10
+    commit: 5c87136da58e19441f4ebca2314188dfd5badd7b
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: fe465ddae796ddd311f9c62958250829921fedb3d59758682343d2e2405ac5d9
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.0
+CurrentVersionCode: 10

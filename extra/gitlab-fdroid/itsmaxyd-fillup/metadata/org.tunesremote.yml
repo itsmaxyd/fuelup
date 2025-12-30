@@ -1,0 +1,24 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+WebSite: https://code.google.com/p/tunesremote-plus
+SourceCode: https://code.google.com/p/tunesremote-plus/source
+
+AutoName: TunesRemote+
+Description: Remote control for DACP-compatible media players.
+
+Builds:
+  - versionName: 2.5.2
+    versionCode: 252
+    commit: '141'
+
+  - versionName: 2.5.3
+    versionCode: 253
+    commit: '154'
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2.5.3
+CurrentVersionCode: 253
+
+NoSourceSince: 2.5.3

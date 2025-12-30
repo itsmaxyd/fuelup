@@ -1,0 +1,59 @@
+Categories:
+  - Development
+License: MIT
+AuthorName: FredHappyface
+SourceCode: https://github.com/fredhappyface/android.fhcode
+IssueTracker: https://github.com/fredhappyface/android.fhcode/issues
+Changelog: https://github.com/FredHappyface/Android.FHCode/blob/HEAD/CHANGELOG.md
+
+AutoName: FHCode
+
+RepoType: git
+Repo: https://github.com/fredhappyface/android.fhcode.git
+
+Builds:
+  - versionName: 2021.11.04
+    versionCode: 20211104
+    commit: '20211104'
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2022.01.10
+    versionCode: 20220110
+    commit: 98424a1cb2a0ba014109bc1b4dac7987faa77ac8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '20230820'
+    versionCode: 20230820
+    commit: 428ccc81f1f51af350b886f6febe16b507378438
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '20240331'
+    versionCode: 20240331
+    commit: f76b8809f4fa1b4eb0c6a85bb832e53b248e351b
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '20240331'
+CurrentVersionCode: 20240331

@@ -1,0 +1,621 @@
+Categories:
+  - Password & 2FA
+  - Security
+License: GPL-3.0-only
+AuthorName: LessPass
+AuthorEmail: contact@lesspass.com
+WebSite: https://lesspass.com/
+SourceCode: https://github.com/lesspass/lesspass
+IssueTracker: https://github.com/lesspass/lesspass/issues
+
+Description: |-
+  LessPass is a stateless password manager.
+  It derives a site, a login and a master password to generate a unique password. You don't need to sync your password vault across every device.
+
+RepoType: git
+Repo: https://github.com/lesspass/lesspass.git
+
+Builds:
+  - versionName: 3.0.2
+    versionCode: 30002
+    commit: mobile-v3.0.2
+    subdir: packages/mobile/android/app/
+    sudo:
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz
+      - echo "0dc6dba645550b66f8f00541a428c29da7c3cde32fb7eda2eb626a9db3bbf08d node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v10.13.0-linux-x64/. /usr/local/
+    init:
+      - pushd ../../../../
+      - sed -i -e 's/yarn/npm/' package.json
+      - npm install
+      - npm run bootstrap
+      - popd
+    gradle:
+      - yes
+    rm:
+      - packages/cli/
+    prebuild:
+      - truncate -s 0 ../../node_modules/react-native/local-cli/server/util/external/xsel
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+    scanignore:
+      - packages/mobile/android/build.gradle
+      - packages/mobile/node_modules/react-native-screens/android/build.gradle
+    scandelete:
+      - node_modules/
+      - packages/mobile/node_modules/
+
+  - versionName: 3.0.3
+    versionCode: 30003
+    commit: mobile-v3.0.3
+    subdir: packages/mobile/android/app/
+    sudo:
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz
+      - echo "0dc6dba645550b66f8f00541a428c29da7c3cde32fb7eda2eb626a9db3bbf08d node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v10.13.0-linux-x64/. /usr/local/
+    init:
+      - pushd ../../../../
+      - sed -i -e 's/yarn/npm/' package.json
+      - npm install
+      - npm run bootstrap
+      - popd
+    gradle:
+      - yes
+    prebuild:
+      - truncate -s 0 ../../node_modules/react-native/local-cli/server/util/external/xsel
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+    scanignore:
+      - packages/mobile/android/build.gradle
+      - packages/mobile/node_modules/react-native-screens/android/build.gradle
+    scandelete:
+      - node_modules/
+      - packages/*/node_modules/
+
+  - versionName: 3.1.1
+    versionCode: 30101
+    commit: mobile-v3.1.1
+    subdir: packages/mobile/android/app/
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm
+    init:
+      - pushd ../../../../
+      - sed -i -e 's/yarn/npm/' package.json
+      - npm install
+    gradle:
+      - yes
+    prebuild:
+      - truncate -s 0 ../../node_modules/react-native/local-cli/server/util/external/xsel
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+    scanignore:
+      - packages/mobile/android/build.gradle
+      - packages/mobile/node_modules/react-native-screens/android/build.gradle
+    scandelete:
+      - node_modules/
+      - packages/*/node_modules/
+
+  - versionName: 3.1.3
+    versionCode: 30103
+    commit: mobile-v3.1.3
+    subdir: mobile/android/app/
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm
+    init: npm install
+    gradle:
+      - yes
+    prebuild:
+      - truncate -s 0 ../../node_modules/react-native/local-cli/server/util/external/xsel
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native-screens/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+
+  - versionName: 3.1.6
+    versionCode: 30106
+    commit: mobile-v3.1.6
+    subdir: mobile/android/app/
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    prebuild:
+      - truncate -s 0 ../../node_modules/@react-native-community/cli/build/commands/server/external/xsel
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+      - sed -i -e '/enable enableSeparateBuildPerCPUArchitecture/d' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native-screens/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+
+  - versionName: 8.1.1
+    versionCode: 80101
+    commit: 8.1.1
+    subdir: mobile/android/app/
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    prebuild:
+      - truncate -s 0 ../../node_modules/@react-native-community/cli/build/commands/server/external/xsel
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+      - sed -i -e '/enable enableSeparateBuildPerCPUArchitecture/d' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native-screens/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+
+  - versionName: 9.1.2
+    versionCode: 90102
+    commit: 9.1.2
+    subdir: mobile/android/app/
+    sudo:
+      - apt-get update
+      - apt-get install -y -t stretch-backports npm
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    rm:
+      - mobile/node_modules/react-native/template/android/build.gradle
+      - mobile/node_modules/hermes-engine/android/*.aar
+      - mobile/node_modules/jetifier/lib/
+      - mobile/node_modules/@react-native-community/async-storage/packages/storage-legacy/android/build/
+    prebuild:
+      - truncate -s 0 ../../node_modules/@react-native-community/cli/build/commands/server/external/xsel
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+      - sed -i -e '/enable enableSeparateBuildPerCPUArchitecture/d' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native-screens/android/build.gradle
+      - mobile/node_modules/@react-native-community/async-storage/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+
+  - versionName: 9.1.9
+    versionCode: 90109
+    commit: 9.1.9
+    subdir: mobile/android/app/
+    sudo:
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.xz
+      - echo "2e079cf638766fedd720d30ec8ffef5d6ceada4e8b441fc2a093cb9a865f4087  node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v14.16.0-linux-x64/. /usr/local/
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    rm:
+      - mobile/node_modules/react-native/template/android/build.gradle
+    prebuild:
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+      - sed -i -e '/enable enableSeparateBuildPerCPUArchitecture/d' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native/android/com/facebook/react/react-native
+      - mobile/node_modules/jsc-android/dist/org/webkit/android-jsc
+      - mobile/node_modules/react-native-screens/android/build.gradle
+      - mobile/node_modules/@react-native-community/async-storage/android/build.gradle
+      - mobile/node_modules/@react-native-community/masked-view/android/build.gradle
+      - mobile/node_modules/react-native-keychain/android/build.gradle
+      - mobile/node_modules/react-native-reanimated/android/build.gradle
+      - mobile/node_modules/react-native-safe-area-context/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+
+  - versionName: 9.3.0
+    versionCode: 90300
+    commit: mobile-v9.3.0
+    subdir: mobile/android/app/
+    sudo:
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.18.1/node-v14.18.1-linux-x64.tar.xz
+      - echo "ad1e3baa1aee8028b43206da3b2be9b8867cb598b4318bc88a0ae4518cc062a2  node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v14.18.1-linux-x64/. /usr/local/
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    rm:
+      - mobile/node_modules/react-native/template/android/build.gradle
+    prebuild:
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+      - sed -i -e '/enable enableSeparateBuildPerCPUArchitecture/d' build.gradle
+      - sed -i -e '/enableHermes/s/true/false/' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native/android/com/facebook/react/react-native
+      - mobile/node_modules/jsc-android/dist/org/webkit/android-jsc
+      - mobile/node_modules/react-native-screens/android/build.gradle
+      - mobile/node_modules/@react-native-community/async-storage/android/build.gradle
+      - mobile/node_modules/react-native-vector-icons/android/build.gradle
+      - mobile/node_modules/@react-native-community/masked-view/android/build.gradle
+      - mobile/node_modules/react-native-safe-area-context/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+
+  - versionName: 9.4.0
+    versionCode: 90400
+    commit: mobile-v9.4.0
+    subdir: mobile/android/app/
+    sudo:
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.18.1/node-v14.18.1-linux-x64.tar.xz
+      - echo "ad1e3baa1aee8028b43206da3b2be9b8867cb598b4318bc88a0ae4518cc062a2  node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v14.18.1-linux-x64/. /usr/local/
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    rm:
+      - mobile/node_modules/react-native/template/android/build.gradle
+    prebuild:
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+      - sed -i -e '/enable enableSeparateBuildPerCPUArchitecture/d' build.gradle
+      - sed -i -e '/enableHermes/s/true/false/' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native/android/com/facebook/react/react-native
+      - mobile/node_modules/jsc-android/dist/org/webkit/android-jsc
+      - mobile/node_modules/react-native-screens/android/build.gradle
+      - mobile/node_modules/@react-native-community/async-storage/android/build.gradle
+      - mobile/node_modules/react-native-vector-icons/android/build.gradle
+      - mobile/node_modules/@react-native-community/masked-view/android/build.gradle
+      - mobile/node_modules/react-native-safe-area-context/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+
+  - versionName: 9.5.3
+    versionCode: 90503
+    commit: mobile-v9.5.3
+    subdir: mobile/android/app/
+    sudo:
+      - curl -Lo node.tar.xz https://nodejs.org/dist/v14.18.1/node-v14.18.1-linux-x64.tar.xz
+      - echo "ad1e3baa1aee8028b43206da3b2be9b8867cb598b4318bc88a0ae4518cc062a2  node.tar.xz"
+        | sha256sum -c -
+      - tar xJf node.tar.xz
+      - cp -a node-v14.18.1-linux-x64/. /usr/local/
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    rm:
+      - mobile/node_modules/react-native/template/android/build.gradle
+    prebuild:
+      - sed -i -e 's#../package.json#../../package.json#' ../build.gradle
+      - sed -i -e '/enable enableSeparateBuildPerCPUArchitecture/d' build.gradle
+      - sed -i -e '/enableHermes/s/true/false/' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native/android/com/facebook/react/react-native
+      - mobile/node_modules/jsc-android/dist/org/webkit/android-jsc
+      - mobile/node_modules/react-native-screens/android/build.gradle
+      - mobile/node_modules/@react-native-community/async-storage/android/build.gradle
+      - mobile/node_modules/react-native-vector-icons/android/build.gradle
+      - mobile/node_modules/@react-native-community/masked-view/android/build.gradle
+      - mobile/node_modules/react-native-safe-area-context/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+
+  - versionName: 9.7.3
+    versionCode: 900700301
+    commit: mobile-v9.7.3
+    subdir: mobile/android/app/
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+      - echo "a8fcacb8033504e6d704bdee821f7005ee3774db25c799bcf2a13b5bda7de172 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    rm:
+      - mobile/node_modules/react-native/template/android/build.gradle
+    prebuild: sed -i -e '/enableHermes/s/true/false/' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native/android/com/facebook/react/react-native
+      - mobile/node_modules/jsc-android/dist/org/webkit/android-jsc
+      - mobile/node_modules/react-native-screens/android/build.gradle
+      - mobile/node_modules/@react-native-community/async-storage/android/build.gradle
+      - mobile/node_modules/react-native-vector-icons/android/build.gradle
+      - mobile/node_modules/react-native-safe-area-context/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+    gradleprops:
+      - reactNativeArchitectures=armeabi-v7a
+
+  - versionName: 9.7.3
+    versionCode: 900700302
+    commit: mobile-v9.7.3
+    subdir: mobile/android/app/
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+      - echo "a8fcacb8033504e6d704bdee821f7005ee3774db25c799bcf2a13b5bda7de172 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    rm:
+      - mobile/node_modules/react-native/template/android/build.gradle
+    prebuild: sed -i -e '/enableHermes/s/true/false/' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native/android/com/facebook/react/react-native
+      - mobile/node_modules/jsc-android/dist/org/webkit/android-jsc
+      - mobile/node_modules/react-native-screens/android/build.gradle
+      - mobile/node_modules/@react-native-community/async-storage/android/build.gradle
+      - mobile/node_modules/react-native-vector-icons/android/build.gradle
+      - mobile/node_modules/react-native-safe-area-context/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+    gradleprops:
+      - reactNativeArchitectures=x86
+
+  - versionName: 9.7.3
+    versionCode: 900700303
+    commit: mobile-v9.7.3
+    subdir: mobile/android/app/
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+      - echo "a8fcacb8033504e6d704bdee821f7005ee3774db25c799bcf2a13b5bda7de172 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    rm:
+      - mobile/node_modules/react-native/template/android/build.gradle
+    prebuild: sed -i -e '/enableHermes/s/true/false/' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native/android/com/facebook/react/react-native
+      - mobile/node_modules/jsc-android/dist/org/webkit/android-jsc
+      - mobile/node_modules/react-native-screens/android/build.gradle
+      - mobile/node_modules/@react-native-community/async-storage/android/build.gradle
+      - mobile/node_modules/react-native-vector-icons/android/build.gradle
+      - mobile/node_modules/react-native-safe-area-context/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+    gradleprops:
+      - reactNativeArchitectures=arm64-v8a
+
+  - versionName: 9.7.3
+    versionCode: 900700304
+    commit: mobile-v9.7.3
+    subdir: mobile/android/app/
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.gz
+      - echo "a8fcacb8033504e6d704bdee821f7005ee3774db25c799bcf2a13b5bda7de172 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm -g install yarn
+    init: yarn install
+    gradle:
+      - yes
+    rm:
+      - mobile/node_modules/react-native/template/android/build.gradle
+    prebuild: sed -i -e '/enableHermes/s/true/false/' build.gradle
+    scanignore:
+      - mobile/android/build.gradle
+      - mobile/node_modules/react-native/android/com/facebook/react/react-native
+      - mobile/node_modules/jsc-android/dist/org/webkit/android-jsc
+      - mobile/node_modules/react-native-screens/android/build.gradle
+      - mobile/node_modules/@react-native-community/async-storage/android/build.gradle
+      - mobile/node_modules/react-native-vector-icons/android/build.gradle
+      - mobile/node_modules/react-native-safe-area-context/android/build.gradle
+    scandelete:
+      - mobile/node_modules/
+    gradleprops:
+      - reactNativeArchitectures=x86_64
+
+  - versionName: 9.8.7
+    versionCode: 900800701
+    commit: mobile-v9.8.7
+    subdir: packages/lesspass-mobile/android/app/
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make gcc libc-dev golang-go
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-x64.tar.gz
+      - echo "9d942932535988091034dc94cc5f42b6dc8784d6366df3a36c4c9ccb3996f0c2 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm -g install yarn
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-armeabi-v7a-release-unsigned.apk
+    srclibs:
+      - esbuild@v0.25.0
+    prebuild:
+      - sed -i 's/versionCode [0-9]\+/versionCode $$VERCODE$$/' build.gradle
+      - sed -i 's/versionName "[0-9]*\.[0-9]*\.[0-9]*"/versionName "$$VERSION$$"/'
+        build.gradle
+      - pushd ../../../..
+      - yarn install
+    scanignore:
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/react-native/sdks/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+    scandelete:
+      - node_modules/
+      - .yarn/install-state.gz
+    build:
+      - pushd $$esbuild$$
+      - make esbuild
+      - popd
+      - pushd ../../../..
+      - mv $$esbuild$$/esbuild node_modules/@esbuild/linux-x64/bin/esbuild
+      - yarn build
+      - popd
+    gradleprops:
+      - reactNativeArchitectures=armeabi-v7a
+
+  - versionName: 9.8.7
+    versionCode: 900800702
+    commit: mobile-v9.8.7
+    subdir: packages/lesspass-mobile/android/app/
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make gcc libc-dev golang-go
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-x64.tar.gz
+      - echo "9d942932535988091034dc94cc5f42b6dc8784d6366df3a36c4c9ccb3996f0c2 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm -g install yarn
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86-release-unsigned.apk
+    srclibs:
+      - esbuild@v0.25.0
+    prebuild:
+      - sed -i 's/versionCode [0-9]\+/versionCode $$VERCODE$$/' build.gradle
+      - sed -i 's/versionName "[0-9]*\.[0-9]*\.[0-9]*"/versionName "$$VERSION$$"/'
+        build.gradle
+      - pushd ../../../..
+      - yarn install
+    scanignore:
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/react-native/sdks/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+    scandelete:
+      - node_modules/
+      - .yarn/install-state.gz
+    build:
+      - pushd $$esbuild$$
+      - make esbuild
+      - popd
+      - pushd ../../../..
+      - mv $$esbuild$$/esbuild node_modules/@esbuild/linux-x64/bin/esbuild
+      - yarn build
+      - popd
+    gradleprops:
+      - reactNativeArchitectures=x86
+
+  - versionName: 9.8.7
+    versionCode: 900800703
+    commit: mobile-v9.8.7
+    subdir: packages/lesspass-mobile/android/app/
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make gcc libc-dev golang-go
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-x64.tar.gz
+      - echo "9d942932535988091034dc94cc5f42b6dc8784d6366df3a36c4c9ccb3996f0c2 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm -g install yarn
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-arm64-v8a-release-unsigned.apk
+    srclibs:
+      - esbuild@v0.25.0
+    prebuild:
+      - sed -i 's/versionCode [0-9]\+/versionCode $$VERCODE$$/' build.gradle
+      - sed -i 's/versionName "[0-9]*\.[0-9]*\.[0-9]*"/versionName "$$VERSION$$"/'
+        build.gradle
+      - pushd ../../../..
+      - yarn install
+    scanignore:
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/react-native/sdks/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+    scandelete:
+      - node_modules/
+      - .yarn/install-state.gz
+    build:
+      - pushd $$esbuild$$
+      - make esbuild
+      - popd
+      - pushd ../../../..
+      - mv $$esbuild$$/esbuild node_modules/@esbuild/linux-x64/bin/esbuild
+      - yarn build
+      - popd
+    gradleprops:
+      - reactNativeArchitectures=arm64-v8a
+
+  - versionName: 9.8.7
+    versionCode: 900800704
+    commit: mobile-v9.8.7
+    subdir: packages/lesspass-mobile/android/app/
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - apt-get update
+      - apt-get install -y make gcc libc-dev golang-go
+      - curl -Lo node.tar.gz https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-x64.tar.gz
+      - echo "9d942932535988091034dc94cc5f42b6dc8784d6366df3a36c4c9ccb3996f0c2 node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm -g install yarn
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-x86_64-release-unsigned.apk
+    srclibs:
+      - esbuild@v0.25.0
+    prebuild:
+      - sed -i 's/versionCode [0-9]\+/versionCode $$VERCODE$$/' build.gradle
+      - sed -i 's/versionName "[0-9]*\.[0-9]*\.[0-9]*"/versionName "$$VERSION$$"/'
+        build.gradle
+      - pushd ../../../..
+      - yarn install
+    scanignore:
+      - node_modules/@react-native-async-storage/async-storage/android/build.gradle
+      - node_modules/react-native/sdks/hermesc
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-vector-icons/android/build.gradle
+    scandelete:
+      - node_modules/
+      - .yarn/install-state.gz
+    build:
+      - pushd $$esbuild$$
+      - make esbuild
+      - popd
+      - pushd ../../../..
+      - mv $$esbuild$$/esbuild node_modules/@esbuild/linux-x64/bin/esbuild
+      - yarn build
+      - popd
+    gradleprops:
+      - reactNativeArchitectures=x86_64
+
+MaintainerNotes: |-
+  scanignore is used to allow the "node_modules/react-native/android" local Maven repository.
+
+  We can not enable auto update because the version code is dynamic.
+
+ArchivePolicy: 6
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 9.8.7
+CurrentVersionCode: 900800704

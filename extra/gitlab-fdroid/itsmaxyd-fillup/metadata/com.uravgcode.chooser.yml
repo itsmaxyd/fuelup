@@ -1,0 +1,117 @@
+Categories:
+  - Games
+License: GPL-3.0-only
+AuthorName: UrAvgCode
+WebSite: https://uravgcode.com
+SourceCode: https://github.com/UrAvgCode/Chooser
+IssueTracker: https://github.com/UrAvgCode/Chooser/issues
+Changelog: https://github.com/UrAvgCode/Chooser/releases
+
+AutoName: Chooser
+
+RepoType: git
+Repo: https://github.com/UrAvgCode/Chooser.git
+Binaries: https://github.com/UrAvgCode/Chooser/releases/download/v.%v/chooser-v%v.apk
+
+Builds:
+  - versionName: '1.3'
+    versionCode: 8
+    commit: v.1.3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 9
+    commit: 7906cf43c9305b8e495818b6530054af90a5dd1d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.2
+    versionCode: 10
+    commit: bd166914953f219214cdd461ed76370a860bdb0a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4-pre-1
+    versionCode: 11
+    commit: a4f21620fb3bb0f441d050323fda11343c3da407
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4-pre-2
+    versionCode: 12
+    commit: 4ad740e943e4bedb64c8a575164bb26ebe20eb0f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 13
+    commit: 91062e58d169bd4fc7672d759a13a07f1f8f9cf7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 14
+    commit: 4480249f44a0888f945723ae1a4587ac8b045d50
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 15
+    commit: c449f3d44a15834743fad46d85077c54a58bb589
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 16
+    commit: ad0349133ef9c4b291baad6e6864b5fe4e7e432b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 17
+    commit: afd512bb82b98a7022cca6b5f4e95f2a1053ba17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.5
+    versionCode: 19
+    commit: v.1.4.5
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.6
+    versionCode: 20
+    commit: 1168e9cd09a8a28d1d4c506adfd41f382d2c4151
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.9
+    versionCode: 23
+    commit: 91389aadd6576697532ac571bc28aa500f909d07
+    subdir: app
+    gradle:
+      - foss
+
+AllowedAPKSigningKeys: 6d0e376dc6a19ea8430f8dcbe29eca57c1c0146595c1dcc75886ec8bf4d09963
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.4.9
+CurrentVersionCode: 23

@@ -1,0 +1,202 @@
+Categories:
+  - Internet
+License: GPL-3.0-or-later
+SourceCode: https://github.com/fabienli/DokuwikiAndroid
+IssueTracker: https://github.com/fabienli/DokuwikiAndroid/issues
+
+AutoName: Dokuwiki
+Description: Android application to access a dokuwiki and keep pages in local cache.
+
+RepoType: git
+Repo: https://github.com/fabienli/DokuwikiAndroid
+
+Builds:
+  - versionName: v0.8
+    versionCode: 52
+    commit: v0.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.10
+    versionCode: 54
+    commit: v0.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.11
+    versionCode: 55
+    commit: v0.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.14
+    versionCode: 58
+    commit: v0.14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.16
+    versionCode: 60
+    commit: v0.16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.17
+    versionCode: 61
+    commit: v0.17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.18
+    versionCode: 62
+    commit: v0.18
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.19
+    versionCode: 63
+    commit: a7466be151e287fd168c415753ed35b250beb37e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.20
+    versionCode: 64
+    commit: 48ce4a6566fd711bd9b194c1ad368252444ad596
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v0.30
+    versionCode: 65
+    commit: fe1591269983792d251bbd3fb955940c1b925ea3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v0.31
+    versionCode: 66
+    commit: 72933d2034f81c67fe77524913014b3601940fab
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v0.32
+    versionCode: 67
+    commit: b25c0460ddf935932a4b43f8da4ff52cca8cb4c4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v0.33
+    versionCode: 68
+    commit: 014e793939b75628ea1d2459773f161add837567
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v0.34
+    versionCode: 69
+    commit: a1a353f53f9b3458d9fd9522b3909dd343421774
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.35
+    versionCode: 70
+    commit: 81a7f870ba3d2252bc8332c07478a86f6a0219b7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.36
+    versionCode: 71
+    commit: b4b292c385412b301499ecf979dec3c7cf765957
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.37
+    versionCode: 72
+    commit: 5f28ac3dbca660d34c81034c6a1ceb38ceb43903
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.38
+    versionCode: 73
+    commit: 7caf7f0afebb2f5a921f0220f0869738d3fbd418
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v0.39
+    versionCode: 74
+    commit: dc65fff4d7a54b638de45db1a79c0aae47e4811d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.41
+    versionCode: 76
+    commit: 11d2f26f9a81d63ef38cb95d6485fd5eb5b4db68
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.1.0
+    versionCode: 78
+    commit: 225ea005ce595860bca2b4878febef33ff19f7bb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.1.1
+    versionCode: 79
+    commit: de31d8fb1d40bb04212f21faf696da941d38d079
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.2.0
+    versionCode: 80
+    commit: 2a1f4303cecb388fc8dec2a1b6cbbbf7bc23a65b
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags v\d+\.\d+
+CurrentVersion: v1.2.0
+CurrentVersionCode: 80

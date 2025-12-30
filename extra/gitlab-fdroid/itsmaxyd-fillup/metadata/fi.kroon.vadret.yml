@@ -1,0 +1,195 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Weather service is libre, but you cannot change the server.
+Categories:
+  - Internet
+  - Weather
+License: Apache-2.0
+AuthorName: Niclas Kron
+AuthorEmail: niclas.kroon@gmail.com
+WebSite: https://vadret.github.io/android/
+SourceCode: https://github.com/vadret/android
+IssueTracker: https://github.com/vadret/android/issues
+Translation: https://crowdin.com/project/vadret
+Changelog: https://github.com/vadret/android/blob/HEAD/app/src/main/res/raw/changelog.md
+
+AutoName: Vädret
+Description: |-
+  Vädret means weather in Swedish and it is an open source weather app with
+  open data from SMHI Open Data Meteorological Analysis licensed under CC-BY.
+
+  <b>Features:</b>
+
+  * Location by GPS
+  * Location by Nominatim (by-name)
+  * Currently issued weather warnings
+  * Radar imagery
+  * 10 day weather forecast
+
+RepoType: git
+Repo: https://github.com/vadret/android.git
+
+Builds:
+  - versionName: 0.1.4
+    versionCode: 5
+    commit: 0.1.4
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 0.1.5
+    versionCode: 6
+    commit: 0.1.5
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 0.1.6
+    versionCode: 7
+    commit: 0.1.6
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 0.1.7
+    versionCode: 8
+    commit: 0.1.7
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 0.1.8
+    versionCode: 9
+    commit: 0.1.8
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.0.0
+    versionCode: 13
+    commit: 1.0.0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.1.0
+    versionCode: 15
+    commit: 1.1.0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.2.1
+    versionCode: 17
+    commit: 1.2.1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.2.2
+    versionCode: 18
+    commit: 1.2.2
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.2.3
+    versionCode: 19
+    commit: 1.2.3
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.2.4
+    versionCode: 20
+    commit: 1.2.4
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.2.6
+    versionCode: 22
+    commit: 1.2.6
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.2.7
+    versionCode: 23
+    commit: 1.2.7
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.2.8
+    versionCode: 24
+    commit: 1.2.8
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 1.2.9
+    versionCode: 25
+    commit: 1.2.9
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' -e '/signingConfigs/d'
+      build.gradle ../build.gradle
+
+  - versionName: 2.0.0
+    versionCode: 27
+    commit: 2.0.0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/com.google.gms/d; /com.google.firebase/d' ../build.gradle build.gradle
+      - sed -i -e '/signingConfigs/d; /com.google.gms.google-services/d; /com.google.firebase.crashlytics/d;
+        /googleImplementation/d; /firebaseCrashlytics {/,/}/d' build.gradle
+
+  - versionName: 2.0.2
+    versionCode: 29
+    commit: 2.0.2
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/com.google.gms/d; /com.google.firebase/d' ../build.gradle build.gradle
+      - sed -i -e '/signingConfigs/d; /com.google.gms.google-services/d; /com.google.firebase.crashlytics/d;
+        /googleImplementation/d; /firebaseCrashlytics {/,/}/d' build.gradle
+
+MaintainerNotes: Another NonFreeNet => TeatheredNet candidate.
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[0-9.]*$
+CurrentVersion: 2.0.2
+CurrentVersionCode: 29

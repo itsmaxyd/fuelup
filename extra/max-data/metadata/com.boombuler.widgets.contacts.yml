@@ -1,0 +1,28 @@
+Categories:
+  - Theming
+License: Apache-2.0
+SourceCode: https://archive.softwareheritage.org/browse/origin/https://github.com/boombuler/scrollablecontacts/directory/
+IssueTracker: https://github.com/boombuler/scrollablecontacts/issues
+Donate: https://github.com/boombuler/scrollablecontacts
+
+AutoName: Contact Widget
+Description: |-
+  A widget that allows you to scroll through your contacts. This requires a
+  homescreen that supports scrollable widgets.
+
+RepoType: git
+Repo: https://github.com/boombuler/scrollablecontacts
+
+Builds:
+  - versionName: 1.0.2
+    versionCode: 102
+    commit: '129'
+    target: android-15
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.0.2
+CurrentVersionCode: 102
+
+NoSourceSince: 1.0.3

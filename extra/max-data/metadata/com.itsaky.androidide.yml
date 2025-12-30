@@ -1,0 +1,394 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Download SDK files from GitHub.
+  Tracking:
+    en-US: App analytics are sent by default.
+Categories:
+  - Development
+License: GPL-3.0-only
+WebSite: https://androidide.com
+SourceCode: https://github.com/AndroidIDEOfficial/AndroidIDE
+IssueTracker: https://github.com/AndroidIDEOfficial/AndroidIDE/issues
+Translation: https://crowdin.com/project/androidide
+Changelog: https://github.com/AndroidIDEOfficial/AndroidIDE/releases
+Donate: https://androidide.com/donate/
+
+AutoName: AndroidIDE
+Description: |-
+  <b>NOTE:</b> The source-code repo has been archived and the app is no longer maintained.
+
+  AndroidIDE, an open-source Integrated Development Environment (IDE) designed for developing real Android applications directly on Android devices.
+
+  The main goal is to bring support for building Gradle-based Android projects on Android devices itself.
+
+  Features :
+  * Gradle Support
+  * JDK 17 & 21 support.
+  * Terminal (based on Termux, with limited packages).
+  * SDK Manager (via terminal).
+  * Log reader - Real-time display of your app's logs.
+  * API Information - Provides information on classes and their members, including details on since, removed, and deprecated elements.
+  * Java language support.
+  * XML language support.
+  * UI Designer
+  * Git support (via terminal).
+
+  A basic installation (Android SDK, JDK, etc) is needed before you can start working with projects. Read the documentation at docs.androidide.com for more details.
+
+RepoType: git
+Repo: https://github.com/AndroidIDEOfficial/AndroidIDE
+
+Builds:
+  - versionName: v2.7.0-beta
+    versionCode: 27001
+    commit: 4f4bde4d2b26cdaa17668e4123c49e5b3533a2b2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless python3-pip golang-go ninja-build
+        bison flex gcc g++ make libssl-dev
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - AndroidIDE-platform-tools@v34.0.4-r02
+      - CMake@v3.28.1
+    prebuild:
+      - echo "ide.build.fdroid=true" > ../fdroid.properties
+      - echo "ide.build.fdroid.version=$$VERSION$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.vercode=$$VERCODE$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.arch=armeabi-v7a" >> ../fdroid.properties
+      - echo "ide.build.fdroid.aapt2File.armeabi-v7a=$$AndroidIDE-platform-tools$$/aapt2-arm"
+        >> ../fdroid.properties
+      - sdkmanager "platforms;android-34"
+    scanignore:
+      - testing/resources/
+    scandelete:
+      - build-logic/ide/build/
+      - subprojects/framework-stubs/libs/android.jar
+    build:
+      - pushd $$CMake$$
+      - mkdir build
+      - cd build
+      - ../bootstrap
+      - make
+      - cmake=$$CMake$$/build/bin/cmake
+      - popd
+      - pushd $$AndroidIDE-platform-tools$$
+      - aapt2_api=34
+      - aapt2_abi=armeabi-v7a
+      - aapt2_source_version=34.0.4
+      - aapt2_build_dir=$$AndroidIDE-platform-tools$$/build
+      - python3 get_source.py --tag=platform-tools-${aapt2_source_version}
+      - find patches -name "*.patch" -exec git apply {} \;
+      - pushd src/protobuf
+      - ln -sf $(realpath ../googletest) third_party/googletest
+      - $cmake -GNinja -Dprotobuf_BUILD_TESTS=OFF
+      - ninja -j$(nproc --all)
+      - popd
+      - ln -sf $(realpath ./src/googletest/googletest) ./src/boringssl/src/third_party/googletest
+      - ./build.py --ndk=$$NDK$$ --build=$aapt2_build_dir --api=${aapt2_api} --abi=${aapt2_abi}
+        --protoc=$$AndroidIDE-platform-tools$$/src/protobuf/protoc --cmake=$cmake
+        --target=aapt2
+      - $$NDK$$/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+      - cp $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+        $$AndroidIDE-platform-tools$$/aapt2-arm
+      - rm -rf $$AndroidIDE-platform-tools$$/build
+      - popd
+    ndk: r26b
+
+  - versionName: v2.7.0-beta
+    versionCode: 27002
+    commit: 4f4bde4d2b26cdaa17668e4123c49e5b3533a2b2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless python3-pip golang-go ninja-build
+        bison flex gcc g++ make libssl-dev
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - AndroidIDE-platform-tools@v34.0.4-r02
+      - CMake@v3.28.1
+    prebuild:
+      - echo "ide.build.fdroid=true" > ../fdroid.properties
+      - echo "ide.build.fdroid.version=$$VERSION$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.vercode=$$VERCODE$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.arch=arm64-v8a" >> ../fdroid.properties
+      - echo "ide.build.fdroid.aapt2File.arm64-v8a=$$AndroidIDE-platform-tools$$/aapt2-arm64"
+        >> ../fdroid.properties
+      - sdkmanager "platforms;android-34"
+    scanignore:
+      - testing/resources/
+    scandelete:
+      - build-logic/ide/build/
+      - subprojects/framework-stubs/libs/android.jar
+    build:
+      - pushd $$CMake$$
+      - mkdir build
+      - cd build
+      - ../bootstrap
+      - make
+      - cmake=$$CMake$$/build/bin/cmake
+      - popd
+      - pushd $$AndroidIDE-platform-tools$$
+      - aapt2_api=34
+      - aapt2_abi=arm64-v8a
+      - aapt2_source_version=34.0.4
+      - aapt2_build_dir=$$AndroidIDE-platform-tools$$/build
+      - python3 get_source.py --tag=platform-tools-${aapt2_source_version}
+      - find patches -name "*.patch" -exec git apply {} \;
+      - pushd src/protobuf
+      - ln -sf $(realpath ../googletest) third_party/googletest
+      - $cmake -GNinja -Dprotobuf_BUILD_TESTS=OFF
+      - ninja -j$(nproc --all)
+      - popd
+      - ln -sf $(realpath ./src/googletest/googletest) ./src/boringssl/src/third_party/googletest
+      - ./build.py --ndk=$$NDK$$ --build=$aapt2_build_dir --api=${aapt2_api} --abi=${aapt2_abi}
+        --protoc=$$AndroidIDE-platform-tools$$/src/protobuf/protoc --cmake=$cmake
+        --target=aapt2
+      - $$NDK$$/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+      - cp $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+        $$AndroidIDE-platform-tools$$/aapt2-arm64
+      - rm -rf $$AndroidIDE-platform-tools$$/build
+      - popd
+    ndk: r26b
+
+  - versionName: v2.7.0-beta
+    versionCode: 27003
+    commit: 4f4bde4d2b26cdaa17668e4123c49e5b3533a2b2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless python3-pip golang-go ninja-build
+        bison flex gcc g++ make libssl-dev
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - AndroidIDE-platform-tools@v34.0.4-r02
+      - CMake@v3.28.1
+    prebuild:
+      - echo "ide.build.fdroid=true" > ../fdroid.properties
+      - echo "ide.build.fdroid.version=$$VERSION$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.vercode=$$VERCODE$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.arch=x86_64" >> ../fdroid.properties
+      - echo "ide.build.fdroid.aapt2File.x86_64=$$AndroidIDE-platform-tools$$/aapt2-x86_64"
+        >> ../fdroid.properties
+      - sdkmanager "platforms;android-34"
+    scanignore:
+      - testing/resources/
+    scandelete:
+      - build-logic/ide/build/
+      - subprojects/framework-stubs/libs/android.jar
+    build:
+      - pushd $$CMake$$
+      - mkdir build
+      - cd build
+      - ../bootstrap
+      - make
+      - cmake=$$CMake$$/build/bin/cmake
+      - popd
+      - pushd $$AndroidIDE-platform-tools$$
+      - aapt2_api=34
+      - aapt2_abi=x86_64
+      - aapt2_source_version=34.0.4
+      - aapt2_build_dir=$$AndroidIDE-platform-tools$$/build
+      - python3 get_source.py --tag=platform-tools-${aapt2_source_version}
+      - find patches -name "*.patch" -exec git apply {} \;
+      - pushd src/protobuf
+      - ln -sf $(realpath ../googletest) third_party/googletest
+      - $cmake -GNinja -Dprotobuf_BUILD_TESTS=OFF
+      - ninja -j$(nproc --all)
+      - popd
+      - ln -sf $(realpath ./src/googletest/googletest) ./src/boringssl/src/third_party/googletest
+      - ./build.py --ndk=$$NDK$$ --build=$aapt2_build_dir --api=${aapt2_api} --abi=${aapt2_abi}
+        --protoc=$$AndroidIDE-platform-tools$$/src/protobuf/protoc --cmake=$cmake
+        --target=aapt2
+      - $$NDK$$/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+      - cp $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+        $$AndroidIDE-platform-tools$$/aapt2-x86_64
+      - rm -rf $$AndroidIDE-platform-tools$$/build
+      - popd
+    ndk: r26b
+
+  - versionName: v2.7.1-beta
+    versionCode: 27101
+    commit: v2.7.1-beta
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless python3-pip golang-go ninja-build
+        bison flex gcc g++ make libssl-dev
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - AndroidIDE-platform-tools@v34.0.4-r02
+      - CMake@v3.28.1
+    prebuild:
+      - echo "ide.build.fdroid=true" > ../fdroid.properties
+      - echo "ide.build.fdroid.version=$$VERSION$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.vercode=$$VERCODE$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.arch=armeabi-v7a" >> ../fdroid.properties
+      - echo "ide.build.fdroid.aapt2File.armeabi-v7a=$$AndroidIDE-platform-tools$$/aapt2-arm"
+        >> ../fdroid.properties
+      - sdkmanager "platforms;android-34"
+    scanignore:
+      - testing/resources/
+    scandelete:
+      - build-logic/ide/build/
+      - subprojects/framework-stubs/libs/android.jar
+    build:
+      - pushd $$CMake$$
+      - mkdir build
+      - cd build
+      - ../bootstrap
+      - make
+      - cmake=$$CMake$$/build/bin/cmake
+      - popd
+      - pushd $$AndroidIDE-platform-tools$$
+      - aapt2_api=34
+      - aapt2_abi=armeabi-v7a
+      - aapt2_source_version=34.0.4
+      - aapt2_build_dir=$$AndroidIDE-platform-tools$$/build
+      - python3 get_source.py --tag=platform-tools-${aapt2_source_version}
+      - find patches -name "*.patch" -exec git apply {} \;
+      - pushd src/protobuf
+      - ln -sf $(realpath ../googletest) third_party/googletest
+      - $cmake -GNinja -Dprotobuf_BUILD_TESTS=OFF
+      - ninja -j$(nproc --all)
+      - popd
+      - ln -sf $(realpath ./src/googletest/googletest) ./src/boringssl/src/third_party/googletest
+      - ./build.py --ndk=$$NDK$$ --build=$aapt2_build_dir --api=${aapt2_api} --abi=${aapt2_abi}
+        --protoc=$$AndroidIDE-platform-tools$$/src/protobuf/protoc --cmake=$cmake
+        --target=aapt2
+      - $$NDK$$/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+      - cp $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+        $$AndroidIDE-platform-tools$$/aapt2-arm
+      - rm -rf $$AndroidIDE-platform-tools$$/build
+      - popd
+    ndk: r26b
+
+  - versionName: v2.7.1-beta
+    versionCode: 27102
+    commit: v2.7.1-beta
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless python3-pip golang-go ninja-build
+        bison flex gcc g++ make libssl-dev
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - AndroidIDE-platform-tools@v34.0.4-r02
+      - CMake@v3.28.1
+    prebuild:
+      - echo "ide.build.fdroid=true" > ../fdroid.properties
+      - echo "ide.build.fdroid.version=$$VERSION$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.vercode=$$VERCODE$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.arch=arm64-v8a" >> ../fdroid.properties
+      - echo "ide.build.fdroid.aapt2File.arm64-v8a=$$AndroidIDE-platform-tools$$/aapt2-arm64"
+        >> ../fdroid.properties
+      - sdkmanager "platforms;android-34"
+    scanignore:
+      - testing/resources/
+    scandelete:
+      - build-logic/ide/build/
+      - subprojects/framework-stubs/libs/android.jar
+    build:
+      - pushd $$CMake$$
+      - mkdir build
+      - cd build
+      - ../bootstrap
+      - make
+      - cmake=$$CMake$$/build/bin/cmake
+      - popd
+      - pushd $$AndroidIDE-platform-tools$$
+      - aapt2_api=34
+      - aapt2_abi=arm64-v8a
+      - aapt2_source_version=34.0.4
+      - aapt2_build_dir=$$AndroidIDE-platform-tools$$/build
+      - python3 get_source.py --tag=platform-tools-${aapt2_source_version}
+      - find patches -name "*.patch" -exec git apply {} \;
+      - pushd src/protobuf
+      - ln -sf $(realpath ../googletest) third_party/googletest
+      - $cmake -GNinja -Dprotobuf_BUILD_TESTS=OFF
+      - ninja -j$(nproc --all)
+      - popd
+      - ln -sf $(realpath ./src/googletest/googletest) ./src/boringssl/src/third_party/googletest
+      - ./build.py --ndk=$$NDK$$ --build=$aapt2_build_dir --api=${aapt2_api} --abi=${aapt2_abi}
+        --protoc=$$AndroidIDE-platform-tools$$/src/protobuf/protoc --cmake=$cmake
+        --target=aapt2
+      - $$NDK$$/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+      - cp $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+        $$AndroidIDE-platform-tools$$/aapt2-arm64
+      - rm -rf $$AndroidIDE-platform-tools$$/build
+      - popd
+    ndk: r26b
+
+  - versionName: v2.7.1-beta
+    versionCode: 27103
+    commit: v2.7.1-beta
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless python3-pip golang-go ninja-build
+        bison flex gcc g++ make libssl-dev
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - AndroidIDE-platform-tools@v34.0.4-r02
+      - CMake@v3.28.1
+    prebuild:
+      - echo "ide.build.fdroid=true" > ../fdroid.properties
+      - echo "ide.build.fdroid.version=$$VERSION$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.vercode=$$VERCODE$$" >> ../fdroid.properties
+      - echo "ide.build.fdroid.arch=x86_64" >> ../fdroid.properties
+      - echo "ide.build.fdroid.aapt2File.x86_64=$$AndroidIDE-platform-tools$$/aapt2-x86_64"
+        >> ../fdroid.properties
+      - sdkmanager "platforms;android-34"
+    scanignore:
+      - testing/resources/
+    scandelete:
+      - build-logic/ide/build/
+      - subprojects/framework-stubs/libs/android.jar
+    build:
+      - pushd $$CMake$$
+      - mkdir build
+      - cd build
+      - ../bootstrap
+      - make
+      - cmake=$$CMake$$/build/bin/cmake
+      - popd
+      - pushd $$AndroidIDE-platform-tools$$
+      - aapt2_api=34
+      - aapt2_abi=x86_64
+      - aapt2_source_version=34.0.4
+      - aapt2_build_dir=$$AndroidIDE-platform-tools$$/build
+      - python3 get_source.py --tag=platform-tools-${aapt2_source_version}
+      - find patches -name "*.patch" -exec git apply {} \;
+      - pushd src/protobuf
+      - ln -sf $(realpath ../googletest) third_party/googletest
+      - $cmake -GNinja -Dprotobuf_BUILD_TESTS=OFF
+      - ninja -j$(nproc --all)
+      - popd
+      - ln -sf $(realpath ./src/googletest/googletest) ./src/boringssl/src/third_party/googletest
+      - ./build.py --ndk=$$NDK$$ --build=$aapt2_build_dir --api=${aapt2_api} --abi=${aapt2_abi}
+        --protoc=$$AndroidIDE-platform-tools$$/src/protobuf/protoc --cmake=$cmake
+        --target=aapt2
+      - $$NDK$$/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+      - cp $aapt2_build_dir/android${aapt2_api}-${aapt2_abi}/bin/build-tools/aapt2
+        $$AndroidIDE-platform-tools$$/aapt2-x86_64
+      - rm -rf $$AndroidIDE-platform-tools$$/build
+      - popd
+    ndk: r26b
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: v2.7.1-beta
+CurrentVersionCode: 27103

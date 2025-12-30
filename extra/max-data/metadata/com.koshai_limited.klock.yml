@@ -1,0 +1,53 @@
+Categories:
+  - Games
+License: GPL-3.0-or-later
+AuthorName: M.H. Rahman Kwoshik
+AuthorEmail: rootovertwo8004@tutanota.com
+SourceCode: https://codeberg.org/rootminusone8004/Klock
+IssueTracker: https://codeberg.org/rootminusone8004/Klock/issues
+
+AutoName: Klock
+
+RepoType: git
+Repo: https://codeberg.org/rootminusone8004/Klock.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 1.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: 4010f5928b4aa89100c74474c63a49947c605ec1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 3
+    commit: 9be3e9bdcee6de8d37d58564f6bd911371ab595c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 4
+    commit: 9ce561fb514cb6c46bdd3f3da55448667a177139
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 5
+    commit: 9e219b3eb1bcf82bf7b06d521f62deeeefd48929
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.2.0
+CurrentVersionCode: 5

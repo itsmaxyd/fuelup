@@ -1,0 +1,1054 @@
+Categories:
+  - Internet
+  - Messaging
+  - Phone & SMS
+  - Voice & Video Chat
+License: GPL-3.0-only
+AuthorName: Soprani.ca
+AuthorEmail: dev@singpolyma.net
+WebSite: https://cheogram.com
+SourceCode: https://git.singpolyma.net/cheogram-android
+IssueTracker: https://soprani.ca/todo
+Donate: https://github.com/sponsors/singpolyma/
+Liberapay: singpolyma
+Bitcoin: bc1qlzl0pzvw48aec79lx8w7sxm44ydf3ny8xe7xrv
+
+AutoName: Cheogram Android
+
+RepoType: git
+Repo: https://git.sr.ht/~singpolyma/cheogram-android/
+
+Builds:
+  - versionName: 2.10.3-1+free
+    versionCode: 42025
+    commit: 2.10.3-1-fdroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.10.3-2+free
+    versionCode: 42026
+    commit: 96dd73e65d2c3c608a8e127effbc73329f2fb94f
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.10.5-1+free
+    versionCode: 42027
+    commit: 4e2737bceb65d4d41724afb1082fbae08492e7f7
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.10.5-2+free
+    versionCode: 42028
+    commit: 18b3435433cfa95898a136036fd5f2b392fc8e44
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.10.6-1+free
+    versionCode: 42029
+    commit: ed4d1e826719101e632d14c3c07d9dd951c24490
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.10.9-1+free
+    versionCode: 42030
+    commit: cd4620d148b33c9e8f34b8ecc20bc06764aa869b
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.10.10-1+free
+    versionCode: 42031
+    commit: 6d12f682233594f9111cb0a627fc98c5b4e55c64
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.10.10-2+free
+    versionCode: 42032
+    commit: 4e3f59c2f952a707be59194e8a221edf3ee7f617
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.10.10-3+free
+    versionCode: 42033
+    commit: 840f5fc837e309fbe955e5534423329a45574bac
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+    antifeatures:
+      - KnownVuln
+
+  - versionName: 2.11.0-1+free
+    versionCode: 42034
+    commit: 723616441fa10e8598ccf6f37f2e8a30debb1a61
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+
+  - versionName: 2.12.1-1+free
+    versionCode: 42035
+    commit: 8cc2690c555736e6f5f1424d4fdad91dbb4975c8
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+
+  - versionName: 2.12.1-2+free
+    versionCode: 42036
+    commit: 7d4db7a4fe45ab79cd7fd111c57975b6afd7f938
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+
+  - versionName: 2.12.1-3+free
+    versionCode: 42037
+    commit: c0aa825e0eefffff12cf688e168fff33292bcf44
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+
+  - versionName: 2.12.1-4+free
+    versionCode: 42038
+    commit: c3d029a3f1ff2816ad1452809fc9365baec8f556
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+
+  - versionName: 2.12.1-5+free
+    versionCode: 42039
+    commit: dcd333d6924e761985e5f7ffc917fd29b3c3a8ab
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+
+  - versionName: 2.12.1-6+free
+    versionCode: 42040
+    commit: 4231e028ba77a5f0ec35873b5dc00975f0a39bb5
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+
+  - versionName: 2.12.1-7+free
+    versionCode: 42041
+    commit: e289ac2dd2aab017e33c68d6e3d1d75e1447160b
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+
+  - versionName: 2.12.1-8+free
+    versionCode: 42042
+    commit: 084cd546629c0d71f42220abc124e61ba0fde0a5
+    gradle:
+      - cheogramFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+
+  - versionName: 2.12.8-1+free
+    versionCode: 4204401
+    commit: 69d1fb08950d402e56d73a5a05941f31c8610533
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-1+free
+    versionCode: 4204402
+    commit: 69d1fb08950d402e56d73a5a05941f31c8610533
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-1+free
+    versionCode: 4204403
+    commit: 69d1fb08950d402e56d73a5a05941f31c8610533
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-1+free
+    versionCode: 4204404
+    commit: 69d1fb08950d402e56d73a5a05941f31c8610533
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-2+free
+    versionCode: 4204501
+    commit: 3e42c9cd8c3ff24bdae280f232dcb23947671612
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-2+free
+    versionCode: 4204502
+    commit: 3e42c9cd8c3ff24bdae280f232dcb23947671612
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-2+free
+    versionCode: 4204503
+    commit: 3e42c9cd8c3ff24bdae280f232dcb23947671612
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-2+free
+    versionCode: 4204504
+    commit: 3e42c9cd8c3ff24bdae280f232dcb23947671612
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-3+free
+    versionCode: 4204601
+    commit: 3905fd5b48db7539355691bad7fb5bedc159c020
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-3+free
+    versionCode: 4204602
+    commit: 3905fd5b48db7539355691bad7fb5bedc159c020
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-3+free
+    versionCode: 4204603
+    commit: 3905fd5b48db7539355691bad7fb5bedc159c020
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.12.8-3+free
+    versionCode: 4204604
+    commit: 3905fd5b48db7539355691bad7fb5bedc159c020
+    gradle:
+      - cheogramFree
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0-1+free
+    versionCode: 4204701
+    commit: 670b18e524363f1741dd138d0b9196f156d83414
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0-1+free
+    versionCode: 4204702
+    commit: 670b18e524363f1741dd138d0b9196f156d83414
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0-1+free
+    versionCode: 4204703
+    commit: 670b18e524363f1741dd138d0b9196f156d83414
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0-1+free
+    versionCode: 4204704
+    commit: 670b18e524363f1741dd138d0b9196f156d83414
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0-2+free
+    versionCode: 4204801
+    commit: 330faaaef4f198eda43d4fdb3031981e5da2160c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0-2+free
+    versionCode: 4204802
+    commit: 330faaaef4f198eda43d4fdb3031981e5da2160c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0-2+free
+    versionCode: 4204803
+    commit: 330faaaef4f198eda43d4fdb3031981e5da2160c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0-2+free
+    versionCode: 4204804
+    commit: 330faaaef4f198eda43d4fdb3031981e5da2160c
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.4-1+free
+    versionCode: 4204901
+    commit: 60e0438f7187435d5ac2cefbe53def546eea3cb1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.4-1+free
+    versionCode: 4204902
+    commit: 60e0438f7187435d5ac2cefbe53def546eea3cb1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.4-1+free
+    versionCode: 4204903
+    commit: 60e0438f7187435d5ac2cefbe53def546eea3cb1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.4-1+free
+    versionCode: 4204904
+    commit: 60e0438f7187435d5ac2cefbe53def546eea3cb1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-1+free
+    versionCode: 4205001
+    commit: 68e66fd72addb31179207477502ce8130741e512
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-1+free
+    versionCode: 4205002
+    commit: 68e66fd72addb31179207477502ce8130741e512
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-1+free
+    versionCode: 4205003
+    commit: 68e66fd72addb31179207477502ce8130741e512
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-1+free
+    versionCode: 4205004
+    commit: 68e66fd72addb31179207477502ce8130741e512
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-2+free
+    versionCode: 4205101
+    commit: 09841cc59fc39bd9a0d18dbaab7bba83119c54cc
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-2+free
+    versionCode: 4205102
+    commit: 09841cc59fc39bd9a0d18dbaab7bba83119c54cc
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-2+free
+    versionCode: 4205103
+    commit: 09841cc59fc39bd9a0d18dbaab7bba83119c54cc
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-2+free
+    versionCode: 4205104
+    commit: 09841cc59fc39bd9a0d18dbaab7bba83119c54cc
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-3+free
+    versionCode: 4205201
+    commit: 8f61cfc42e959ded3f4f79abfae882647376e05a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-3+free
+    versionCode: 4205202
+    commit: 8f61cfc42e959ded3f4f79abfae882647376e05a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-3+free
+    versionCode: 4205203
+    commit: 8f61cfc42e959ded3f4f79abfae882647376e05a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-3+free
+    versionCode: 4205204
+    commit: 8f61cfc42e959ded3f4f79abfae882647376e05a
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-4+free
+    versionCode: 4205301
+    commit: f8542e60ad198182a9439a08e4c169d7bac35662
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-4+free
+    versionCode: 4205302
+    commit: f8542e60ad198182a9439a08e4c169d7bac35662
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-4+free
+    versionCode: 4205303
+    commit: f8542e60ad198182a9439a08e4c169d7bac35662
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.15.3-4+free
+    versionCode: 4205304
+    commit: f8542e60ad198182a9439a08e4c169d7bac35662
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-1+free
+    versionCode: 4205401
+    commit: 98e05eb0ca5559e962fa1ef0b97b5190c3e1496d
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-1+free
+    versionCode: 4205402
+    commit: 98e05eb0ca5559e962fa1ef0b97b5190c3e1496d
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-1+free
+    versionCode: 4205403
+    commit: 98e05eb0ca5559e962fa1ef0b97b5190c3e1496d
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-1+free
+    versionCode: 4205404
+    commit: 98e05eb0ca5559e962fa1ef0b97b5190c3e1496d
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-2+free
+    versionCode: 4205501
+    commit: 6ae9c73536be111ddba07780ef54ce7036050fba
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-2+free
+    versionCode: 4205502
+    commit: 6ae9c73536be111ddba07780ef54ce7036050fba
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-2+free
+    versionCode: 4205503
+    commit: 6ae9c73536be111ddba07780ef54ce7036050fba
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-2+free
+    versionCode: 4205504
+    commit: 6ae9c73536be111ddba07780ef54ce7036050fba
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-3+free
+    versionCode: 4205601
+    commit: f9b415a13ab7d26e14ee69143af701ccba2437d8
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-3+free
+    versionCode: 4205602
+    commit: f9b415a13ab7d26e14ee69143af701ccba2437d8
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-3+free
+    versionCode: 4205603
+    commit: f9b415a13ab7d26e14ee69143af701ccba2437d8
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-3+free
+    versionCode: 4205604
+    commit: f9b415a13ab7d26e14ee69143af701ccba2437d8
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-4+free
+    versionCode: 4205701
+    commit: 743800cae9ccb015f07954a41d6960bfcb09e6d4
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-4+free
+    versionCode: 4205702
+    commit: 743800cae9ccb015f07954a41d6960bfcb09e6d4
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-4+free
+    versionCode: 4205703
+    commit: 743800cae9ccb015f07954a41d6960bfcb09e6d4
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.2-4+free
+    versionCode: 4205704
+    commit: 743800cae9ccb015f07954a41d6960bfcb09e6d4
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.10-1+free
+    versionCode: 4205801
+    commit: 12f683e7e35cfd3493f8881e1211c44b78810e58
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.10-1+free
+    versionCode: 4205802
+    commit: 12f683e7e35cfd3493f8881e1211c44b78810e58
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.10-1+free
+    versionCode: 4205803
+    commit: 12f683e7e35cfd3493f8881e1211c44b78810e58
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.10-1+free
+    versionCode: 4205804
+    commit: 12f683e7e35cfd3493f8881e1211c44b78810e58
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.10-2+free
+    versionCode: 4205901
+    commit: dfbbf16c0c761668e8ceb771026932dcdc2e8e4e
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.10-2+free
+    versionCode: 4205902
+    commit: dfbbf16c0c761668e8ceb771026932dcdc2e8e4e
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.10-2+free
+    versionCode: 4205903
+    commit: dfbbf16c0c761668e8ceb771026932dcdc2e8e4e
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.10-2+free
+    versionCode: 4205904
+    commit: dfbbf16c0c761668e8ceb771026932dcdc2e8e4e
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-1+free
+    versionCode: 4206001
+    commit: deaf1dcad42f7ddf2a5c902531bc12cc68cb5dfc
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-1+free
+    versionCode: 4206002
+    commit: deaf1dcad42f7ddf2a5c902531bc12cc68cb5dfc
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-1+free
+    versionCode: 4206003
+    commit: deaf1dcad42f7ddf2a5c902531bc12cc68cb5dfc
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-1+free
+    versionCode: 4206004
+    commit: deaf1dcad42f7ddf2a5c902531bc12cc68cb5dfc
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-2+free
+    versionCode: 4206101
+    commit: 10f5e4b634a42427c1f9d922b1ce371814ec8887
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-2+free
+    versionCode: 4206102
+    commit: 10f5e4b634a42427c1f9d922b1ce371814ec8887
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-2+free
+    versionCode: 4206103
+    commit: 10f5e4b634a42427c1f9d922b1ce371814ec8887
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-2+free
+    versionCode: 4206104
+    commit: 10f5e4b634a42427c1f9d922b1ce371814ec8887
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-3+free
+    versionCode: 4206201
+    commit: 449897a5d8482d311f6341520194ba1667a172fe
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-3+free
+    versionCode: 4206202
+    commit: 449897a5d8482d311f6341520194ba1667a172fe
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-3+free
+    versionCode: 4206203
+    commit: 449897a5d8482d311f6341520194ba1667a172fe
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-3+free
+    versionCode: 4206204
+    commit: 449897a5d8482d311f6341520194ba1667a172fe
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-4+free
+    versionCode: 4206301
+    commit: ff8dbd0887a97b569c9e4b1feecfb268ee7d6894
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-4+free
+    versionCode: 4206302
+    commit: ff8dbd0887a97b569c9e4b1feecfb268ee7d6894
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-4+free
+    versionCode: 4206303
+    commit: ff8dbd0887a97b569c9e4b1feecfb268ee7d6894
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.19.0-4+free
+    versionCode: 4206304
+    commit: ff8dbd0887a97b569c9e4b1feecfb268ee7d6894
+    gradle:
+      - cheogram
+      - free
+    output: build/outputs/apk/cheogramFree/release/Conversations-cheogram-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags .*-fdroid$
+VercodeOperation:
+  - 100 * %c + 1
+  - 100 * %c + 2
+  - 100 * %c + 3
+  - 100 * %c + 4
+UpdateCheckName: Ignore
+CurrentVersion: 2.19.0-4+free
+CurrentVersionCode: 4206304

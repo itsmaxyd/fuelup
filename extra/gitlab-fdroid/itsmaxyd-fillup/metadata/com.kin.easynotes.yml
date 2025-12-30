@@ -1,0 +1,63 @@
+Categories:
+  - Note
+  - Writing
+License: GPL-3.0-or-later
+AuthorName: Kin69
+SourceCode: https://github.com/Kin69/EasyNotes
+IssueTracker: https://github.com/Kin69/EasyNotes/issues
+
+AutoName: Easy Notes
+
+RepoType: git
+Repo: https://github.com/Kin69/EasyNotes
+Binaries: https://github.com/Kin69/EasyNotes/releases/download/%v/EasyNotes.apk
+
+Builds:
+  - versionName: '1.1'
+    versionCode: 2
+    commit: 5b1eb223d1137266e6326af1ce64b1973676547f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: 1f594a124fa088234f84717f3c0336d85527f9ef
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.5
+    versionCode: 4
+    commit: a07ad442184835f60dcc9eb64acbef136a21f86d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 5
+    commit: 4017dbf8e6b131c2ab301125017680d9c767a3be
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.5
+    versionCode: 6
+    commit: b0592a00692cd251e0fca33793702739ed5b8d77
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 9
+    commit: ea22b1c587d5a9cc04df3d0ec4845e85dd6ded38
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: fce87da97f791301df390bfa47e81685191167cab5dbd555db8287541f786e28
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[\d.]+$
+CurrentVersion: '1.4'
+CurrentVersionCode: 9

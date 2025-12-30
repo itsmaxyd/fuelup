@@ -1,0 +1,108 @@
+Categories:
+  - Sports & Health
+  - Time
+License: GPL-3.0-only
+AuthorName: Katherine Rose
+AuthorEmail: katiearose@protonmail.com
+SourceCode: https://github.com/KiARC/Sobriety
+IssueTracker: https://github.com/KiARC/Sobriety/issues
+Changelog: https://github.com/KiARC/Sobriety/releases
+
+AutoName: Sobriety
+
+RepoType: git
+Repo: https://github.com/KiARC/Sobriety.git
+
+Builds:
+  - versionName: v5.1.4
+    versionCode: 10
+    commit: v5.1.4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_17/VERSION_11/g' build.gradle
+
+  - versionName: v5.2.1
+    versionCode: 12
+    commit: e3db4c21af1c60cf29b82288cdcbcd1274103487
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_11/g' build.gradle
+
+  - versionName: v5.4.2
+    versionCode: 13
+    commit: 437ac372ba7ff8c89918ee38b5a24baa34993a55
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/VERSION_16/VERSION_11/g' build.gradle
+
+  - versionName: v6.0.0
+    versionCode: 15
+    commit: 1175c56fa2233307f1cdc78e1b8b07c450023fb6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v6.1.1
+    versionCode: 16
+    commit: 15e9c278ca4f10c49020d870faf7f23a17d21c0d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v6.2.1
+    versionCode: 17
+    commit: 3acebf605529c7ec71f79d5e23bdfbc9e2dfc93f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v7.0.0
+    versionCode: 18
+    commit: 8bfabef9f12be53576a085284e2be1ff28c49e27
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v8.0.0
+    versionCode: 19
+    commit: fc84bf193f6538f6ebfd319aa70da0a3d7e9f3f6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v9.0.0
+    versionCode: 20
+    commit: 9bc41b2d6c858abcd94b6525d6457853bc19e642
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v9.1.0
+    versionCode: 21
+    commit: 3494bdfe89876795133d7be0e956420169c205d8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v10.0.0
+    versionCode: 22
+    commit: dd65f74bfa36e09c18eab0ca880f1b20ebc6f5ee
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: v10.0.0
+CurrentVersionCode: 22

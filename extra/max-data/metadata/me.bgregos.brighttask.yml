@@ -1,0 +1,76 @@
+Categories:
+  - Task
+  - Time
+  - Writing
+License: Apache-2.0
+SourceCode: https://github.com/bgregos/foreground
+IssueTracker: https://github.com/bgregos/foreground/issues
+Changelog: https://github.com/bgregos/foreground/releases
+
+AutoName: Foreground
+
+RepoType: git
+Repo: https://github.com/bgregos/foreground.git
+
+Builds:
+  - versionName: 1.5.1
+    versionCode: 14
+    commit: 2b91a2ec5025901c0546ed05b4c703ff3abc3ae6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 15
+    commit: def2910076d76a8b6426b9ee75cbd0104231178f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.3
+    versionCode: 16
+    commit: 6453af15a21eb0a08ae6a407561378287cedc9fe
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 17
+    commit: f8bd870181e293a203de3843972f89b351f062dd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.5
+    versionCode: 18
+    commit: a49e46c9c800771bc5314ad29cd170e53ab99c6a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 19
+    commit: f83797ed13ab7697105c3e541ba86760c4b88b39
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 20
+    commit: d5fd4d141f4952f1c72ff7dd99359cca10d73a31
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.6.1
+CurrentVersionCode: 20

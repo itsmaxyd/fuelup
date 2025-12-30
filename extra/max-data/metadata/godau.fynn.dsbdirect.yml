@@ -1,0 +1,230 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Internet
+License: GPL-3.0-or-later
+AuthorName: Fynn Godau
+AuthorEmail: fynngodau@mailbox.org
+SourceCode: https://notabug.org/fynngodau/DSBDirect
+IssueTracker: https://notabug.org/fynngodau/DSBDirect/issues
+Changelog: https://notabug.org/fynngodau/DSBDirect/releases
+
+AutoName: ESBDirect
+
+RepoType: git
+Repo: https://notabug.org/fynngodau/DSBDirect.git
+
+Builds:
+  - versionName: '1.3'
+    versionCode: 5
+    commit: release-1.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 6
+    commit: release-1.3.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '1.4'
+    versionCode: 7
+    commit: release-1.4
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '1.5'
+    versionCode: 8
+    commit: release-1.5
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '1.6'
+    versionCode: 9
+    commit: release-1.6
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '1.7'
+    versionCode: 11
+    commit: release-1.7
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '1.8'
+    versionCode: 12
+    commit: release-1.8
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.1
+    versionCode: 13
+    commit: release-1.8.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '2.0'
+    versionCode: 14
+    commit: release-2.0
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.0.1
+    versionCode: 15
+    commit: release-2.0.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.0.2
+    versionCode: 16
+    commit: release-2.0.2
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.0.3
+    versionCode: 17
+    commit: release-2.0.3
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '2.1'
+    versionCode: 18
+    commit: release-2.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '2.2'
+    versionCode: 19
+    commit: release-2.2
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.5.1
+    versionCode: 24
+    commit: release-2.5.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.5.2
+    versionCode: 25
+    commit: release-2.5.2
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.5.3.1
+    versionCode: 27
+    commit: release-2.5.3.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 2.5.5
+    versionCode: 29
+    commit: release-2.5.5
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '2.6'
+    versionCode: 32
+    commit: release-2.6
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '3.0'
+    versionCode: 34
+    commit: release-3.0
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.0.1
+    versionCode: 35
+    commit: release-3.0.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '3.1'
+    versionCode: 36
+    commit: release-3.1
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.2.2
+    versionCode: 39
+    commit: release-3.2.2
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '3.3'
+    versionCode: 40
+    commit: 7d783022a438604afb30e9c2e2b5d995050c4216
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '3.4'
+    versionCode: 41
+    commit: 1587c4fe45dcec85f44b47fd15f94eb3a241a28f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 3.4.1
+    versionCode: 42
+    commit: a16abfcbdeb47288079952f8aab09b0c1e07bd2b
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - ShiftColorPicker@v0.5
+    prebuild:
+      - cp -a $$ShiftColorPicker$$/src/main/java src/main
+      - cat $$ShiftColorPicker$$/src/main/res/values/attrs.xml >> src/main/res/values/attrs.xml
+      - sed -i -e '/<\/resources></,/<resources>/d' src/main/res/values/attrs.xml
+      - sed -i -e '2a import godau.fynn.dsbdirect.R;' src/main/java/uz/shift/colorpicker/LineColorPicker.java
+      - sed -i -e '/ShiftColorPicker/d'  build.gradle
+
+  - versionName: 3.4.2
+    versionCode: 43
+    commit: 3cd42a3c664582aa1d83224d0fd9797bd5ef11b4
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - ShiftColorPicker@v0.5
+    prebuild:
+      - cp -a $$ShiftColorPicker$$/src/main/java src/main
+      - cat $$ShiftColorPicker$$/src/main/res/values/attrs.xml >> src/main/res/values/attrs.xml
+      - sed -i -e '/<\/resources></,/<resources>/d' src/main/res/values/attrs.xml
+      - sed -i -e '2a import godau.fynn.dsbdirect.R;' src/main/java/uz/shift/colorpicker/LineColorPicker.java
+      - sed -i -e '/ShiftColorPicker/d'  build.gradle
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 3.4.2
+CurrentVersionCode: 43

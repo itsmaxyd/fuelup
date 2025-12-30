@@ -1,0 +1,172 @@
+Categories:
+  - Launcher
+  - System
+License: GPL-3.0-or-later
+AuthorName: SubhamTyagi
+SourceCode: https://github.com/SubhamTyagi/Last-Launcher
+IssueTracker: https://github.com/SubhamTyagi/Last-Launcher/issues
+Translation: https://hosted.weblate.org/projects/last-launcher/
+
+AutoName: Last Launcher
+Description: |-
+  Note: This app is unmaintained, its app repository is archived by the dev
+
+  Last Launcher is Simple, Minimalist, Customisable open source Android launcher. It aims to provide fastest and simplest ever user experience.
+
+  This is preview release:
+  * Faster than Fastest :)
+  * Lightweight.
+  * Smart and smarter.
+  * Material design look and feel
+  * Small size.
+  * No icon and widgets (may be a disadvantage).
+  * Resizable and colourful app names.
+  * Restore/Backup
+  * Random Colors
+  * Multiple themes
+  * Hide apps
+
+  To access Launcher settings long click on empty area
+
+RepoType: git
+Repo: https://github.com/SubhamTyagi/Last-Launcher
+
+Builds:
+  - versionName: '0.1'
+    versionCode: 1
+    commit: v0.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.2'
+    versionCode: 2
+    commit: v0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.3'
+    versionCode: 3
+    commit: v0.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.4'
+    versionCode: 4
+    commit: v0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.5'
+    versionCode: 5
+    commit: v0.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.6'
+    versionCode: 6
+    commit: v0.6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.7'
+    versionCode: 7
+    commit: v0.7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.8'
+    versionCode: 8
+    commit: v0.8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.9'
+    versionCode: 9
+    commit: v0.9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.10'
+    versionCode: 10
+    commit: v0.10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.11'
+    versionCode: 11
+    commit: v0.11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.12'
+    versionCode: 12
+    commit: v0.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.13'
+    versionCode: 13
+    commit: v0.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.14'
+    versionCode: 14
+    commit: v0.14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.15'
+    versionCode: 15
+    commit: v0.15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.16'
+    versionCode: 16
+    commit: v0.16
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.17'
+    versionCode: 17
+    commit: v0.17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.18'
+    versionCode: 18
+    commit: 6ee23b808619c242ca9cb2e756dbf303078f69aa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.19'
+    versionCode: 19
+    commit: 5ff5fa920aee7091646e9523acc23ae6f1b9bad9
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '0.19'
+CurrentVersionCode: 19

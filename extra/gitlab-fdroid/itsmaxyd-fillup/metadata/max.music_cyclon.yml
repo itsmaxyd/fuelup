@@ -1,0 +1,38 @@
+Categories:
+  - Multimedia
+License: WTFPL
+AuthorName: Max Ammann
+AuthorEmail: max@maxammann.org
+AuthorWebSite: https://maxammann.org/
+SourceCode: https://github.com/maxammann/music-cyclon
+IssueTracker: https://github.com/maxammann/music-cyclon/issues
+
+AutoName: music-cyclon
+Description: |-
+  This App allows you to synchronize music over network by using the
+  <a href="https://beets.io/">beets</a> web server. You can find instructions for running a
+  beets server and configuring the app at the beets
+  <a href="https://beets.readthedocs.io/en/latest/plugins/web.html">documentation</a>.
+
+RepoType: git
+Repo: https://github.com/maxammann/music-cyclon
+
+Builds:
+  - versionName: '0.2'
+    versionCode: 2
+    commit: v0.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.1
+    versionCode: 4
+    commit: v0.3.1
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: Tags
+CurrentVersion: 0.3.1
+CurrentVersionCode: 4

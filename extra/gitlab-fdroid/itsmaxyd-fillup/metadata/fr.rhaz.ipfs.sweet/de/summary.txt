@@ -1,0 +1,1 @@
+IPFS-Knoten vom Gerät aus betreiben und verwalten

@@ -1,0 +1,1 @@
+Gerenciador para item(ns) emprestado(s)

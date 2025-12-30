@@ -1,0 +1,37 @@
+Categories:
+  - Games
+License: Apache-2.0
+AuthorName: Frederik Kammel
+AuthorEmail: vatbub123+github@googlemail.com
+AuthorWebSite: https://fredplus10.me/
+SourceCode: https://github.com/vatbub/Scoreboard
+IssueTracker: https://github.com/vatbub/Scoreboard/issues
+Changelog: https://github.com/vatbub/Scoreboard/releases
+
+AutoName: Scoreboard
+
+RepoType: git
+Repo: https://github.com/vatbub/Scoreboard
+Binaries: https://github.com/vatbub/Scoreboard/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 1.0-250
+    versionCode: 250
+    commit: 1.0-250
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-264
+    versionCode: 264
+    commit: 004f876efe0032a8d5dfa7016898597078ff9180
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 4146f415b57ec3a011575abc4f75c4751943a657ec83cf0ccf9e91854679a314
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0-264
+CurrentVersionCode: 264

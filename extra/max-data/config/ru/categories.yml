@@ -1,0 +1,126 @@
+Connectivity:
+  name: Связь
+Development:
+  name: Разработка
+Games:
+  name: Игры
+Graphics:
+  name: Графика
+Internet:
+  name: Интернет
+Money:
+  name: Финансы
+Multimedia:
+  name: Мультимедиа
+Navigation:
+  name: Навигация
+Phone & SMS:
+  name: Телефон и СМС
+Reading:
+  name: Чтение
+Science & Education:
+  name: Наука и образование
+Security:
+  name: Безопасность
+Sports & Health:
+  name: Спорт и здоровье
+System:
+  name: Системные
+Theming:
+  name: Темы
+Time:
+  name: Часы
+Writing:
+  name: Офис
+DNS & Hosts:
+  name: DNS и хосты
+Email:
+  name: Электронная почта
+VPN & Proxy:
+  name: VPN и прокси
+Browser:
+  name: Браузеры
+Calculator:
+  name: Калькуляторы
+Cloud Storage & File Sync:
+  name: Хранение и синхронизация
+Ebook Reader:
+  name: Читалки
+File Encryption & Vault:
+  name: Шифрование файлов
+Finance Manager:
+  name: Финансовый менеджер
+Gallery:
+  name: Галерея
+File Transfer:
+  name: Передача файлов
+Launcher:
+  name: Лаунчер
+Local Media Player:
+  name: Медиаплееры
+Messaging:
+  name: Сообщения
+News:
+  name: Новости
+Note:
+  name: Заметки
+Online Media Player:
+  name: Онлайн-медиаплееры
+Password & 2FA:
+  name: Пароли и авторизация
+Podcast:
+  name: Подкасты
+Public Transport:
+  name: Транспорт и расписания
+Recipe Manager:
+  name: Рецепты
+Shopping List:
+  name: Список покупок
+Weather:
+  name: Погода
+Wallet:
+  name: Кошельки
+Bookmark:
+  name: Закладки
+Draw:
+  name: Рисование
+Wallpaper:
+  name: Обои
+Workout:
+  name: Тренировки
+Task:
+  name: Задачи
+Social Network:
+  name: Соцсети
+App Store & Updater:
+  name: Приложения и обновления
+Calendar & Agenda:
+  name: Ежедневники
+Icon Pack:
+  name: Наборы значков
+Keyboard & IME:
+  name: Клавиатуры и ввод
+Text Editor:
+  name: Текстовые редакторы
+Translation & Dictionary:
+  name: Перевод и словари
+Unit Convertor:
+  name: Перевод единиц
+Voice & Video Chat:
+  name: Голосовые и видеочаты
+Pass Wallet:
+  name: Бумажники
+Forum:
+  name: Форум
+Habit Tracker:
+  name: Трекер привычек
+Music Practice Tool:
+  name: Инструмент для музыкальной практики
+Location Tracker & Sharer:
+  name: Отслеживание и публикация местоположения
+AI Chat:
+  name: Чаты с ИИ
+App Manager:
+  name: Менеджер приложений
+Religion:
+  name: Религия

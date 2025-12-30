@@ -1,0 +1,43 @@
+Categories:
+  - Sports & Health
+License: LGPL-3.0-only
+AuthorName: Waterbird Software
+AuthorEmail: waterbirdsoftware@gmail.com
+WebSite: https://log28.com/
+SourceCode: https://github.com/wildeyedskies/log28
+IssueTracker: https://github.com/wildeyedskies/log28/issues
+
+AutoName: log28
+Description: |-
+  log28 is a simple no-frills period tracker.
+
+  Features:
+
+  * Easily view cycle progress
+  * Predict future periods
+  * Log symptoms and activity
+  * Take daily notes
+  * Backup your data or move it between devices
+
+RepoType: git
+Repo: https://github.com/wildeyedskies/log28.git
+
+Builds:
+  - versionName: 0.6.0
+    versionCode: 10
+    commit: 0.6.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.2
+    versionCode: 12
+    commit: 0.6.2
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.6.2
+CurrentVersionCode: 12

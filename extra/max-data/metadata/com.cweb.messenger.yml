@@ -1,0 +1,148 @@
+Categories:
+  - Internet
+  - Messaging
+  - Voice & Video Chat
+License: GPL-3.0-only
+AuthorEmail: cweb.devs@gmail.com
+WebSite: https://cweb.gitlab.io/StoneAge.html
+SourceCode: https://gitlab.com/cweb-repos/cweb-conversations
+IssueTracker: https://gitlab.com/cweb-repos/cweb-conversations/issues
+Changelog: https://gitlab.com/cweb-repos/cweb-conversations/-/blob/HEAD/CHANGELOG.md
+
+AutoName: StoneAge Messenger
+
+RepoType: git
+Repo: https://gitlab.com/cweb-repos/cweb-conversations.git
+
+Builds:
+  - versionName: 0.1.5+fcr
+    versionCode: 42012
+    commit: v0.1.5
+    sudo:
+      - apt-get update
+      - apt-get install -y thrift-compiler
+    gradle:
+      - conversationsFreeCompat
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/libwebrtc/d'
+      -e "/phonenumber/aimplementation 'org.webrtc:google-webrtc:1.0.32006'" -e '/splits/,+5d'
+      -e '/Variants.all/,+8d' build.gradle
+
+  - versionName: 0.1.6+free
+    versionCode: 42031
+    commit: v0.1.6
+    sudo:
+      - apt-get update
+      - apt-get install -y thrift-compiler
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - conversationsFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/libwebrtc/d'
+      -e "/phonenumber/aimplementation 'org.webrtc:google-webrtc:1.0.32006'" -e '/enable
+      true/d' -e '/Variants.all/,/^    }/d' build.gradle
+
+  - versionName: 2.10.10+free
+    versionCode: 42038
+    commit: 8ac9838580cbc67766e591bad41dd81fa4166135
+    sudo:
+      - apt-get update
+      - apt-get install -y thrift-compiler
+    gradle:
+      - conversationsFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.12.8+free
+    versionCode: 42062
+    commit: bc740a2f3b43dd8507f746d193d18f8540ff99e7
+    sudo:
+      - apt-get update
+      - apt-get install -y thrift-compiler
+    gradle:
+      - conversationsFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.12.12+free
+    versionCode: 42077
+    commit: 2b9271c4f06693e8d514c4c7e2c9549cf92a6610
+    sudo:
+      - apt-get update
+      - apt-get install -y thrift-compiler
+    gradle:
+      - conversationsFree
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e '/splits/,+5d'
+      -e '/Variants.all/,+10d' build.gradle
+    ndk: r21e
+
+  - versionName: 2.13.0+free
+    versionCode: 4208101
+    commit: 080903e48a183bfbdc7807e44655fd3ba2647ebf
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -y thrift-compiler
+    gradle:
+      - conversations
+      - free
+    output: build/outputs/apk/conversationsFree/release/Conversations-*-conversations-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0+free
+    versionCode: 4208102
+    commit: 080903e48a183bfbdc7807e44655fd3ba2647ebf
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -y thrift-compiler
+    gradle:
+      - conversations
+      - free
+    output: build/outputs/apk/conversationsFree/release/Conversations-*-conversations-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0+free
+    versionCode: 4208103
+    commit: 080903e48a183bfbdc7807e44655fd3ba2647ebf
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -y thrift-compiler
+    gradle:
+      - conversations
+      - free
+    output: build/outputs/apk/conversationsFree/release/Conversations-*-conversations-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.13.0+free
+    versionCode: 4208104
+    commit: 080903e48a183bfbdc7807e44655fd3ba2647ebf
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -y thrift-compiler
+    gradle:
+      - conversations
+      - free
+    output: build/outputs/apk/conversationsFree/release/Conversations-*-conversations-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+AutoUpdateMode: Version ++free v%v
+UpdateCheckMode: Tags ^v[0-9.]+$
+VercodeOperation:
+  - 100 * %c + 1
+  - 100 * %c + 2
+  - 100 * %c + 3
+  - 100 * %c + 4
+CurrentVersion: 2.13.0+free
+CurrentVersionCode: 4208104

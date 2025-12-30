@@ -1,0 +1,36 @@
+Categories:
+  - Keyboard & IME
+  - Writing
+License: Apache-2.0
+AuthorName: Eiron Rabbit
+AuthorEmail: iamironrabbit@gmail.com
+SourceCode: https://github.com/iamironrabbit/bho
+IssueTracker: https://github.com/iamironrabbit/bho/issues
+
+AutoName: Tibetan Keyboard
+Description: |-
+  Basic Tibetan keyboard; doesn't require special fonts. Good for use with
+  https://f-droid.org/packages/org.ironrabbit.
+
+RepoType: srclib
+Repo: Bho
+
+Builds:
+  - versionName: 0.0.7a
+    versionCode: 8
+    commit: 9c53821c
+    subdir: BhoBoard
+    prebuild: rm -rf ../TibTxt/releases
+    androidupdate:
+      - .
+      - ../TibetanTextLibrary
+
+  - versionName: '0.2'
+    versionCode: 12
+    commit: d0c79eebcdc0
+    subdir: BhoBoard
+
+AutoUpdateMode: None
+UpdateCheckMode: RepoManifest
+CurrentVersion: '0.2'
+CurrentVersionCode: 12

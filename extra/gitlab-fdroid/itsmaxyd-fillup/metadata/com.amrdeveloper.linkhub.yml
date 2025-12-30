@@ -1,0 +1,165 @@
+Categories:
+  - Bookmark
+  - Internet
+License: MIT
+AuthorName: Amr Hesham
+AuthorEmail: amr96@programmer.net
+SourceCode: https://github.com/AmrDeveloper/LinkHub
+IssueTracker: https://github.com/AmrDeveloper/LinkHub/issues
+Changelog: https://github.com/AmrDeveloper/LinkHub/releases
+
+AutoName: LinkHub
+
+RepoType: git
+Repo: https://github.com/AmrDeveloper/LinkHub.git
+
+Builds:
+  - versionName: 1.1.2
+    versionCode: 13
+    commit: 631253d9453e00f9bc7a87957f469876c7d7440c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 14
+    commit: f621a0689182d473315c8d5a4bec4edbda5af27a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.4
+    versionCode: 15
+    commit: c086fb67f46ce621d22c64fb00e8f92dacadd14b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.5
+    versionCode: 16
+    commit: 8305142aa7741363ba75c7df1aee4f1aad901b42
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.6
+    versionCode: 17
+    commit: 698995481d7e889de068fe223b889c480a32b8ab
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 18
+    commit: e2676586e1b0cc94539e37a4efc4df9ea73537f9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 19
+    commit: c00dfc34c7330813a95edf862b0fc7a0c4c9278a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 20
+    commit: 45b463d2aeabced942608ed30dfa683c31eadfa5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 21
+    commit: 231700f81d699e6f70e03e14a914551a9df9e70a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 22
+    commit: d89902d97dbb82073b06ba5f9ee0fbb4e452d362
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 29
+    commit: 6e541415f42f98fc46d78d16f67cd15108774e4f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 30
+    commit: bb70b592c6381ef956cbefedbdc8abd788d27711
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 32
+    commit: 65a38f390d56c435c15f62e5c2efa0715987abe6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.5
+    versionCode: 33
+    commit: 779257ef9b5f20a31bbc8562fb6cf4dd3a07d2b3
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.6
+    versionCode: 34
+    commit: 3fb6d165deab82813018a9f5537bf3948835ecc9
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.6.7
+    versionCode: 35
+    commit: 3731947dcadc344b166613ac45abf983bbccfab7
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.6.7
+CurrentVersionCode: 35

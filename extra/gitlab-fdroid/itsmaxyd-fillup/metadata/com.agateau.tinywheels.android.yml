@@ -1,0 +1,448 @@
+Categories:
+  - Games
+License: GPL-3.0-or-later
+AuthorName: Aurélien Gâteau
+AuthorEmail: srv@agateau.com
+WebSite: https://agateau.com/projects/pixelwheels/
+SourceCode: https://github.com/agateau/pixelwheels
+IssueTracker: https://github.com/agateau/pixelwheels/issues
+Translation: https://github.com/agateau/pixelwheels/blob/HEAD/docs/translations.md
+Changelog: https://github.com/agateau/pixelwheels/blob/HEAD/CHANGELOG.md
+Donate: https://agateau.com/support/
+Liberapay: agateau
+
+AutoName: Pixel Wheels
+
+RepoType: git
+Repo: https://github.com/agateau/pixelwheels.git
+
+Builds:
+  - versionName: 0.12.0
+    versionCode: 11
+    commit: 0.12.0
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y aseprite python3-setuptools python3-pil xvfb xauth imagemagick-6.q16
+    gradle:
+      - yes
+    srclibs:
+      - pafx@269b0241a4b5507a1f45d0aa576fb9f9dad91ad8
+    rm:
+      - tools/packr.jar
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - gradle tools:dist -b ../build.gradle
+      - export PYTHONPATH=../$$pafx$$/build/lib/
+      - xvfb-run -a make -C .. assets
+      - xvfb-run -a make -C .. mapscreenshotgenerator
+      - make -C .. packer
+
+  - versionName: 0.13.0
+    versionCode: 12
+    commit: 0.13.0
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y aseprite python3-setuptools python3-pil xvfb xauth imagemagick-6.q16
+    gradle:
+      - yes
+    srclibs:
+      - pafx@269b0241a4b5507a1f45d0aa576fb9f9dad91ad8
+    rm:
+      - tools/packr.jar
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - gradle tools:dist -b ../build.gradle
+      - export PYTHONPATH=../$$pafx$$/build/lib/
+      - xvfb-run -a make -C .. assets
+      - xvfb-run -a make -C .. mapscreenshotgenerator
+      - make -C .. packer
+
+  - versionName: 0.14.1
+    versionCode: 14
+    commit: 0.14.1
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ python3-pil imagemagick-6.q16 ninja-build libx11-dev
+        libxcursor-dev
+    gradle:
+      - yes
+    srclibs:
+      - aseprite@v1.2.16.3
+      - pafx@269b0241a4b5507a1f45d0aa576fb9f9dad91ad8
+    rm:
+      - tools/packr.jar
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - install_dir=$PWD/aseprite
+      - pushd $$aseprite$$
+      - mkdir -p build
+      - cd build
+      - cmake "-DCMAKE_INSTALL_PREFIX=$install_dir" -DENABLE_UI=OFF -DCMAKE_BUILD_TYPE=MinSizeRel
+        -G Ninja ..
+      - ninja aseprite
+      - ninja install
+      - popd
+      - export PATH=$PATH:$PWD/aseprite/bin
+      - gradle tools:dist -b ../build.gradle
+      - export PYTHONPATH=../$$pafx$$/build/lib/
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.15.0
+    versionCode: 15
+    commit: 0.15.0
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ python3-pil imagemagick-6.q16 ninja-build libx11-dev
+        libxcursor-dev
+    gradle:
+      - yes
+    srclibs:
+      - aseprite@v1.2.16.3
+      - pafx@269b0241a4b5507a1f45d0aa576fb9f9dad91ad8
+    rm:
+      - tools/packr.jar
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - install_dir=$PWD/aseprite
+      - pushd $$aseprite$$
+      - mkdir -p build
+      - cd build
+      - cmake "-DCMAKE_INSTALL_PREFIX=$install_dir" -DENABLE_UI=OFF -DCMAKE_BUILD_TYPE=MinSizeRel
+        -G Ninja ..
+      - ninja aseprite
+      - ninja install
+      - popd
+      - export PATH=$PATH:$PWD/aseprite/bin
+      - gradle tools:dist -b ../build.gradle
+      - export PYTHONPATH=../$$pafx$$/build/lib/
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.16.1
+    versionCode: 16
+    commit: 0.16.1
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip python3-setuptools imagemagick-6.q16
+    gradle:
+      - yes
+    rm:
+      - tools/packr.jar
+    prebuild:
+      - sed -i -e 's#./gradlew#gradle#' ../Makefile
+      - git cherry-pick --no-commit 4a56032cc4e823ba8d3fd35d5b1941951537b208
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.17.0
+    versionCode: 17
+    commit: 0.17.0
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip python3-setuptools imagemagick-6.q16
+    gradle:
+      - yes
+    rm:
+      - tools/packr.jar
+    prebuild:
+      - sed -i -e 's#./gradlew#gradle#' ../Makefile
+      - git cherry-pick --no-commit 4a56032cc4e823ba8d3fd35d5b1941951537b208
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.18.0
+    versionCode: 18
+    commit: 0.18.0
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip python3-setuptools imagemagick-6.q16
+    gradle:
+      - yes
+    rm:
+      - tools/packr.jar
+    prebuild:
+      - sed -i -e 's#./gradlew#gradle#' ../Makefile
+      - git cherry-pick --no-commit 4a56032cc4e823ba8d3fd35d5b1941951537b208
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.19.0
+    versionCode: 19
+    commit: 0.19.0
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip python3-setuptools imagemagick-6.q16
+    gradle:
+      - yes
+    rm:
+      - tools/packr.jar
+    prebuild:
+      - sed -i -e 's#./gradlew#gradle#' ../Makefile
+      - git cherry-pick --no-commit 4a56032cc4e823ba8d3fd35d5b1941951537b208
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.19.1
+    versionCode: 20
+    commit: 0.19.1
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild:
+      - sed -i -e 's#./gradlew#gradle#' ../Makefile
+      - git cherry-pick --no-commit 4a56032cc4e823ba8d3fd35d5b1941951537b208
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.20.0
+    versionCode: 21
+    commit: 4aaf2b3af0ea10aeb9745ee2a35d52878f7f0b9c
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.21.0
+    versionCode: 22
+    commit: 6cb696cbf1f7f1134fc5b256e4a32a821a3ac415
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.22.0
+    versionCode: 23
+    commit: f54422ac95abddd52acf1ba71b5bdd91bf0d3842
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.23.0
+    versionCode: 24
+    commit: 26dd66b5ba92611e543685e4d2bdd414c10f9d48
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.24.0
+    versionCode: 25
+    commit: dc89894753ba89626a2ea926231bbfd8beae5911
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip make imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.24.1
+    versionCode: 26
+    commit: c4485e5a5744664e843238adca0011338e67d605
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip make imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.24.2
+    versionCode: 27
+    commit: 414a85588af6190439057a85420467e48fca7748
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip make imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.25.0
+    versionCode: 28
+    commit: 999bf820340f8d1e93c07ae2bded2ee67d23f02d
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip make imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.25.1
+    versionCode: 29
+    commit: d2e8e1c364c34fa784f28f1af406ebc3b27d2ef7
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip make imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - pip3 install --user -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 0.26.0
+    versionCode: 30
+    commit: 9bce26292a0327988341f2e5d4ed50849b411171
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip python3-venv make imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - python3 -m venv .
+      - source bin/activate
+      - pip3 install -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+  - versionName: 1.0.1
+    versionCode: 33
+    commit: de6a692f3b6f2ade9e914982e0aeadb4aa2b1de3
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip python3-venv make imagemagick-6.q16
+    gradle:
+      - itchio
+    prebuild: sed -i -e 's#./gradlew#gradle#' ../Makefile
+    scandelete:
+      - android/libs/
+    build:
+      - python3 -m venv .
+      - source bin/activate
+      - pip3 install -r ../requirements.txt
+      - gradle tools:dist -b ../build.gradle
+      - make -C .. assets
+      - make -C .. packer
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[0-9.]*$
+UpdateCheckData: version.properties|VERSION_CODE=(\d+)|.|VERSION=(.*)
+CurrentVersion: 1.0.1
+CurrentVersionCode: 33

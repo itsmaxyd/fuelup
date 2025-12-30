@@ -1,0 +1,75 @@
+Categories:
+  - Launcher
+  - System
+  - Theming
+License: GPL-3.0-or-later
+AuthorName: Zagura
+AuthorEmail: thezagura@gmail.com
+AuthorWebSite: https://zagura.one
+SourceCode: https://codeberg.org/zagura/ion-launcher
+IssueTracker: https://codeberg.org/zagura/ion-launcher/issues
+Changelog: https://codeberg.org/zagura/ion-launcher/releases
+Liberapay: zagura
+
+AutoName: Ion Launcher
+
+RepoType: git
+Repo: https://codeberg.org/zagura/ion-launcher.git
+Binaries: https://codeberg.org/zagura/ion-launcher/releases/download/%v/ion-launcher-signed.apk
+
+Builds:
+  - versionName: y24-v11
+    versionCode: 12
+    commit: 1fdd1f63a60b653bff15df91a45fc2876d2b3b10
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: y24-v12
+    versionCode: 13
+    commit: 2f749cb2fbfaa0376cb3f6a89bafe9c4e32f4207
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: y24-v13
+    versionCode: 14
+    commit: 15f529f64efe3ecf8e3df4089cdf825d284e24b8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: y24-v14
+    versionCode: 15
+    commit: ff62db2fa70056bc6d796e45975049c961430d08
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: y25-v1
+    versionCode: 16
+    commit: 611ccc1f7778f501a6fb56a898eba9a1af319f84
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: y25-v2
+    versionCode: 17
+    commit: 8c379db7f716c01cdf10ce592e63a788f700d0a0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: y25-v3
+    versionCode: 18
+    commit: 33fda6bfcd651c860acee3bb711bc02edc79257a
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 5dd9783fc42df0c5dab998ecd6b21f2c3008b0326b6cf1bcb6b9447332ef66db
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: y25-v3
+CurrentVersionCode: 18

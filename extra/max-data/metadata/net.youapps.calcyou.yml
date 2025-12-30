@@ -1,0 +1,67 @@
+Categories:
+  - Calculator
+  - Science & Education
+  - Unit Convertor
+License: GPL-3.0-only
+AuthorName: You Apps
+WebSite: https://you-apps.net
+SourceCode: https://github.com/you-apps/CalcYou
+IssueTracker: https://github.com/you-apps/CalcYou/issues
+Translation: https://hosted.weblate.org/projects/you-apps
+Changelog: https://github.com/you-apps/CalcYou/releases
+
+AutoName: CalcYou
+
+RepoType: git
+Repo: https://github.com/you-apps/CalcYou.git
+Binaries: https://github.com/you-apps/CalcYou/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: '1.2'
+    versionCode: 3
+    commit: 63cc5e1ffcad5313c208953278bb48789c1be3c1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 4
+    commit: 63670d0ada9374951e82d6b23e002d61e3c382be
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 5
+    commit: 15bfdb8460aeb4457749db2deaff05450b00424a
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    prebuild: sed -i -e 's|app/||' build.gradle.kts
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+  - versionName: '3.1'
+    versionCode: 6
+    commit: 379eda902512e2899b0a5063158adad02b40f175
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.3.0
+    prebuild: sed -i -e 's|app/||' build.gradle.kts
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
+AllowedAPKSigningKeys: b3bc73b117df5dfe38130c6c2b946852ae7088557fe8e433f0d9983a6b55cc95
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '3.1'
+CurrentVersionCode: 6

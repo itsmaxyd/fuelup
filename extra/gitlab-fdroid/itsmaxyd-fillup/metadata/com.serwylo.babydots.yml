@@ -1,0 +1,200 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+SourceCode: https://github.com/babydots/babydots
+IssueTracker: https://github.com/babydots/babydots/issues
+Translation: https://hosted.weblate.org/projects/babydots
+
+AutoName: Baby Dots
+
+RepoType: git
+Repo: https://github.com/babydots/babydots
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 10000
+    commit: v1.0.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 10100
+    commit: v1.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 10200
+    commit: v1.2.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 10300
+    commit: v1.3.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 10400
+    commit: v1.4.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 10402
+    commit: v1.4.2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 10403
+    commit: v1.4.3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 10404
+    commit: v1.4.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 10500
+    commit: v1.5.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 10501
+    commit: 568d8fcdf660c9d22d2205d4d12d12c967d7399a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 10502
+    commit: cf04e2619710cc213cd4b94d702e919513f3f6f3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 10600
+    commit: 41be570a9269f0a94d3eb096717fe7b3e3e4e203
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 10700
+    commit: c7e200d0784d48a664c42094ca9117ad3bd04b76
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 10701
+    commit: 308ebe4e1f035005f308be338dc9e4409b22ceba
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 10800
+    commit: a874a95bdac355a79c6b584f56d3d85cac0e0850
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 10801
+    commit: d0336f091328a14bd18cb78359a7912fa56d12e6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 10900
+    commit: c23320413697504ee77a4c01ffaf0a03a79bff34
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.2
+    versionCode: 10902
+    commit: 0abbcc94da330947ce7f1f59191b3501fd8d626a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.9.3
+    versionCode: 10903
+    commit: 70640d2f253bb15c52edd1674ca497038fbe7667
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.9.4
+    versionCode: 10904
+    commit: 709dc00af606df0502df03e2a43ff7890547dbab
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.5
+    versionCode: 10905
+    commit: 7bf11eea90edc2f9efea7d4159ebf4824d26d6ae
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.6
+    versionCode: 10906
+    commit: 713f3b852001135c41b9eebd56b4dce3eea8834a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.7
+    versionCode: 10907
+    commit: 89e9e6480ead215acbb9de1adaef57f07e07da62
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.8
+    versionCode: 10908
+    commit: 9bf6db5ee70d848ed0df5b0be3f9183b7afc8761
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.0
+    versionCode: 11000
+    commit: 0425a051e193b0910aae0dc8dad7f50518c1fab0
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.10.0
+CurrentVersionCode: 11000

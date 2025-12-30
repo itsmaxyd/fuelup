@@ -1,0 +1,110 @@
+Categories:
+  - Writing
+License: GPL-2.0-only
+AuthorName: donmor
+AuthorEmail: donmor3000@hotmail.com
+AuthorWebSite: https://donmor.top/
+SourceCode: https://github.com/donmor/Tiddloid
+IssueTracker: https://github.com/donmor/Tiddloid/issues
+Changelog: https://github.com/donmor/Tiddloid/releases
+Liberapay: donmor3000
+
+AutoName: Tiddloid
+
+RepoType: git
+Repo: https://github.com/donmor/Tiddloid
+
+Builds:
+  - versionName: 2.0.0
+    versionCode: 36
+    commit: 2.0.0f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 37
+    commit: d3b109e0786c296e93a72559691db8fc87fdc50d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.0
+    versionCode: 38
+    commit: 80493531aae8fa9d0483959e240033d861bd1984
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 39
+    commit: b347bade3cb4912d48d32d16b48baee8273cb639
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 42
+    commit: f355a23965d5a09f0ab50317b4166c075115c5d6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.0
+    versionCode: 43
+    commit: f4fb8416fd68c03362088dca2bb3487e6a2866c1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.3.1
+    versionCode: 44
+    commit: bfc334a2f083676f13a3aab0456259b9e0340b83
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-11-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 45
+    commit: 7fb5d9ce28d9d25fe6884486965af873e9d5cbcf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.1
+    versionCode: 46
+    commit: ce686ccf28207748dad38c5bc095623ea03264c3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.2
+    versionCode: 47
+    commit: e45324d416cf528943323bc4b94ac359d01d769c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.0
+    versionCode: 48
+    commit: d0827a2724f7560af6482dab931d7f7e5f6132a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^[0-9.]+$
+CurrentVersion: 2.5.0
+CurrentVersionCode: 48

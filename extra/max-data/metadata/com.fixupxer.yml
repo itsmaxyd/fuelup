@@ -1,0 +1,61 @@
+Categories:
+  - Internet
+License: MIT
+WebSite: https://neatcodelabs.com/
+SourceCode: https://github.com/NeatCode-Labs/fixupxer
+IssueTracker: https://github.com/NeatCode-Labs/fixupxer/issues
+Changelog: https://github.com/NeatCode-Labs/fixupxer/releases
+
+AutoName: FixupXer - URL Enhancer
+
+RepoType: git
+Repo: https://github.com/NeatCode-Labs/fixupxer
+Binaries: https://github.com/NeatCode-Labs/fixupxer/releases/download/v%v/FixupXer-v%v-release.apk
+
+Builds:
+  - versionName: 1.3.4
+    versionCode: 13
+    commit: v1.3.4
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+      - sed -i -e '/jetbrains/d' ../settings.gradle.kts
+
+  - versionName: 1.4.0
+    versionCode: 16
+    commit: 9320352e4fda572dececc2a7453e6f0c5c3fce48
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+      - sed -i -e '/jetbrains/d' ../settings.gradle.kts
+
+  - versionName: 1.4.5
+    versionCode: 22
+    commit: 5449dca21ffc6725187fa8f66b58223a48156fb7
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+      - sed -i -e '/jetbrains/d' ../settings.gradle.kts
+
+  - versionName: 1.4.6
+    versionCode: 23
+    commit: f9251c803aaad2b651f9a17876582e62e8421059
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+      - sed -i -e '/jetbrains/d' ../settings.gradle.kts
+
+AllowedAPKSigningKeys: 78e36950963a98ea39fe30b955c27364e187feca85a1af6ad10987d15f18ec2f
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.4.6
+CurrentVersionCode: 23

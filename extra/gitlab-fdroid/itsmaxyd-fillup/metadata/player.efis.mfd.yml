@@ -1,0 +1,225 @@
+Categories:
+  - Navigation
+License: Apache-2.0
+WebSite: https://ninelima.org/efis/
+SourceCode: https://gitlab.com/ninelima/kwikEFIS
+IssueTracker: https://gitlab.com/ninelima/kwikEFIS/issues
+Changelog: https://gitlab.com/ninelima/kwikEFIS/blob/HEAD/CHANGELOG.md
+
+AutoName: Kwik DMAP
+Description: |-
+  Kwik DMAP (player.efis.mfd) has been superseded by Kwik EFIS Pro
+  (player.efis.pfd)
+
+RepoType: git
+Repo: https://gitlab.com/ninelima/kwikEFIS.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: VER_3.6
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 2
+    commit: VER_3.7
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 3
+    commit: REL_3.8
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 4
+    commit: REL_3.10
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 5
+    commit: REL_3.11
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 6
+    commit: DMAP_1.5
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 20
+    commit: DMAP_1.6
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 21
+    commit: DMAP_1.7
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 22
+    commit: DMAP_2.0
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 23
+    commit: DMAP_2.1
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 24
+    commit: DMAP_2.2
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 25
+    commit: DMAP_2.3
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 26
+    commit: DMAP_2.4
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 27
+    commit: DMAP_2.5
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 28
+    commit: DMAP_2.6
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 29
+    commit: DMAP_2.7
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 32
+    commit: DMAP_2.8
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '2.9'
+    versionCode: 33
+    commit: DMAP_2.9
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '5.0'
+    versionCode: 34
+    commit: DMAP_5.0
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '5.1'
+    versionCode: 35
+    commit: DMAP_5.1
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '5.2'
+    versionCode: 36
+    commit: DMAP_5.2
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '5.3'
+    versionCode: 37
+    commit: DMAP_5.3
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 38
+    commit: DMAP_6.0
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '6.1'
+    versionCode: 39
+    commit: DMAP_6.1
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '6.2'
+    versionCode: 40
+    commit: DMAP_6.2
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '6.3'
+    versionCode: 41
+    commit: DMAP_6.3
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '6.4'
+    versionCode: 42
+    commit: DMAP_6.4
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: '6.5'
+    versionCode: 43
+    commit: DMAP_6.5
+    subdir: mfd
+    gradle:
+      - yes
+
+  - versionName: 6.6rc3
+    versionCode: 44
+    commit: DMAP_6.6
+    subdir: mfd
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 6.6rc3
+CurrentVersionCode: 44

@@ -1,0 +1,1 @@
+Notificar quando o Wi-Fi está ativado e desconectado

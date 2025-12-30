@@ -1,0 +1,32 @@
+Ads:
+  description: Táto aplikácia obsahuje reklamy
+  name: Reklamy
+DisabledAlgorithm:
+  description: Táto aplikácia má slabý bezpečnostný podpis
+  name: Podpísané pomocou nebezpečného algoritmu
+KnownVuln:
+  description: Tato aplikácia má známu zraniteľnosť v zabezpečení
+  name: Známa slabina
+NSFW:
+  description: Táto aplikácia obsahuje obsah, ktorý by nemal byť publikovaný alebo viditeľný všade
+  name: NSFW
+NoSourceSince:
+  name: Zdrojový kód už nie je dostupný, aktualizácie už nie sú možné.
+NonFreeAdd:
+  description: Táto aplikácia propaguje neslobodné doplnky
+  name: Neslobodné doplnky
+NonFreeAssets:
+  description: Táto aplikácia obsahuje proprietárne časti
+  name: Neslobodné aktíva
+NonFreeDep:
+  description: Táto aplikácia závisí na iných neslobodných aplikáciách
+  name: Neslobodné závislosti
+NonFreeNet:
+  description: Táto aplikácia propaguje alebo je úplne závislá na nezmeniteľných alebo neslobodných sieťových službách
+  name: Neslobodné sieťové služby
+Tracking:
+  description: Táto aplikácia zaznamenáva a hlási vaše aktivity
+  name: Sledovanie
+TetheredNet:
+  description: Táto aplikácia propaguje alebo je plne závislá na určitej inštancii sieťovej služby.
+  name: Pripojené sieťové služby

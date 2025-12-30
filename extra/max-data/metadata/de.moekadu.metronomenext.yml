@@ -1,0 +1,65 @@
+Categories:
+  - Music Practice Tool
+  - Science & Education
+License: GPL-3.0-only
+AuthorName: Michael Moessner
+SourceCode: https://codeberg.org/thetwom/metronome
+IssueTracker: https://codeberg.org/thetwom/metronome/issues
+Translation: https://translate.codeberg.org/projects/metronome
+Changelog: https://codeberg.org/thetwom/metronome/releases
+
+AutoName: Metronome
+
+RepoType: git
+Repo: https://codeberg.org/thetwom/metronome.git
+Binaries: https://codeberg.org/thetwom/metronome/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 5.0.4
+    versionCode: 5
+    commit: v5.0.4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.1.0
+    versionCode: 6
+    commit: c98566f8dbb36dfc62ef8d637d97aee5b1b98c0c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.2.0
+    versionCode: 7
+    commit: 16c93b5024466222ab6bf3e9003928289709e45d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.3.1
+    versionCode: 9
+    commit: b2e9e97100a3432fcee67c9840d137a81c594878
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.4.0
+    versionCode: 10
+    commit: 3535e50b9d6aa7aacbdae0998c5263077e136438
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.5.0
+    versionCode: 11
+    commit: aeed6a24b0fe28a36492fed6342108fb398515dd
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 9d4f640ea515d28b163b4f3d679e097986bae95d2cf697a7dd1ef38aded7e3b3
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]*$
+CurrentVersion: 5.5.0
+CurrentVersionCode: 11
