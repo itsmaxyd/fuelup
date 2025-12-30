@@ -67,7 +67,7 @@ We're thrilled to introduce Fillup, your go-to fuel tracking app for monitoring 
 
 To get started with Fillup v1.0.0:
 
-1. Download the app from the Google Play Store (or build from source)
+1. Download the app from F-Droid or build from source
 2. Follow the setup wizard to add your first vehicle
 3. Start logging your fuel entries
 

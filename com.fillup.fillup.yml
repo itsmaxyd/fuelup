@@ -19,9 +19,9 @@ RepoType: git
 Repo: https://github.com/itsmaxyd/fuelup.git
 
 Builds:
-  - versionName: 1.0.1
-    versionCode: 2
-    commit: v1.0.1
+  - versionName: 1.0.4
+    versionCode: 5
+    commit: v1.0.4
     submodules: true
     sudo:
       - apt-get update
@@ -39,5 +39,5 @@ Builds:
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 1.0.1
-CurrentVersionCode: 2
+CurrentVersion: 1.0.4
+CurrentVersionCode: 5
