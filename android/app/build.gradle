@@ -33,16 +33,21 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace "com.fillup.fillup"
-    compileSdk 36
+    compileSdk = 36
     ndkVersion flutter.ndkVersion
-
+    
+    splits {
+        abi {
+            enable false
+        }
+    }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     sourceSets {
@@ -52,7 +57,7 @@ android {
     defaultConfig {
         applicationId "com.fillup.fillup"
         minSdkVersion flutter.minSdkVersion
-        targetSdk 36
+        targetSdk = 36
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
@@ -90,7 +95,6 @@ android {
     }
 
     // Build reproducibility
-
     packaging {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
@@ -107,4 +111,29 @@ dependencies {}
 configurations.all {
     exclude group: "com.google.android.play", module: "core"
     exclude group: "com.google.android.play", module: "core-common"
+}
+
+// Copy APK to root build directory for Flutter to find
+afterEvaluate {
+    tasks.register('copyApkToBuildDir') {
+        dependsOn 'assembleRelease'
+        doLast {
+            def apkFile = file("${buildDir}/outputs/flutter-apk/app-release.apk")
+            def targetDir = file("${project.rootDir}/../build")
+            if (apkFile.exists()) {
+                targetDir.mkdirs()
+                copy {
+                    from apkFile
+                    into targetDir
+                }
+                println "APK copied to: ${targetDir}/app-release.apk"
+            } else {
+                println "Warning: APK file not found at ${apkFile}"
+            }
+        }
+    }
+    
+    tasks.named('assembleRelease').configure {
+        finalizedBy 'copyApkToBuildDir'
+    }
 }

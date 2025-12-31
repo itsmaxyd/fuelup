@@ -171,6 +171,7 @@ body {
     width: 2rem;
     height: 2rem;
     transition: var(--transition-fast);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .nav-brand:hover .logo {
@@ -696,8 +697,15 @@ section {
 /* Usage Guide Section */
 .usage-steps {
     display: grid;
+    grid-template-columns: 1fr;
     gap: var(--spacing-3xl);
     margin-bottom: var(--spacing-4xl);
+}
+
+@media (min-width: 1024px) {
+    .usage-steps {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .step {
@@ -841,6 +849,7 @@ section {
 .footer-logo {
     width: 2rem;
     height: 2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .footer-brand-text {
