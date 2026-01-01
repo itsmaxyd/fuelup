@@ -10,7 +10,9 @@
 .svn/
 migrate_working_dir/
 extra
-com.fillup.fillup.yml
+# F-Droid metadata (keep this file tracked)
+# com.fillup.fillup.yml
+!metadata/
 
 # IntelliJ related
 *.iml
